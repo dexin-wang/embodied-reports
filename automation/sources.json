@@ -1,0 +1,20 @@
+{
+  "arxiv_queries": [
+    "all:\"vision language action\"",
+    "all:\"robot foundation model\"",
+    "all:\"embodied foundation model\"",
+    "all:\"humanoid foundation model\"",
+    "all:\"robot world model\"",
+    "all:\"cross-embodiment\""
+  ],
+  "trusted_organizations": [
+    "Physical Intelligence", "NVIDIA", "Google DeepMind", "Figure", "Hugging Face",
+    "BeingBeyond", "Robbyant", "X² Robotics", "Skild AI", "1X", "Agility Robotics",
+    "Boston Dynamics", "智元机器人", "银河通用", "自变量机器人", "千寻智能", "星海图"
+  ],
+  "keywords": [
+    "vision-language-action", "vision language action", "vla", "robot foundation",
+    "embodied foundation", "humanoid", "world model", "dexterous manipulation",
+    "cross-embodiment", "tactile", "whole-body"
+  ]
+}
