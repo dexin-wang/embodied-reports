@@ -3,6 +3,7 @@
 A fast, continuously updated index of influential embodied-intelligence technical reports released since 2025, with special attention to research-company releases.
 
 - Live site: https://embodied-reports.cherry-tick-5048.chatgpt.site
+- GitHub Pages: https://dexin-wang.github.io/embodied-reports/
 - Repository: https://github.com/dexin-wang/embodied-reports
 
 ## What it tracks
@@ -33,6 +34,10 @@ See [DATA_POLICY.md](DATA_POLICY.md) for inclusion and verification rules.
 ## Publish this source repository
 
 The production website is deployed separately from GitHub. GitHub Actions in this repository refresh report candidates and validates primary-source links. No API key is required for the conservative public-feed discovery stage.
+
+The `Deploy GitHub Pages` workflow builds a static export after every push to
+`main` and after every successful discovery run. Enable GitHub Pages with
+`Settings → Pages → Source → GitHub Actions` once after pushing the repository.
 
 To push the source into a new empty repository:
 
