@@ -30,6 +30,7 @@ VERIFIED = ROOT / "data" / "verified.json"
 AUDIT = ROOT / "automation" / "verification_audit.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
+API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 
 SOCIAL_DOMAINS = {
     "x.com": "X", "twitter.com": "X", "linkedin.com": "LinkedIn",
@@ -112,7 +113,7 @@ ABSTRACT: {candidate['summary'][:6000]}
         "text": {"format": {"type": "json_schema", "name": "embodied_project_verdict", "strict": True, "schema": SCHEMA}},
     }
     request = urllib.request.Request(
-        "https://api.openai.com/v1/responses",
+        f"{API_BASE_URL}/responses",
         data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     )
