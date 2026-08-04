@@ -1,23 +1,27 @@
 # Data policy
 
-Embodied Reports prioritizes primary sources and fully automated publication.
+Embodied Reports is an automatically maintained index of influential embodied-robotics project releases, not an arXiv paper feed.
 
 ## Inclusion
 
-A public entry must be dated 2025 or later, directly concern embodied intelligence or physical robots, and describe a consequential model, system, dataset, benchmark, or major version release. Conference or journal acceptance is not required.
+A public entry must be dated 2025 or later and directly concern embodied intelligence or physical robots: a consequential model, system, dataset, benchmark, or major version release. Conference or journal acceptance, open source, and a PDF are not requirements.
+
+Every automatically published entry must pass all three hard gates:
+
+1. An official project page, organization announcement, or official university/research-lab project page exists. arXiv alone is never sufficient.
+2. The responsible company, university, or named research institute is explicit on an official source. Ambiguous labels such as `Research team` are rejected.
+3. Public discussion is found on at least two distinct social platforms, with at least one independent source. The corresponding evidence URLs are retained on the card.
 
 ## Evidence
 
-Facts should come from an official technical report, project page, repository, model card, or organization announcement. Missing values remain unreported; they are never inferred from adjacent models.
+Facts come from an official technical report, project page, repository, model card, or organization announcement. Missing values are not inferred. Chinese institutions are shown as `中文 / English` when an established bilingual name is available.
 
 ## Automation
 
-The discovery job searches public feeds, removes duplicates, validates a dated primary-source record, and applies a transparent relevance score. Every entry above the configured threshold is published directly—there is no manual approval queue. `automation/candidates.json` records every score and rule match for auditability.
+`automation/discover.py` and `automation/discover_official_projects.py` find leads; they never publish cards directly. `automation/verify_reports.py` uses web search to enforce the three inclusion gates and writes only accepted records to `data/verified.json`. There is no manual approval queue.
 
-The stable catalog retains published entries across feed failures. A discovery run with fewer than the configured minimum candidates preserves the catalog and the last valid discovery snapshot instead of replacing them with an empty file.
+`automation/candidates.json` and `automation/verification_audit.json` preserve the automated decision, source evidence, and rejection reason. A temporary source outage preserves the existing candidate snapshot and verified index.
 
-For entries with an accessible public PDF, the job downloads the source and extracts an early figure whose caption indicates a framework, architecture, method, pipeline, or system overview. The site displays this original crop with an attribution to its source PDF; it never redraws the method diagram.
+For a verified entry with an accessible public PDF, the job extracts an early source figure whose caption indicates a framework, architecture, method, pipeline, or system overview. The site displays this original crop with its source attribution; it never redraws the diagram.
 
-Automated summaries and organization labels are descriptive, not endorsements. Organization is left as “Research team” unless it can be identified from a model name in the report title; the source material remains authoritative.
-
-When the optional `OPENAI_API_KEY` repository secret is configured, `automation/enrich_reports.py` sends the relevant source PDF/webpage text to the OpenAI Responses API and requires a structured, source-grounded dossier: bilingual organization labels, institution type, technical highlights, capabilities, and reported metrics. It does not run without that secret.
+`OPENAI_API_KEY` is required for official-source and impact verification. The workflow fails visibly when the key is unavailable or invalid rather than silently publishing unverified papers.
