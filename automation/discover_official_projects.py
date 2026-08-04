@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = ROOT / "automation" / "candidates.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
+API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 
 TOPICS = [
     "vision-language-action and generalist robot foundation models",
@@ -56,7 +57,7 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
         "text": {"format": {"type": "json_schema", "name": "official_project_leads", "strict": True, "schema": SCHEMA}},
     }
     request = urllib.request.Request(
-        "https://api.openai.com/v1/responses", data=json.dumps(payload).encode(),
+        f"{API_BASE_URL}/responses", data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     )
     with urllib.request.urlopen(request, timeout=180) as response:
