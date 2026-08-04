@@ -11,6 +11,7 @@
   "auto_publish_score": 42,
   "max_public_reports": 120,
   "catalog_limit": 180,
+  "max_verifications_per_run": 30,
   "minimum_successful_candidates": 10,
   "trusted_organizations": [
     "Physical Intelligence", "NVIDIA", "Google DeepMind", "Figure", "Hugging Face",
