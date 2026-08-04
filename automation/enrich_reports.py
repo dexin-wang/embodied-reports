@@ -22,6 +22,7 @@ CATALOG = ROOT / "data" / "catalog.json"
 ENRICHED = ROOT / "data" / "enriched.json"
 MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini")
 API_KEY = os.getenv("OPENAI_API_KEY")
+API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 MAX_SOURCE_CHARS = 42_000
 
 SCHEMA = {
@@ -100,7 +101,7 @@ PRIMARY SOURCE TEXT:
         "text": {"format": {"type": "json_schema", "name": "report_dossier", "strict": True, "schema": SCHEMA}},
     }
     request = urllib.request.Request(
-        "https://api.openai.com/v1/responses",
+        f"{API_BASE_URL}/responses",
         data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     )
