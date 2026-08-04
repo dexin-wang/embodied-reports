@@ -80,7 +80,7 @@ export const reports: Report[] = [
   {
     id: "wall-oss-05",
     title: "WALL-OSS-0.5",
-    organization: "X² Robotics",
+    organization: "自变量机器人 / X² Robotics",
     organizationKind: "Company",
     date: "2026-05-29",
     year: 2026,

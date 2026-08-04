@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import urllib.parse
 import urllib.request
@@ -21,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "automation/sources.json").read_text())
 OUTPUT = ROOT / "data/discovered.json"
+CATALOG = ROOT / "data/catalog.json"
 CANDIDATES = ROOT / "automation/candidates.json"
 NS = {"atom": "http://www.w3.org/2005/Atom"}
 
@@ -148,13 +150,28 @@ def to_report(item: dict, points: int) -> dict:
 
 def main() -> None:
     seen: dict[str, dict] = {}
-    for query in CONFIG["arxiv_queries"]:
-        try:
-            for item in fetch_arxiv(query):
-                if item["date"] >= "2025-01-01":
-                    seen[item["url"]] = item
-        except Exception as exc:
-            print(f"warning: query failed: {query}: {exc}")
+    if not os.getenv("DISCOVERY_OFFLINE"):
+        for query in CONFIG["arxiv_queries"]:
+            try:
+                for item in fetch_arxiv(query):
+                    if item["date"] >= "2025-01-01":
+                        seen[item["url"]] = item
+            except Exception as exc:
+                print(f"warning: query failed: {query}: {exc}")
+
+    # Export.arXiv can be intermittently unavailable to GitHub-hosted runners.
+    # Reuse the last successful feed snapshot rather than emitting an empty site.
+    if len(seen) < CONFIG.get("minimum_successful_candidates", 10) and CANDIDATES.exists():
+        cached = json.loads(CANDIDATES.read_text()).get("candidates", [])
+        for item in cached:
+            if item.get("date", "") >= "2025-01-01" and item.get("url", "").startswith("https://arxiv.org/"):
+                seen[item["url"]] = item
+        print(f"using cached feed snapshot: candidates={len(seen)}")
+
+    # A temporary provider outage must never erase the public index.
+    if len(seen) < CONFIG.get("minimum_successful_candidates", 10):
+        print(f"warning: only {len(seen)} candidates; preserving existing public data")
+        return
 
     evaluated = []
     published = []
@@ -168,13 +185,22 @@ def main() -> None:
 
     evaluated.sort(key=lambda item: (item["score"], item["date"]), reverse=True)
     published.sort(key=lambda item: (item["date"], item["title"]), reverse=True)
-    published = published[:CONFIG.get("max_public_reports", 80)]
+    published = published[:CONFIG.get("max_public_reports", 120)]
+
+    existing_catalog = json.loads(CATALOG.read_text()) if CATALOG.exists() else []
+    catalog_by_id = {item["id"]: item for item in existing_catalog}
+    # Fresh sources take precedence, but previously published reports stay
+    # visible when a feed no longer returns older records.
+    catalog_by_id.update({item["id"]: item for item in published})
+    catalog = sorted(catalog_by_id.values(), key=lambda item: (item["date"], item["title"]), reverse=True)
+    catalog = catalog[:CONFIG.get("catalog_limit", 180)]
     CANDIDATES.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "candidates": evaluated,
     }, ensure_ascii=False, indent=2) + "\n")
     OUTPUT.write_text(json.dumps(published, ensure_ascii=False, indent=2) + "\n")
-    print(f"evaluated={len(evaluated)} published={len(published)}")
+    CATALOG.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n")
+    print(f"evaluated={len(evaluated)} published={len(published)} catalog={len(catalog)}")
 
 
 if __name__ == "__main__":

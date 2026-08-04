@@ -9,7 +9,9 @@
   ],
   "max_results_per_query": 100,
   "auto_publish_score": 42,
-  "max_public_reports": 80,
+  "max_public_reports": 120,
+  "catalog_limit": 180,
+  "minimum_successful_candidates": 10,
   "trusted_organizations": [
     "Physical Intelligence", "NVIDIA", "Google DeepMind", "Figure", "Hugging Face",
     "BeingBeyond", "Robbyant", "X² Robotics", "Skild AI", "1X", "Agility Robotics",
@@ -22,7 +24,7 @@
   ],
   "organization_hints": {
     "nvidia": "NVIDIA",
-    "qwen": "Alibaba / Qwen",
+    "qwen": "阿里云通义实验室 / Alibaba Qwen",
     "gemini robotics": "Google DeepMind",
     "physical intelligence": "Physical Intelligence",
     "figure": "Figure",
@@ -31,6 +33,10 @@
     "lerobot": "Hugging Face",
     "being-h": "BeingBeyond",
     "lingbot": "Robbyant",
-    "wall-oss": "X² Robotics"
+    "wall-oss": "自变量机器人 / X² Robotics",
+    "agibot": "智元机器人 / AgiBot",
+    "galbot": "银河通用 / Galbot",
+    "robot era": "星海图 / Robot Era",
+    "x-humanoid": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center"
   }
 }

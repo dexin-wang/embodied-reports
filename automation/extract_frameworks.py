@@ -25,6 +25,7 @@ except ImportError as exc:
 
 ROOT = Path(__file__).resolve().parents[1]
 DISCOVERED = ROOT / "data" / "discovered.json"
+CATALOG = ROOT / "data" / "catalog.json"
 STATIC = ROOT / "automation" / "framework_sources.json"
 OUT_DIR = ROOT / "public" / "frameworks"
 MANIFEST = OUT_DIR / "manifest.json"
@@ -102,8 +103,9 @@ def extract(report_id: str, source_url: str, refresh: bool = False) -> dict | No
 def sources() -> list[dict]:
     static = json.loads(STATIC.read_text()) if STATIC.exists() else []
     discovered = json.loads(DISCOVERED.read_text()) if DISCOVERED.exists() else []
+    catalog = json.loads(CATALOG.read_text()) if CATALOG.exists() else []
     dynamic = []
-    for report in discovered[:MAX_REPORTS]:
+    for report in [*catalog, *discovered][:MAX_REPORTS]:
         primary = next((link["url"] for link in report.get("links", []) if link.get("label") == "Report"), None)
         if primary:
             dynamic.append({"id": report["id"], "source_url": primary})

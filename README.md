@@ -25,13 +25,17 @@ npm run dev
 
 ## Automated discovery
 
-`automation/discover.py` queries public research feeds, validates dated primary-source records, scores relevance, and writes qualifying entries directly to `data/discovered.json`—without a manual approval queue. GitHub Actions runs discovery daily and link validation weekly.
+`automation/discover.py` queries public research feeds, validates dated primary-source records, scores relevance, and writes qualifying entries directly to `data/discovered.json`—without a manual approval queue. `data/catalog.json` is the stable public index: a feed outage cannot erase entries that were already published. GitHub Actions runs discovery daily and link validation weekly.
 
 The same daily job extracts an original method/framework figure from an accessible public PDF and saves it under `public/frameworks/`. The report-detail dialog displays this source-derived image together with source-attributed technical points, capabilities, and reported evidence.
 
 The initial pipeline uses no private API key. Search-engine and structured LLM enrichment can be enabled later through repository secrets without exposing credentials.
 
 See [DATA_POLICY.md](DATA_POLICY.md) for inclusion and verification rules. The UI supports filtering by technical field, institution, institution type (company / university / research lab), year, month, and open-source status.
+
+### Optional source-grounded AI dossiers
+
+To have OpenAI generate Chinese technical highlights, capabilities, metrics, and bilingual organization labels from each report's PDF or primary webpage, add a repository secret named `OPENAI_API_KEY` under `Settings → Secrets and variables → Actions`. The scheduled job then writes enriched records to `data/enriched.json`; it skips this step when the secret is absent. The model is never asked to use facts outside the source text supplied to it.
 
 ## Publish this source repository
 
