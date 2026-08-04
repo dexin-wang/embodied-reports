@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Discover high-confidence embodied-AI technical-report candidates.
+"""Discover, automatically validate, and publish embodied-AI reports.
 
-This conservative first stage only publishes arXiv entries that pass transparent
-rules. Ambiguous candidates are retained in automation/candidates.json for later
-re-evaluation instead of being shown as verified reports.
+The public index has no manual approval queue.  A report is published when a
+primary source is reachable through the arXiv feed and it passes the transparent
+relevance threshold.  `candidates.json` remains an audit log of every scoring
+decision, rather than a list waiting for a human reviewer.
 """
 
 from __future__ import annotations
@@ -28,7 +29,7 @@ def fetch_arxiv(query: str) -> list[dict]:
     params = urllib.parse.urlencode({
         "search_query": query,
         "start": 0,
-        "max_results": 20,
+        "max_results": CONFIG.get("max_results_per_query", 100),
         "sortBy": "submittedDate",
         "sortOrder": "descending",
     })
@@ -79,23 +80,68 @@ def slug(title: str) -> str:
     return f"{normalized or 'report'}-{suffix}"
 
 
+def infer_fields(text: str) -> list[str]:
+    lower = text.lower()
+    fields = []
+    rules = [
+        ("Vision-language-action", ("vision-language-action", " vision language action", "vla")),
+        ("Humanoid intelligence", ("humanoid", "whole-body", "loco-manipulation")),
+        ("World models", ("world model", "video model", "video generation")),
+        ("Robot manipulation", ("manipulation", "robot control", "robot action")),
+        ("Dexterous manipulation", ("dexterous", "hand manipulation", "bimanual")),
+        ("Tactile intelligence", ("tactile", "touch", "haptic")),
+        ("Data & benchmarks", ("dataset", "benchmark", "data collection")),
+        ("Robot systems", ("real-time", "robot factory", "serving system")),
+    ]
+    for label, needles in rules:
+        if any(needle in lower for needle in needles):
+            fields.append(label)
+    return fields[:4] or ["Embodied AI"]
+
+
+def infer_organization(item: dict) -> tuple[str, str]:
+    # Do not infer an affiliation from baselines named in an abstract.  A model
+    # name in the title is a much stronger no-key source for organization tags.
+    lower = item["title"].lower()
+    for hint, organization in CONFIG.get("organization_hints", {}).items():
+        if hint.lower() in lower:
+            return organization, "Company"
+    return "Research team", "Research Lab"
+
+
+def evidence_metrics(summary: str) -> list[dict]:
+    sentences = re.split(r"(?<=[.!?])\s+", summary)
+    numeric = [sentence for sentence in sentences if re.search(r"\d+(?:\.\d+)?\s?(?:%|hz|hours?|tasks?|frames?|trajectories|b|m)\b", sentence, re.I)]
+    if numeric:
+        return [{"label": "Reported evidence", "value": " ".join(numeric[:2])[:360], "note": "Automatically extracted verbatim from the primary-source abstract."}]
+    return [{"label": "Reported evidence", "value": "Open the primary report", "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."}]
+
+
 def to_report(item: dict, points: int) -> dict:
     summary = item["summary"][:240].rsplit(" ", 1)[0] + "…"
-    tags = ["VLA"] if "vision-language-action" in (item["title"] + item["summary"]).lower() else ["Embodied AI"]
-    if "humanoid" in (item["title"] + item["summary"]).lower():
-        tags.append("Humanoid")
-    if "world model" in (item["title"] + item["summary"]).lower():
-        tags.append("World Models")
+    original_summary = item["summary"]
+    fields = infer_fields(item["title"] + " " + original_summary)
+    organization, organization_kind = infer_organization(item)
+    title_lower = item["title"].lower()
+    open_source = any(term in original_summary.lower() for term in ("open-source", "open source", "github.com", "code and model checkpoints"))
     return {
         "id": slug(item["title"]),
         "title": item["title"],
-        "organization": "Author team",
+        "organization": organization,
+        "organizationKind": organization_kind,
         "date": item["date"],
         "year": int(item["date"][:4]),
         "summary": summary,
-        "tags": tags,
-        "featured": points >= 90,
-        "openSource": False,
+        "tags": fields,
+        "fields": fields,
+        "featured": points >= 82,
+        "openSource": open_source,
+        "verification": "Automated",
+        "details": {
+            "keyPoints": [summary, f"Automated relevance score: {points}/100. Primary source: arXiv."],
+            "capabilities": fields,
+            "metrics": evidence_metrics(original_summary),
+        },
         "links": [{"label": "Report", "url": item["url"]}],
     }
 
@@ -115,14 +161,14 @@ def main() -> None:
     for item in seen.values():
         points, reasons = score(item)
         evaluated.append({**item, "score": points, "reasons": reasons})
-        # Pure keyword matches are not enough to establish influence. Without
-        # organization/attention enrichment, only explicitly named technical
-        # reports with a very high evidence score may publish automatically.
-        if points >= 82 and "technical report" in item["title"].lower():
+        # No human review step: source presence, date, and transparent relevance
+        # scoring are the inclusion gate. The audit log retains all candidates.
+        if points >= CONFIG.get("auto_publish_score", 42) and item["url"].startswith("https://arxiv.org/"):
             published.append(to_report(item, points))
 
     evaluated.sort(key=lambda item: (item["score"], item["date"]), reverse=True)
-    published.sort(key=lambda item: item["date"], reverse=True)
+    published.sort(key=lambda item: (item["date"], item["title"]), reverse=True)
+    published = published[:CONFIG.get("max_public_reports", 80)]
     CANDIDATES.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "candidates": evaluated,

@@ -7,6 +7,9 @@
     "all:\"robot world model\"",
     "all:\"cross-embodiment\""
   ],
+  "max_results_per_query": 100,
+  "auto_publish_score": 42,
+  "max_public_reports": 80,
   "trusted_organizations": [
     "Physical Intelligence", "NVIDIA", "Google DeepMind", "Figure", "Hugging Face",
     "BeingBeyond", "Robbyant", "X² Robotics", "Skild AI", "1X", "Agility Robotics",
@@ -16,5 +19,18 @@
     "vision-language-action", "vision language action", "vla", "robot foundation",
     "embodied foundation", "humanoid", "world model", "dexterous manipulation",
     "cross-embodiment", "tactile", "whole-body"
-  ]
+  ],
+  "organization_hints": {
+    "nvidia": "NVIDIA",
+    "qwen": "Alibaba / Qwen",
+    "gemini robotics": "Google DeepMind",
+    "physical intelligence": "Physical Intelligence",
+    "figure": "Figure",
+    "gr00t": "NVIDIA",
+    "smolvla": "Hugging Face",
+    "lerobot": "Hugging Face",
+    "being-h": "BeingBeyond",
+    "lingbot": "Robbyant",
+    "wall-oss": "X² Robotics"
+  }
 }

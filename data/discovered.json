@@ -1,1 +1,3565 @@
-[]
+[
+  {
+    "id": "wcm-a-world-critic-model-for-vision-language-act-12cccaf",
+    "title": "WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-31",
+    "year": 2026,
+    "summary": "Reinforcement learning (RL) post-training of Vision-Language-Action (VLA) models has shown strong promise for robotic manipulation. Among RL methods, critic-based approaches rely on a value estimator that predominantly operates on…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Reinforcement learning (RL) post-training of Vision-Language-Action (VLA) models has shown strong promise for robotic manipulation. Among RL methods, critic-based approaches rely on a value estimator that predominantly operates on…",
+        "Automated relevance score: 80/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Extensive experiments on 149 tasks across four benchmarks demonstrate that WCM consistently achieves state-of-the-art performance in both in-distribution and out-of-distribution settings, with particularly strong generalization gains.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.29613v1"
+      }
+    ]
+  },
+  {
+    "id": "fibvla-an-efficient-temporal-vision-language-act-887c02b",
+    "title": "FibVLA: An Efficient Temporal Vision-Language-Action Model with Fibonacci Sampling",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-31",
+    "year": 2026,
+    "summary": "Vision-language-action models (VLAs), which leverage the cognition of multimodal information to infer physical-world actions, provide a generalized solution for embodied AI applications. Conventional VLAs usually concentrate on current…",
+    "tags": [
+      "Vision-language-action",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action models (VLAs), which leverage the cognition of multimodal information to infer physical-world actions, provide a generalized solution for embodied AI applications. Conventional VLAs usually concentrate on current…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot systems"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.29596v1"
+      }
+    ]
+  },
+  {
+    "id": "robobridge-a-modular-framework-for-bridging-poli-8def076",
+    "title": "RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-30",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models have attracted growing interest as a scalable approach to robotic manipulation. While these models are effective action predictors, deploying them as robotic agents exposes critical gaps: no mechanism…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models have attracted growing interest as a scalable approach to robotic manipulation. While these models are effective action predictors, deploying them as robotic agents exposes critical gaps: no mechanism…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.27881v1"
+      }
+    ]
+  },
+  {
+    "id": "redflow-redirect-failure-into-action-level-corre-d9281f4",
+    "title": "RedFlow: Redirect Failure into Action-Level Corrections for Flow-matching VLA Policy",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-30",
+    "year": 2026,
+    "summary": "Flow-matching Vision-Language-Action (VLA) policies have shown strong potential for robotic manipulation but often suffer from compounding errors caused by distribution shifts during deployment. While offline reinforcement learning (RL)…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Flow-matching Vision-Language-Action (VLA) policies have shown strong potential for robotic manipulation but often suffer from compounding errors caused by distribution shifts during deployment. While offline reinforcement learning (RL)…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.27782v1"
+      }
+    ]
+  },
+  {
+    "id": "cross-embodiment-transfer-via-behavior-aligned-r-6586214",
+    "title": "Cross-Embodiment Transfer via Behavior-Aligned Representations",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-30",
+    "year": 2026,
+    "summary": "Recent progress in large-scale imitation learning for robot manipulation has been driven by leveraging datasets across a wide range of robot embodiments. However, achieving significant cross-embodiment transfer is often still challenging.…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Recent progress in large-scale imitation learning for robot manipulation has been driven by leveraging datasets across a wide range of robot embodiments. However, achieving significant cross-embodiment transfer is often still challenging.…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.27549v1"
+      }
+    ]
+  },
+  {
+    "id": "ace-data-0-human-centric-ambient-capture-as-embo-7a69515",
+    "title": "ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-30",
+    "year": 2026,
+    "summary": "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time.…",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "World models",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "World models",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time.…",
+        "Automated relevance score: 42/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "World models",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Using ACE, we build ACE-Data-0, comprising 150 hours and 17M video frames across 200 task categories, performed by 50 participants in 2 environments, for a total of 75,000 interaction episodes.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.28625v1"
+      }
+    ]
+  },
+  {
+    "id": "turbovla-real-time-vision-language-action-model--9e4423c",
+    "title": "TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-29",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models commonly adopt an LLM-centric $V \\to L \\to A$ pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot actions. Although…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models commonly adopt an LLM-centric $V \\to L \\to A$ pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot actions. Although…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "On LIBERO, TurboVLA achieves 97.7% average success with only 0.2B parameters, 31.2 ms inference latency, and 0.9 GB inference VRAM on a consumer-grade RTX 4090, matching or outperforming substantially larger VLA policies.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.27205v1"
+      }
+    ]
+  },
+  {
+    "id": "rl-2-vla-adaptive-rl-latent-compositional-steeri-583bf41",
+    "title": "RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-29",
+    "year": 2026,
+    "summary": "Despite the impressive visuomotor capabilities enabled by Vision-Language-Action (VLA) models, their performance often degrades on challenging and out-of-domain tasks. Recent test-time steering and scaling methods improve performance…",
+    "tags": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Despite the impressive visuomotor capabilities enabled by Vision-Language-Action (VLA) models, their performance often degrades on challenging and out-of-domain tasks. Recent test-time steering and scaling methods improve performance…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.26991v2"
+      }
+    ]
+  },
+  {
+    "id": "explicit-kinematic-guidance-from-analytic-concep-faf3e4b",
+    "title": "Explicit Kinematic Guidance from Analytic Concepts for Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-29",
+    "year": 2026,
+    "summary": "Current Vision-Language-Action (VLA) models rely mainly on 2D inputs, neglecting the rich object structural information and commonsense knowledge inherent in the 3D physical world. This deficiency restricts their spatial awareness and…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Current Vision-Language-Action (VLA) models rely mainly on 2D inputs, neglecting the rich object structural information and commonsense knowledge inherent in the 3D physical world. This deficiency restricts their spatial awareness and…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.26513v1"
+      }
+    ]
+  },
+  {
+    "id": "dlam-distributional-latent-actions-with-temporal-bcb159a",
+    "title": "DLAM: Distributional Latent Actions with Temporal Constraints",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-29",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models remain constrained by scarce action-labeled robot data, whereas action-free videos offer abundant observations of physical change. Latent action models can extract such priors, but reconstruction-trained…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models remain constrained by scarce action-labeled robot data, whereas action-free videos offer abundant observations of physical change. Latent action models can extract such priors, but reconstruction-trained…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.27138v1"
+      }
+    ]
+  },
+  {
+    "id": "sam3d-guided-object-centric-representation-align-3648d51",
+    "title": "SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-28",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models have shown strong potential for general robot manipulation, but most existing models rely on 2D visual-language backbones and lack fine-grained 3D understanding of target objects, especially under…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models have shown strong potential for general robot manipulation, but most existing models rely on 2D visual-language backbones and lack fine-grained 3D understanding of target objects, especially under…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.25912v1"
+      }
+    ]
+  },
+  {
+    "id": "hifi-umi-learning-deployable-manipulation-polici-11af198",
+    "title": "HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-28",
+    "year": 2026,
+    "summary": "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capture scales readily, and current…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capture scales readily, and current…",
+        "Automated relevance score: 56/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Pre-training on 4,000 hours from the same corpus lowers action error on ten unseen tasks by 41% and, on StarVLA-QwenPI, raises real-robot success by a further 18.1 percentage points. We open-source HiFi-UMI-2K, 2,000 hours of microsecond-synchronized, ultra-wide-FoV demonstrations, each automatically reconstructed and validated through simulation replay, as ",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.25895v1"
+      }
+    ]
+  },
+  {
+    "id": "cotinyvla-chain-of-thought-distillation-for-a-su-1c2b619",
+    "title": "CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-28",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models translate natural-language commands into robot action sequences, but leading systems on the LIBERO-Plus robustness benchmark use three- to seven-billion-parameter backbones whose memory demands can…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models translate natural-language commands into robot action sequences, but leading systems on the LIBERO-Plus robustness benchmark use three- to seven-billion-parameter backbones whose memory demands can…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "We present CoTinyVLA, a 0.9B-parameter action model on a Qwen3.5-0.8B backbone that obtains that robustness by structuring supervision instead of enlarging the model. Three components target different axes of the problem: dual-view temporal input of 16 history frames per step with textual camera and time markers; hierarchical chain-of-thought (CoT) distillat",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.25487v1"
+      }
+    ]
+  },
+  {
+    "id": "a-causality-aware-infer-diagnose-refine-framewor-99817be",
+    "title": "A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-28",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models predict sequential actions to execute tasks specified by language instructions, conditioned on visual observations and proprioceptive states. However, how to fuse modalities in VLA models remains an open…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models predict sequential actions to execute tasks specified by language instructions, conditioned on visual observations and proprioceptive states. However, how to fuse modalities in VLA models remains an open…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.25516v1"
+      }
+    ]
+  },
+  {
+    "id": "learning-touch-augmented-vision-language-action--71c625c",
+    "title": "τ: Learning Touch-Augmented Vision-Language-Action Models from Future Visual Supervision",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-27",
+    "year": 2026,
+    "summary": "Incorporating tactile sensing into Vision-Language-Action (VLA) models holds promise for contact-rich manipulation, where visual observations alone often fail to capture critical cues about physical interactions. However, learning…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Tactile intelligence",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Tactile intelligence",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Incorporating tactile sensing into Vision-Language-Action (VLA) models holds promise for contact-rich manipulation, where visual observations alone often fail to capture critical cues about physical interactions. However, learning…",
+        "Automated relevance score: 62/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Tactile intelligence",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.24485v2"
+      }
+    ]
+  },
+  {
+    "id": "futurertc-real-time-robot-execution-with-anticip-554344d",
+    "title": "FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-27",
+    "year": 2026,
+    "summary": "Real-time deployment of Vision-Language-Action (VLA) policies necessitates asynchronous execution, wherein subsequent action chunks are computed concurrently with the execution of the current chunk, leading to prediction-execution…",
+    "tags": [
+      "Vision-language-action",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Real-time deployment of Vision-Language-Action (VLA) policies necessitates asynchronous execution, wherein subsequent action chunks are computed concurrently with the execution of the current chunk, leading to prediction-execution…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot systems"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.24008v1"
+      }
+    ]
+  },
+  {
+    "id": "data-pyramid-for-embodied-manipulation-a1021f7",
+    "title": "Data Pyramid for Embodied Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-27",
+    "year": 2026,
+    "summary": "Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Tactile intelligence"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Tactile intelligence"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be…",
+        "Automated relevance score: 42/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Tactile intelligence"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.24744v1"
+      }
+    ]
+  },
+  {
+    "id": "real2sim2real-for-vision-language-action-manipul-83e89b8",
+    "title": "Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-25",
+    "year": 2026,
+    "summary": "Physical AI -- the integration of large vision-language-action (VLA) models with embodied agents that act in the real world -- has emerged as the next major frontier for AI, echoed by industry leaders such as Jensen Huang (``the next big…",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Physical AI -- the integration of large vision-language-action (VLA) models with embodied agents that act in the real world -- has emerged as the next major frontier for AI, echoed by industry leaders such as Jensen Huang (``the next big…",
+        "Automated relevance score: 62/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.22997v1"
+      }
+    ]
+  },
+  {
+    "id": "hyworldvla-a-vision-language-action-model-with-h-8e498bc",
+    "title": "HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-23",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises…",
+        "Automated relevance score: 62/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.20988v1"
+      }
+    ]
+  },
+  {
+    "id": "addressing-the-orchestration-gap-in-generalist-r-adcfa7b",
+    "title": "Addressing the Orchestration Gap in Generalist Robots via Physical Agency",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-23",
+    "year": 2026,
+    "summary": "General-purpose robots need to reason about their actions, combining perception, world knowledge, planning, success detection, recovery, and low-level control. Today's state-of-the-art models attempt to combine all these capabilities into…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "General-purpose robots need to reason about their actions, combining perception, world knowledge, planning, success detection, recovery, and low-level control. Today's state-of-the-art models attempt to combine all these capabilities into…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.21725v1"
+      }
+    ]
+  },
+  {
+    "id": "refertrack-referring-then-tracking-for-embodied--b5ca7a8",
+    "title": "ReferTrack: Referring Then Tracking for Embodied Visual Tracking",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-22",
+    "year": 2026,
+    "summary": "Embodied visual tracking (EVT) requires a mobile agent to continuously follow a specific target described in natural language using only onboard vision. While recent vision-language-action (VLA) policies unify target identification and…",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Embodied visual tracking (EVT) requires a mobile agent to continuously follow a specific target described in natural language using only onboard vision. While recent vision-language-action (VLA) policies unify target identification and…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.20061v1"
+      }
+    ]
+  },
+  {
+    "id": "closing-the-lab-to-store-gap-a-data-efficient-po-7d9a979",
+    "title": "Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-22",
+    "year": 2026,
+    "summary": "Closing the gap between benchmark performance and reliable real-world operation remains a central challenge for Vision-Language-Action (VLA) humanoid robots, which must handle execution errors, distribution shifts, and environmental…",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Closing the gap between benchmark performance and reliable real-world operation remains a central challenge for Vision-Language-Action (VLA) humanoid robots, which must handle execution errors, distribution shifts, and environmental…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.20345v1"
+      }
+    ]
+  },
+  {
+    "id": "masked-visual-actions-for-unified-world-modeling-a17bae8",
+    "title": "Masked Visual Actions for Unified World Modeling",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-21",
+    "year": 2026,
+    "summary": "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form…",
+    "tags": [
+      "World models",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "World models",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Video models absorb rich priors over how the visual world moves, interacts, and responds to contact, making them promising substrates for robotic world modeling. The central challenge is how to communicate action to such models in a form…",
+        "Automated relevance score: 48/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "World models",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Finetuned with only 15 hours of masked examples from real videos and simulation, a single checkpoint achieves strong visual fidelity and controllability across diverse scenes and multiple embodiments.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.19343v1"
+      }
+    ]
+  },
+  {
+    "id": "step-signal-temporal-logic-for-precise-specifica-af778a5",
+    "title": "STeP: Signal Temporal Logic for Precise Specifications for Action Generation with Vision Language Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-20",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models have shown impressive generalization, but often lack interpretability and can struggle to follow precise natural language instructions that encode spatial, temporal, and logical requirements. We propose…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models have shown impressive generalization, but often lack interpretability and can struggle to follow precise natural language instructions that encode spatial, temporal, and logical requirements. We propose…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.18580v1"
+      }
+    ]
+  },
+  {
+    "id": "rynnbrain-1-1-towards-more-capable-and-generaliz-3f536bb",
+    "title": "RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-20",
+    "year": 2026,
+    "summary": "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales. Trained with a unified spatio-temporal and physically grounded framework, RynnBrain 1.1 supports embodied perception, spatial…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales. Trained with a unified spatio-temporal and physically grounded framework, RynnBrain 1.1 supports embodied perception, spatial…",
+        "Automated relevance score: 74/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales. Compared with RynnBrain 1.0, it further introduces contact-point prediction across the model family and native 3D grounding for the 2B and 9B models, yielding representations and outputs that are more directly aligned with robot manipulation.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.17977v2"
+      }
+    ]
+  },
+  {
+    "id": "reasoning-as-a-double-edged-sword-architecture-a-d8c8d19",
+    "title": "Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-20",
+    "year": 2026,
+    "summary": "Does adding a reasoning step make a Vision-Language-Action (VLA) model more robust to perturbation? Intuitively, a policy that reasons before acting should absorb a perturbed input better than one that maps observations directly to…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Does adding a reasoning step make a Vision-Language-Action (VLA) model more robust to perturbation? Intuitively, a policy that reasons before acting should absorb a perturbed input better than one that maps observations directly to…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.17786v1"
+      }
+    ]
+  },
+  {
+    "id": "patch-policy-efficient-embodied-control-via-dens-ff546a8",
+    "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-20",
+    "year": 2026,
+    "summary": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.18236v1"
+      }
+    ]
+  },
+  {
+    "id": "fm-vla-force-based-memory-for-vision-language-ac-4251ee1",
+    "title": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-20",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models have achieved impressive generalization in robotic manipulation, and recent memory-augmented VLAs have relaxed the Markovian assumption by conditioning on past images or language summaries. Vision-based…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models have achieved impressive generalization in robotic manipulation, and recent memory-augmented VLAs have relaxed the Markovian assumption by conditioning on past images or language summaries. Vision-based…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.18231v1"
+      }
+    ]
+  },
+  {
+    "id": "closing-the-loop-in-humanoid-vla-persistent-3d-o-cdd145e",
+    "title": "Closing the Loop in Humanoid VLA: Persistent 3D Object Tokens for Verifiable Loco-Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-20",
+    "year": 2026,
+    "summary": "Vision-language-action policies are a promising foundation for general robot control, but long-horizon humanoid loco-manipulation requires the robot to treat task objects as persistent physical entities across movement, contact, occlusion,…",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action policies are a promising foundation for general robot control, but long-horizon humanoid loco-manipulation requires the robot to treat task objects as persistent physical entities across movement, contact, occlusion,…",
+        "Automated relevance score: 60/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.18016v2"
+      }
+    ]
+  },
+  {
+    "id": "what-do-they-see-interpreting-complex-road-scena-7ab17d9",
+    "title": "What Do They See? Interpreting Complex Road Scenarios Through the Eyes of Vision-Language-Action Models for Safe and Trustworthy Autonomous Vehicle Learning",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-18",
+    "year": 2026,
+    "summary": "End-to-end autonomous driving models are now able to navigate complex road scenarios, mapping raw sensor observations directly to observed paths for open-loop evaluation and often effective driving in closed-loop evaluation. Yet the…",
+    "tags": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "End-to-end autonomous driving models are now able to navigate complex road scenarios, mapping raw sensor observations directly to observed paths for open-loop evaluation and often effective driving in closed-loop evaluation. Yet the…",
+        "Automated relevance score: 46/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.16938v1"
+      }
+    ]
+  },
+  {
+    "id": "phyagentos-a-self-evolving-operating-system-for--8d9e4df",
+    "title": "PhyAgentOS: A Self-Evolving Operating System for Embodied Agents with Decoupled Cognitive Planning and Physical Execution",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-18",
+    "year": 2026,
+    "summary": "Vision-language-action models, world models, and agentic planners each advance physical intelligence, yet their composition lacks a common execution abstraction, shared state, semantic verification, and persistent experience across…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action models, world models, and agentic planners each advance physical intelligence, yet their composition lacks a common execution abstraction, shared state, semantic verification, and persistent experience across…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.16636v1"
+      }
+    ]
+  },
+  {
+    "id": "think-at-5-hz-act-at-20-hz-asynchronous-fast-slo-1ddcc1b",
+    "title": "Think at 5 Hz, Act at 20 Hz: Asynchronous Fast-Slow Vision-Language-Action Inference for Closed-Loop Driving",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-17",
+    "year": 2026,
+    "summary": "Large language models bring instruction following and scene reasoning to end-to-end driving, but their inference latency collides with the control rate a vehicle requires. Existing closed-loop agents hide this gap by invoking the model on…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Large language models bring instruction following and scene reasoning to end-to-end driving, but their inference latency collides with the control rate a vehicle requires. Existing closed-loop agents hide this gap by invoking the model on…",
+        "Automated relevance score: 46/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "A frozen 7B vision-language backbone acts as the slow system, digesting navigation instructions and visual history at low frequency while exposing its per-layer key-value cache as a standing representation of the scene.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.15621v1"
+      }
+    ]
+  },
+  {
+    "id": "handroid-bridging-dexterous-hand-and-humanoid-569b098",
+    "title": "Handroid: Bridging Dexterous Hand and Humanoid",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-17",
+    "year": 2026,
+    "summary": "Dexterous hands and humanoid robots are typically developed as distinct embodiments: the former enable contact-rich manipulation at the object scale, whereas the latter provide mobility and whole-body interaction in human-centered…",
+    "tags": [
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Dexterous hands and humanoid robots are typically developed as distinct embodiments: the former enable contact-rich manipulation at the object scale, whereas the latter provide mobility and whole-body interaction in human-centered…",
+        "Automated relevance score: 60/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Handroid reuses one 27-DoF electromechanical body as either a dexterous hand or a desktop humanoid, measuring 0.33 m in height and 2.05 kg in weight.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.16187v1"
+      }
+    ]
+  },
+  {
+    "id": "foresight-residual-rl-for-long-horizon-robot-man-459454c",
+    "title": "Foresight Residual RL for Long-Horizon Robot Manipulation with Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-17",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) policies offer strong general-purpose manipulation priors, but often fail on tight-tolerance, contact-rich assembly due to long-horizon credit assignment and subtask coupling: a state that is geometrically…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) policies offer strong general-purpose manipulation priors, but often fail on tight-tolerance, contact-rich assembly due to long-horizon credit assignment and subtask coupling: a state that is geometrically…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.16506v1"
+      }
+    ]
+  },
+  {
+    "id": "xiaomi-robotics-1-scaling-vision-language-action-34b83b1",
+    "title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2)…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": true,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2)…",
+        "Automated relevance score: 92/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.15330v2"
+      }
+    ]
+  },
+  {
+    "id": "towards-human-like-physical-intelligence-lifelon-ba3592f",
+    "title": "Towards Human-like Physical Intelligence: Lifelong Vision-Language-Action Learning for Robotic Manipulation",
+    "organization": "Physical Intelligence",
+    "organizationKind": "Company",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "Similar to the natural capabilities of humans to sequentially learn new tasks, robots with Vision-Language-Action (VLA) models should possess lifelong learning ability to learn a new task when deployed in open-world environments. However,…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Similar to the natural capabilities of humans to sequentially learn new tasks, robots with Vision-Language-Action (VLA) models should possess lifelong learning ability to learn a new task when deployed in open-world environments. However,…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.14852v2"
+      }
+    ]
+  },
+  {
+    "id": "representation-aligned-tactile-grounding-for-con-9a202d4",
+    "title": "Representation-Aligned Tactile Grounding for Contact-Rich Robotic Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "Tactile-enhanced vision-language-action (VLA) policies have been introduced for contact-rich manipulation, where critical interaction states are often hidden from vision. Future tactile prediction is a promising way to use touch because it…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Tactile intelligence"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Tactile intelligence"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Tactile-enhanced vision-language-action (VLA) policies have been introduced for contact-rich manipulation, where critical interaction states are often hidden from vision. Future tactile prediction is a promising way to use touch because it…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Tactile intelligence"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.14609v1"
+      }
+    ]
+  },
+  {
+    "id": "lights-camera-malfunction-when-illumination-robu-c6804a5",
+    "title": "Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models have emerged as a powerful paradigm for general-purpose robot manipulation; however, their transition to real-world environments reveals vulnerabilities to minor environmental perturbations. We propose…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models have emerged as a powerful paradigm for general-purpose robot manipulation; however, their transition to real-world environments reveals vulnerabilities to minor environmental perturbations. We propose…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.14698v1"
+      }
+    ]
+  },
+  {
+    "id": "fomovla-bridging-visual-foresight-and-motion-gui-3041a74",
+    "title": "FoMoVLA: Bridging Visual Foresight and Motion Guidance for Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models have achieved impressive results in visuomotor policy learning, yet remain fundamentally reactive, mapping current observations and language to actions without explicit forward prediction of world…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models have achieved impressive results in visuomotor policy learning, yet remain fundamentally reactive, mapping current observations and language to actions without explicit forward prediction of world…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.14739v1"
+      }
+    ]
+  },
+  {
+    "id": "cosfly-vla-a-spatially-aware-vision-language-act-53d06a0",
+    "title": "CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "Dynamic target tracking is essential for Unmanned Aerial Vehicles (UAVs) operating in complex urban environments, where both the target and the camera viewpoint change continuously. Existing Vision-Language-Action (VLA) policies can track…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Dynamic target tracking is essential for Unmanned Aerial Vehicles (UAVs) operating in complex urban environments, where both the target and the camera viewpoint change continuously. Existing Vision-Language-Action (VLA) policies can track…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Relative to OpenVLA, CosFly-VLA-0.8B reduces open-loop Average Displacement Error (ADE) by 34.1% on seen-test and 35.3% on unseen-test.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.15004v1"
+      }
+    ]
+  },
+  {
+    "id": "action-qformer-structured-representation-shaping-d618a2f",
+    "title": "Action QFormer: Structured Representation Shaping under Action Supervision in Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "Action supervision in vision-language-action (VLA) models is often treated as a downstream objective for learning action prediction. In this paper, we study it instead as a force that shapes inherited multimodal representations. We show…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Action supervision in vision-language-action (VLA) models is often treated as a downstream objective for learning action prediction. In this paper, we study it instead as a force that shapes inherited multimodal representations. We show…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.14635v1"
+      }
+    ]
+  },
+  {
+    "id": "semantic-anchoring-for-robotic-action-representa-96ab289",
+    "title": "Semantic Anchoring for Robotic Action Representations",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-15",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models inherit rich semantic representations from pretrained Vision-Language Models, yet fine-tuning on limited robot demonstrations degrades this structure and undermines generalization. A fundamental question…",
+    "tags": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models inherit rich semantic representations from pretrained Vision-Language Models, yet fine-tuning on limited robot demonstrations degrades this structure and undermines generalization. A fundamental question…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.13597v2"
+      }
+    ]
+  },
+  {
+    "id": "s-squared-vla-decoupling-semantic-and-spatial-st-fa51784",
+    "title": "S-squared-VLA: Decoupling Semantic and Spatial Streams in Vision-Language-Action Models for Autonomous Driving",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-15",
+    "year": 2026,
+    "summary": "Vision-Language Models (VLMs) have demonstrated remarkable potential for high-level reasoning in autonomous driving, yet they fundamentally struggle to generate precise, low-level control actions. This limitation is rooted in a…",
+    "tags": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language Models (VLMs) have demonstrated remarkable potential for high-level reasoning in autonomous driving, yet they fundamentally struggle to generate precise, low-level control actions. This limitation is rooted in a…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.13926v1"
+      }
+    ]
+  },
+  {
+    "id": "open-aoe-an-open-egocentric-manipulation-dataset-aea0600",
+    "title": "Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-15",
+    "year": 2026,
+    "summary": "Egocentric videos of human manipulation provide scalable supervision for embodied intelligence, yet existing resources rarely combine low-cost continuous capture, manipulation-level structured annotations, and reusable tools for robot…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Egocentric videos of human manipulation provide scalable supervision for embodied intelligence, yet existing resources rarely combine low-cost continuous capture, manipulation-level structured annotations, and reusable tools for robot…",
+        "Automated relevance score: 46/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Its first release contains approximately 2,000 hours of manipulation video collected in natural environments by 500+ contributors using 400+ smartphones.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.14183v2"
+      }
+    ]
+  },
+  {
+    "id": "dimas-distribution-matching-for-steering-vision--a7db1f0",
+    "title": "DiMaS: Distribution Matching for Steering Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-15",
+    "year": 2026,
+    "summary": "Flow-matching-based vision-language-action (VLA) models have emerged as powerful policies for robotic manipulation, yet a critical capability remains underexplored: fine-grained behavioral control, the ability to govern how a robot…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Flow-matching-based vision-language-action (VLA) models have emerged as powerful policies for robotic manipulation, yet a critical capability remains underexplored: fine-grained behavioral control, the ability to govern how a robot…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.14280v1"
+      }
+    ]
+  },
+  {
+    "id": "worlds-in-one-demo-a-synthetic-data-engine-for-l-fa80dd0",
+    "title": "Worlds in One Demo: A Synthetic Data Engine for Learning Open-World Mobile Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-14",
+    "year": 2026,
+    "summary": "Learning open-world mobile manipulation policies requires vast data to achieve spatial generalization, long-horizon robustness, and scene generalization. Current prevailing data collection paradigms, teleoperation and UMI, demand…",
+    "tags": [
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Learning open-world mobile manipulation policies requires vast data to achieve spatial generalization, long-horizon robustness, and scene generalization. Current prevailing data collection paradigms, teleoperation and UMI, demand…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.13154v2"
+      }
+    ]
+  },
+  {
+    "id": "vistavla-geometry-and-semantic-aware-3d-gaussian-c6de833",
+    "title": "VistaVLA: Geometry- and Semantic-Aware 3D Gaussian-Grounded VLA for Robotic Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-14",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models have emerged as a powerful end-to-end paradigm for robotic manipulation by mapping language instructions and 2D visual inputs directly to actions. However, these models lack an explicit, scene-level 3D…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models have emerged as a powerful end-to-end paradigm for robotic manipulation by mapping language instructions and 2D visual inputs directly to actions. However, these models lack an explicit, scene-level 3D…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.12356v2"
+      }
+    ]
+  },
+  {
+    "id": "trustvla-mechanism-guided-inference-time-defense-f9af7a1",
+    "title": "TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-14",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models are deployed through pipelines that end users cannot audit, and a poisoned VLA can behave normally on clean observations while a small visual trigger redirects a long-horizon robot policy before any…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models are deployed through pipelines that end users cannot audit, and a poisoned VLA can behave normally on clean observations while a small visual trigger redirects a long-horizon robot policy before any…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.12571v1"
+      }
+    ]
+  },
+  {
+    "id": "reducing-temporal-redundancy-for-efficient-visio-6f9db4f",
+    "title": "Reducing Temporal Redundancy for Efficient Vision-Language-Action Inference",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-14",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models exhibit strong generalization for robotic manipulation, yet their high inference latency limits real time deployment. We identify two primary sources of temporal redundancy in existing VLA pipelines:…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": true,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models exhibit strong generalization for robotic manipulation, yet their high inference latency limits real time deployment. We identify two primary sources of temporal redundancy in existing VLA pipelines:…",
+        "Automated relevance score: 84/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.12287v1"
+      }
+    ]
+  },
+  {
+    "id": "extoken-structured-exploration-for-efficient-vis-883f01e",
+    "title": "ExToken: Structured Exploration for Efficient Vision-Language-Action Reinforcement Fine-tuning",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-14",
+    "year": 2026,
+    "summary": "Reinforcement Learning (RL) has demonstrated significant potential for improving Vision-Language-Action (VLA) models on complex manipulation tasks. However, its practical scalability remains severely limited by the substantial cost of…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Reinforcement Learning (RL) has demonstrated significant potential for improving Vision-Language-Action (VLA) models on complex manipulation tasks. However, its practical scalability remains severely limited by the substantial cost of…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.12931v1"
+      }
+    ]
+  },
+  {
+    "id": "towards-predictive-aligned-and-scalable-robot-le-ea82431",
+    "title": "Towards Predictive, Aligned, and Scalable Robot Learning",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-13",
+    "year": 2026,
+    "summary": "Learning, at its core, extends beyond memorization to the ability to reason and solve novel problems by navigating a space of possibilities. We introduce Lumo-2, a latent world-action model that generates actions by reasoning over world…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Learning, at its core, extends beyond memorization to the ability to reason and solve novel problems by navigating a space of possibilities. We introduce Lumo-2, a latent world-action model that generates actions by reasoning over world…",
+        "Automated relevance score: 60/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.11270v1"
+      }
+    ]
+  },
+  {
+    "id": "see-like-a-robot-robot-centric-pointmaps-for-vis-829b8dd",
+    "title": "See like a Robot: Robot-Centric Pointmaps for Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-13",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models predict robot actions from visual observations and language instructions. These actions are defined in the robot's own 3D coordinate frame, yet most VLAs observe the scene in the camera frame, creating a…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models predict robot actions from visual observations and language instructions. These actions are defined in the robot's own 3D coordinate frame, yet most VLAs observe the scene in the camera frame, creating a…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.11498v1"
+      }
+    ]
+  },
+  {
+    "id": "artificial-foveated-perception-for-mitigating-sh-63c6663",
+    "title": "Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-12",
+    "year": 2026,
+    "summary": "Robotic foundation models have recently made substantial progress in multi-task capability, cross-embodiment transfer, and language-conditioned control. Yet robust deployment across diverse real-world settings remains difficult, in part…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Robotic foundation models have recently made substantial progress in multi-task capability, cross-embodiment transfer, and language-conditioned control. Yet robust deployment across diverse real-world settings remains difficult, in part…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.10655v1"
+      }
+    ]
+  },
+  {
+    "id": "on-the-efficiency-of-lora-fine-tuning-for-vision-8894655",
+    "title": "On the Efficiency of LoRA Fine-Tuning for Vision-Language-Action Models in Industrial Robotic Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-11",
+    "year": 2026,
+    "summary": "Deploying billion-parameter Vision-Language-Action (VLA) models on industrial hardware requires fine-tuning to bridge the embodiment gap. Full Fine-Tuning (FFT) provides maximal plasticity but requires data centre-grade GPUs. We present a…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Deploying billion-parameter Vision-Language-Action (VLA) models on industrial hardware requires fine-tuning to bridge the embodiment gap. Full Fine-Tuning (FFT) provides maximal plasticity but requires data centre-grade GPUs. We present a…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.10172v1"
+      }
+    ]
+  },
+  {
+    "id": "activefly-bench-aligning-embodied-question-answe-7b4af2f",
+    "title": "ActiveFly-Bench: Aligning Embodied Question Answering with Vision-Language-Action for Aerial Embodied Perception",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-11",
+    "year": 2026,
+    "summary": "We introduce ActiveFly-Bench, the first benchmark to bridge cyberspace reasoning and physical-world interaction for UAV embodied perception. The benchmark decomposes active perception into three hierarchical tasks: Aerial Embodied Question…",
+    "tags": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "We introduce ActiveFly-Bench, the first benchmark to bridge cyberspace reasoning and physical-world interaction for UAV embodied perception. The benchmark decomposes active perception into three hierarchical tasks: Aerial Embodied Question…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.10180v1"
+      }
+    ]
+  },
+  {
+    "id": "ts-mask-vla-2d-temporal-spatial-masking-for-visi-2dbbbca",
+    "title": "TS-Mask VLA: 2D Temporal-Spatial Masking for Vision-Language-Action Model with Effective Bridging",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-10",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models aim to understand natural-language instructions and visual observations, and to generate and execute corresponding actions as embodied agents. Recently, autoregressive token-based action generation has…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models aim to understand natural-language instructions and visual observations, and to generate and execute corresponding actions as embodied agents. Recently, autoregressive token-based action generation has…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "On LIBERO, TS-Mask VLA achieves a 95.7 percent average success rate with only 0.5B parameters, outperforming significantly larger models.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.09818v1"
+      }
+    ]
+  },
+  {
+    "id": "wcog-vla-a-dual-level-world-cognitive-vision-lan-4c23b20",
+    "title": "WCog-VLA: A Dual-Level World-Cognitive Vision-Language-Action Model for End-to-End Autonomous Driving",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-09",
+    "year": 2026,
+    "summary": "Vision-Language-Action (VLA) models have advanced end-to-end autonomous driving. However, existing methods either lack comprehensive world cognition or suffer from fragmented world foresight, inherently confining these models to reactive…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-Language-Action (VLA) models have advanced end-to-end autonomous driving. However, existing methods either lack comprehensive world cognition or suffer from fragmented world foresight, inherently confining these models to reactive…",
+        "Automated relevance score: 62/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.08375v1"
+      }
+    ]
+  },
+  {
+    "id": "leevla-seeing-what-matters-in-latent-environment-c387c80",
+    "title": "LEEVLA: Seeing What Matters in Latent Environment Evolution for Vision-Language-Action",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-09",
+    "year": 2026,
+    "summary": "Vision-language-action (VLA) models aim to map multimodal inputs to robot actions. However, most existing approaches struggle to cover complex dynamic scenarios due to treating all visual tokens uniformly and reasoning with human-selected…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision-language-action (VLA) models aim to map multimodal inputs to robot actions. However, most existing approaches struggle to cover complex dynamic scenarios due to treating all visual tokens uniformly and reasoning with human-selected…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.08182v1"
+      }
+    ]
+  },
+  {
+    "id": "flowdagger-human-in-the-loop-adaptation-of-gener-d09ddb8",
+    "title": "FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-09",
+    "year": 2026,
+    "summary": "Pretrained generative robot policies based on flow matching and diffusion have achieved impressive results across a wide range of manipulation tasks. Yet real-world deployments routinely expose failure modes outside the pretraining…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Pretrained generative robot policies based on flow matching and diffusion have achieved impressive results across a wide range of manipulation tasks. Yet real-world deployments routinely expose failure modes outside the pretraining…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.08877v1"
+      }
+    ]
+  },
+  {
+    "id": "fabrivla-a-lightweight-vision-language-action-mo-03f1d8b",
+    "title": "FabriVLA: A Lightweight Vision-Language-Action Model for Precise Multi-Task Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-09",
+    "year": 2026,
+    "summary": "We present FabriVLA, a lightweight Vision-Language-Action model for Precise Multi-Task Manipulation. FabriVLA combines an InternVL3.5 vision-language backbone with a flow-matching action head featuring gated self-attention across action…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "We present FabriVLA, a lightweight Vision-Language-Action model for Precise Multi-Task Manipulation. FabriVLA combines an InternVL3.5 vision-language backbone with a flow-matching action head featuring gated self-attention across action…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "On the Meta-World MT50 benchmark spanning 50 diverse manipulation tasks, FabriVLA achieves a tier-average success rate of 90.0%, demonstrating that a compact VLA built on a 1B scale VLM can achieve strong performance without relying on multi billion parameter VLA backbones.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.08575v2"
+      }
+    ]
+  },
+  {
+    "id": "touchworld-a-predictive-and-reactive-tactile-fou-cc257f7",
+    "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-08",
+    "year": 2026,
+    "summary": "Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Tactile intelligence"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Tactile intelligence"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force…",
+        "Automated relevance score: 62/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Tactile intelligence"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.07287v2"
+      }
+    ]
+  },
+  {
+    "id": "smooth-operator-a-real-time-sampling-based-algor-61ffc0c",
+    "title": "Smooth Operator: A Real-Time Sampling-Based Algorithm for Kinematic Hand Retargeting",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-08",
+    "year": 2026,
+    "summary": "Advances in learning-based robotic manipulation, such as Vision-Language-Action (VLA) models and Video Action Models (VAMs), heavily rely on high-quality teleoperation data. Their capabilities are strictly upper-bounded by the quality of…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Advances in learning-based robotic manipulation, such as Vision-Language-Action (VLA) models and Video Action Models (VAMs), heavily rely on high-quality teleoperation data. Their capabilities are strictly upper-bounded by the quality of…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.07491v2"
+      }
+    ]
+  },
+  {
+    "id": "multi-agent-robotic-control-with-onboard-vision--12354bc",
+    "title": "Multi-Agent Robotic Control with Onboard Vision-Language Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-08",
+    "year": 2026,
+    "summary": "Vision Language Models (VLMs) and Vision Language Action (VLA) models have shown promise in robotic control. Yet, they face significant challenges regarding explainability, generalization, and compute requirements. This paper presents a…",
+    "tags": [
+      "Vision-language-action"
+    ],
+    "fields": [
+      "Vision-language-action"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Vision Language Models (VLMs) and Vision Language Action (VLA) models have shown promise in robotic control. Yet, they face significant challenges regarding explainability, generalization, and compute requirements. This paper presents a…",
+        "Automated relevance score: 56/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Compact VLMs (3-20B parameters) are used throughout, with fine-tuning applied to improve package inspection accuracy.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.07403v1"
+      }
+    ]
+  },
+  {
+    "id": "help-human-efficient-large-scale-robot-post-trai-7ed0e41",
+    "title": "HELP: Human-Efficient Large-Scale Robot Post-Training with Rollout Segmentation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-08",
+    "year": 2026,
+    "summary": "When adapting Vision Language Action (VLA) models to downstream tasks, multiple rounds of post-training are often required to progressively address policy weaknesses. In this report, we focus on maximizing human efficiency during this…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "When adapting Vision Language Action (VLA) models to downstream tasks, multiple rounds of post-training are often required to progressively address policy weaknesses. In this report, we focus on maximizing human efficiency during this…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.09776v2"
+      }
+    ]
+  },
+  {
+    "id": "dual-latent-memory-in-vision-language-action-mod-cef0dbb",
+    "title": "Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-08",
+    "year": 2026,
+    "summary": "Mainstream Vision-Language-Action (VLA) models predict actions primarily from the current observation under a Markovian assumption, thus struggling with long-horizon, temporally dependent tasks. Existing memory-augmented VLAs either expand…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Mainstream Vision-Language-Action (VLA) models predict actions primarily from the current observation under a Markovian assumption, thus struggling with long-horizon, temporally dependent tasks. Existing memory-augmented VLAs either expand…",
+        "Automated relevance score: 54/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.07608v1"
+      }
+    ]
+  },
+  {
+    "id": "behavior-foundations-for-quadruped-robots-abot-c-e3062f2",
+    "title": "Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-08",
+    "year": 2026,
+    "summary": "The motion controller is one of the most fundamental modules in embodied intelligence systems. Driven by large-scale human motion-capture data and the motion-tracking paradigm, humanoid control has achieved remarkable progress in recent…",
+    "tags": [
+      "Humanoid intelligence"
+    ],
+    "fields": [
+      "Humanoid intelligence"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "The motion controller is one of the most fundamental modules in embodied intelligence systems. Driven by large-scale human motion-capture data and the motion-tracking paradigm, humanoid control has achieved remarkable progress in recent…",
+        "Automated relevance score: 72/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Humanoid intelligence"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.07370v2"
+      }
+    ]
+  },
+  {
+    "id": "nativemem-native-memory-compression-for-long-hor-8e33184",
+    "title": "NativeMEM: Native Memory Compression for Long-Horizon Robotic Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-07",
+    "year": 2026,
+    "summary": "How can pretrained Vision-Language-Action (VLA) models retain long-horizon visual histories with high-frequency updates without sacrificing efficiency? Existing approaches rely on external memory management, which restrains either the…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "How can pretrained Vision-Language-Action (VLA) models retain long-horizon visual histories with high-frequency updates without sacrificing efficiency? Existing approaches rely on external memory management, which restrains either the…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.06678v1"
+      }
+    ]
+  },
+  {
+    "id": "lift3d-vla-lifting-vla-models-to-3d-geometry-and-8d7f04b",
+    "title": "Lift3D-VLA: Lifting VLA Models to 3D Geometry and Dynamics-Aware Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-07",
+    "year": 2026,
+    "summary": "Recently, Vision-Language-Action (VLA) models have demonstrated strong generalization across diverse tasks. However, effective robotic manipulation in physical environments fundamentally requires geometric understanding and spatial…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Recently, Vision-Language-Action (VLA) models have demonstrated strong generalization across diverse tasks. However, effective robotic manipulation in physical environments fundamentally requires geometric understanding and spatial…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.06564v1"
+      }
+    ]
+  },
+  {
+    "id": "hypothesis-driven-model-expansion-under-uncertai-75374c3",
+    "title": "Hypothesis-driven Model Expansion under Uncertainty for Open-World Robot Planning",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-07",
+    "year": 2026,
+    "summary": "We consider an open-world planning setting in which service robots must operate in unknown environments with incomplete knowledge of objects and actions. Traditional closed-world approaches with pre-programmed knowledge bases fail when…",
+    "tags": [
+      "World models"
+    ],
+    "fields": [
+      "World models"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "We consider an open-world planning setting in which service robots must operate in unknown environments with incomplete knowledge of objects and actions. Traditional closed-world approaches with pre-programmed knowledge bases fail when…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "World models"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.06501v1"
+      }
+    ]
+  },
+  {
+    "id": "from-foundation-to-application-improving-vla-mod-0c64de7",
+    "title": "From Foundation to Application: Improving VLA Models in Practice",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-07",
+    "year": 2026,
+    "summary": "Despite recent progress of VLA foundation models, the disparity between laboratory conditions and real-world applications continues to impede their practical implementation. To bridge this gap, we present LingBot-VLA 2.0, which advances…",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Despite recent progress of VLA foundation models, the disparity between laboratory conditions and real-world applications continues to impede their practical implementation. To bridge this gap, we present LingBot-VLA 2.0, which advances…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Compared to the previous version, we revamp the data processing pipeline and curate around 60,000 hours of data for pretraining, including 50,000 hours of robot trajectories spanning 20 robot configurations and 10,000 hours of egocentric human videos.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.06403v1"
+      }
+    ]
+  },
+  {
+    "id": "embodied-operators-and-benchmarking-toward-reusa-6cdc438",
+    "title": "Embodied Operators and Benchmarking: Toward Reusable and Deployable Embodied Intelligence Systems",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-03",
+    "year": 2026,
+    "summary": "Embodied intelligence systems require not only end-to-end policy models, but also reusable functional modules that transform multimodal observations, robot states, human demonstrations, and task contexts into structured representations,…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Embodied intelligence systems require not only end-to-end policy models, but also reusable functional modules that transform multimodal observations, robot states, human demonstrations, and task contexts into structured representations,…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.03283v1"
+      }
+    ]
+  },
+  {
+    "id": "cross-embodiment-robot-manipulation-via-a-unifie-258c1a2",
+    "title": "Cross-Embodiment Robot Manipulation via a Unified Hand Action Space",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-03",
+    "year": 2026,
+    "summary": "Robot manipulation policies are typically tied to specific robotic hand embodiments, limiting the transfer of learned behaviors across platforms with different kinematic structures. In this work, we propose the Unified Hand Action Space…",
+    "tags": [
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Robot manipulation policies are typically tied to specific robotic hand embodiments, limiting the transfer of learned behaviors across platforms with different kinematic structures. In this work, we propose the Unified Hand Action Space…",
+        "Automated relevance score: 44/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.03570v1"
+      }
+    ]
+  },
+  {
+    "id": "gigaworld-1-a-roadmap-to-build-world-models-for--8be3eab",
+    "title": "GigaWorld-1: A Roadmap to Build World Models for Robot Policy Evaluation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-02",
+    "year": 2026,
+    "summary": "Evaluating embodied robot foundation models remains a critical bottleneck; unlike large language models efficiently assessed via digital benchmarks, robotic policies require slow, costly real-world rollouts limited by hardware and human…",
+    "tags": [
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Evaluating embodied robot foundation models remains a critical bottleneck; unlike large language models efficiently assessed via digital benchmarks, robotic policies require slow, costly real-world rollouts limited by hardware and human…",
+        "Automated relevance score: 64/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "World models",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Using WMBench, we analyze 7 video world models, 4 action representation schemes, and over 324,000 simulated policy rollouts paired with real robot executions, further enriching our analysis with large-scale community submissions from the CVPR 2026 GigaBrain Challenge, curated synthetic trajectories, and a training videos spanning more than 12,000 hours.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.02642v1"
+      }
+    ]
+  },
+  {
+    "id": "rosa-a-robotics-foundation-model-serving-system--83c86bc",
+    "title": "ROSA: A Robotics Foundation Model Serving System for Robot Factories",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-01",
+    "year": 2026,
+    "summary": "Robotics foundation models (RFMs) are making general-purpose robots increasingly practical for factory deployments. While RFM serving systems are central to this vision, existing systems are largely shaped by a single-robot, single-model…",
+    "tags": [
+      "Robot systems"
+    ],
+    "fields": [
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Robotics foundation models (RFMs) are making general-purpose robots increasingly practical for factory deployments. While RFM serving systems are central to this vision, existing systems are largely shaped by a single-robot, single-model…",
+        "Automated relevance score: 56/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Robot systems"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2607.01088v1"
+      }
+    ]
+  },
+  {
+    "id": "training-vision-language-action-models-with-dens-0511ed8",
+    "title": "Training Vision-Language-Action Models with Dense Embodied Chain-of-Thought Supervision",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-06-29",
+    "year": 2026,
+    "summary": "Cross-embodiment transfer in vision-language-action (VLA) models remains challenging because low-level state and action spaces differ fundamentally across robot platforms. We observe that the high-level cognitive process underlying…",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": true,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Cross-embodiment transfer in vision-language-action (VLA) models remains challenging because low-level state and action spaces differ fundamentally across robot platforms. We observe that the high-level cognitive process underlying…",
+        "Automated relevance score: 100/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "ZR-0 is pre-trained on ProcCorpus-60M, a large-scale dataset comprising approximately 60 million frames (approximately 1,000 hours) from over 400K trajectories, with dense ECoT annotations covering 96.8% of all frames.",
+          "note": "Automatically extracted verbatim from the primary-source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2606.30552v2"
+      }
+    ]
+  },
+  {
+    "id": "learning-action-priors-for-cross-embodiment-robo-0f31b58",
+    "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-06-24",
+    "year": 2026,
+    "summary": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2606.26095v1"
+      }
+    ]
+  },
+  {
+    "id": "robogaze-evaluating-robot-world-models-via-struc-d76d6a5",
+    "title": "RoboGaze: Evaluating Robot World Models via Structured Vision-Language Analysis",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-06-22",
+    "year": 2026,
+    "summary": "Recent advances in robot world models enable synthetic video generation for embodied prediction and planning. However, evaluating these videos is challenging: visually realistic outputs often violate physical laws, temporal consistency, or…",
+    "tags": [
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "World models",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Recent advances in robot world models enable synthetic video generation for embodied prediction and planning. However, evaluating these videos is challenging: visually realistic outputs often violate physical laws, temporal consistency, or…",
+        "Automated relevance score: 48/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "World models",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2606.28385v1"
+      }
+    ]
+  },
+  {
+    "id": "last-hd-learning-latent-physical-reasoning-from--8a7a2ab",
+    "title": "LaST-HD: Learning Latent Physical Reasoning from Scalable Human Data for Robot Manipulation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-06-22",
+    "year": 2026,
+    "summary": "Human-hand demonstrations provide a direct and scalable source of physical interaction data for robot learning. While manual retargeting is indispensable for establishing kinematic action correspondence across different morphologies,…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Human-hand demonstrations provide a direct and scalable source of physical interaction data for robot learning. While manual retargeting is indispensable for establishing kinematic action correspondence across different morphologies,…",
+        "Automated relevance score: 52/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2606.23685v1"
+      }
+    ]
+  },
+  {
+    "id": "libero-safety-a-comprehensive-benchmark-for-phys-892967a",
+    "title": "LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-06-22",
+    "year": 2026,
+    "summary": "Despite the impressive manipulation capabilities of Vision-Language-Action (VLA) models, their operational safety under strict constraints remains largely unverified. To address this, we introduce a parametric safety benchmark to…",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Despite the impressive manipulation capabilities of Vision-Language-Action (VLA) models, their operational safety under strict constraints remains largely unverified. To address this, we introduce a parametric safety benchmark to…",
+        "Automated relevance score: 62/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2606.23686v2"
+      }
+    ]
+  },
+  {
+    "id": "sc3-eval-evaluating-robot-foundation-models-via--2fb8321",
+    "title": "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
+    "organization": "Research team",
+    "organizationKind": "Research Lab",
+    "date": "2026-06-17",
+    "year": 2026,
+    "summary": "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts…",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts…",
+        "Automated relevance score: 80/100. Primary source: arXiv."
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation"
+      ],
+      "metrics": [
+        {
+          "label": "Reported evidence",
+          "value": "Open the primary report",
+          "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Report",
+        "url": "https://arxiv.org/abs/2606.18610v3"
+      }
+    ]
+  }
+]
