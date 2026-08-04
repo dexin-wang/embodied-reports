@@ -25,7 +25,7 @@ npm run dev
 
 ## Automated discovery
 
-`automation/discover.py` queries public research feeds, validates dated primary-source records, scores relevance, and writes qualifying entries directly to `data/discovered.json`—without a manual approval queue. `data/catalog.json` is the stable public index: a feed outage cannot erase entries that were already published. GitHub Actions runs discovery daily and link validation weekly.
+`automation/discover.py` queries public research feeds and `automation/discover_official_projects.py` finds official project releases that may have no paper or PDF. Both produce leads only. `automation/verify_reports.py` publishes a lead only after web search confirms an official project page, a named organization, and discussion on at least two social platforms (including one independent source). The public index is `data/verified.json`; arXiv alone never creates a public card.
 
 The same daily job extracts an original method/framework figure from an accessible public PDF and saves it under `public/frameworks/`. The report-detail dialog displays this source-derived image together with source-attributed technical points, capabilities, and reported evidence.
 
@@ -33,9 +33,9 @@ The initial pipeline uses no private API key. Search-engine and structured LLM e
 
 See [DATA_POLICY.md](DATA_POLICY.md) for inclusion and verification rules. The UI supports filtering by technical field, institution, institution type (company / university / research lab), year, month, and open-source status.
 
-### Optional source-grounded AI dossiers
+### Automatic source-grounded verification and AI dossiers
 
-To have OpenAI generate Chinese technical highlights, capabilities, metrics, and bilingual organization labels from each report's PDF or primary webpage, add a repository secret named `OPENAI_API_KEY` under `Settings → Secrets and variables → Actions`. The scheduled job then writes enriched records to `data/enriched.json`; it skips this step when the secret is absent. The model is never asked to use facts outside the source text supplied to it.
+Add a repository secret named `OPENAI_API_KEY` under `Settings → Secrets and variables → Actions`. The scheduled job uses it to verify official project pages, resolve bilingual organization labels, preserve impact evidence, and generate Chinese technical dossiers. A missing or invalid key fails the verifier visibly instead of silently publishing unverified papers.
 
 ## Publish this source repository
 
