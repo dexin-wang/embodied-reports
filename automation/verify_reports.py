@@ -17,6 +17,7 @@ import re
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -186,10 +187,28 @@ def main() -> None:
     if not todo:
         print(f"verification cache is current: verified={len(verified_by_id)}")
         return
-    for index, candidate in enumerate(todo, 1):
-        item_id = slug(candidate["title"])
+    def check(candidate: dict) -> tuple[dict, dict | None, Exception | None]:
         try:
-            verdict = call_model(candidate)
+            return candidate, call_model(candidate), None
+        except urllib.error.HTTPError as exc:
+            # Authentication, model access and schema errors must fail the run
+            # visibly rather than making the index look silently up to date.
+            body = exc.read().decode("utf-8", "ignore")[:500]
+            raise RuntimeError(f"OpenAI request failed ({exc.code}): {body}") from exc
+        except (urllib.error.URLError, TimeoutError, KeyError, ValueError, json.JSONDecodeError) as exc:
+            return candidate, None, exc
+
+    workers = min(int(CONFIG.get("verification_workers", 4)), len(todo))
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        futures = [pool.submit(check, candidate) for candidate in todo]
+        checked = [future.result() for future in as_completed(futures)]
+
+    for index, (candidate, verdict, error) in enumerate(checked, 1):
+        item_id = slug(candidate["title"])
+        if error:
+            print(f"warning: verification retry later for {candidate['title']}: {error}")
+            continue
+        try:
             accepted, reason, evidence = valid_verdict(verdict)
             audit[item_id] = {
                 "checked_at": datetime.now(timezone.utc).isoformat(), "title": candidate["title"],
@@ -198,10 +217,9 @@ def main() -> None:
             if accepted:
                 verified_by_id[item_id] = report_from(candidate, verdict, evidence)
             print(f"verified={index}/{len(todo)} accepted={accepted} {candidate['title']}")
-        except (urllib.error.URLError, TimeoutError, KeyError, ValueError, json.JSONDecodeError) as exc:
-            # Do not cache transport/model errors: a later scheduled run retries them.
+        except (KeyError, ValueError, json.JSONDecodeError) as exc:
+            # Do not cache malformed/transient responses: a later scheduled run retries them.
             print(f"warning: verification retry later for {candidate['title']}: {exc}")
-            time.sleep(2)
             continue
         AUDIT.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
         VERIFIED.write_text(json.dumps(sorted(verified_by_id.values(), key=lambda x: (x["date"], x["title"]), reverse=True), ensure_ascii=False, indent=2) + "\n")
