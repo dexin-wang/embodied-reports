@@ -13,7 +13,7 @@ export type Report = {
   verification?: "Automated" | "Seed";
   framework?: { sourceUrl?: string; page?: number; caption?: string };
   details?: ReportDetails;
-  links: { label: "Report" | "Project" | "GitHub" | "Model"; url: string }[];
+  links: { label: "Report" | "Project" | "GitHub" | "Model" | "Evidence"; url: string }[];
 };
 
 export type ReportDetails = {
