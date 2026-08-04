@@ -4,36 +4,41 @@
       "id": "lingbot-video",
       "asset": "frameworks/lingbot-video.jpg",
       "source_url": "https://arxiv.org/abs/2607.07675",
-      "page": 2,
-      "caption_detected": true
+      "page": null,
+      "caption_detected": false,
+      "cached": true
     },
     {
       "id": "wall-oss-05",
       "asset": "frameworks/wall-oss-05.jpg",
       "source_url": "https://arxiv.org/abs/2605.30877",
-      "page": 4,
-      "caption_detected": true
+      "page": null,
+      "caption_detected": false,
+      "cached": true
     },
     {
       "id": "pi07",
       "asset": "frameworks/pi07.jpg",
       "source_url": "https://www.pi.website/download/pi07.pdf",
-      "page": 4,
-      "caption_detected": true
+      "page": null,
+      "caption_detected": false,
+      "cached": true
     },
     {
       "id": "being-h0",
       "asset": "frameworks/being-h0.jpg",
       "source_url": "https://arxiv.org/abs/2507.15597",
-      "page": 1,
-      "caption_detected": true
+      "page": null,
+      "caption_detected": false,
+      "cached": true
     },
     {
       "id": "smolvla",
       "asset": "frameworks/smolvla.jpg",
       "source_url": "https://arxiv.org/abs/2506.01844",
-      "page": 1,
-      "caption_detected": true
+      "page": null,
+      "caption_detected": false,
+      "cached": true
     }
   ]
 }
