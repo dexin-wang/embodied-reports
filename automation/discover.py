@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Discover, automatically validate, and publish embodied-AI reports.
+"""Find leads for the separate official-source verification stage.
 
-The public index has no manual approval queue.  A report is published when a
-primary source is reachable through the arXiv feed and it passes the transparent
-relevance threshold.  `candidates.json` remains an audit log of every scoring
-decision, rather than a list waiting for a human reviewer.
+arXiv is deliberately a *candidate* feed only.  It never publishes a card: the
+next stage must establish an official project page, a named institution, and
+multi-platform public discussion before a candidate reaches the website.
 """
 
 from __future__ import annotations
@@ -21,8 +20,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "automation/sources.json").read_text())
-OUTPUT = ROOT / "data/discovered.json"
-CATALOG = ROOT / "data/catalog.json"
 CANDIDATES = ROOT / "automation/candidates.json"
 NS = {"atom": "http://www.w3.org/2005/Atom"}
 
@@ -82,72 +79,6 @@ def slug(title: str) -> str:
     return f"{normalized or 'report'}-{suffix}"
 
 
-def infer_fields(text: str) -> list[str]:
-    lower = text.lower()
-    fields = []
-    rules = [
-        ("Vision-language-action", ("vision-language-action", " vision language action", "vla")),
-        ("Humanoid intelligence", ("humanoid", "whole-body", "loco-manipulation")),
-        ("World models", ("world model", "video model", "video generation")),
-        ("Robot manipulation", ("manipulation", "robot control", "robot action")),
-        ("Dexterous manipulation", ("dexterous", "hand manipulation", "bimanual")),
-        ("Tactile intelligence", ("tactile", "touch", "haptic")),
-        ("Data & benchmarks", ("dataset", "benchmark", "data collection")),
-        ("Robot systems", ("real-time", "robot factory", "serving system")),
-    ]
-    for label, needles in rules:
-        if any(needle in lower for needle in needles):
-            fields.append(label)
-    return fields[:4] or ["Embodied AI"]
-
-
-def infer_organization(item: dict) -> tuple[str, str]:
-    # Do not infer an affiliation from baselines named in an abstract.  A model
-    # name in the title is a much stronger no-key source for organization tags.
-    lower = item["title"].lower()
-    for hint, organization in CONFIG.get("organization_hints", {}).items():
-        if hint.lower() in lower:
-            return organization, "Company"
-    return "Research team", "Research Lab"
-
-
-def evidence_metrics(summary: str) -> list[dict]:
-    sentences = re.split(r"(?<=[.!?])\s+", summary)
-    numeric = [sentence for sentence in sentences if re.search(r"\d+(?:\.\d+)?\s?(?:%|hz|hours?|tasks?|frames?|trajectories|b|m)\b", sentence, re.I)]
-    if numeric:
-        return [{"label": "Reported evidence", "value": " ".join(numeric[:2])[:360], "note": "Automatically extracted verbatim from the primary-source abstract."}]
-    return [{"label": "Reported evidence", "value": "Open the primary report", "note": "No numerical claim is displayed unless it can be reliably extracted from the source abstract."}]
-
-
-def to_report(item: dict, points: int) -> dict:
-    summary = item["summary"][:240].rsplit(" ", 1)[0] + "…"
-    original_summary = item["summary"]
-    fields = infer_fields(item["title"] + " " + original_summary)
-    organization, organization_kind = infer_organization(item)
-    title_lower = item["title"].lower()
-    open_source = any(term in original_summary.lower() for term in ("open-source", "open source", "github.com", "code and model checkpoints"))
-    return {
-        "id": slug(item["title"]),
-        "title": item["title"],
-        "organization": organization,
-        "organizationKind": organization_kind,
-        "date": item["date"],
-        "year": int(item["date"][:4]),
-        "summary": summary,
-        "tags": fields,
-        "fields": fields,
-        "featured": points >= 82,
-        "openSource": open_source,
-        "verification": "Automated",
-        "details": {
-            "keyPoints": [summary, f"Automated relevance score: {points}/100. Primary source: arXiv."],
-            "capabilities": fields,
-            "metrics": evidence_metrics(original_summary),
-        },
-        "links": [{"label": "Report", "url": item["url"]}],
-    }
-
-
 def main() -> None:
     seen: dict[str, dict] = {}
     if not os.getenv("DISCOVERY_OFFLINE"):
@@ -168,39 +99,30 @@ def main() -> None:
                 seen[item["url"]] = item
         print(f"using cached feed snapshot: candidates={len(seen)}")
 
-    # A temporary provider outage must never erase the public index.
+    # A temporary provider outage must never overwrite the candidate audit log.
     if len(seen) < CONFIG.get("minimum_successful_candidates", 10):
         print(f"warning: only {len(seen)} candidates; preserving existing public data")
         return
 
+    # Keep non-arXiv leads found by the official-project discovery agent.  They
+    # are candidates too, but must still pass the same strict verifier.
+    previous = json.loads(CANDIDATES.read_text()).get("candidates", []) if CANDIDATES.exists() else []
+    evaluated_by_url = {
+        item.get("url"): item for item in previous
+        if item.get("url") and not item.get("url", "").startswith("https://arxiv.org/")
+    }
     evaluated = []
-    published = []
     for item in seen.values():
         points, reasons = score(item)
-        evaluated.append({**item, "score": points, "reasons": reasons})
-        # No human review step: source presence, date, and transparent relevance
-        # scoring are the inclusion gate. The audit log retains all candidates.
-        if points >= CONFIG.get("auto_publish_score", 42) and item["url"].startswith("https://arxiv.org/"):
-            published.append(to_report(item, points))
+        evaluated_by_url[item["url"]] = {**item, "score": points, "reasons": reasons}
 
+    evaluated = list(evaluated_by_url.values())
     evaluated.sort(key=lambda item: (item["score"], item["date"]), reverse=True)
-    published.sort(key=lambda item: (item["date"], item["title"]), reverse=True)
-    published = published[:CONFIG.get("max_public_reports", 120)]
-
-    existing_catalog = json.loads(CATALOG.read_text()) if CATALOG.exists() else []
-    catalog_by_id = {item["id"]: item for item in existing_catalog}
-    # Fresh sources take precedence, but previously published reports stay
-    # visible when a feed no longer returns older records.
-    catalog_by_id.update({item["id"]: item for item in published})
-    catalog = sorted(catalog_by_id.values(), key=lambda item: (item["date"], item["title"]), reverse=True)
-    catalog = catalog[:CONFIG.get("catalog_limit", 180)]
     CANDIDATES.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "candidates": evaluated,
     }, ensure_ascii=False, indent=2) + "\n")
-    OUTPUT.write_text(json.dumps(published, ensure_ascii=False, indent=2) + "\n")
-    CATALOG.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n")
-    print(f"evaluated={len(evaluated)} published={len(published)} catalog={len(catalog)}")
+    print(f"evaluated={len(evaluated)} candidates ready for official-source verification")
 
 
 if __name__ == "__main__":
