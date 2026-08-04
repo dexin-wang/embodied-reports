@@ -10,7 +10,11 @@ permissions:
 
 jobs:
   discover:
-    runs-on: ubuntu-latest
+    # Explicitly authorized by the repository owner: this job needs the local
+    # sub2api service and therefore runs only on the owner's self-hosted runner.
+    runs-on: [self-hosted, linux, x64]
+    env:
+      OPENAI_BASE_URL: http://127.0.0.1:8080/v1
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
