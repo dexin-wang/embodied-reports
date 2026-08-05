@@ -100,6 +100,17 @@ def response_text(result: dict) -> str:
     raise RuntimeError(f"Responses API returned no output text: {summary}")
 
 
+def response_json(result: dict) -> dict:
+    text = response_text(result).lstrip()
+    start = text.find("{")
+    if start < 0:
+        raise RuntimeError(f"Responses API output did not contain JSON: {text[:800]}")
+    value, _ = json.JSONDecoder().raw_decode(text[start:])
+    if not isinstance(value, dict):
+        raise RuntimeError("Responses API JSON output was not an object")
+    return value
+
+
 def slug(title: str) -> str:
     normalized = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:48]
     return f"{normalized or 'report'}-{hashlib.sha1(title.encode()).hexdigest()[:7]}"
@@ -140,7 +151,7 @@ ABSTRACT: {candidate['summary'][:6000]}
     )
     with urllib.request.urlopen(request, timeout=180) as response:
         result = json.loads(response.read())
-    return json.loads(response_text(result))
+    return response_json(result)
 
 
 def is_url(url: str) -> bool:
