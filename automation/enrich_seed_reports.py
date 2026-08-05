@@ -156,9 +156,9 @@ def main() -> None:
                 "verification": "Automated",
             }
             OUT.write_text(json.dumps(list(existing.values()), ensure_ascii=False, indent=2) + "\n")
-            print(f"dossier={item["id"]}")
+            print(f"dossier={item['id']}")
         except (urllib.error.HTTPError, urllib.error.URLError, OSError, RuntimeError, ValueError, json.JSONDecodeError) as exc:
-            print(f"warning: dossier failed for {item["id"]}: {exc}")
+            print(f"warning: dossier failed for {item['id']}: {exc}")
     OUT.write_text(json.dumps(list(existing.values()), ensure_ascii=False, indent=2) + "\n")
     print(f"dossiers_total={len(existing)}")
 
