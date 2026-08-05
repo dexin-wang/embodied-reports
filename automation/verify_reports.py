@@ -31,6 +31,7 @@ AUDIT = ROOT / "automation" / "verification_audit.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+AUDIT_POLICY_VERSION = str(CONFIG.get("discovery_policy_version", "official-project-impact-v2"))
 
 SOCIAL_DOMAINS = {
     "x.com": "X", "twitter.com": "X", "linkedin.com": "LinkedIn",
@@ -52,15 +53,15 @@ SCHEMA = {
         "organization_kind": {"type": "string", "enum": ["Company", "University", "Research Lab"]},
         "fields": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 4},
         "summary_zh": {"type": "string"},
-        "key_points": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5},
-        "capabilities": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 4},
+        "key_points": {"type": "array", "items": {"type": "string"}, "minItems": 4, "maxItems": 7},
+        "capabilities": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5},
         "metrics": {
             "type": "array",
             "items": {
                 "type": "object", "additionalProperties": False,
                 "properties": {"label": {"type": "string"}, "value": {"type": "string"}, "note": {"type": "string"}},
                 "required": ["label", "value", "note"],
-            }, "minItems": 1, "maxItems": 4,
+            }, "minItems": 1, "maxItems": 5,
         },
         "open_source": {"type": "boolean"},
         "social_evidence": {
@@ -127,7 +128,7 @@ Use web search before deciding. A candidate is eligible ONLY if all conditions a
 
 If any condition cannot be supported by accessible web sources, set include=false and state the missing condition in reason. Do not guess URLs, affiliations, dates, metrics, or social evidence.
 For a Chinese organization, use its established Chinese and English names; otherwise organization_zh is an empty string.
-Write summary_zh, key_points, capabilities and metrics in concise Chinese based only on the official page/report. For metrics without a reliable numerical comparison, state the exact qualitative capability rather than inventing a number.
+Write a substantive Chinese dossier from the official page, technical report, and linked project material: 4–7 concrete technical points, 3–5 implemented capabilities, and 1–5 exact reported metrics/results. Do not make claims not supported by those sources. For metrics without a reliable numerical comparison, state the exact qualitative capability rather than inventing a number.
 Allowed fields: Vision-language-action, Humanoid intelligence, Whole-body control, World models, Robot manipulation, Dexterous manipulation, Tactile intelligence, Data & benchmarks, Robot systems, Embodied AI.
 
 CANDIDATE TITLE: {candidate['title']}
@@ -215,8 +216,17 @@ def main() -> None:
     verified = json.loads(VERIFIED.read_text()) if VERIFIED.exists() else []
     audit = json.loads(AUDIT.read_text()) if AUDIT.exists() else {}
     verified_by_id = {item["id"]: item for item in verified}
-    max_per_run = int(CONFIG.get("max_verifications_per_run", 30))
-    todo = [item for item in candidates if slug(item["title"]) not in audit][:max_per_run]
+    max_per_run = int(CONFIG.get("max_verifications_per_run", 120))
+    # arXiv feeds are discovery-only. Public publication begins with the separate
+    # official-release search, which supplies a non-arXiv project lead.
+    official_candidates = [
+        item for item in candidates
+        if "official web-project discovery" in item.get("reasons", [])
+    ]
+    todo = [
+        item for item in official_candidates
+        if audit.get(slug(item["title"]), {}).get("policy_version") != AUDIT_POLICY_VERSION
+    ][:max_per_run]
     if not todo:
         print(f"verification cache is current: verified={len(verified_by_id)}")
         return
@@ -245,7 +255,7 @@ def main() -> None:
             accepted, reason, evidence = valid_verdict(verdict)
             audit[item_id] = {
                 "checked_at": datetime.now(timezone.utc).isoformat(), "title": candidate["title"],
-                "accepted": accepted, "reason": reason or verdict["reason"], "verdict": verdict,
+                "accepted": accepted, "reason": reason or verdict["reason"], "policy_version": AUDIT_POLICY_VERSION, "verdict": verdict,
             }
             if accepted:
                 verified_by_id[item_id] = report_from(candidate, verdict, evidence)
