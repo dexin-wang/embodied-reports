@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import os
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -45,6 +46,27 @@ SCHEMA = {
 }
 
 
+def response_text(result: dict) -> str:
+    """Read text from both direct OpenAI and proxy-compatible Responses payloads."""
+    direct = result.get("output_text")
+    if isinstance(direct, str) and direct.strip():
+        return direct
+
+    parts = []
+    for output in result.get("output", []):
+        for content in output.get("content", []):
+            if content.get("type") == "output_text" and isinstance(content.get("text"), str):
+                parts.append(content["text"])
+    if parts:
+        return "\n".join(parts)
+
+    summary = json.dumps(
+        {key: result.get(key) for key in ("status", "error", "incomplete_details", "output")},
+        ensure_ascii=False,
+    )[:1600]
+    raise RuntimeError(f"Responses API returned no output text: {summary}")
+
+
 def call(topic: str) -> list[dict]:
     prompt = f"""Search the web for up to 20 influential embodied-robotics project releases since 2025 in this area: {topic}.
 Return only candidates that have a dedicated official project page, official company announcement, or official university/research-lab project page. Do not return an arXiv abstract as the URL. A paper/PDF and open source are optional.
@@ -60,8 +82,13 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
         f"{API_BASE_URL}/responses", data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(request, timeout=180) as response:
-        return json.loads(json.loads(response.read())["output_text"])["candidates"]
+    try:
+        with urllib.request.urlopen(request, timeout=180) as response:
+            result = json.loads(response.read())
+        return json.loads(response_text(result))["candidates"]
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "ignore")[:1200]
+        raise RuntimeError(f"sub2api request rejected ({exc.code}): {detail}") from exc
 
 
 def main() -> None:
