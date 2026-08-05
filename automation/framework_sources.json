@@ -1,7 +1,42 @@
 [
-  {"id": "lingbot-video", "source_url": "https://arxiv.org/abs/2607.07675"},
-  {"id": "wall-oss-05", "source_url": "https://arxiv.org/abs/2605.30877"},
-  {"id": "pi07", "source_url": "https://www.pi.website/download/pi07.pdf"},
-  {"id": "being-h0", "source_url": "https://arxiv.org/abs/2507.15597"},
-  {"id": "smolvla", "source_url": "https://arxiv.org/abs/2506.01844"}
+  {
+    "id": "being-h08",
+    "source_url": "https://research.beingbeyond.com/being-h08"
+  },
+  {
+    "id": "lingbot-video",
+    "source_url": "https://arxiv.org/abs/2607.07675"
+  },
+  {
+    "id": "wall-oss-05",
+    "source_url": "https://arxiv.org/abs/2605.30877"
+  },
+  {
+    "id": "pi07",
+    "source_url": "https://www.pi.website/download/pi07.pdf"
+  },
+  {
+    "id": "helix-02",
+    "source_url": "https://www.figure.ai/news/helix-02"
+  },
+  {
+    "id": "gr00t-n16",
+    "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_6/"
+  },
+  {
+    "id": "being-h0",
+    "source_url": "https://arxiv.org/abs/2507.15597"
+  },
+  {
+    "id": "gr00t-n15",
+    "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_5/"
+  },
+  {
+    "id": "smolvla",
+    "source_url": "https://arxiv.org/abs/2506.01844"
+  },
+  {
+    "id": "helix",
+    "source_url": "https://www.figure.ai/news/helix"
+  }
 ]
