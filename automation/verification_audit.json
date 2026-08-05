@@ -1,0 +1,1591 @@
+{
+  "search-status-8ee1d1e": {
+    "checked_at": "2026-08-05T09:09:58.757371+00:00",
+    "title": "Search status",
+    "accepted": false,
+    "reason": "不收录。候选标题和摘要描述的是检索状态，而非具身机器人技术项目；给定的 example.invalid 地址无法作为官方项目证据。公开检索未找到对应的官方项目页、明确负责组织，或至少两个不同社交平台上的讨论，因此条件1、2、3、4均无法得到支持。organization_kind 因输出模式要求必须填写枚举值，但不代表已识别到负责机构。",
+    "verdict": {
+      "capabilities": [
+        "未提供可验证的机器人能力信息。",
+        "候选内容仅描述检索流程，未描述实体机器人系统、模型或技术成果。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "未找到与“Search status”对应的官方具身机器人项目。",
+        "给定地址不可访问，且不是可验证的官方项目页面。",
+        "未识别到明确负责的公司、大学或研究机构。",
+        "未找到两个不同社交平台上的公开讨论证据。"
+      ],
+      "metrics": [
+        {
+          "label": "技术指标",
+          "note": "候选信息未提供官方技术报告或可验证指标。",
+          "value": "无可验证指标"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不收录。候选标题和摘要描述的是检索状态，而非具身机器人技术项目；给定的 example.invalid 地址无法作为官方项目证据。公开检索未找到对应的官方项目页、明确负责组织，或至少两个不同社交平台上的讨论，因此条件1、2、3、4均无法得到支持。organization_kind 因输出模式要求必须填写枚举值，但不代表已识别到负责机构。",
+      "social_evidence": [],
+      "summary_zh": "该候选是检索过程的状态说明，不是可验证的具身机器人项目，也没有官方发布、责任机构、技术能力或跨平台社会讨论证据。"
+    }
+  },
+  "track4action-distilling-world-centric-3d-tracker-fe7e07f": {
+    "checked_at": "2026-08-05T09:09:58.757663+00:00",
+    "title": "Track4Action: Distilling World-Centric 3D Tracker into Vision-Language-Action Policies",
+    "accepted": false,
+    "reason": "不收录：官方项目页明确显示该项目涉及真实双臂机器人操作，并列出上海创智学院、浙江大学、上海交通大学和Noematrix等责任机构，满足具身机器人、官方项目页和明确机构条件。项目发布于2026年8月4日，但截至2026年8月5日，未找到可访问来源证明其已在至少两个不同社交平台形成公开讨论，也未找到其中至少一个由责任机构之外账号或出版物发布的合格讨论证据，因此缺少条件4。项目页虽显示Code和Checkpoints入口，但可访问页面未提供可验证的代码仓库或许可证，故不能确认开源。",
+    "verdict": {
+      "capabilities": [
+        "从当前视觉观察、语言指令和VLA隐藏状态预测机器人动作序列",
+        "在训练阶段蒸馏演示视频中的场景几何、三维运动、可见性与相机变化信息",
+        "部署时无需未来视频或三维跟踪器即可执行策略",
+        "支持仿真及真实双臂机器人操作任务"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "使用冻结的Track4World作为训练阶段的世界中心三维跟踪教师",
+        "通过可学习查询令牌将VLA隐藏状态与跟踪器表征对齐",
+        "采用共享的流匹配动作头生成动作块",
+        "三维跟踪器仅提供特权监督，推理阶段完全移除"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO",
+          "note": "项目页报告的任务成功率。",
+          "value": "97.0%"
+        },
+        {
+          "label": "LIBERO-Plus零样本",
+          "note": "比无对齐变体高7.6个百分点，比LaMP高3.0个百分点。",
+          "value": "82.3%"
+        },
+        {
+          "label": "RoboTwin 2.0",
+          "note": "分别为clean与randomized测试划分。",
+          "value": "80.44% / 81.48%"
+        },
+        {
+          "label": "真实双臂任务",
+          "note": "四项物理任务的平均成功率；比无对齐变体高25.0个百分点。",
+          "value": "67.5%"
+        }
+      ],
+      "official_organization_url": "https://www.sii.edu.cn/",
+      "official_project_url": "https://wing0night.github.io/track4action-project-page/",
+      "open_source": false,
+      "organization_en": "Shanghai Innovation Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "上海创智学院",
+      "reason": "不收录：官方项目页明确显示该项目涉及真实双臂机器人操作，并列出上海创智学院、浙江大学、上海交通大学和Noematrix等责任机构，满足具身机器人、官方项目页和明确机构条件。项目发布于2026年8月4日，但截至2026年8月5日，未找到可访问来源证明其已在至少两个不同社交平台形成公开讨论，也未找到其中至少一个由责任机构之外账号或出版物发布的合格讨论证据，因此缺少条件4。项目页虽显示Code和Checkpoints入口，但可访问页面未提供可验证的代码仓库或许可证，故不能确认开源。",
+      "social_evidence": [],
+      "summary_zh": "Track4Action是一种面向机器人操作的视觉-语言-动作框架，将演示视频中已经发生的三维世界变化蒸馏到VLA策略中。冻结的Track4World教师在训练时提供几何、运动、可见性和相机变化表征，策略通过查询令牌学习与其对齐，并由流匹配动作头预测动作。部署时不再使用演示片段或三维跟踪器。"
+    }
+  },
+  "phyai-real-time-physical-ai-at-the-edge-scalable-a1ac21f": {
+    "checked_at": "2026-08-05T09:09:58.758868+00:00",
+    "title": "PhyAI: Real-Time Physical AI at the Edge, Scalable Rollouts in the Cloud",
+    "accepted": false,
+    "reason": "正在使用可访问网页来源逐项核验，尚未作出收录决定。",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目证据、责任组织以及至少两个社交平台上的公开讨论。",
+        "fields: ["
+      ],
+      "fields": [
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "暂未形成最终判定",
+        "metrics: [",
+        "metrics: [",
+        "metrics: [",
+        "metrics: ["
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "检索进行中",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在使用可访问网页来源逐项核验，尚未作出收录决定。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "待核验",
+          "url": ""
+        }
+      ],
+      "summary_zh": "正在核验。"
+    }
+  },
+  "structure-aware-robust-fine-tuning-defending-vis-b16e506": {
+    "checked_at": "2026-08-05T09:09:58.759610+00:00",
+    "title": "Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking",
+    "accepted": false,
+    "reason": "不收录。虽然arXiv记录确认该项目涉及VLA机器人操作、LIBERO仿真和真实PiPER机械臂，并将第一单位列为人工智能与数字经济广东省实验室（深圳），但截至2026年8月5日，未找到专属官方项目页、机构官方成果公告或研究实验室项目页；arXiv本身不能满足官方项目证据条件。此外，未找到至少两个不同社交平台上的公开讨论，也无法证明其中至少一个来源独立于责任机构。因此缺少条件2和条件4。",
+    "verdict": {
+      "capabilities": [
+        "VLA机器人对抗物理补丁攻击",
+        "机械臂操作策略鲁棒微调"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "研究对象涉及真实PiPER机械臂和VLA机器人操作，符合具身机器人主题",
+        "可核实材料目前仅有arXiv论文，未发现机构发布的专属项目页或官方研究成果公告",
+        "未找到两个不同社交平台上的公开讨论证据"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO攻击失败率",
+          "note": "论文报告SARF在AGSD攻击下保持干净性能",
+          "value": "OpenVLA平均失败率由100%降至28.6%，各套件为14.2%–56.8%"
+        },
+        {
+          "label": "真实机器人攻击成功率",
+          "note": "论文报告在PiPER机械臂和打印式AGSD补丁条件下测试",
+          "value": "平均任务成功率由23.0%提高至65.0%"
+        }
+      ],
+      "official_organization_url": "https://www.gml.ac.cn/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ)",
+      "organization_kind": "Research Lab",
+      "organization_zh": "人工智能与数字经济广东省实验室（深圳）",
+      "reason": "不收录。虽然arXiv记录确认该项目涉及VLA机器人操作、LIBERO仿真和真实PiPER机械臂，并将第一单位列为人工智能与数字经济广东省实验室（深圳），但截至2026年8月5日，未找到专属官方项目页、机构官方成果公告或研究实验室项目页；arXiv本身不能满足官方项目证据条件。此外，未找到至少两个不同社交平台上的公开讨论，也无法证明其中至少一个来源独立于责任机构。因此缺少条件2和条件4。",
+      "social_evidence": [],
+      "summary_zh": "提出可打印物理补丁攻击AGSD，用于劫持VLA策略中动作到视觉的关键注意力；并提出SARF，仅微调视觉编码器，通过特征锚定、关键注意力校正和语言引导的几何一致性提高机器人操作策略的攻击鲁棒性。"
+    }
+  },
+  "how-should-vision-language-action-models-use-pro-0f0ff1e": {
+    "checked_at": "2026-08-05T09:09:58.759865+00:00",
+    "title": "How Should Vision-Language-Action Models Use Proprioceptive State?",
+    "accepted": false,
+    "reason": "不收录。该工作确实属于实体机器人与具身智能研究，且论文明确列出香港科技大学（广州）、香港中文大学多媒体实验室和 AI² Robotics X-Lab 等机构 affiliation；但截至 2026 年 8 月 5 日，可访问来源中仅确认到 2026 年 8 月 4 日提交的 arXiv 页面和论文，未找到专门的官方项目页、负责机构公告或研究实验室项目页，因此不满足条件 2。搜索结果也未能支持其在至少两个不同社交平台上的公开讨论，更无法确认其中至少一个讨论来自独立于负责机构的账号或出版物，因此不满足条件 4。未发现公开代码证据，故 open_source=false，但开源并非收录条件。",
+    "verdict": {
+      "capabilities": [
+        "比较机器人本体状态的表示方式、历史长度与模型注入位置对闭环控制的影响。",
+        "研究面向机器人操作的状态感知视觉-语言-动作模型。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "使用统一的流匹配 VLA 框架，对五种本体状态接口进行受控比较。",
+        "状态历史长度从 1 帧扫描至 96 帧。",
+        "评估覆盖重排、关节物体交互、精细执行及多阶段复合操作。"
+      ],
+      "metrics": [
+        {
+          "label": "原子任务",
+          "note": "覆盖三个任务类别。",
+          "value": "45 个"
+        },
+        {
+          "label": "复合任务",
+          "note": "每个任务串联两个或三个原子子目标。",
+          "value": "20 个"
+        },
+        {
+          "label": "状态接口",
+          "note": "状态提示、VLM 前缀、动作前缀、状态专家和特征调制。",
+          "value": "5 种"
+        },
+        {
+          "label": "状态历史",
+          "note": "比较单帧到长时未压缩历史。",
+          "value": "1–96 帧"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "AI² Robotics X-Lab",
+      "organization_kind": "Research Lab",
+      "organization_zh": "自变量机器人 X-Lab",
+      "reason": "不收录。该工作确实属于实体机器人与具身智能研究，且论文明确列出香港科技大学（广州）、香港中文大学多媒体实验室和 AI² Robotics X-Lab 等机构 affiliation；但截至 2026 年 8 月 5 日，可访问来源中仅确认到 2026 年 8 月 4 日提交的 arXiv 页面和论文，未找到专门的官方项目页、负责机构公告或研究实验室项目页，因此不满足条件 2。搜索结果也未能支持其在至少两个不同社交平台上的公开讨论，更无法确认其中至少一个讨论来自独立于负责机构的账号或出版物，因此不满足条件 4。未发现公开代码证据，故 open_source=false，但开源并非收录条件。",
+      "social_evidence": [],
+      "summary_zh": "该研究通过受控实验分析 VLA 应如何使用机器人本体状态，比较五种状态接入接口及 1 至 96 帧状态历史，并在 RoboCasa365 的原子任务和复合任务上评估闭环操作表现。"
+    }
+  },
+  "weights-or-skills-a-survey-of-robot-learning-tec-0f14f17": {
+    "checked_at": "2026-08-05T09:09:58.760074+00:00",
+    "title": "Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills",
+    "accepted": false,
+    "reason": "不纳入。该候选是机器人学习领域的调查综述，而非一个具体的具身机器人技术项目；公开检索仅确认了 arXiv 页面，未发现专门的官方项目页、责任机构公告或研究实验室项目页，因此不满足条件 2。现有可访问来源也未明确指定一个公司、大学或命名研究机构对该项目负责，不满足条件 3。此外，未找到两个不同社交平台上的合格公开讨论及其中至少一个独立于责任机构的来源，不满足条件 4。",
+    "verdict": {
+      "capabilities": [
+        "梳理机器人学习中“权重策略”与“代码技能”两条技术路线",
+        "归纳代码策略从零样本生成到闭环自修复、持久技能记忆和进化搜索的发展层级",
+        "分析机器人技能的不同定义及技能市场面临的适应性、可移植性、安全验证和标准化问题"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Vision-language-action",
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "候选内容是一篇机器人学习综述，不是具备独立技术实现或实体机器人能力的项目",
+        "检索到的主要页面为 arXiv，不能作为官方项目证据",
+        "未找到由明确公司、大学或研究机构发布的专门项目页或官方公告",
+        "未找到至少两个不同社交平台上的可核验公开讨论，亦无法满足至少一个独立来源的要求"
+      ],
+      "metrics": [
+        {
+          "label": "覆盖系统",
+          "note": "摘要称覆盖六类技术路线，属于文献综述范围，不是机器人系统性能指标",
+          "value": "77 个代表性系统"
+        },
+        {
+          "label": "技术类别",
+          "note": "摘要给出的综述分类规模",
+          "value": "6 类"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不纳入。该候选是机器人学习领域的调查综述，而非一个具体的具身机器人技术项目；公开检索仅确认了 arXiv 页面，未发现专门的官方项目页、责任机构公告或研究实验室项目页，因此不满足条件 2。现有可访问来源也未明确指定一个公司、大学或命名研究机构对该项目负责，不满足条件 3。此外，未找到两个不同社交平台上的合格公开讨论及其中至少一个独立于责任机构的来源，不满足条件 4。",
+      "social_evidence": [],
+      "summary_zh": "该综述以“权重还是技能”为主线，对比将机器人能力固化在视觉-语言-动作模型参数中的路线，以及由智能体生成、执行和迭代代码技能的路线。摘要称其分析了 77 个代表性系统，讨论闭环修复、持久技能记忆、进化搜索和机器人技能市场等主题；但它本身不是一个可独立收录的具身机器人技术项目。"
+    }
+  },
+  "drift-derailing-denoising-trajectories-of-flow-m-819153d": {
+    "checked_at": "2026-08-05T09:09:58.760276+00:00",
+    "title": "DRIFT: Derailing Denoising Trajectories of Flow-Matching VLAs with Adversarial Patch Attack",
+    "accepted": false,
+    "reason": "不收录。该工作明确涉及机器人 VLA 操作策略，作者所属机构也可确认为 Yonsei University；但截至 2026-08-05，只找到 arXiv 论文和实验室成员页面，未找到专门的官方项目页、延世大学公告或 MCML Group 的项目发布页面，因此不满足条件 2。也未找到至少两个不同社交平台上的可核实公开讨论，更无法证明其中至少一个来自责任机构之外的独立账号或出版物，因此不满足条件 4。未发现公开代码仓库，故 open_source=false。",
+    "verdict": {
+      "capabilities": [
+        "面向流匹配视觉-语言-动作模型的测试时通用对抗贴片",
+        "通过攻击首个去噪步骤干扰机器人操作策略",
+        "针对 pi0 与 pi0.5 在 LIBERO 操作任务中的鲁棒性评估"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "将单个小型对抗贴片放置在机器人夹爪区域，直接扰动流匹配策略的去噪速度场",
+        "仅攻击第一个去噪步骤比攻击多个步骤更强且计算成本更低",
+        "论文将多步骤攻击效果下降归因于输入空间优化中的跨步骤梯度冲突"
+      ],
+      "metrics": [
+        {
+          "label": "首步攻击平均成功率",
+          "note": "pi0、四个 LIBERO 套件、3 个随机种子",
+          "value": "99.8%"
+        },
+        {
+          "label": "各套件攻击成功率",
+          "note": "Spatial、Goal、Object、Long",
+          "value": "100.0%、99.7%、100.0%、99.6%"
+        },
+        {
+          "label": "贴片尺寸",
+          "note": "位于夹爪的腕部相机图像区域；论文估算的物理尺寸和图像占比",
+          "value": "32 像素，约 2–3 厘米，约占腕部图像 2%"
+        },
+        {
+          "label": "评估范围",
+          "note": "流匹配 VLA 模型与机器人操作基准",
+          "value": "pi0、pi0.5；4 个 LIBERO 套件"
+        }
+      ],
+      "official_organization_url": "https://mcml.yonsei.ac.kr/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Yonsei University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录。该工作明确涉及机器人 VLA 操作策略，作者所属机构也可确认为 Yonsei University；但截至 2026-08-05，只找到 arXiv 论文和实验室成员页面，未找到专门的官方项目页、延世大学公告或 MCML Group 的项目发布页面，因此不满足条件 2。也未找到至少两个不同社交平台上的可核实公开讨论，更无法证明其中至少一个来自责任机构之外的独立账号或出版物，因此不满足条件 4。未发现公开代码仓库，故 open_source=false。",
+      "social_evidence": [],
+      "summary_zh": "DRIFT 是针对流匹配视觉-语言-动作模型的测试时通用对抗贴片攻击。它把小型贴片置于机器人夹爪的腕部相机视野中，直接扰动首个去噪步骤的速度场，使误差沿后续去噪轨迹放大并导致操作任务失败。"
+    }
+  },
+  "continue-or-replan-bernoulli-continuation-policy-88f350f": {
+    "checked_at": "2026-08-05T09:09:58.760499+00:00",
+    "title": "Continue or Replan? Bernoulli-Continuation Policy Learning for Adaptive Horizon Execution",
+    "accepted": false,
+    "reason": "不收录：候选满足实体机器人、官方项目页和明确责任机构条件，但截至 2026 年 8 月 5 日， accessible web sources 仅能确认项目页嵌入的 YouTube 演示，未能支持其在至少两个不同社交平台上的公开讨论，也未找到由责任机构之外的账号或出版物发布的社交证据，因此不满足条件 4。",
+    "verdict": {
+      "capabilities": [
+        "为分块式 VLA 按动作块自适应选择执行时域",
+        "根据连续的继续或重规划决策，在精细操作阶段前重新观测和规划",
+        "保持基础 VLA 冻结，以轻量 Transformer 头适配不同机器人操作策略",
+        "通过轨迹级强化学习同时优化任务成功率和重规划效率"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "将固定执行时域改写为有序的伯努利继续决策序列，使相邻候选时域共享动作前缀结构。",
+        "基础 VLA 保持冻结，仅训练轻量级执行时域选择头。",
+        "采用轨迹级强化学习和 Replanning-Efficiency Reward，兼顾任务成功与 VLA 调用效率。",
+        "在 RoboTwin 2.0、LIBERO、LIBERO-PRO 和 AGIBOT G1 实机操作任务上进行了评估。"
+      ],
+      "metrics": [
+        {
+          "label": "RoboTwin 2.0 低成功率任务",
+          "note": "LingBot-VLA 基础策略，Clean 设置下的 13 个任务。",
+          "value": "平均成功率从 75.15% 提升至 86.23%，绝对提升 11.08 个百分点"
+        },
+        {
+          "label": "RoboTwin 2.0 全部任务",
+          "note": "LingBot-VLA 基础策略，Clean 设置下共 50 个任务。",
+          "value": "平均成功率从 89.88% 提升至 93.94%，绝对提升 4.06 个百分点"
+        },
+        {
+          "label": "随机化泛化",
+          "note": "仅在 Clean 设置训练，直接在 Randomized 设置测试全部 50 个 RoboTwin 2.0 任务。",
+          "value": "平均成功率从 88.78% 提升至 92.84%，绝对提升 4.06 个百分点"
+        },
+        {
+          "label": "LIBERO",
+          "note": "迁移至不同基础策略 π0.5。",
+          "value": "平均成功率从 97.0% 提升至 98.7%"
+        }
+      ],
+      "official_organization_url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/",
+      "official_project_url": "https://fleetfootwork.github.io/BCP/",
+      "open_source": false,
+      "organization_en": "Microsoft Research Asia",
+      "organization_kind": "Research Lab",
+      "organization_zh": "微软亚洲研究院",
+      "reason": "不收录：候选满足实体机器人、官方项目页和明确责任机构条件，但截至 2026 年 8 月 5 日， accessible web sources 仅能确认项目页嵌入的 YouTube 演示，未能支持其在至少两个不同社交平台上的公开讨论，也未找到由责任机构之外的账号或出版物发布的社交证据，因此不满足条件 4。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "YouTube",
+          "url": "https://www.youtube-nocookie.com/embed/EuQEo7m6VDI?modestbranding=1&playsinline=1&rel=0"
+        }
+      ],
+      "summary_zh": "微软亚洲研究院与北京大学研究者提出 BCP，为分块式视觉-语言-动作模型学习自适应执行时域。该方法保持基础 VLA 冻结，通过轻量级继续决策头判断应继续执行当前动作块还是重新观测和规划，并利用轨迹级强化学习与重规划效率奖励平衡操作成功率和推理成本。"
+    }
+  },
+  "valueformer-a-causal-transformer-value-function--29c3203": {
+    "checked_at": "2026-08-05T09:09:58.760753+00:00",
+    "title": "ValueFormer: A Causal Transformer Value Function with Stage-Aware Labels for Semi-Autonomous Vision-Language-Action Policies",
+    "accepted": false,
+    "reason": "不收录。该候选在物理机器人与具身智能主题上符合要求，arXiv 也确认其于 2026 年 8 月 3 日提交；但 arXiv 本身不能作为官方项目证据。搜索未发现 ValueFormer 专属的 Chef Robotics 官方项目页、官方公告或实验室项目页，也未发现该项目在至少两个不同社交平台上的公开讨论，其中至少一个来自独立账号或出版物。因此条件 2 和条件 4 无法满足。现有来源虽能将作者与 Chef Robotics 联系起来，但没有可访问的官方来源明确声明 Chef Robotics 对 ValueFormer 项目负责，故条件 3 也缺少充分项目级证据。未发现公开源码证据，因此 open_source=false；这不是排除原因。",
+    "verdict": {
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "可访问来源仅确认该预印本研究真实双臂机器人三明治组装任务。",
+        "未找到 ValueFormer 的独立官方项目页、机构公告或研究实验室项目页。",
+        "未找到至少两个不同社交平台上的项目讨论证据。"
+      ],
+      "metrics": [
+        {
+          "label": "机器人实验数据",
+          "note": "来自预印本摘要，未获官方项目页面独立确认。",
+          "value": "1,427 个真实机器人回合"
+        },
+        {
+          "label": "任务完成率",
+          "note": "样本量 n=20，论文明确称结果仍在噪声范围内。",
+          "value": "70% 提升至 85%"
+        },
+        {
+          "label": "在线推理",
+          "note": "采用批处理 bf16 编码器后的报告结果。",
+          "value": "开销降低 3–5 倍，以 2 Hz 与策略在单 GPU 上运行"
+        }
+      ],
+      "official_organization_url": "https://www.chefrobotics.ai/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Chef Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。该候选在物理机器人与具身智能主题上符合要求，arXiv 也确认其于 2026 年 8 月 3 日提交；但 arXiv 本身不能作为官方项目证据。搜索未发现 ValueFormer 专属的 Chef Robotics 官方项目页、官方公告或实验室项目页，也未发现该项目在至少两个不同社交平台上的公开讨论，其中至少一个来自独立账号或出版物。因此条件 2 和条件 4 无法满足。现有来源虽能将作者与 Chef Robotics 联系起来，但没有可访问的官方来源明确声明 Chef Robotics 对 ValueFormer 项目负责，故条件 3 也缺少充分项目级证据。未发现公开源码证据，因此 open_source=false；这不是排除原因。",
+      "social_evidence": [],
+      "summary_zh": "ValueFormer 是面向半自主 VLA 机器人策略的因果 Transformer 价值函数研究，使用阶段感知逐帧标签估计任务进度并检测错误，在真实双臂三明治组装任务上进行了评估。"
+    }
+  },
+  "uncovering-and-mitigating-positional-blind-spots-3b5901d": {
+    "checked_at": "2026-08-05T09:09:58.761011+00:00",
+    "title": "Uncovering and Mitigating Positional Blind Spots in Vision-Language-Action Models",
+    "accepted": false,
+    "reason": "不收录。该候选明确涉及机器人操作和VLA模型，论文作者单位也可核实；但截至2026年8月5日，只找到arXiv论文，未找到专门的官方项目页、负责机构公告或研究实验室项目页，因此不满足条件2。亦未找到至少两个不同社交平台上的可核实公开讨论，更无法确认其中至少一个来自独立于负责机构的账号或出版物，因此不满足条件4。未发现可核实的开源仓库。",
+    "verdict": {
+      "capabilities": [
+        "以黑盒机器人任务回放定位VLA策略的局部位置盲区",
+        "利用盲区区域示范数据和LoRA微调缓解位置相关失效",
+        "评估任务无关干扰物位置对机器人操作策略的影响"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "将工作空间划分为网格，并用单侧对数似然比检验识别高风险区域",
+        "在五种VLA策略和LIBERO、VLA-Arena两个基准上评估位置盲区",
+        "通过盲区引导的示范采集和策略微调提高空间鲁棒性"
+      ],
+      "metrics": [
+        {
+          "label": "位置相关失败率",
+          "note": "五种受测VLA策略均出现空间集中的位置盲区",
+          "value": "0.15–0.58"
+        },
+        {
+          "label": "盲区搜索平均F1",
+          "note": "分别比随机搜索和自适应采样高0.268和0.178",
+          "value": "0.678"
+        },
+        {
+          "label": "总体失败率降幅",
+          "note": "采用位置盲区引导的定向微调后",
+          "value": "40.00%–85.19%"
+        },
+        {
+          "label": "搜索预算",
+          "note": "7×7网格；约为穷举评估执行次数的十分之一",
+          "value": "980次策略执行"
+        }
+      ],
+      "official_organization_url": "https://www.shnu.edu.cn/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Shanghai Normal University",
+      "organization_kind": "University",
+      "organization_zh": "上海师范大学",
+      "reason": "不收录。该候选明确涉及机器人操作和VLA模型，论文作者单位也可核实；但截至2026年8月5日，只找到arXiv论文，未找到专门的官方项目页、负责机构公告或研究实验室项目页，因此不满足条件2。亦未找到至少两个不同社交平台上的可核实公开讨论，更无法确认其中至少一个来自独立于负责机构的账号或出版物，因此不满足条件4。未发现可核实的开源仓库。",
+      "social_evidence": [],
+      "summary_zh": "该工作研究机器人操作VLA策略中的“位置盲区”：仅移动任务无关干扰物，就可能在工作空间的局部区域显著提高失败概率。方法通过网格化采样和对数似然比检验定位高风险区域，再利用这些区域的人工遥操作示范进行LoRA微调，以降低位置相关失效。"
+    }
+  },
+  "retouch-empowering-contact-rich-dexterous-manipu-63079f7": {
+    "checked_at": "2026-08-05T09:09:58.761283+00:00",
+    "title": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction",
+    "accepted": false,
+    "reason": "不收录。截至2026年8月5日，可访问搜索结果仅确认了2026年8月3日提交的arXiv技术报告；未找到ReTouch的专门官方项目页、组织公告或研究实验室项目页，因此不满足条件2。也未找到至少两个不同社交平台上的可验证公开讨论，更无法确认其中至少一个来自责任组织之外的独立账号或出版物，因此不满足条件4。中国科学技术大学与部分作者的关系可由该校官方人员页面支持，但现有官方组织来源没有明确声明其对ReTouch项目负责。",
+    "verdict": {
+      "capabilities": [
+        "基于视觉、语言与触觉输入生成灵巧操作动作",
+        "在执行期间利用新触觉反馈持续修正触觉预测与动作块",
+        "保留手指身份和局部接触结构，支持精细手指调整",
+        "执行按压、抓取、擦拭、取物和液体转移等接触密集任务"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Tactile intelligence"
+      ],
+      "include": false,
+      "key_points": [
+        "Tactile-Patch Encoder将每根手指的触觉单元按功能接触区域组织为结构化特征",
+        "高频动作模块异步预测未来触觉状态和动作块，并在执行中闭环更新",
+        "XHT-Dataset覆盖XHand–UR7e平台上的7项真实接触密集任务"
+      ],
+      "metrics": [
+        {
+          "label": "数据规模",
+          "note": "覆盖7项接触密集灵巧操作任务",
+          "value": "900条真实机器人示范"
+        },
+        {
+          "label": "标准条件平均成功率",
+          "note": "较最强基线提高18.4个百分点",
+          "value": "83.6%"
+        },
+        {
+          "label": "挑战条件平均成功率",
+          "note": "较最强基线提高23.8个百分点",
+          "value": "73.1%"
+        },
+        {
+          "label": "真实机器人评测",
+          "note": "每种方法在每项任务上执行20次",
+          "value": "7项任务 × 20次运行"
+        }
+      ],
+      "official_organization_url": "https://en.ustc.edu.cn/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "University of Science and Technology of China",
+      "organization_kind": "University",
+      "organization_zh": "中国科学技术大学",
+      "reason": "不收录。截至2026年8月5日，可访问搜索结果仅确认了2026年8月3日提交的arXiv技术报告；未找到ReTouch的专门官方项目页、组织公告或研究实验室项目页，因此不满足条件2。也未找到至少两个不同社交平台上的可验证公开讨论，更无法确认其中至少一个来自责任组织之外的独立账号或出版物，因此不满足条件4。中国科学技术大学与部分作者的关系可由该校官方人员页面支持，但现有官方组织来源没有明确声明其对ReTouch项目负责。",
+      "social_evidence": [],
+      "summary_zh": "ReTouch是一种面向接触密集灵巧操作的视觉-语言-动作模型。它将多指触觉信号编码为保留手指身份与局部接触结构的触觉块特征，并在机器人执行过程中依据实时触觉反馈持续修正未来触觉预测和动作块，以应对滑移、接触变化及执行误差。"
+    }
+  },
+  "mango-grasp-mahalanobis-fields-over-geometry-ori-a416e29": {
+    "checked_at": "2026-08-05T09:09:58.761631+00:00",
+    "title": "MANGO-Grasp: Mahalanobis Fields over Geometry-Oriented 3D Gaussians for Cross-Embodiment Dexterous Grasping",
+    "accepted": false,
+    "reason": "不收录：条件 1、2、3 可由项目页支持，但截至 2026 年 8 月 5 日，未找到可访问来源证明该项目已在至少两个不同社交平台获得公开讨论，也未找到任何独立于 A*STAR I²R、南洋理工大学或新加坡国立大学的社交账号或出版物讨论。因而条件 4 不满足。项目页同时注明代码、数据与检查点将在论文发表时发布，目前不能认定为开源。",
+    "verdict": {
+      "capabilities": [
+        "面向异构多指机器人手生成稳定抓取姿态",
+        "以形态与运动学描述符支持跨本体迁移",
+        "使用统一优化配置完成不同机器人手的抓取求解",
+        "零样本迁移至未见过的 SharpaWave 灵巧手"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "用表面对齐、带外法线的几何导向 3D 高斯表示物体局部几何",
+        "将机器人手表面关键点编码为形态-运动学描述符",
+        "以关键点和物体高斯基元之间的马氏场建模各向异性接触关系",
+        "预测场结合关节限制、穿透能量和自碰撞能量指导抓取优化"
+      ],
+      "metrics": [
+        {
+          "label": "CMAP 已见机器人手",
+          "note": "未见物体测试；项目页报告为最高结果",
+          "value": "平均仿真成功率 97.59%"
+        },
+        {
+          "label": "MultiGripperGrasp 已见机器人手",
+          "note": "未见物体测试；项目页报告为最高结果",
+          "value": "平均仿真成功率 89.47%"
+        },
+        {
+          "label": "零样本跨本体提升",
+          "note": "相对最强零样本基线 DRO",
+          "value": "CMAP 提升 13.47 个百分点；MultiGripperGrasp 提升 16.57 个百分点"
+        },
+        {
+          "label": "真实机器人实验",
+          "note": "KUKA 搭载未见过的 SharpaWave 手；10 个未见物体，每个尝试 10 次",
+          "value": "86/100，成功率 86%"
+        }
+      ],
+      "official_organization_url": "https://www.a-star.edu.sg/i2r",
+      "official_project_url": "https://connor-zh.github.io/MANGO-Grasp/",
+      "open_source": false,
+      "organization_en": "A*STAR Institute for Infocomm Research (A*STAR I²R)",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不收录：条件 1、2、3 可由项目页支持，但截至 2026 年 8 月 5 日，未找到可访问来源证明该项目已在至少两个不同社交平台获得公开讨论，也未找到任何独立于 A*STAR I²R、南洋理工大学或新加坡国立大学的社交账号或出版物讨论。因而条件 4 不满足。项目页同时注明代码、数据与检查点将在论文发表时发布，目前不能认定为开源。",
+      "social_evidence": [],
+      "summary_zh": "MANGO-Grasp 是 A*STAR I²R、南洋理工大学和新加坡国立大学研究人员合作提出的跨本体灵巧抓取框架。它用几何导向 3D 高斯表示物体表面，以形态-运动学描述符表示多指机器人手，并通过马氏交互场指导统一的抓取姿态优化。项目展示了已见机器人手上的仿真性能、向未见 SharpaWave 手的零样本迁移，以及真实机器人抓取实验。"
+    }
+  },
+  "multi-view-unified-camera-fields-geometry-shaped-d5eb09b": {
+    "checked_at": "2026-08-05T09:09:58.761961+00:00",
+    "title": "Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies",
+    "accepted": false,
+    "reason": "不收录。该项目确实涉及实体人形机器人的多相机视觉语言动作策略，论文也明确列出香港科技大学（广州）、浙江大学、西蒙弗雷泽大学、智元机器人和西安交通大学等作者单位，其中多数作者隶属智元机器人。([arxiv.org](https://arxiv.org/pdf/2608.01826)) 但检索仅找到arXiv论文，未找到专门的官方项目页、责任机构公告或研究实验室项目页；arXiv不能单独满足官方项目证据条件。针对项目全名和MVUCF的检索也未找到两个不同社交平台上的可核实公开讨论，因此条件2和条件4均不满足。未发现公开代码证据，故不能认定为开源。",
+    "verdict": {
+      "capabilities": [
+        "多相机RGB观测下的视觉语言动作策略",
+        "利用训练期深度监督增强度量深度表征",
+        "通过跨视角对应监督对齐同一物理点的视觉令牌",
+        "仅用RGB进行机器人操作策略部署"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Humanoid intelligence",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "训练阶段将度量深度和跨视角物理点一致性注入动作模块使用的隐藏表征",
+        "部署时移除深度、相机标定和辅助头，保留原有RGB推理图",
+        "在LIBERO、LIBERO-Plus、RoboTwin及实体人形机器人实验中评估"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO平均成功率",
+          "note": "基于匹配的GR00T-N1.6设置",
+          "value": "98.9%"
+        },
+        {
+          "label": "LIBERO-Plus提升",
+          "note": "相对于匹配的GR00T-N1.6基线",
+          "value": "+22.4个百分点"
+        },
+        {
+          "label": "RoboTwin六任务提升",
+          "note": "覆盖触碰、移动放置和接触交互三类动作",
+          "value": "+23.3个百分点"
+        },
+        {
+          "label": "推理开销",
+          "note": "辅助几何模块在部署前移除",
+          "value": "无额外推理FLOPs"
+        }
+      ],
+      "official_organization_url": "https://www.agibot.com.cn/company/profile",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "AGIBOT",
+      "organization_kind": "Company",
+      "organization_zh": "智元机器人",
+      "reason": "不收录。该项目确实涉及实体人形机器人的多相机视觉语言动作策略，论文也明确列出香港科技大学（广州）、浙江大学、西蒙弗雷泽大学、智元机器人和西安交通大学等作者单位，其中多数作者隶属智元机器人。([arxiv.org](https://arxiv.org/pdf/2608.01826)) 但检索仅找到arXiv论文，未找到专门的官方项目页、责任机构公告或研究实验室项目页；arXiv不能单独满足官方项目证据条件。针对项目全名和MVUCF的检索也未找到两个不同社交平台上的可核实公开讨论，因此条件2和条件4均不满足。未发现公开代码证据，故不能认定为开源。",
+      "social_evidence": [],
+      "summary_zh": "MVUCF是一种训练期几何注入框架，为多相机VLA策略构建面向动作的共享潜在场。它通过坐标查询深度目标增强度量深度可恢复性，并通过跨视角对应目标对齐观察同一物理点的令牌；部署阶段只需RGB输入，不保留深度、标定或辅助几何模块。"
+    }
+  },
+  "look-where-it-matters-adaptive-visual-refinement-ddc89dd": {
+    "checked_at": "2026-08-05T09:09:58.762296+00:00",
+    "title": "Look Where It Matters: Adaptive Visual Refinement for Vision-Language-Action Models",
+    "accepted": false,
+    "reason": "不收录。该项目确实属于面向物理机器人的视觉语言动作与精细操作研究，且作者可由西安交通大学人工智能与机器人研究所实验室成员页关联到具体机构；但检索仅发现arXiv论文页面，未找到专门的官方项目页、西安交通大学官方公告或研究实验室针对AtVLA发布的项目页面，因此不满足条件2。另未找到至少两个不同社交平台上的可核验公开讨论，也无法证明其中至少一个讨论来自责任机构之外的独立账号或出版物，因此不满足条件4。",
+    "verdict": {
+      "capabilities": [
+        "通过视觉语言动作模型执行机器人操作",
+        "利用寄存器令牌修正视觉编码器的注意力伪影",
+        "在动作预测不确定时定位、裁剪并高分辨率重编码任务相关区域",
+        "改善目标定位、空间推理和精细接触操作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "AtVLA在视觉编码器中加入可学习寄存器令牌，用于承载具身空间信息并恢复空间一致的注意力分布",
+        "根据多个动作块预测之间的分歧估计不确定性，仅在高不确定性时启动局部视觉细化",
+        "通过动作条件注意力定位相关区域，并以高分辨率重新编码后用于动作生成",
+        "在LIBERO、SimplerEnv和单视角真实机器人任务上进行了评估"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO平均成功率",
+          "note": "由论文页面报告，基线为94.2%",
+          "value": "98.4%"
+        },
+        {
+          "label": "真实机器人任务成功率",
+          "note": "由论文页面报告，基线为46.5%",
+          "value": "69.0%"
+        },
+        {
+          "label": "局部裁剪触发比例",
+          "note": "约占重新规划步骤的比例",
+          "value": "约30%"
+        },
+        {
+          "label": "总部署计算量",
+          "note": "相对于基础模型，在论文所述代表性部署设置下",
+          "value": "1.4-1.6倍"
+        }
+      ],
+      "official_organization_url": "https://xjtuiair-urlab.github.io/portal/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Xi'an Jiaotong University",
+      "organization_kind": "University",
+      "organization_zh": "西安交通大学",
+      "reason": "不收录。该项目确实属于面向物理机器人的视觉语言动作与精细操作研究，且作者可由西安交通大学人工智能与机器人研究所实验室成员页关联到具体机构；但检索仅发现arXiv论文页面，未找到专门的官方项目页、西安交通大学官方公告或研究实验室针对AtVLA发布的项目页面，因此不满足条件2。另未找到至少两个不同社交平台上的可核验公开讨论，也无法证明其中至少一个讨论来自责任机构之外的独立账号或出版物，因此不满足条件4。",
+      "social_evidence": [],
+      "summary_zh": "AtVLA是一种面向机器人精细操作的视觉语言动作框架，通过寄存器令牌修正视觉注意力伪影，并在动作预测不确定时自适应放大任务相关区域。论文报告其提升了仿真和单视角真实机器人任务的成功率，但目前缺少合格的官方项目发布页及跨平台社会讨论证据。"
+    }
+  },
+  "learning-panorama-aware-vla-for-mobile-manipulat-378b047": {
+    "checked_at": "2026-08-05T09:09:58.762661+00:00",
+    "title": "Learning Panorama-Aware VLA for Mobile Manipulation with Whole-Body Teleoperation",
+    "accepted": false,
+    "reason": "不收录。可访问来源能够确认该项目涉及真实轮式双臂机器人、全身遥操作和移动操作，但截至2026年8月5日仅检索到arXiv条目，未找到独立于arXiv的官方项目页、负责机构公告或研究实验室项目页；同时未找到两个不同社交平台上的公开讨论，因而条件2和条件4均不满足。",
+    "verdict": {
+      "capabilities": [
+        "通过单一VR界面协同遥操作移动底盘、双机械臂与夹爪",
+        "融合360度全景观测、局部RGB图像、语言指令和机器人状态生成全身动作",
+        "在真实轮式双臂机器人上执行目标搜索、移动接近与双臂操作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Whole-body control",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "提出面向移动双臂操作的全景感知VLA策略PanoVLA",
+        "使用专用全景编码与融合模块引入全局空间上下文",
+        "构建基于VR和人体动作重定向的全身遥操作采集系统",
+        "在四项真实机器人任务上进行闭环评测"
+      ],
+      "metrics": [
+        {
+          "label": "示范数据",
+          "note": "包含全景与局部视觉、机器人本体状态及全身动作",
+          "value": "5.5小时、800条轨迹"
+        },
+        {
+          "label": "真实机器人任务",
+          "note": "每项任务进行15次闭环试验",
+          "value": "4项"
+        },
+        {
+          "label": "平均阶段完成率",
+          "note": "PanoVLA在四项任务上的平均结果",
+          "value": "91.3%"
+        },
+        {
+          "label": "端到端成功率",
+          "note": "PanoVLA在四项任务上的平均结果",
+          "value": "73.4%"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Shandong University",
+      "organization_kind": "University",
+      "organization_zh": "山东大学",
+      "reason": "不收录。可访问来源能够确认该项目涉及真实轮式双臂机器人、全身遥操作和移动操作，但截至2026年8月5日仅检索到arXiv条目，未找到独立于arXiv的官方项目页、负责机构公告或研究实验室项目页；同时未找到两个不同社交平台上的公开讨论，因而条件2和条件4均不满足。",
+      "social_evidence": [],
+      "summary_zh": "PanoVLA是一种面向轮式双臂移动操作的全景感知视觉-语言-动作策略。项目同时设计了VR全身遥操作系统，以采集移动底盘、双臂和夹爪协同动作；模型利用360度全景上下文改善局部相机视野受限时的空间理解和闭环操作。"
+    }
+  },
+  "ego2robot-scalable-robot-data-synthesis-from-ego-32e896f": {
+    "checked_at": "2026-08-05T09:09:58.763034+00:00",
+    "title": "Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data",
+    "accepted": false,
+    "reason": "项目满足具身机器人主题、官方项目页和明确机构归属条件，但截至2026年8月5日，无法从可访问网页支持其在至少两个不同社交平台上已有公开讨论，也无法确认其中至少一个讨论来自独立于负责机构的账号或媒体，因此不收录。项目页亦未提供可验证的公开源代码链接。",
+    "verdict": {
+      "capabilities": [
+        "将第一视角人类手部操作视频转换为机器人训练数据",
+        "从原始视频估计手部姿态并重定向为机器人末端执行器轨迹",
+        "通过手臂分割、人物手臂移除、逆运动学和深度感知合成生成机器人视角视频",
+        "支持多种机器人形态并进行多层数据质量筛选"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "以动作对齐、视觉对齐和质量筛选构成端到端数据合成流程",
+        "同时支持带手部姿态标注的数据集和无标注野外第一视角视频",
+        "扩展RoboTwin 2.0，以视觉、场景、机器人形态和任务语义四类扰动分别评估泛化",
+        "合成数据与真实机器人数据联合预训练，在多类分布外测试及真实机器人任务中取得提升"
+      ],
+      "metrics": [
+        {
+          "label": "合成训练数据",
+          "note": "由约1940小时第一视角视频生成",
+          "value": "18,561小时"
+        },
+        {
+          "label": "机器人形态",
+          "note": "可并行渲染和生成形态对应的数据",
+          "value": "15种"
+        },
+        {
+          "label": "真实机器人训练数据",
+          "note": "联合预训练所使用的DROID、AgibotWorld和InternData数据",
+          "value": "约6,565小时"
+        },
+        {
+          "label": "RoboTwin 2.0随机化成功率",
+          "note": "Ego2R与机器人数据按1:1联合预训练；机器人数据基线为50.9%",
+          "value": "53.5%"
+        }
+      ],
+      "official_organization_url": "https://www.alibabagroup.com/en-US",
+      "official_project_url": "https://www-ye.github.io/ego2robot_blog/",
+      "open_source": false,
+      "organization_en": "Alibaba Group",
+      "organization_kind": "Company",
+      "organization_zh": "阿里巴巴集团",
+      "reason": "项目满足具身机器人主题、官方项目页和明确机构归属条件，但截至2026年8月5日，无法从可访问网页支持其在至少两个不同社交平台上已有公开讨论，也无法确认其中至少一个讨论来自独立于负责机构的账号或媒体，因此不收录。项目页亦未提供可验证的公开源代码链接。",
+      "social_evidence": [],
+      "summary_zh": "Ego2Robot是由阿里巴巴集团通义千问团队联合中国人民大学AIM3实验室、上海科技大学、北京通用人工智能研究院和北京航空航天大学研究人员开发的机器人数据合成流程。它将第一视角人类操作视频通过动作重定向、机器人手臂视觉合成和多层质量筛选转换为适配不同机器人形态的训练数据，并用于提升视觉语言动作模型的分布外操作泛化能力。"
+    }
+  },
+  "deferred-exposure-of-future-trajectories-for-ver-d199f80": {
+    "checked_at": "2026-08-05T09:09:58.763423+00:00",
+    "title": "Deferred Exposure of Future Trajectories for Verifiable Reasoning in Autonomous Driving VLMs",
+    "accepted": false,
+    "reason": "不收录。条件1不满足：官方论文和代码仓库将该项目明确限定为自动驾驶VLM的场景推理、候选轨迹选择及VLM-only推理，没有展示或声明物理机器人、机器人操作、具身控制或机器人系统能力。候选材料属于规则明确排除的“仅自动驾驶”项目。此外，检索未找到可核实的至少两个不同社交平台上的公开讨论，因此条件4也不满足；也无法确认其中至少一个讨论来自责任组织之外的独立账号或出版物。代码仓库提供北航邮箱联系人，但未发现北航官方公告或实验室页面明确将北航列为该项目的责任组织，故条件3的官方归责证据亦不足。",
+    "verdict": {
+      "capabilities": [
+        "Data & benchmarks",
+        "Vision-language-action"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "面向自动驾驶VLM的轨迹级推理与决策验证，而非物理机器人控制。",
+        "AD-MCQ将规划转化为六选一的显式候选轨迹选择任务。",
+        "DEFT-RLVR先进行不含候选轨迹的场景推理，再公开候选轨迹完成匹配与验证。",
+        "官方代码仓库已公开代码、模型检查点和处理后的AD-MCQ数据。"
+      ],
+      "metrics": [
+        {
+          "label": "Qwen3-VL-8B-Instruct AD-MCQ准确率",
+          "note": "官方仓库报告：基础模型28.1，DEFT-RLVR为77.9。",
+          "value": "77.9"
+        },
+        {
+          "label": "Qwen3.5-4B AD-MCQ准确率",
+          "note": "官方仓库报告：基础模型34.0，DEFT-RLVR为82.2。",
+          "value": "82.2"
+        },
+        {
+          "label": "因果忠实度研究",
+          "note": "论文报告，在人工评估中，提前暴露真实轨迹时严重幻觉率为50.0%，不暴露时为29.0%。",
+          "value": "50.0% vs 29.0%"
+        },
+        {
+          "label": "候选构造鲁棒性",
+          "note": "官方仓库称DEFT-RLVR在全部20种候选数量与困难负例相似度组合中优于免训练DEFT。",
+          "value": "20/20种设置"
+        }
+      ],
+      "official_organization_url": "https://www.buaa.edu.cn/",
+      "official_project_url": "https://github.com/hzx122/DEFT-RLVR",
+      "open_source": true,
+      "organization_en": "Beihang University",
+      "organization_kind": "University",
+      "organization_zh": "北京航空航天大学",
+      "reason": "不收录。条件1不满足：官方论文和代码仓库将该项目明确限定为自动驾驶VLM的场景推理、候选轨迹选择及VLM-only推理，没有展示或声明物理机器人、机器人操作、具身控制或机器人系统能力。候选材料属于规则明确排除的“仅自动驾驶”项目。此外，检索未找到可核实的至少两个不同社交平台上的公开讨论，因此条件4也不满足；也无法确认其中至少一个讨论来自责任组织之外的独立账号或出版物。代码仓库提供北航邮箱联系人，但未发现北航官方公告或实验室页面明确将北航列为该项目的责任组织，故条件3的官方归责证据亦不足。",
+      "social_evidence": [],
+      "summary_zh": "DEFT-RLVR研究自动驾驶视觉语言模型中的“轨迹锚定偏差”：教师模型若在推理前看到真实未来轨迹，可能事后合理化结果并产生更多严重幻觉。项目提出AD-MCQ候选轨迹基准及两阶段训练方法，让模型先依据场景作出高层决策，再从显式轨迹候选中选择匹配方案。其技术对象是自动驾驶VLM推理与评测，不属于严格意义上的具身机器人项目。"
+    }
+  },
+  "grounded-semantic-re-binding-for-robust-instruct-7031d45": {
+    "checked_at": "2026-08-05T09:09:58.763851+00:00",
+    "title": "Grounded Semantic Re-Binding for Robust Instruction Generalization in Vision-Language-Action Models",
+    "accepted": false,
+    "reason": "不收录：条件1至3可由官方代码项目和机构信息支持，项目也公开了MIT许可的实现；但截至2026年8月5日，无法从可访问的网页来源确认该项目已在至少两个不同社交平台形成公开讨论，也无法确认其中至少一个平台上的证据来自责任机构之外的独立账号或出版物。缺少条件4所要求的社会讨论证据。",
+    "verdict": {
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "针对VLA模型对同义改写指令敏感的问题，将独立提取的语言语义重新注入视觉与机器人状态处理路径。",
+        "GSR使用冻结的T5编码器，并针对不同VLA架构选择语义注入位置和原生语言路径。",
+        "ParaVLA将语言与视觉编码解耦，仅在动作专家中进行融合。",
+        "官方实现覆盖VLA-Adapter、SmolVLA、π₀.₅和ParaVLA，并提供训练与LIBERO评测流程。"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO-Para成功率",
+          "note": "官方报告称，GSR将VLA-Adapter、SmolVLA和π₀.₅的完整改写指令成功率分别提升至70.94%、49.12%和75.59%。",
+          "value": "70.94% / 49.12% / 75.59%"
+        },
+        {
+          "label": "PRIDE",
+          "note": "GSR应用于π₀.₅后取得官方报告中的最高结果。",
+          "value": "70.4"
+        },
+        {
+          "label": "ParaVLA参数量",
+          "note": "每个控制步骤激活的参数规模。",
+          "value": "0.33B"
+        },
+        {
+          "label": "ParaVLA指令鲁棒性",
+          "note": "在LIBERO-Goal标准指令与改写指令上的成功率仅相差1个百分点。",
+          "value": "92% canonical / 91% paraphrase"
+        }
+      ],
+      "official_organization_url": "https://sai.sjtu.edu.cn/",
+      "official_project_url": "https://github.com/AutoLab-SAI-SJTU/GSR-ParaVLA",
+      "open_source": true,
+      "organization_en": "Shanghai Jiao Tong University",
+      "organization_kind": "University",
+      "organization_zh": "上海交通大学",
+      "reason": "不收录：条件1至3可由官方代码项目和机构信息支持，项目也公开了MIT许可的实现；但截至2026年8月5日，无法从可访问的网页来源确认该项目已在至少两个不同社交平台形成公开讨论，也无法确认其中至少一个平台上的证据来自责任机构之外的独立账号或出版物。缺少条件4所要求的社会讨论证据。",
+      "social_evidence": [],
+      "summary_zh": "上海交通大学人工智能学院AutoLab提出GSR，通过独立语言编码与架构适配的语义重绑定，提高视觉-语言-动作模型面对同义改写指令时的机器人操作稳定性；同时发布解耦语言和视觉编码的轻量ParaVLA。项目具有官方公开实现和真实机器人实验，但尚无足够的跨平台公开讨论证据，不能进入严格公共索引。"
+    }
+  },
+  "vlaguard-a-framework-for-evaluating-and-mitigati-64de04b": {
+    "checked_at": "2026-08-05T09:09:58.764292+00:00",
+    "title": "VLAGuard: A Framework for Evaluating and Mitigating Physical Attention Hijacking in Vision-Language-Action Robots within Wireless Sensor Networks",
+    "accepted": false,
+    "reason": "不收录。虽然论文内容直接涉及实体VLA机器人，并有期刊出版商的待刊论文页面，但未找到负责该项目的公司、大学或具名研究机构发布的专门项目页、机构公告或实验室项目页；arXiv不能单独作为官方项目证据。公开来源也未能支持至少两个不同社交平台上的项目讨论，更未找到其中一个来自责任机构之外独立账号或出版物的合格证据。作者个人资料不足以证明其所在机构对VLAGuard项目负有明确责任。",
+    "verdict": {
+      "capabilities": [
+        "通过可打印补丁对VLA机器人的动作条件交叉注意力进行压力测试",
+        "通过注意力保护微调稳定时空注意力并约束几何一致性",
+        "在仿真与实体智能环境中评估VLA机器人的物理对抗鲁棒性"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "提出视觉运动注意力引导语义攻击VASA",
+        "提出注意力保护微调APFT，报告称不增加推理开销",
+        "面向无线传感器网络中的VLA机器人研究物理注意力劫持"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO仿真失败率",
+          "note": "严重补丁攻击下的OpenVLA结果",
+          "value": "由100.0%降至25.9%"
+        },
+        {
+          "label": "实体实验成功率",
+          "note": "严重补丁攻击下，共2,000次试验",
+          "value": "平均成功率由23.0%升至67.4%"
+        },
+        {
+          "label": "推理开销",
+          "note": "APFT的定性说明",
+          "value": "零额外推理开销"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不收录。虽然论文内容直接涉及实体VLA机器人，并有期刊出版商的待刊论文页面，但未找到负责该项目的公司、大学或具名研究机构发布的专门项目页、机构公告或实验室项目页；arXiv不能单独作为官方项目证据。公开来源也未能支持至少两个不同社交平台上的项目讨论，更未找到其中一个来自责任机构之外独立账号或出版物的合格证据。作者个人资料不足以证明其所在机构对VLAGuard项目负有明确责任。",
+      "social_evidence": [],
+      "summary_zh": "VLAGuard研究VLA机器人在实体环境中受到可打印补丁干扰时的动作到视觉注意力劫持问题，并以VASA进行攻击测试、以APFT增强注意力和几何一致性。现有公开证据不足以满足严格索引对官方项目归属及跨平台社会讨论的要求。"
+    }
+  },
+  "chainvla-chaining-vision-language-action-queries-64a1d60": {
+    "checked_at": "2026-08-05T09:09:58.764755+00:00",
+    "title": "ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation",
+    "accepted": false,
+    "reason": "不收录：官方项目页明确给出了具身机器人操作主题、项目页面及三所负责高校，但截至2026年8月5日，无法通过可访问的网页来源确认该项目已在至少两个不同社交平台形成公开讨论，也无法确认其中至少一个讨论来自不受负责机构控制的账号或出版物，因此缺少条件4所要求的社会讨论证据。",
+    "verdict": {
+      "capabilities": [
+        "跨查询保留任务进度与历史视觉证据",
+        "将上一轮未执行动作续段传递至下一轮预测",
+        "依据最新观测重新生成完整动作时域",
+        "执行长时程双臂操作任务"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "以可修正的统一执行状态连接连续VLA查询",
+        "Progress Context结合循环工作状态与稀疏事件记忆",
+        "Motion Tail将上一预测的未执行续段用于状态构建和动作生成",
+        "官方页面仅报告固定频率仿真评测，未在实体机器人硬件上验证"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方项目页报告",
+          "value": "1.2B参数"
+        },
+        {
+          "label": "RMBench平均成功率",
+          "note": "五项记忆依赖型双臂任务",
+          "value": "62.8%"
+        },
+        {
+          "label": "LIBERO平均成功率",
+          "note": "Spatial、Object、Goal和Long四套评测",
+          "value": "98.8%"
+        },
+        {
+          "label": "移除Motion Tail",
+          "note": "RMBench平均成功率",
+          "value": "11.2%"
+        }
+      ],
+      "official_organization_url": "https://www.sigs.tsinghua.edu.cn/en/",
+      "official_project_url": "https://muqy1818.github.io/chainvla-web/",
+      "open_source": false,
+      "organization_en": "Tsinghua Shenzhen International Graduate School; China University of Mining and Technology; Shenzhen Technology University",
+      "organization_kind": "University",
+      "organization_zh": "清华大学深圳国际研究生院；中国矿业大学；深圳技术大学",
+      "reason": "不收录：官方项目页明确给出了具身机器人操作主题、项目页面及三所负责高校，但截至2026年8月5日，无法通过可访问的网页来源确认该项目已在至少两个不同社交平台形成公开讨论，也无法确认其中至少一个讨论来自不受负责机构控制的账号或出版物，因此缺少条件4所要求的社会讨论证据。",
+      "social_evidence": [],
+      "summary_zh": "ChainVLA是一种面向长时程机器人操作的1.2B参数视觉-语言-动作策略。它通过由Progress Context和Motion Tail组成的统一、可修正执行状态连接连续查询，同时保留任务进度、历史事件证据与未完成运动意图。项目在RMBench和LIBERO仿真环境中评测，未报告实体机器人硬件实验。"
+    }
+  },
+  "wam-diff2-hierarchical-ar-to-diffusion-distillat-3263701": {
+    "checked_at": "2026-08-05T09:09:58.765244+00:00",
+    "title": "WAM-Diff2: Hierarchical AR-to-Diffusion Distillation for Highly Efficient Autonomous Driving VLA",
+    "accepted": false,
+    "reason": "不收录。该项目的研究对象是端到端自动驾驶 VLA，属于规则明确排除的“仅自动驾驶”方向，不能满足物理机器人或具身智能项目条件。网页搜索还未找到由复旦大学或具名研究实验室发布的专门项目页或官方公告；arXiv 条目不能单独作为官方项目证据。也未找到至少两个不同社交平台上的公开讨论，因此条件 2 和条件 4 同样缺少支持。作者个人主页虽注明作者就读于复旦大学并介绍该研究方向，但不足以证明复旦大学作为组织正式负责该项目。",
+    "verdict": {
+      "capabilities": [
+        "面向自动驾驶理解、感知与规划任务的并行离散扩散解码",
+        "通过分层蒸馏将预训练自回归 VLA 转换为扩散式 VLA"
+      ],
+      "fields": [
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "项目明确面向端到端自动驾驶，而非通用物理机器人或具身机器人系统",
+        "采用逐块适配、逐块蒸馏和模型级跨尺度蒸馏三个阶段",
+        "搜索仅发现 arXiv 条目和作者个人主页中的研究简介，未发现合格的官方组织项目页或研究实验室项目页",
+        "未发现两个不同社交平台上的可核实公开讨论"
+      ],
+      "metrics": [
+        {
+          "label": "解码加速",
+          "note": "自回归到扩散模型的转换",
+          "value": "2.8×"
+        },
+        {
+          "label": "系统级加速",
+          "note": "结合 FlashInfer 和 CUDA Graphs",
+          "value": "15.1×"
+        },
+        {
+          "label": "任务表现",
+          "note": "在自动驾驶理解、感知和规划基准上与自回归基线相当",
+          "value": "定性持平"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Fudan University",
+      "organization_kind": "University",
+      "organization_zh": "复旦大学",
+      "reason": "不收录。该项目的研究对象是端到端自动驾驶 VLA，属于规则明确排除的“仅自动驾驶”方向，不能满足物理机器人或具身智能项目条件。网页搜索还未找到由复旦大学或具名研究实验室发布的专门项目页或官方公告；arXiv 条目不能单独作为官方项目证据。也未找到至少两个不同社交平台上的公开讨论，因此条件 2 和条件 4 同样缺少支持。作者个人主页虽注明作者就读于复旦大学并介绍该研究方向，但不足以证明复旦大学作为组织正式负责该项目。",
+      "social_evidence": [],
+      "summary_zh": "WAM-Diff2 是面向端到端自动驾驶的多任务离散扩散 VLA 框架，通过三阶段分层蒸馏将预训练自回归模型转换为并行扩散模型，以降低解码延迟并缓解自回归生成的暴露偏差。"
+    }
+  },
+  "rl-bootstrapping-of-openvla-oft-for-a-novel-robo-6ecf69f": {
+    "checked_at": "2026-08-05T09:09:58.765751+00:00",
+    "title": "RL Bootstrapping of OpenVLA-OFT for a Novel Robot Embodiment",
+    "accepted": false,
+    "reason": "不收录。候选内容确实涉及新型物理机器人本体上的视觉-语言-动作控制，但可访问来源仅确认了2026年8月2日发布的arXiv论文和匿名代码仓库；未找到该项目的专属官方项目页、Innopolis University官方公告或其研究实验室项目页，因此不满足条件2。官方机构页面只能确认部分作者任职于Innopolis University，未明确声明该校对这个具体项目负责，因此条件3也缺乏充分的官方项目级证据。搜索亦未找到至少两个不同社交平台上的公开讨论，更没有可验证的独立账号或出版物讨论，因此不满足条件4。匿名仓库未提供足以确认开源许可的可靠证据，故不将其标记为开源。",
+    "verdict": {
+      "capabilities": [
+        "通过强化学习在仿真中适配新型缆索驱动并联机器人",
+        "根据语言指令控制末端执行器进行方向运动和目标接近"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "研究对象属于具备简单夹爪的缆索驱动并联机器人，符合具身机器人范围",
+        "采用PPO后接GRPO的两阶段强化学习流程，不使用该机器人本体的示范数据",
+        "实验仅在仿真中完成，尚未证明可靠操作或真实机器人迁移"
+      ],
+      "metrics": [
+        {
+          "label": "四方向平均成功率",
+          "note": "每个方向在留出的随机场景中评估100次",
+          "value": "PPO为34.25%，PPO→GRPO为53.50%"
+        },
+        {
+          "label": "目标条件指令严格成功率",
+          "note": "覆盖8类目标物体，共评估400次",
+          "value": "39/400（9.75%）"
+        },
+        {
+          "label": "训练预算",
+          "note": "使用两张NVIDIA A40 GPU；不含本体特定示范",
+          "value": "PPO约175小时，GRPO约170小时，总计约345小时"
+        }
+      ],
+      "official_organization_url": "https://innopolis.university/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Innopolis University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录。候选内容确实涉及新型物理机器人本体上的视觉-语言-动作控制，但可访问来源仅确认了2026年8月2日发布的arXiv论文和匿名代码仓库；未找到该项目的专属官方项目页、Innopolis University官方公告或其研究实验室项目页，因此不满足条件2。官方机构页面只能确认部分作者任职于Innopolis University，未明确声明该校对这个具体项目负责，因此条件3也缺乏充分的官方项目级证据。搜索亦未找到至少两个不同社交平台上的公开讨论，更没有可验证的独立账号或出版物讨论，因此不满足条件4。匿名仓库未提供足以确认开源许可的可靠证据，故不将其标记为开源。",
+      "social_evidence": [],
+      "summary_zh": "该研究尝试在没有本体特定示范数据的情况下，通过仿真强化学习将OpenVLA-OFT适配到带简单夹爪的缆索驱动并联机器人。两阶段训练先用PPO学习方向运动，再用GRPO扩展到目标物体条件指令；结果显示方向控制有所改善，但目标接近的严格成功率仍低，且尚未验证真实机器人部署。"
+    }
+  },
+  "hermite-curves-as-trajectory-priors-for-vision-l-65c3026": {
+    "checked_at": "2026-08-05T09:09:58.766285+00:00",
+    "title": "Hermite Curves as Trajectory Priors for Vision-Language-Action Models",
+    "accepted": false,
+    "reason": "不收录。截至 2026 年 8 月 5 日，可访问搜索结果仅能确认 arXiv 预印本及其机器人操作实验；未找到专门的官方项目页、责任机构官方公告或研究实验室项目页，因此不满足条件 2。现有来源也不能明确确认由某一公司、大学或具名研究机构对该项目负责，不满足条件 3。此外，未找到至少两个不同社交平台上的公开讨论，更无法确认其中至少一个来自责任机构之外的独立账号或出版物，不满足条件 4。",
+    "verdict": {
+      "capabilities": [
+        "通过三次 Hermite 曲线的端点位置与速度参数化动作块，以改善机器人操作轨迹的平滑性和连续性",
+        "支持离散自回归、连续生成和仅训练正则化三种 VLA 集成方式",
+        "在单臂及双臂真实机器人平台上执行操作任务"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "将动作块表示为分段三次 Hermite 曲线",
+        "Hermite Regularization 仅作为训练辅助目标，不改变推理流程",
+        "实验覆盖 LIBERO、LIBERO-plus 和四项真实机器人任务"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO 平均成功率",
+          "note": "Hermite Regularization 相对 π0.5 基线",
+          "value": "95.9% 提升至 98.7%"
+        },
+        {
+          "label": "LIBERO-plus 平均成功率",
+          "note": "Hermite Regularization 相对 π0.5 基线",
+          "value": "85.7% 提升至 90.9%"
+        },
+        {
+          "label": "真实机器人任务平均成功率",
+          "note": "四项任务，Hermite Regularization 相对 π0.5 基线",
+          "value": "63.4% 提升至 90.0%"
+        },
+        {
+          "label": "推理开销",
+          "note": "Hermite Regularization 保留基线动作头及采样流程",
+          "value": "无额外推理开销"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录。截至 2026 年 8 月 5 日，可访问搜索结果仅能确认 arXiv 预印本及其机器人操作实验；未找到专门的官方项目页、责任机构官方公告或研究实验室项目页，因此不满足条件 2。现有来源也不能明确确认由某一公司、大学或具名研究机构对该项目负责，不满足条件 3。此外，未找到至少两个不同社交平台上的公开讨论，更无法确认其中至少一个来自责任机构之外的独立账号或出版物，不满足条件 4。",
+      "social_evidence": [],
+      "summary_zh": "该工作为 VLA 机器人操作模型引入 Hermite 轨迹先验，用端点位置和速度定义分段三次曲线，以显式建模动作块内部平滑性及相邻动作块之间的连续性。其训练期正则化方案在仿真和真实机器人任务中提升成功率，同时不增加推理开销。"
+    }
+  },
+  "demystifying-when-and-why-vlas-fail-in-contact-r-1da08a4": {
+    "checked_at": "2026-08-05T09:09:58.766884+00:00",
+    "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+    "accepted": false,
+    "reason": "不收录。该候选明确涉及实体机械臂上的接触密集型操作，但截至2026年8月5日，只能确认arXiv条目，未找到专门的官方项目页、Stanford官方公告或官方实验室项目页，因此不满足条件2。也未找到至少两个不同社交平台上的可核验公开讨论，更无法确认其中至少一个来自责任组织之外的独立账号或出版物，因此不满足条件4。arXiv条目本身不能作为官方项目证据。",
+    "verdict": {
+      "capabilities": [
+        "分析接触密集型机器人操作中的VLA精度失效与力觉失效",
+        "通过针对性噪声调度改善亚毫米级接触修正",
+        "利用时序力信号执行插接、按键、擦拭和钥匙插入任务"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Tactile intelligence",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "将接触密集型任务的VLA失效区分为精度失效和力觉失效",
+        "FACT结合Logit-Normal噪声调度与时间感知力信号注入",
+        "在Franka Research 3实体机械臂上评估五种接触密集型任务"
+      ],
+      "metrics": [
+        {
+          "label": "平均成功率",
+          "note": "五种接触密集型任务",
+          "value": "66.0%"
+        },
+        {
+          "label": "最佳既有基线",
+          "note": "ForceVLA（基于π0.5重新实现）",
+          "value": "40.5%"
+        },
+        {
+          "label": "实体评估规模",
+          "note": "覆盖全部实验条件",
+          "value": "近2,500次真实机器人rollout"
+        },
+        {
+          "label": "精度任务增益",
+          "note": "针对性噪声调度在精度关键任务中的最高提升",
+          "value": "最高20个百分点"
+        }
+      ],
+      "official_organization_url": "https://www.stanford.edu/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Stanford University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录。该候选明确涉及实体机械臂上的接触密集型操作，但截至2026年8月5日，只能确认arXiv条目，未找到专门的官方项目页、Stanford官方公告或官方实验室项目页，因此不满足条件2。也未找到至少两个不同社交平台上的可核验公开讨论，更无法确认其中至少一个来自责任组织之外的独立账号或出版物，因此不满足条件4。arXiv条目本身不能作为官方项目证据。",
+      "social_evidence": [],
+      "summary_zh": "FACT研究流匹配式视觉-语言-动作模型在接触密集型操作中的精度与力觉失效，并分别采用针对性噪声调度和时间感知力信号注入进行修正。在五项真实机器人任务中，其平均成功率为66.0%，高于最佳对照基线的40.5%。"
+    }
+  },
+  "dreamtrajectory-trajectory-guided-action-generat-b7561ad": {
+    "checked_at": "2026-08-05T09:09:58.767459+00:00",
+    "title": "DreamTrajectory: Trajectory-Guided Action Generation with World Model Alignment for Mobile Manipulation",
+    "accepted": false,
+    "reason": "不收录。项目明确涉及实体移动操作机器人，且作者中的 Renjing Xu 与 Xiaowen Chu 可由香港科技大学（广州）官方页面核实。但截至 2026 年 8 月 5 日，只找到 2026 年 8 月 2 日提交的 arXiv 页面；未找到专门的官方项目页、学校或实验室项目公告，因此不满足条件 2。对项目名和 arXiv 编号的跨平台检索也未找到至少两个不同社交平台上的公开讨论，因而条件 4 同样无法支持。未发现公开代码或模型发布证据。",
+    "verdict": {
+      "capabilities": [
+        "根据语言指令协调移动底座与机械臂",
+        "联合生成末端执行器规划轨迹和全身动作块",
+        "利用轨迹世界模型预测候选动作产生的末端轨迹",
+        "执行前搜索并选择与规划轨迹最一致的候选动作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Whole-body control"
+      ],
+      "include": false,
+      "key_points": [
+        "面向接触丰富的移动操作，将三维末端轨迹作为底座与机械臂协同控制的显式任务空间引导。",
+        "轨迹引导 VLA 同步预测末端规划轨迹和全身动作块。",
+        "测试时使用轻量级动作条件轨迹世界模型，通过搜索、预测和评分修正动作。",
+        "在 Fetch 仿真平台和 ARX LIFT 实体移动操作平台上进行评估。"
+      ],
+      "metrics": [
+        {
+          "label": "MS-HAB 平均成功率",
+          "note": "动作基线为 32.3%，加入轨迹引导后为 47.5%，再加入测试时修正后为 54.8%。",
+          "value": "54.8%"
+        },
+        {
+          "label": "真实机器人平均成功率",
+          "note": "动作基线为 63.3%，加入轨迹引导后为 81.7%，完整方法为 90.0%。",
+          "value": "90.0%"
+        },
+        {
+          "label": "世界模型轨迹预测精度",
+          "note": "GRU 世界模型在 H=16 的轨迹预测中取得最佳综合精度。",
+          "value": "xyz ADE 0.028 m；xyz FDE 0.035 m；角度 ADE 6.2°"
+        },
+        {
+          "label": "额外计算开销",
+          "note": "完整框架相对 35 亿参数 VLA 增加 49.04M 参数，并在单张 RTX 4090、BF16 条件下增加每次重规划延迟。",
+          "value": "参数增加 1.40%；延迟增加 11.75 ms"
+        }
+      ],
+      "official_organization_url": "https://www.hkust-gz.edu.cn/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "organization_kind": "University",
+      "organization_zh": "香港科技大学（广州）",
+      "reason": "不收录。项目明确涉及实体移动操作机器人，且作者中的 Renjing Xu 与 Xiaowen Chu 可由香港科技大学（广州）官方页面核实。但截至 2026 年 8 月 5 日，只找到 2026 年 8 月 2 日提交的 arXiv 页面；未找到专门的官方项目页、学校或实验室项目公告，因此不满足条件 2。对项目名和 arXiv 编号的跨平台检索也未找到至少两个不同社交平台上的公开讨论，因而条件 4 同样无法支持。未发现公开代码或模型发布证据。",
+      "social_evidence": [],
+      "summary_zh": "DreamTrajectory 是面向语言条件移动操作的轨迹引导框架。它在单个动作专家中联合预测末端执行器规划轨迹与底座、机械臂全身动作，并通过轻量级轨迹世界模型在执行前预测候选动作的实际运动结果，选择与规划轨迹最一致且平滑的动作。"
+    }
+  },
+  "the-gate-not-the-cache-gate-provenance-bounds-th-061ff71": {
+    "checked_at": "2026-08-05T09:09:58.768079+00:00",
+    "title": "The Gate, Not the Cache: Gate Provenance Bounds the Closed-Loop Reliability of Training-Free VLA Token Skipping",
+    "accepted": false,
+    "reason": "不收录。该成果确实涉及物理机器人、VLA闭环控制和机器人操作，论文也明确列出香港科技大学（广州）等责任机构；但截至2026年8月5日，仅能确认arXiv论文页面，未找到专门的官方项目页、机构公告或研究实验室项目页，因此不满足条件2。搜索亦未找到该项目在至少两个不同社交平台上的可核实公开讨论，更未能确认其中至少一个来自责任机构之外的独立账号或出版物，因此不满足条件4。arXiv本身按规则不能作为官方项目证据。",
+    "verdict": {
+      "capabilities": [
+        "分析闭环VLA视觉令牌跳过中的误差累积",
+        "在机器人执行动作块期间进行离线密集刷新",
+        "为下一控制步提供干净门控信号和新鲜KV缓存",
+        "兼容令牌缓存复用与令牌剪枝机制"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "指出门控信号来源比令牌复用或删除机制更能决定闭环可靠性",
+        "提出actuation-slack refresh，在动作执行窗口内无条件运行一次密集前向",
+        "在OpenVLA-OFT与CogACT、LIBERO与SIMPLER任务上评估",
+        "包含物理机械臂操作验证"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO-Object成功率",
+          "note": "跳过率0.9；自采集门控下复用为0.68、删除为0.31，密集基线为1.00；使用干净门控后两者均为0.98",
+          "value": "0.68 / 0.31 → 0.98"
+        },
+        {
+          "label": "服务延迟",
+          "note": "相对密集推理，仿真和物理机器人测试中的关键路径服务延迟降幅",
+          "value": "降低18%–22%"
+        },
+        {
+          "label": "评估范围",
+          "note": "覆盖两种VLA策略、四个LIBERO套件和四个SIMPLER任务",
+          "value": "2种策略、8组任务"
+        },
+        {
+          "label": "物理机器人",
+          "note": "在AgileX Piper 6自由度机械臂上完成定性操作验证",
+          "value": "已验证"
+        }
+      ],
+      "official_organization_url": "https://www.hkust-gz.edu.cn/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "organization_kind": "University",
+      "organization_zh": "香港科技大学（广州）",
+      "reason": "不收录。该成果确实涉及物理机器人、VLA闭环控制和机器人操作，论文也明确列出香港科技大学（广州）等责任机构；但截至2026年8月5日，仅能确认arXiv论文页面，未找到专门的官方项目页、机构公告或研究实验室项目页，因此不满足条件2。搜索亦未找到该项目在至少两个不同社交平台上的可核实公开讨论，更未能确认其中至少一个来自责任机构之外的独立账号或出版物，因此不满足条件4。arXiv本身按规则不能作为官方项目证据。",
+      "social_evidence": [],
+      "summary_zh": "该工作研究训练免费VLA视觉令牌跳过在闭环机器人控制中的可靠性问题。作者发现，从稀疏加速前向中持续自采集门控信号会形成反馈盲区并导致任务成功率崩溃；其方法利用机器人执行动作块时的空闲窗口运行一次密集前向，为下一步生成干净门控和新鲜KV基础，在保持加速效果的同时恢复闭环操作可靠性。"
+    }
+  },
+  "latency-tolerant-cloud-edge-collaborative-vision-c78daba": {
+    "checked_at": "2026-08-05T09:09:58.768695+00:00",
+    "title": "Latency-Tolerant Cloud-Edge Collaborative Vision-Language-Action Models via Emergent Representational Specialization",
+    "accepted": false,
+    "reason": "不收录。该候选确实属于机器人视觉-语言-动作控制，并于2026年8月1日提交，但可访问搜索结果仅确认了arXiv论文；未找到专门的官方项目页、学校或实验室官方公告，而arXiv按规则不能单独作为官方项目证据。现有作者个人主页能够确认主要作者就读于香港科技大学（广州），但未列出该项目，因而也不足以证明该机构明确对项目负责。此外，未找到该项目在两个不同社交平台上的公开讨论，更没有证据满足其中至少一个讨论方独立于负责机构的要求。缺失条件2、3和4。",
+    "verdict": {
+      "capabilities": [
+        "将云端VLA产生的延迟任务特征与边缘端当前视觉融合，输出机器人操作动作",
+        "在控制循环中采用非阻塞异步推理，使机器人无需等待云端响应",
+        "通过当前帧与随机延迟帧的双路径训练，提高策略对网络延迟和抖动的容忍度"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "云端模型负责提取变化较慢的任务级语义特征，边缘端轻量视觉编码器和动作头负责实时状态修正",
+        "训练时让当前帧和随机延迟帧共享当前动作监督，促使云端表征降低对观测时效的敏感度",
+        "实验覆盖LIBERO四个操作任务套件，并包含小规模真实机器人验证"
+      ],
+      "metrics": [
+        {
+          "label": "40步均匀延迟窗口",
+          "note": "LIBERO四个任务套件的任务成功率范围",
+          "value": "63.8%–78.0%"
+        },
+        {
+          "label": "VLASH对照",
+          "note": "相同40步延迟条件下的最高任务成功率",
+          "value": "最高6.4%"
+        },
+        {
+          "label": "单路径基线",
+          "note": "相同40步延迟条件下所评估基线的最高任务成功率",
+          "value": "最高3.0%"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Hong Kong University of Science and Technology (Guangzhou)",
+      "organization_kind": "University",
+      "organization_zh": "香港科技大学（广州）",
+      "reason": "不收录。该候选确实属于机器人视觉-语言-动作控制，并于2026年8月1日提交，但可访问搜索结果仅确认了arXiv论文；未找到专门的官方项目页、学校或实验室官方公告，而arXiv按规则不能单独作为官方项目证据。现有作者个人主页能够确认主要作者就读于香港科技大学（广州），但未列出该项目，因而也不足以证明该机构明确对项目负责。此外，未找到该项目在两个不同社交平台上的公开讨论，更没有证据满足其中至少一个讨论方独立于负责机构的要求。缺失条件2、3和4。",
+      "social_evidence": [],
+      "summary_zh": "CloudEdgeVLA是一种面向机器人操作的云边协同VLA策略：云端从可能延迟的观测中生成任务级规划特征，边缘端利用实时视觉进行状态修正和动作预测。其双路径训练将当前与延迟观测对齐到同一当前动作目标，以增强异步部署中的延迟鲁棒性。"
+    }
+  },
+  "wcm-a-world-critic-model-for-vision-language-act-12cccaf": {
+    "checked_at": "2026-08-05T09:09:58.769321+00:00",
+    "title": "WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning",
+    "accepted": false,
+    "reason": "项目满足实体机器人相关性、独立官方项目页和明确机构归属要求，且官方 GitHub 仓库采用 MIT 许可证；但截至 2026 年 8 月 5 日，未找到可访问来源证明其在至少两个不同社交平台上存在公开讨论，也未找到符合要求的独立机构外部账号或媒体讨论，因此缺少条件 4，不能收录。",
+    "verdict": {
+      "capabilities": [
+        "利用多帧视觉历史和语言指令构建时序状态表示",
+        "联合预测下一时刻视觉潜变量并估计状态价值",
+        "作为评论模型接入 PPO、Flow-SDE、AWR 和 RECAP 等强化学习流程",
+        "支持 OpenVLA-OFT、π0 和 π0.5 等 VLA 骨干的机器人操作后训练"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "面向机器人控制中的部分可观测问题，以历史观测替代单帧价值判断",
+        "采用轻量级 LeJEPA 风格架构，共享时序表示用于世界预测和价值估计",
+        "同时支持在线与离线策略强化学习流程",
+        "在仿真及 WidowX-250S 实体机械臂任务上进行了验证"
+      ],
+      "metrics": [
+        {
+          "label": "仿真任务规模",
+          "note": "覆盖 ManiSkill、MetaWorld、CALVIN 和 LIBERO-Plus",
+          "value": "149 个任务、4 个基准"
+        },
+        {
+          "label": "实体机器人任务",
+          "note": "包括动态抓取、柔性物体操作、长时程清洁和拾放",
+          "value": "7 个任务"
+        },
+        {
+          "label": "实体机器人平台",
+          "note": "使用第三视角与腕部相机",
+          "value": "WidowX-250S"
+        },
+        {
+          "label": "可学习参数量",
+          "note": "官方报告的 WCM 规模",
+          "value": "107.2M 参数"
+        }
+      ],
+      "official_organization_url": "https://www.sii.edu.cn/yw/list.htm",
+      "official_project_url": "https://sylvestf.github.io/wcm-homepage/",
+      "open_source": true,
+      "organization_en": "Shanghai Innovation Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "上海创智学院",
+      "reason": "项目满足实体机器人相关性、独立官方项目页和明确机构归属要求，且官方 GitHub 仓库采用 MIT 许可证；但截至 2026 年 8 月 5 日，未找到可访问来源证明其在至少两个不同社交平台上存在公开讨论，也未找到符合要求的独立机构外部账号或媒体讨论，因此缺少条件 4，不能收录。",
+      "social_evidence": [],
+      "summary_zh": "WCM 是面向 VLA 强化学习的世界评论模型，通过联合学习未来视觉潜状态预测与价值估计，使评论模型从历史观测中捕获机器人操作的时序动态。官方页面报告其覆盖 149 个仿真任务，并在 7 个 WidowX-250S 实体操作任务上验证。"
+    }
+  },
+  "safe-vision-language-action-models-via-barrier-e-c6a1a35": {
+    "checked_at": "2026-08-05T09:09:58.769981+00:00",
+    "title": "Safe Vision Language Action Models via Barrier Enhanced Flow Matching",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终收录结论。",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方归属与跨平台讨论证据。当前已确认项目涉及实体机器人操作，但 arXiv 本身不能满足官方项目页条件。",
+        "将按严格标准处理：个人主页只有在能明确代表负责机构的官方项目发布时才计入，否则不作为机构官方证据。"
+      ],
+      "fields": [
+        "status"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "重点核验 Penn State/CARL 是否有官方页面，以及至少两个社交平台中的公开讨论。",
+        "至少一条社交证据必须来自非责任机构控制的账号或媒体。"
+      ],
+      "metrics": [
+        {
+          "label": "当前状态",
+          "note": "尚未完成全部条件核验",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终收录结论。",
+      "social_evidence": [],
+      "summary_zh": "正在依据严格收录条件核验该候选项目。"
+    }
+  },
+  "towards-general-language-conditioned-latent-safe-00eeb15": {
+    "checked_at": "2026-08-05T09:09:58.770643+00:00",
+    "title": "Towards General Language-Conditioned Latent Safety Filters",
+    "accepted": false,
+    "reason": "不收录。搜索仅确认了2026年7月31日发布的 arXiv 预印本；未找到该项目的专门官方项目页、Washington University in St. Louis 官方公告或研究实验室项目页，因此不满足条件2。也未找到两个不同社交平台上的可核验公开讨论，更无法证明其中至少一个来自责任组织之外的独立账号或出版物，因此不满足条件4。学校官方教师页只能确认 Hussein Sibai 任职及其机器人安全研究方向，不能单独证明该校正式负责这一特定项目。",
+    "verdict": {
+      "capabilities": [
+        "通过语言指定安全约束，对机器人策略进行运行时安全过滤",
+        "在视觉输入下用于拾放、擦桌和积木堆叠任务",
+        "对评估范围内未见过的约束实例表现出部分迁移能力"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "以语言条件化的 Hamilton-Jacobi 安全 actor 和 critic 适配不同安全要求",
+        "实验报告称该方法可减少约束违反",
+        "研究涉及机器人操作，但公开实验信息未明确证明在真实物理机器人上验证"
+      ],
+      "metrics": [
+        {
+          "label": "评估任务",
+          "note": "视觉条件下的机器人操作任务",
+          "value": "拾放、擦桌、积木堆叠"
+        },
+        {
+          "label": "安全效果",
+          "note": "摘要未提供可靠的数值比较",
+          "value": "减少约束违反"
+        },
+        {
+          "label": "泛化能力",
+          "note": "限于所评估的约束类别",
+          "value": "对未见约束实例实现部分迁移"
+        }
+      ],
+      "official_organization_url": "https://engineering.washu.edu/faculty/Hussein-Sibai.html",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Washington University in St. Louis",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录。搜索仅确认了2026年7月31日发布的 arXiv 预印本；未找到该项目的专门官方项目页、Washington University in St. Louis 官方公告或研究实验室项目页，因此不满足条件2。也未找到两个不同社交平台上的可核验公开讨论，更无法证明其中至少一个来自责任组织之外的独立账号或出版物，因此不满足条件4。学校官方教师页只能确认 Hussein Sibai 任职及其机器人安全研究方向，不能单独证明该校正式负责这一特定项目。",
+      "social_evidence": [],
+      "summary_zh": "该研究探索语言条件化的潜在安全过滤器，让机器人策略依据自然语言描述的安全约束调整行为。方法将 Hamilton-Jacobi 安全 actor 和 critic 与语言约束结合，并在视觉拾放、擦桌和积木堆叠任务中评估约束执行及迁移能力。"
+    }
+  }
+}
