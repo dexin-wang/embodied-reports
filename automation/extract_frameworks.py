@@ -15,6 +15,8 @@ import sys
 import urllib.request
 import argparse
 from concurrent.futures import ThreadPoolExecutor
+from html.parser import HTMLParser
+from urllib.parse import urljoin
 from pathlib import Path
 
 try:
@@ -29,6 +31,62 @@ STATIC = ROOT / "automation" / "framework_sources.json"
 OUT_DIR = ROOT / "public" / "frameworks"
 MANIFEST = OUT_DIR / "manifest.json"
 MAX_REPORTS = 80
+
+
+class ProjectImageParser(HTMLParser):
+    """Collect only project-page images whose metadata names a method diagram."""
+
+    TERMS = ("framework", "architecture", "method", "pipeline", "overview", "system")
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.candidates: list[tuple[int, str]] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() != "img":
+            return
+        values = {key.lower(): value or "" for key, value in attrs}
+        source = values.get("src") or values.get("data-src") or values.get("data-original")
+        if not source:
+            return
+        text = " ".join(values.get(key, "") for key in ("alt", "title", "class", "src", "data-src")).lower()
+        score = sum(1 for term in self.TERMS if term in text)
+        if score:
+            self.candidates.append((score, source))
+
+
+def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | None:
+    """Save an explicitly labelled method image from an official project page."""
+    request = urllib.request.Request(source_url, headers={"User-Agent": "EmbodiedReports/1.0"})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            html = response.read().decode("utf-8", "ignore")
+        parser = ProjectImageParser()
+        parser.feed(html)
+        if not parser.candidates:
+            return None
+        _, image_ref = max(parser.candidates, key=lambda item: item[0])
+        image_url = urljoin(source_url, image_ref)
+        with urllib.request.urlopen(
+            urllib.request.Request(image_url, headers={"User-Agent": "EmbodiedReports/1.0"}),
+            timeout=30,
+        ) as response:
+            image = response.read()
+        pixmap = fitz.Pixmap(image)
+        if pixmap.alpha or pixmap.colorspace != fitz.csRGB:
+            pixmap = fitz.Pixmap(fitz.csRGB, pixmap)
+        pixmap.save(target, jpg_quality=86)
+        return {
+            "id": report_id,
+            "asset": f"frameworks/{report_id}.jpg",
+            "source_url": source_url,
+            "page": None,
+            "caption_detected": True,
+            "source_kind": "official_project_page",
+        }
+    except Exception as exc:
+        print(f"warning: web framework extraction failed for {source_url}: {exc}")
+        return None
 
 
 def arxiv_pdf(url: str) -> str:
@@ -79,7 +137,7 @@ def extract(report_id: str, source_url: str, refresh: bool = False) -> dict | No
         return {"id": report_id, "asset": f"frameworks/{report_id}.jpg", "source_url": source_url, "page": None, "caption_detected": False, "cached": True}
     body = fetch_pdf(arxiv_pdf(source_url))
     if body is None:
-        return None
+        return extract_web_figure(report_id, source_url, target)
     document = fitz.open(stream=body, filetype="pdf")
     try:
         selected_page, selected_crop, found_caption = find_method_figure(document)
