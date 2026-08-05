@@ -23,12 +23,21 @@ MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 
 TOPICS = [
-    "vision-language-action and generalist robot foundation models",
-    "humanoid intelligence, whole-body control and locomotion-manipulation",
-    "robot world models, video-action models and simulation-to-real systems",
-    "dexterous manipulation, hand intelligence, tactile and force-aware robots",
-    "robot manipulation data engines, large datasets and benchmarks",
-    "robot deployment systems, real-time inference and physical-agent platforms",
+    "generalist vision-language-action and robot foundation-model releases from major robotics companies",
+    "official embodied robotics releases from China: X² Robotics, AgiBot, Galbot, Robot Era, Unitree, Fourier Intelligence, Noetix and Beijing Humanoid Robot Innovation Center",
+    "humanoid intelligence, whole-body control, locomotion-manipulation and humanoid deployment systems",
+    "robot manipulation foundation models, cross-embodiment transfer and real-robot generalist policies",
+    "dexterous hands, bimanual manipulation, tactile intelligence, force-aware learning and contact-rich control",
+    "robot world models, video-action models, simulation-to-real and physical prediction systems",
+    "embodied navigation, mobile manipulation, aerial robots and spatial action foundation models",
+    "robot data engines, large-scale robot datasets, demonstration collection and embodied benchmarks",
+    "real-time VLA inference, action chunking, robot systems and physical-agent deployment platforms",
+    "official project releases from Physical Intelligence, NVIDIA, Google DeepMind, Figure, 1X, Skild AI, Hugging Face, Boston Dynamics and Agility Robotics",
+    "official embodied robotics project releases from leading university laboratories in North America and Europe",
+    "official embodied robotics project releases from Tsinghua University, Peking University, Zhejiang University, Shanghai Jiao Tong University, HKU, CUHK and Shanghai AI Laboratory",
+    "robot foundation models for household assistance, human-robot interaction and long-horizon task planning",
+    "robot learning releases focused on imitation learning, reinforcement learning, action representations and policy post-training",
+    "embodied AI project releases for multi-modal perception, spatial reasoning, robot planning and physical reasoning",
 ]
 
 ITEM = {
