@@ -1,1 +1,613 @@
-[]
+[
+  {
+    "id": "being-h08",
+    "summary": "Being-H0.8 是面向接触密集型操作的通用具身基础模型，将潜在世界—动作建模从视觉预测扩展到触觉感知交互。其以 TactoHand 从大规模自我中心视频生成伪触觉监督，通过通用触觉编码器统一异构触觉输入，并以 TopoHand 和慢—快动作专家实现跨手部形态的共享动作表示及基于实时触觉反馈的分段控制。",
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation case issue? needs Chinese labels? Allowed fields exactly English likely yes. Continue. Need valid JSON no weird. Capability 3-5 implemented, concrete. keypoints 4-7. metrics 5 max. Summary factual. Mention date? no need. Exact qualitative metrics perhaps quantitative available. Use values. Ensure no comparative inferred. Source claims first at scale but can report attributed. Metrics exact: 500k+ hours, shape code 10d, joint 20, L25 DOFs, dedup result one or more. 5. Keypoints architecture. Let's craft. fields include Tactile intelligence Data benchmarks Robot systems Embodied AI. Whole-body? no. Humanoid no. VLA yes. Metrics notes exact context. "
+    ],
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation case issue? needs Chinese labels? Allowed fields exactly English likely yes. Continue. Need valid JSON no weird. Capability 3-5 implemented, concrete. keypoints 4-7. metrics 5 max. Summary factual. Mention date? no need. Exact qualitative metrics perhaps quantitative available. Use values. Ensure no comparative inferred. Source claims first at scale but can report attributed. Metrics exact: 500k+ hours, shape code 10d, joint 20, L25 DOFs, dedup result one or more. 5. Keypoints architecture. Let's craft. fields include Tactile intelligence Data benchmarks Robot systems Embodied AI. Whole-body? no. Humanoid no. VLA yes. Metrics notes exact context. "
+    ],
+    "details": {
+      "keyPoints": [
+        "模型采用先验—后验训练：可部署先验读取当前指令与视觉观测，训练期后验引入未来视觉和触觉证据，并在共享 token 布局中对齐潜在状态；推理时移除后验及未来观测。",
+        "慢—快动作专家在动作块起点缓存视觉—语言与潜在世界上下文并预测完整时域；执行每个短分段前，利用最新本体状态和触觉反馈重新生成即将执行的动作段。",
+        "通用触觉编码器在规范手部拓扑上构建由粗到细的触觉金字塔，以 Perceiver 将可变长度的接触、接近度和压力序列重采样为固定数量的触觉 token；无触觉时使用学习到的缺失触觉表示。",
+        "TactoHand基于时间视觉证据，在规范 MANO 表面预测二值接触场和连续接近度场；不可靠的手部重建会被掩码，而非标注为无接触。",
+        "TopoHand将形态与关节运动分离，以腕部平移和旋转、形态编码及规范关节角描述状态和动作，并通过适配器在原生人手或机器人控制空间与共享空间之间转换。",
+        "训练数据由可追溯的自我中心人类视频、标准化异构机器人数据、合成人机对齐示范及任务对齐的人类多模态双手示范组成。",
+        "机器人数据标准化使用平台级规范 URDF 与数据集级校准，将原始状态和动作映射到共享规格，并检查数据完整性、跨流同步、运动学一致性及语言—视频一致性。"
+      ],
+      "capabilities": [
+        "从当前视觉、指令、机器人状态与触觉反馈生成并分段更新机器人动作",
+        "从自我中心人类视频生成手部接触图与连续接近度场",
+        "将异构接触、接近度和压力信号编码为固定数量的触觉 token",
+        "在人手、灵巧机器人手和平行夹爪之间统一表示状态与动作",
+        "在双臂平台上执行接触密集型操作任务"
+      ],
+      "metrics": [
+        {
+          "label": "UniHand 3.0 原始人类视频规模",
+          "note": "来源称每个样本均可追溯至其来源。",
+          "value": "500,000+ 小时"
+        },
+        {
+          "label": "TopoHand 形态编码维度",
+          "note": "形状 VAE 将规范静止手部骨架压缩为该维度。",
+          "value": "10 维"
+        },
+        {
+          "label": "TopoHand 规范关节角数量",
+          "note": "腕部运动之外，用于描述当前状态与未来动作。",
+          "value": "20 个"
+        },
+        {
+          "label": "LinkerHand L25 自由度",
+          "note": "部署平台所用可更换灵巧手之一。",
+          "value": "16 个驱动自由度，21 个总自由度"
+        },
+        {
+          "label": "UniHand 3.0 去重分析结果",
+          "note": "在去重阈值 ε=0.07 时报告的剩余 episode 比例。",
+          "value": "50.45%"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "lingbot-video",
+    "summary": "LingBot-Video是面向具身智能的DiT视频预训练范式，以单流扩散Transformer和稀疏混合专家架构统一图像、视频及多模态条件建模，并通过机器人增强语料与包含物理合理性、任务成功信号的奖励系统强化对动作和世界动态的建模。",
+    "fields": [
+      "World models",
+      "Embodied AI",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "tags": [
+      "World models",
+      "Embodied AI",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "details": {
+      "keyPoints": [
+        "采用基于DiT的级联架构，由任务统一的基础生成器和细化器组成；基础生成器使用单流扩散Transformer处理视觉潜变量与多模态条件。",
+        "使用Qwen3-VL-4B提取多模态指令条件，并使用Wan2.1-VAE压缩视觉潜变量；视觉与条件词元投影到相同隐藏维度后拼接为统一序列。",
+        "通过多模态3D RoPE将条件词元与视觉词元映射到不重叠的时间坐标范围，在单一架构中统一T2I、T2V和TI2V任务。",
+        "将Transformer块中的稠密FFN替换为稀疏MoE层，结合始终启用的共享专家、Top-K路由专家、细粒度专家划分和SwiGLU MLP，实现总参数容量与每词元活跃计算量解耦。",
+        "采用分组受限路由、在线偏置校正、无辅助损失的全局负载均衡，以及面向单个视频序列的辅助均衡损失。",
+        "构建数据剖析引擎，对异构视频源进行分析、过滤和再平衡，将互联网视频与机器人操作、导航及第一视角数据整合为预训练语料。",
+        "构建多维奖励系统，在美学、提示词遵循和运动一致性之外，纳入物理合理性与任务级成功信号。"
+      ],
+      "capabilities": [
+        "统一执行文本到图像（T2I）、文本到视频（T2V）和图像到视频（TI2V）生成。",
+        "基于多模态指令生成具有时空一致性的视觉内容。",
+        "通过视频预训练学习机器人操作、导航和第一视角数据中的动作与世界动态。",
+        "利用物理合理性和任务完成信号对生成结果进行多维度对齐。"
+      ],
+      "metrics": [
+        {
+          "label": "默认专家配置",
+          "note": "每个词元从128个路由专家中激活8个；论文称该配置在性能、延迟和内存占用之间取得权衡。",
+          "value": "MoE 13B-A1.4B-E128：总参数13B，活跃参数1.4B，E=128，Kr=8"
+        },
+        {
+          "label": "专家规模消融",
+          "note": "定性结果：在每词元活跃参数固定为1.4B时，从64增至128个专家带来显著改进，而从128增至256的收益较小。",
+          "value": "E∈{64,128,256}，活跃参数固定1.4B/词元"
+        },
+        {
+          "label": "细粒度路由消融",
+          "note": "定性结果：细粒度配置在整个训练过程中持续优于活跃参数更多的粗粒度配置。",
+          "value": "13B-A1.4B-E128、Kr=8 优于 13B-A1.5B-E64、Kr=4"
+        },
+        {
+          "label": "稠密模型对比",
+          "note": "定性结果：在相近活跃计算预算下，稀疏模型在训练损失和验证损失上均持续优于稠密基线。",
+          "value": "MoE 13B-A1.4B 优于 Dense 1.3B"
+        },
+        {
+          "label": "规模扩展范围",
+          "note": "定性结果：在对齐训练步数时，更大的稀疏模型持续取得更低训练损失；这些实验因资源限制未训练至完全收敛。",
+          "value": "总参数13B→120B，活跃参数1.4B→11B"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "wall-oss-05",
+    "summary": "Wall-OSS-0.5 是一个开源 4B 视觉-语言-动作模型，通过动作词元交叉熵、多模态交叉熵与连续流匹配的梯度桥接协同训练，使预训练检查点在无需任务特定微调时即可直接执行真实机器人操作，同时可作为后续适配的初始化，并保持广泛的视觉语言能力、增强具身落地能力。",
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks",
+      "Robot systems"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks",
+      "Robot systems"
+    ],
+    "details": {
+      "keyPoints": [
+        "Wall-OSS-0.5 是基于 Qwen2.5-VL-3B-Instruct 构建的开源 4B VLA；Mixture-of-Transformers 在每层设置 VL Expert 与 Action Expert，并保留端到端梯度流。",
+        "单阶段梯度桥接协同训练联合三个目标：动作词元交叉熵负责塑造动作感知骨干，多模态交叉熵维持指令遵循与视觉落地，流匹配训练部署所用的连续动作生成器。",
+        "Vision-Aligned RVQ 动作分词器采用 Encoder-RVQ-Decoder 结构，在增量动作空间压缩动作块，并联合视觉-动作对齐、下一帧预测和 DCT 域重建目标。",
+        "Action-Space Supervision 保留速度预测输出，但直接在恢复后的原始动作空间计算损失，以强调高噪声时间步。",
+        "模型使用 26 维相对动作空间，覆盖双臂位置、6D 旋转与夹爪状态，以及移动底盘、升降和头部控制；离散与连续路径均预测一秒动作时域。",
+        "预训练数据混合高质量自采操作数据、开源多具身轨迹和 9000 万样本多模态语料；每个 epoch 处理超过 100 万条机器人轨迹，覆盖 20 多种具身形态。",
+        "部署栈使用 CUDA Graph 捕获去噪步骤，并以定制融合 CUDA 内核优化 RoPE、RMSNorm 等算子。"
+      ],
+      "capabilities": [
+        "无需任务特定微调，预训练检查点可直接作为真实机器人策略执行多类操作任务",
+        "通过连续流匹配生成部署时使用的连续动作块",
+        "支持任意数量的相机视角以及目标级、步骤级两种粒度的指令",
+        "经过微调后可适配真实机器人操作任务，并保持具身视觉语言理解能力"
+      ],
+      "metrics": [
+        {
+          "label": "零样本真实机器人任务进度",
+          "note": "未经任务特定微调；17 项任务套件中的精确报告结果",
+          "value": "Block Sorting 100%；Fruit Sorting 96%；Ring Stacking 86%；留出任务 Rope Tightening 82%"
+        },
+        {
+          "label": "微调后平均任务进度",
+          "note": "15 项真实机器人任务；比 π0.5 高 17.5 个百分点",
+          "value": "60.5%"
+        },
+        {
+          "label": "具身落地能力增益",
+          "note": "多模态评估中的精确报告结果",
+          "value": "提升 21.8%"
+        },
+        {
+          "label": "高分辨率推理性能",
+          "note": "单张 RTX 5090、三视角 448×448 输入、T=10；相对 PyTorch eager-mode 基线",
+          "value": "约 15 Hz，端到端加速 4×"
+        },
+        {
+          "label": "模型与训练规模",
+          "note": "来源报告的规模数据",
+          "value": "4B VLA；3B VLM 骨干；20 多种具身形态；每 epoch 超过 100 万条机器人轨迹"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "pi07",
+    "summary": "π0.7 是约 50 亿参数的可引导通用机器人视觉-语言-动作基础模型。它通过语言、生成的多视角子目标图像、回合质量与策略元数据以及控制模式进行多模态条件训练，并利用示范、自主执行、失败轨迹、人类第一视角视频和网络数据，实现无需任务特定后训练的灵巧长程操作、未见指令与环境泛化、零样本跨本体迁移及技能组合。",
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation操控成功后的近期场景状态；运行时由基于 BAGEL 图像生成模型的轻量级世界模型生成。训练数据包含多机器人示范、较低质量与失败轨迹、历史策略自主执行数据、人类干预、开源机器人数据、第一视角人类视频及网络多模态数据。动作专家采用流匹配目标并关注 VLM 主干；知识隔离训练中，动作专家梯度不回传至 VLM 主干。训练时对提示组件进行随机丢弃，使推理时可灵活使用完整提示或其任意子集。"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation操控成功后的近期场景状态；运行时由基于 BAGEL 图像生成模型的轻量级世界模型生成。训练数据包含多机器人示范、较低质量与失败轨迹、历史策略自主执行数据、人类干预、开源机器人数据、第一视角人类视频及网络多模态数据。动作专家采用流匹配目标并关注 VLM 主干；知识隔离训练中，动作专家梯度不回传至 VLM 主干。训练时对提示组件进行随机丢弃，使推理时可灵活使用完整提示或其任意子集。"
+    ],
+    "details": {
+      "keyPoints": [
+        "模型建立在 π0.6 的 VLA 架构和 MEM 记忆系统之上，加入多模态上下文条件，包括任务与子任务语言、子目标图像、回合元数据和控制模式。",
+        "视觉语言主干从 Gemma3 初始化；MEM 风格视频历史编码器对历史观测进行时间和空间压缩，并针对任意历史帧数输出固定数量的词元。",
+        "模型根据近期多相机图像、机器人关节配置和上下文预测未来动作块；动作可以是关节级命令或末端执行器命令。",
+        "回合元数据包含总速度、1 至 5 的执行质量评分和动作片段错误标签，用于区分不同质量与策略的轨迹，并在运行时引导高速、高质量、无错误执行。",
+        "子目标图像采用多视角表示，分别提供环境、物体以及机械臂和夹爪结果的空间约束；其生成模型以当前观测、子任务指令和元数据为条件。",
+        "训练混合高质量示范、失败和次优自主轨迹、历史模型评估数据、人类第一视角视频以及网络数据，以支持跨任务、环境和机器人本体的泛化。"
+      ],
+      "capabilities": [
+        "根据语言指令在未见环境中执行多阶段机器人任务",
+        "通过零样本跨本体迁移执行衣物折叠等灵巧任务",
+        "组合已有技能，以未见方式完成新任务",
+        "无需任务特定后训练即可操作咖啡机、折叠衣物、取出垃圾袋、折叠纸箱和削蔬菜"
+      ],
+      "metrics": [
+        {
+          "label": "VLA 总参数量",
+          "note": "由 VLM 主干、视频历史编码器和动作专家组成。",
+          "value": "约 5B 参数"
+        },
+        {
+          "label": "VLM 主干规模",
+          "note": "从 Gemma3 初始化，其中包括 400M 参数的视觉编码器。",
+          "value": "4B 参数"
+        },
+        {
+          "label": "动作专家规模",
+          "note": "采用流匹配目标生成动作块。",
+          "value": "860M 参数"
+        },
+        {
+          "label": "子目标图像训练占比",
+          "note": "视觉子目标仅加入每个训练批次的部分样本。",
+          "value": "25%"
+        },
+        {
+          "label": "跨本体迁移结果",
+          "note": "定性结果：未接受任何衣物折叠任务训练的机器人可零样本折叠 T 恤，表现与专家操作员首次遥操作尝试相当。",
+          "value": "定性：匹配专家操作员首次尝试表现"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "helix-02",
+    "summary": "Helix 02是Figure面向人形机器人的统一全身移动操作VLA系统，通过S2语义推理、S1全传感器到全关节的视觉运动策略和S0学习式全身控制器，将视觉、触觉、本体感觉、行走、操作与平衡整合为从像素到力矩的连续自主控制。",
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation accessibility: false,"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation accessibility: false,"
+    ],
+    "details": {
+      "keyPoints": [
+        "Helix 02采用S2、S1、S0三级架构：S2负责场景处理、语言理解和行为排序；S1将感知转换为全身关节目标；S0负责全身平衡、接触与协调。",
+        "S1是由S2潜变量条件化的Transformer，输入头部相机、掌心相机、指尖触觉和全身本体感觉，输出腿、躯干、头、臂、腕及各手指的完整关节级控制。",
+        "S0是基于人体运动数据学习的全身控制先验，输入全身关节状态和基座运动，输出关节级执行器指令；其训练结合仿真、广泛域随机化与仿真到现实强化学习。",
+        "掌心相机在物体被头部相机遮挡时提供手内视觉反馈；各指尖的触觉传感器支持接触感知和力调节抓取。",
+        "系统以不同时间尺度协作：S2生成语义潜变量，S1产生全身关节目标，S0以更高频率执行，形成从像素到力矩的集成层级。",
+        "长时程任务将行走、操作与平衡作为连续行为执行，包含持物行走、双手协调、全身辅助操作、动作排序和隐式错误恢复。"
+      ],
+      "capabilities": [
+        "在全尺寸厨房内自主完成洗碗机卸载、跨房间搬运与堆放物品、重新装载并启动洗碗机",
+        "在行走和持物过程中维持抓握与平衡，并使用髋部关闭抽屉、用脚抬起洗碗机门",
+        "双手协同拾取、换手、堆叠和放置物体",
+        "利用掌心相机与指尖触觉自主拧开瓶盖、取出单粒药片、从注射器推出精确5 ml液体，以及从杂乱箱体中拾取金属件"
+      ],
+      "metrics": [
+        {
+          "label": "端到端自主任务",
+          "note": "洗碗机卸载与重新装载任务连续执行，无重置、无人类干预。",
+          "value": "4分钟，61个移动操作动作"
+        },
+        {
+          "label": "S0模型规模",
+          "note": "全身控制神经网络。",
+          "value": "1000万参数"
+        },
+        {
+          "label": "S0训练数据",
+          "note": "关节级重定向人体运动数据。",
+          "value": "超过1,000小时"
+        },
+        {
+          "label": "仿真训练规模",
+          "note": "S0在广泛域随机化条件下完全于仿真中训练。",
+          "value": "超过200,000个并行环境"
+        },
+        {
+          "label": "控制与传感频率",
+          "note": "S1生成全身关节目标；S0执行关节级控制。指尖触觉传感器可检测的最小力另为3克。",
+          "value": "S1 200 Hz；S0 1 kHz；最小检测力3克"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "gr00t-n16",
+    "summary": "GR00T N1.6 是面向通用人形机器人的开放基础视觉-语言-动作模型，通过 Cosmos-2B VLM 变体、更大的 DiT、相对动作表示及扩充的遥操作数据，在模拟操作和多种真实机器人形态上较 N1.5 获得更好的后训练表现，并面向双臂操作与全身移动操作。",
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "details": {
+      "keyPoints": [
+        "基础 VLM 采用 NVIDIA 内部 Cosmos-2B VLM 变体，支持灵活分辨率，并可按图像原始宽高比编码而无需填充。",
+        "VLM 同时训练于通用视觉语言任务和下一动作预测等具身推理任务。",
+        "DiT 从 N1.5 的 16 层扩大至 32 层；移除 VLM 后的 4 层 Transformer 适配器，改为在预训练中解冻 VLM 顶部 4 层。",
+        "对大多数机器人形态预测相对状态的动作块，而非绝对关节角或末端执行器位置；实验中相对动作更平滑、更准确，但小数据集下易累积误差。",
+        "新增数千小时遥操作数据，覆盖双臂 YAM、AGIBot Genie1、BEHAVIOR 套件中的模拟 Galaxea R1 Pro，以及 Unitree G1 全身移动操作。",
+        "后训练使用更强的状态正则化、额外数据增强及与预训练数据联合训练；DAgger 可改善真实机器人实验中的模型表现。",
+        "N1.6 在模拟操作基准及真实双臂 YAM、AgiBot Genie-1 和 Unitree G1 上优于 N1.5；来源未提供具体成功率。"
+      ],
+      "capabilities": [
+        "执行双臂操作，包括将导轨插入 GPU、餐具上架、折叠 T 恤及左右手方块交接。",
+        "在 AgiBot Genie-1 上执行折衣、清理餐桌和水果装袋任务。",
+        "在 Unitree G1 上执行移动操作，包括从推车、抽屉等位置拾取物体并放入指定容器。",
+        "根据语言指令执行多任务；来源同时指出，多任务语言跟随和分布外任务泛化仍具挑战。",
+        "通过测试时和训练时 RTC 支持异步策略执行，并提升运动平滑性与鲁棒性。"
+      ],
+      "metrics": [
+        {
+          "label": "预训练步数",
+          "note": "GR00T N1.6 的预训练设置。",
+          "value": "300K steps"
+        },
+        {
+          "label": "预训练全局批量",
+          "note": "与 300K 步预训练配套的全局批量大小。",
+          "value": "16384"
+        },
+        {
+          "label": "DiT 深度",
+          "note": "N1.6 相比 N1.5 的精确架构对比。",
+          "value": "32 layers vs 16 layers in N1.5"
+        },
+        {
+          "label": "任务后训练",
+          "note": "典型的小型任务专用数据后训练设置。",
+          "value": "10K-30K steps，global batch size 1K or less"
+        },
+        {
+          "label": "相对 N1.5 的结果",
+          "note": "定性结果：来源称 N1.6 在模拟操作基准和真实双臂 YAM、AgiBot Genie-1、Unitree G1 上均优于 N1.5，但未报告具体数值。",
+          "value": "定性：outperforms N1.5"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "being-h0",
+    "summary": "Being-H0 是一个从大规模人类视频中显式学习手部运动的灵巧 VLA。其物理指令微调将人类视频预训练、物理空间对齐和机器人后训练结合起来，利用离散化的 MANO 手部运动 token 与统一自回归架构建模视觉、语言和动作，再通过可学习动作查询与 MLP 投影适配下游机器人操作。",
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "details": {
+      "keyPoints": [
+        "Being-H0 是基于大规模人类视频预训练的灵巧 Vision-Language-Action 模型，采用“预训练、物理空间对齐、后训练适配”三阶段物理指令微调范式。",
+        "模型基于 InternVL3 架构，使用预训练的 InternViT-300M 视觉编码器、2 层 MLP 投影器，并通过动态高分辨率图像切片保留细粒度视觉信息。",
+        "人手运动以 MANO 参数表示，包括关节角、腕部旋转、平移和手形；连续运动经 1D 卷积编码器及基于分组残差量化的部件级运动分词器转换为离散运动 token。",
+        "模型将文本、视觉和运动统一为 token 序列，通过共享注意力进行跨模态建模；运动块由 <MOT> 与 </MOT> 标记，并将运动码本中的离散代码扩展到语言模型词表。",
+        "物理空间对齐用于统一不同相机系统、坐标系和采集条件下的异构数据，并向由二维视觉文本预训练初始化的骨干注入三维空间推理能力。",
+        "机器人后训练使用固定数量的可学习查询表示动作块，并通过简单的 MLP 投影适配下游操作器，以处理人与机器人之间的运动学、自由度和物理约束差异。",
+        "UniHand 数据管线整合动作捕捉、VR 和纯 RGB 视频，并使用 MANO 参数标准化与弱透视对齐统一异构来源；当前版本未建模交互物体的 6D 位姿。"
+      ],
+      "capabilities": [
+        "根据视觉与语言输入自回归生成人手运动序列",
+        "执行视觉到运动生成、运动描述和多模态条件控制",
+        "通过后训练将人手运动先验适配到下游机器人操作",
+        "联合处理视觉、语言与细粒度手部运动，实现跨模态推理",
+        "支持从夹爪到灵巧手等不同下游操作器的动作预测"
+      ],
+      "metrics": [
+        {
+          "label": "UniHand 样本量",
+          "note": "论文明确报告的定量数据。",
+          "value": "超过 150M 个样本/指令跟随样本"
+        },
+        {
+          "label": "视频与运动数据时长",
+          "note": "论文明确报告的定量数据。",
+          "value": "超过 1,000 小时"
+        },
+        {
+          "label": "任务覆盖范围",
+          "note": "论文明确报告的定量数据。",
+          "value": "超过 150 个任务"
+        },
+        {
+          "label": "运动重建精度",
+          "note": "来源仅表述精度等级，未提供具体毫米数值；属于定性结果。",
+          "value": "毫米级重建精度"
+        },
+        {
+          "label": "实验结果",
+          "note": "来源未给出具体基准分数；属于定性结果。",
+          "value": "手部运动生成与指令跟随表现优异，可随模型和数据规模扩展，并在应用物理指令微调后获得真实机器人操作增益"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "gr00t-n15",
+    "summary": "GR00T N1.5 是面向通用人形机器人的开放基础模型升级版，以 Eagle VLM 编码视觉和语言、DiT 生成动作，并通过冻结 VLM、改进适配器与 token 归一化、增强指代表达定位以及加入 FLARE 未来潜表示对齐，提升语言跟随、操作策略表现及对人类视频的利用能力。模型在模拟操作、真实 GR-1、新物体操作、DreamGen 新任务和 Unitree G1 后训练实验中均报告了相较 GR00T N1 更高的成功率。",
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "World models",
+      "Robot manipulation"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "World models",
+      "Robot manipulation"
+    ],
+    "details": {
+      "keyPoints": [
+        "使用 NVIDIA Eagle VLM 编码文本与视觉观测，DiT 通过交叉注意力接收视觉语言嵌入，并处理机器人状态与加噪动作。",
+        "预训练和微调期间冻结 VLM；简化连接视觉编码器与 LLM 的适配器 MLP，并对输入 LLM 的视觉及文本 token 嵌入增加层归一化。",
+        "在 N1 的流匹配损失之外加入 Future LAtent Representation Alignment（FLARE），使模型对齐目标未来嵌入，而非生成式建模未来帧。",
+        "训练持续 250K 步，使用 1K 张 H100、全局批量大小 16384、AdamW、带预热的余弦学习率调度；预热比例为 0.05，预训练和后训练的 FLARE 损失系数均为 0.2。",
+        "预训练数据混合包括内部 GR-1 数据、OpenXE、模拟 GR-1（DexMG）、DreamGen 神经轨迹和 AgiBot-Beta。",
+        "模型通过 DreamGen 合成机器人数据扩展至 12 个新动词；这些任务没有采集遥操作数据，但通过 DreamGen 轨迹被显式加入训练。"
+      ],
+      "capabilities": [
+        "按语言指令执行物体拾取与放置",
+        "在真实 GR-1 机器人上根据目标水果位置选择左右手完成操作",
+        "通过人类第一视角视频与少量机器人演示学习新物体操作",
+        "利用 DreamGen 合成轨迹学习新的动作任务",
+        "在 Unitree G1 上经遥操作数据后训练执行目标物体放盘任务"
+      ],
+      "metrics": [
+        {
+          "label": "VLM 指代表达定位",
+          "note": "GR00T N1.5 VLM 规模为 2.1B；对比 Qwen2.5-VL-3B 的 35.5 和 85.2。",
+          "value": "GR-1 grounding IoU 40.4；RefCOCOg-val IoU 89.6"
+        },
+        {
+          "label": "语言条件模拟基准成功率",
+          "note": "从头训练；GR00T N1 对应结果为 52.8% 和 36.4%。",
+          "value": "Language Table 93.2%；Sim GR-1 Language 54.4%"
+        },
+        {
+          "label": "真实 GR-1 语言跟随",
+          "note": "双水果场景中按指令将指定水果放到盘中；GR00T N1 分别为 46.6% 和 43.3%。",
+          "value": "语言跟随率 93.3%；总体成功率 83.0%"
+        },
+        {
+          "label": "新物体泛化",
+          "note": "10 个预训练未见物体；N1.5 零样本为 15.0%，使用包含新物体的人类视频进行 FLARE 后训练后为 55.0%。",
+          "value": "0-shot 15.0%；FLARE 人类视频后训练 55.0%"
+        },
+        {
+          "label": "Unitree G1 后训练",
+          "note": "使用 1K 个遥操作回合；已见水果场景中 N1 为 44.0%，N1.5 为 98.8%；5 个新物体场景中 N1.5 为 84.2%。",
+          "value": "已见物体场景成功率 98.8%；新物体场景成功率 84.2%"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "smolvla",
+    "summary": "SmolVLA是一种面向经济型机器人部署的紧凑开源视觉-语言-动作模型，结合裁剪后的SmolVLM-2、流匹配Action Expert与异步推理栈，从多相机图像、语言指令和机器人状态生成连续动作块。模型可在单张GPU上训练，并面向消费级GPU乃至CPU部署；论文报告其在仿真和真实机器人评测中达到与更大VLA相当或更优的表现。",
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "details": {
+      "keyPoints": [
+        "SmolVLA由紧凑型预训练SmolVLM-2与基于流匹配训练的Action Expert组成；视觉、语言和状态词元经VLM处理后用于条件化连续动作块生成。",
+        "视觉侧仅使用全局图像，不采用图像切片，并通过pixel shuffle将每帧视觉词元限制为64个。",
+        "模型在VLM总层数的一半处截断计算（N=L/2）；论文称这一设置在速度与性能间取得良好权衡，并有效减半LLM和Action Expert的计算成本。",
+        "Action Expert采用0.75倍VLM隐藏维度，并交替设置交叉注意力层与带因果掩码的自注意力层；交叉注意力读取VLM特征，自注意力建模动作块内的历史动作词元。",
+        "预训练采用模仿学习，数据完全来自公开社区数据集；任务描述由Qwen2.5-VL-3B-Instruct辅助重写为简短、面向动作的指令，摄像机视角则人工规范为top、wrist和side顺序。",
+        "异步推理通过RobotClient与PolicyServer解耦动作执行和动作块预测，在旧动作队列仍被消费时触发新预测，并对重叠队列进行聚合。",
+        "异步控制使用剩余队列比例阈值触发新观测；系统以关节空间距离过滤近重复观测，队列为空时则无论相似度如何都处理最新观测。"
+      ],
+      "capabilities": [
+        "根据多幅RGB图像、自然语言任务指令和机器人传感运动状态生成连续低层动作块",
+        "通过异步推理栈并行处理动作执行、环境观测与动作预测",
+        "支持在仿真环境及低成本真实机器人上执行多种任务",
+        "支持将策略部署在远程PolicyServer，并通过网络向RobotClient发送动作"
+      ],
+      "metrics": [
+        {
+          "label": "社区预训练数据集数量",
+          "note": "表1精确报告值",
+          "value": "481个数据集"
+        },
+        {
+          "label": "社区预训练轨迹规模",
+          "note": "表1精确报告值",
+          "value": "22.9K个episodes"
+        },
+        {
+          "label": "社区预训练帧数",
+          "note": "表1精确报告值",
+          "value": "10.6M帧"
+        },
+        {
+          "label": "每帧视觉词元数",
+          "note": "仅使用全局图像并执行pixel shuffle后的上限",
+          "value": "64个视觉tokens/frame"
+        },
+        {
+          "label": "相对模型性能",
+          "note": "定性比较附带精确倍率；摘要报告未给出具体成功率",
+          "value": "性能可与参数规模大10倍的VLA相当"
+        }
+      ]
+    },
+    "verification": "Automated"
+  },
+  {
+    "id": "helix",
+    "summary": "Helix是面向通用人形机器人控制的视觉-语言-动作模型，以端到端协同训练的S2视觉语言模型和S1快速视觉运动策略，将单目视觉、机器人状态与自然语言命令映射为35自由度上半身连续动作。系统使用单一权重集完成零样本新物体抓取、容器与家电操作以及双机器人长时程协作，并可完全运行于机载低功耗嵌入式GPU。",
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "details": {
+      "keyPoints": [
+        "采用端到端训练的“System 1/System 2”架构：S2负责场景理解与语言理解，S1将S2的连续潜在语义向量转换为连续机器人动作。",
+        "S2基于互联网规模数据预训练的开源、开放权重VLM，输入单目机器人图像、腕部位姿、手指位置及自然语言命令，并输出单个连续潜在向量。",
+        "S1是交叉注意力编码器-解码器Transformer，使用全卷积多尺度视觉骨干；该视觉骨干的初始化预训练完全在仿真中完成。",
+        "训练数据约为500小时的多机器人、多操作员遥操作行为；自动标注VLM根据分段机载视频生成事后自然语言指令，训练物品全部排除在评测之外。",
+        "模型以标准回归损失从原始像素和文本命令端到端学习连续动作，梯度通过潜在通信向量从S1反向传播至S2；无需任务专用动作头、微调或额外训练阶段。",
+        "动作空间覆盖目标腕部位姿、手指屈曲与外展、躯干和头部朝向，并附加合成的“任务完成百分比”动作以预测终止条件。",
+        "部署时S1与S2分别运行在机器人的两块低功耗嵌入式GPU上；S2异步更新共享潜在向量，S1维持实时闭环控制，训练中加入与部署推理延迟差匹配的时间偏移。"
+      ],
+      "capabilities": [
+        "根据自然语言命令对人形机器人整个上半身进行高频连续控制。",
+        "对训练阶段未出现的小型家居物体执行零样本抓取。",
+        "两台机器人使用相同模型权重完成长时程协作操作，包括杂货传递和收纳。",
+        "通过单一权重集执行拾放、抽屉与冰箱操作、跨机器人交接等行为。"
+      ],
+      "metrics": [
+        {
+          "label": "控制频率与动作维度",
+          "note": "S1连续控制手指、腕部、头部和躯干等上半身动作。",
+          "value": "35-DoF，200 Hz"
+        },
+        {
+          "label": "S2运行频率",
+          "note": "用于场景理解、语言理解及高层语义意图生成。",
+          "value": "7-9 Hz"
+        },
+        {
+          "label": "模型规模",
+          "note": "单一权重集由S2开放权重VLM与S1视觉运动Transformer组成。",
+          "value": "S2为7B参数；S1为80M参数"
+        },
+        {
+          "label": "训练数据量",
+          "note": "高质量、多机器人、多操作员监督遥操作数据；来源称其小于既有VLA数据集规模的5%。",
+          "value": "约500小时；<5%"
+        },
+        {
+          "label": "新物体泛化结果",
+          "note": "定性结果：来源报告机器人在杂乱环境中无需先验演示或定制编程，成功操作数千种训练中未出现的物品，但未给出成功率。",
+          "value": "数千种新物品；定性结果"
+        }
+      ]
+    },
+    "verification": "Automated"
+  }
+]

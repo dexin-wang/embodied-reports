@@ -39,6 +39,14 @@
       "page": null,
       "caption_detected": false,
       "cached": true
+    },
+    {
+      "id": "floatform-1520eeb",
+      "asset": "frameworks/floatform-1520eeb.jpg",
+      "source_url": "https://news.mit.edu/2026/tiny-robot-boats-build-floating-structures-0709",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page"
     }
   ]
 }

@@ -1587,5 +1587,2238 @@
       "social_evidence": [],
       "summary_zh": "该研究探索语言条件化的潜在安全过滤器，让机器人策略依据自然语言描述的安全约束调整行为。方法将 Hamilton-Jacobi 安全 actor 和 critic 与语言约束结合，并在视觉拾放、擦桌和积木堆叠任务中评估约束执行及迁移能力。"
     }
+  },
+  "search-and-verification-underway-7392ab6": {
+    "checked_at": "2026-08-05T12:53:48.686884+00:00",
+    "title": "Search and verification underway",
+    "accepted": false,
+    "reason": "不收录。条件 2 不满足：提供的是 OpenAI 通用主页，检索也未找到题为“Search and verification underway”的专门官方项目页、官方项目公告或研究实验室项目页。条件 4 同样无法满足：未找到该候选项目在至少两个不同社交平台上的公开讨论，更没有至少一项由 OpenAI 之外的账号或出版机构发布的社交证据。输入中的摘要明确是搜索进度文字，而非项目摘要；2026 年 8 月 5 日也无法被验证为具体项目发布日期。OpenAI 的机器人团队招聘介绍只能证明该公司从事机器人研究，不能证明这个候选项目存在。([openai.com](https://openai.com/careers/software-engineer-distributed-data-systems-robotics-san-francisco/?utm_source=openai))",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "未发现可核验的已实现能力；输入内容只是搜索进度说明，不是技术项目。",
+        "OpenAI 招聘页面仅说明其机器人团队研究通用机器人、真实动态环境以及软硬件集成，不能证明本候选项目存在。",
+        "未找到与候选标题对应的机器人系统、模型、控制方法、数据集或实验演示。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "候选标题“Search and verification underway”是工作状态描述，并非可识别的项目名称。",
+        "所给主链接是 OpenAI 首页，没有指向专门的项目页面、公司项目公告或研究实验室项目页面。",
+        "检索未发现 OpenAI 在 2026 年 8 月 5 日以该标题发布具身机器人技术项目。",
+        "OpenAI 确有明确的 Robotics 团队，并公开描述了通用机器人研究方向，但团队介绍或招聘页面不能替代特定项目证据。",
+        "没有可归属于该候选项目的官方技术报告、项目材料、作者名单、实现细节或实验结果。",
+        "没有找到两个不同社交平台上的可核验公开讨论，也没有找到独立于 OpenAI 的合格社交证据。"
+      ],
+      "metrics": [
+        {
+          "label": "可核验项目指标",
+          "note": "没有官方项目或技术材料，因此不能归属任何数值指标或定性实验结果。",
+          "value": "未报告"
+        }
+      ],
+      "official_organization_url": "https://openai.com/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "OpenAI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。条件 2 不满足：提供的是 OpenAI 通用主页，检索也未找到题为“Search and verification underway”的专门官方项目页、官方项目公告或研究实验室项目页。条件 4 同样无法满足：未找到该候选项目在至少两个不同社交平台上的公开讨论，更没有至少一项由 OpenAI 之外的账号或出版机构发布的社交证据。输入中的摘要明确是搜索进度文字，而非项目摘要；2026 年 8 月 5 日也无法被验证为具体项目发布日期。OpenAI 的机器人团队招聘介绍只能证明该公司从事机器人研究，不能证明这个候选项目存在。([openai.com](https://openai.com/careers/software-engineer-distributed-data-systems-robotics-san-francisco/?utm_source=openai))",
+      "social_evidence": [],
+      "summary_zh": "该候选条目无法被识别为一个已经公开发布的具身机器人技术项目。“Search and verification underway”描述的是资料搜集过程，所给 OpenAI 首页也不是项目落地页。现有官方材料能够证明 OpenAI 设有 Robotics 团队，并关注动态真实环境中的通用机器人、不同机器人形态、软硬件整合以及大规模多模态训练与评测基础设施，但这些是组织层面的研究方向，不能据此虚构一个具体项目。由于缺少项目级官方页面、技术报告、实现材料、作者信息、发布日期和实验结果，也缺少两个社交平台上的讨论证据，本条目不具备编写技术档案所需的证据基础。"
+    }
+  },
+  "vlash-vision-language-action-speculative-handove-fbddb1a": {
+    "checked_at": "2026-08-05T12:53:48.687792+00:00",
+    "title": "VLASH: Vision-Language-Action Speculative Handover",
+    "accepted": false,
+    "reason": "正在核验公开来源。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目证据、责任机构和发布日期，再分别查找至少两个社交平台上的公开讨论，并区分机构自有账号与独立来源。若任一严格条件无法由可访问页面支持，我会明确排除。 ",
+        "随后只从官方页面、技术报告及其直接链接材料提取技术点、能力和精确结果，不用摘要中的表述替代证据。 ",
+        "开始联网核验候选项目。"
+      ],
+      "fields": [
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "正在核验。",
+        "正在核验。",
+        "正在核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "联网核验尚未完成",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "正在核验公开来源。",
+      "social_evidence": [],
+      "summary_zh": "正在核验候选项目的官方项目证据、技术材料和跨平台公共讨论。"
+    }
+  },
+  "agibot-waic-2026-product-releases-33c5181": {
+    "checked_at": "2026-08-05T12:53:48.688650+00:00",
+    "title": "AGIBOT WAIC 2026 Product Releases",
+    "accepted": false,
+    "reason": "insufficient independent multi-platform social evidence",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "A3 Ultra 可在公共服务和商业环境中执行自主导航、访客引导、信息服务及持续值守。",
+        "G2 Max 可执行物料搬运、码垛、产线流转等重载工业任务，并通过力控手臂与既有生产设备交互。",
+        "OmniHand 3 Ultra-M 可进行遥操作、示教数据采集、具身智能训练以及接触丰富的精细操作。",
+        "X2 Edu 支持面向教学、机器人竞赛和科研实验的硬件重构、末端执行器替换及底层控制二次开发。",
+        "现场系统可组合视觉感知、轨迹预测、导航、操作和任务编排，完成乒乓球响应、拳击遥操作及从取杯到制作和递送饮品的连续流程。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems",
+        "Humanoid intelligence",
+        "Whole-body control"
+      ],
+      "include": true,
+      "key_points": [
+        "本次发布不是单一机器人论文，而是覆盖全尺寸人形平台、教育科研平台、重载工业机器人和直接驱动灵巧手的实体机器人产品组合，分别对应公共服务、科研开发、工业作业和精细操作。",
+        "A3 Ultra 配置 3D 激光雷达、RGB-D 相机、鱼眼相机和双目视觉，并结合 GPS、RTK 与 UWB 定位；高层具身智能计算由 NVIDIA Thor 承担，同时支持直接充电、换电和自主充电。",
+        "X2 Edu 采用全链路模块化设计，机体可拆装和重新配置；开放运动控制及硬件接口，可扩展末端执行器、传感器和附加计算模块，面向教学实训、科研和机器人竞赛。",
+        "G2 Max 是智元首款重载力控具身作业机器人，结合力控手臂、可调工作高度、全向轮式移动、换电与自主充电，目标是在不重建整条产线的情况下接入现有工厂设备和流程。",
+        "OmniHand 3 Ultra-M 采用全直接驱动架构，指尖集成视觉式触觉传感器，掌部配置触觉阵列，可感知接触、受力和物体位置变化，并进行响应式力调节。",
+        "发布材料同时展示了从硬件到部署的系统能力：既有工厂案例覆盖取料、精确放置、设备交互和成品回流的闭环流程；WAIC 现场演示则覆盖动态视觉响应、遥操作全身协调以及融合感知、导航、操作和任务排序的饮品服务。"
+      ],
+      "metrics": [
+        {
+          "label": "A3 Ultra 机体与自由度",
+          "note": "官方发布值",
+          "value": "身高 1.74 米，重量 60 千克，51 个主动自由度"
+        },
+        {
+          "label": "A3 Ultra 负载与续航",
+          "note": "每条手臂的负载及换电等方式组合计算的运行时间",
+          "value": "单臂负载 5 千克，组合运行时间最长 8 小时"
+        },
+        {
+          "label": "X2 Edu 规格",
+          "note": "官方发布值",
+          "value": "身高约 1.3 米，全身 29 个自由度；每臂 7 个自由度，末端负载最高 3 千克"
+        },
+        {
+          "label": "OmniHand 3 Ultra-M 规格",
+          "note": "官方发布值",
+          "value": "20 个主动自由度，重量 630 克，整手抓握负载最高 5 千克"
+        },
+        {
+          "label": "OmniHand 3 Ultra-M 动态与精度",
+          "note": "官方发布值",
+          "value": "典型开合时间 0.3 秒，重复定位精度 ±0.2 毫米"
+        }
+      ],
+      "official_organization_url": "https://www.agibot.com/",
+      "official_project_url": "https://www.agibot.com/article/231/detail/85.html",
+      "open_source": false,
+      "organization_en": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "智元创新（上海）科技有限公司",
+      "reason": "纳入。该项目于2026年7月18日由智元官方专题公告发布，明确涉及 A3 Ultra、X2 Edu、G2 Max 和 OmniHand 3 Ultra-M 等实体机器人及灵巧手系统，满足具身机器人主题、官方项目证据和明确责任机构要求。发布内容还在 LinkedIn 与微博两个不同社交平台形成公开讨论；其中微博帖子来自独立于智元的 ImageV 账号，满足至少一项外部社会证据的要求。未发现该整组产品发布采用开源许可，因此 open_source=false；开源并非收录条件。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/agibot_agibot-waic2026-embodiedai-activity-7483820617700466688-uzHw"
+        },
+        {
+          "independent": true,
+          "platform": "Weibo",
+          "url": "https://weibo.com/2/detail/5321974297665679"
+        }
+      ],
+      "summary_zh": "智元在 WAIC 2026 集中发布四项具身机器人产品：面向公共服务和商业场景长期运行的全尺寸人形机器人 A3 Ultra、面向教育与科研二次开发的模块化 X2 Edu、面向搬运和码垛等工业流程的重载力控机器人 G2 Max，以及面向训练、遥操作、示教采集和接触丰富操作的 OmniHand 3 Ultra-M 直接驱动灵巧手。产品组合将移动、感知、全身控制、工业力控和视觉触觉操作分布到不同硬件形态，并强调接入现有生产线和服务流程，而非仅完成一次性演示。官方材料还展示了机器人在真实产线中的闭环上下料，以及在 WAIC 场馆内进行导航、引导、信息服务、动态球类响应、遥操作拳击和连续饮品服务等能力。"
+    }
+  },
+  "floatform-1520eeb": {
+    "checked_at": "2026-08-05T12:53:48.690679+00:00",
+    "title": "FloatForm",
+    "accepted": true,
+    "reason": "符合收录条件：FloatForm 是在实体水池中验证的自主模块化机器人船群，明确涉及具身机器人和物理自重构；MIT Senseable City Lab 提供专门官方项目页，MIT News 亦于 2026 年 7 月 9 日发布官方报道；官方项目页明确列出 MIT Senseable City Lab、MIT CSAIL 及具体研究人员；LinkedIn 与 Reddit 上均存在可公开访问的项目讨论，其中所列 LinkedIn 转发者和 Reddit 社区帖子均非 MIT 或项目负责实验室控制。Nature Communications 的代码可用性声明还公开了用于支持研究结果的 MATLAB 代码，但这不表示完整机器人软硬件栈、固件或制造资料均已开源。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "多艇从分散位置并行自主聚集，装配成物理连接的二维水面结构",
+        "接收新目标形状后自动解锁、分离、重新分配位置并完成再装配",
+        "装配后的多个模块作为统一结构进行集体航行，每个机器人独立计算推进贡献",
+        "通过全向推进、局部邻居信息交换和分布式避碰，在水面扰动下协调运动"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "FloatForm 是面向真实水面环境的模块化机器人系统。每个方形机器人都是具备推进器、传感器、嵌入式计算、状态估计和连接机构的自主实体，而不是纯仿真或一般性的自主航行研究。",
+        "系统采用以分布式控制为主的混合协调架构：中央规划器仅负责一次性的离散位置分配和最终结构修正；聚集、避碰、邻居协调及趋近目标形状主要由各机器人上的控制器并行执行。",
+        "每个模块配置四个呈 X 形布置的微型推进器，可实现纵向、横向和平面原地旋转。底部十字稳定鳍增加水动力阻力，以降低小型船体在低速状态下的旋转敏感性。",
+        "连接机构完全封装在船体内部，由单个舵机驱动折纸启发的负泊松比机构，同时伸缩船体四边的永磁体。定制 3D 打印齿轮箱可在连接或断开状态下关闭电机并保持机构位置。",
+        "室内定位使用四个固定超声信标和每艇两个移动信标，通过飞行时间测距及三边定位估计位置和朝向；卡尔曼滤波进一步融合机载 IMU，输出位姿、速度和加速度估计。",
+        "底层运动控制结合 PID 与反馈线性化，分别调节航向以及纵荡、横荡速度，以补偿非线性水动力、机器人个体差异和邻近模块运动引起的扰动。",
+        "形状形成流程先使用形状参考算法将机器人并行聚集到目标区域，再由匈牙利算法分配最终格点位置，随后执行位置参考协调和磁性锁接。控制逻辑被设计为传感器无关，可在室外以 GPS、视觉、声学测距或激光雷达替换实验室定位系统。"
+      ],
+      "metrics": [
+        {
+          "label": "实体机器人数量",
+          "note": "研究制造并实验验证了八个 FloatForm 模块。",
+          "value": "8 个模块"
+        },
+        {
+          "label": "单模块尺寸",
+          "note": "每个模块为方形自主水面机器人。",
+          "value": "0.21 × 0.21 × 0.14 米"
+        },
+        {
+          "label": "连接捕获范围",
+          "note": "交替极性的永磁体可跨越该间隙实现连接。",
+          "value": "10–15 厘米"
+        },
+        {
+          "label": "任务成功率",
+          "note": "每种规模进行了 10 次试验，统计无人工干预完成任务的比例。",
+          "value": "4 艇为 90%；8 艇为 70%"
+        },
+        {
+          "label": "任务时间与仿真规模",
+          "note": "八艇实体实验完成装配、重构和集体移动；另以仿真评估更大规模。",
+          "value": "每次约 4–8 分钟；仿真扩展至 64 个模块"
+        }
+      ],
+      "official_organization_url": "https://senseable.mit.edu/",
+      "official_project_url": "https://senseable.mit.edu/floatform/",
+      "open_source": true,
+      "organization_en": "MIT Senseable City Lab",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "符合收录条件：FloatForm 是在实体水池中验证的自主模块化机器人船群，明确涉及具身机器人和物理自重构；MIT Senseable City Lab 提供专门官方项目页，MIT News 亦于 2026 年 7 月 9 日发布官方报道；官方项目页明确列出 MIT Senseable City Lab、MIT CSAIL 及具体研究人员；LinkedIn 与 Reddit 上均存在可公开访问的项目讨论，其中所列 LinkedIn 转发者和 Reddit 社区帖子均非 MIT 或项目负责实验室控制。Nature Communications 的代码可用性声明还公开了用于支持研究结果的 MATLAB 代码，但这不表示完整机器人软硬件栈、固件或制造资料均已开源。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/jean-pierre-palomba-marin-14508b162_mits-robot-boat-swarm-could-reshape-future-activity-7481689274745122816-VdaC"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/tech/comments/1uvbtnu/tiny_robot_boats_build_floating_structures/"
+        }
+      ],
+      "summary_zh": "FloatForm 是 MIT Senseable City Lab 与 MIT CSAIL 研究人员开发的模块化自主机器人船群，目标是把水面转化为可按任务装配、拆解和重新配置的动态基础设施。八个 21 厘米见方的实体模块各自集成全向推进、超声定位、IMU、嵌入式反馈控制和四边磁性连接机构，可从随机分布状态并行聚集成指定二维结构，随后解锁、重构为新形状，并作为一个整体航行。其核心技术贡献是以局部邻居协调为主、轻量中央规划为辅的混合控制架构：中央系统只执行稀疏的高层位置分配，实时运动、避碰和扰动适应则由机器人独立完成。折纸启发的负泊松比机构由单个舵机同时驱动四边永磁体，并能在维持连接状态时不持续耗电。实体实验报告四艇和八艇任务的无人工干预成功率分别为 90% 和 70%，八艇完整任务通常耗时 4–8 分钟；仿真验证扩展到 64 个模块。当前结果限于受控淡水池，小型船体尚不能应对强浪流环境，研究团队将室外部署所需的 GPS 或视觉定位、强化连接结构及更大尺度船体列为后续方向。"
+    }
+  },
+  "scenesmith-aade83d": {
+    "checked_at": "2026-08-05T12:53:48.691435+00:00",
+    "title": "SceneSmith",
+    "accepted": false,
+    "reason": "正在进行严格来源核验，暂不作纳入判断。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目材料、责任机构与发布日期，再分别查找至少两个社交平台上的公开讨论，并确认其中至少一个来源独立于 MIT。随后只会纳入可由可访问来源直接支持的技术点和指标。",
+        "我会先核验官方项目材料、责任机构与发布日期，再分别查找至少两个社交平台上的公开讨论，并确认其中至少一个来源独立于 MIT。随后只会纳入可由可访问来源直接支持的技术点和指标。",
+        "我会先核验官方项目材料、责任机构与发布日期，再分别查找至少两个社交平台上的公开讨论，并确认其中至少一个来源独立于 MIT。随后只会纳入可由可访问来源直接支持的技术点和指标。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI",
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "正在核验。",
+        "正在核验。",
+        "正在核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Massachusetts Institute of Technology",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "正在进行严格来源核验，暂不作纳入判断。",
+      "social_evidence": [],
+      "summary_zh": "正在检索官方材料与跨平台社会讨论证据。"
+    }
+  },
+  "quanxta-zero-series-c14c768": {
+    "checked_at": "2026-08-05T12:53:48.692159+00:00",
+    "title": "QUANXTA Zero Series",
+    "accepted": false,
+    "reason": "尚未完成证据核验。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方发布、责任组织与发布时间，再查找至少两个社交平台上的公开讨论，并区分独立来源。随后仅从官方项目材料和可访问的技术材料提取技术点、能力与指标。 Brief.",
+        "我会先核验官方发布、责任组织与发布时间，再查找至少两个社交平台上的公开讨论，并区分独立来源。随后仅从官方项目材料和可访问的技术材料提取技术点、能力与指标。 Brief.",
+        "我会先核验官方发布、责任组织与发布时间，再查找至少两个社交平台上的公开讨论，并区分独立来源。随后仅从官方项目材料和可访问的技术材料提取技术点、能力与指标。 Brief."
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "开始核验官方发布、组织归属、社交证据和技术资料。",
+        "开始核验官方发布、组织归属、社交证据和技术资料。",
+        "开始核验官方发布、组织归属、社交证据和技术资料。",
+        "开始核验官方发布、组织归属、社交证据和技术资料。"
+      ],
+      "metrics": [
+        {
+          "label": "检索状态",
+          "note": "正在查证",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "尚未完成证据核验。",
+      "social_evidence": [],
+      "summary_zh": "正在核验。"
+    }
+  },
+  "masked-irl-5520930": {
+    "checked_at": "2026-08-05T12:53:48.692880+00:00",
+    "title": "Masked IRL",
+    "accepted": false,
+    "reason": "",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方材料、责任机构和跨平台公开讨论证据。重点会区分项目本身的技术证据与仅有论文/arXiv 的情况。",
+        "随后会从官方页面及其链接材料中提取可核实的技术点、能力和精确结果，并对缺失条件明确判定。",
+        ""
+      ],
+      "fields": [
+        "",
+        "",
+        ""
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "",
+          "url": ""
+        },
+        {
+          "independent": true,
+          "platform": "",
+          "url": ""
+        }
+      ],
+      "summary_zh": ""
+    }
+  },
+  "robotera-xhand-1-pro-c2b7f7f": {
+    "checked_at": "2026-08-05T12:53:48.693604+00:00",
+    "title": "ROBOTERA XHAND 1 PRO",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方发布主体、发布日期和技术材料，再分别查找至少两个社交平台上的公开讨论，并确认其中至少一个来源独立于星尘智能。之后只保留可由可访问来源直接支持的技术点与指标。",
+        "正在核验候选名称是否与官方产品命名一致，避免把新闻列表页、型号或发布日期误配。搜索结果也会用于确认是否存在独立讨论，而不是仅统计官方账号的跨平台转发。",
+        "我会把官方资料中的产品参数与演示能力分开处理：参数进入 metrics，演示或系统集成只在来源明确时列入 capabilities 和 key_points。"
+      ],
+      "fields": [
+        "Dexterous manipulation"
+      ],
+      "include": false,
+      "key_points": [
+        "待核验官方与独立来源。",
+        "待核验官方与独立来源。",
+        "待核验官方与独立来源。",
+        "待核验官方与独立来源。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在检索可访问来源",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.robotera.com/news.html?page=2",
+      "open_source": false,
+      "organization_en": "RobotEra",
+      "organization_kind": "Company",
+      "organization_zh": "星尘智能",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "summary_zh": "正在通过官方页面、技术资料和跨平台公开讨论核验该候选。"
+    }
+  },
+  "xrzero-g0-129ab4d": {
+    "checked_at": "2026-08-05T12:53:48.694386+00:00",
+    "title": "XRZero-G0",
+    "accepted": false,
+    "reason": "insufficient independent multi-platform social evidence",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "通过可穿戴 VR 接口、头部相机、双腕部相机和可更换夹爪采集与机器人观测及末端执行器几何对齐的人类操作示范。",
+        "对采集数据执行观测一致性检查、全身逆运动学约束过滤和真实机器人回放验证。",
+        "将大规模无机器人示范与少量真实机器人数据混合，用于训练可在实体机器人上执行的操作策略。",
+        "在毛巾折叠、插花、香蕉选择抓取和同色织物匹配等任务上执行真实世界操作。",
+        "把混合数据训练的策略零样本迁移到未见过的机器人形态，并适应不同机器人姿态、桌面高度和相机视角。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "XRZero-G0 是面向实体机器人操作学习的软硬件协同系统，不只是数据集或视觉模型；其完整闭环覆盖 Collection、Inspection、Training 和 Evaluation。",
+        "采集端采用可穿戴 VR 界面、头部全局视角与双腕部局部视角，并使用可更换的专用夹爪，使人类示范在视觉观测和末端执行器几何上更接近部署机器人。",
+        "质量治理分为多个层次：利用多视角几何一致性减少视觉与运动错位，通过带碰撞和关节限位约束的全身逆运动学过滤无效轨迹，最后以实体机器人回放作为策略层验证。",
+        "训练方法研究无机器人数据与真实机器人数据的经验混合规律：无机器人数据扩大行为和任务覆盖，少量真实机器人数据用于锚定电机延迟、摩擦等具体形态因素。",
+        "项目材料报告纯无机器人数据在基础抓取任务上随数据规模呈正向扩展趋势，复杂长时程双臂任务在增加到 2,000 个 episode 时实现稳定收敛。",
+        "配套 G0-Dataset 包含经验证的视觉、触觉和音频多模态示范，并用于大规模预训练、真实机器人评估及跨形态迁移实验。",
+        "项目已公开硬件设计、自动检查流程、训练方法、代码和数据；官方项目页、GitHub 仓库及 Hugging Face 数据集均可访问。"
+      ],
+      "metrics": [
+        {
+          "label": "数据规模",
+          "note": "官方发布材料称 G0-Dataset 覆盖视觉、触觉和音频模态。",
+          "value": "超过 2,000 小时经验证的多模态示范"
+        },
+        {
+          "label": "有效数据率",
+          "note": "在受控实验设置下，经闭环检查和实体回放验证得到。",
+          "value": "约 85%"
+        },
+        {
+          "label": "采集效率",
+          "note": "官方项目页报告在简单采集任务中相对主从遥操作的效率。",
+          "value": "2.33×"
+        },
+        {
+          "label": "数据混合比例",
+          "note": "约 10 个无机器人 episode 配合 1 个真实机器人 episode，在所评估任务上达到与纯真实机器人数据相当的表现。",
+          "value": "10:1（无机器人数据：真实机器人数据）"
+        },
+        {
+          "label": "真实机器人数据需求",
+          "note": "该结果限于论文和官方材料所述实验条件。",
+          "value": "最多减少 20×"
+        }
+      ],
+      "official_organization_url": "https://x2robot.com/en",
+      "official_project_url": "https://x2robot.com/x2go",
+      "open_source": true,
+      "organization_en": "X Square Robot",
+      "organization_kind": "Company",
+      "organization_zh": "自变量机器人",
+      "reason": "纳入。该项目于 2026 年 6 月 10 日由自变量机器人正式宣布开源，官方项目页明确将其定义为用于无机器人示范采集、策略训练和实体机器人评估的软硬件协同框架，满足物理机器人和具身智能相关性要求。责任主体 X Square Robot（自变量机器人）在官方页面、项目仓库和公告中均有明确标注。公开讨论至少覆盖 X 与 LinkedIn 两个平台：X 上有组织官方账号的发布内容，LinkedIn 上有独立于责任组织的 HK Business Wire 发布内容，因此也满足至少一项独立社会证据的要求。需要区分两个日期：技术报告最早于 2026 年 4 月 14 日提交，正式开源公告日期为 2026 年 6 月 10 日。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "X",
+          "url": "https://mobile.twstalker.com/XSquareRobot"
+        },
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/hk-business-wire_x-square-robot-open-sources-xrzero-g0-to-activity-7470353889301577728-fe_C"
+        }
+      ],
+      "summary_zh": "XRZero-G0 是自变量机器人推出的可扩展机器人操作数据采集与策略学习系统，核心目标是减少高成本、低吞吐量的实体机器人遥操作数据需求。其采集装置将可穿戴 VR、头部全局相机、双腕部相机和与部署端几何对应的可更换夹爪组合起来，同步记录人类的视觉与操作轨迹。软件侧建立 Collection–Inspection–Training–Evaluation 闭环，从多视角几何一致性、带碰撞及关节限位约束的全身逆运动学，到实体机器人回放逐层判断数据是否可训练。项目进一步研究无机器人数据和真实机器人数据的混合规律：前者提供广泛任务覆盖，后者补偿具体机器人形态中的摩擦、延迟等物理因素。官方报告约 10:1 的混合比例可在测试任务上达到与纯真实机器人数据相当的表现，并最多将真实机器人数据需求降低 20 倍。配套数据资源超过 2,000 小时，包含视觉、触觉和音频示范；训练所得策略展示了跨环境泛化以及向未见机器人平台进行零样本跨形态迁移的能力。"
+    }
+  },
+  "unitree-h2-plus-d39592d": {
+    "checked_at": "2026-08-05T12:53:48.695337+00:00",
+    "title": "Unitree H2 Plus",
+    "accepted": true,
+    "reason": "纳入。该项目于 2026 年 6 月 1 日由宇树科技正式发布，具有宇树官方专用产品页以及 NVIDIA 官方研究平台公告；其核心是具备全身控制、触觉五指手、机载推理和机器人学习工作流的实体人形机器人，满足具身机器人范围。公开讨论至少覆盖 LinkedIn 和 Reddit 两个平台，其中 LinkedIn 帖子来自宇树官方账号，Reddit 讨论并非由宇树科技控制。完整机器人硬件未见公开源码或开放硬件文件，因此 open_source=false；这不否定其所集成的 Isaac GR00T 开放软件和模型。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "基于头部双目相机、可选腕部相机与惯性测量单元进行多视角环境感知和近距离操作观测",
+        "通过双 Sharpa Wave 触觉五指手执行精细抓取与灵巧操作",
+        "利用全身关节、最高 120 N·m 手臂关节扭矩和 360 N·m 腿部关节扭矩进行移动操作与负载作业",
+        "在 Jetson AGX Thor T5000 上运行实时传感器处理、机器人模型推理和控制",
+        "通过 Isaac Teleop、Isaac Sim、Isaac Lab、Isaac ROS 与 GR00T 模型完成示范数据采集、策略训练评估和实机部署"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "H2 Plus 是面向学术研究和二次开发的人形机器人参考平台，将 Unitree H2 人形本体、Sharpa Wave 触觉五指手、NVIDIA Jetson AGX Thor T5000 机载计算和 Isaac GR00T 开发栈集成为统一系统。",
+        "机器人本体高约 1.82 米、含电池重约 70 千克，配置 31 个本体关节电机自由度；两只五指手加入后，全身与手部合计达到 75 个自由度。",
+        "感知系统采用水平视场 140°±3、垂直视场 102°±3 的全局快门双目头部相机，并可选配水平视场 196°、垂直视场 154° 的 3MP 全局快门腕部相机，以覆盖导航观察和手边操作。",
+        "每只可选 Sharpa Wave 手具有 22 个主动自由度、每个指尖超过 1,000 个触觉像素、0–30 N 力检测范围及 0.005 N 灵敏度，为接触丰富的精细操作提供触觉反馈。",
+        "机载 Jetson AGX Thor T5000 使用 Blackwell GPU，官方标称 2,070 FP4 TFLOPS 稀疏 AI 算力、14 核 Arm CPU 和 128 GB LPDDR5X 统一内存，用于实时感知、推理与控制。",
+        "Isaac GR00T 工作流覆盖 Isaac Teleop 示范数据采集、开放基础模型推理与多任务学习、Isaac Sim/Isaac Lab 仿真训练和评估，以及通过加速 Isaac ROS 将策略部署到实体机器人。",
+        "平台保留 USB、GMSL、千兆以太网、RS485、CAN、Wi-Fi 6 和 Bluetooth 5.2 等接口，并明确支持二次开发，使研究团队能够接入自有传感器、控制器和机器人学习流程。"
+      ],
+      "metrics": [
+        {
+          "label": "整机自由度",
+          "note": "31 个本体关节电机自由度；安装双 Sharpa Wave 手后为全身与双手合计值。",
+          "value": "75 DOF"
+        },
+        {
+          "label": "机载 AI 算力",
+          "note": "Jetson AGX Thor T5000，官方规格为 FP4 稀疏计算。",
+          "value": "2,070 TFLOPS"
+        },
+        {
+          "label": "关节扭矩",
+          "note": "官方列出的最大关节峰值扭矩。",
+          "value": "手臂 120 N·m；腿部 360 N·m"
+        },
+        {
+          "label": "手臂负载",
+          "note": "数值可能随实际场景和配置变化。",
+          "value": "额定约 7 kg；峰值约 15 kg"
+        },
+        {
+          "label": "续航时间",
+          "note": "搭载 15 Ah、约 0.972 kWh 电池时的官方标称值。",
+          "value": "约 3 小时"
+        }
+      ],
+      "official_organization_url": "https://www.unitree.com/",
+      "official_project_url": "https://www.unitree.com/mobile/H2plus/",
+      "open_source": false,
+      "organization_en": "Unitree Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "宇树科技",
+      "reason": "纳入。该项目于 2026 年 6 月 1 日由宇树科技正式发布，具有宇树官方专用产品页以及 NVIDIA 官方研究平台公告；其核心是具备全身控制、触觉五指手、机载推理和机器人学习工作流的实体人形机器人，满足具身机器人范围。公开讨论至少覆盖 LinkedIn 和 Reddit 两个平台，其中 LinkedIn 帖子来自宇树官方账号，Reddit 讨论并非由宇树科技控制。完整机器人硬件未见公开源码或开放硬件文件，因此 open_source=false；这不否定其所集成的 Isaac GR00T 开放软件和模型。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/unitreerobotics_unitree-nvidia-humanoidrobot-activity-7467085119690997761-F0z8"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/aiecosystem/comments/1tu2cl6/nvidia_has_unveiled_an_open_humanoid_robot/"
+        }
+      ],
+      "summary_zh": "Unitree H2 Plus 是宇树科技于 2026 年 6 月 1 日发布的真人尺度人形机器人研发平台，也是基于 NVIDIA Isaac GR00T 开发平台构建的参考人形机器人。它把 31 自由度 H2 本体、双 Sharpa Wave 触觉五指手、宽视场双目与腕部视觉、全身力矩控制和 Jetson AGX Thor T5000 机载计算整合在同一系统内，重点不是展示单项动作，而是为研究机构提供从机器人启动、数据采集、仿真训练、策略评估到实体部署的完整实验载体。硬件层面兼顾移动操作所需的关节输出、额定负载和丰富扩展接口；手部则以高自由度、指尖触觉阵列和精细力检测支持接触密集型操作。软件侧可使用 Isaac Teleop 采集示范数据，以 Isaac GR00T 开放基础模型开展推理、学习和多任务行为研究，在 Isaac Sim 与 Isaac Lab 中训练及评估策略，再经 Isaac ROS 部署至机器人，由 Thor 执行实时机载推理和控制。官方同时明确支持二次开发，并计划于 2026 年末供应，因此其定位是可供高校和机器人实验室构建、比较及验证具身智能算法的标准化实体平台，而非已经完成通用自主能力验证的成品机器人。"
+    }
+  },
+  "cross-link-collective-7b5906e": {
+    "checked_at": "2026-08-05T12:53:48.696271+00:00",
+    "title": "Cross-Link Collective",
+    "accepted": true,
+    "reason": "纳入。该项目于 2026 年 5 月 20 日由 Cornell University 官方新闻页面发布，并由 Cornell Collective Embodied Intelligence Lab 的出版物页面列出；它明确涉及由真实机器人模块组成的具身集体系统。论文署名和官方报道明确了 Cornell University 的 Kirstin Petersen、Danna Ma，以及参与原始模块设计的合作研究者。可访问的公开讨论至少覆盖 LinkedIn 与 Reddit 两个平台，所列 Space and Technology 账号及 Reddit 发帖者均不是 Cornell University 控制的官方账号。未发现官方页面或论文材料提供公共源代码仓库，因此 open_source 记为 false，但开源并非纳入条件。官方页面与论文共同支持上述技术描述和实验结果。([goldmanlab.gatech.edu](https://goldmanlab.gatech.edu/pages/publications/pdf/2026_BChong.pdf))",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "通过模块在 I 形与 U 形之间周期性变形，借助地面反作用力产生集体迁移",
+        "利用弱 Velcro 端部连接形成、断开并重组临时机器人链",
+        "在斜坡上以链式组合实现比孤立模块更稳定、对朝向更不敏感的运动",
+        "在障碍场中通过连接断裂与重新形成绕过障碍并降低堵塞风险",
+        "孤立模块可检测脱离状态并发出声学信号，使附近模块减速以帮助其重新加入集体"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Cross-Link Collective 是由数十个实体机器人模块构成的可变形机器人集体，研究重点是利用机械结构和模块间接触动力学产生群体层面的运动、内聚与环境适应，而不是依赖中央规划。",
+        "单个模块是可变形的三连杆结构，由小型电机驱动，在 I 形和 U 形之间振荡；这种周期性形变对地面施力，使模块能够缓慢移动并与其他模块发生碰撞和缠结。",
+        "模块两端配置弱且可逆的 Velcro 连接。机器人链能够在运动过程中持续形成、断裂和重组，类似活性凝胶中不断变化的交联结构，因此集体没有固定拓扑。",
+        "系统会自然偏向内部关节扭矩较低、运动效率较高的链式构型；由电机扭矩限制引起的相位漂移并非单纯故障，而可帮助链条调整相对运动并改善集体迁移。",
+        "在障碍环境中，集体通过断开和重新形成链条表现出类黏性流动：连接维持整体内聚，必要时又会解除以避免在障碍物处卡死；该行为主要来自机械交互，而非显式路径规划。",
+        "研究还演示了机械智能与极简分布式控制的结合：模块依据加速度计信号估计自己是否仍在链中；孤立模块通过麦克风和蜂鸣器构成的本地声学机制召集邻近模块，无需中央感知或高带宽通信。",
+        "该平台对局部硬件失效、传感噪声和制造差异表现出渐进退化特性。失效模块可以被链条携带或留在后方，而不会中断整个集体的运动。"
+      ],
+      "metrics": [
+        {
+          "label": "模块尺寸",
+          "note": "Cornell 官方报道给出的单模块近似尺寸。",
+          "value": "约 200 mm 长、20 mm 宽"
+        },
+        {
+          "label": "斜坡实验角度",
+          "note": "论文选择该坡度，使孤立模块仍可能前进，但在 I 形状态下不会自行滚落。",
+          "value": "5°"
+        },
+        {
+          "label": "集体规模实验",
+          "note": "斜坡实验分别以不同数量的模块初始化；论文报告至少 10 个模块时会出现多种缠结和链式构型，超过 15 个后平均速度因拥挤而下降。",
+          "value": "5、10、15 和 20 个模块"
+        },
+        {
+          "label": "孤立模块的朝向敏感性",
+          "note": "论文报告孤立机器人在平行与垂直朝向之间的速度差异最高可达到该数值；链式模块的朝向鲁棒性更高。",
+          "value": "最高 100% 的速度差异"
+        },
+        {
+          "label": "实验中的模块失效",
+          "note": "全部斜坡实验共部署 650 个模块实例，其中 29 个停止形变，主要原因是电池耗尽或轻微硬件故障；集体仍保持功能。",
+          "value": "29/650，约每次试验 4%"
+        }
+      ],
+      "official_organization_url": "https://www.cornell.edu/",
+      "official_project_url": "https://news.cornell.edu/stories/2026/05/robotic-matter-flows-adapts-through-mechanical-intelligence",
+      "open_source": false,
+      "organization_en": "Cornell University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "纳入。该项目于 2026 年 5 月 20 日由 Cornell University 官方新闻页面发布，并由 Cornell Collective Embodied Intelligence Lab 的出版物页面列出；它明确涉及由真实机器人模块组成的具身集体系统。论文署名和官方报道明确了 Cornell University 的 Kirstin Petersen、Danna Ma，以及参与原始模块设计的合作研究者。可访问的公开讨论至少覆盖 LinkedIn 与 Reddit 两个平台，所列 Space and Technology 账号及 Reddit 发帖者均不是 Cornell University 控制的官方账号。未发现官方页面或论文材料提供公共源代码仓库，因此 open_source 记为 false，但开源并非纳入条件。官方页面与论文共同支持上述技术描述和实验结果。([goldmanlab.gatech.edu](https://goldmanlab.gatech.edu/pages/publications/pdf/2026_BChong.pdf))",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/spaceandtechnology_meet-the-cross-link-collective-a-robotic-activity-7473379558902321153-aUjc"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/Futurology/comments/1tkeg3f/robotic_matter_flows_adapts_through_mechanical/"
+        }
+      ],
+      "summary_zh": "Cross-Link Collective 是 Cornell University 主导开发的一种“机器人材料”平台，由数十个可变形实体模块通过弱、可逆的物理连接组成。每个模块本身感知、计算和移动能力有限，但模块在 I/U 两种形态间振荡，并通过碰撞、临时缠结、链条重组和相位调整产生持续的群体运动。其核心贡献是把部分协调问题交给机器人的几何结构、接触动力学和材料式拓扑变化：稳定且扭矩需求较低的链式构型会自然保留，受力不利的连接则会断开并重新形成。实验表明，这种机制可提高斜坡运动对模块朝向的鲁棒性，并使集体在障碍场中以类黏性方式绕行而不依赖中央规划。研究者还加入了极简的分布式感知与声学反馈，使孤立模块能够请求附近成员减速并重新连接。平台在部分模块停止形变、传感器噪声和制造差异存在时仍能维持群体功能，展示了由机械冗余和瞬态连接带来的容错性。"
+    }
+  },
+  "modular-inchworm-lattice-assembler-robots-milabo-eb6f574": {
+    "checked_at": "2026-08-05T12:53:48.697269+00:00",
+    "title": "Modular Inchworm Lattice Assembler Robots (MILAbots)",
+    "accepted": false,
+    "reason": "不收录：条件 1、2、3 均有官方材料支持，项目确属物理机器人与机器人化结构装配，MIT News、MIT Center for Bits and Atoms 论文材料及负责人项目页也明确了责任机构。然而，在可访问的搜索结果中未能核实该项目在至少两个不同社交平台上的公开讨论，也无法提供至少一个由 MIT 之外独立账号或出版物发布的合格社交平台帖子。因此缺少条件 4 所要求的可验证社会讨论证据。独立新闻网站或普通网页报道不能替代两个社交平台。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "在离散晶格结构表面以交替锚定、伸展的尺蠖式方式移动",
+        "携带预先组合的体素块并将其投放到目标位置",
+        "通过末端夹具和踩压动作啮合体素的卡扣连接",
+        "根据数字化体素建筑布局生成路径并向机器人发送装配指令",
+        "支持多台小型装配机器人并行建造离散晶格结构"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "MILAbot 是一种五自由度模块化移动装配机器人，整体采用类似机械臂的串联构型，并在两端配置用于锚定晶格结构的夹具。",
+        "机器人由驱动关节、无源间隔模块、夹具足和体素载具等模块组成；论文描述的构型可在机身一侧携带三个体素载荷。",
+        "系统让机器人直接把正在建造的离散晶格当作移动支架：机器人交替固定两端、伸展机身，在结构上行进并把新的体素块送到装配位置。",
+        "新体素采用高强度、高刚度的 octet lattice 几何结构，并通过凸出晶格、卡扣和燕尾等机械特征实现自对准、互锁以及弯曲和拉伸载荷下的稳定连接。",
+        "装配流程使用预先错位组合的体素块，使机器人能够构造首层和悬挑部分；MILAbot 投放块体后踩压连接区域，以啮合卡扣。",
+        "项目配套数字孪生和面向体素结构的设计控制界面，可接收用户输入或手工设计的体素布局，规划机器人路径，并通过中间件同步数字仿真与物理执行。",
+        "2026 年研究主要是实验系统与建筑尺度可行性评估：建筑级工期、成本和碳排结果包含从米级实验外推的估算，垂直攀爬、自动供料、耐火性、侧向载荷稳定性和长期耐久性仍待验证。"
+      ],
+      "metrics": [
+        {
+          "label": "机器人自由度",
+          "note": "官方技术论文将 MILAbot 描述为五自由度机器人。",
+          "value": "5 DOF"
+        },
+        {
+          "label": "单机体素载荷",
+          "note": "机器人配置三个附加体素夹具/载具，可在一次移动中携带三个体素。",
+          "value": "3 个体素"
+        },
+        {
+          "label": "建筑现场预计装配时间",
+          "note": "钢制和木制体素方案针对研究中的简单单层建筑模型平均预计为 99 小时；对比的现有施工方法平均为 155 小时。",
+          "value": "99 小时，对比 155 小时"
+        },
+        {
+          "label": "内含碳结果",
+          "note": "钢体素分别达到 3D 混凝土打印和预制混凝土内含碳的 36% 与 52%；胶合板体素分别为 17% 与 24%。",
+          "value": "钢：36%/52%；胶合板：17%/24%"
+        },
+        {
+          "label": "并行机器人规模",
+          "note": "研究估算显示，单台 MILAbot 明显慢于现有方法；使用 20 台机器人并行时，系统可追平或超过所比较的自动化施工方法。",
+          "value": "20 台并行机器人"
+        }
+      ],
+      "official_organization_url": "https://www.mit.edu/",
+      "official_project_url": "https://news.mit.edu/2026/robotically-assembled-building-blocks-makes-construction-more-efficient-and-sustainable-0428",
+      "open_source": false,
+      "organization_en": "Massachusetts Institute of Technology",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录：条件 1、2、3 均有官方材料支持，项目确属物理机器人与机器人化结构装配，MIT News、MIT Center for Bits and Atoms 论文材料及负责人项目页也明确了责任机构。然而，在可访问的搜索结果中未能核实该项目在至少两个不同社交平台上的公开讨论，也无法提供至少一个由 MIT 之外独立账号或出版物发布的合格社交平台帖子。因此缺少条件 4 所要求的可验证社会讨论证据。独立新闻网站或普通网页报道不能替代两个社交平台。",
+      "social_evidence": [],
+      "summary_zh": "MILAbots 是 MIT Center for Bits and Atoms 开发的模块化尺蠖式晶格装配机器人，用于把预制离散体素组合成可承载的大尺度结构。机器人以正在生长的晶格为移动轨道，利用两端夹具交替锚定，并携带、投放和踩压体素块以完成卡扣连接。项目把模块化机器人硬件、可自对准的 octet-lattice 体素、数字孪生、布局界面和路径规划连接为一套分布式施工系统。官方研究报告了显著的预计工期与内含碳优势，尤其是钢制和胶合板体素方案；但这些建筑尺度结果仍主要属于可行性分析和外推，自动供料、垂直移动、耐火、长期耐久及真实工地规模验证尚未完成。该项目具备明确的实体机器人技术价值和 MIT 官方项目证据，但目前无法从可访问来源严格满足“两种社交平台且至少一种为独立来源”的索引门槛。"
+    }
+  },
+  "mighty-6265fb3": {
+    "checked_at": "2026-08-05T12:53:48.698199+00:00",
+    "title": "MIGHTY",
+    "accepted": false,
+    "reason": "正在核验，尚未作出最终纳入判断。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目归属、技术材料和跨平台公开讨论；重点确认 MIGHTY 是否属于具身机器人项目，以及是否满足至少两个社交平台且一个独立来源的硬性条件。",
+        "随后会仅采用可访问来源中明确报告的技术点、能力和指标，不以 arXiv 单独充当官方项目证据。",
+        "先检查用户给出的 MIT 官方新闻页及其外链，再交叉搜索项目页、代码仓库和社交讨论。",
+        "目前将区分“组织自有账号发布”与“独立媒体或个人讨论”，避免把同一组织的多个账号误算为独立证据。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "检索中，尚未形成最终结论。",
+        "检索中，尚未形成最终结论。",
+        "检索中，尚未形成最终结论。",
+        "检索中，尚未形成最终结论。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待来源核验完成",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "正在核验，尚未作出最终纳入判断。",
+      "social_evidence": [],
+      "summary_zh": "正在基于官方页面、项目材料与社交平台证据核验 MIGHTY。"
+    }
+  },
+  "agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc": {
+    "checked_at": "2026-08-05T12:53:48.699140+00:00",
+    "title": "AGIBOT 2026 Embodied AI Robots and Foundation Models",
+    "accepted": false,
+    "reason": "尚在核验，非最终结论。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方发布页、责任组织和发布日期，再分别寻找至少两个社交平台上的公开讨论，并确认其中至少一个来源独立于智元机器人。随后只从官方技术材料提取技术点、能力和精确指标。 系统提示：该句为工作进度说明，不是最终评估结论。  ",
+        "  ",
+        " ",
+        "  ",
+        "  "
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "工作进度：正在检索与核验。",
+        "最终结论将在资料交叉确认后给出。",
+        "不会把 arXiv 单独当作官方项目证据。",
+        "不会猜测网址、指标或社交证据。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "资料检索进行中",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://agibot.com/article/231/detail/63.html",
+      "open_source": false,
+      "organization_en": "AGIBOT",
+      "organization_kind": "Company",
+      "organization_zh": "智元机器人",
+      "reason": "尚在核验，非最终结论。",
+      "social_evidence": [],
+      "summary_zh": "正在核验候选项目是否满足严格收录条件。"
+    }
+  },
+  "self-folding-liquid-crystal-elastomer-origami-ro-88671cb": {
+    "checked_at": "2026-08-05T12:53:48.700118+00:00",
+    "title": "Self-Folding Liquid Crystal Elastomer Origami Robot",
+    "accepted": false,
+    "reason": "insufficient independent multi-platform social evidence",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "可逆自折叠与展开，在多个预设构型之间动态重配置",
+        "对不同液晶弹性体折痕进行独立、按序驱动",
+        "利用闭环温度反馈执行可重复的实时可编程动作序列",
+        "驱动软硬混合折纸鹤的身体与翅膀，使其在无电机、无气动装置条件下展翅运动",
+        "在 Miura 折纸片中编码并切换多个不同折痕模式"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "项目采用软硬混合折纸机器人架构：可变形关节由3D打印液晶弹性体制成，刚性或加固面板限制非目标区域弯曲，使变形集中在指定折痕。",
+        "提出逐层直接墨水书写工艺（LBL-DIW），在打印液晶弹性体时嵌入预制柔性印刷电路板，形成包含结构、执行器、加热器和传感线路的多材料复合体。",
+        "柔性电路板在各折痕内集成焦耳加热轨迹，可对单个液晶弹性体铰链进行局部加热；材料沿打印过程预设的向列相取向发生热致收缩，从而驱动折叠。",
+        "系统在折痕内集成温度感测并使用闭环控制，根据实时温度反馈调节加热，实现可重复的数字化驱动，而非依赖外部环境温度梯度。",
+        "团队开发了 OriCadLCE 设计工作流，用于定义山折、谷折、折痕宽度、结构轮廓、加固面板和粘接区域，并自动生成3D预览、打印刀路、焦耳加热轨迹及电路板制造所需的矢量输出。",
+        "折纸鹤原型能够独立驱动身体与翅膀并执行可编程展翅序列；Miura 折纸片则展示了在同一结构中编码多个折痕模式和多状态重配置。",
+        "当前系统仍通过外部微控制器、电流驱动器和电源运行；论文将把控制器、恒流驱动器和电池直接集成到柔性电路板列为实现无系留机器人的后续方向。"
+      ],
+      "metrics": [
+        {
+          "label": "循环耐久性",
+          "note": "论文报告折纸执行器在初始若干循环后表现出很少或没有明显性能衰减。",
+          "value": ">1,500次驱动循环"
+        },
+        {
+          "label": "无传统驱动机构运动",
+          "note": "官方演示中的折纸鹤依靠集成焦耳加热和液晶弹性体折痕展翅。",
+          "value": "无需电机或外部气动控制"
+        },
+        {
+          "label": "多状态重配置",
+          "note": "研究展示了折纸鹤身体与翅膀的独立驱动，以及 Miura 折纸片中多个不同折痕模式的编码。",
+          "value": "可在多个预设状态之间进行数字化动态重配置"
+        }
+      ],
+      "official_organization_url": "https://www.princeton.edu/",
+      "official_project_url": "https://davidson.princeton.edu/news/2026/digital-actuation-control-soft-robotic-origami-self-folding-liquid-crystal-elastomer",
+      "open_source": false,
+      "organization_en": "Princeton University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是面向实体软体机器人的执行、制造与反馈控制项目；普林斯顿大学 Davidson Research Group 提供了独立的官方项目页面，普林斯顿工程学院也于2026年4月8日发布了官方报道；责任机构及作者所属单位均明确为 Princeton University；项目在 Hacker News 和 Reddit 两个不同社交平台出现公开讨论，其中 Hacker News 提交者及讨论者、Reddit 的独立科技社区均不受普林斯顿大学控制。论文数据已公开，但未找到带明确开源许可证的公共源代码仓库，因此 open_source 取 false。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47711148"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/InterstellarKinetics/comments/1sh0pn6/exclusive_princeton_engineers_build_motorfree/"
+        }
+      ],
+      "summary_zh": "普林斯顿大学的 Self-Folding Liquid Crystal Elastomer Origami Robot 是一套将可编程材料、柔性电子、折纸结构设计和闭环控制整合到实体软体机器人中的制造与驱动方案。其核心不是给传统机器人安装柔性外壳，而是通过逐层直接墨水书写，把具有空间取向的液晶弹性体折痕直接打印在柔性电路板周围。电路板上的局部焦耳加热器使指定折痕产生热致收缩，内置温度传感器则向控制器提供反馈，从而实现可选择、可排序且可重复的折叠动作。OriCadLCE 工作流把折痕几何、打印刀路、加固区域和电路加热轨迹纳入统一设计流程，降低复杂多折痕机器人的制造配置成本。研究人员制作的折纸鹤能够分别驱动身体和翅膀，在没有电机或外部气动系统的情况下执行展翅动作；Miura 折纸片演示了多个折痕模式和多状态结构重配置。执行器经过超过1,500次循环后仅有很少或没有明显性能衰减，说明该方案在重复性和耐久性上超过一次性形变展示。不过，现阶段控制器、电流驱动和供电仍位于结构外部，因此它是具备集成感测与可编程执行能力的有线软体机器人平台，而非已经实现完全自主、无系留运行的机器人。"
+    }
+  },
+  "wall-b-08299bc": {
+    "checked_at": "2026-08-05T12:53:48.701185+00:00",
+    "title": "WALL-B",
+    "accepted": false,
+    "reason": "正在核验，暂不作纳入判断。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "正在检索官方项目证据、发布日期、技术材料，以及至少两个社交平台上的公开讨论。随后会逐项按严格准入条件核验。",
+        "将优先使用 X2 Robotics 官方页面和技术材料，并单独确认至少一条非组织控制账号的社交证据。你给出的日期是 2026-04-01，当前日期为 2026-08-05，因此也会核验该日期是否确为公开发布日期。限制为可访问来源能直接支持的事实。可交付内容包括官方归属与项目链接、技术要点、已实现能力、精确指标，以及纳入或排除结论。",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终结论。",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "https://x2robot.com/en/about",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "X2 Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，暂不作纳入判断。",
+      "social_evidence": [],
+      "summary_zh": "正在基于公开网页进行严格核验。"
+    }
+  },
+  "swarming-spinning-microrobots-549afab": {
+    "checked_at": "2026-08-05T12:53:48.702235+00:00",
+    "title": "Swarming Spinning Microrobots",
+    "accepted": true,
+    "reason": "纳入。该项目于2026年2月25日由马克斯·普朗克智能系统研究所发布专门的官方项目公告，明确说明其与密歇根大学、康奈尔大学的合作及负责研究人员；内容直接涉及实体磁驱微机器人群体和对物理环境的操控。论文及补充材料公开，并声明评估和复现结果所需的数据与代码包含于论文、补充材料或公开数据存储中。项目在Reddit和LinkedIn两个不同社交平台上均有公开讨论，且所列帖子均来自责任机构之外的账号，满足独立社会讨论条件。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "通过旋转磁场驱动微型圆盘群体，在水面产生可调的环形流场和流体力矩",
+        "以非接触方式驱动圆环、齿轮系、夹爪及齿条-小齿轮机构",
+        "旋转质量远高于单个微机器人的三维漂浮结构",
+        "通过改变旋转频率、群体规模和空间分布，实现结构自组装以及多物体的吸收、排出、聚集和分散"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "系统由直径约300微米的3D打印聚合物圆盘组成，圆盘表面沉积铁磁薄膜，并在气-水界面工作；个体不搭载计算、传感器或独立执行器。",
+        "外部正交振荡磁场使各圆盘绕自身轴线旋转，由此形成环形流场；单体产生的流速随距离平方反比衰减，而多个圆盘的流场叠加后可对更大的被动物体施加有效力矩。",
+        "群体行为同时受到磁偶极、毛细和流体动力相互作用影响。研究通过调节机器人数量、旋转频率以及机器人位于目标结构内部、外部或环形间隙中的位置，控制力矩的大小和方向。",
+        "在同心圆环实验中，中心区域与环形间隙内的机器人可分别主导不同圆环，使内外圆环同向或反向旋转；实验结果与数值模拟结合，用于分析集体流场到可测力矩的转换。",
+        "实验展示了齿轮传动、夹爪、齿条-小齿轮、三维漂浮结构和非同心环结构的驱动，说明简单微型单元能够作为分布式流体马达，为毫米尺度机构传递机械功。",
+        "密集群体能够同时操纵大量被动圆形物体；在特定旋转频率及边界条件下，群体还会从分散旋转转变为沿较大物体边缘聚集并爬行的涌现运动状态。"
+      ],
+      "metrics": [
+        {
+          "label": "微机器人直径",
+          "note": "官方项目页和论文报告的单个磁性微圆盘尺寸。",
+          "value": "约300微米"
+        },
+        {
+          "label": "实验群体规模",
+          "note": "Cornell官方说明中实验采用的机器人数量范围。",
+          "value": "10至1,000个"
+        },
+        {
+          "label": "最大报告流体力矩",
+          "note": "在70 Hz磁场频率、环形区域含90个微机器人时，外圆环承受的最大测量力矩。",
+          "value": "约3.6 × 10^-9 N·m"
+        },
+        {
+          "label": "三维物体驱动",
+          "note": "13个微机器人在70 Hz下驱动漂浮三维物体；该物体质量超过单个微机器人的45,000倍。",
+          "value": "最高约4°/s"
+        },
+        {
+          "label": "圆环相对转速",
+          "note": "部分同心圆环配置中，内外圆环角速度差。",
+          "value": "约2 rad/s（约115°/s）"
+        }
+      ],
+      "official_organization_url": "https://is.mpg.de/en",
+      "official_project_url": "https://is.mpg.de/news/magnetic-microrobot-swarms-enable-contactless-manipulation-of-objects-through-fluidic-torque",
+      "open_source": true,
+      "organization_en": "Max Planck Institute for Intelligent Systems",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "纳入。该项目于2026年2月25日由马克斯·普朗克智能系统研究所发布专门的官方项目公告，明确说明其与密歇根大学、康奈尔大学的合作及负责研究人员；内容直接涉及实体磁驱微机器人群体和对物理环境的操控。论文及补充材料公开，并声明评估和复现结果所需的数据与代码包含于论文、补充材料或公开数据存储中。项目在Reddit和LinkedIn两个不同社交平台上均有公开讨论，且所列帖子均来自责任机构之外的账号，满足独立社会讨论条件。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/techbeat/comments/1rhm10g/new_microrobot_swarms_use_whirlpools_to_lift/"
+        },
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/mahsoo-salimi_ai4good-ainews-machinelearning-activity-7438244811788275712-46cq"
+        }
+      ],
+      "summary_zh": "Swarming Spinning Microrobots是一项由马克斯·普朗克智能系统研究所、密歇根大学和康奈尔大学共同完成的实体微机器人研究。系统把约300微米宽、带铁磁镀层的聚合物圆盘置于水面，通过外部旋转磁场使其自旋。每个圆盘产生的局部环形流场较弱且随距离迅速衰减，但由数十至上千个圆盘构成的群体可以叠加流场，形成足以驱动毫米尺度被动机构的流体力矩。研究人员通过控制自旋频率、群体数量以及机器人相对目标物体的位置，实现力矩幅值和方向调节，并在实验与数值模拟中验证了同心圆环的同向及反向旋转。系统已实际驱动齿轮系、夹爪、齿条-小齿轮机构和三维漂浮物体，还能动态组装环形结构，以及吸收、排出、聚集或分散大量被动颗粒。项目的重要技术特征是把整个物理耦合群体而非单个无计算能力的圆盘视为机器人，利用磁性、毛细和流体动力相互作用产生复杂功能；在部分边界和频率条件下，群体还会自发形成沿物体周缘移动的爬行状态。该成果展示了一种面向微装配、精密制造和潜在生物流体环境操作的非接触分布式执行机制，但官方材料将具体生物医学用途表述为未来应用方向，而非已经完成的体内实验。"
+    }
+  },
+  "unifolm-x1-0-36927b1": {
+    "checked_at": "2026-08-05T12:53:48.703416+00:00",
+    "title": "UnifoLM-X1-0",
+    "accepted": false,
+    "reason": "正在检索核验，尚未形成最终收录结论。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验项目名称、官方发布主体与发布日期，再分别检查技术材料和跨平台公共讨论。对于无法由可访问来源支持的条件，我会明确标记缺失，不用候选描述补证。",
+        "随后会把官方材料中的技术点、能力与指标限制在可核验范围内，并按严格收录条件给出结论。比对时会特别区分宇树官方账号与独立媒体或个人账号。",
+        "我正在补查社交平台证据与项目命名。当前检索结果提示候选标题可能和官方名称不一致，因此最终会以官方页面实际使用的名称为准，不据此猜测 URL 或发布日期。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "待检索完成后填充。",
+        "待检索完成后填充。",
+        "待检索完成后填充。",
+        "待检索完成后填充。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在核验官方与独立来源。",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "https://www.unitree.com/about/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Unitree Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "宇树科技",
+      "reason": "正在检索核验，尚未形成最终收录结论。",
+      "social_evidence": [],
+      "summary_zh": "正在核验候选项目的官方发布、技术内容和跨平台讨论证据。"
+    }
+  },
+  "self-synchronizing-fluidic-robots-bbd05bd": {
+    "checked_at": "2026-08-05T12:53:48.704512+00:00",
+    "title": "Self-Synchronizing Fluidic Robots",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终纳入结论。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验牛津大学官方项目材料、责任机构与发布日期，再分别查找至少两个社交平台上的公开讨论，并确认其中至少一个独立于责任机构。随后只依据可访问来源整理技术点、能力与精确结果。早期结果可能尚未到最终状态。请稍候。 ",
+        "请注意：用户提供的日期是2025年11月14日，当前日期是2026年8月5日，因此该项目已发布。 ",
+        "我正在进行网络搜索，以核实官方项目页、责任组织和跨平台讨论。 "
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems",
+        "Whole-body control"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验来源，最终判断将在完成检索后给出。",
+        "不会仅凭 arXiv 或候选摘要纳入项目。",
+        "社交证据必须来自两个不同平台，且至少一个为独立来源。",
+        "所有指标和技术陈述将仅引用官方页、论文或其链接项目材料。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索与核验",
+          "value": "未完成"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.ox.ac.uk/news/2025-11-14-researchers-develop-air-powered-robots-move-sync-without-electronics",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终纳入结论。",
+      "social_evidence": [],
+      "summary_zh": "正在对候选项目进行严格来源核验，包括其是否属于实体机器人、是否存在合格官方页面、责任机构是否明确，以及是否具有满足规则的跨平台公开讨论。"
+    }
+  },
+  "unitree-h2-adac253": {
+    "checked_at": "2026-08-05T12:53:48.705662+00:00",
+    "title": "Unitree H2",
+    "accepted": true,
+    "reason": "纳入。H2是2025年10月公开的实体全尺寸人形机器人，宇树科技提供了专门的官方项目与产品参数页面，责任主体明确。该项目在至少三个不同社交平台存在可访问的公开讨论：宇树科技在YouTube发布官方演示，Reddit的r/robotics出现独立社区讨论，RobotShop等非宇树账号也在LinkedIn发帖讨论，因此满足至少两个平台且至少一个独立来源的条件。官方没有将H2项目或其完整软硬件栈声明为开源；H2 EDU的二次开发支持不等同于开源。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "可执行双足行走、转身、旋转和动态姿态切换等全身运动。",
+        "官方演示实现了舞蹈、走秀式步态以及连续武术动作。",
+        "宽视场双目相机提供面向环境感知的视觉输入。",
+        "麦克风阵列与高功率扬声器支持语音交互。",
+        "H2 EDU支持二次开发、可选灵巧手和附加高算力模块，可用于具身模型及机器人应用开发。"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "H2是宇树科技推出的全尺寸双足人形机器人平台，官方量产规格页面给出的站立尺寸为1820 × 456 × 218毫米，含电池重量约70千克。",
+        "机器人本体共有31个关节自由度，包括每条腿6个、每条手臂7个、腰部3个和头部2个自由度；官方将其运动系统描述为能够进行精确的动态动作复现，并可通过OTA持续更新算法。",
+        "关节采用低惯量、高转速内转子永磁同步电机以及工业级交叉滚子轴承；手臂关节最大扭矩为120 N·m，腿部关节最大扭矩为360 N·m。",
+        "单臂负载指标为峰值约15千克、额定约7千克；机身使用航空级铝材、钛合金和高强度工程塑料，以兼顾承载能力和整机重量。",
+        "感知与交互配置包括宽视场人形双目相机、麦克风阵列和高功率扬声器，并支持Wi-Fi 6与Bluetooth 5.2。",
+        "基础计算平台为Intel Core i5；H2 EDU增加Intel Core i7定制开发计算机，并可选配Thor等高算力模块。官方项目材料还宣称最高可配置2070 TOPS计算芯片，以承载不同具身智能模型和工作场景。",
+        "H2使用15 Ah、0.972 kWh低内阻锂电池，支持快速拆卸，官方标称续航约3小时。官方同时注明部分页面展示功能仍处于开发和测试阶段，且实际性能会随配置与场景变化。"
+      ],
+      "metrics": [
+        {
+          "label": "整机尺寸与重量",
+          "note": "官方H2参数表；含电池重量为约值。",
+          "value": "1820 × 456 × 218 mm；约70 kg"
+        },
+        {
+          "label": "关节自由度",
+          "note": "每腿6、每臂7、腰部3、头部2。",
+          "value": "31 DoF"
+        },
+        {
+          "label": "关节最大扭矩",
+          "note": "官方注明参数可能随配置和使用场景变化。",
+          "value": "手臂120 N·m；腿部360 N·m"
+        },
+        {
+          "label": "单臂最大负载",
+          "note": "官方注明参数可能随配置和使用场景变化。",
+          "value": "峰值约15 kg；额定约7 kg"
+        },
+        {
+          "label": "电池与续航",
+          "note": "低内阻锂电池，最大电压75.6 V；续航为官方约值。",
+          "value": "15 Ah / 0.972 kWh；约3小时"
+        }
+      ],
+      "official_organization_url": "https://www.unitree.com/",
+      "official_project_url": "https://www.unitree.com/mobile/H2/",
+      "open_source": false,
+      "organization_en": "Unitree Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "宇树科技",
+      "reason": "纳入。H2是2025年10月公开的实体全尺寸人形机器人，宇树科技提供了专门的官方项目与产品参数页面，责任主体明确。该项目在至少三个不同社交平台存在可访问的公开讨论：宇树科技在YouTube发布官方演示，Reddit的r/robotics出现独立社区讨论，RobotShop等非宇树账号也在LinkedIn发帖讨论，因此满足至少两个平台且至少一个独立来源的条件。官方没有将H2项目或其完整软硬件栈声明为开源；H2 EDU的二次开发支持不等同于开源。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=eUdBIFkMh-M"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/robotics/comments/1obbltf/unitree_h2/"
+        },
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/robotshop_unitree-introducing-unitree-h2-destiny-activity-7386068116302221312-z-3Z"
+        }
+      ],
+      "summary_zh": "Unitree H2“Destiny Awakening”是宇树科技在2025年推出的全尺寸人形机器人平台，而非仅展示感知算法或仿真结果的普通机器学习项目。其核心技术载体是一套约1.82米高、70千克重、具有31个关节自由度的双足机体，关节系统使用低惯量内转子永磁同步电机、交叉滚子轴承以及最高360 N·m的腿部关节输出，以支持行走、旋转、舞蹈、动态姿态和连续武术动作等全身运动。H2配置宽视场双目视觉、语音输入输出、无线通信和可快速拆卸电池；H2 EDU进一步提供二次开发计算机、可选灵巧手及高算力模块，为具身模型、运动控制和人机交互研究提供硬件平台。官方页面报告单臂额定负载约7千克、峰值约15千克，电池容量0.972 kWh、续航约3小时，并强调算法可通过OTA升级。需要严格区分已列入参数表的硬件能力和展示性功能：官方明确说明部分样例功能仍在开发测试中，参数也可能随版本、配置和实际场景变化，因此现有材料主要证明了高动态全身运动与开发平台能力，尚不能据此推断通用自主作业已经成熟。"
+    }
+  },
+  "noetix-w1-bionic-robot-2a08393": {
+    "checked_at": "2026-08-05T12:53:48.706833+00:00",
+    "title": "Noetix W1 Bionic Robot",
+    "accepted": true,
+    "reason": "纳入。W1 明确属于实体轮式仿生人形机器人项目；松延动力提供了专门的官方产品页、下载资料和公司发展历程记录，并明确承担开发与发布责任。项目在 LinkedIn 和 Reddit 两个不同社交平台上存在公开讨论，所列帖子均来自非松延动力控制的个人或社区账号。未发现 W1 专属软硬件、模型或控制栈公开发布，因此不认定为开源。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "在室内通过激光 SLAM、自主定位与全向避障完成轮式移动和导览。",
+        "利用仿生面部执行表情控制，并根据对话内容实时生成对应口型。",
+        "通过语音识别、文本转语音、RGB 相机与麦克风阵列进行多模态人机交互。",
+        "使用双机械臂和灵巧手执行递送、接待及轻量操作类任务。",
+        "面向展览导览、政企业务办理、企业前台、教育科研和医院咨询等服务场景。"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "W1 是松延动力在 2025 年 10 月发布的轮式仿生人形机器人，官方将其描述为 W0 的升级产品；它保留 W0 的移动与操作平台，并优化核心算法、机械结构和外观设计。官方资料未支持题目所给 2025 年 10 月 1 日这一精确日期，只能确认发布月份。",
+        "系统将高拟真仿生头、双机械臂、灵巧手、交互屏和轮式底盘集成为完整服务机器人平台，共有 54 个主动自由度。",
+        "仿生头采用铂金硅胶皮肤、线驱与连杆驱动组合，包含 32 个主动自由度和 8 个被动自由度；双眼内置两台 RGB 相机，胸部另有一台 RGB 相机和线性四麦克风阵列。",
+        "单臂具有 5 个自由度；每只灵巧手具有 6 个主动自由度和 5 个被动自由度。单臂标称负载为 2 kg，工作空间为半径 600 mm、截面 225° 扇形的半球区域。",
+        "交互系统采用 RK3588、Android 12，并列出豆包或科大讯飞语言模型；官方称系统可理解语义和上下文、实时生成口型，并提供语音识别与自然语音播报。",
+        "移动平台融合激光雷达、超声波和深度相机，使用激光 SLAM 导航，支持 360° 避障、三组 ToF 防跌落检测和红外自主回充。",
+        "官方应用定位集中于展览导览、政企业务办理、企业接待、学校科研教育及医院导诊咨询。产品页同时注明部分示例功能仍处于开发测试阶段，实际参数可能随配置和业务场景变化。"
+      ],
+      "metrics": [
+        {
+          "label": "整机主动自由度",
+          "note": "官方产品页报告的轮式仿生机器人整机指标。",
+          "value": "54 DoF"
+        },
+        {
+          "label": "语音识别准确率",
+          "note": "官方标称最高准确率。",
+          "value": "最高 98%"
+        },
+        {
+          "label": "导航精度",
+          "note": "官方规格表给出的底盘导航定位精度。",
+          "value": "±50 mm"
+        },
+        {
+          "label": "最高移动速度",
+          "note": "官方规格表标称值。",
+          "value": "1.2 m/s"
+        },
+        {
+          "label": "满载工作时间",
+          "note": "官方列出的实验室条件下电池续航指标。",
+          "value": "6 h"
+        }
+      ],
+      "official_organization_url": "https://noetixrobotics.com/en/about-us",
+      "official_project_url": "https://noetixrobotics.com/en/hobbs-w1",
+      "open_source": false,
+      "organization_en": "Noetix Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "北京松延动力科技集团股份有限公司",
+      "reason": "纳入。W1 明确属于实体轮式仿生人形机器人项目；松延动力提供了专门的官方产品页、下载资料和公司发展历程记录，并明确承担开发与发布责任。项目在 LinkedIn 和 Reddit 两个不同社交平台上存在公开讨论，所列帖子均来自非松延动力控制的个人或社区账号。未发现 W1 专属软硬件、模型或控制栈公开发布，因此不认定为开源。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/mikekalil_the-beijing-startup-noetix-robotics-just-activity-7406730317472104448-P9XY"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/singularity/comments/1sx02w2/noetix_the_humanoid_robot_maker_joins_the_race/"
+        }
+      ],
+      "summary_zh": "Noetix W1（原 Hobbs W1）是北京松延动力科技集团股份有限公司于 2025 年 10 月发布的轮式仿生人形服务机器人。它不是单独的仿生头像展示，而是把具有 32 个主动自由度的铂金硅胶仿生头、双机械臂、灵巧手、多模态感知系统、胸前交互屏和自主移动底盘整合成一台 54 主动自由度的实体机器人。其技术重点是将高拟真面部表达、语音口型同步和自然对话，与轻量物理操作及室内自主导航结合起来。头部通过线驱和连杆驱动控制面部，双眼及胸部 RGB 相机配合四麦克风阵列获取视觉和语音输入；机械系统提供每臂 5 自由度及每手 6 个主动自由度，可用于递送和基础服务操作。轮式底盘使用激光 SLAM，并融合激光雷达、超声波、深度相机、ToF 防跌落检测和红外回充。官方将 W1 定位于展馆导览、企业前台、政企业务、教育和医院咨询，而不是通用双足劳动机器人。其价值主要在于把社交仿生表达扩展到具备移动和操作能力的完整服务平台；不过官方也明确提示部分演示功能仍在开发测试，规格会因配置和场景而变化。"
+    }
+  },
+  "x1-multirobot-response-system-c40730d": {
+    "checked_at": "2026-08-05T12:53:48.708074+00:00",
+    "title": "X1 Multirobot Response System",
+    "accepted": true,
+    "reason": "纳入。该项目于 2025 年 10 月 14 日由 Caltech 官方项目报道公开，实质涉及人形机器人、可变形空地机器人、负载行走、跨模态运动和异构多机器人协作。官方页面明确列出 Caltech CAST 与 Technology Innovation Institute 为主要责任机构，并说明 Northeastern University 团队参与可变形机器人设计。公开讨论至少覆盖 YouTube 和 Reddit 两个不同社交平台，其中 Reddit 帖文及讨论不受责任机构控制。未发现 X1 专属代码或硬件设计的官方开源发布，因此 open_source=false；开源不是纳入条件。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "由改装 Unitree G1 人形机器人背负并运输 M4 多模态机器人，在室内外步行和楼梯环境中移动。",
+        "人形机器人通过前倾姿态从背部部署 M4，M4 可直接以无人机模式起飞。",
+        "M4 可在飞行模式与轮式地面模式之间转换，根据路线中的障碍切换移动方式。",
+        "多台异构机器人可在同一应急响应任务中分段执行运输、空中越障、地面行驶和会合。"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "X1 不是单一机器人型号，而是由人形载体与可变形空地机器人 M4 组成的异构多机器人系统；官方将其定位为面向应急场景的步行、飞行和轮式移动组合。",
+        "系统采用改装的现成 Unitree G1：G1 将 M4 作为背负载荷运输，并通过弯腰前倾形成部署姿态，使 M4 能够从其背部以无人机模式起飞。",
+        "M4 的推进器与轮式结构支持飞行和地面行驶两种主要工作模式。校园演示中，M4 起飞后着陆并转换为轮式模式，遇到池塘后再次切换为飞行模式越障。",
+        "人形机器人的运动控制并非只依赖人类动作参考的缩放复现；Caltech Ames 实验室将描述机器人动力学的数学模型与机器学习结合，使其能够依照物理约束生成行走行为。",
+        "官方报告称人形机器人能够在不同地形上行走、上下楼梯，并在背负 M4 的情况下保持行走能力，体现了负载条件下的人形运动控制。",
+        "2025 年 7 月构建的新版本 M4采用了 TII 开发的 Saluki 安全飞控与计算技术作为机载计算基础；项目还涉及激光雷达、摄像头和测距仪的数据融合，用于定位与自主移动。",
+        "当前公开成果主要是一次真实校园环境的系统集成演示。官方明确将整套系统的实时环境感知、基于模型的规划、机器学习自主适应以及安全关键控制列为后续工作，因此不应把这些未来目标视为已经完整实现。"
+      ],
+      "metrics": [
+        {
+          "label": "协作周期",
+          "note": "Caltech 官方发布所报告的联合研发周期。",
+          "value": "3 年"
+        },
+        {
+          "label": "已集成移动模态",
+          "note": "演示系统实际组合了人形步行、M4 飞行和 M4 轮式行驶。",
+          "value": "3 种：步行、飞行、轮式行驶"
+        },
+        {
+          "label": "演示中的模式转换结果",
+          "note": "M4 从人形机器人背部起飞，着陆后转换为轮式行驶，并在遇到池塘时再次转为飞行越障。",
+          "value": "完成飞行→轮式行驶→飞行的任务序列"
+        },
+        {
+          "label": "负载行走结果",
+          "note": "官方明确报告的人形运动能力，未提供速度、距离或成功率数字。",
+          "value": "可背负 M4 在不同地形行走并上下楼梯"
+        },
+        {
+          "label": "多机器人会合结果",
+          "note": "首次到达应急地点的 M4 随后与人形机器人及第二台 M4 会合。",
+          "value": "1 台人形机器人与 2 台 M4 参与演示任务"
+        }
+      ],
+      "official_organization_url": "https://www.caltech.edu/",
+      "official_project_url": "https://www.caltech.edu/about/news/caltech-and-technology-innovation-institute-demo-multirobot-response-team",
+      "open_source": false,
+      "organization_en": "California Institute of Technology (Caltech)",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "纳入。该项目于 2025 年 10 月 14 日由 Caltech 官方项目报道公开，实质涉及人形机器人、可变形空地机器人、负载行走、跨模态运动和异构多机器人协作。官方页面明确列出 Caltech CAST 与 Technology Innovation Institute 为主要责任机构，并说明 Northeastern University 团队参与可变形机器人设计。公开讨论至少覆盖 YouTube 和 Reddit 两个不同社交平台，其中 Reddit 帖文及讨论不受责任机构控制。未发现 X1 专属代码或硬件设计的官方开源发布，因此 open_source=false；开源不是纳入条件。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/embed/eC3iuPzKQx8?enablejsapi=1&feature=oembed&showinfo=0"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/Futurology/comments/1p185xk/new_transformer_humanoid_robot_can_launch_a/"
+        }
+      ],
+      "summary_zh": "X1 Multirobot Response System 是 Caltech 自动系统与技术中心（CAST）和阿布扎比 Technology Innovation Institute（TII）三年合作形成的异构机器人系统。它以经过改装的 Unitree G1 人形机器人作为步行载体，将 Caltech 的 M4 可变形空地机器人安装在背部；到达适合部署的位置后，人形机器人前倾，M4 以无人机模式起飞。官方校园演示覆盖了室内步行、室外部署、空中飞行、着陆后轮式行驶、遇水域重新起飞越障，以及多机器人在模拟应急地点会合的完整流程。其技术重点并非单纯把无人机绑在人形机器人上，而是把人形负载运动控制、可变形空地平台、机载计算、感知融合与多机器人任务组织集成为一个系统。人形控制侧采用物理数学模型与机器学习结合的方法，以减少对人类动作参考轨迹的依赖，并展示了背负 M4 时跨地形和上下楼梯的能力。2025 年 7 月的新版本 M4 集成了 TII 的 Saluki 安全飞控和计算技术。需要严格区分已演示能力与路线图：发布材料确认了多模态移动和校园任务演示，但实时自适应导航、更加完整的机器学习自主性以及安全关键控制仍被描述为后续研发方向。"
+    }
+  },
+  "bumi-consumer-grade-humanoid-robot-a696837": {
+    "checked_at": "2026-08-05T12:53:48.709441+00:00",
+    "title": "Bumi Consumer-Grade Humanoid Robot",
+    "accepted": true,
+    "reason": "纳入。该项目明确属于实体双足人形机器人，具有松延动力官方产品页、官方公司归属和后续官方项目材料；Bilibili 上存在松延动力官方账号发布的 Bumi 演示，Reddit 的 r/robotics、r/technology 等社区也有由独立媒体链接或社区用户发起的公开讨论，因此满足至少两个不同社交平台且至少一个来源独立的条件。未找到足以证明整套机器人软硬件完整开源的官方代码仓库或明确许可；公开 URDF、文档和二次开发接口不足以将整个项目认定为开源。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "可在启动后自动站立，并支持自主躺下。",
+        "支持唤醒词触发的语音交互，并可识别常见物体。",
+        "可通过手机应用控制机器人，并以图形化编程方式设计自定义动作。",
+        "具备双足运动与动作库执行能力，包括手动示教、低动态舞蹈；教育版本还支持高动态舞蹈。"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Bumi 是松延动力面向家庭陪伴、创客教育、科技爱好者和编程学习场景推出的小型双足人形机器人；公开报道显示其正式发布日为 2025 年 10 月 22 日，而不是候选资料所列的 2025 年 10 月 1 日。",
+        "机器人采用 21 自由度结构，其中单腿 6 自由度、单臂 4 自由度、腰部 1 自由度，末端为可摆姿势手；膝关节最大扭矩标称为 70 N·m。",
+        "本体集成摄像头与 IMU，基础计算能力标称为 6 TOPS；不同教育配置可选 NVIDIA Jetson Orin Nano Super 或 Jetson Orin NX 高算力模块。",
+        "交互系统支持语音唤醒、语音对话和常见物体识别。官方后续活动材料称其语音交互由自研语言模型支持，但没有公开可复核的模型架构、训练数据或基准成绩。",
+        "运动与开发功能包括开机自动站立、自主躺下、手动示教、预置舞蹈动作、手机控制、图形化编程、图像传输、OTA 更新，以及教育版本的高级控制和二次开发支持。",
+        "产品使用复合材料和优化结构实现面向家庭环境的轻量化设计，并采用 48 V、3.5 Ah 快拆智能电池；官方产品页报告实验室条件下续航为 2–3 小时。"
+      ],
+      "metrics": [
+        {
+          "label": "整机尺寸",
+          "note": "官方现行产品页列出的站立尺寸。",
+          "value": "98 cm × 35 cm × 20 cm"
+        },
+        {
+          "label": "整机重量",
+          "note": "官方现行产品页标称毛重；早期发布报道曾给出约 12 kg，可能对应发布阶段的不同配置。",
+          "value": "约 17 kg"
+        },
+        {
+          "label": "运动自由度",
+          "note": "单腿 6、单臂 4、腰部 1。",
+          "value": "21 DoF"
+        },
+        {
+          "label": "基础计算能力",
+          "note": "Pro、EDU-Pro 和 EDU-Max 配置均标称该基础算力。",
+          "value": "6 TOPS"
+        },
+        {
+          "label": "续航时间",
+          "note": "官方注明为实验室条件测量值。",
+          "value": "2–3 小时"
+        }
+      ],
+      "official_organization_url": "https://noetixrobotics.com/en/about-us",
+      "official_project_url": "https://noetixrobotics.com/en/product/n2/1262",
+      "open_source": false,
+      "organization_en": "Beijing Noetix Robotics Technology Group Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "北京松延动力科技集团股份有限公司",
+      "reason": "纳入。该项目明确属于实体双足人形机器人，具有松延动力官方产品页、官方公司归属和后续官方项目材料；Bilibili 上存在松延动力官方账号发布的 Bumi 演示，Reddit 的 r/robotics、r/technology 等社区也有由独立媒体链接或社区用户发起的公开讨论，因此满足至少两个不同社交平台且至少一个来源独立的条件。未找到足以证明整套机器人软硬件完整开源的官方代码仓库或明确许可；公开 URDF、文档和二次开发接口不足以将整个项目认定为开源。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "Bilibili",
+          "url": "https://www.bilibili.com/video/BV1Fys8zwEtN/"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/robotics/comments/1odz4lg/beijing_startup_noetix_robotics_launches/"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/technology/comments/1ofovd0/chinas_noetix_debuts_familyfriendly_us1400/"
+        }
+      ],
+      "summary_zh": "Bumi（小布米）是北京松延动力科技集团股份有限公司于 2025 年 10 月 22 日正式发布的消费级双足人形机器人，目标是将人形机器人本体、互动功能和编程教育能力带入家庭及学校。其技术定位并非通用家务操作机器人，而是以稳定双足运动、舞蹈和自定义动作、语音与视觉互动、手机控制及低门槛图形化编程为核心的轻量化实体平台。现行官方产品页给出的本体规格为 98 cm 高、约 17 kg、21 自由度，配备摄像头、IMU、6 TOPS 基础计算模块和 48 V 3.5 Ah 快拆电池；教育配置可增加 Jetson Orin 模块、高动态动作库和高级控制能力。产品能够自动站立、自主躺下、响应语音唤醒、识别常见物体，并通过手机进行动作编排。官方材料还报告了 2–3 小时实验室续航、70 N·m 最大膝关节扭矩和 Wi-Fi/Bluetooth 连接。其首发价格为 9,998 元，显著降低了公众接触实体人形机器人和运动编程平台的成本。需要注意的是，官方页面明确提示部分示例功能仍在开发测试，最大扭矩和续航属于实验室条件结果；公开材料也没有提供自主任务完成率、步态稳定性基准、跌倒恢复测试或第三方技术评测。"
+    }
+  },
+  "unitree-a2-573fd6a": {
+    "checked_at": "2026-08-05T12:53:48.710855+00:00",
+    "title": "Unitree A2",
+    "accepted": true,
+    "reason": "纳入。A2明确属于实体工业四足机器人，宇树科技提供了专用官方产品页，并通过官方YouTube账号于2025年8月5日发布首发视频。项目在至少两个不同社交平台存在可访问的公开讨论：Reddit上的独立社区帖子，以及LinkedIn上的独立个人帖子；两者均不属于宇树科技控制的账号。官方页面支持其机器人形态、工业任务定位、感知与计算配置、续航、载荷和复杂地形能力。未找到足以将A2本身认定为开源项目的官方证据，因此open_source设为false。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "在崎岖地形、约45°斜坡和最高30厘米台阶上进行四足移动",
+        "在无负载条件下执行最长约20公里、超过5小时的连续行走",
+        "携带约25公斤负载连续行走超过3小时、约12.5公里",
+        "面向物流运输、工业巡检和应急救援任务进行二次开发与部署"
+      ],
+      "fields": [
+        "Robot systems",
+        "Whole-body control",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "A2是宇树科技面向工业应用推出的实体四足机器人平台，重点不是单一算法演示，而是长距离移动、载荷运输、复杂地形通过和现场任务扩展。",
+        "当前官方规格显示，机器人含电池重量约42公斤；机身采用铝合金与高强度工程塑料，站立尺寸为820×440×570毫米。首发视频曾报告约37公斤，因此索引采用当前产品页规格，并保留首发材料作为发布日期证据。",
+        "平台使用双电池并联架构，单电池容量为9000mAh、453.6Wh，双电池总容量为18000mAh、907.2Wh；官方称支持不停机热插拔换电，以延长连续任务时间。",
+        "感知配置按版本区分：A2配置1个LiDAR和1个高清相机，A2-PRO配置2个LiDAR和1个高清相机；官方重点展示前后感知以及前灯辅助的环境探测。",
+        "标准计算配置包括用于平台控制的8核高性能CPU和用于用户开发的Intel Core i7，并可选配高算力扩展坞；同时开放RS485、CAN、千兆以太网、USB 3.0 Type-C及多路电源输出。",
+        "机器人支持二次开发、持续OTA升级和轮足选装方案；官方给出的工作温度范围为-20°C至55°C，A2防护等级为IP56，A2-PRO为IP56至IP67且核心部件达到IP67。"
+      ],
+      "metrics": [
+        {
+          "label": "无负载续航",
+          "note": "官方当前产品页报告连续行走超过5小时。",
+          "value": ">5小时，约20公里"
+        },
+        {
+          "label": "负载续航",
+          "note": "携带25公斤负载时的官方连续行走结果。",
+          "value": ">3小时，约12.5公里"
+        },
+        {
+          "label": "承载能力",
+          "note": "连续行走负载约25公斤，理想条件下约35公斤；最大静态站立负载约100公斤。",
+          "value": "约25公斤连续负载；约100公斤最大站立负载"
+        },
+        {
+          "label": "地形与速度",
+          "note": "官方规格给出的坡面、台阶、攀越高度和移动速度。",
+          "value": "约45°坡面；30厘米台阶；约0.5至1米攀越高度；常规最高3.7米/秒、峰值约5米/秒"
+        },
+        {
+          "label": "电池与环境适应",
+          "note": "双电池总容量及官方工作温度范围。",
+          "value": "907.2Wh；-20°C至55°C"
+        }
+      ],
+      "official_organization_url": "https://www.unitree.com/",
+      "official_project_url": "https://www.unitree.com/A2/",
+      "open_source": false,
+      "organization_en": "Unitree Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "宇树科技",
+      "reason": "纳入。A2明确属于实体工业四足机器人，宇树科技提供了专用官方产品页，并通过官方YouTube账号于2025年8月5日发布首发视频。项目在至少两个不同社交平台存在可访问的公开讨论：Reddit上的独立社区帖子，以及LinkedIn上的独立个人帖子；两者均不属于宇树科技控制的账号。官方页面支持其机器人形态、工业任务定位、感知与计算配置、续航、载荷和复杂地形能力。未找到足以将A2本身认定为开源项目的官方证据，因此open_source设为false。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/robotics/comments/1mi8fqr"
+        },
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/pedro-zheng-699a1812b_unitree-leggedrobots-robotdog-activity-7358439071053983746-w1A_"
+        }
+      ],
+      "summary_zh": "Unitree A2是宇树科技于2025年8月5日公开的工业级四足机器人平台，面向需要长时间移动、负载运输和复杂地形通过能力的现场应用。它采用四足动力结构、双电池并联系统和可扩展计算架构，当前官方页面列出的含电池重量约为42公斤；无负载连续行走超过5小时、约20公里，携带25公斤负载时可连续行走超过3小时、约12.5公里。平台可通过约45°坡面、最高30厘米台阶，并报告约0.5至1米的攀越高度和最高约5米/秒的峰值速度。A2与A2-PRO提供LiDAR和高清相机感知配置，其中PRO版本使用前后双LiDAR；控制与开发计算由8核平台CPU和Intel Core i7组成，并支持高算力扩展坞及多种工业通信接口。双电池支持热插拔，工作温度覆盖-20°C至55°C，防护等级依据版本达到IP56或核心部件IP67。官方将其定位于物流、工业巡检、应急救援及研究开发，并明确支持二次开发和持续OTA升级。需要注意的是，官方也声明部分页面展示功能仍处于开发或测试阶段，具体参数可能随配置和应用场景变化。"
+    }
+  },
+  "phytopatholobot-ab1f986": {
+    "checked_at": "2026-08-05T12:53:48.712251+00:00",
+    "title": "PhytoPatholoBot",
+    "accepted": false,
+    "reason": "正在检索，尚未形成最终判定。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "正在核实官方项目材料、技术细节与跨平台公开讨论；重点检查 2025 年发布日期、责任机构，以及至少一个独立来源的社交证据。后续结论会严格按缺失条件排除，不用 arXiv 单独充当项目证据。",
+        "我会区分“新闻网页/转载”与真正的社交平台帖子，并只记录可直接访问、能明确对应 PhytoPatholoBot 的页面。技术指标则回溯 Cornell 官方材料及其链接的论文或项目资料。内容。Line2 ",
+        "  should be new line with bullet but not nested. Please edit and improve clarity."
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "待检索后判定。",
+        "待检索后判定。",
+        "待检索后判定。",
+        "待检索后判定。"
+      ],
+      "metrics": [
+        {
+          "label": "待核实",
+          "note": "正在检索来源。",
+          "value": "待核实"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "正在检索，尚未形成最终判定。",
+      "social_evidence": [],
+      "summary_zh": "正在核实候选项目。"
+    }
+  },
+  "quanta-x2-and-artixon-hand-a595726": {
+    "checked_at": "2026-08-05T12:53:48.714991+00:00",
+    "title": "Quanta X2 and ArtiXon Hand",
+    "accepted": false,
+    "reason": "",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目归属、发布日期和技术材料，再分别查找至少两个社交平台上的公开讨论，并确认其中至少一个来源独立于负责机构。候选给出的日期和指标不会直接采信，只有可访问来源明确支持时才会写入。对社交证据也会区分官方账号与独立账号。正式技术要点将优先取自官方产品页、机构公告及其链接材料。当前正在检索候选名称的中英文变体与负责机构名称。",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        "",
+        "",
+        ""
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "",
+          "url": ""
+        }
+      ],
+      "summary_zh": ""
+    }
+  },
+  "bioinspired-artificial-muscle-robotic-leg-9f66d9d": {
+    "checked_at": "2026-08-05T12:53:48.716408+00:00",
+    "title": "Bioinspired Artificial-Muscle Robotic Leg",
+    "accepted": false,
+    "reason": "Interim research update only; final eligibility has not yet been decided.",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official Northwestern materials, linked technical publication, and independently attributable discussion across distinct social platforms before making the inclusion decision.",
+        "I’ll treat the supplied July 27, 2025 date as provisional until it is confirmed by an accessible official source.",
+        "The final dossier will distinguish demonstrated functions from broader claims and will only report exact metrics that appear in primary materials."
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress; verdict pending source verification.",
+        "No unsupported affiliation, metric, or social URL will be included.",
+        "arXiv or a paper alone will not be treated as official-project evidence.",
+        "Social evidence must span at least two platforms and include an independent account or publication."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Source verification underway.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Northwestern University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "Interim research update only; final eligibility has not yet been decided.",
+      "social_evidence": [],
+      "summary_zh": "正在核验该仿生人工肌肉机器人腿项目的官方材料、技术报告及跨平台公开讨论证据。"
+    }
+  },
+  "unitree-r1-a89c5ad": {
+    "checked_at": "2026-08-05T12:53:48.717851+00:00",
+    "title": "Unitree R1",
+    "accepted": true,
+    "reason": "收录。R1 是宇树科技于 2025 年发布的实体双足人形机器人，具有可访问的官方专属产品页和明确公司归属。公开讨论覆盖至少两个不同社交平台：Reddit 的独立机器人社区帖子和独立 YouTube 频道的视频；两者均不受宇树科技控制。官方公开了控制接口与二次开发支持，但现有证据不足以把 R1 本身认定为开源项目。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "双足人形机器人的敏捷运动与全身姿态控制",
+        "通过大多模态模型进行语音和视觉交互",
+        "通过开放的关节与传感器控制接口开展算法开发",
+        "在主流仿真平台中开发并向实体机器人部署算法"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "R1 是面向实体环境的人形机器人平台，而非仅有算法或仿真演示；官方产品页将其定位为超轻量人形机器人，并强调先建立多样化运动能力，再扩展任务执行。",
+        "产品系列包含 R1 AIR、R1 和 R1 EDU。标准 R1 配置 26 个自由度，包括单腿 6 自由度、单臂 5 自由度、腰部 2 自由度和头部 2 自由度；EDU 版本可扩展至 26–40 自由度并选配灵巧手。",
+        "关节采用低惯量、高转速内转子永磁同步电机，官方称其设计目标包括提高响应速度和散热能力；关节支承使用交叉滚子轴承与双钩球轴承，并采用中空内部走线。",
+        "感知与交互硬件包括标准版双目相机、四麦克风阵列和扬声器，并支持 Wi-Fi 6 与 Bluetooth 5.2；官方页面同时说明系统集成面向语音和图像的大多模态模型。",
+        "官方提供关节及传感器的控制接口，并声明支持主流仿真平台，使开发者能够先在仿真环境中开发算法，再部署到实体机器人。R1 EDU 进一步明确支持二次开发，并可选配 Orin 等 40–100 TOPS 高算力模块。",
+        "机器人使用可快速拆卸的智能锂电池、局部风冷系统、双编码器与单编码器组合反馈，并配有八核高性能基础处理器。",
+        "官方特别提示部分页面展示功能仍处于开发和测试阶段，未来才会向用户开放；因此该项目更适合作为运动控制、具身智能和人形机器人研究开发平台，不能把宣传视频中的所有动作或设想视为已经交付的自主任务能力。"
+      ],
+      "metrics": [
+        {
+          "label": "标准 R1 自由度",
+          "note": "官方当前参数表；R1 AIR 为 20，R1 EDU 为 26–40。",
+          "value": "26 DOF"
+        },
+        {
+          "label": "机械尺寸",
+          "note": "站立状态下的高×宽×厚，三个版本相同。",
+          "value": "1230 × 357 × 190 mm"
+        },
+        {
+          "label": "含电池重量",
+          "note": "官方当前参数表中的标准 R1；首发宣传曾使用约 25 kg，当前页面列为约 29 kg。",
+          "value": "约 29 kg"
+        },
+        {
+          "label": "续航时间",
+          "note": "官方称三个版本在相应配置下均约为该数值，实际结果会随场景和配置变化。",
+          "value": "约 1 小时"
+        },
+        {
+          "label": "首发基础价格",
+          "note": "2025 年 7 月发布时标准 R1 的官方起售价，不含税费和运费；官方当前页面另列 R1 AIR 为 4,900 美元。",
+          "value": "5,900 美元"
+        }
+      ],
+      "official_organization_url": "https://www.unitree.com/about/",
+      "official_project_url": "https://www.unitree.com/R1/",
+      "open_source": false,
+      "organization_en": "Unitree Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "宇树科技",
+      "reason": "收录。R1 是宇树科技于 2025 年发布的实体双足人形机器人，具有可访问的官方专属产品页和明确公司归属。公开讨论覆盖至少两个不同社交平台：Reddit 的独立机器人社区帖子和独立 YouTube 频道的视频；两者均不受宇树科技控制。官方公开了控制接口与二次开发支持，但现有证据不足以把 R1 本身认定为开源项目。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/robotics/comments/1m8v6vc"
+        },
+        {
+          "independent": true,
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=aB-Jh_yQWo4"
+        },
+        {
+          "independent": false,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/unitreerobotics_unitree-introducing-unitree-r1-intelligent-activity-7354486092177293314-Lj8Q"
+        }
+      ],
+      "summary_zh": "Unitree R1 是宇树科技在 2025 年 7 月推出的轻量级双足人形机器人平台，其影响力主要来自把具备完整人形关节结构、动态运动能力和开发接口的硬件价格降至 5,900 美元级别。标准版具有 26 个自由度、双目视觉、四麦克风阵列、扬声器、八核处理器及约一小时续航，并集成面向语音和图像的大多模态模型。技术上，R1 不只是交互展示设备：官方开放关节和传感器控制接口、支持主流仿真平台，并通过 EDU 版本提供二次开发、可选灵巧手和额外算力模块，使其能够作为全身控制、人形运动和具身智能算法的实体实验平台。不过，官方也明确表示部分样例功能仍在开发测试中，因此应将已经公布的硬件、接口和运动能力与尚未交付的自主家务或通用任务能力严格区分。"
+    }
+  },
+  "neural-jacobian-fields-c795ce5": {
+    "checked_at": "2026-08-05T12:53:48.719347+00:00",
+    "title": "Neural Jacobian Fields",
+    "accepted": false,
+    "reason": "不纳入。项目满足实体机器人主题、官方项目页、明确责任机构和跨平台公开讨论等条件，但不满足“自2025年起发布”的时间边界：其arXiv记录显示首次提交日期为2024年7月11日，官方项目页链接的X讨论也发布于2024年8月8日。Nature正式版本发布于2025年6月25日，MIT新闻稿发布于2025年7月24日，但这些是既有项目的正式发表与后续报道，不能据此把项目首次公开发布时间改记为2025年。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "从单个RGB摄像头观测重建机器人的三维几何与运动学表示",
+        "对二维图像空间或三维空间中的目标轨迹执行闭环跟踪",
+        "控制软体、多材料以及传统刚性机器人",
+        "完成抓取、捏取、推物、手指闭合和腕式弯曲旋转等真实机器人操作"
+      ],
+      "fields": [
+        "Robot systems",
+        "Whole-body control",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "NJF将神经辐射场与稠密视运动雅可比场结合：前者编码机器人在三维坐标上的颜色、密度和几何信息，后者表示各空间点相对于执行器命令的微分运动响应。",
+        "训练数据来自机器人执行随机控制命令时的多视角RGB-D观测；系统比较动作前后画面，并利用光流或点跟踪产生运动监督，不需要人工运动学标注。",
+        "训练阶段从单幅源图像预测三维辐射场和雅可比场，再通过可微体渲染生成目标视角的RGB、深度与二维运动，用重建损失和运动损失进行自监督学习。",
+        "部署阶段只需单目摄像头。控制器查询机器人表面点的雅可比，使用梯度优化和模型预测控制求解能够产生指定二维或三维运动的执行器命令。",
+        "系统把机器人状态表示为所有三维点的稠密位置与运动场，因此不依赖预先定义的关节坐标、URDF、材料模型或机器人专用动力学模型。",
+        "同一方法在气动软体手、Allegro刚性灵巧手、软体手性剪切负泊松比平台及低成本三维打印机械臂等不同结构上进行了验证。",
+        "公开材料明确说明当前方法采用准静态运动假设，每个新机器人都需要重新训练，并且尚未建模力觉、触觉及二阶瞬态动力学。"
+      ],
+      "metrics": [
+        {
+          "label": "在线控制频率",
+          "note": "官方项目页和Nature论文报告的交互式闭环命令优化速度。",
+          "value": "约12 Hz"
+        },
+        {
+          "label": "训练数据采集时间",
+          "note": "每种机器人执行随机命令时采集的多视角视频时长。",
+          "value": "2–3小时"
+        },
+        {
+          "label": "训练相机配置",
+          "note": "训练使用消费级Intel RealSense D415 RGB-D相机，从12个视角记录机器人动作；部署时只需单个摄像头。",
+          "value": "12台RGB-D相机训练，1台单目相机部署"
+        },
+        {
+          "label": "实体平台覆盖",
+          "note": "公开项目材料列出气动机器人手、Allegro手、手性剪切负泊松比平台和Poppy机械臂。",
+          "value": "4类机器人平台"
+        },
+        {
+          "label": "低成本机械臂",
+          "note": "官方项目页报告其闭环控制实验包含一台三维打印机械臂。",
+          "value": "约220美元"
+        }
+      ],
+      "official_organization_url": "https://www.csail.mit.edu/",
+      "official_project_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/",
+      "open_source": true,
+      "organization_en": "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不纳入。项目满足实体机器人主题、官方项目页、明确责任机构和跨平台公开讨论等条件，但不满足“自2025年起发布”的时间边界：其arXiv记录显示首次提交日期为2024年7月11日，官方项目页链接的X讨论也发布于2024年8月8日。Nature正式版本发布于2025年6月25日，MIT新闻稿发布于2025年7月24日，但这些是既有项目的正式发表与后续报道，不能据此把项目首次公开发布时间改记为2025年。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "X",
+          "url": "https://x.com/vincesitzmann/status/1821576713639510425"
+        },
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/alinea-labs_neural-jacobian-fields-revolutionizing-robot-activity-7354311597126815744-YApE"
+        }
+      ],
+      "summary_zh": "Neural Jacobian Fields（NJF）是MIT CSAIL研究人员提出的视觉机器人建模与控制系统。它从机器人执行随机命令时的多视角视频中，自监督学习机器人的三维外形以及每个三维空间点对执行器命令的局部运动响应。模型以神经辐射场表示几何和外观，以视运动雅可比场表示稠密微分运动学；部署后从单个RGB画面估计这两种场，并通过梯度优化和模型预测控制把指定的二维或三维点轨迹转换为执行器命令。实验覆盖软体、刚性、多材料、欠传感和存在机械间隙的机器人，包括抓取、推物、手指闭合及软体平台弯曲旋转。代码、训练数据、预训练检查点和真实机器人演示均已公开。不过，该项目在2024年已经通过arXiv和官方社交帖子公开，2025年的Nature论文及MIT报道属于正式发表和传播节点，因此不符合本索引“项目自2025年起发布”的严格准入时间要求。"
+    }
+  },
+  "fourier-gr-3-care-bot-1c83c9d": {
+    "checked_at": "2026-08-05T12:53:48.720888+00:00",
+    "title": "Fourier GR-3 Care-bot",
+    "accepted": false,
+    "reason": "insufficient independent multi-platform social evidence",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "视觉、听觉与触觉融合的多模态人机交互，包括说话人定位、面部识别、动态跟踪和触摸响应。",
+        "执行标准行走、直腿步态、跑步、弯腰、下蹲及具有角色表现力的弹跳式步态。",
+        "通过 VR 头显或外骨骼进行沉浸式遥操作，用于远程协作及高风险、难以进入的环境。",
+        "利用双臂和可选 12 自由度灵巧手完成交互、导航和实用辅助类任务。"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Tactile intelligence",
+        "Robot systems也有公开讨论；其中 Robots Around The House 论坛及独立 LinkedIn 作者均不受傅利叶控制，满足至少一项独立社会证据的要求。候选日期应更正：官方正式发布稿的日期是 2025 年 8 月 6 日，而不是题目所列的 2025 年 7 月 6 日。([prnewswire.com](https://www.prnewswire.com/news-releases/meet-gr-3-beyond-function-designed-to-care-fourier-to-unveil-its-first-care-centric-humanoid-302523225.html)) 汇总字段中的能力和指标仅采用官方发布稿与官方技术文档明确报告的内容；未将未来规划中的移动辅助、健康监测和康复应用表述为已经实现的能力。技术材料将其描述为开放的二次开发平台，但没有证明 GR-3 软件或硬件已经以开源许可证发布，因此 open_source=false。([support.fftai.com](https://support.fftai.com/en/getting-started/general-information))"
+      ],
+      "include": true,
+      "key_points": [
+        "GR-3 是傅利叶 GRx 系列的全尺寸双足人形机器人，定位为面向互动陪伴和人本服务的首款“Care-bot”，同时提供具身智能研究、算法开发及第三方应用的平台。([support.fftai.com](https://support.fftai.com/en/getting-started/general-information))",
+        "整机采用铝合金、工程塑料和柔性覆盖材料，并以软触外壳、缓冲表面及汽车级织物降低传统人形机器人的工业感，服务于近距离人机互动场景。([support.fftai.com](https://support.fftai.com/en/getting-started/general-information))",
+        "Full-Perception/Full-Sense 多模态交互系统统一处理视觉、音频和触觉输入，并通过注意力管理机制动态确定感知输入优先级、同步多模态输出。([support.fftai.com](https://support.fftai.com/en/getting-started/general-information))",
+        "交互系统采用双路径响应架构：规则控制负责快速反射式动作，大语言模型负责需要上下文理解的对话生成和较慢的情境响应。([prnewswire.com](https://www.prnewswire.com/news-releases/meet-gr-3-beyond-function-designed-to-care-fourier-to-unveil-its-first-care-centric-humanoid-302523225.html))",
+        "视觉模块使用 RGB 与结构光相机进行面部识别和动态跟踪；音频模块提供全向拾音、回声消除和声源定位，并可结合转头与眼神朝向回应说话者。([support.fftai.com](https://support.fftai.com/en/getting-started/general-information))",
+        "触觉输入分布于头部和躯干，可触发眨眼、视线跟踪及与情绪相关的动作反馈；全身结构还支持弯腰、下蹲、跑步及多种角色化步态。([support.fftai.com](https://support.fftai.com/en/getting-started/general-information))",
+        "平台采用客户端-服务器架构，运行 Ubuntu 22.04，提供有线网络、Wi-Fi 6 和外部接口，并支持 VR 头显或外骨骼遥操作；官方表示还将继续提供交互 API，因此不能把尚未发布的 API 计为现成功能。([support.fftai.com](https://support.fftai.com/en/getting-started/general-information))"
+      ],
+      "metrics": [
+        {
+          "label": "整机尺寸与重量",
+          "note": "官方技术文档列出的尺寸为 1642 × 552 × 292 mm，净重约 71 kg；发布稿将高度取整为 165 cm。",
+          "value": "1642 × 552 × 292 mm；约 71 kg"
+        },
+        {
+          "label": "全身自由度",
+          "note": "配置可选 12 自由度灵巧手时，执行器/自由度总数最高为 55。",
+          "value": "最高 55 DoF"
+        },
+        {
+          "label": "运动性能",
+          "note": "官方技术文档报告的行走速度；同时支持最大 15° 坡度。",
+          "value": "6.1 km/h；最大坡度 15°"
+        },
+        {
+          "label": "负载与关节输出",
+          "note": "单臂有效载荷约 3 kg，最大关节峰值扭矩 440 N·m。",
+          "value": "单臂约 3 kg；峰值扭矩 440 N·m"
+        },
+        {
+          "label": "电池性能",
+          "note": "采用 702 Wh 与 234 Wh 电池组合，支持热插拔；官方报告运行约 3 小时、单次充电约 1.5 小时。",
+          "value": "约 3 小时运行；约 1.5 小时充电"
+        }
+      ],
+      "official_organization_url": "https://www.fftai.com",
+      "official_project_url": "https://support.fftai.com/en/getting-started/general-information",
+      "open_source": false,
+      "organization_en": "Fourier",
+      "organization_kind": "Company",
+      "organization_zh": "傅利叶",
+      "reason": "纳入。GR-3 是明确的实体双足人形机器人及具身智能开发平台；傅利叶提供了专门的官方产品技术页面，并由 Fourier Co. Ltd. 发布正式公告。公开社会讨论可在 LinkedIn 和 Robots Around The House 论坛两个不同平台上核实，且两项所列证据均来自不受傅利叶控制的作者或社区。需要纠正候选元数据：官方发布稿日期为 2025 年 8 月 6 日，而不是 2025 年 7 月 6 日。官方材料称其为开放开发平台，但没有可核实的开源许可证或公开源码仓库，因此不认定为开源。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/peterkappes_fourier-releases-their-cute-humanoid-for-activity-7370833298962657280-FT_V"
+        },
+        {
+          "independent": true,
+          "platform": "Robots Around The House",
+          "url": "https://robotsaroundthehouse.com/threads/gr-3-by-fourier-most-adorable-humanoid-robot-yet.1208/"
+        }
+      ],
+      "summary_zh": "傅利叶 GR-3 是一款面向互动陪伴、公共服务和具身智能开发的全尺寸双足人形机器人。它没有沿用以裸露机械结构和工业效率为中心的产品路线，而是以柔性覆盖材料、缓冲表面、拟人比例和动画面部界面降低近距离互动中的机械感。其核心技术是融合视觉、音频和触觉输入的全感知多模态交互系统：相机承担面部识别与动态跟踪，麦克风系统支持全向拾音、回声消除及声源定位，分布式压力传感器则使机器人能够针对触摸产生眼神、微表情和身体动作反馈。交互控制区分快速规则反射与由大语言模型支持的上下文对话路径，以兼顾响应速度和情境理解。\n\nGR-3 同时是一套可二次开发的机器人系统。其全身最多配置 55 个自由度，双臂各有 7 个自由度，并可选配 12 自由度灵巧手；运动系统支持标准步态、直腿步态、跑步、弯腰、下蹲和角色化步态。客户端-服务器架构、Ubuntu 22.04、以太网、Wi-Fi 6、USB/Type-C 接口及 VR/外骨骼遥操作能力，使其可用于人机交互、全身控制、远程操作和机器人应用研究。官方提出公共服务、学术研究和临床环境等目标场景，但移动辅助、健康监测及康复护理在发布材料中仍属于预期扩展方向，不能视为已经验证的部署能力。\n\n该项目满足索引条件：它明确属于实体人形机器人和具身智能；傅利叶拥有专门的官方技术页面及组织署名的发布公告；责任主体是中国机器人公司傅利叶；LinkedIn 与 Robots Around The House 两个不同社会平台上存在可访问的公开讨论，且所列讨论均来自独立作者或社区。官方没有提供足以确认开源发布的许可证或代码仓库，所以该条目不标记为开源。"
+    }
+  },
+  "robotera-l7-6143d59": {
+    "checked_at": "2026-08-05T12:53:48.722483+00:00",
+    "title": "ROBOTERA L7",
+    "accepted": true,
+    "reason": "纳入。L7明确属于物理人形机器人和具身智能项目；ROBOTERA提供了专门的官方产品页，并由北京星动纪元科技有限公司明确负责。该项目在YouTube和Reddit两个不同社交平台上均有公开讨论，其中XRoboHub的YouTube视频和Reddit社区帖子独立于责任公司。公开资料没有证明L7的软件、模型或完整硬件设计以开源许可证发布，因此open_source设为false。候选资料给出的2025-07-01不能由检索到的发布来源支持；可核实的正式发布日期为2025年7月22日。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "在双足全尺寸形态下完成最高4 m/s奔跑、360度旋转跳、Breaking舞蹈及复杂地形移动",
+        "使用双臂和五指灵巧手执行包裹分拣、扫码、贴标、搬运及螺钉枪操作",
+        "通过ERA-42视觉-语言-动作模型观看人类操作视频学习新技能，并进行长序列任务预测",
+        "借助双目视觉、3D激光雷达和全域感知系统开展环境感知、任务执行与数据采集",
+        "支持全身遥操作，并可在整机与半身配置之间切换以适应科研、物流和制造场景"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "L7是面向动态运动与具身操作的全尺寸双足人形机器人，采用全身55自由度设计，包括7轴仿生机械臂、3自由度腰部和12自由度XHAND1五指灵巧手。",
+        "关节系统采用准直驱方案和自研模块化骨架，峰值扭矩为400 N·m、峰值转速为25 rad/s；航空级铝合金与碳纤维复合结构将整机重量控制在65 kg。",
+        "全身控制使用端到端强化学习建立传感器数据到关节动作的映射，使腰部、手臂和腿部能够协同完成旋转跳、Breaking等高动态动作，并在失衡时实时修正姿态。",
+        "机器人搭载ERA-42端到端VLA模型，可从人类操作视频学习技能；项目材料还报告其推理频率超过30 Hz，并通过视频预测进行长序列动作规划和抗干扰控制。",
+        "腰部3自由度与机械臂形成直径2.1米的球形操作空间；手腕支持侧摆正负45度、前后正负90度，以处理倾斜接口、隐蔽螺丝位以及桌面至货架范围内的操作。",
+        "L7支持整机和半身两种部署形态：整机用于双足移动和动态展示，半身形态可用于空间受限的电子装配、物流分拣和科研数据采集环境。"
+      ],
+      "metrics": [
+        {
+          "label": "全身自由度",
+          "note": "包括双足、3自由度腰部、7轴机械臂及12自由度灵巧手等运动单元。",
+          "value": "55 DoF"
+        },
+        {
+          "label": "最高报告跑速",
+          "note": "官方发布材料报告的全尺寸双足奔跑速度。",
+          "value": "4 m/s（14.4 km/h）"
+        },
+        {
+          "label": "关节动态性能",
+          "note": "自研关节模组的峰值指标。",
+          "value": "400 N·m峰值扭矩；25 rad/s峰值转速"
+        },
+        {
+          "label": "双臂负载",
+          "note": "用于物料搬运及工业工具操作的报告负载。",
+          "value": "20 kg"
+        },
+        {
+          "label": "操作空间",
+          "note": "由大臂展和3自由度腰部共同形成的球形作业范围。",
+          "value": "直径2.1 m"
+        }
+      ],
+      "official_organization_url": "https://www.robotera.com/",
+      "official_project_url": "https://www.robotera.com/en/robotics/L7.html",
+      "open_source": false,
+      "organization_en": "ROBOTERA",
+      "organization_kind": "Company",
+      "organization_zh": "北京星动纪元科技有限公司",
+      "reason": "纳入。L7明确属于物理人形机器人和具身智能项目；ROBOTERA提供了专门的官方产品页，并由北京星动纪元科技有限公司明确负责。该项目在YouTube和Reddit两个不同社交平台上均有公开讨论，其中XRoboHub的YouTube视频和Reddit社区帖子独立于责任公司。公开资料没有证明L7的软件、模型或完整硬件设计以开源许可证发布，因此open_source设为false。候选资料给出的2025-07-01不能由检索到的发布来源支持；可核实的正式发布日期为2025年7月22日。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=FHKzBihGvew"
+        },
+        {
+          "independent": true,
+          "platform": "Reddit",
+          "url": "https://www.reddit.com/r/singularity/comments/1m69qoq"
+        }
+      ],
+      "summary_zh": "ROBOTERA L7（星动L7）是北京星动纪元科技有限公司于2025年7月22日正式发布的全尺寸双足人形机器人，重点不是单项步行演示，而是将高动态全身运动和工业级精细操作集成到同一平台。机器人高171厘米、重65公斤，全身配置55个自由度，并以准直驱关节、自研模块化骨架、航空级铝合金和碳纤维复合结构实现最高4 m/s奔跑、360度旋转跳和Breaking动作。操作侧采用7轴仿生机械臂、3自由度腰部、十轴腕部结构和12自由度全直驱XHAND1五指灵巧手，可覆盖直径2.1米的球形工作空间，执行包裹分拣、扫码、贴标、搬运、装配和电动工具操作。智能系统采用ERA-42端到端视觉-语言-动作模型，通过观看人类操作视频学习技能，并结合超过30 Hz的推理、视频预测和长序列任务规划处理突发干扰。双目视觉、3D激光雷达、全身遥操作和数据采集能力使其也可作为具身模型训练与科研平台；整机与半身形态切换则面向物流中心、制造产线、紧凑装配工位和商业展示等不同部署条件。"
+    }
+  },
+  "universal-robot-training-interface-90a440c": {
+    "checked_at": "2026-08-05T12:53:48.724110+00:00",
+    "title": "Universal Robot-Training Interface",
+    "accepted": false,
+    "reason": "正在检索，当前不是最终裁决。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目材料、责任机构、技术结果与跨平台公共讨论。将把媒体转发与责任机构自有账号分开判断，避免把同源宣传算作独立证据。",
+        "也会确认项目的正式名称和开源状态；若任何强制条件没有可访问来源，会直接判为不收录。后续将仅使用可核实的官方页面、技术材料和社交平台页面。",
+        "技术内容将优先依据 MIT 官方报道及其链接的项目或论文材料，社交证据只用于验证公开讨论条件，不会反向扩展技术主张。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终技术结论。",
+        "待核验该装置是否有独立项目页或实验室页。",
+        "待核验至少两个不同社交平台的讨论。",
+        "待确认至少一个讨论来源独立于 MIT。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在进行来源核验",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "正在检索，当前不是最终裁决。",
+      "social_evidence": [],
+      "summary_zh": "正在核验候选项目的官方证据与社交讨论。"
+    }
+  },
+  "cutamp-c124f3a": {
+    "checked_at": "2026-08-05T12:53:48.725785+00:00",
+    "title": "cuTAMP",
+    "accepted": false,
+    "reason": "正在核验全部纳入条件，尚未作出最终判断。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目材料、责任机构与跨平台公开讨论；随后会以严格准入标准给出结论。题目中的 MIT News 链接可作为官方机构页面，但还需要确认第二个社交平台及至少一个独立来源。 ",
+        " ",
+        " "
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "World models",
+        "Robot manipulation"
+      ],
+      "include": false,
+      "key_points": [
+        "初步核验中，最终字段将在检索完成后仅保留可由公开来源支持的内容。",
+        " ",
+        " ",
+        " "
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "https://www.mit.edu/",
+      "official_project_url": "https://news.mit.edu/2025/new-system-enables-robots-to-solve-manipulation-problems-seconds-0605",
+      "open_source": false,
+      "organization_en": "Massachusetts Institute of Technology",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "正在核验全部纳入条件，尚未作出最终判断。",
+      "social_evidence": [],
+      "summary_zh": "正在基于官方页面、技术论文及公开社交讨论核验 cuTAMP。"
+    }
+  },
+  "rhyme-retrieval-for-hybrid-imitation-under-misma-9f44678": {
+    "checked_at": "2026-08-05T12:53:48.727377+00:00",
+    "title": "RHyME: Retrieval for Hybrid Imitation under Mismatched Execution",
+    "accepted": false,
+    "reason": "不纳入。尽管 Cornell University 提供了专门项目页、官方新闻稿、公开代码和数据集，而且项目明确属于实体机器人长时程操作，但它不满足“自 2025 年以来发布”的时间门槛：论文记录和项目 BibTeX 显示该工作于 2024 年发布，arXiv 首次提交日期为 2024-09-10，Cornell 实验室在 2024-11-05 也已公开介绍该工作；2025-04-22 是 Cornell 新闻报道日期，ICRA 2025 是会议发表信息，不能据此将首次公开发布改记为 2025 年。此外，检索到的可访问来源只能明确验证 LinkedIn 上的一项独立公开讨论，无法可靠支持至少两个不同社交平台上的公开讨论。因此同时缺少合格的 2025 年首次发布日期和第二个可验证社交平台证据。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "从单个、此前未见的人类示范视频中推断并执行多步骤机器人操作任务",
+        "在真实机器人上执行移动锅具、关闭抽屉、放置布料和打开灯等操作序列",
+        "处理人类与机器人在外观、运动方式以及单双臂能力上的执行不匹配",
+        "在 Franka Kitchen 仿真环境中模仿具有不同执行风格和物理能力的跨具身示范者",
+        "从未配对的人类视频片段中检索并组合与机器人轨迹语义对应的示范序列"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Embodied AI",
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "RHyME 面向长时程机器人模仿学习：策略以人类示范视频的视觉嵌入序列和机器人当前状态为条件，输出可执行的机器人动作。",
+        "该方法不要求预先收集逐条配对的人类与机器人视频，而是从未配对的人类 play 数据库中检索短时程片段，组合出与给定机器人轨迹语义等价的合成示范。",
+        "检索使用序列级相似性而非单帧视觉相似性；核心版本通过最优传输代价对人类与机器人嵌入序列进行对齐，以降低外观和执行方式差异造成的干扰。",
+        "训练分为配对数据构造和策略学习两个阶段：先冻结视频编码器并为机器人轨迹生成合成人类示范，再使用机器人轨迹、机器人视频嵌入和检索得到的人类嵌入训练策略。",
+        "策略采用混合训练方式，同时利用真实机器人示范和合成的人类示范条件，使测试时能够直接接受未见过的人类长时程视频提示。",
+        "项目在 Franka Kitchen 中构造 Sphere-Easy、Sphere-Medium 和 Sphere-Hard 三种逐级增加的不匹配设置，分别引入外观差异、操作风格差异，以及双臂示范者对单臂机器人的物理能力差异。",
+        "真实世界实验比较了 RHyME 与 XSkill；项目材料报告，RHyME 对指定任务序列的跟随更准确，而 XSkill 会遗漏目标步骤或尝试示范中未指定的任务。"
+      ],
+      "metrics": [
+        {
+          "label": "任务召回率提升",
+          "note": "官方项目页报告相对于既有跨具身学习方法的提升。",
+          "value": "52%"
+        },
+        {
+          "label": "机器人训练数据量",
+          "note": "Cornell 官方公告报告 RHyME 实验所需的机器人数据。",
+          "value": "30 分钟"
+        },
+        {
+          "label": "Sphere-Hard 成功率",
+          "note": "技术报告中最具挑战性的双臂示范者对单臂机器人设置；RHyME 对比 XSkill。",
+          "value": "53% vs. 1%"
+        },
+        {
+          "label": "跨具身仿真数据规模",
+          "note": "技术报告称三个逐级增加执行不匹配的数据集合计包含的视频时长。",
+          "value": "超过 10 小时"
+        },
+        {
+          "label": "仿真测试提示数量",
+          "note": "技术报告报告每种仿真评估使用的长时程示范视频数量。",
+          "value": "20 个示范视频"
+        }
+      ],
+      "official_organization_url": "https://www.cornell.edu/",
+      "official_project_url": "https://portal.cs.cornell.edu/rhyme/",
+      "open_source": true,
+      "organization_en": "Cornell University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不纳入。尽管 Cornell University 提供了专门项目页、官方新闻稿、公开代码和数据集，而且项目明确属于实体机器人长时程操作，但它不满足“自 2025 年以来发布”的时间门槛：论文记录和项目 BibTeX 显示该工作于 2024 年发布，arXiv 首次提交日期为 2024-09-10，Cornell 实验室在 2024-11-05 也已公开介绍该工作；2025-04-22 是 Cornell 新闻报道日期，ICRA 2025 是会议发表信息，不能据此将首次公开发布改记为 2025 年。此外，检索到的可访问来源只能明确验证 LinkedIn 上的一项独立公开讨论，无法可靠支持至少两个不同社交平台上的公开讨论。因此同时缺少合格的 2025 年首次发布日期和第二个可验证社交平台证据。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/pulse/big-leap-robot-learning-from-cornell-researchers-robots-bhardwaj-bop0c"
+        }
+      ],
+      "summary_zh": "RHyME（Retrieval for Hybrid Imitation under Mismatched Execution）是 Cornell University 开发的跨具身一次模仿框架，目标是让机器人根据一个人类长时程操作视频完成相同的多步骤任务，即使人类和机器人在外观、动作风格、速度或物理能力上明显不同。其关键做法不是要求昂贵的人机配对示范，而是使用序列级最优传输代价，在未配对的人类 play 视频中检索并组合短片段，为已有机器人轨迹生成语义对应的合成人类示范，然后以这些合成配对数据训练视频条件机器人策略。项目同时在 Franka Kitchen 的三级执行不匹配设置和真实机器人操作任务上进行了评估，报告在最困难仿真设置中取得 53% 成功率，而 XSkill 为 1%，官方项目页还报告任务召回率提高 52%。该项目技术内容、官方归属和实体机器人证据充分，代码与数据也已公开；但其首次公开时间实际为 2024 年，并且目前只能可靠验证一个社交平台上的独立讨论，因此不符合本索引的严格纳入条件。"
+    }
+  },
+  "hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01": {
+    "checked_at": "2026-08-05T12:53:48.729047+00:00",
+    "title": "Hui Si Kai Wu General Embodied Intelligence Platform",
+    "accepted": true,
+    "reason": "纳入。该项目于2025年3月12日正式发布，核心对象是部署于机械臂、轮式机器人和人形机器人上的通用具身智能平台，满足物理机器人条件。负责机构北京人形机器人创新中心有限公司拥有独立官方产品页和官方网站；北京市政府门户及其英文站也记录了发布与真机演示。可访问的公开讨论至少覆盖YouTube和LinkedIn两个平台，且列出的XRoboHub与Robotiq均不受负责机构控制。未发现足以证明慧思开物整个平台完整源代码已公开的明确官方代码仓库，因此open_source按严格口径记为false；这不影响收录资格。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "通过自然语言或语音指令理解多步骤任务，并完成任务拆解、技能选择和闭环执行。",
+        "在机械臂、轮式机器人和人形机器人等不同构型本体上部署同一套具身智能系统。",
+        "执行工业物料分拣、积木结构复现、桌面清理和物流打包等真实机器人操作任务。",
+        "在物体被移动等外部干扰发生后重新感知、纠错和规划，继续自主完成任务。",
+        "支持人形机器人的全身控制、双臂协作、稳定行走、移动导航和实时避障。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems",
+        "Vision-language-action",
+        "World models You have 1929 weighted tokens left"
+      ],
+      "include": true,
+      "key_points": [
+        "平台采用“具身大脑+具身小脑”的分层架构：大脑负责自然交互、环境与空间感知、意图理解、长程任务分解和分层规划，小脑提供可调用的操作与运动技能；动作反馈返回大脑，形成感知、决策、执行和纠错闭环。",
+        "其任务规划系统被描述为分布式多智能体，而非单一智能体。例如，复杂指令可拆分为多个子任务，再为每个子任务匹配技能库中的具体能力。",
+        "平台强调“一脑多能、一脑多机”，同一软件系统可以兼容机械臂、轮式机器人和人形机器人，并在工业、家庭整理和物流等不同场景复用任务规划与技能。",
+        "当前官方产品页将具身大脑进一步划分为Wow具身世界模型和PelicanVLM：Wow根据图像与动作指令生成多步骤、长时间且具有复杂逻辑的交互过程；PelicanVLM面向超长视频理解、空间方位理解、物理感知和长程规划。",
+        "具身小脑包含跨本体VLA基座模型XR-1，使用机器人操作数据和互联网视频进行多模态视动统一表征，并已进行真机部署测试，以积累跨构型操作知识和快速学习特定场景任务。",
+        "全身控制自主导航系统结合实时感知、避障和轨迹跟随；官方材料还报告其使用不透明度引导自编码器处理物体堆叠问题，并使用几何感知编码器进行细粒度场景描述与分类。",
+        "发布演示覆盖工业分拣、按观察结果复现积木结构、受人为干扰的桌面清理以及由扫码、装入物品、打包、粘贴信息条和送入生产线组成的连续物流流程。"
+      ],
+      "metrics": [
+        {
+          "label": "机器人轨迹数据",
+          "note": "慧思开物官方产品页当前报告的训练与开发资源规模。",
+          "value": "200万+"
+        },
+        {
+          "label": "兼容机器人本体",
+          "note": "官方产品页报告平台已覆盖的机器人本体数量。",
+          "value": "20+"
+        },
+        {
+          "label": "开发投入降幅",
+          "note": "官方产品页报告的开发人力与时间缩减幅度；页面未公开测量方法或基线。",
+          "value": "-90%"
+        },
+        {
+          "label": "发布时技能库规模",
+          "note": "2025年3月发布材料称技能库当时已经上线打开、关闭、拿取、放置、拉出和旋转等常用技能。",
+          "value": "30多项"
+        },
+        {
+          "label": "跨构型支持结果",
+          "note": "发布材料明确报告单个软件系统兼容机械臂、轮式机器人和人形机器人。",
+          "value": "3类机器人构型"
+        }
+      ],
+      "official_organization_url": "https://www.x-humanoid.com/",
+      "official_project_url": "https://www.x-humanoid.com/detail/hskw.html",
+      "open_source": false,
+      "organization_en": "Beijing Humanoid Robot Innovation Center",
+      "organization_kind": "Company",
+      "organization_zh": "北京人形机器人创新中心有限公司",
+      "reason": "纳入。该项目于2025年3月12日正式发布，核心对象是部署于机械臂、轮式机器人和人形机器人上的通用具身智能平台，满足物理机器人条件。负责机构北京人形机器人创新中心有限公司拥有独立官方产品页和官方网站；北京市政府门户及其英文站也记录了发布与真机演示。可访问的公开讨论至少覆盖YouTube和LinkedIn两个平台，且列出的XRoboHub与Robotiq均不受负责机构控制。未发现足以证明慧思开物整个平台完整源代码已公开的明确官方代码仓库，因此open_source按严格口径记为false；这不影响收录资格。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=jaqol5BN1Ls"
+        },
+        {
+          "independent": true,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/robotiq_the-worlds-first-embodied-intelligent-platform-activity-7430257908543684610-QlqG"
+        }
+      ],
+      "summary_zh": "“慧思开物”是北京人形机器人创新中心有限公司于2025年3月12日发布的一站式通用具身智能开发平台，目标是将任务理解、环境感知、规划、操作技能和运动控制组织为可跨机器人本体复用的“共享大脑”。其核心不是单纯的视觉或语言模型，而是面向真实物理执行的闭环系统：具身大脑理解自然语言、空间关系和任务意图，将长程目标拆解为子任务；具身小脑从技能库中调用操作、全身控制和导航能力，并将执行状态反馈给大脑以支持重新规划和错误恢复。发布现场以机械臂、轮式机器人及“天工”“天工PRO”等人形机器人展示了工业分拣、积木复现、桌面清理和连续物流打包。后续官方产品材料将平台技术栈具体化为Wow具身世界模型、PelicanVLM、跨本体VLA模型XR-1以及全身控制自主导航系统，并报告平台已积累200万条以上机器人轨迹数据、适配20种以上机器人本体，同时宣称可将开发人力与时间降低90%。该项目具有明确负责机构、官方产品页、真实机器人部署和跨平台独立社会讨论，符合严格索引条件。"
+    }
+  },
+  "status-bae7d5b": {
+    "checked_at": "2026-08-05T12:53:48.730791+00:00",
+    "title": "Status",
+    "accepted": false,
+    "reason": "不收录。该候选实际上是一条资料整理状态说明，而不是可识别的具身机器人技术项目。所给 https://example.com 不是专属官方项目页、机构公告或研究实验室项目页；没有明确责任公司、大学或研究机构；没有可核实的物理机器人技术内容；也没有两个不同社交平台上的公开讨论及其中至少一个独立来源。由于核心身份和全部必要证据均缺失，不能推测项目名称、机构、链接、指标或社交证据。",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "未提供任何可核实的机器人能力描述。",
+        "未提供可对应到实体机器人系统的实现信息。",
+        "未找到可归属于该候选项目的公开演示或实验结果。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "候选标题“Status”是通用状态词，无法唯一识别一个技术项目。",
+        "给出的主链接 example.com 是示例域名，不是机器人项目主页、机构公告或研究实验室项目页。",
+        "摘要描述的是收集和审核项目页面的工作流程，不是具身机器人项目的技术摘要。",
+        "没有作者、责任机构、机器人平台、技术报告或关联项目材料可供核实。",
+        "没有证据表明该候选内容涉及物理机器人或已经实现的具身智能系统。",
+        "未找到两个不同社交平台上的项目讨论，也无法满足至少一个独立来源的要求。"
+      ],
+      "metrics": [
+        {
+          "label": "候选发布日期",
+          "note": "仅为输入中声明的日期；由于不存在可识别项目，无法由官方来源验证。",
+          "value": "2025-01-01"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不收录。该候选实际上是一条资料整理状态说明，而不是可识别的具身机器人技术项目。所给 https://example.com 不是专属官方项目页、机构公告或研究实验室项目页；没有明确责任公司、大学或研究机构；没有可核实的物理机器人技术内容；也没有两个不同社交平台上的公开讨论及其中至少一个独立来源。由于核心身份和全部必要证据均缺失，不能推测项目名称、机构、链接、指标或社交证据。",
+      "social_evidence": [],
+      "summary_zh": "该条目无法形成项目档案。现有信息只表明提交者正在先收集官方发布页面，再核验日期并排除仅有论文页或会议页的条目；这是一段索引整理流程说明，不是项目发布。公开检索没有将“Status”、示例链接和所给摘要对应到某个由明确机构负责、面向物理机器人的2025年技术项目。因而无法可靠描述其模型架构、控制方法、机器人本体、训练数据、实现能力、实验设置或结果，也不能确认是否开源。"
+    }
+  },
+  "embodied-energy-worm-and-jellyfish-robots-f283d21": {
+    "checked_at": "2026-08-05T12:53:48.732496+00:00",
+    "title": "Embodied-Energy Worm and Jellyfish Robots",
+    "accepted": false,
+    "reason": "Pending web verification.",
+    "policy_version": "official-project-impact-v2",
+    "verdict": {
+      "capabilities": [
+        "I’m verifying the Cornell project page, underlying technical material, and the required two-platform public discussion before deciding eligibility.",
+        "I’ll treat the social-evidence requirement as a hard gate and will not infer missing accounts or URLs.",
+        "I’ll also separate reported measurements from qualitative demonstrations so the dossier does not overstate results."
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索并核实。",
+        "最终判断将以可访问的官方资料和独立社交讨论为准。",
+        "不会把 arXiv 单独视为官方项目证据。",
+        "不会猜测作者、指标或社交链接。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "资料核实进行中",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Cornell University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "Pending web verification.",
+      "social_evidence": [],
+      "summary_zh": "正在核实该候选项目是否满足严格收录条件。"
+    }
   }
 }

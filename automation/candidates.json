@@ -1,12 +1,24 @@
 {
-  "generated_at": "2026-08-05T09:03:28.128758+00:00",
+  "generated_at": "2026-08-05T12:35:36.377064+00:00",
   "candidates": [
     {
       "date": "2026-08-05",
-      "organization_hint": "Research in progress",
-      "summary": "I’m checking official company and lab release pages, then validating dates and excluding entries whose only landing page is an arXiv or conference-paper page.",
-      "title": "Search status",
+      "organization_hint": "Search in progress",
+      "summary": "I’m checking official company and research-lab sources, then validating release dates and excluding paper-only pages.",
+      "title": "Status",
       "url": "https://example.invalid/status",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "organization_hint": "Research in progress",
+      "summary": "I’m searching official company and research-lab release channels, then I’ll verify dates and exclude entries whose only landing page is arXiv or a conference listing.",
+      "title": "Search and verification underway",
+      "url": "https://openai.com",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -985,6 +997,18 @@
       ]
     },
     {
+      "date": "2026-07-28",
+      "organization_hint": "MIT Research Laboratory of Electronics",
+      "summary": "VLASH forecasts a robot's future state so vision-language-action models can transition between action chunks with less delay, producing faster and smoother manipulation.",
+      "title": "VLASH: Vision-Language-Action Speculative Handover",
+      "url": "https://news.mit.edu/2026/making-robots-faster-helping-them-think-ahead-0728",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-design",
       "summary": "An often overlooked factor of robot manipulation performance is the embodiment of the robot itself. Motivated by this problem, we study motion-conditioned robot co-design, where the goal is to generate complete robot designs that track target end-effector trajectories (from human demonstrations) while optimizing user-defined rewards. We introduce Transformer Transformer, a diffusion transformer trained on RoboTokens, a unified tokenization of robot embodiments, states, and actions. The same architecture can be used across embodiment spaces (e.g., wheeled bimanual, quadrupeds, humanoids) and use cases (embodiment generation, cross embodiment controller). Rather than overfitting to one reward function, Transformer Transformer is a dynamics model, whose reward-agnostic state and action predictions can be converted into reward-specific value predictions. These value predictions are used to steer embodiment diffusion towards high value robot designs, through a procedure we call Dynamics Self-Guidance. Experiments across multiple design spaces show zero-shot optimization of unseen rewards and trajectories, improving performance and runtime over the evolutionary baseline. Finally, we fabricated an optimized ALOHA design, which reduced tracking error by over 70% compared to the original design.",
       "date": "2026-07-28",
@@ -1682,6 +1706,18 @@
       "reasons": [
         "keywords: vision-language-action, vla, world model",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "organization_hint": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "summary": "Product release comprising the A3 Ultra humanoid, X2 Edu research robot, heavy-payload G2 Max and direct-drive OmniHand 3 Ultra-M dexterous hand.",
+      "title": "AGIBOT WAIC 2026 Product Releases",
+      "url": "https://www.agibot.com/article/231/detail/85.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -2495,6 +2531,18 @@
       ]
     },
     {
+      "date": "2026-07-13",
+      "organization_hint": "MIT Computer Science and Artificial Intelligence Laboratory and Toyota Research Institute",
+      "summary": "SceneSmith coordinates AI agents to generate simulation-ready indoor environments with realistic layouts, objects, and physical properties for robot training and evaluation.",
+      "title": "SceneSmith",
+      "url": "https://news.mit.edu/2026/ai-agents-create-virtual-playgrounds-to-help-robots-get-crucial-training-data-0713",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "From World Action Models to Embodied Brains: A Roadmap for Open-World Physical Intelligence",
       "summary": "Artificial general intelligence ultimately requires agents that can reason and act in the physical world. Action models, vision-language-action policies, and world models have advanced this goal, while World Action Models (WAMs) are particularly promising because they connect candidate interventions with predicted consequences. However, progress remains fragmented: models use incompatible action spaces and prediction targets, datasets and tasks follow different conventions, and runtime systems expose limited interfaces for reuse and evaluation. We review the evolution toward WAMs and organize these limitations into three coupled gaps: model roles and representations, objectives and standardization, and system composition. Building on this analysis, we propose a co-evolution roadmap for physical intelligence centered on the \\emph{embodied brain}, a long-term model target for integrating multimodal context, comparing candidate interventions, and issuing state-transition or capability requests rather than direct actuator commands. WAMs provide promising prototypes for its predictive functions, while a physical harness grounds model outputs through tools, controllers, verification, and trace logging. Shared contracts align heterogeneous models, data, tasks, and embodiments, and closed-loop post-training converts verified interaction into reusable experience. Together, these components define a modular physical-intelligence stack for adaptive and self-improving embodied agents.",
       "date": "2026-07-13",
@@ -2616,6 +2664,18 @@
       "reasons": [
         "keywords: vla, robot foundation",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "organization_hint": "MIT Computer Science and Artificial Intelligence Laboratory",
+      "summary": "FloatForm is a swarm of autonomous robotic boats that connect, separate, and reorganize into programmable floating platforms and structures.",
+      "title": "FloatForm",
+      "url": "https://news.mit.edu/2026/tiny-robot-boats-build-floating-structures-0709",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -2968,6 +3028,18 @@
       ]
     },
     {
+      "date": "2026-07-02",
+      "organization_hint": "X Square Robot",
+      "summary": "Software-hardware embodied-data platform covering demonstration capture, synchronization, cleaning, annotation, model training, inference and evaluation.",
+      "title": "QUANXTA Zero Series",
+      "url": "https://x2robot.com/en/news/6a46341cc7feadddbc603a33",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "GigaWorld-1: A Roadmap to Build World Models for Robot Policy Evaluation",
       "summary": "Evaluating embodied robot foundation models remains a critical bottleneck; unlike large language models efficiently assessed via digital benchmarks, robotic policies require slow, costly real-world rollouts limited by hardware and human supervision, which has driven interest in world models as surrogate policy evaluators, yet the key properties that make a world model reliable for policy assessment remain poorly understood. This work presents a systematic study of world models for robotic policy evaluation and introduces WMBench, a benchmark constructed from real-robot teleoperation data and matched policy rollouts covering diverse manipulation tasks to enable controlled comparisons across model families, action encodings, rollout horizons, and evaluation metrics. Using WMBench, we analyze 7 video world models, 4 action representation schemes, and over 324,000 simulated policy rollouts paired with real robot executions, further enriching our analysis with large-scale community submissions from the CVPR 2026 GigaBrain Challenge, curated synthetic trajectories, and a training videos spanning more than 12,000 hours. Our experiments deliver three core insights: evaluator quality is dominated by long-horizon, action-faithful rollout consistency rather than short-term visual realism; pretraining gains stem not only from data scale but from balancing general world knowledge with robot-specific controllability; and architectural choices including action encoding, memory design, and evaluator-focused post-training strongly determine alignment with real-world robot behavior. Drawing on these results, we derive a practical design roadmap and realize it in \\textit{GigaWorld-1}, a world model specially optimized for policy evaluation, and we fully release our code, models, datasets, and toolkits to advance scalable evaluation research for embodied foundation models.",
       "date": "2026-07-02",
@@ -3106,6 +3178,18 @@
       "score": 18,
       "reasons": [
         "keywords: embodied foundation"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "organization_hint": "MIT Computer Science and Artificial Intelligence Laboratory",
+      "summary": "Masked IRL uses language models to clarify ambiguous task instructions and identify the demonstration details relevant to planning safe robot motions.",
+      "title": "Masked IRL",
+      "url": "https://news.mit.edu/2026/llms-help-robots-understand-vague-instructions-and-focus-key-details-0626",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -3420,6 +3504,18 @@
         "keywords: vision-language-action, robot foundation, world model",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "organization_hint": "Beijing Xingdongjiyuan Technology Co., Ltd. (ROBOTERA)",
+      "summary": "Upgraded robotic dexterous hand designed for tighter integration with embodied models and contact-rich manipulation systems.",
+      "title": "ROBOTERA XHAND 1 PRO",
+      "url": "https://www.robotera.com/news.html?page=2",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -3760,6 +3856,18 @@
       ]
     },
     {
+      "date": "2026-06-10",
+      "organization_hint": "X Square Robot",
+      "summary": "Integrated hardware-software system for collecting motion-aligned dexterous-operation demonstrations and training robot manipulation policies.",
+      "title": "XRZero-G0",
+      "url": "https://x2robot.com/en/research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "VICX: Generalizable Robot Manipulation via Video Generation and In-Context Operator Network",
       "summary": "Generalizable robot manipulation requires not only task-level reasoning over unseen scenes, but also reliable grounding of visual plans into embodiment-specific execution. To bridge this gap, we propose VICX (Video generation and In-Context eXecution), a decoupled closed-loop manipulation framework. In VICX, a frozen video generation model produces vision-language-conditioned high-level visual plans, while a Video-to-Trajectory In-Context Operator Network (V2T-ICON) serves as the task-agnostic interface that grounds these plans into executable robot-state trajectories. To improve execution generalization, V2T-ICON operates on segmentation-extracted arm-only frame observations and uses retrieved image-state pairs as in-context prompts, allowing a robust and generalizable visual-to-state mapping at inference time without parameter updates. Experiments on Meta-World show that VICX supports cross-task generalization, closed-loop self-correction, and cross-embodiment transfer, demonstrating dual generalization across both task semantics and robot execution. The project webpage can be found here: https://scaling-group.github.io/vicx/.",
       "date": "2026-06-10",
@@ -4006,6 +4114,18 @@
       "score": 26,
       "reasons": [
         "keywords: dexterous manipulation, cross-embodiment"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "organization_hint": "Unitree Robotics",
+      "summary": "Academic humanoid research platform positioned as an NVIDIA Isaac GR00T reference robot and supporting secondary development of embodied-AI systems.",
+      "title": "Unitree H2 Plus",
+      "url": "https://www.unitree.com/news/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -4308,6 +4428,30 @@
       "reasons": [
         "keywords: world model, cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "organization_hint": "Cornell Collective Embodied Intelligence Lab",
+      "summary": "The Cross-Link Collective uses dozens of mechanically interacting robots to form a mobile, deformable collective that flows around obstacles without centralized control.",
+      "title": "Cross-Link Collective",
+      "url": "https://news.cornell.edu/stories/2026/05/robotic-matter-flows-adapts-through-mechanical-intelligence",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "organization_hint": "MIT Aerospace Controls Laboratory and University of Pennsylvania",
+      "summary": "MIGHTY is an open-source trajectory planner that enables aerial robots to generate smooth, dynamically feasible paths and react to obstacles using onboard computing.",
+      "title": "MIGHTY",
+      "url": "https://news.mit.edu/2026/new-research-enables-robot-to-chart-better-course-0519",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -4883,6 +5027,18 @@
       ]
     },
     {
+      "date": "2026-04-28",
+      "organization_hint": "MIT Center for Bits and Atoms",
+      "summary": "MILAbots are inchworm-like robotic assemblers that crawl over modular lattice structures, position voxel building blocks, and engage their snap-fit connections.",
+      "title": "Modular Inchworm Lattice Assembler Robots (MILAbots)",
+      "url": "https://news.mit.edu/2026/robotically-assembled-building-blocks-makes-construction-more-efficient-and-sustainable-0428",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "GazeVLA: Learning Human Intention for Robotic Manipulation",
       "summary": "Embodied foundation models have achieved significant breakthroughs in robotic manipulation, yet they still depend heavily on large-scale robot demonstrations. Although recent works have explored leveraging human data to alleviate this dependency, effectively extracting transferable knowledge remains a significant challenge due to the inherent embodiment gap between human and robot. We argue that the intention underlying human actions can serve as a powerful intermediate representation for bridging this gap. In this paper, we introduce a novel framework that explicitly learns and transfers human intention to facilitate robotic manipulation. Specifically, we model intention through gaze, as it naturally precedes physical actions and serves as an observable proxy for human intent. Our model is first pretrained on a large-scale egocentric human dataset to capture human intention and its synergy with action, followed by finetuning on a small set of robot and human data. During inference, the model adopts a Chain-of-Thought reasoning paradigm, sequentially predicting intention before executing the action. Extensive evaluations in simulation and real-world settings, across long-horizon and fine-grained tasks, and under few-shot and robustness benchmarks, show that our method consistently outperforms strong baselines, generalizes better, and achieves state-of-the-art performance. Project page: https://gazevla.github.io .",
       "date": "2026-04-24",
@@ -5015,6 +5171,18 @@
       "reasons": [
         "keywords: vla, humanoid, world model, cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "organization_hint": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "summary": "Release covering five robotic platforms and multiple embodied models, including the A3 humanoid, OmniHand 3 series, D2 Max quadruped and WITA Omni interaction model.",
+      "title": "AGIBOT 2026 Embodied AI Robots and Foundation Models",
+      "url": "https://agibot.com/article/231/detail/63.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -5337,6 +5505,18 @@
       ]
     },
     {
+      "date": "2026-04-08",
+      "organization_hint": "Princeton University School of Engineering and Applied Science",
+      "summary": "This soft-rigid origami robot integrates printed liquid-crystal-elastomer hinges, flexible electronics, and feedback control to execute programmable motion without motors or pneumatics.",
+      "title": "Self-Folding Liquid Crystal Elastomer Origami Robot",
+      "url": "https://engineering.princeton.edu/news/2026/04/08/soft-robot-has-no-problem-moving-no-motor-and-no-gears",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "RichMap: A Reachability Map Balancing Precision, Efficiency, and Flexibility for Rich Robot Manipulation Tasks",
       "summary": "This paper presents RichMap, a high-precision reachability map representation designed to balance efficiency and flexibility for versatile robot manipulation tasks. By refining the classic grid-based structure, we propose a streamlined approach that achieves performance close to compact map forms (e.g., RM4D) while maintaining structural flexibility. Our method utilizes theoretical capacity bounds on $\\mathbb{S}^2$ (or $SO(3)$) to ensure rigorous coverage and employs an asynchronous pipeline for efficient construction. We validate the map against comprehensive metrics, pursuing high prediction accuracy ($>98\\%$), low false positive rates ($1\\sim2\\%$), and fast large-batch query ($\\sim$15 $μ$s/query). We extend the framework applications to quantify robot workspace similarity via maximum mean discrepancy (MMD) metrics and demonstrate energy-based guidance for diffusion policy transfer, achieving up to $26\\%$ improvement for cross-embodiment scenarios in the block pushing experiment.",
       "date": "2026-04-08",
@@ -5449,6 +5629,18 @@
       "reasons": [
         "keywords: cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-04-01",
+      "organization_hint": "X Square Robot",
+      "summary": "Embodied foundation model built around a World Unified Model architecture intended to connect multimodal world understanding with physical action.",
+      "title": "WALL-B",
+      "url": "https://x2robot.com/en/about",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -5876,6 +6068,30 @@
       ]
     },
     {
+      "date": "2026-02-25",
+      "organization_hint": "Cornell Collective Embodied Intelligence Lab and Max Planck Institute for Intelligent Systems",
+      "summary": "A magnetically driven swarm of spinning microrobots generates fluid flows that turn gears and manipulate nearby objects without direct physical contact.",
+      "title": "Swarming Spinning Microrobots",
+      "url": "https://news.cornell.edu/stories/2026/02/swarming-spinning-microrobots-can-manipulate-their-surroundings",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2026-02-13",
+      "organization_hint": "Unitree Robotics",
+      "summary": "Embodied-intelligence model deployed for testing in Unitree's robot factory, where humanoid robots perform assembly and robot-manufacturing tasks.",
+      "title": "UnifoLM-X1-0",
+      "url": "https://www.unitree.com/about/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "RynnBrain: Open Embodied Foundation Models",
       "summary": "Despite rapid progress in multimodal foundation models, embodied intelligence community still lacks a unified, physically grounded foundation model that integrates perception, reasoning, and planning within real-world spatial-temporal dynamics. We introduce RynnBrain, an open-source spatiotemporal foundation model for embodied intelligence. RynnBrain strengthens four core capabilities in a unified framework: comprehensive egocentric understanding, diverse spatiotemporal localization, physically grounded reasoning, and physics-aware planning. The RynnBrain family comprises three foundation model scales (2B, 8B, and 30B-A3B MoE) and four post-trained variants tailored for downstream embodied tasks (i.e., RynnBrain-Nav, RynnBrain-Plan, and RynnBrain-VLA) or complex spatial reasoning tasks (i.e., RynnBrain-CoP). In terms of extensive evaluations on 20 embodied benchmarks and 8 general vision understanding benchmarks, our RynnBrain foundation models largely outperform existing embodied foundation models by a significant margin. The post-trained model suite further substantiates two key potentials of the RynnBrain foundation model: (i) enabling physically grounded reasoning and planning, and (ii) serving as a strong pretrained backbone that can be efficiently adapted to diverse embodied tasks.",
       "date": "2026-02-13",
@@ -5967,6 +6183,18 @@
       "reasons": [
         "keywords: robot foundation, world model",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-02-10",
+      "organization_hint": "Beijing Innovation Center of Humanoid Robotics",
+      "summary": "General-purpose full-size humanoid platform supporting touch interaction, highly dynamic whole-body control and stable operation in constrained environments.",
+      "title": "Embodied Tien Kung 3.0",
+      "url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202602/t20260212_4511437.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6390,6 +6618,18 @@
       ]
     },
     {
+      "date": "2025-11-14",
+      "organization_hint": "University of Oxford",
+      "summary": "These electronics-free fluidic soft robots use air pressure and mechanical coupling through the ground to produce complex rhythmic motion and synchronize with one another.",
+      "title": "Self-Synchronizing Fluidic Robots",
+      "url": "https://www.ox.ac.uk/news/2025-11-14-researchers-develop-air-powered-robots-move-sync-without-electronics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "EveryDayVLA: A Vision-Language-Action Model for Affordable Robotic Manipulation",
       "summary": "While Vision-Language-Action (VLA) models map visual inputs and language instructions directly to robot actions, they often rely on costly hardware and struggle in novel or cluttered scenes. We introduce EverydayVLA, a 6-DOF manipulator that can be assembled for under $300, capable of modest payloads and workspace. A single unified model jointly outputs discrete and continuous actions, and our adaptive-horizon ensemble monitors motion uncertainty to trigger on-the-fly re-planning for safe, reliable operation. On LIBERO, EverydayVLA matches state-of-the-art success rates, and in real-world tests it outperforms prior methods by 49% in-distribution and 34.9% out-of-distribution. By combining a state-of-the-art VLA with cost-effective hardware, EverydayVLA democratizes access to a robotic foundation model and paves the way for economical use in homes and research labs alike. Experiment videos and details: https://everydayvla.github.io/",
       "date": "2025-11-07",
@@ -6440,6 +6680,54 @@
       "reasons": [
         "keywords: embodied foundation",
         "release signal"
+      ]
+    },
+    {
+      "date": "2025-10-20",
+      "organization_hint": "Unitree Robotics",
+      "summary": "Full-size humanoid standing about 1.8 meters tall, with 31 degrees of freedom, high-torque joints, bionic visual sensing and support for embodied models.",
+      "title": "Unitree H2",
+      "url": "https://www.unitree.com/mobile/H2/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-10-14",
+      "organization_hint": "Caltech Center for Autonomous Systems and Technologies and Technology Innovation Institute",
+      "summary": "X1 integrates a humanoid robot with a transforming multimodal robot that launches from the humanoid's back, flies, lands, and converts to ground mobility.",
+      "title": "X1 Multirobot Response System",
+      "url": "https://www.caltech.edu/about/news/caltech-and-technology-innovation-institute-demo-multirobot-response-team",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-10-01",
+      "organization_hint": "Beijing Noetix Robotics Technology Group Co., Ltd.",
+      "summary": "Mobile bionic humanoid platform combining an expressive head, robotic arms, dexterous hands and a wheeled base for interactive service applications.",
+      "title": "Noetix W1 Bionic Robot",
+      "url": "https://noetixrobotics.com/en/about-us",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-10-01",
+      "organization_hint": "Beijing Noetix Robotics Technology Group Co., Ltd.",
+      "summary": "Consumer-oriented humanoid under one meter tall with bipedal locomotion, voice interaction, an open motion-control interface and graphical programming.",
+      "title": "Bumi Consumer-Grade Humanoid Robot",
+      "url": "https://noetixrobotics.com/en/news/media/213",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6564,6 +6852,18 @@
       ]
     },
     {
+      "date": "2025-09-08",
+      "organization_hint": "Cornell AgriTech",
+      "summary": "PhytoPatholoBot is an autonomous ground robot that detects grapevine diseases in near real time with reported accuracy comparable to trained human scouts.",
+      "title": "PhytoPatholoBot",
+      "url": "https://news.cornell.edu/stories/2025/09/robot-matches-humans-scouting-vineyard-diseases",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "RL's Razor: Why Online Reinforcement Learning Forgets Less",
       "summary": "Comparison of fine-tuning models with reinforcement learning (RL) and supervised fine-tuning (SFT) reveals that, despite similar performance at a new task, RL preserves prior knowledge and capabilities significantly better. We find that the degree of forgetting is determined by the distributional shift, measured as the KL-divergence between the fine-tuned and base policy evaluated on the new task. Our analysis reveals that on-policy RL is implicitly biased towards KL-minimal solutions among the many that solve the new task, whereas SFT can converge to distributions arbitrarily far from the base model. We validate these findings through experiments with large language models and robotic foundation models and further provide theoretical justification for why on-policy RL updates lead to a smaller KL change. We term this principle $\\textit{RL's Razor}$: among all ways to solve a new task, RL prefers those closest in KL to the original model.",
       "date": "2025-09-04",
@@ -6657,6 +6957,30 @@
       ]
     },
     {
+      "date": "2025-08-05",
+      "organization_hint": "Unitree Robotics",
+      "summary": "Industrial quadruped robot designed for sustained field operation, with long-distance walking, payload carrying and autonomous perception capabilities.",
+      "title": "Unitree A2",
+      "url": "https://www.unitree.com/A2/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-08-01",
+      "organization_hint": "X Square Robot",
+      "summary": "Next-generation wheeled humanoid robot released alongside the ArtiXon five-finger dexterous hand, which provides 20 degrees of freedom per hand.",
+      "title": "Quanta X2 and ArtiXon Hand",
+      "url": "https://x2robot.com/en/product/68ad9a319d9a1f1ecd40c31d",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "H-RDT: Human Manipulation Enhanced Bimanual Robotic Manipulation",
       "summary": "Imitation learning for robotic manipulation faces a fundamental challenge: the scarcity of large-scale, high-quality robot demonstration data. Recent robotic foundation models often pre-train on cross-embodiment robot datasets to increase data scale, while they face significant limitations as the diverse morphologies and action spaces across different robot embodiments make unified training challenging. In this paper, we present H-RDT (Human to Robotics Diffusion Transformer), a novel approach that leverages human manipulation data to enhance robot manipulation capabilities. Our key insight is that large-scale egocentric human manipulation videos with paired 3D hand pose annotations provide rich behavioral priors that capture natural manipulation strategies and can benefit robotic policy learning. We introduce a two-stage training paradigm: (1) pre-training on large-scale egocentric human manipulation data, and (2) cross-embodiment fine-tuning on robot-specific data with modular action encoders and decoders. Built on a diffusion transformer architecture with 2B parameters, H-RDT uses flow matching to model complex action distributions. Extensive evaluations encompassing both simulation and real-world experiments, single-task and multitask scenarios, as well as few-shot learning and robustness assessments, demonstrate that H-RDT outperforms training from scratch and existing state-of-the-art methods, including Pi0 and RDT, achieving significant improvements of 13.9% and 40.5% over training from scratch in simulation and real-world experiments, respectively. The results validate our core hypothesis that human manipulation data can serve as a powerful foundation for learning bimanual robotic manipulation policies.",
       "date": "2025-07-31",
@@ -6674,6 +6998,54 @@
       "reasons": [
         "keywords: cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-07-27",
+      "organization_hint": "Northwestern University Robotic Matter Lab",
+      "summary": "Northwestern's bioinspired artificial muscles were integrated into a human-scale robotic leg with rigid bones, elastic tendons, and sensing for bending, lifting, and kicking.",
+      "title": "Bioinspired Artificial-Muscle Robotic Leg",
+      "url": "https://news.northwestern.edu/stories/2025/07/bone-ified-muscles-could-be-robots-next-flex",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-07-25",
+      "organization_hint": "Unitree Robotics",
+      "summary": "Lightweight humanoid robot weighing approximately 25 kilograms and integrating voice and visual multimodal models for interaction and development.",
+      "title": "Unitree R1",
+      "url": "https://www.unitree.com/R1/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-07-24",
+      "organization_hint": "MIT Computer Science and Artificial Intelligence Laboratory",
+      "summary": "Neural Jacobian Fields learns a robot's three-dimensional geometry and response to control commands from camera observations and self-generated random motion.",
+      "title": "Neural Jacobian Fields",
+      "url": "https://news.mit.edu/2025/vision-based-system-teaches-machines-understand-their-bodies-0724",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-07-17",
+      "organization_hint": "MIT Department of Mechanical Engineering",
+      "summary": "This handheld robot-training interface supports teleoperation, kinesthetic teaching, and natural human demonstration through one reconfigurable device.",
+      "title": "Universal Robot-Training Interface",
+      "url": "https://news.mit.edu/2025/new-tool-gives-anyone-ability-to-train-robot-0717",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6772,6 +7144,42 @@
       ]
     },
     {
+      "date": "2025-07-06",
+      "organization_hint": "Fourier Intelligence",
+      "summary": "Full-size care-oriented humanoid and embodied-intelligence development platform featuring multimodal interaction, whole-body motion and tactile sensing.",
+      "title": "Fourier GR-3 Care-bot",
+      "url": "https://www.prnewswire.com/news-releases/meet-gr-3-beyond-function-designed-to-care-fourier-to-unveil-its-first-care-centric-humanoid-302523225.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-07-01",
+      "organization_hint": "Beijing Xingdongjiyuan Technology Co., Ltd. (ROBOTERA)",
+      "summary": "Full-size bipedal humanoid robot designed for both dynamic movement and embodied manipulation tasks, including logistics sorting, scanning and fastening.",
+      "title": "ROBOTERA L7",
+      "url": "https://www.robotera.com/robot/l7.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-06-25",
+      "organization_hint": "UC Berkeley Department of Electrical Engineering and Computer Sciences",
+      "summary": "Berkeley Humanoid Lite is a roughly one-meter, low-cost humanoid platform built with accessible components and 3D-printed structural parts, with open hardware and control software.",
+      "title": "Berkeley Humanoid Lite",
+      "url": "https://engineering.berkeley.edu/news/2025/06/berkeley-engineers-develop-customizable-3d-printed-robot-for-tech-newbies/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Position: Intelligent Science Laboratory Requires the Integration of Cognitive and Embodied AI",
       "summary": "Scientific discovery has long been constrained by human limitations in expertise, physical capability, and sleep cycles. The recent rise of AI scientists and automated laboratories has accelerated both the cognitive and operational aspects of research. However, key limitations persist: AI systems are often confined to virtual environments, while automated laboratories lack the flexibility and autonomy to adaptively test new hypotheses in the physical world. Recent advances in embodied AI, such as generalist robot foundation models, diffusion-based action policies, fine-grained manipulation learning, and sim-to-real transfer, highlight the promise of integrating cognitive and embodied intelligence. This convergence opens the door to closed-loop systems that support iterative, autonomous experimentation and the possibility of serendipitous discovery. In this position paper, we propose the paradigm of Intelligent Science Laboratories (ISLs): a multi-layered, closed-loop framework that deeply integrates cognitive and embodied intelligence. ISLs unify foundation models for scientific reasoning, agent-based workflow orchestration, and embodied agents for robust physical experimentation. We argue that such systems are essential for overcoming the current limitations of scientific discovery and for realizing the full transformative potential of AI-driven science.",
       "date": "2025-06-24",
@@ -6845,6 +7253,18 @@
         "keywords: embodied foundation",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-06-05",
+      "organization_hint": "MIT Computer Science and Artificial Intelligence Laboratory",
+      "summary": "cuTAMP uses GPU-parallel optimization to evaluate and refine thousands of candidate task-and-motion plans, enabling rapid manipulation planning across robot platforms.",
+      "title": "cuTAMP",
+      "url": "https://news.mit.edu/2025/new-system-enables-robots-to-solve-manipulation-problems-seconds-0605",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6963,6 +7383,18 @@
       ]
     },
     {
+      "date": "2025-04-24",
+      "organization_hint": "MIT Mechatronics Research Laboratory",
+      "summary": "Relevance combines audio, visual perception, and task inference to identify the scene objects most pertinent to assisting a human and focus robot planning on them.",
+      "title": "Relevance",
+      "url": "https://news.mit.edu/2025/robotic-system-zeroes-objects-most-relevant-helping-humans-0424",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Uncertainty-Aware Robotic World Model Makes Offline Model-Based Reinforcement Learning Work on Real Robots",
       "summary": "Reinforcement Learning (RL) has achieved impressive results in robotics, yet high-performing pipelines remain highly task-specific, with little reuse of prior data. Offline Model-based RL (MBRL) offers greater data efficiency by training policies entirely from existing datasets, but suffers from compounding errors and distribution shift in long-horizon rollouts. Although existing methods have shown success in controlled simulation benchmarks, robustly applying them to the noisy, biased, and partially observed datasets typical of real-world robotics remains challenging. We present a principled pipeline for making offline MBRL effective on physical robots. Our RWM-U extends autoregressive world models with epistemic uncertainty estimation, enabling temporally consistent multi-step rollouts with uncertainty effectively propagated over long horizons. We combine RWM-U with MOPO-PPO, which adapts uncertainty-penalized policy optimization to the stable, on-policy PPO framework for real-world control. We evaluate our approach on diverse manipulation and locomotion tasks in simulation and on real quadruped and humanoid, training policies entirely from offline datasets. The resulting policies consistently outperform model-free and uncertainty-unaware model-based baselines, and fusing real-world data in model learning further yields robust policies that surpass online model-free baselines trained solely in simulation.",
       "date": "2025-04-23",
@@ -6976,6 +7408,18 @@
       "reasons": [
         "keywords: humanoid, world model",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-04-22",
+      "organization_hint": "Cornell University Robot Learning Lab",
+      "summary": "RHyME enables a robot to learn multistep tasks from one human how-to video by retrieving related robot experiences and adapting them to mismatched embodiments.",
+      "title": "RHyME: Retrieval for Hybrid Imitation under Mismatched Execution",
+      "url": "https://news.cornell.edu/stories/2025/04/robot-see-robot-do-system-learns-after-watching-how-tos",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7220,6 +7664,18 @@
       ]
     },
     {
+      "date": "2025-03-12",
+      "organization_hint": "Beijing Humanoid Robot Innovation Center",
+      "summary": "General embodied-intelligence platform designed as a shared robot brain for autonomous decision-making and deployment across multiple robotic embodiments.",
+      "title": "Hui Si Kai Wu General Embodied Intelligence Platform",
+      "url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202503/t20250318_4036993.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "FP3: A 3D Foundation Policy for Robotic Manipulation",
       "summary": "Following its success in natural language processing and computer vision, foundation models that are pre-trained on large-scale multi-task datasets have also shown great potential in robotics. However, most existing robot foundation models rely solely on 2D image observations, ignoring 3D geometric information, which is essential for robots to perceive and reason about the 3D world. In this paper, we introduce FP3, a first large-scale 3D foundation policy model for robotic manipulation. FP3 builds on a scalable diffusion transformer architecture and is pre-trained on 60k trajectories with point cloud observations. With the model design and diverse pre-training data, FP3 can be efficiently fine-tuned for downstream tasks while exhibiting strong generalization capabilities. Experiments on real robots demonstrate that with only 80 demonstrations, FP3 is able to learn a new task with over 90% success rates in novel environments with unseen objects, significantly surpassing existing robot foundation models.",
       "date": "2025-03-11",
@@ -7295,6 +7751,18 @@
         "keywords: vla, robot foundation",
         "physical-robot evidence",
         "release signal"
+      ]
+    },
+    {
+      "date": "2025-01-27",
+      "organization_hint": "Cornell Organic Robotics Lab and Archer Group",
+      "summary": "Cornell's modular worm and jellyfish robots use electrochemical hydraulic fluid as both an energy store and an actuation medium, embedding power into the robots' bodies.",
+      "title": "Embodied-Energy Worm and Jellyfish Robots",
+      "url": "https://news.cornell.edu/stories/2025/01/embodied-energy-powers-modular-worm-jellyfish-robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7391,6 +7859,18 @@
       "score": 28,
       "reasons": [
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-01-01",
+      "organization_hint": "Search in progress",
+      "summary": "I’m collecting official release pages first, then I’ll verify dates and exclude entries that are only paper or conference pages.",
+      "title": "Status",
+      "url": "https://example.com",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     }
   ]
