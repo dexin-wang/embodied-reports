@@ -11,18 +11,40 @@
   "auto_publish_score": 42,
   "max_public_reports": 120,
   "catalog_limit": 180,
-  "max_verifications_per_run": 30,
-  "verification_workers": 4,
+  "max_verifications_per_run": 120,
+  "verification_workers": 3,
   "minimum_successful_candidates": 10,
   "trusted_organizations": [
-    "Physical Intelligence", "NVIDIA", "Google DeepMind", "Figure", "Hugging Face",
-    "BeingBeyond", "Robbyant", "X² Robotics", "Skild AI", "1X", "Agility Robotics",
-    "Boston Dynamics", "智元机器人", "银河通用", "自变量机器人", "千寻智能", "星海图"
+    "Physical Intelligence",
+    "NVIDIA",
+    "Google DeepMind",
+    "Figure",
+    "Hugging Face",
+    "BeingBeyond",
+    "Robbyant",
+    "X² Robotics",
+    "Skild AI",
+    "1X",
+    "Agility Robotics",
+    "Boston Dynamics",
+    "智元机器人",
+    "银河通用",
+    "自变量机器人",
+    "千寻智能",
+    "星海图"
   ],
   "keywords": [
-    "vision-language-action", "vision language action", "vla", "robot foundation",
-    "embodied foundation", "humanoid", "world model", "dexterous manipulation",
-    "cross-embodiment", "tactile", "whole-body"
+    "vision-language-action",
+    "vision language action",
+    "vla",
+    "robot foundation",
+    "embodied foundation",
+    "humanoid",
+    "world model",
+    "dexterous manipulation",
+    "cross-embodiment",
+    "tactile",
+    "whole-body"
   ],
   "organization_hints": {
     "nvidia": "NVIDIA",
@@ -40,5 +62,7 @@
     "galbot": "银河通用 / Galbot",
     "robot era": "星海图 / Robot Era",
     "x-humanoid": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center"
-  }
+  },
+  "discovery_policy_version": "official-project-impact-v2",
+  "official_discovery_minimum": 100
 }
