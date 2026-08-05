@@ -67,6 +67,17 @@ def response_text(result: dict) -> str:
     raise RuntimeError(f"Responses API returned no output text: {summary}")
 
 
+def response_json(result: dict) -> dict:
+    text = response_text(result).lstrip()
+    start = text.find("{")
+    if start < 0:
+        raise RuntimeError(f"Responses API output did not contain JSON: {text[:800]}")
+    value, _ = json.JSONDecoder().raw_decode(text[start:])
+    if not isinstance(value, dict):
+        raise RuntimeError("Responses API JSON output was not an object")
+    return value
+
+
 def call(topic: str) -> list[dict]:
     prompt = f"""Search the web for up to 20 influential embodied-robotics project releases since 2025 in this area: {topic}.
 Return only candidates that have a dedicated official project page, official company announcement, or official university/research-lab project page. Do not return an arXiv abstract as the URL. A paper/PDF and open source are optional.
@@ -85,7 +96,7 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
     try:
         with urllib.request.urlopen(request, timeout=180) as response:
             result = json.loads(response.read())
-        return json.loads(response_text(result))["candidates"]
+        return response_json(result)["candidates"]
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", "ignore")[:1200]
         raise RuntimeError(f"sub2api request rejected ({exc.code}): {detail}") from exc
