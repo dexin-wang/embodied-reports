@@ -14,14 +14,14 @@ function ExternalIcon() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function SourceFrameworkFigure({ report }: { report: Report }) {
+function SourceFrameworkFigure({ report, compact = false }: { report: Report; compact?: boolean }) {
   const [unavailable, setUnavailable] = useState(false);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const asset = `${basePath}/frameworks/${report.id}.jpg`;
   return (
-    <figure className="source-framework">
-      {!unavailable ? <img src={asset} alt={`${report.title} 的原始方法框架图`} onError={() => setUnavailable(true)} /> : <div className="framework-unavailable">暂未能从公开 PDF 中导出框架图。请打开原始报告查看方法图。</div>}
-      <figcaption>原始方法图 · {report.framework?.caption ?? "自动从公开技术报告 PDF 的 Figure 1/首个方法图提取"}{report.framework?.page ? ` · PDF 第 ${report.framework.page} 页` : ""}</figcaption>
+    <figure className={compact ? "source-framework card-framework" : "source-framework"}>
+      {!unavailable ? <img src={asset} alt={`${report.title} 的原始方法框架图`} onError={() => setUnavailable(true)} /> : <div className="framework-unavailable">暂未找到可公开提取的方法框架图</div>}
+      <>{!compact && <figcaption>原始方法图 · {report.framework?.caption ?? "自动从公开技术报告 PDF 的 Figure 1/首个方法图提取"}{report.framework?.page ? ` · PDF 第 ${report.framework.page} 页` : ""}</figcaption>}</>
     </figure>
   );
 }
@@ -153,6 +153,7 @@ export function ReportExplorer({ reports }: { reports: Report[] }) {
                   <div><h3>{report.title}</h3><p className="meta">{report.organization} <span>·</span> <time dateTime={report.date}>{report.date}</time></p></div>
                   <div className="badges"><span className="status">{report.verification === "Automated" ? "Auto-checked" : "Seed record"}</span>{report.openSource && <span className="status filled">Open source</span>}</div>
                 </div>
+                <SourceFrameworkFigure report={report} compact />
                 <div className="tags">{(report.fields ?? report.tags).map((tag) => <span key={tag}>{tag}</span>)}</div>
                 <p className="summary">{report.summary}</p>
                 <div className="card-bottom"><span className="details-hint">点击查看报告档案 <span aria-hidden="true">→</span></span><div className="links">{report.links.slice(0, 2).map((link) => <a key={link.label} href={link.url} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>{link.label} <ExternalIcon /></a>)}</div></div>
