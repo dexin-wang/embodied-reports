@@ -23,6 +23,12 @@ API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 MAX_CHARS = 28000
+ALLOWED_FIELDS = {
+    "Vision-language-action", "Large language models", "Humanoid intelligence",
+    "Whole-body control", "World models", "Robot manipulation",
+    "Dexterous manipulation", "Tactile intelligence", "Data & benchmarks",
+    "Robot systems", "Embodied AI",
+}
 
 SEEDS = [
     {"id": "being-h08", "title": "Being-H0.8", "url": "https://research.beingbeyond.com/being-h08"},
@@ -63,6 +69,11 @@ SCHEMA = {
     },
     "required": ["summary", "fields", "keyPoints", "capabilities", "metrics"],
 }
+
+
+def clean_fields(values: list[object]) -> list[str]:
+    fields = [value for value in values if isinstance(value, str) and value in ALLOWED_FIELDS]
+    return fields or ["Embodied AI"]
 
 
 def fetch(url: str) -> bytes:
@@ -113,7 +124,7 @@ def dossier(item: dict, text: str) -> dict:
     prompt = f"""You are writing a factual Chinese technical dossier for an embodied robotics index.
 Use only the source text below. Do not infer or invent methods, claims, model sizes, benchmark results, or capabilities.
 Write one concise Chinese summary, 4-7 concrete technical points, 3-5 implemented functions, and 1-5 exact reported metrics/results. When a source has no quantitative metric, record the precise qualitative result and state that it is qualitative.
-Allowed fields: Vision-language-action, Humanoid intelligence, Whole-body control, World models, Robot manipulation, Dexterous manipulation, Tactile intelligence, Data & benchmarks, Robot systems, Embodied AI.
+Allowed fields: Vision-language-action, Humanoid intelligence, Whole-body control, World models, Robot manipulation, Dexterous manipulation, Tactile intelligence, Data & benchmarks, Robot systems, Embodied AI, Large language models.
 
 TITLE: {item["title"]}
 PRIMARY SOURCE:
@@ -146,8 +157,8 @@ def main() -> None:
             existing[item["id"]] = {
                 "id": item["id"],
                 "summary": result["summary"],
-                "fields": result["fields"],
-                "tags": result["fields"],
+                "fields": clean_fields(result["fields"]),
+                "tags": clean_fields(result["fields"]),
                 "details": {
                     "keyPoints": result["keyPoints"],
                     "capabilities": result["capabilities"],
