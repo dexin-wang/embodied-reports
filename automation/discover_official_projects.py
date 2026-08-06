@@ -63,8 +63,7 @@ def response_text(result: dict) -> str:
             if content.get("type") == "output_text" and isinstance(content.get("text"), str):
                 parts.append(content["text"])
     if parts:
-        return "
-".join(parts)
+        return "\n".join(parts)
 
     summary = json.dumps(
         {key: result.get(key) for key in ("status", "error", "incomplete_details", "output")},
