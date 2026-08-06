@@ -32,6 +32,12 @@ API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 AUDIT_POLICY_VERSION = str(CONFIG.get("discovery_policy_version", "software-official-release-v3"))
+RETRY_ATTEMPTS = 3
+
+
+class RetryableProviderError(RuntimeError):
+    """Temporary upstream failure; retry this candidate on a later run."""
+
 
 SOCIAL_DOMAINS = {
     "x.com": "X", "twitter.com": "X", "linkedin.com": "LinkedIn",
@@ -157,9 +163,28 @@ ABSTRACT: {candidate['summary'][:6000]}
         data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(request, timeout=180) as response:
-        result = json.loads(response.read())
-    return response_json(result)
+    last_error = "unknown provider error"
+    for attempt in range(1, RETRY_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=180) as response:
+                result = json.loads(response.read())
+            return response_json(result)
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", "ignore")[:500]
+            # Credentials, model access, and malformed-request errors remain
+            # visible instead of making the catalog look silently current.
+            if 400 <= exc.code < 500 and exc.code != 429:
+                raise RuntimeError(f"OpenAI request failed ({exc.code}): {body}") from exc
+            last_error = f"HTTP {exc.code}: {body}"
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError, json.JSONDecodeError) as exc:
+            last_error = f"{type(exc).__name__}: {exc}"
+        if attempt < RETRY_ATTEMPTS:
+            delay = 4 * attempt
+            print(f"warning: transient verifier failure (attempt {attempt}/{RETRY_ATTEMPTS}); retrying in {delay}s: {last_error}")
+            time.sleep(delay)
+    raise RetryableProviderError(
+        f"provider unavailable after {RETRY_ATTEMPTS} attempts: {last_error}"
+    )
 
 
 def is_url(url: str) -> bool:
@@ -249,15 +274,13 @@ def main() -> None:
     def check(candidate: dict) -> tuple[dict, dict | None, Exception | None]:
         try:
             return candidate, call_model(candidate), None
-        except urllib.error.HTTPError as exc:
-            # Authentication, model access and schema errors must fail the run
-            # visibly rather than making the index look silently up to date.
-            body = exc.read().decode("utf-8", "ignore")[:500]
-            raise RuntimeError(f"OpenAI request failed ({exc.code}): {body}") from exc
-        except (urllib.error.URLError, TimeoutError, KeyError, ValueError, json.JSONDecodeError) as exc:
+        except (RetryableProviderError, urllib.error.URLError, TimeoutError, OSError, KeyError, ValueError, json.JSONDecodeError) as exc:
+            # No audit entry is written, so a later scheduled run retries only
+            # this candidate instead of aborting the entire batch.
             return candidate, None, exc
 
-    workers = min(int(CONFIG.get("verification_workers", 4)), len(todo))
+    # Limit local sub2api fan-out; it avoids overload-induced 502 responses.
+    workers = min(2, int(CONFIG.get("verification_workers", 4)), len(todo))
     with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
         futures = [pool.submit(check, candidate) for candidate in todo]
         checked = [future.result() for future in as_completed(futures)]
