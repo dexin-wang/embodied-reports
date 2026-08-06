@@ -39,8 +39,12 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check PyMuPDF
           python automation/enrich_seed_reports.py
-      - name: Extract original framework figures from verified report PDFs
-        run: python automation/extract_frameworks.py
+      - name: Clean taxonomy and structured detail lists
+        run: python automation/clean_catalog.py
+      - name: Extract original framework figures from PDFs or official project pages
+        run: |
+          python -m pip install --disable-pip-version-check Pillow
+          python automation/extract_frameworks.py --refresh
       - name: Save verified updates
         run: |
           git config user.name "embodied-reports-bot"
