@@ -148,8 +148,7 @@ def main() -> None:
             by_url[item["url"]] = {**item, "authors": [], "score": 100, "reasons": ["official web-project discovery"]}
             added += 1
     merged = sorted(by_url.values(), key=lambda item: (item.get("date", ""), item.get("title", "")), reverse=True)
-    CANDIDATES.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(), "candidates": merged}, ensure_ascii=False, indent=2) + "
-")
+    CANDIDATES.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(), "candidates": merged}, ensure_ascii=False, indent=2) + "\n")
     print(f"official_project_leads_added={added} candidates_total={len(merged)}")
 
 
