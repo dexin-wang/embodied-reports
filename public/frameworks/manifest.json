@@ -34,6 +34,18 @@
       "caption_detected": true
     },
     {
+      "id": "helix-02",
+      "asset": "frameworks/helix-02.jpg",
+      "source_url": "https://www.figure.ai/news/helix-02",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
       "id": "gr00t-n16",
       "asset": "frameworks/gr00t-n16.jpg",
       "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_6/",
@@ -79,9 +91,9 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=3840&q=70",
-      "width": 3840,
-      "height": 2161
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/2xDhvXSGZwGCFFuUHCk25T/816c4c9ba639c4035e196dfb5ead4966/figure-ai-helix-page-image.jpg",
+      "width": 1120,
+      "height": 630
     },
     {
       "id": "deepseek-r1",
@@ -115,7 +127,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=HTWYbXia-Z0Q7kNvwEiSMz8&_nc_oc=Adpc_7Z1MX8irzxAFlYQnb7Uv2zUU6SQqf2NJCG9UhXR8o-LWfq9Y3xwWHLHfDYg-FQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=8SXpwH6al8rN6vyYOOqEcw&_nc_ss=7b20f&oh=00_AQF4DERXZTLBm29Kri_Tlcn8buiSHTbZsP1DV9MVXd5Icg&oe=6A8E9733",
+      "image_url": "https://scontent-fra5-2.xx.fbcdn.net/v/t39.2365-6/488639590_2182781778834283_7341615399691839509_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=7MjgGi6liQoQ7kNvwHmyd5N&_nc_oc=AdpVgxrT7PKyqx-9tX0__4lnj2T49oL3_OgkH1UpROgu3IdsbG0V8vk4Ebqxpcelces&_nc_zt=14&_nc_ht=scontent-fra5-2.xx&_nc_gid=ABlMCY2RJUw4i8vkbjP86g&_nc_ss=7b20f&oh=00_AQEubU6lUcqsNA3GV8637S6W5Rbuvsmvh3NmqDfV86DECg&oe=6A8E8EA0",
       "width": 1920,
       "height": 1080
     },
@@ -142,6 +154,18 @@
       "image_url": "https://www.unitree.com/images/f7434125db244e79bdbe2e17ae3ab0ac_288x238.png",
       "width": 288,
       "height": 238
+    },
+    {
+      "id": "cross-link-collective-7b5906e",
+      "asset": "frameworks/cross-link-collective-7b5906e.jpg",
+      "source_url": "https://news.cornell.edu/stories/2026/05/robotic-matter-flows-adapts-through-mechanical-intelligence",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://news.cornell.edu/sites/default/files/styles/story_thumbnail_lg/public/2026-05/0520_chain.jpg?itok=zmqfWEZv",
+      "width": 555,
+      "height": 312
     },
     {
       "id": "embodied-tien-kung-3-0-bb78219",
@@ -228,6 +252,18 @@
       "height": 809
     },
     {
+      "id": "helix-02-full-body-autonomy-a42b12f",
+      "asset": "frameworks/helix-02-full-body-autonomy-a42b12f.jpg",
+      "source_url": "https://www.figure.ai/news/helix-02",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
       "id": "unitree-a2-industrial-quadruped-robot-69050d8",
       "asset": "frameworks/unitree-a2-industrial-quadruped-robot-69050d8.jpg",
       "source_url": "https://www.unitree.com/A2/",
@@ -276,6 +312,18 @@
       "height": 775
     },
     {
+      "id": "fourier-n1-open-source-humanoid-robot-a884abf",
+      "asset": "frameworks/fourier-n1-open-source-humanoid-robot-a884abf.jpg",
+      "source_url": "https://www.fftai.cn/products-n1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.fftai.cn/images/logo.jpg",
+      "width": 1000,
+      "height": 1000
+    },
+    {
       "id": "asap-aligning-simulation-and-real-world-physics--5ccdc93",
       "asset": "frameworks/asap-aligning-simulation-and-real-world-physics--5ccdc93.jpg",
       "source_url": "https://agile.human2humanoid.com/",
@@ -322,6 +370,18 @@
       "image_url": "https://www.x-humanoid.com/oss/static/img/project/hskw.png",
       "width": 784,
       "height": 588
+    },
+    {
+      "id": "gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde",
+      "asset": "frameworks/gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde.jpg",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://lh3.googleusercontent.com/5-bQ_5YmyLIrpzGGSl-KiaJCZuoJGKDyAMZc2COzuuOvdWDL7nsDY-8GtD-DzP9sKEukKM_SiJ4zpj8fHFDPCd_DcKO6k2x1PCK9NbJUsGOI1eYx=w1200-h630-n-nu-rw",
+      "width": 1200,
+      "height": 630
     }
   ]
 }
