@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   workflow_run:
-    workflows: ["Discover embodied reports"]
+    workflows: ["Discover embodied reports", "Refresh framework figures"]
     types: [completed]
 
 permissions:
