@@ -55,10 +55,20 @@ class ProjectImageParser(HTMLParser):
         self.order = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag.lower() != "img":
+        tag = tag.lower()
+        values = {key.lower(): value or "" for key, value in attrs}
+        if tag == "meta":
+            property_name = (values.get("property") or values.get("name") or "").lower()
+            source = values.get("content")
+            if property_name in {"og:image", "twitter:image"} and source:
+                self.order += 1
+                # OpenGraph/Twitter cards are the publisher's declared project
+                # visual and are used only after explicit in-page figures.
+                self.candidates.append((2, self.order, source))
+            return
+        if tag not in {"img", "source"}:
             return
         self.order += 1
-        values = {key.lower(): value or "" for key, value in attrs}
         source = values.get("src") or values.get("data-src") or values.get("data-original")
         if not source and values.get("srcset"):
             source = values["srcset"].split(",", 1)[0].strip().split(" ", 1)[0]
