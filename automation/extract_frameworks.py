@@ -11,13 +11,15 @@ from __future__ import annotations
 
 import json
 import re
-import sys
 import urllib.request
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
+from io import BytesIO
 from urllib.parse import urljoin
 from pathlib import Path
+
+from PIL import Image
 
 try:
     import fitz  # PyMuPDF
@@ -34,7 +36,14 @@ MAX_REPORTS = 80
 
 
 class ProjectImageParser(HTMLParser):
-    """Collect only project-page images whose metadata names a method diagram."""
+    """Collect explicitly described method figures from an official page.
+
+    Project sites frequently publish WebP/AVIF assets and put the useful signal
+    in an image ``alt`` attribute rather than in its file name.  We therefore
+    keep candidates only when their own metadata identifies an overview,
+    framework, architecture, pipeline, or system diagram; this is deliberately
+    not a generic hero-image scraper.
+    """
 
     TERMS = ("framework", "architecture", "method", "pipeline", "overview", "system")
 
@@ -47,12 +56,23 @@ class ProjectImageParser(HTMLParser):
             return
         values = {key.lower(): value or "" for key, value in attrs}
         source = values.get("src") or values.get("data-src") or values.get("data-original")
+        if not source and values.get("srcset"):
+            source = values["srcset"].split(",", 1)[0].strip().split(" ", 1)[0]
         if not source:
             return
-        text = " ".join(values.get(key, "") for key in ("alt", "title", "class", "src", "data-src")).lower()
+        text = " ".join(values.get(key, "") for key in ("alt", "title", "class", "id", "src", "data-src", "srcset")).lower()
         score = sum(1 for term in self.TERMS if term in text)
         if score:
             self.candidates.append((score, source))
+
+
+def save_web_image(image: bytes, target: Path) -> None:
+    """Convert a real project-page asset (including WebP/AVIF) to JPEG."""
+    with Image.open(BytesIO(image)) as opened:
+        image_rgb = opened.convert("RGB")
+        if image_rgb.width < 240 or image_rgb.height < 140:
+            raise ValueError("candidate project image is too small to be a framework figure")
+        image_rgb.save(target, format="JPEG", quality=86, optimize=True)
 
 
 def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | None:
@@ -72,10 +92,7 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
             timeout=30,
         ) as response:
             image = response.read()
-        pixmap = fitz.Pixmap(image)
-        if pixmap.alpha or pixmap.colorspace != fitz.csRGB:
-            pixmap = fitz.Pixmap(fitz.csRGB, pixmap)
-        pixmap.save(target, jpg_quality=86)
+        save_web_image(image, target)
         return {
             "id": report_id,
             "asset": f"frameworks/{report_id}.jpg",
@@ -131,13 +148,17 @@ def find_method_figure(document: fitz.Document) -> tuple[int, fitz.Rect, bool]:
     return 0, fitz.Rect(18, 18, page.rect.width - 18, page.rect.height - 18), False
 
 
-def extract(report_id: str, source_url: str, refresh: bool = False) -> dict | None:
+def extract(report_id: str, source_url: str, official_url: str | None = None, refresh: bool = False) -> dict | None:
     target = OUT_DIR / f"{report_id}.jpg"
     if target.exists() and not refresh:
         return {"id": report_id, "asset": f"frameworks/{report_id}.jpg", "source_url": source_url, "page": None, "caption_detected": False, "cached": True}
     body = fetch_pdf(arxiv_pdf(source_url))
     if body is None:
-        return extract_web_figure(report_id, source_url, target)
+        # A non-PDF report link can be an announcement or an arXiv lead.  In
+        # that case, look for an explicitly labelled diagram on the dedicated
+        # official project page instead of treating the report URL as the only
+        # possible web source.
+        return extract_web_figure(report_id, official_url or source_url, target)
     document = fitz.open(stream=body, filetype="pdf")
     try:
         selected_page, selected_crop, found_caption = find_method_figure(document)
@@ -162,9 +183,11 @@ def sources() -> list[dict]:
     verified = json.loads(VERIFIED.read_text()) if VERIFIED.exists() else []
     dynamic = []
     for report in verified[:MAX_REPORTS]:
-        primary = next((link["url"] for link in report.get("links", []) if link.get("label") == "Report"), None)
-        if primary:
-            dynamic.append({"id": report["id"], "source_url": primary})
+        links = report.get("links", [])
+        primary = next((link["url"] for link in links if link.get("label") == "Report"), None)
+        official = next((link["url"] for link in links if link.get("label") == "Project"), None)
+        if primary or official:
+            dynamic.append({"id": report["id"], "source_url": primary or official, "official_url": official})
     all_sources = {item["id"]: item for item in [*static, *dynamic]}
     return list(all_sources.values())[:MAX_REPORTS]
 
@@ -187,7 +210,7 @@ def main() -> None:
         ]
     else:
         with ThreadPoolExecutor(max_workers=6) as pool:
-            results = list(pool.map(lambda item: extract(item["id"], item["source_url"], args.refresh), source_items))
+            results = list(pool.map(lambda item: extract(item["id"], item["source_url"], item.get("official_url"), args.refresh), source_items))
     entries = [result for result in results if result]
     MANIFEST.write_text(json.dumps({"figures": entries}, ensure_ascii=False, indent=2) + "\n")
     print(f"extracted={len(entries)} sources={len(source_items)}")
