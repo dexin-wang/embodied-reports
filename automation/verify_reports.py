@@ -40,7 +40,7 @@ SOCIAL_DOMAINS = {
     "reddit.com": "Reddit", "facebook.com": "Facebook", "instagram.com": "Instagram",
 }
 ALLOWED_FIELDS = {
-    "Vision-language-action", "Large language models", "Humanoid intelligence",
+    "Vision-language-action", "LLM", "Humanoid intelligence",
     "Whole-body control", "World models", "Robot manipulation",
     "Dexterous manipulation", "Tactile intelligence", "Data & benchmarks",
     "Robot systems", "Embodied AI",
@@ -135,7 +135,7 @@ Use web search before deciding. A candidate is eligible ONLY if all conditions a
 If any condition cannot be supported by accessible web sources, set include=false and state the missing condition in reason. Do not guess URLs, affiliations, dates, metrics, or social evidence.
 For a Chinese organization, use its established Chinese and English names; otherwise organization_zh is an empty string.
 Write a substantive Chinese dossier from the official page, technical report, and linked project material: 4–7 concrete technical points, 3–5 implemented capabilities, and 1–5 exact reported metrics/results. Do not make claims not supported by those sources. For metrics without a reliable numerical comparison, state the exact qualitative capability rather than inventing a number.
-Allowed fields: Vision-language-action, Humanoid intelligence, Whole-body control, World models, Robot manipulation, Dexterous manipulation, Tactile intelligence, Data & benchmarks, Robot systems, Embodied AI.
+Allowed fields: Vision-language-action, LLM, Humanoid intelligence, Whole-body control, World models, Robot manipulation, Dexterous manipulation, Tactile intelligence, Data & benchmarks, Robot systems, Embodied AI.
 
 CANDIDATE TITLE: {candidate['title']}
 ARXIV/PRIMARY LEAD: {candidate['url']}
