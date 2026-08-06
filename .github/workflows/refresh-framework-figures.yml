@@ -1,0 +1,40 @@
+name: Refresh framework figures
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "automation/extract_frameworks.py"
+      - "automation/framework_sources.json"
+      - "data/verified.json"
+      - "app/reports.ts"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-framework-figures
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    # This job deliberately uses a GitHub-hosted runner: it only downloads
+    # public PDFs/project-page images and does not require the local sub2api.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Extract PDF-first and official-project-page figures
+        run: |
+          python -m pip install --disable-pip-version-check PyMuPDF Pillow
+          python automation/extract_frameworks.py --refresh
+      - name: Save source images
+        run: |
+          git config user.name "embodied-reports-bot"
+          git config user.email "embodied-reports-bot@users.noreply.github.com"
+          git add public/frameworks
+          git diff --cached --quiet || git commit -m "assets: refresh source framework figures"
+          git push
