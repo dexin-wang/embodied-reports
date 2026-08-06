@@ -127,7 +127,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-fra5-2.xx.fbcdn.net/v/t39.2365-6/488639590_2182781778834283_7341615399691839509_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=7MjgGi6liQoQ7kNvwHmyd5N&_nc_oc=AdpVgxrT7PKyqx-9tX0__4lnj2T49oL3_OgkH1UpROgu3IdsbG0V8vk4Ebqxpcelces&_nc_zt=14&_nc_ht=scontent-fra5-2.xx&_nc_gid=ABlMCY2RJUw4i8vkbjP86g&_nc_ss=7b20f&oh=00_AQEubU6lUcqsNA3GV8637S6W5Rbuvsmvh3NmqDfV86DECg&oe=6A8E8EA0",
+      "image_url": "https://scontent-sea5-1.xx.fbcdn.net/v/t39.2365-6/488639590_2182781778834283_7341615399691839509_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=7MjgGi6liQoQ7kNvwG5k13y&_nc_oc=AdqOhrkPvzrVZzHZc2pkulNY7oJYNsbLKWCY6uypHYsIlZZ_4VZoVxPHk3m53sSWf7o&_nc_zt=14&_nc_ht=scontent-sea5-1.xx&_nc_gid=TYRoQCwV1FBs3Ad0VcO3Qw&_nc_ss=7b20f&oh=00_AQGlbURrjUgiLhOkKpyyNJg7h3n-K8oMMt8Y6eeyBNpmXA&oe=6A8EC6E0",
       "width": 1920,
       "height": 1080
     },
@@ -139,69 +139,21 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Chatbot_Arena_ELO_Score.width-1200.format-webp.webp",
-      "width": 1200,
-      "height": 762
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemma3_KeywordBlog_RD3_V01b_SocialShare.width-1300.png",
+      "width": 1300,
+      "height": 731
     },
     {
-      "id": "unitree-h2-plus-d39592d",
-      "asset": "frameworks/unitree-h2-plus-d39592d.jpg",
-      "source_url": "https://www.unitree.com/mobile/H2plus/",
+      "id": "wall-wm-world-action-model-9de8900",
+      "asset": "frameworks/wall-wm-world-action-model-9de8900.jpg",
+      "source_url": "https://x2robot.com/pages/wm",
       "page": null,
-      "caption_detected": false,
+      "caption_detected": true,
       "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.unitree.com/images/f7434125db244e79bdbe2e17ae3ab0ac_288x238.png",
-      "width": 288,
-      "height": 238
-    },
-    {
-      "id": "cross-link-collective-7b5906e",
-      "asset": "frameworks/cross-link-collective-7b5906e.jpg",
-      "source_url": "https://news.cornell.edu/stories/2026/05/robotic-matter-flows-adapts-through-mechanical-intelligence",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://news.cornell.edu/sites/default/files/styles/story_thumbnail_lg/public/2026-05/0520_chain.jpg?itok=zmqfWEZv",
-      "width": 555,
-      "height": 312
-    },
-    {
-      "id": "embodied-tien-kung-3-0-bb78219",
-      "asset": "frameworks/embodied-tien-kung-3-0-bb78219.jpg",
-      "source_url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202602/t20260212_4511437.html",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202602/W020260212612282508252.jpg",
-      "width": 554,
-      "height": 369
-    },
-    {
-      "id": "unitree-h2-humanoid-robot-c5efccb",
-      "asset": "frameworks/unitree-h2-humanoid-robot-c5efccb.jpg",
-      "source_url": "https://www.unitree.com/cn/H2/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.unitree.com/images/11d0a76afbb74e8fb7f692652b4c33e0_800x800.png",
-      "width": 800,
-      "height": 800
-    },
-    {
-      "id": "unitree-h2-adac253",
-      "asset": "frameworks/unitree-h2-adac253.jpg",
-      "source_url": "https://www.unitree.com/mobile/H2/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.unitree.com/images/f7434125db244e79bdbe2e17ae3ab0ac_288x238.png",
-      "width": 288,
-      "height": 238
+      "selection": "method_figure",
+      "image_url": "https://x2robot.com/pages/wm/assets/images/fig_teaser.jpg",
+      "width": 4258,
+      "height": 2379
     },
     {
       "id": "x1-multirobot-response-system-c40730d",
@@ -214,30 +166,6 @@
       "image_url": "https://caltech-prod.resources.caltech.edu/main/images/CAST-X1-Robot-CaltechHall-WE.2e16d0ba.fill-1600x810-c100.jpg",
       "width": 1600,
       "height": 810
-    },
-    {
-      "id": "noetix-w1-bionic-robot-2a08393",
-      "asset": "frameworks/noetix-w1-bionic-robot-2a08393.jpg",
-      "source_url": "https://noetixrobotics.com/en/hobbs-w1",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.noetixrobotics.com/mtsc/uploads/Ckeditor/Images/2026-03-26/Bumi.webp",
-      "width": 440,
-      "height": 600
-    },
-    {
-      "id": "bumi-consumer-grade-humanoid-robot-a696837",
-      "asset": "frameworks/bumi-consumer-grade-humanoid-robot-a696837.jpg",
-      "source_url": "https://noetixrobotics.com/en/product/n2/1262",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.noetixrobotics.com/mtsc/uploads/Ckeditor/Images/2026-03-26/Bumi.webp",
-      "width": 440,
-      "height": 600
     },
     {
       "id": "gemini-robotics-1-5-brings-ai-agents-into-the-ph-5fd6c1e",
@@ -264,42 +192,6 @@
       "height": 630
     },
     {
-      "id": "unitree-a2-industrial-quadruped-robot-69050d8",
-      "asset": "frameworks/unitree-a2-industrial-quadruped-robot-69050d8.jpg",
-      "source_url": "https://www.unitree.com/A2/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.unitree.com/images/11d0a76afbb74e8fb7f692652b4c33e0_800x800.png",
-      "width": 800,
-      "height": 800
-    },
-    {
-      "id": "unitree-a2-573fd6a",
-      "asset": "frameworks/unitree-a2-573fd6a.jpg",
-      "source_url": "https://www.unitree.com/A2/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.unitree.com/images/11d0a76afbb74e8fb7f692652b4c33e0_800x800.png",
-      "width": 800,
-      "height": 800
-    },
-    {
-      "id": "unitree-r1-a89c5ad",
-      "asset": "frameworks/unitree-r1-a89c5ad.jpg",
-      "source_url": "https://www.unitree.com/R1/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.unitree.com/images/11d0a76afbb74e8fb7f692652b4c33e0_800x800.png",
-      "width": 800,
-      "height": 800
-    },
-    {
       "id": "gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4",
       "asset": "frameworks/gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4.jpg",
       "source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
@@ -310,18 +202,6 @@
       "image_url": "https://lh3.googleusercontent.com/I6Zopg7Y_-VweSLsrzuRFGXeuIvUAJPXwEnxvnFyGjqWl65K3luU2WFHyGEu4xvC-QWB7jW62FM5j_oKk6pvZB7X6QXsKKdYehyJZYoKmHem7MAJ35U=w1440",
       "width": 1232,
       "height": 775
-    },
-    {
-      "id": "fourier-n1-open-source-humanoid-robot-a884abf",
-      "asset": "frameworks/fourier-n1-open-source-humanoid-robot-a884abf.jpg",
-      "source_url": "https://www.fftai.cn/products-n1",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.fftai.cn/images/logo.jpg",
-      "width": 1000,
-      "height": 1000
     },
     {
       "id": "asap-aligning-simulation-and-real-world-physics--5ccdc93",
