@@ -24,6 +24,25 @@ ORGANIZATION_ALIASES = {
     "通义千问": "通义千问 / Qwen",
 }
 TITLE_ALIASES = {"embodied tien kung 3 0": "embodied tiangong 3 0"}
+# This is an index of software work, not an index of robot products.  These
+# legacy rows entered through an earlier broad humanoid/product discovery pass.
+# Keep the list explicit so a model name containing "robot" is never removed
+# simply because it is applied to hardware.
+HARDWARE_PRODUCT_TITLES = {
+    "robotera l7",
+    "cross link collective",
+    "embodied tiangong 3 0",
+    "unitree h2 humanoid robot",
+    "unitree h2 plus",
+    "unitree h2",
+    "unitree a2 industrial quadruped robot",
+    "unitree a2",
+    "unitree r1",
+    "noetix w1 bionic robot",
+    "bumi consumer grade humanoid robot",
+    "fourier n1 open source humanoid robot",
+    "swarming spinning microrobots",
+}
 
 
 def field_values(values: object) -> list[str]:
@@ -65,6 +84,13 @@ def title_key(title: object) -> str:
     return "".join(char for char in canonical if char.isalnum())
 
 
+def is_software_report(record: dict) -> bool:
+    """Reject an identified robot body/product while retaining software work."""
+    title_key = re.sub(r"[^a-z0-9]+", "", str(record.get("title", "")).lower())
+    hardware_keys = {re.sub(r"[^a-z0-9]+", "", title) for title in HARDWARE_PRODUCT_TITLES}
+    return title_key not in hardware_keys
+
+
 def completeness(record: dict) -> tuple[int, int, int]:
     details = record.get("details") if isinstance(record.get("details"), dict) else {}
     return (len(details.get("keyPoints", [])), len(details.get("metrics", [])), len(record.get("links", [])))
@@ -91,7 +117,7 @@ def main() -> None:
         for row in rows:
             if isinstance(row, dict):
                 clean_record(row)
-        rows = deduplicate(rows)
+        rows = [row for row in deduplicate(rows) if is_software_report(row)]
         path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n")
         print(f"cleaned={path.relative_to(ROOT)} rows={len(rows)}")
 

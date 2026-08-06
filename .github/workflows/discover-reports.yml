@@ -3,6 +3,14 @@ name: Discover embodied reports
 on:
   schedule:
     - cron: "17 2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "automation/company_roster.json"
+      - "automation/discover_official_projects.py"
+      - "automation/verify_reports.py"
+      - "automation/clean_catalog.py"
+      - "automation/sources.json"
   workflow_dispatch:
 
 permissions:

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import re
+import html as html_lib
 import urllib.request
 import argparse
 from concurrent.futures import ThreadPoolExecutor
@@ -111,8 +112,23 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
             html = response.read().decode("utf-8", "ignore")
+        # Some official sites (notably Next.js release pages) serialize their
+        # actual project markup inside a script as ``\\u003cimg ...\\u003e``.
+        # Feed that markup to the same source-image parser. This is still an
+        # original asset served by the official page; it merely is not present
+        # as a browser-visible <img> in the initial document shell.
+        embedded_markup = html_lib.unescape(
+            html.replace("\\u003c", "<").replace("\\u003e", ">")
+            .replace("\\u0026", "&").replace("\\\\\"", '"')
+        )
+        embedded_markup = embedded_markup.replace('\\"', '"')
         parser = ProjectImageParser()
-        parser.feed(html)
+        parser.feed(embedded_markup)
+        # The decoded release markup is still nested inside its original
+        # <script> node, so HTMLParser correctly treats it as text above.
+        # Parse its image/source fragments once more as standalone tags.
+        for tag in re.findall(r"<(?:img|source)\b[^>]*>", embedded_markup, flags=re.I):
+            parser.feed(tag)
         if not parser.candidates:
             return None
         # First prefer an explicitly labelled framework. If unavailable, retain
@@ -120,7 +136,9 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
         # official project page.  No synthetic or code-rendered diagram is used.
         ordered = sorted(parser.candidates, key=lambda item: (-item[0], item[1]))[:16]
         for score, _, image_ref in ordered:
-            image_url = urljoin(source_url, image_ref)
+            # Treat the page URL as a directory so project-local assets such
+            # as ``assets/images/overview.jpg`` resolve to /pages/<project>/.
+            image_url = urljoin(source_url.rstrip("/") + "/", image_ref)
             try:
                 with urllib.request.urlopen(
                     urllib.request.Request(image_url, headers={"User-Agent": "EmbodiedReports/1.0"}),
@@ -244,6 +262,11 @@ def main() -> None:
     source_items = sources()
     if args.limit is not None:
         source_items = source_items[:args.limit]
+    previous_entries = {
+        item.get("id"): item
+        for item in (json.loads(MANIFEST.read_text()).get("figures", []) if MANIFEST.exists() else [])
+        if isinstance(item, dict) and item.get("id")
+    }
     if args.cached_only:
         results = [
             {"id": item["id"], "asset": f"frameworks/{item['id']}.jpg", "source_url": item["source_url"], "page": None, "caption_detected": False, "cached": True}
@@ -253,7 +276,17 @@ def main() -> None:
     else:
         with ThreadPoolExecutor(max_workers=6) as pool:
             results = list(pool.map(lambda item: extract(item["id"], item["source_url"], item.get("official_url"), args.refresh), source_items))
-    entries = [result for result in results if result]
+    entries = []
+    for item, result in zip(source_items, results):
+        if result:
+            entries.append(result)
+            continue
+        # A temporary CDN/anti-bot failure must not blank an already extracted
+        # source image on the public site. Keep it until a future refresh can
+        # replace it with another verified source asset.
+        previous = previous_entries.get(item["id"])
+        if previous and (OUT_DIR / f"{item['id']}.jpg").exists():
+            entries.append(previous)
     MANIFEST.write_text(json.dumps({"figures": entries}, ensure_ascii=False, indent=2) + "\n")
     print(f"extracted={len(entries)} sources={len(source_items)}")
 

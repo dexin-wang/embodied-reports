@@ -31,7 +31,7 @@ AUDIT = ROOT / "automation" / "verification_audit.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
-AUDIT_POLICY_VERSION = str(CONFIG.get("discovery_policy_version", "official-project-impact-v2"))
+AUDIT_POLICY_VERSION = str(CONFIG.get("discovery_policy_version", "software-official-release-v3"))
 
 SOCIAL_DOMAINS = {
     "x.com": "X", "twitter.com": "X", "linkedin.com": "LinkedIn",
@@ -51,6 +51,7 @@ SCHEMA = {
     "additionalProperties": False,
     "properties": {
         "include": {"type": "boolean"},
+        "software_project": {"type": "boolean"},
         "reason": {"type": "string"},
         "official_project_url": {"type": "string"},
         "official_organization_url": {"type": "string"},
@@ -80,7 +81,7 @@ SCHEMA = {
         },
     },
     "required": [
-        "include", "reason", "official_project_url", "official_organization_url", "organization_en", "organization_zh",
+        "include", "software_project", "reason", "official_project_url", "official_organization_url", "organization_en", "organization_zh",
         "organization_kind", "fields", "summary_zh", "key_points", "capabilities", "metrics", "open_source", "social_evidence",
     ],
 }
@@ -126,11 +127,11 @@ def slug(title: str) -> str:
 def call_model(candidate: dict) -> dict:
     prompt = f"""You curate a strict public index of influential embodied-robotics technical projects released since 2025.
 Use web search before deciding. A candidate is eligible ONLY if all conditions are met:
-1. It is materially about physical robots / embodied intelligence (not merely autonomous driving, generic vision, or a normal ML paper).
-2. A dedicated official project page, official organization announcement, or official research-lab project page exists. arXiv alone is never official-project evidence.
-3. A specific company, university, or named research institute is explicitly responsible. Never use vague labels such as 'Research team'.
-4. There is public discussion on at least TWO distinct social platforms. At least one must be by an account/publication not controlled by the responsible organization.
-5. Do not require open source, a paper, or a PDF.
+1. The released artifact is software for physical robots / embodied intelligence: for example a VLA, robot foundation model, world/action model, policy, data engine or dataset, simulator, control/planning stack, evaluation benchmark, or embodied agent framework. It may be paired with robot hardware, but the software must be the subject of the dedicated page.
+2. Reject hardware-only announcements and product pages. A humanoid, quadruped, hand, sensor, robot body, actuator, teleoperation device, or product specification is NOT eligible even if its page mentions AI, a VLA, compute hardware, or future developer support.
+3. A dedicated official project page, official organization announcement, or official research-lab project page exists. arXiv alone is never official-project evidence.
+4. A specific company, university, or named research institute is explicitly responsible. Never use vague labels such as 'Research team'.
+5. Do not require open source, a paper, a PDF, or separate social-media evidence: the dedicated official page is sufficient once the software criterion is met.
 
 If any condition cannot be supported by accessible web sources, set include=false and state the missing condition in reason. Do not guess URLs, affiliations, dates, metrics, or social evidence.
 For a Chinese organization, use its established Chinese and English names; otherwise organization_zh is an empty string.
@@ -180,6 +181,8 @@ def clean_fields(values: object) -> list[str]:
 def valid_verdict(verdict: dict) -> tuple[bool, str, list[dict]]:
     if not verdict["include"]:
         return False, verdict["reason"], []
+    if not verdict["software_project"]:
+        return False, "hardware-only or non-software release", []
     if not all((verdict["organization_en"].strip(), verdict["official_project_url"].strip(), verdict["official_organization_url"].strip())):
         return False, "missing named institution or official source", []
     if verdict["organization_en"].strip().lower() in {"research team", "unknown", "n/a"}:
@@ -196,9 +199,6 @@ def valid_verdict(verdict: dict) -> tuple[bool, str, list[dict]]:
         platform = social_platform(item["url"])
         if platform:
             evidence.append({**item, "platform": platform})
-    platforms = {item["platform"] for item in evidence}
-    if len(platforms) < 2 or not any(item["independent"] for item in evidence):
-        return False, "insufficient independent multi-platform social evidence", []
     return True, "", evidence
 
 

@@ -18,26 +18,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = ROOT / "automation" / "candidates.json"
+COMPANY_ROSTER = ROOT / "automation" / "company_roster.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 
 TOPICS = [
-    "generalist vision-language-action and robot foundation-model releases from major robotics companies",
-    "official embodied robotics releases from China: X² Robotics, AgiBot, Galbot, Robot Era, Unitree, Fourier Intelligence, Noetix and Beijing Humanoid Robot Innovation Center",
-    "humanoid intelligence, whole-body control, locomotion-manipulation and humanoid deployment systems",
-    "robot manipulation foundation models, cross-embodiment transfer and real-robot generalist policies",
-    "dexterous hands, bimanual manipulation, tactile intelligence, force-aware learning and contact-rich control",
-    "robot world models, video-action models, simulation-to-real and physical prediction systems",
-    "embodied navigation, mobile manipulation, aerial robots and spatial action foundation models",
+    "generalist vision-language-action, robot foundation-model and embodied-agent software releases",
+    "robot manipulation policies, cross-embodiment transfer, action representations and real-robot generalist software",
+    "dexterous manipulation software, tactile intelligence, force-aware learning and contact-rich control algorithms",
+    "robot world models, video-action models, simulation-to-real software and physical prediction systems",
+    "embodied navigation, mobile manipulation, spatial planning and robot-control software",
     "robot data engines, large-scale robot datasets, demonstration collection and embodied benchmarks",
-    "real-time VLA inference, action chunking, robot systems and physical-agent deployment platforms",
-    "official project releases from Physical Intelligence, NVIDIA, Google DeepMind, Figure, 1X, Skild AI, Hugging Face, Boston Dynamics and Agility Robotics",
-    "official embodied robotics project releases from leading university laboratories in North America and Europe",
-    "official embodied robotics project releases from Tsinghua University, Peking University, Zhejiang University, Shanghai Jiao Tong University, HKU, CUHK and Shanghai AI Laboratory",
-    "robot foundation models for household assistance, human-robot interaction and long-horizon task planning",
-    "robot learning releases focused on imitation learning, reinforcement learning, action representations and policy post-training",
-    "embodied AI project releases for multi-modal perception, spatial reasoning, robot planning and physical reasoning",
+    "real-time VLA inference, action chunking, robot policy serving and physical-agent software stacks",
+    "robot-learning releases focused on imitation learning, reinforcement learning, policy post-training and evaluation",
 ]
 
 ITEM = {
@@ -89,7 +83,8 @@ def response_json(result: dict) -> dict:
 
 def call(topic: str) -> list[dict]:
     prompt = f"""Search the web for up to 20 influential embodied-robotics project releases since 2025 in this area: {topic}.
-Return only candidates that have a dedicated official project page, official company announcement, or official university/research-lab project page. Do not return an arXiv abstract as the URL. A paper/PDF and open source are optional.
+Return only software candidates that have a dedicated official project page, official company announcement, or official university/research-lab project page. Do not return an arXiv abstract as the URL. A paper/PDF and open source are optional.
+Include VLA/foundation models, world/action models, policies, data engines/datasets, simulators, control/planning stacks, benchmarks, or embodied-agent frameworks. Exclude all hardware-only robot/product announcements: robot bodies, humanoids, quadrupeds, hands, sensors, motors, teleoperation devices, and product specifications are not technical reports for this index.
 The candidate may later be rejected, so do not guess any value. Use a precise YYYY-MM-DD date only when the official page gives one; otherwise return the first day of the known release month. Include a short factual English summary and the named organization shown by the official source.
 Exclude generic autonomous-driving, normal computer-vision, and purely academic conference-paper pages with no project release."""
     payload = {
@@ -111,13 +106,26 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
         raise RuntimeError(f"sub2api request rejected ({exc.code}): {detail}") from exc
 
 
+def discovery_topics() -> list[str]:
+    """Search the named company roster in small, auditable groups."""
+    roster = json.loads(COMPANY_ROSTER.read_text()) if COMPANY_ROSTER.exists() else []
+    names = [item["name"] for item in roster if isinstance(item, dict) and item.get("name")]
+    groups = [names[index:index + 6] for index in range(0, len(names), 6)]
+    company_topics = [
+        "Official dedicated pages for embodied-robotics SOFTWARE releases from these organizations: "
+        + ", ".join(group)
+        for group in groups
+    ]
+    return [*TOPICS, *company_topics]
+
+
 def main() -> None:
     if not API_KEY:
         raise SystemExit("OPENAI_API_KEY is required for official project discovery")
     payload = json.loads(CANDIDATES.read_text()) if CANDIDATES.exists() else {"candidates": []}
     by_url = {item["url"]: item for item in payload.get("candidates", []) if item.get("url")}
     added = 0
-    for topic in TOPICS:
+    for topic in discovery_topics():
         for item in call(topic):
             if item["url"].startswith("https://arxiv.org/") or not item["url"].startswith("https://"):
                 continue
