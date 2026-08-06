@@ -179,7 +179,7 @@
   {
     "id": "wall-wm-world-action-model-9de8900",
     "title": "WALL-WM World Action Model",
-    "organization": "自变量机器人 / X Square Robot",
+    "organization": "自变量机器人 / X² Robotics",
     "organizationKind": "Company",
     "date": "2026-05-29",
     "year": 2026,
@@ -447,8 +447,8 @@
   },
   {
     "id": "embodied-tien-kung-3-0-bb78219",
-    "title": "Embodied Tien Kung 3.0",
-    "organization": "北京人形机器人创新中心有限公司 / Beijing Innovation Center of Humanoid Robotics Co., Ltd.",
+    "title": "Embodied Tiangong 3.0",
+    "organization": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center",
     "organizationKind": "Company",
     "date": "2026-02-10",
     "year": 2026,
@@ -531,97 +531,6 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/roboticsbusinessnews_x-humanoid-unveils-embodied-tien-kung-30-activity-7429327268763725824-xI-j"
-      }
-    ]
-  },
-  {
-    "id": "embodied-tiangong-3-0-2d1b8b1",
-    "title": "Embodied Tiangong 3.0",
-    "organization": "北京人形机器人创新中心有限公司 / Beijing Humanoid Robot Innovation Center",
-    "organizationKind": "Company",
-    "date": "2026-02-10",
-    "year": 2026,
-    "summary": "具身天工3.0是北京人形机器人创新中心于2026年2月10日发布的新一代全尺寸通用人形机器人平台，目标从单纯运动展示转向可接触环境、可自主作业并便于产业二次开发的具身机器人系统。其169厘米、62千克的本体配置43个自由度和高扭矩一体化关节，通过触物交互式全身高动态控制，可借助手部支撑翻越约1米障碍，并在崎岖地形、复杂障碍及受限姿态中保持稳定。机器人还能完成跪地作业、弯腰转身、拾取杂物和精确拨动旋钮等移动操作任务，官方报告其操作精度达到毫米级。软件核心是“慧思开物”通用具身智能平台：世界模型和VLM承担环境理解、指令解析及任务规划，VLA、自主导航和运动控制能力承担实时避障与动作执行，构成感知、决策、执行闭环，并支持多机器人协作。平台同时开放硬件扩展接口、开发文档、工具链、低代码开发环境及主流通信协议兼容能力，面向特种作业、工业制造和商业服务等场景进行集成。",
-    "tags": [
-      "Humanoid intelligence",
-      "Whole-body control",
-      "Robot manipulation",
-      "Robot systems"
-    ],
-    "fields": [
-      "Humanoid intelligence",
-      "Whole-body control",
-      "Robot manipulation",
-      "Robot systems"
-    ],
-    "featured": false,
-    "openSource": true,
-    "verification": "Automated",
-    "details": {
-      "keyPoints": [
-        "具身天工3.0是全尺寸通用人形机器人平台，采用43自由度本体和高扭矩一体化关节，重点提升肢体爆发力、本体稳定性及全身关节协同能力。",
-        "系统实现触物交互式全身高动态运动控制：机器人可利用手部与外界接触形成支撑，在约1米高障碍上完成单手支撑翻越，而非仅依靠无接触双足步态。",
-        "高自由度结构与全身协同控制覆盖移动和操作，可执行翻越障碍、高爆发连续动作、跪地作业及弯腰转身，并在狭小空间或受限姿态下维持稳定操作。",
-        "自研“慧思开物”通用具身智能平台把机器人能力组织为“感知—决策—执行”闭环；其中具身“大脑”由世界模型、VLM等负责环境理解、指令解析和任务规划，具身“小脑”由VLA、自主导航等能力负责实时感知、避障和动作执行。",
-        "平台支持从单机自主作业扩展至多具身智能体协作，通过“一脑多机、一脑多能”架构组织多机器人应用。",
-        "硬件预留多类型扩展接口，可接入外设和作业工具；软件侧提供开发文档、工具链、低代码开发平台，并兼容多种主流通信中间件及端云协议，允许合作方在不重构底层技术的情况下二次开发。",
-        "北京人形已公开开放具身天工本体、运动控制框架、世界模型、大模型、训练工具链和数据集等关键技术成果，因此该项目不仅是机器人演示原型，也被定位为面向开发者和产业集成的通用平台。"
-      ],
-      "capabilities": [
-        "在崎岖路面和复杂障碍环境中保持平衡，并执行拟人奔跑、翻越高台等高动态移动任务。",
-        "通过手部接触环境完成约1米高障碍的单手支撑翻越，以及攀爬、高爆发连续动作。",
-        "执行跪地作业、弯腰转身、拾取杂物、拨动旋钮等受限姿态下的操作任务。",
-        "由“慧思开物”平台形成感知、决策与执行闭环，支持自主导航、实时避障、任务规划及多机器人协同。",
-        "通过扩展接口、开发工具链和低代码平台适配特种作业、工业制造与商业服务场景。"
-      ],
-      "metrics": [
-        {
-          "label": "本体高度",
-          "note": "官方发布材料报告的整机高度。",
-          "value": "169厘米"
-        },
-        {
-          "label": "本体重量",
-          "note": "官方发布材料报告的整机重量。",
-          "value": "62千克"
-        },
-        {
-          "label": "全身自由度",
-          "note": "用于全身运动及操作协同。",
-          "value": "43个自由度"
-        },
-        {
-          "label": "障碍翻越演示",
-          "note": "机器人以单手接触支撑方式完成翻越。",
-          "value": "约1米高障碍"
-        },
-        {
-          "label": "操作精度",
-          "note": "官方材料称43个自由度精准协同将操作精度控制在该量级，未披露更细的误差统计。",
-          "value": "毫米级"
-        }
-      ]
-    },
-    "links": [
-      {
-        "label": "Project",
-        "url": "https://www.bjdch.gov.cn/ztzl/tzdc/tzdt/sjdt/202602/t20260211_4507920.html"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.x-humanoid.com/"
-      },
-      {
-        "label": "Report",
-        "url": "https://www.bjdch.gov.cn/ztzl/tzdc/tzdt/sjdt/202602/t20260211_4507920.html"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.bilibili.com/video/BV1HGFSztEMB"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.linkedin.com/posts/newsgab_beijing-establishes-itself-as-the-hub-for-activity-7445944501543550976-BHVW"
       }
     ]
   },
@@ -2188,7 +2097,7 @@
   {
     "id": "hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01",
     "title": "Hui Si Kai Wu General Embodied Intelligence Platform",
-    "organization": "北京人形机器人创新中心有限公司 / Beijing Humanoid Robot Innovation Center",
+    "organization": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center",
     "organizationKind": "Company",
     "date": "2025-03-12",
     "year": 2025,
@@ -2357,90 +2266,6 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/chandraai_geminirobotics-googledeepmind-ai-activity-7332321594897244160-TWzx"
-      }
-    ]
-  },
-  {
-    "id": "huisi-kaiwu-general-embodied-intelligence-platfo-a9eccdf",
-    "title": "Huisi Kaiwu General Embodied Intelligence Platform",
-    "organization": "北京人形机器人创新中心（国家地方共建具身智能机器人创新中心） / Beijing Humanoid Robot Innovation Center",
-    "organizationKind": "Research Lab",
-    "date": "2025-03-01",
-    "year": 2025,
-    "summary": "慧思开物是北京人形机器人创新中心于 2025 年 3 月 12 日正式发布的通用具身智能系统级平台，目标不是提供单一 VLA 模型或单项机器人技能，而是以统一的软件中枢连接感知、语言理解、任务规划、技能执行、运动控制和反馈纠错。其核心是分布式的具身“大脑—小脑”架构：大脑利用视觉语言及多模态模型理解自然语言、空间关系和任务意图，将长程目标分解为子任务；小脑在机器人端调用操作技能和运动控制能力，并把执行状态反馈给大脑进行反思、纠错和重新规划。平台强调“一脑多能、一脑多机”，官方材料明确展示其跨机械臂、轮式机器人和人形机器人的适配能力。发布会中的真机验证覆盖工业分拣、积木复现、动态桌面整理和物流打包，其中包括 UR-5e 语音分拣、天工人形机器人三层积木毫米级搭建、双臂协作及连续多工序操作。平台还与 RoboMIND 跨本体数据体系结合，以工业、家庭和办公数据支持端到端操作模型及 VLA 模型训练。现有证据足以支持其作为 2025 年具有影响力的实体机器人技术平台收录，但不能把“开放平台”直接等同于完整平台开源。",
-    "tags": [
-      "Vision-language-action",
-      "Humanoid intelligence",
-      "Whole-body control"
-    ],
-    "fields": [
-      "Vision-language-action",
-      "Humanoid intelligence",
-      "Whole-body control"
-    ],
-    "featured": false,
-    "openSource": false,
-    "verification": "Automated",
-    "details": {
-      "keyPoints": [
-        "平台采用协同的具身“大脑—小脑”架构：云端大脑由 AI 大模型驱动，负责自然交互、空间感知、意图理解、分层任务规划和错误反思；端侧小脑负责技能及运动执行。",
-        "系统被描述为分布式多具身智能体，交互、规划和反思等 Agent 串联 VLM、MLLM 等基础模型；执行侧则使用 VA、VLA 和语言模型，把高层子任务转换为机器人动作。",
-        "具身操作子平台包含元技能库、泛化抓取、技能拆解和错误处理；具身运控子平台覆盖全身控制、双臂协作、稳定行走和移动导航，执行结果会返回大脑形成闭环。",
-        "平台通过多模态信息融合和上下文理解解析自然语言，将复杂任务拆分为可执行的子任务序列，并在执行期间实时监测状态，进行自适应纠错和动态路径重规划。",
-        "“一脑多机”设计使同一软件系统能够适配机械臂、轮式机器人和人形机器人；内置多场景适配引擎面向工业制造、家庭服务等环境，并允许快速添加自定义模型和技能。",
-        "平台依托 RoboMIND 跨本体标准化具身数据集训练和验证；该数据覆盖工业、家庭和办公场景，并由多类 VLA 及端到端模型进行验证，为任务理解至执行提供数据支持。",
-        "官方真机演示覆盖工业分拣、积木搭建、桌面清理和物流打包：包括语音驱动 UR-5e 分拣、视觉空间推理复现积木、动态环境中的双臂整理，以及搭配灵巧手执行连续物流工序。"
-      ],
-      "capabilities": [
-        "通过自然语言或 App 指令驱动机器人完成任务规划、技能调用和执行反馈闭环",
-        "在 UR-5e 机械臂上进行工业物料识别、双臂协同分拣与运行状态反馈",
-        "控制人形机器人观察随机积木样例、拆解空间结构并按顺序复现搭建",
-        "在动态干扰下执行双臂桌面整理、垃圾收集和自主纠错",
-        "连续执行扫码、装入物品、打包、粘贴信息条和送入生产线等长程物流任务"
-      ],
-      "metrics": [
-        {
-          "label": "真机演示场景",
-          "note": "官方发布会现场展示工业分拣、积木搭建、桌面清理和物流打包。",
-          "value": "4 个场景"
-        },
-        {
-          "label": "兼容机器人构型",
-          "note": "官方明确列出的构型为机械臂、轮式机器人和人形机器人。",
-          "value": "3 类构型"
-        },
-        {
-          "label": "积木搭建结果",
-          "note": "天工机器人利用视觉大模型拆解样例并规划各层顺序。",
-          "value": "完成 3 层积木的毫米级精准搭建"
-        },
-        {
-          "label": "RoboMIND 首批开放数据",
-          "note": "官方公告称该数据集为慧思开物提供跨本体、多场景的数据支持。",
-          "value": "10 万条"
-        }
-      ]
-    },
-    "links": [
-      {
-        "label": "Project",
-        "url": "https://www.x-humanoid.com/news-view-154.html"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.x-humanoid.com/"
-      },
-      {
-        "label": "Report",
-        "url": "https://www.beijing.gov.cn/ywdt/yaowen/202512/t20251212_4337327.html"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.bilibili.com/video/BV1nSQ6YpE4P/"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.youtube.com/watch?v=jaqol5BN1Ls"
       }
     ]
   }
