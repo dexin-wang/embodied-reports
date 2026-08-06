@@ -149,6 +149,12 @@ def main() -> None:
     if not API_KEY:
         raise SystemExit("OPENAI_API_KEY is required for dossier generation")
     existing = {item["id"]: item for item in json.loads(OUT.read_text())} if OUT.exists() else {}
+    # Repair historical proxy/model spill-over before it reaches the published
+    # facet list.  This keeps the on-disk catalogue as clean as the UI layer.
+    for saved in existing.values():
+        cleaned = clean_fields(saved.get("fields", []))
+        saved["fields"] = cleaned
+        saved["tags"] = cleaned
     for item in SEEDS:
         if item["id"] in existing:
             continue
