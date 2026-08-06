@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { getReportDetails, type Report } from "./reports";
 
 const standardFields = [
-  "Vision-language-action", "Large language models", "Humanoid intelligence",
+  "Vision-language-action", "LLM", "Humanoid intelligence",
   "Whole-body control", "World models", "Robot manipulation",
   "Dexterous manipulation", "Tactile intelligence", "Data & benchmarks",
   "Robot systems", "Embodied AI",
@@ -139,27 +139,12 @@ export function ReportExplorer({ reports }: { reports: Report[] }) {
           {query && <button onClick={() => setQuery("")} aria-label="Clear search">×</button>}
         </label>
 
-        <div className="filter-facets" aria-label="Report filters">
-          <details className="facet" open>
-            <summary>年份 <span>{year === "All" ? "全部" : year}</span></summary>
-            <div className="facet-options"><button type="button" className={year === "All" ? "selected" : ""} onClick={() => setYear("All")}>全部</button>{years.map((item) => <button type="button" className={year === item ? "selected" : ""} key={item} onClick={() => setYear(item)}>{item}</button>)}</div>
-          </details>
-          <details className="facet" open>
-            <summary>技术领域 <span>{field === "All" ? "全部" : field}</span></summary>
-            <div className="facet-options"><button type="button" className={field === "All" ? "selected" : ""} onClick={() => setField("All")}>全部</button>{fields.map((item) => <button type="button" className={field === item ? "selected" : ""} key={item} onClick={() => setField(item)}>{item}</button>)}</div>
-          </details>
-          <details className="facet">
-            <summary>机构 <span>{organization === "All" ? "全部" : organization}</span></summary>
-            <div className="facet-options"><button type="button" className={organization === "All" ? "selected" : ""} onClick={() => setOrganization("All")}>全部</button>{organizations.map((item) => <button type="button" className={organization === item ? "selected" : ""} key={item} onClick={() => setOrganization(item)}>{item}</button>)}</div>
-          </details>
-          <details className="facet">
-            <summary>月份 <span>{month === "All" ? "全部" : `${month} 月`}</span></summary>
-            <div className="facet-options"><button type="button" className={month === "All" ? "selected" : ""} onClick={() => setMonth("All")}>全部</button>{Array.from({ length: 12 }, (_, index) => String(index + 1).padStart(2, "0")).map((item) => <button type="button" className={month === item ? "selected" : ""} key={item} onClick={() => setMonth(item)}>{item} 月</button>)}</div>
-          </details>
-          <details className="facet">
-            <summary>开源状态 <span>{openOnly ? "仅开源" : "全部"}</span></summary>
-            <div className="facet-options"><button type="button" className={!openOnly ? "selected" : ""} onClick={() => setOpenOnly(false)}>全部</button><button type="button" className={openOnly ? "selected" : ""} onClick={() => setOpenOnly(true)}>仅开源</button></div>
-          </details>
+        <div className="inline-filters" aria-label="Report filters">
+          <label>年份<select value={year} onChange={(event) => setYear(event.target.value)}><option value="All">全部</option>{years.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
+          <label>技术领域<select value={field} onChange={(event) => setField(event.target.value)}><option value="All">全部</option>{fields.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
+          <label>机构<select value={organization} onChange={(event) => setOrganization(event.target.value)}><option value="All">全部</option>{organizations.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
+          <label>月份<select value={month} onChange={(event) => setMonth(event.target.value)}><option value="All">全部</option>{Array.from({ length: 12 }, (_, index) => String(index + 1).padStart(2, "0")).map((item) => <option value={item} key={item}>{item} 月</option>)}</select></label>
+          <label className="open-filter"><input type="checkbox" checked={openOnly} onChange={(event) => setOpenOnly(event.target.checked)} />仅开源</label>
         </div>
       </section>
 
