@@ -8,6 +8,7 @@ on:
       - "automation/framework_sources.json"
       - "data/verified.json"
       - "app/reports.ts"
+      - ".github/workflows/refresh-framework-figures.yml"
   workflow_dispatch:
 
 permissions:
