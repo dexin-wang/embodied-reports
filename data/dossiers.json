@@ -6,13 +6,13 @@
       "Vision-language-action",
       "World models",
       "Robot manipulation",
-      "Dexterous manipulation case issue? needs Chinese labels? Allowed fields exactly English likely yes. Continue. Need valid JSON no weird. Capability 3-5 implemented, concrete. keypoints 4-7. metrics 5 max. Summary factual. Mention date? no need. Exact qualitative metrics perhaps quantitative available. Use values. Ensure no comparative inferred. Source claims first at scale but can report attributed. Metrics exact: 500k+ hours, shape code 10d, joint 20, L25 DOFs, dedup result one or more. 5. Keypoints architecture. Let's craft. fields include Tactile intelligence Data benchmarks Robot systems Embodied AI. Whole-body? no. Humanoid no. VLA yes. Metrics notes exact context. "
+      "Tactile intelligence"
     ],
     "tags": [
       "Vision-language-action",
       "World models",
       "Robot manipulation",
-      "Dexterous manipulation case issue? needs Chinese labels? Allowed fields exactly English likely yes. Continue. Need valid JSON no weird. Capability 3-5 implemented, concrete. keypoints 4-7. metrics 5 max. Summary factual. Mention date? no need. Exact qualitative metrics perhaps quantitative available. Use values. Ensure no comparative inferred. Source claims first at scale but can report attributed. Metrics exact: 500k+ hours, shape code 10d, joint 20, L25 DOFs, dedup result one or more. 5. Keypoints architecture. Let's craft. fields include Tactile intelligence Data benchmarks Robot systems Embodied AI. Whole-body? no. Humanoid no. VLA yes. Metrics notes exact context. "
+      "Tactile intelligence"
     ],
     "details": {
       "keyPoints": [
@@ -190,13 +190,13 @@
       "Vision-language-action",
       "World models",
       "Robot manipulation",
-      "Dexterous manipulation操控成功后的近期场景状态；运行时由基于 BAGEL 图像生成模型的轻量级世界模型生成。训练数据包含多机器人示范、较低质量与失败轨迹、历史策略自主执行数据、人类干预、开源机器人数据、第一视角人类视频及网络多模态数据。动作专家采用流匹配目标并关注 VLM 主干；知识隔离训练中，动作专家梯度不回传至 VLM 主干。训练时对提示组件进行随机丢弃，使推理时可灵活使用完整提示或其任意子集。"
+      "Dexterous manipulation"
     ],
     "tags": [
       "Vision-language-action",
       "World models",
       "Robot manipulation",
-      "Dexterous manipulation操控成功后的近期场景状态；运行时由基于 BAGEL 图像生成模型的轻量级世界模型生成。训练数据包含多机器人示范、较低质量与失败轨迹、历史策略自主执行数据、人类干预、开源机器人数据、第一视角人类视频及网络多模态数据。动作专家采用流匹配目标并关注 VLM 主干；知识隔离训练中，动作专家梯度不回传至 VLM 主干。训练时对提示组件进行随机丢弃，使推理时可灵活使用完整提示或其任意子集。"
+      "Dexterous manipulation"
     ],
     "details": {
       "keyPoints": [
@@ -247,16 +247,16 @@
     "id": "helix-02",
     "summary": "Helix 02是Figure面向人形机器人的统一全身移动操作VLA系统，通过S2语义推理、S1全传感器到全关节的视觉运动策略和S0学习式全身控制器，将视觉、触觉、本体感觉、行走、操作与平衡整合为从像素到力矩的连续自主控制。",
     "fields": [
-      "Vision-language-action",
       "Humanoid intelligence",
       "Whole-body control",
-      "Robot manipulation accessibility: false,"
+      "Vision-language-action",
+      "Robot manipulation"
     ],
     "tags": [
-      "Vision-language-action",
       "Humanoid intelligence",
       "Whole-body control",
-      "Robot manipulation accessibility: false,"
+      "Vision-language-action",
+      "Robot manipulation"
     ],
     "details": {
       "keyPoints": [
