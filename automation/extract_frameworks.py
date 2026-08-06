@@ -39,21 +39,25 @@ class ProjectImageParser(HTMLParser):
     """Collect explicitly described method figures from an official page.
 
     Project sites frequently publish WebP/AVIF assets and put the useful signal
-    in an image ``alt`` attribute rather than in its file name.  We therefore
-    keep candidates only when their own metadata identifies an overview,
-    framework, architecture, pipeline, or system diagram; this is deliberately
-    not a generic hero-image scraper.
+    in an image ``alt`` attribute rather than in its file name.  Method diagrams
+    receive the highest score; where none exists, an early large image labelled
+    as a dataset, benchmark, result, or model visual is retained as an honest
+    project-page overview rather than leaving the card blank.
     """
 
-    TERMS = ("framework", "architecture", "method", "pipeline", "overview", "system")
+    METHOD_TERMS = ("framework", "architecture", "method", "pipeline", "overview", "system", "diagram")
+    RELATED_TERMS = ("model", "dataset", "data", "benchmark", "result", "evaluation", "teaser", "hero", "figure")
+    EXCLUDED_TERMS = ("logo", "icon", "avatar", "profile", "author", "favicon", "github-mark")
 
     def __init__(self) -> None:
         super().__init__()
-        self.candidates: list[tuple[int, str]] = []
+        self.candidates: list[tuple[int, int, str]] = []
+        self.order = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if tag.lower() != "img":
             return
+        self.order += 1
         values = {key.lower(): value or "" for key, value in attrs}
         source = values.get("src") or values.get("data-src") or values.get("data-original")
         if not source and values.get("srcset"):
@@ -61,18 +65,24 @@ class ProjectImageParser(HTMLParser):
         if not source:
             return
         text = " ".join(values.get(key, "") for key in ("alt", "title", "class", "id", "src", "data-src", "srcset")).lower()
-        score = sum(1 for term in self.TERMS if term in text)
-        if score:
-            self.candidates.append((score, source))
+        if source.startswith("data:") or any(term in text for term in self.EXCLUDED_TERMS):
+            return
+        method_score = sum(1 for term in self.METHOD_TERMS if term in text)
+        related_score = sum(1 for term in self.RELATED_TERMS if term in text)
+        # Keep non-decorative images as a final fallback in document order. The
+        # size check below prevents icons and tiny UI thumbnails from winning.
+        score = method_score * 100 + related_score * 10 + 1
+        self.candidates.append((score, self.order, source))
 
 
-def save_web_image(image: bytes, target: Path) -> None:
+def save_web_image(image: bytes, target: Path) -> tuple[int, int]:
     """Convert a real project-page asset (including WebP/AVIF) to JPEG."""
     with Image.open(BytesIO(image)) as opened:
         image_rgb = opened.convert("RGB")
         if image_rgb.width < 240 or image_rgb.height < 140:
             raise ValueError("candidate project image is too small to be a framework figure")
         image_rgb.save(target, format="JPEG", quality=86, optimize=True)
+        return image_rgb.width, image_rgb.height
 
 
 def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | None:
@@ -85,22 +95,34 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
         parser.feed(html)
         if not parser.candidates:
             return None
-        _, image_ref = max(parser.candidates, key=lambda item: item[0])
-        image_url = urljoin(source_url, image_ref)
-        with urllib.request.urlopen(
-            urllib.request.Request(image_url, headers={"User-Agent": "EmbodiedReports/1.0"}),
-            timeout=30,
-        ) as response:
-            image = response.read()
-        save_web_image(image, target)
-        return {
-            "id": report_id,
-            "asset": f"frameworks/{report_id}.jpg",
-            "source_url": source_url,
-            "page": None,
-            "caption_detected": True,
-            "source_kind": "official_project_page",
-        }
+        # First prefer an explicitly labelled framework. If unavailable, retain
+        # the first sizeable method-related / dataset / results visual from the
+        # official project page.  No synthetic or code-rendered diagram is used.
+        ordered = sorted(parser.candidates, key=lambda item: (-item[0], item[1]))[:16]
+        for score, _, image_ref in ordered:
+            image_url = urljoin(source_url, image_ref)
+            try:
+                with urllib.request.urlopen(
+                    urllib.request.Request(image_url, headers={"User-Agent": "EmbodiedReports/1.0"}),
+                    timeout=30,
+                ) as response:
+                    image = response.read()
+                width, height = save_web_image(image, target)
+                return {
+                    "id": report_id,
+                    "asset": f"frameworks/{report_id}.jpg",
+                    "source_url": source_url,
+                    "page": None,
+                    "caption_detected": score >= 100,
+                    "source_kind": "official_project_page",
+                    "selection": "method_figure" if score >= 100 else "official_project_visual",
+                    "image_url": image_url,
+                    "width": width,
+                    "height": height,
+                }
+            except Exception as exc:
+                print(f"warning: candidate image failed for {image_url}: {exc}")
+        return None
     except Exception as exc:
         print(f"warning: web framework extraction failed for {source_url}: {exc}")
         return None
