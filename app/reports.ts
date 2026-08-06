@@ -11,7 +11,7 @@ export type Report = {
   featured?: boolean;
   openSource?: boolean;
   verification?: "Automated" | "Seed";
-  framework?: { sourceUrl?: string; page?: number; caption?: string };
+  framework?: { sourceUrl?: string; imageUrl?: string; page?: number; caption?: string };
   details?: ReportDetails;
   links: { label: "Report" | "Project" | "GitHub" | "Model" | "Evidence"; url: string }[];
 };
@@ -58,6 +58,11 @@ export const reports: Report[] = [
     year: 2026,
     summary: "A latent tactile world-action model that extends large-scale embodied pretraining from visual prediction to touch-aware interaction.",
     tags: ["Tactile", "World Models", "Manipulation"],
+    framework: {
+      imageUrl: "https://research.beingbeyond.com/being-h08/images/teaser.webp",
+      sourceUrl: "https://research.beingbeyond.com/being-h08",
+      caption: "官方项目页 Figure 1 · Being-H0.8 visuo-tactile world-action model overview",
+    },
     featured: true,
     links: [{ label: "Project", url: "https://research.beingbeyond.com/being-h08" }],
   },
