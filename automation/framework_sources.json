@@ -38,5 +38,21 @@
   {
     "id": "helix",
     "source_url": "https://www.figure.ai/news/helix"
+  },
+  {
+    "id": "deepseek-r1",
+    "source_url": "https://api-docs.deepseek.com/news/news250120/"
+  },
+  {
+    "id": "qwen3",
+    "source_url": "https://qwenlm.github.io/blog/qwen3/"
+  },
+  {
+    "id": "llama-4",
+    "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+  },
+  {
+    "id": "gemma-3",
+    "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/"
   }
 ]
