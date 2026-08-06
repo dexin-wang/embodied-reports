@@ -41,7 +41,8 @@
   },
   {
     "id": "deepseek-r1",
-    "source_url": "https://api-docs.deepseek.com/news/news250120/"
+    "source_url": "https://api-docs.deepseek.com/news/news250120/",
+    "official_url": "https://api-docs.deepseek.com/news/news250120/"
   },
   {
     "id": "qwen3",
