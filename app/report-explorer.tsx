@@ -3,6 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { getReportDetails, type Report } from "./reports";
 
+const standardFields = [
+  "Vision-language-action", "Large language models", "Humanoid intelligence",
+  "Whole-body control", "World models", "Robot manipulation",
+  "Dexterous manipulation", "Tactile intelligence", "Data & benchmarks",
+  "Robot systems", "Embodied AI",
+];
+
 const kindLabels: Record<string, string> = {
   Company: "公司",
   University: "高校",
@@ -84,7 +91,7 @@ export function ReportExplorer({ reports }: { reports: Report[] }) {
   const [openOnly, setOpenOnly] = useState(false);
   const [selected, setSelected] = useState<Report | null>(null);
 
-  const fields = useMemo(() => [...new Set(reports.flatMap((report) => report.fields ?? report.tags))].sort(), [reports]);
+  const fields = useMemo(() => [...new Set([...standardFields, ...reports.flatMap((report) => report.fields ?? report.tags)])].sort(), [reports]);
   const organizations = useMemo(() => [...new Set(reports.map((report) => report.organization))].sort(), [reports]);
   const years = useMemo(() => [...new Set(reports.map((report) => String(report.year)))].sort((a, b) => b.localeCompare(a)), [reports]);
 
