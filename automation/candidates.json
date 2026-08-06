@@ -1,6 +1,18 @@
 {
-  "generated_at": "2026-08-06T06:54:41.677837+00:00",
+  "generated_at": "2026-08-06T14:32:10.228208+00:00",
   "candidates": [
+    {
+      "date": "2026-08-06",
+      "organization_hint": "Search in progress",
+      "summary": "I’m checking each named organization’s official project and announcement pages, then filtering out hardware-only and paper-only items. Dates will be exact only where the official source provides them; otherwise I’ll normalize to the first day of the known release month.",
+      "title": "Source verification",
+      "url": "https://example.com",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
     {
       "date": "2026-08-06",
       "organization_hint": "Research in progress",
@@ -7486,6 +7498,18 @@
       ]
     },
     {
+      "date": "2025-05-23",
+      "organization_hint": "OpenAI",
+      "summary": "Release of an o3-based Operator action model fine-tuned with additional computer-use safety data, replacing the original GPT-4o-based model in the Operator product.",
+      "title": "OpenAI o3 Operator",
+      "url": "https://openai.com/index/o3-o4-mini-system-card-addendum-operator-o3/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Policy Contrastive Decoding for Robotic Foundation Models",
       "summary": "Robotic foundation models, or generalist robot policies, hold immense potential to enable flexible, general-purpose and dexterous robotic systems. Despite their advancements, our empirical experiments reveal that existing robot policies are prone to learning spurious correlations from pre-training trajectories, adversely affecting their generalization capabilities beyond the training data. To tackle this, we propose a novel Policy Contrastive Decoding (PCD) approach, which redirects the robot policy's focus toward object-relevant visual clues by contrasting action probability distributions derived from original and object-masked visual inputs. As a training-free method, our PCD can be used as a plugin to improve different types of robot policies without needing to finetune or access model weights. We conduct extensive experiments on top of three open-source robot policies, including the autoregressive policy OpenVLA and the diffusion-based policies Octo and $π_0$. The obtained results in both simulation and real-world environments prove PCD's flexibility and effectiveness, e.g., PCD enhances the state-of-the-art policy $π_0$ by 8.9% in the simulation environment and by 108% in the real-world environment. Code and demos are publicly available at: https://koorye.github.io/PCD.",
       "date": "2025-05-19",
@@ -7972,6 +7996,18 @@
       ]
     },
     {
+      "date": "2025-03-11",
+      "organization_hint": "OpenAI",
+      "summary": "Release of the Responses API, Agents SDK, tracing tools, and built-in computer use, providing an official software stack for constructing and evaluating agents that perceive and act through computer interfaces.",
+      "title": "New tools for building agents",
+      "url": "https://openai.com/index/new-tools-for-building-agents/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "FP3: A 3D Foundation Policy for Robotic Manipulation",
       "summary": "Following its success in natural language processing and computer vision, foundation models that are pre-trained on large-scale multi-task datasets have also shown great potential in robotics. However, most existing robot foundation models rely solely on 2D image observations, ignoring 3D geometric information, which is essential for robots to perceive and reason about the 3D world. In this paper, we introduce FP3, a first large-scale 3D foundation policy model for robotic manipulation. FP3 builds on a scalable diffusion transformer architecture and is pre-trained on 60k trajectories with point cloud observations. With the model design and diverse pre-training data, FP3 can be efficiently fine-tuned for downstream tasks while exhibiting strong generalization capabilities. Experiments on real robots demonstrate that with only 80 demonstrations, FP3 is able to learn a new task with over 90% success rates in novel environments with unseen objects, significantly surpassing existing robot foundation models.",
       "date": "2025-03-11",
@@ -8122,6 +8158,30 @@
       ]
     },
     {
+      "date": "2025-01-23",
+      "organization_hint": "OpenAI",
+      "summary": "Research-preview agent powered by CUA that perceives and operates a web browser, executes multi-step tasks, self-corrects, and transfers control to the user when necessary.",
+      "title": "Introducing Operator",
+      "url": "https://openai.com/index/introducing-operator/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-01-23",
+      "organization_hint": "OpenAI",
+      "summary": "Research release of Computer-Using Agent (CUA), a vision-and-reasoning action model trained through reinforcement learning to operate graphical user interfaces using screenshots, mouse actions, and keyboard input.",
+      "title": "Computer-Using Agent",
+      "url": "https://openai.com/index/computer-using-agent/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Universal Actions for Enhanced Embodied Foundation Models",
       "summary": "Training on diverse, internet-scale data is a key factor in the success of recent large foundation models. Yet, using the same recipe for building embodied agents has faced noticeable difficulties. Despite the availability of many crowd-sourced embodied datasets, their action spaces often exhibit significant heterogeneity due to distinct physical embodiment and control interfaces for different robots, causing substantial challenges in developing embodied foundation models using cross-domain data. In this paper, we introduce UniAct, a new embodied foundation modeling framework operating in a Universal Action Space. Our learned universal actions capture the generic atomic behaviors across diverse robots by exploiting their shared structural features, and enable enhanced cross-domain data utilization and cross-embodiment generalizations by eliminating the notorious heterogeneity. The universal actions can be efficiently translated back to heterogeneous actionable commands by simply adding embodiment-specific details, from which fast adaptation to new robots becomes simple and straightforward. Our 0.5B instantiation of UniAct outperforms 14X larger SOTA embodied foundation models in extensive evaluations on various real-world and simulation robots, showcasing exceptional cross-embodiment control and adaptation capability, highlighting the crucial benefit of adopting universal actions. Project page: https://github.com/2toinf/UniAct",
       "date": "2025-01-17",
@@ -8215,18 +8275,6 @@
       "score": 28,
       "reasons": [
         "physical-robot evidence"
-      ]
-    },
-    {
-      "date": "2025-01-01",
-      "organization_hint": "Search in progress",
-      "summary": "I’m collecting official release pages first, then I’ll verify dates and exclude entries that are only paper or conference pages.",
-      "title": "Status",
-      "url": "https://example.com",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
       ]
     },
     {

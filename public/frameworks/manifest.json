@@ -61,8 +61,13 @@
       "id": "being-h0",
       "asset": "frameworks/being-h0.jpg",
       "source_url": "https://arxiv.org/abs/2507.15597",
-      "page": 1,
-      "caption_detected": true
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "width": 1200,
+      "height": 700
     },
     {
       "id": "gr00t-n15",
@@ -127,7 +132,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sea5-1.xx.fbcdn.net/v/t39.2365-6/488639590_2182781778834283_7341615399691839509_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=7MjgGi6liQoQ7kNvwG5k13y&_nc_oc=AdqOhrkPvzrVZzHZc2pkulNY7oJYNsbLKWCY6uypHYsIlZZ_4VZoVxPHk3m53sSWf7o&_nc_zt=14&_nc_ht=scontent-sea5-1.xx&_nc_gid=TYRoQCwV1FBs3Ad0VcO3Qw&_nc_ss=7b20f&oh=00_AQGlbURrjUgiLhOkKpyyNJg7h3n-K8oMMt8Y6eeyBNpmXA&oe=6A8EC6E0",
+      "image_url": "https://scontent-sin2-3.xx.fbcdn.net/v/t39.2365-6/488639590_2182781778834283_7341615399691839509_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=7MjgGi6liQoQ7kNvwE_30Pa&_nc_oc=AdpM_bOrgjpVzKwiZXKPY9ACG9xWmMIiZOzV3tQYCAr0CetUZNBKTxjm3cAKm1hW1u4&_nc_zt=14&_nc_ht=scontent-sin2-3.xx&_nc_gid=B0EWRFe8g1sXinY2nE7jtQ&_nc_ss=7b20f&oh=00_AQFSa0EelpnyLcb3AUGAhLoUGM_oTpXXM9x6PtsBEW52LQ&oe=6A8EFF20",
       "width": 1920,
       "height": 1080
     },
@@ -144,6 +149,18 @@
       "height": 731
     },
     {
+      "id": "vlash-vision-language-action-speculative-handove-fbddb1a",
+      "asset": "frameworks/vlash-vision-language-action-speculative-handove-fbddb1a.jpg",
+      "source_url": "https://github.com/mit-han-lab/vlash",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/9d8564de062b7453480d224072a4f714f3a2c07388a429c0b3596b7a076dd5fb/mit-han-lab/vlash",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "wall-wm-world-action-model-9de8900",
       "asset": "frameworks/wall-wm-world-action-model-9de8900.jpg",
       "source_url": "https://x2robot.com/pages/wm",
@@ -154,6 +171,30 @@
       "image_url": "https://x2robot.com/pages/wm/assets/images/fig_teaser.jpg",
       "width": 4258,
       "height": 2379
+    },
+    {
+      "id": "wall-b-world-unified-embodied-foundation-model-f890fb9",
+      "asset": "frameworks/wall-b-world-unified-embodied-foundation-model-f890fb9.jpg",
+      "source_url": "https://www.prnewswire.com/news-releases/x-square-robot-unveils-new-embodied-ai-model-says-robots-will-arrive-in-homes-in-35-days-302751047.html",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://mmx.prnewswire.com/media/MS1878589/ea2b04df392546aa932a854f91b80f39.jpg?id=OA2752671&w=300",
+      "width": 299,
+      "height": 168
+    },
+    {
+      "id": "agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc",
+      "asset": "frameworks/agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc.jpg",
+      "source_url": "https://agibot.com/article/231/detail/63.html",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://agibot.com/public/uploads/images/20241230/a71076b43f1846bdaae754407a9009ac.jpg",
+      "width": 451,
+      "height": 654
     },
     {
       "id": "x1-multirobot-response-system-c40730d",
@@ -192,6 +233,30 @@
       "height": 630
     },
     {
+      "id": "atlas-and-large-behavior-models-advancing-genera-364007f",
+      "asset": "frameworks/atlas-and-large-behavior-models-advancing-genera-364007f.jpg",
+      "source_url": "https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://bostondynamics.com/wp-content/uploads/2025/08/Atlas-TRI-Blog-Post-Policy-Architecture-Diagram-v2e-1024x372.png",
+      "width": 1024,
+      "height": 372
+    },
+    {
+      "id": "neural-jacobian-fields-c795ce5",
+      "asset": "frameworks/neural-jacobian-fields-c795ce5.jpg",
+      "source_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/static/images/data.png",
+      "width": 2624,
+      "height": 878
+    },
+    {
       "id": "gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4",
       "asset": "frameworks/gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4.jpg",
       "source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
@@ -214,6 +279,18 @@
       "image_url": "https://agile.human2humanoid.com/static/images/ASAP_pipeline-crop.png",
       "width": 3111,
       "height": 1346
+    },
+    {
+      "id": "relevance-dcb70f5",
+      "asset": "frameworks/relevance-dcb70f5.jpg",
+      "source_url": "https://news.mit.edu/2025/robotic-system-zeroes-objects-most-relevant-helping-humans-0424",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://news.mit.edu/sites/default/files/images/202504/MIT-Robot-Relevance-01-press.jpg",
+      "width": 4032,
+      "height": 2688
     },
     {
       "id": "0-5-a-vision-language-action-model-with-open-wor-237a05a",
@@ -262,6 +339,18 @@
       "image_url": "https://lh3.googleusercontent.com/5-bQ_5YmyLIrpzGGSl-KiaJCZuoJGKDyAMZc2COzuuOvdWDL7nsDY-8GtD-DzP9sKEukKM_SiJ4zpj8fHFDPCd_DcKO6k2x1PCK9NbJUsGOI1eYx=w1200-h630-n-nu-rw",
       "width": 1200,
       "height": 630
+    },
+    {
+      "id": "homie-humanoid-loco-manipulation-with-isomorphic-aefe995",
+      "asset": "frameworks/homie-humanoid-loco-manipulation-with-isomorphic-aefe995.jpg",
+      "source_url": "https://homietele.github.io/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://homietele.github.io/static/images/overview.png",
+      "width": 3822,
+      "height": 1407
     }
   ]
 }
