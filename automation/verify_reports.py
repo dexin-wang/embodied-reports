@@ -39,6 +39,12 @@ SOCIAL_DOMAINS = {
     "weixin.qq.com": "WeChat", "mp.weixin.qq.com": "WeChat", "zhihu.com": "Zhihu",
     "reddit.com": "Reddit", "facebook.com": "Facebook", "instagram.com": "Instagram",
 }
+ALLOWED_FIELDS = {
+    "Vision-language-action", "Large language models", "Humanoid intelligence",
+    "Whole-body control", "World models", "Robot manipulation",
+    "Dexterous manipulation", "Tactile intelligence", "Data & benchmarks",
+    "Robot systems", "Embodied AI",
+}
 
 SCHEMA = {
     "type": "object",
@@ -51,7 +57,7 @@ SCHEMA = {
         "organization_en": {"type": "string"},
         "organization_zh": {"type": "string"},
         "organization_kind": {"type": "string", "enum": ["Company", "University", "Research Lab"]},
-        "fields": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 4},
+        "fields": {"type": "array", "items": {"type": "string", "enum": sorted(ALLOWED_FIELDS)}, "minItems": 1, "maxItems": 4},
         "summary_zh": {"type": "string"},
         "key_points": {"type": "array", "items": {"type": "string"}, "minItems": 4, "maxItems": 7},
         "capabilities": {"type": "array", "items": {"type": "string"}, "minItems": 3, "maxItems": 5},
@@ -164,6 +170,13 @@ def social_platform(url: str) -> str | None:
     return next((label for domain, label in SOCIAL_DOMAINS.items() if host == domain or host.endswith(f".{domain}")), None)
 
 
+def clean_fields(values: object) -> list[str]:
+    """Keep taxonomy labels exact; never render model commentary as a field."""
+    if not isinstance(values, list):
+        return []
+    return list(dict.fromkeys(value for value in values if isinstance(value, str) and value in ALLOWED_FIELDS))
+
+
 def valid_verdict(verdict: dict) -> tuple[bool, str, list[dict]]:
     if not verdict["include"]:
         return False, verdict["reason"], []
@@ -175,6 +188,9 @@ def valid_verdict(verdict: dict) -> tuple[bool, str, list[dict]]:
         return False, "invalid official URL", []
     if "arxiv.org" in urlparse(verdict["official_project_url"]).netloc.lower():
         return False, "arXiv alone is not an official project page", []
+    verdict["fields"] = clean_fields(verdict.get("fields"))
+    if not verdict["fields"]:
+        return False, "no valid controlled-vocabulary technical field", []
     evidence = []
     for item in verdict["social_evidence"]:
         platform = social_platform(item["url"])
