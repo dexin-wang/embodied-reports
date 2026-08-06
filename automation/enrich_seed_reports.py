@@ -24,7 +24,7 @@ MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 MAX_CHARS = 28000
 ALLOWED_FIELDS = {
-    "Vision-language-action", "Large language models", "Humanoid intelligence",
+    "Vision-language-action", "LLM", "Humanoid intelligence",
     "Whole-body control", "World models", "Robot manipulation",
     "Dexterous manipulation", "Tactile intelligence", "Data & benchmarks",
     "Robot systems", "Embodied AI",
@@ -124,7 +124,7 @@ def dossier(item: dict, text: str) -> dict:
     prompt = f"""You are writing a factual Chinese technical dossier for an embodied robotics index.
 Use only the source text below. Do not infer or invent methods, claims, model sizes, benchmark results, or capabilities.
 Write one concise Chinese summary, 4-7 concrete technical points, 3-5 implemented functions, and 1-5 exact reported metrics/results. When a source has no quantitative metric, record the precise qualitative result and state that it is qualitative.
-Allowed fields: Vision-language-action, Humanoid intelligence, Whole-body control, World models, Robot manipulation, Dexterous manipulation, Tactile intelligence, Data & benchmarks, Robot systems, Embodied AI, Large language models.
+Allowed fields: Vision-language-action, LLM, Humanoid intelligence, Whole-body control, World models, Robot manipulation, Dexterous manipulation, Tactile intelligence, Data & benchmarks, Robot systems, Embodied AI.
 
 TITLE: {item["title"]}
 PRIMARY SOURCE:
