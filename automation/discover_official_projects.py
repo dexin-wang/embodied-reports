@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -22,6 +23,7 @@ COMPANY_ROSTER = ROOT / "automation" / "company_roster.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+RETRY_ATTEMPTS = 3
 
 TOPICS = [
     "generalist vision-language-action, robot foundation-model and embodied-agent software releases",
@@ -61,7 +63,8 @@ def response_text(result: dict) -> str:
             if content.get("type") == "output_text" and isinstance(content.get("text"), str):
                 parts.append(content["text"])
     if parts:
-        return "\n".join(parts)
+        return "
+".join(parts)
 
     summary = json.dumps(
         {key: result.get(key) for key in ("status", "error", "incomplete_details", "output")},
@@ -97,13 +100,25 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
         f"{API_BASE_URL}/responses", data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
     )
-    try:
-        with urllib.request.urlopen(request, timeout=180) as response:
-            result = json.loads(response.read())
-        return response_json(result)["candidates"]
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", "ignore")[:1200]
-        raise RuntimeError(f"sub2api request rejected ({exc.code}): {detail}") from exc
+    for attempt in range(1, RETRY_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=180) as response:
+                result = json.loads(response.read())
+            return response_json(result)["candidates"]
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "ignore")[:1200]
+            if 400 <= exc.code < 500 and exc.code != 429:
+                raise RuntimeError(f"sub2api request rejected ({exc.code}): {detail}") from exc
+            error = f"HTTP {exc.code}: {detail}"
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError, json.JSONDecodeError) as exc:
+            error = f"{type(exc).__name__}: {exc}"
+        if attempt < RETRY_ATTEMPTS:
+            delay = 4 * attempt
+            print(f"warning: discovery request timed out/failed (attempt {attempt}/{RETRY_ATTEMPTS}); retrying in {delay}s: {error}")
+            time.sleep(delay)
+        else:
+            print(f"warning: skipping one discovery topic after {RETRY_ATTEMPTS} attempts: {error}")
+    return []
 
 
 def discovery_topics() -> list[str]:
@@ -134,7 +149,8 @@ def main() -> None:
             by_url[item["url"]] = {**item, "authors": [], "score": 100, "reasons": ["official web-project discovery"]}
             added += 1
     merged = sorted(by_url.values(), key=lambda item: (item.get("date", ""), item.get("title", "")), reverse=True)
-    CANDIDATES.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(), "candidates": merged}, ensure_ascii=False, indent=2) + "\n")
+    CANDIDATES.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(), "candidates": merged}, ensure_ascii=False, indent=2) + "
+")
     print(f"official_project_leads_added={added} candidates_total={len(merged)}")
 
 
