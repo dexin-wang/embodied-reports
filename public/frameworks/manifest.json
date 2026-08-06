@@ -34,6 +34,18 @@
       "caption_detected": true
     },
     {
+      "id": "gr00t-n16",
+      "asset": "frameworks/gr00t-n16.jpg",
+      "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_6/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://research.nvidia.com/labs/gear/n1_6/training_data_distribution_v3.svg",
+      "width": 900,
+      "height": 557
+    },
+    {
       "id": "being-h0",
       "asset": "frameworks/being-h0.jpg",
       "source_url": "https://arxiv.org/abs/2507.15597",
@@ -45,12 +57,12 @@
       "asset": "frameworks/gr00t-n15.jpg",
       "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_5/",
       "page": null,
-      "caption_detected": false,
+      "caption_detected": true,
       "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://research.nvidia.com/labs/gear/n1_5/grounding_example2.png",
-      "width": 1280,
-      "height": 800
+      "selection": "method_figure",
+      "image_url": "https://research.nvidia.com/labs/gear/n1_5/architecture.svg",
+      "width": 13421,
+      "height": 6848
     },
     {
       "id": "smolvla",
@@ -103,7 +115,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-iad6-1.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=HTWYbXia-Z0Q7kNvwHZqwHZ&_nc_oc=Adr7Ii3NpXkI_hTjYn2iERqscfpqzSIKkfePZPXIWNbCKJRQd1JE3lDqfT2gcz5eE1k&_nc_zt=14&_nc_ht=scontent-iad6-1.xx&_nc_gid=BoMvz6ZcioaBWxfZcPe0EQ&_nc_ss=7b20f&oh=00_AQHu1tYRkH_l896xpmNXqY5h_VWlVzNH5f5VMcfnX--Sbg&oe=6A8E9733",
+      "image_url": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=HTWYbXia-Z0Q7kNvwEiSMz8&_nc_oc=Adpc_7Z1MX8irzxAFlYQnb7Uv2zUU6SQqf2NJCG9UhXR8o-LWfq9Y3xwWHLHfDYg-FQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=8SXpwH6al8rN6vyYOOqEcw&_nc_ss=7b20f&oh=00_AQF4DERXZTLBm29Kri_Tlcn8buiSHTbZsP1DV9MVXd5Icg&oe=6A8E9733",
       "width": 1920,
       "height": 1080
     },
