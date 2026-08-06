@@ -177,6 +177,101 @@
     ]
   },
   {
+    "id": "wall-wm-world-action-model-9de8900",
+    "title": "WALL-WM World Action Model",
+    "organization": "自变量机器人 / X Square Robot",
+    "organizationKind": "Company",
+    "date": "2026-05-29",
+    "year": 2026,
+    "summary": "WALL-WM是自变量机器人于2026年5月29日正式发布并开放代码的世界动作模型，核心变化是把机器人交互从固定长度动作块重构为可由语言命名、可在视频中观察、也可由机器人执行的语义事件。模型以Wan视频DiT为视觉动力学基础，通过单向层级耦合接入动作DiT，并用跨视角注意、Camera RoPE和训练期几何掩码处理多相机信息。它既能按下一事件描述生成可变长度视频—动作轨迹，也能通过Staircase潜在推理兼容固定长度VLA控制。官方报告给出了真实双臂机器人上的推理操作、精细接触操作和复杂场景指令切换实验，并报告10 Hz部署频率；同时主动披露其内部机器人平台和平台对齐数据可能赋予自家模型评估优势。",
+    "tags": [
+      "World models",
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "World models",
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "featured": true,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "WALL-WM将动作落地的语义事件作为视频-动作学习的原子单位；每个样本由同一语义区间内的事件描述、多视角视频和机器人动作组成，区间边界随抓取、提升、移动、放置等可执行行为变化，而不是由固定时钟切分。",
+        "模型采用保留视频先验的双塔结构：视频塔继承Wan系列文本到视频DiT，动作DiT独立初始化；动作流在每一层单向交叉注意视频特征，而动作梯度不反向改写冻结的视频塔，以降低机器人动作训练覆盖原有视觉语义和动力学先验的风险。",
+        "多视角建模在原有单视角Wan计算之外加入跨视角注意、Camera RoPE、视锥注意掩码和时空tube patch masking。几何掩码仅在训练阶段使用，推理时移除，因此部署滚动不要求实时输入相机标定。",
+        "训练数据涵盖互联网视频、第一视角人类视频、可穿戴UMI式无机器人采集、异构遥操作、开放机器人数据、自采视频动作数据以及接触丰富的恢复轨迹；标注按Task、Subtask、Action和Segment多个时间尺度组织，并通过视觉语言聚类与动作聚类实施均衡采样。",
+        "同一事件预训练骨干支持两种控制接口：Event Mode接收VLM、人或智能体给出的下一事件描述并执行可变长度片段；Unified Mode保留固定长度动作块，但使用Qwen3.5-VL-9B与Staircase Decoding产生事件级潜在条件。",
+        "训练基础设施采用Muon，并实现面向混合并行的分布式DMuon及多事件序列打包；部署侧结合分布匹配蒸馏、FP8权重与激活量化、算子融合和CUDA Graph。",
+        "评估覆盖具身视频生成、CO3Dv2三维感知以及真实双臂机器人上的直接操作、推理操作、精细操作和复杂场景泛化；报告同时明确指出真实机器人平台与训练数据对自家模型更为匹配，因此跨系统比较存在平台和调优资源优势。"
+      ],
+      "capabilities": [
+        "依据下一事件文本描述生成可变长度的未来多视角视频与末端执行器动作轨迹，并在事件完成后重新观测环境。",
+        "在统一模式下通过VLM与Staircase Decoding生成事件结构化潜在推理，同时执行传统固定长度动作块。",
+        "在双臂桌面机器人上执行物体分类、按顺序按键、配对、按指令选择水果等语言推理型操作。",
+        "执行线缆插入、文具入盒等需要精确位姿对齐、接触时序和受约束放置的精细操作。",
+        "在包含多个物体和干扰项的共享场景中，根据随机切换的指令执行放盘、盖锅盖、推抹布和插螺丝刀等任务。"
+      ],
+      "metrics": [
+        {
+          "label": "闭环推理频率",
+          "note": "技术报告称结合蒸馏、FP8量化、算子融合和CUDA Graph后达到满足闭环机器人控制预算的端到端频率。",
+          "value": "10 Hz"
+        },
+        {
+          "label": "推理操作平均Task Progress",
+          "note": "真实机器人Reasoning Manipulation套件，0–100分；报告对比WALL-WM-U-Scratch 59.50、π0.5 56.40、DreamZero 32.70、LingBot-VA 31.60。",
+          "value": "71.60"
+        },
+        {
+          "label": "复杂场景泛化平均Task Progress",
+          "note": "Generalization套件，随机切换指令且场景中保留多个物体；对比DreamZero 28.50、π0.5 24.00、WALL-WM-U-Scratch 18.50。",
+          "value": "53.75"
+        },
+        {
+          "label": "精细操作平均Task Progress",
+          "note": "Dexterous Manipulation套件，涵盖精确插入和受约束放置；WALL-WM-U-Scratch为31.25。",
+          "value": "32.00"
+        },
+        {
+          "label": "CO3Dv2三维感知",
+          "note": "技术报告给出的WALL-WM结果；Point Error和Depth Error越低越好，AUC越高越好。",
+          "value": "Point Error 0.271；Depth Error 0.132；AUC@5 0.210；AUC@30 0.727"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://x2robot.com/pages/wm"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://x2robot.com/en"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.prnewswire.com/news-releases/x-square-robot-open-sources-wall-wm-shifting-robot-world-modeling-from-chunks-to-events-302785692.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/x-square-robot_opensource-embodiedai-activity-7466060450514907136-z9b8"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tr9enx/wallwm_trains_a_world_action_model_on_semantic/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/junfan-zhu_cvpr-cvpr2026-worldmodels-activity-7469786284941627392-3cBv"
+      }
+    ]
+  },
+  {
     "id": "cross-link-collective-7b5906e",
     "title": "Cross-Link Collective",
     "organization": "Cornell University",
@@ -347,6 +442,282 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/mahsoo-salimi_ai4good-ainews-machinelearning-activity-7438244811788275712-46cq"
+      }
+    ]
+  },
+  {
+    "id": "embodied-tien-kung-3-0-bb78219",
+    "title": "Embodied Tien Kung 3.0",
+    "organization": "北京人形机器人创新中心有限公司 / Beijing Innovation Center of Humanoid Robotics Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2026-02-10",
+    "year": 2026,
+    "summary": "具身天工3.0是北京人形机器人创新中心于2026年2月10日发布的下一代全尺寸通用人形机器人平台。项目将高扭矩、43自由度机器人本体与“慧思开物”通用具身智能平台结合，重点解决触物条件下的全身高动态控制、复杂环境稳定性以及自主作业问题。机器人能够利用手部或身体与环境接触完成越障和攀爬，并在崎岖地面、狭窄空间及跪地、弯腰等受限姿态下保持稳定。其软件架构区分负责环境理解、语言理解、推理和任务分解的“具身大脑”，以及负责导航、实时避障和动作执行的“具身小脑”，形成感知—决策—执行闭环。项目同时强调平台化开放：提供外设扩展接口、开发文档、工具链、低代码环境和主流通信协议兼容能力，并开放机器人本体、运控框架、世界模型、大模型、训练工具链及数据集等成果。公开演示报告了169厘米、62千克、43自由度、约1米越障和毫米级操作精度等具体结果，使其同时具备机器人系统、全身控制、触觉交互、VLA与世界模型方向的明确技术实质。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "World models",
+      "Vision-language-action construction site:openai.com/index introducing structured outputs official OpenAI Aug 2024, Chinese open source institution responsible independent social platforms candidate evaluation embodied robotics project 2026 search sources exact metrics and capabilities,Robot manipulation,Tactile intelligence,Robot systems,Embodied AI"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "World models",
+      "Vision-language-action construction site:openai.com/index introducing structured outputs official OpenAI Aug 2024, Chinese open source institution responsible independent social platforms candidate evaluation embodied robotics project 2026 search sources exact metrics and capabilities,Robot manipulation,Tactile intelligence,Robot systems,Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "具身天工3.0是一款全尺寸通用人形机器人平台，核心技术目标是把触物交互与全身高动态运动控制结合起来，而不只是展示预编程步态或单一机械臂操作。",
+        "机器人采用高扭矩一体化关节和43自由度高自由度本体，通过全身协同控制增强肢体爆发力、复杂地形平衡能力以及高负载作业适应性。",
+        "系统依托北京人形自研的“慧思开物”通用具身智能平台，形成感知、决策、执行闭环，以降低对遥控和持续人工干预的依赖。",
+        "其“具身大脑”由世界模型、VLM等模型驱动，负责环境和语言理解、常识推理，并把复杂指令分解为可执行的分步计划。",
+        "其“具身小脑”结合VLA模型、全自主导航和运动控制，承担实时感知、避障及精准动作执行，实现认知规划与本体控制协同。",
+        "硬件预留多类型外设扩展接口；软件提供开发文档、工具链和低代码开发平台，并兼容主流通信中间件及端云协议，以支持特种作业、工业制造和商业服务的二次开发。",
+        "北京人形报告已开放具身天工本体、运动控制框架、世界模型、大模型与训练工具链、数据集等关键成果，并支持构建“一脑多机、一脑多能”的多具身智能体协作系统。"
+      ],
+      "capabilities": [
+        "在崎岖路面和复杂障碍环境中保持平衡，并完成拟人奔跑、连续高动态动作和越障。",
+        "通过手部支撑等触物交互完成攀爬、跳下高台以及约1米障碍物翻越。",
+        "在狭窄空间或受限姿态下完成跪地作业、弯腰和转身操作。",
+        "理解视觉场景与人类语言指令，执行常识推理、任务分解、实时避障和动作规划。",
+        "支持从单机自主作业扩展到“一脑多机”的多机器人任务协同。"
+      ],
+      "metrics": [
+        {
+          "label": "机器人高度",
+          "note": "官方发布材料报告的本体高度。",
+          "value": "169厘米"
+        },
+        {
+          "label": "机器人重量",
+          "note": "官方发布材料报告的本体重量。",
+          "value": "62千克"
+        },
+        {
+          "label": "全身自由度",
+          "note": "用于全身协同运动与操作。",
+          "value": "43个自由度"
+        },
+        {
+          "label": "越障能力",
+          "note": "官方演示材料称可稳定翻越约这一高度的障碍物。",
+          "value": "约1米"
+        },
+        {
+          "label": "操作精度",
+          "note": "官方材料称43个自由度精准协同可将操作精度控制在该等级，未提供更细的误差分布或测试协议。",
+          "value": "毫米级"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202602/t20260212_4511437.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.x-humanoid.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202602/t20260212_4511437.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.youtube.com/watch?v=_Hdq891Z4_Q"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/roboticsbusinessnews_x-humanoid-unveils-embodied-tien-kung-30-activity-7429327268763725824-xI-j"
+      }
+    ]
+  },
+  {
+    "id": "embodied-tiangong-3-0-2d1b8b1",
+    "title": "Embodied Tiangong 3.0",
+    "organization": "北京人形机器人创新中心有限公司 / Beijing Humanoid Robot Innovation Center",
+    "organizationKind": "Company",
+    "date": "2026-02-10",
+    "year": 2026,
+    "summary": "具身天工3.0是北京人形机器人创新中心于2026年2月10日发布的新一代全尺寸通用人形机器人平台，目标从单纯运动展示转向可接触环境、可自主作业并便于产业二次开发的具身机器人系统。其169厘米、62千克的本体配置43个自由度和高扭矩一体化关节，通过触物交互式全身高动态控制，可借助手部支撑翻越约1米障碍，并在崎岖地形、复杂障碍及受限姿态中保持稳定。机器人还能完成跪地作业、弯腰转身、拾取杂物和精确拨动旋钮等移动操作任务，官方报告其操作精度达到毫米级。软件核心是“慧思开物”通用具身智能平台：世界模型和VLM承担环境理解、指令解析及任务规划，VLA、自主导航和运动控制能力承担实时避障与动作执行，构成感知、决策、执行闭环，并支持多机器人协作。平台同时开放硬件扩展接口、开发文档、工具链、低代码开发环境及主流通信协议兼容能力，面向特种作业、工业制造和商业服务等场景进行集成。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "具身天工3.0是全尺寸通用人形机器人平台，采用43自由度本体和高扭矩一体化关节，重点提升肢体爆发力、本体稳定性及全身关节协同能力。",
+        "系统实现触物交互式全身高动态运动控制：机器人可利用手部与外界接触形成支撑，在约1米高障碍上完成单手支撑翻越，而非仅依靠无接触双足步态。",
+        "高自由度结构与全身协同控制覆盖移动和操作，可执行翻越障碍、高爆发连续动作、跪地作业及弯腰转身，并在狭小空间或受限姿态下维持稳定操作。",
+        "自研“慧思开物”通用具身智能平台把机器人能力组织为“感知—决策—执行”闭环；其中具身“大脑”由世界模型、VLM等负责环境理解、指令解析和任务规划，具身“小脑”由VLA、自主导航等能力负责实时感知、避障和动作执行。",
+        "平台支持从单机自主作业扩展至多具身智能体协作，通过“一脑多机、一脑多能”架构组织多机器人应用。",
+        "硬件预留多类型扩展接口，可接入外设和作业工具；软件侧提供开发文档、工具链、低代码开发平台，并兼容多种主流通信中间件及端云协议，允许合作方在不重构底层技术的情况下二次开发。",
+        "北京人形已公开开放具身天工本体、运动控制框架、世界模型、大模型、训练工具链和数据集等关键技术成果，因此该项目不仅是机器人演示原型，也被定位为面向开发者和产业集成的通用平台。"
+      ],
+      "capabilities": [
+        "在崎岖路面和复杂障碍环境中保持平衡，并执行拟人奔跑、翻越高台等高动态移动任务。",
+        "通过手部接触环境完成约1米高障碍的单手支撑翻越，以及攀爬、高爆发连续动作。",
+        "执行跪地作业、弯腰转身、拾取杂物、拨动旋钮等受限姿态下的操作任务。",
+        "由“慧思开物”平台形成感知、决策与执行闭环，支持自主导航、实时避障、任务规划及多机器人协同。",
+        "通过扩展接口、开发工具链和低代码平台适配特种作业、工业制造与商业服务场景。"
+      ],
+      "metrics": [
+        {
+          "label": "本体高度",
+          "note": "官方发布材料报告的整机高度。",
+          "value": "169厘米"
+        },
+        {
+          "label": "本体重量",
+          "note": "官方发布材料报告的整机重量。",
+          "value": "62千克"
+        },
+        {
+          "label": "全身自由度",
+          "note": "用于全身运动及操作协同。",
+          "value": "43个自由度"
+        },
+        {
+          "label": "障碍翻越演示",
+          "note": "机器人以单手接触支撑方式完成翻越。",
+          "value": "约1米高障碍"
+        },
+        {
+          "label": "操作精度",
+          "note": "官方材料称43个自由度精准协同将操作精度控制在该量级，未披露更细的误差统计。",
+          "value": "毫米级"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.bjdch.gov.cn/ztzl/tzdc/tzdt/sjdt/202602/t20260211_4507920.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.x-humanoid.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.bjdch.gov.cn/ztzl/tzdc/tzdt/sjdt/202602/t20260211_4507920.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.bilibili.com/video/BV1HGFSztEMB"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/newsgab_beijing-establishes-itself-as-the-hub-for-activity-7445944501543550976-BHVW"
+      }
+    ]
+  },
+  {
+    "id": "unitree-h2-humanoid-robot-c5efccb",
+    "title": "Unitree H2 Humanoid Robot",
+    "organization": "宇树科技 / Unitree Robotics",
+    "organizationKind": "Company",
+    "date": "2025-10-20",
+    "year": 2025,
+    "summary": "Unitree H2是宇树科技在2025年10月20日发布的全尺寸双足人形机器人平台，面向高动态全身运动、具身模型部署和开发者扩展。详细规格给出的站立尺寸为1820 × 456 × 218毫米，带电池重量约70千克。其31自由度覆盖双腿、双臂、腰部和头部，腿关节最大峰值扭矩达到360 N·m，手臂额定负载约7千克、峰值约15千克。硬件采用航空铝、钛合金和高强度工程塑料，并结合工业级交叉滚子轴承、低惯量高速永磁同步电机及风冷散热。感知和人机交互由仿人双目相机、麦克风阵列和扬声器承担。H2 EDU进一步提供用户开发计算机、二次开发接口、可选灵巧手及Thor等高算力模组，使其能够作为具身智能模型和全身控制算法的实体部署平台。需要注意的是，官方明确表示部分示例功能仍在开发测试，且人形机器人整体仍处于早期探索阶段。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": true,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "H2是宇树科技于2025年10月20日正式发布的全尺寸双足人形机器人；官方产品页和公司发展历程均明确记录了该产品及发布日期。",
+        "机器人采用31自由度结构：每条腿6自由度、每条手臂7自由度、腰部3自由度、头部2自由度，用于实时控制和复杂高动态动作复现。",
+        "关节系统采用工业级交叉滚子轴承以及低惯量高速内转子永磁同步电机；官方强调其高精度、高承载、快速响应和散热能力。",
+        "感知与交互硬件包括大视场角仿人双目相机、阵列式麦克风和大功率扬声器，并支持Wi-Fi 6与蓝牙5.2。",
+        "平台基础计算机使用Intel Core i5；H2 EDU另配用于用户开发的Intel Core i7，并可选Thor等高算力模组。官方称最高配置可提供2070 TOPS，用于部署各类具身智能大模型。",
+        "标准H2不提供二次开发和灵巧手；H2 EDU支持二次开发，可选多种灵巧手和高算力模组。官方同时注明部分示例功能仍处于开发测试阶段。"
+      ],
+      "capabilities": [
+        "执行复杂、高动态的全身动作，并以31个关节自由度实时响应",
+        "通过大视场角仿人双目相机进行视觉感知",
+        "通过阵列式麦克风和大功率扬声器实现语音交互",
+        "在最高2070 TOPS的可选计算配置上部署具身智能模型",
+        "H2 EDU支持二次开发、可选灵巧手和多品牌高算力模组"
+      ],
+      "metrics": [
+        {
+          "label": "自由度",
+          "note": "包括每腿6自由度、每臂7自由度、腰部3自由度和头部2自由度。",
+          "value": "31 DoF"
+        },
+        {
+          "label": "腿关节最大峰值扭矩",
+          "note": "官方提示该参数会随业务场景和设备姿态变化。",
+          "value": "360 N·m"
+        },
+        {
+          "label": "手臂负载",
+          "note": "官方标称峰值负载约15 kg、额定负载约7 kg。",
+          "value": "峰值约15 kg；额定约7 kg"
+        },
+        {
+          "label": "最高计算能力",
+          "note": "用于部署具身智能模型的最高配置；H2 EDU可选Thor等高算力模组。",
+          "value": "最高2070 TOPS"
+        },
+        {
+          "label": "续航时间",
+          "note": "H2与H2 EDU产品参数表中的官方标称值。",
+          "value": "约3小时"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.unitree.com/cn/H2/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.unitree.com/cn/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.unitree.com/cn/H2/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/robotics/comments/1obbltf/unitree_h2/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.youtube.com/watch?v=UJRg92QulIU"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/ai-spotlight-show_unitree-unitreeh2-destinyawakening-activity-7425942788099317760-7oYu"
       }
     ]
   },
@@ -536,6 +907,97 @@
     ]
   },
   {
+    "id": "large-behavior-models-and-the-data-factory-two-k-7bd6b05",
+    "title": "Large Behavior Models and the Data Factory: Two Keys to Scalable Robot Learning",
+    "organization": "Toyota Research Institute",
+    "organizationKind": "Research Lab",
+    "date": "2025-10-09",
+    "year": 2025,
+    "summary": "Toyota Research Institute 的 Large Behavior Models 项目研究如何把机器人灵巧操作从逐任务工程转向可扩展的数据驱动范式。其核心是以大规模、多来源示范数据预训练多任务扩散策略，再针对新的复杂操作进行微调。模型联合使用视觉、语言和机器人本体状态，直接生成连续动作块，并在真实 Franka 双臂平台及 Drake 仿真系统中接受大样本评测。项目的数据工厂整合内部遥操作、仿真、UMI 和跨机器人互联网数据，使研究团队能够系统分析预训练规模、微调数据效率、环境分布偏移和评测统计功效。结果表明，预训练后微调通常优于使用同等任务数据从零训练，并可将新任务所需数据减少 3–5 倍；与此同时，项目没有把结果夸大为零样本通用机器人，因为未经微调的模型并未持续优于单任务策略。这项工作的影响力主要来自真实机器人数据规模、严格的盲式评测协议，以及对机器人基础模型实际收益和局限的定量验证。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "LBM 被实现为多任务扩散策略：多模态 ViT 视觉-语言编码器处理腕部相机、场景相机、机器人本体感知和语言指令，Transformer 去噪头通过 AdaLN 接收条件并预测机器人动作。",
+        "模型每次预测 16 个时间步、总计 1.6 秒的动作块，用于双臂灵巧操作，而不是只输出单步动作。",
+        "预训练数据工厂混合了 468 小时内部双臂遥操作数据、45 小时仿真遥操作数据、32 小时 Universal Manipulation Interface 数据，以及约 1,150 小时从 Open X-Embodiment 筛选的互联网机器人数据。",
+        "实机与仿真评测均采用双臂 Franka Panda FR3 工作站，最多配置六台相机；同一 LBM 检查点可在 Drake 仿真和真实机器人环境中接受评估。",
+        "评测同时覆盖预训练中出现过的任务和此前未见的长时程任务，包括切割苹果、安装自行车刹车盘和布置早餐桌等复杂操作；新任务通过微调预训练模型获得策略。",
+        "真实机器人实验使用受控初始条件和盲式 A/B 测试，并通过序贯假设检验计算统计显著性；项目指出，小样本机器人评测的置信区间可能过宽，难以区分真实性能差异。",
+        "结果支持多任务预训练后再微调的路线：微调 LBM 相对从零训练策略表现出一致增益，且性能随预训练数据增加而平滑改善；但未经微调的 LBM 并未稳定胜过单任务基线，数据归一化等设计选择也可能产生大于架构变化的影响。"
+      ],
+      "capabilities": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "metrics": [
+        {
+          "label": "预训练数据规模",
+          "note": "由内部双臂遥操作、仿真遥操作、UMI 和 Open X-Embodiment 数据组成。",
+          "value": "接近 1,700 小时"
+        },
+        {
+          "label": "真实机器人评测",
+          "note": "项目报告的盲式 A/B 实机评测总量。",
+          "value": "1,800 次 rollout"
+        },
+        {
+          "label": "仿真评测",
+          "note": "在 Drake 仿真环境中执行。",
+          "value": "超过 47,000 次 rollout"
+        },
+        {
+          "label": "新任务数据效率",
+          "note": "在需要适应多种环境因素的挑战性设置中，相对于从零训练达到相当表现所需的数据量。",
+          "value": "减少至约 1/3–1/5，即使用 3–5 倍更少数据"
+        },
+        {
+          "label": "核心评测套件",
+          "note": "预训练模型在实机和仿真任务上的统计化评测规模。",
+          "value": "29 个任务、4,200 次 rollout"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.tri.global/news/large-behavior-models-and-the-data-factory-two-keys-to-scalable-robot-learning"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.tri.global/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.tri.global/news/large-behavior-models-and-the-data-factory-two-keys-to-scalable-robot-learning"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.youtube.com/watch?v=DeLpnTgzJT4"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/ilir-aliu_1700-h-training-1800-tests-47000-sims-activity-7352011805633736704-l-dJ"
+      }
+    ]
+  },
+  {
     "id": "noetix-w1-bionic-robot-2a08393",
     "title": "Noetix W1 Bionic Robot",
     "organization": "北京松延动力科技集团股份有限公司 / Noetix Robotics",
@@ -716,6 +1178,284 @@
       {
         "label": "Evidence",
         "url": "https://www.reddit.com/r/technology/comments/1ofovd0/chinas_noetix_debuts_familyfriendly_us1400/"
+      }
+    ]
+  },
+  {
+    "id": "gemini-robotics-1-5-brings-ai-agents-into-the-ph-5fd6c1e",
+    "title": "Gemini Robotics 1.5 brings AI agents into the physical world",
+    "organization": "Google DeepMind",
+    "organizationKind": "Research Lab",
+    "date": "2025-09-25",
+    "year": 2025,
+    "summary": "Gemini Robotics 1.5 是 Google DeepMind 于 2025 年 9 月 25 日发布的实体机器人模型项目，由执行动作的 Gemini Robotics 1.5 VLA 与负责高层具身推理的 Gemini Robotics-ER 1.5 组成。ER 模型接收用户目标和环境反馈，进行空间理解、任务规划、工具调用、进度估计与成功检测；VLA 模型再把自然语言子任务直接转换为机器人控制动作。其核心技术增量包括动作前自然语言思考、多层任务分解，以及从异构机器人数据学习的 Motion Transfer。官方报告展示了技能在 ALOHA 2、双臂 Franka 和 Apptronik Apollo 人形机器人之间的零样本跨形态迁移，以及垃圾分类、衣物分类、桌面整理和旅行箱打包等长时程任务。Gemini Robotics-ER 1.5 在 15 项学术具身推理基准上取得 59.6 的汇总 ER Score，并可调用搜索或第三方函数，把数字信息纳入实体任务规划。项目同时采用高层语义安全推理、Gemini 安全策略和机载碰撞避免子系统，并以升级版 ASIMOV 基准评估语义与物理安全。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Humanoid intelligence",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Humanoid intelligence",
+      "Robot systems"
+    ],
+    "featured": true,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "系统由两个互补模型组成：Gemini Robotics-ER 1.5 是负责理解环境、规划、工具调用和进度判断的高层编排器；Gemini Robotics 1.5 是把开放词汇自然语言指令转换为底层机器人动作的 VLA 执行模型。",
+        "Gemini Robotics 1.5 引入多层级具身思考机制，在输出动作前生成自然语言推理轨迹；它可以把复杂指令逐级拆成较短任务段和持续数秒的基础运动，从而处理洗衣分类等语义复杂的多步任务。",
+        "Motion Transfer 机制和多形态架构使用异构机器人数据训练同一模型，使技能能够跨 ALOHA 2、双臂 Franka 与 Apptronik Apollo 人形机器人迁移，无需针对每种新形态单独后训练。",
+        "Gemini Robotics-ER 1.5 保留 Gemini 的多模态推理和工具使用能力，同时针对空间理解、任务规划、轨迹预测、任务进度估计及成功检测等具身问题进行了专门优化。",
+        "代理式工作流允许 ER 模型根据用户输入和环境反馈动态更新计划、调用 Google Search 或第三方函数，再以自然语言逐步调度 VLA；官方示例包括依据当地规定完成堆肥、回收物和垃圾分类。",
+        "安全设计同时覆盖高层语义推理与机器人本体低层安全子系统：模型在行动前评估安全性，遵循 Gemini Safety Policies，并可触发机载碰撞避免等机制；配套发布的升级版 ASIMOV 基准增加了尾部场景覆盖、标注、安全问题类型和视频模态。"
+      ],
+      "capabilities": [
+        "根据用户目标、环境反馈和外部信息制定多步实体任务计划，并在执行过程中估计进度与成功状态",
+        "通过视觉与语言输入直接生成机器人运动控制，完成抓取、放置、分类和整理等操作任务",
+        "调用 Google Search 或用户定义函数获取外部信息，例如查询当地垃圾分类规则后操作实体物品",
+        "将仅在 ALOHA 2 上训练的动作零样本迁移到双臂 Franka 和 Apptronik Apollo 等不同机器人形态，反向迁移亦有展示",
+        "用自然语言推理分解长时程任务，并在动作执行期间解释中间决策"
+      ],
+      "metrics": [
+        {
+          "label": "具身推理综合分数",
+          "note": "技术报告在 15 个学术具身推理基准上汇总的 ER Score；报告中为所比较模型的最高值。",
+          "value": "59.6"
+        },
+        {
+          "label": "空间推理平均分",
+          "note": "Point-Bench、RefSpatial、RoboSpatial-Pointing 和 Where2Place 四项空间基准的平均结果。",
+          "value": "52.6"
+        },
+        {
+          "label": "问答类基准平均分",
+          "note": "技术报告中图像与视频具身问答相关基准的 QA average。",
+          "value": "66.5"
+        },
+        {
+          "label": "评测覆盖范围",
+          "note": "官方评测覆盖 Point-Bench、ERQA、OpenEQA、VSI-Bench 等具身指向、图像问答和视频问答任务。",
+          "value": "15 个学术基准"
+        },
+        {
+          "label": "多步任务思考模式进度分",
+          "note": "技术报告图 6 报告开启思考后，ALOHA、双臂 Franka、人形机器人上的任务进度分分别为 0.55、0.60、0.67；关闭思考时分别为 0.26、0.55、0.51。",
+          "value": "0.55 / 0.60 / 0.67（开启思考）"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://deepmind.google/"
+      },
+      {
+        "label": "Report",
+        "url": "https://deepmind.google/discover/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/singularity/comments/1nqe32v/gemini_robotics_15/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://twitter.com/aaditsh/status/1971299698112856362"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://es.linkedin.com/pulse/google-deepmind-lanza-gemini-robotics-15-robots-que-y-arturo-uithc"
+      }
+    ]
+  },
+  {
+    "id": "helix-02-full-body-autonomy-a42b12f",
+    "title": "Helix 02: Full-Body Autonomy",
+    "organization": "Figure AI, Inc.",
+    "organizationKind": "Company",
+    "date": "2025-08-12",
+    "year": 2025,
+    "summary": "Helix 02 是 Figure AI 于 2026 年 1 月 27 日发布的全身人形机器人视觉-语言-动作系统，运行于配备头部与掌心相机、指尖触觉传感器和全身本体感觉的 Figure 03。它在原 Helix 的 System 1 与 System 2 之下新增 System 0，将语义任务推理、视觉运动控制以及高频平衡与接触控制组织成从像素到执行器的统一层级。System 2 理解场景、语言和长时序目标；System 1 以 200 Hz 生成全身关节目标；System 0 使用从人体运动和仿真强化学习获得的控制先验，以 1 kHz 执行并维持稳定。官方展示包括一段连续 4 分钟、61 个行走与操作动作的洗碗机任务，以及依赖掌心视觉和触觉反馈的拧瓶盖、取单颗药丸、精确推出 5 ml 注射器液量和杂乱金属件分拣。其技术意义在于不再把行走、停止、稳定和抓取作为彼此割裂的控制器，而是让单一学习系统在移动、负载变化、双手协调、接触和全身平衡之间持续耦合。",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "featured": true,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Helix 02 是部署于 Figure 03 人形机器人上的统一全身视觉-语言-动作系统；它将头部相机、掌心相机、指尖触觉和全身本体感觉连接到腿、躯干、头、手臂、手腕及手指的关节级控制。",
+        "系统采用三个时间尺度协同的层级：System 2 负责场景理解、语言和语义任务序列；System 1 将感知及 System 2 的潜在目标转换为全身关节目标；System 0 负责接触、平衡和全身协调。",
+        "System 0 是从人体运动学习的全身控制先验，训练数据包括超过 1,000 小时的关节级重定向人体动作，并通过大规模仿真、域随机化和强化学习迁移到真实机器人。",
+        "System 1 延续 Transformer 视觉运动策略，但从原 Helix 的上半身控制扩展为“所有传感器输入、所有关节输出”；掌心视觉用于处理头部相机看不到的手内遮挡，指尖触觉用于调节抓握力和接触动作。",
+        "官方演示中的洗碗机任务为完全自主、非遥操作的房间尺度连续任务，统一包含行走、双手操作、物品搬运、平衡维持、任务排序和隐式错误恢复。",
+        "同一神经控制系统覆盖毫米级手指动作与房间尺度移动；机器人还会根据约束使用髋部和脚完成接触操作，而不局限于双手。",
+        "精细操作演示覆盖触觉调节的双手拧盖、遮挡条件下提取单颗药丸、精确推动注射器活塞，以及从相互遮挡且会移动的杂乱金属件中完成抓取。"
+      ],
+      "capabilities": [
+        "可在完整厨房范围内自主行走，并连续完成洗碗机卸载、餐具搬运与重新装载。",
+        "在持握易碎物品时协调步行、抓握与平衡，并进行双手拾取、换手、堆叠和放置。",
+        "在双手被占用时使用髋部关闭抽屉、用脚抬起洗碗机门，实现非手部接触操作。",
+        "利用掌心相机与指尖触觉完成拧瓶盖、提取单颗药丸、按压注射器和从杂乱堆中分拣小型金属件。",
+        "根据场景与语言目标执行长时序任务，并在执行过程中维持任务状态和进行隐式错误恢复。"
+      ],
+      "metrics": [
+        {
+          "label": "连续自主任务时长",
+          "note": "官方报告称洗碗机卸载、跨房间搬运、重新装载并启动的演示全程无重置、无人干预。",
+          "value": "4 分钟"
+        },
+        {
+          "label": "长时序动作数量",
+          "note": "官方报告称这些行走与操作动作按正确顺序执行，并包含隐式错误恢复。",
+          "value": "61 个 loco-manipulation 动作"
+        },
+        {
+          "label": "System 0 训练数据",
+          "note": "关节级重定向的人体运动数据。",
+          "value": "超过 1,000 小时"
+        },
+        {
+          "label": "System 0 规模与训练环境",
+          "note": "System 0 为全身控制网络，在大规模并行仿真环境中训练。",
+          "value": "1,000 万参数；超过 200,000 个并行环境"
+        },
+        {
+          "label": "控制频率与触觉灵敏度",
+          "note": "System 1 输出全身关节目标，System 0 执行关节级命令；指尖传感器用于接触感知。",
+          "value": "System 1：200 Hz；System 0：1 kHz；最小可检测力约 3 克"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.figure.ai/news/helix-02"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.figure.ai/company"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.figure.ai/news/helix-02"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/figure-ai_introducing-helix-02-its-our-most-powerful-activity-7421977034928762881-fwet"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/pruthvigeedh_how-does-helix-02-work-figure-activity-7422257015663661056-wVAJ"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/Wevolver/comments/1qskcqq/helix_02_from_figure/"
+      }
+    ]
+  },
+  {
+    "id": "unitree-a2-industrial-quadruped-robot-69050d8",
+    "title": "Unitree A2 Industrial Quadruped Robot",
+    "organization": "宇树科技 / Unitree Robotics",
+    "organizationKind": "Company",
+    "date": "2025-08-05",
+    "year": 2025,
+    "summary": "Unitree A2 是宇树科技在 2025 年 8 月 5 日推出的工业级四足机器人平台，核心方向不是单一视觉模型或普通机器学习研究，而是将高功率关节、复杂地形运动、工业载荷、长距离续航、环境感知和用户侧计算扩展集成到可部署的实体机器人系统中。其本体拥有 12 个电机关节，单关节最大扭矩约 180 N·m，并采用工业级轴承、双编码器和局部风冷设计。感知配置由激光雷达、高清相机和前灯组成，A2-PRO 可配置前后双激光雷达，以扩大机器人在巡检和户外移动中的环境覆盖。双槽电池系统支持热插拔，空载官方续航超过 5 小时或约 20 km，携带 25 kg 时超过 3 小时或约 12.5 km。平台提供八核控制计算机、Intel Core i7 用户开发计算机、可选算力扩展坞及 CAN、RS485、以太网和 USB 接口，因而可作为导航、巡检、物流或救援系统的移动硬件底座。官方还报告其可在约 45°坡面上行走、跨越 30 cm 台阶、达到约 5 m/s 峰值速度，并在 -20°C 至 55°C 环境运行。需要注意的是，官方页面提示部分展示功能仍处于开发或测试阶段，所有参数也可能随配置和应用环境变化；此外，官方只确认支持二次开发，没有证据表明 A2 的整套软硬件项目已经开源。([unitree.com](https://www.unitree.com/mobile/A2/))",
+    "tags": [
+      "Robot systems",
+      "Whole-body control",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Whole-body control",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "A2 是面向工业部署的中型四足机器人平台，采用 12 个关节电机，关节使用工业级交叉滚子轴承以及低惯量高速内转子永磁同步电机，单关节最大扭矩约 180 N·m。([unitree.com](https://www.unitree.com/mobile/A2/))",
+        "机器人采用铝合金与高强度工程塑料结构；官方当前参数为不含电池约 35 kg、含电池约 42 kg。Unitree 的公司时间线则以约 37 kg 描述发布时版本，说明不同页面或配置口径存在差异。([unitree.com](https://www.unitree.com/mobile/A2/))",
+        "A2 标准版配置一个激光雷达和一个高清相机，A2-PRO 配置两个激光雷达和一个高清相机；产品页同时重点展示前后工业激光雷达构成的双向感知方案，并配有前灯辅助前向环境探测。([unitree.com](https://www.unitree.com/mobile/A2/))",
+        "平台采用双电池槽并支持双电池并联和热插拔：单电池容量为 9000 mAh、453.6 Wh，双电池总容量为 18000 mAh、907.2 Wh，可在机器人继续运行时更换电池。([unitree.com](https://www.unitree.com/mobile/A2/))",
+        "计算与扩展配置包括平台侧八核 CPU、供用户开发的 Intel Core i7，以及可选高算力扩展坞；接口包括 RS485、CAN、千兆以太网、USB 3.0 Type-C 和多路电源输出，官方明确支持二次开发。([unitree.com](https://www.unitree.com/mobile/A2/))",
+        "A2 面向户外和工业环境，工作温度范围为 -20°C 至 55°C；标准版防护等级为 IP56，A2-PRO 标注为 IP56 至 IP67，其中核心部件达到 IP67。([unitree.com](https://www.unitree.com/mobile/A2/))",
+        "官方将其应用范围定位为物流运输、工业巡检和应急救援。公开演示和独立报道展示或讨论了其在不平整地面、坡地、台阶及负载条件下的移动表现。([unitree.com](https://www.unitree.com/mobile/A2/))"
+      ],
+      "capabilities": [
+        "在碎石、陡坡、台阶等复杂地形上进行四足移动",
+        "携带工业载荷进行长距离连续行走",
+        "通过前后激光雷达和高清相机感知周围环境",
+        "利用可热插拔双电池执行不中断的长时任务",
+        "面向物流运输、工业巡检和应急救援进行二次开发"
+      ],
+      "metrics": [
+        {
+          "label": "负载续航",
+          "note": "官方连续行走结果；参数可能随配置和实际场景变化。",
+          "value": "携带 25 kg 负载时连续行走超过 3 小时，约 12.5 km"
+        },
+        {
+          "label": "空载续航",
+          "note": "官方连续行走结果。",
+          "value": "空载连续行走超过 5 小时，约 20 km"
+        },
+        {
+          "label": "速度",
+          "note": "官方列出的常规速度范围及峰值。",
+          "value": "0–3.7 m/s，最高约 5 m/s"
+        },
+        {
+          "label": "地形能力",
+          "note": "官方参数分别列出坡度、台阶和攀爬高度。",
+          "value": "约 45°坡面；最大台阶高度 30 cm；最大攀爬高度约 0.5–1 m"
+        },
+        {
+          "label": "载荷",
+          "note": "站立载荷不等同于移动载荷；理想条件移动载荷高于标准连续载荷。",
+          "value": "最大站立载荷约 100 kg；连续行走载荷约 25 kg，理想条件约 35 kg"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.unitree.com/A2/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.unitree.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.unitree.com/A2/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/robotics/comments/1miq5mz/i_remember_the_time_boston_dynamics_used_to_post/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/jacobbd_unitree-robotics-new-a2-robot-is-insane-activity-7359327484401635328-iqS9"
       }
     ]
   },
@@ -991,6 +1731,463 @@
     ]
   },
   {
+    "id": "gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4",
+    "title": "Gemini Robotics On-Device brings AI to local robotic devices",
+    "organization": "Google DeepMind",
+    "organizationKind": "Research Lab",
+    "date": "2025-06-24",
+    "year": 2025,
+    "summary": "Gemini Robotics On-Device 是 Google DeepMind 于 2025 年 6 月 24 日发布的端侧视觉-语言-动作模型，直接面向真实机器人操作，而不是通用视觉或纯软件智能体。它接收自然语言、机器人视角图像和本体感知状态，在机器人本地生成动作，目标是在低延迟、间歇联网或完全离线的条件下保留 Gemini Robotics 的任务泛化与双手灵巧操作能力。官方材料展示了衣物折叠、袋子及午餐盒拉链操作、卡片抽取、液体倾倒和工业装配，并报告模型可凭 50–100 次示范适配新任务。其基础训练针对 ALOHA，但又被迁移至双臂 Franka FR3 和 Apptronik Apollo 人形机器人，体现跨本体适配能力。Google DeepMind 同时公开了 Apache-2.0 SDK 和 Aloha Sim/MuJoCo 评测环境，但核心模型访问及检查点仍受受信测试者计划限制，因而本索引不将其标记为开源项目。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是一个面向双臂机器人的视觉-语言-动作基础模型，输入包括文本指令、机器人视角图像和数值形式的本体感知信息，输出机器人动作。",
+        "模型基于端侧 Gemma 系列进行构建，重点是在机器人本地以较低计算资源和低延迟运行；其执行不依赖持续的数据网络连接。",
+        "模型强调视觉、语义和行为泛化，可理解开放式自然语言指令，并处理未见物体、物体位置变化和新场景。",
+        "官方演示覆盖拉开袋子拉链、折叠衣物、午餐盒拉链操作、抽取卡片、倾倒沙拉酱以及需要精度和灵巧性的工业皮带装配。",
+        "模型支持通过任务示范进行微调；Google DeepMind 将其称为首个向外部测试者提供微调能力的 Gemini Robotics VLA 模型。",
+        "基础训练使用 ALOHA 双臂机器人数据，但同一通用模型随后被适配到双臂 Franka FR3 和形态差异显著的 Apptronik Apollo 人形机器人；官方材料还提供 SDK 与 MuJoCo/Aloha Sim 环境，用于评估、仿真和适配。",
+        "安全架构将模型层的语义与内容安全机制同底层安全关键控制器结合，并建议使用 ASIMOV 语义安全基准及分层红队测试；模型发布时仅面向受信测试者，以收集使用和安全反馈。"
+      ],
+      "capabilities": [
+        "根据自然语言指令控制双臂机器人完成物理操作。",
+        "在机器人本地执行低延迟推理，并可在无网络或网络不稳定环境中运行。",
+        "执行拉开拉链、折叠衣物、抽取卡片、倾倒沙拉酱和精密工业皮带装配等双手操作任务。",
+        "通过少量示范微调学习新任务，并从 ALOHA 迁移适配到双臂 Franka FR3 和 Apptronik Apollo 人形机器人。"
+      ],
+      "metrics": [
+        {
+          "label": "新任务适配数据量",
+          "note": "官方公告称，可用少量示范对模型进行新领域或新任务适配。",
+          "value": "50–100 次示范"
+        },
+        {
+          "label": "快速适配评测任务数",
+          "note": "官方在不同难度的灵巧操作任务上测试微调适配，包括午餐盒拉链、抽取卡片和倾倒沙拉酱。",
+          "value": "7 项任务"
+        },
+        {
+          "label": "泛化基准规模",
+          "note": "官方发布页的视觉、语义和动作泛化比较覆盖的任务总数。",
+          "value": "9 项任务"
+        },
+        {
+          "label": "Aloha Sim BowlOnRack 成功率",
+          "note": "官方关联的 Aloha Sim 仓库报告：每项任务进行 100 个 episode、重复 3 次；括号内为报告的 95% 置信区间数值。",
+          "value": "99.3%（95% CI：0.93）"
+        },
+        {
+          "label": "Aloha Sim MarkerRemoveLid 成功率",
+          "note": "官方关联仿真基准中的灵巧操作任务结果；每项任务进行 100 个 episode、重复 3 次。",
+          "value": "73.7%（95% CI：5.01）"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://deepmind.google/"
+      },
+      {
+        "label": "Report",
+        "url": "https://deepmind.google/discover/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/robotics/comments/1luerjd/google_deepmind_recently_dropped_gemini_robotics/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/humanoid-robotics-technology_gemini-robotics-activity-7344363772989366274--B16"
+      }
+    ]
+  },
+  {
+    "id": "fourier-n1-open-source-humanoid-robot-a884abf",
+    "title": "Fourier N1 Open-Source Humanoid Robot",
+    "organization": "傅利叶智能 / Fourier Intelligence",
+    "organizationKind": "Company",
+    "date": "2025-05-19",
+    "year": 2025,
+    "summary": "Fourier N1是傅利叶智能在2025年推出的开放式人形机器人研究平台，核心价值不是单一动作演示，而是把紧凑型双足硬件、基础全身运动控制、分层SDK接口和强化学习部署资料组合成可供科研机构及开发者继续扩展的技术底座。机器人高约130厘米、重约38公斤，具有23个全身自由度和可插拔电池；官方报告其最高步速为3.5米/秒，并已累计完成超过1000小时户外复杂地形测试。现有控制任务覆盖站立、行走、跑步、固定或动态步频快跑、深蹲、单腿站立以及多种自主起身动作，并报告可通过15°至20°斜坡和20厘米台阶。开发侧提供面向上层应用的User接口、可访问底层关节控制的Developer接口，以及基于Zenoh的PubSub接口；配套文档进一步覆盖Python开发、传感器读取、固件和标定操作、强化学习训练及Sim2Real流程。官方GitHub组织还公开了N1文档仓库及GRx系列的URDF、MJCF、Isaac Gym、MuJoCo和实体部署工具，使N1具备从机器人建模、策略训练、仿真验证到真机运行的较完整研究链路。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "N1是傅利叶智能面向具身智能研究推出的紧凑型双足人形机器人，也是Fourier Nexus开放生态的首个实体平台，重点服务运动控制、多模态模型融合和机器人算法验证。",
+        "机器人采用铝合金与工程塑料复合机身、可插拔电池和23个全身自由度；官方将这种结构定位为便于高频实验、维护和重复测试的研究底座。",
+        "公开资源覆盖机器人本体资料和基础操作软件。官方GitHub还提供N1 SDK文档、安装与配置指南、API参考、任务定义、固件更新和强化学习训练说明。",
+        "软件接口分为User、Developer和PubSub三个层级：User与PubSub接口基于Zenoh通信，Developer接口允许开发者直接操作机器人关节；Python是当前主要支持的二次开发语言。",
+        "SDK明确列出站立、行走、跑步、快跑、自动起身、前后向起身、趴下、躺下、深蹲和单腿站立等已经实现的控制任务，而非仅展示概念性硬件。",
+        "项目提供从强化学习模型训练到Sim2Real部署的文档入口；官方关联仓库还覆盖URDF、MJCF、Isaac Gym训练、MuJoCo验证以及向实体机器人部署行走策略的工具链。",
+        "官方称N1已接受超过1000小时的户外复杂地形测试，公开演示和产品材料报告其可完成高速移动、斜坡通行、台阶攀爬、单脚平衡及撑地起身。"
+      ],
+      "capabilities": [
+        "支持站立、行走、快走与跑步，并提供固定步频和动态步频控制任务。",
+        "可通过15°至20°斜坡，并攀爬20厘米高的台阶。",
+        "支持单腿站立、屈膝和深蹲等动态平衡动作。",
+        "支持前向、后向以及双手撑地等多种自主起身流程。",
+        "开发者可通过高级接口或底层关节接口控制机器人，并读取传感器数据。"
+      ],
+      "metrics": [
+        {
+          "label": "全身自由度",
+          "note": "官方N1产品页报告。",
+          "value": "23个"
+        },
+        {
+          "label": "最高步速",
+          "note": "官方报告的机器人最高移动速度。",
+          "value": "3.5米/秒"
+        },
+        {
+          "label": "复杂地形测试时长",
+          "note": "官方称已完成的户外复杂地形测试累计时长。",
+          "value": "超过1000小时"
+        },
+        {
+          "label": "斜坡通行能力",
+          "note": "官方列出的可通过坡度范围。",
+          "value": "15°至20°"
+        },
+        {
+          "label": "楼梯攀爬能力",
+          "note": "官方列出的台阶高度。",
+          "value": "20厘米"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.fftai.cn/products-n1"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.fftai.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.fftai.com/uploads/upload/files/20250519/9367c1adcb832047765641f301645c90.pdf"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/singularity/comments/1jxhg3f/fourier_unveils_worlds_first_opensource_humanoid/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/peterkappes_fourier-has-introduced-its-n1-humanoid-robot-activity-7317230098674249728-opCA"
+      }
+    ]
+  },
+  {
+    "id": "asap-aligning-simulation-and-real-world-physics--5ccdc93",
+    "title": "ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills",
+    "organization": "NVIDIA",
+    "organizationKind": "Company",
+    "date": "2025-05-01",
+    "year": 2025,
+    "summary": "ASAP（Aligning Simulation and Real-World Physics）是 NVIDIA GEAR 与 Carnegie Mellon University 研究人员合作开发的真实人形机器人 sim-to-real 全身控制框架。它不试图仅靠手工系统辨识完整复现真实物理，也不只通过大范围域随机化获得保守鲁棒性，而是先在仿真中学习人类动作跟踪，再从真实 Unitree G1 的执行轨迹中训练 delta action 残差模型，显式学习动作层面的动力学差异。该模型被冻结并嵌入仿真器后，用于再次微调原始控制策略，使策略在训练期间经历更接近真实机器人的动态响应；最终策略可直接部署到硬件，无需携带残差模型。官方演示覆盖跳跃、踢腿、平衡、深蹲、舞蹈和体育人物标志动作，并报告真实迁移任务中的跟踪误差最高降低 52.7%。项目同时提供跨 IsaacGym、IsaacSim 和 Genesis 的训练与评估路径，以及面向 Unitree G1 的真实部署材料，因此属于具有明确实体机器人验证、完整技术链路和公开影响力的 2025 年人形机器人项目。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "ASAP 面向实体人形机器人的敏捷全身控制，核心问题是高动态策略从仿真迁移到真实 Unitree G1 时产生的动力学失配，而非一般视觉或纯仿真动画。",
+        "第一阶段从人类视频获得动作，经人体到机器人运动重定向后，在 IsaacGym 中预训练多个基于强化学习的运动跟踪策略；训练还采用逐步收紧误差容限的终止课程，使策略先获得平衡能力，再学习高动态动作。",
+        "第二阶段把预训练策略部署到真实机器人并记录状态与动作轨迹；随后训练 delta action 残差模型，使仿真状态逼近对应的真实状态，从动作空间直接学习未建模的动力学修正。",
+        "策略微调时冻结 delta action 模型并将其嵌入仿真器，让原运动策略在更接近真实物理的闭环环境中继续训练；最终部署时只运行微调后的策略，不需要在机器人上继续运行 delta action 模型。",
+        "项目在 IsaacGym→IsaacSim、IsaacGym→Genesis 和 IsaacGym→真实 Unitree G1 三类迁移中评估，并与 Vanilla、系统辨识、域随机化及 DeltaDynamics 等方法比较；报告显示 ASAP 在不同难度的动作跟踪任务中持续降低误差。",
+        "官方材料展示了侧跳、前跳、前踢、侧踢、单脚平衡、深蹲、舞蹈，以及 Cristiano Ronaldo、Kobe Bryant、LeBron James 标志动作的真实机器人执行结果，并提供微调前后的直接对照。",
+        "公开仓库建立在 HumanoidVerse 与 Human2Humanoid 之上，包含多仿真器训练配置、运动重定向流程、delta action 训练与微调流程以及 sim-to-sim/sim-to-real 部署材料，采用 MIT 许可证。"
+      ],
+      "capabilities": [
+        "将人类视频中的运动重定向为 Unitree G1 的全身运动参考，并训练对应的运动跟踪策略。",
+        "在真实 Unitree G1 上执行跳跃、踢腿、舞蹈、深蹲和体育庆祝动作等高动态全身技能。",
+        "利用真实机器人轨迹学习残差动作模型，补偿仿真器与真实机器人之间的动力学差异。",
+        "支持 IsaacGym、IsaacSim、Genesis 与真实机器人之间的策略迁移和评估。",
+        "微调后的控制策略可脱离残差模型，直接部署到真实机器人。"
+      ],
+      "metrics": [
+        {
+          "label": "真实世界跟踪误差降幅",
+          "note": "论文总结报告的 sim-to-real 任务最大降幅。",
+          "value": "最高 52.7%"
+        },
+        {
+          "label": "侧向跳跃距离",
+          "note": "官方项目页展示的 Unitree G1 敏捷全身技能。",
+          "value": "1.3 m"
+        },
+        {
+          "label": "前向跳跃距离",
+          "note": "官方项目页分别展示两个前跳动作。",
+          "value": "0.85 m 和 1.5 m"
+        },
+        {
+          "label": "迁移场景",
+          "note": "覆盖两个跨仿真器场景和一个仿真到真实机器人场景。",
+          "value": "3 类：IsaacGym→IsaacSim、IsaacGym→Genesis、IsaacGym→真实 Unitree G1"
+        },
+        {
+          "label": "终止课程阈值",
+          "note": "运动跟踪预训练中逐步提高跟踪要求。",
+          "value": "位置偏差阈值由 1.5 m 收紧至 0.3 m"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://agile.human2humanoid.com/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://research.nvidia.com/labs/lpr/"
+      },
+      {
+        "label": "Report",
+        "url": "https://agile.human2humanoid.com/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://x.com/TairanHe99/status/1886725175413981524"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/wevolver_asap-aligning-simulation-and-real-world-activity-7293222015442771969-yvAm"
+      }
+    ]
+  },
+  {
+    "id": "0-5-a-vision-language-action-model-with-open-wor-237a05a",
+    "title": "π0.5: a Vision-Language-Action Model with Open-World Generalization",
+    "organization": "Physical Intelligence",
+    "organizationKind": "Company",
+    "date": "2025-04-22",
+    "year": 2025,
+    "summary": "π0.5是Physical Intelligence于2025年4月22日发布的视觉-语言-动作模型，面向机器人在开放世界中的环境、物体和任务泛化。项目以移动机械臂进入训练中未出现过的真实住宅为核心场景，通过约400小时移动操作数据与其他机器人数据、实验室任务、高层语义监督、人工口头指令及网络多模态数据联合训练。模型在执行时先生成描述下一步行为的高层语义子任务，再据此输出低层连续动作块，使机器人能够把“清理厨房”之类的总体命令分解为拿取餐具、放入水槽、关闭柜门或擦拭污渍等阶段。报告展示了持续10至15分钟的厨房和卧室整理任务，以及整理床铺、悬挂毛巾和使用海绵等操作。其关键证据不是单一场景成功演示，而是在训练未覆盖的住宅中进行系统评测，并通过训练地点扩展和数据源消融分析说明跨机器人数据、网络数据、高层标注及人工指导对泛化的不同贡献。项目仍存在物理交互失败、遮挡、错误的高层重复行为、提示复杂度和记忆能力有限等明确限制。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "featured": true,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "π0.5是在π0基础上构建的视觉-语言-动作模型，目标不是增加某一种孤立技能，而是让移动机械臂把已有技能迁移到训练数据未覆盖的新住宅、新布局和新物体上。",
+        "模型采用异构联合训练，将移动机械臂数据、其他静态或不同构型机器人的操作数据、实验室任务数据、高层语义标注、人工口头指令以及网络多模态数据纳入统一训练框架。",
+        "训练样本可以混合图像观察、语言命令、目标检测框、语义子任务和低层机器人动作；视觉语言模型的序列建模接口用于统一这些不同模态和监督形式。",
+        "系统使用分层推理：运行时先根据场景与总任务预测下一项高层语义子任务，例如“拿起砧板”，随后以该子任务为条件生成连续的低层动作块，从而连接任务规划与物理控制。",
+        "跨机器人数据主要帮助低层动作能力迁移；网络视觉语言数据、高层标注和人工口头指导则主要增强物体语义、任务结构理解与高层子任务推断。",
+        "评测覆盖训练中未出现的真实住宅及模拟家庭环境，并包含新物体类别、语言指令遵循、长时程厨房和卧室整理等测试；消融实验显示，移除跨构型数据会显著降低整体任务表现，而网络数据对分布外物体识别和高层策略尤其重要。",
+        "官方材料同时披露局限：模型仍会受陌生抽屉把手、难以开启的柜门、机械臂遮挡目标和高层策略反复开关抽屉等问题影响，对复杂提示、长期记忆和跨房间部分可观测任务的支持也有限。"
+      ],
+      "capabilities": [
+        "根据自然语言目标控制移动机械臂，在训练中未出现过的住宅环境执行任务",
+        "完成厨房和卧室整理，包括将餐具放入水槽、收纳物品、整理床铺和悬挂毛巾",
+        "使用海绵擦拭泼洒物等需要工具选择与接触操作的任务",
+        "通过先预测语义子任务、再生成低层动作块，执行持续10至15分钟的多阶段操作"
+      ],
+      "metrics": [
+        {
+          "label": "移动操作数据规模",
+          "note": "技术报告明确给出的真实移动机械臂数据量。",
+          "value": "约400小时"
+        },
+        {
+          "label": "异构样本占比",
+          "note": "第一阶段训练中，不属于移动机械臂家庭任务的数据来自其他机器人、网络数据等来源。",
+          "value": "97.6%"
+        },
+        {
+          "label": "长时程任务持续时间",
+          "note": "在未见住宅中完成厨房或卧室整理的多阶段行为时长。",
+          "value": "10至15分钟"
+        },
+        {
+          "label": "训练环境规模",
+          "note": "报告中的环境扩展实验使用来自104个训练地点的移动操作数据，并在未见测试住宅中评估泛化。",
+          "value": "104个训练地点"
+        },
+        {
+          "label": "语言测试随机基线",
+          "note": "每次语言遵循试验提供5个物体；无法理解指令的策略预计只有约五分之一机会选中目标。",
+          "value": "约20%语言遵循准确率"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pi.website/blog/pi05"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pi.website/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.physicalintelligence.company/blog/pi05"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://x.com/physical_int/status/1914724966362440148"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/vedantnair_%CF%8005-a-vla-with-open-world-generalization-activity-7320851927192203264-T77x"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/STEW_ScTecEngWorld/comments/1kem533"
+      }
+    ]
+  },
+  {
+    "id": "nvidia-isaac-gr00t-n1-9042646",
+    "title": "NVIDIA Isaac GR00T N1",
+    "organization": "NVIDIA",
+    "organizationKind": "Company",
+    "date": "2025-03-18",
+    "year": 2025,
+    "summary": "NVIDIA Isaac GR00T N1 是 NVIDIA 于2025年3月正式发布的通用人形机器人视觉-语言-动作基础模型。它以视觉语言模型承担环境理解、指令解释和高层规划，再由扩散 Transformer 产生实时连续动作，形成快慢结合的双系统架构。模型通过真实与仿真机器人轨迹、第一视角人类视频和合成数据进行跨本体预训练，并可使用少量特定机器人数据继续后训练。官方展示覆盖 Fourier GR-1 与 1X 人形机器人，包括单臂和双臂抓取、物体搬运、双臂交接以及家庭整理等多步骤任务。技术报告显示，它在多个仿真机器人基准上超过所比较的模仿学习基线，并在 Fourier GR-1 真实任务中表现出较高的数据效率。模型权重、代码、部分训练数据和评估场景均已公开，因此它不仅是一项模型论文，也是具有公开部署和再训练路径的实体机器人技术项目。",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "GR00T N1 是面向通用人形机器人的视觉-语言-动作基础模型，将视觉、语言指令、机器人状态和动作生成连接在同一策略体系中，而不是仅处理视觉识别或文本推理。",
+        "模型采用受人类认知启发的双系统架构：System 2 使用视觉语言模型理解环境、解释指令并形成高层计划；System 1 使用扩散 Transformer 将计划转换为连续、流畅的机器人控制动作。两个模块紧密耦合并进行端到端联合训练。",
+        "预训练数据是异构混合数据，包括真实机器人轨迹、仿真机器人轨迹、第一视角人类视频以及合成数据；其目标是利用跨本体、跨数据源训练获得可迁移的操作先验。",
+        "同一组 GR00T N1 权重可适配多种机器人本体。官方材料展示了在 Fourier GR-1 和 1X 人形机器人上的语言条件化双臂操作，并允许开发者使用真实或合成数据针对特定本体、任务和环境进行后训练。",
+        "技术报告在 RoboCasa、DexMimicGen 和 GR-1 Tabletop 等仿真设置中比较了 GR00T N1、Diffusion Policy 与 BC Transformer；GR00T N1 在跨基准平均成功率和低数据后训练条件下取得更高结果。",
+        "官方数据生成流程使用 Omniverse 和 Isaac GR00T Blueprint，从少量人类示范扩展合成操作轨迹；NVIDIA 报告，将这些合成数据与真实数据结合后，可显著提高 GR00T N1 的任务表现。",
+        "项目公开了模型权重、训练数据子集、任务评估场景和代码，并采用允许开发者下载、后训练和适配模型的许可方式。"
+      ],
+      "capabilities": [
+        "根据视觉观察与自然语言指令执行语言条件化机器人操作",
+        "使用单臂或双臂抓取、搬运和放置物体",
+        "在双臂之间传递物体并完成需要协调的双手任务",
+        "组合多种基础技能，执行需要持续上下文理解的多步骤任务",
+        "通过针对特定机器人和任务的后训练，部署到 Fourier GR-1、1X NEO 等不同机器人本体"
+      ],
+      "metrics": [
+        {
+          "label": "仿真基准平均成功率",
+          "note": "技术报告中使用每项任务100条示范，在 RoboCasa、DexMimicGen 和 GR-1 Tabletop 三组仿真基准上的平均结果；对应 Diffusion Policy 为33.4%，BC Transformer 为26.4%。",
+          "value": "45.0%"
+        },
+        {
+          "label": "RoboCasa低数据结果",
+          "note": "RoboCasa 的100示范设置中，GR00T N1 成功率为32.1%，Diffusion Policy 为25.6%。",
+          "value": "32.1%"
+        },
+        {
+          "label": "真实 Fourier GR-1 平均成功率",
+          "note": "使用完整任务数据评估拾取放置、关节物体、工业操作和双臂协调任务；Diffusion Policy 的对应平均值为46.4%。",
+          "value": "76.8%"
+        },
+        {
+          "label": "低数据真实机器人表现",
+          "note": "GR00T N1 仅使用10%后训练示范数据，在 Fourier GR-1 的真实任务上取得平均成功率42.6%，接近使用100%数据训练的 Diffusion Policy 的46.4%。",
+          "value": "42.6%"
+        },
+        {
+          "label": "合成数据生成与增益",
+          "note": "NVIDIA 报告在11小时内生成780,000条合成轨迹，相当于6,500小时人类示范；与真实数据联合训练后，相比仅使用真实数据的 GR00T N1，性能提高40%。",
+          "value": "780,000条轨迹；11小时；6,500小时等效示范；性能提升40%"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://developer.nvidia.com/isaac/gr00t"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.nvidia.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://developer.nvidia.com/isaac/gr00t"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/robotics/comments/1jeronr/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/emmanuel-rotm_at-machine-learning-uyo-e-ai-paper-reading-activity-7311032688415576064-b7as"
+      }
+    ]
+  },
+  {
     "id": "hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01",
     "title": "Hui Si Kai Wu General Embodied Intelligence Platform",
     "organization": "北京人形机器人创新中心有限公司 / Beijing Humanoid Robot Innovation Center",
@@ -1078,6 +2275,178 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/robotiq_the-worlds-first-embodied-intelligent-platform-activity-7430257908543684610-QlqG"
+      }
+    ]
+  },
+  {
+    "id": "gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde",
+    "title": "Gemini Robotics brings AI into the physical world",
+    "organization": "Google DeepMind",
+    "organizationKind": "Research Lab",
+    "date": "2025-03-12",
+    "year": 2025,
+    "summary": "Gemini Robotics 是 Google DeepMind 于 2025 年 3 月 12 日发布的机器人基础模型项目，由 Gemini Robotics 与 Gemini Robotics-ER 两部分组成。前者在 Gemini 2.0 上加入物理动作输出，是可直接控制机器人的视觉-语言-动作模型；后者侧重空间和时间层面的具身推理，可与机器人现有低层控制器及程序接口结合。项目重点解决机器人通用性、实时交互和精细操作三个问题：模型能响应开放式自然语言指令，在物体或目标位置变化后在线调整动作，并完成折纸、密封袋装填等多步骤灵巧操作。训练主要基于 ALOHA 2 双臂平台，但官方材料还展示了向 Franka 双臂系统及 Apptronik Apollo 人形机器人等不同本体迁移或专项适配的路径。Gemini Robotics-ER 则覆盖物体检测、部件指向、抓取和轨迹预测、多视角对应、三维检测、规划及代码生成，使具身推理能够嵌入完整机器人控制流程。官方报告称，Gemini Robotics 在综合泛化基准上的平均性能超过其他先进 VLA 模型的两倍；Gemini Robotics-ER 在端到端控制设置中的成功率为 Gemini 2.0 的 2 至 3 倍，并可用最少 100 条示范适配新的短时程任务。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Gemini Robotics 是建立在 Gemini 2.0 基础上的视觉-语言-动作模型，将物理动作增加为模型输出模态，使模型能够直接产生机器人控制动作。",
+        "系统围绕通用性、交互性和灵巧性设计：可处理训练中未见的物体、环境和任务，并理解开放词汇、会话式及多语言指令。",
+        "模型持续监测环境和指令变化；当物体滑落或目标位置被人为改变时，能够重新规划动作并继续执行，而不是仅播放固定轨迹。",
+        "其精细操作展示包括折纸和把零食装入 Ziploc 密封袋，技术报告还研究了对长时程、高灵巧任务进行专项微调。",
+        "模型主要使用 ALOHA 2 双臂平台数据训练，同时展示了对基于 Franka 机械臂的双臂平台的控制，并可针对 Apptronik Apollo 人形机器人等新本体进行适配。",
+        "配套的 Gemini Robotics-ER 强化空间与时间理解，可输出物体检测、指向、抓取和轨迹预测、多视角对应及三维包围框，并能结合代码生成连接现有低层控制器。",
+        "安全设计采用分层方式：低层由碰撞规避、接触力限制和动态稳定性控制器处理物理安全，高层模型判断动作在给定语境中是否安全；项目同时发布 ASIMOV 数据集用于评估机器人动作的语义安全。"
+      ],
+      "capabilities": [
+        "通过视觉、语言与机器人动作联合建模，直接控制双臂机器人执行物体操作任务",
+        "理解开放词汇、日常会话式及多语言指令，并在指令发生变化时调整正在执行的动作",
+        "在物体滑落、目标被移动等环境变化发生后重新规划并继续任务",
+        "执行折纸、将零食装入密封袋等需要精细操作的多步骤任务",
+        "通过 Gemini Robotics-ER 完成物体检测、指向、抓取与轨迹预测、多视角对应和三维包围框预测"
+      ],
+      "metrics": [
+        {
+          "label": "综合泛化基准",
+          "note": "Google DeepMind 官方页面报告，相对于其他当时先进的视觉-语言-动作模型的平均表现。",
+          "value": "性能超过 2 倍"
+        },
+        {
+          "label": "端到端具身推理控制",
+          "note": "Gemini Robotics-ER 同时承担感知、状态估计、空间理解、规划和代码生成时，相对于 Gemini 2.0 的成功率。",
+          "value": "成功率达到 2-3 倍"
+        },
+        {
+          "label": "新短时程任务适配",
+          "note": "技术报告称，通用模型经过额外微调后可从少量示范学习新的短时程任务。",
+          "value": "最少 100 条示范"
+        },
+        {
+          "label": "专项长时程任务",
+          "note": "技术报告选择用于展示专项微调后高灵巧、长时程能力的任务数量。",
+          "value": "6 个任务"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://deepmind.google/"
+      },
+      {
+        "label": "Report",
+        "url": "https://deepmind.google/discover/blog/gemini-robotics-brings-ai-into-the-physical-world/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/singularity/comments/1j9m8et/gemini_robotics_brings_ai_into_the_physical_world/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/chandraai_geminirobotics-googledeepmind-ai-activity-7332321594897244160-TWzx"
+      }
+    ]
+  },
+  {
+    "id": "huisi-kaiwu-general-embodied-intelligence-platfo-a9eccdf",
+    "title": "Huisi Kaiwu General Embodied Intelligence Platform",
+    "organization": "北京人形机器人创新中心（国家地方共建具身智能机器人创新中心） / Beijing Humanoid Robot Innovation Center",
+    "organizationKind": "Research Lab",
+    "date": "2025-03-01",
+    "year": 2025,
+    "summary": "慧思开物是北京人形机器人创新中心于 2025 年 3 月 12 日正式发布的通用具身智能系统级平台，目标不是提供单一 VLA 模型或单项机器人技能，而是以统一的软件中枢连接感知、语言理解、任务规划、技能执行、运动控制和反馈纠错。其核心是分布式的具身“大脑—小脑”架构：大脑利用视觉语言及多模态模型理解自然语言、空间关系和任务意图，将长程目标分解为子任务；小脑在机器人端调用操作技能和运动控制能力，并把执行状态反馈给大脑进行反思、纠错和重新规划。平台强调“一脑多能、一脑多机”，官方材料明确展示其跨机械臂、轮式机器人和人形机器人的适配能力。发布会中的真机验证覆盖工业分拣、积木复现、动态桌面整理和物流打包，其中包括 UR-5e 语音分拣、天工人形机器人三层积木毫米级搭建、双臂协作及连续多工序操作。平台还与 RoboMIND 跨本体数据体系结合，以工业、家庭和办公数据支持端到端操作模型及 VLA 模型训练。现有证据足以支持其作为 2025 年具有影响力的实体机器人技术平台收录，但不能把“开放平台”直接等同于完整平台开源。",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation development tasks are sufficiently material and representative of the index scope. project evidence exists on the official X-Humanoid website, which identifies the responsible organization as Beijing Humanoid Robot Innovation Center. Public discussion was found on at least two distinct social platforms: Bilibili by independent AI publication Machine Heart and YouTube by independent robotics channel XRoboHub. The supplied date of 2025-03-01 is not supported; the official release date is 2025-03-12. No accessible source establishes that the complete Huisi Kaiwu platform itself is open source, so open_source is false."
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation development tasks are sufficiently material and representative of the index scope. project evidence exists on the official X-Humanoid website, which identifies the responsible organization as Beijing Humanoid Robot Innovation Center. Public discussion was found on at least two distinct social platforms: Bilibili by independent AI publication Machine Heart and YouTube by independent robotics channel XRoboHub. The supplied date of 2025-03-01 is not supported; the official release date is 2025-03-12. No accessible source establishes that the complete Huisi Kaiwu platform itself is open source, so open_source is false."
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "平台采用协同的具身“大脑—小脑”架构：云端大脑由 AI 大模型驱动，负责自然交互、空间感知、意图理解、分层任务规划和错误反思；端侧小脑负责技能及运动执行。",
+        "系统被描述为分布式多具身智能体，交互、规划和反思等 Agent 串联 VLM、MLLM 等基础模型；执行侧则使用 VA、VLA 和语言模型，把高层子任务转换为机器人动作。",
+        "具身操作子平台包含元技能库、泛化抓取、技能拆解和错误处理；具身运控子平台覆盖全身控制、双臂协作、稳定行走和移动导航，执行结果会返回大脑形成闭环。",
+        "平台通过多模态信息融合和上下文理解解析自然语言，将复杂任务拆分为可执行的子任务序列，并在执行期间实时监测状态，进行自适应纠错和动态路径重规划。",
+        "“一脑多机”设计使同一软件系统能够适配机械臂、轮式机器人和人形机器人；内置多场景适配引擎面向工业制造、家庭服务等环境，并允许快速添加自定义模型和技能。",
+        "平台依托 RoboMIND 跨本体标准化具身数据集训练和验证；该数据覆盖工业、家庭和办公场景，并由多类 VLA 及端到端模型进行验证，为任务理解至执行提供数据支持。",
+        "官方真机演示覆盖工业分拣、积木搭建、桌面清理和物流打包：包括语音驱动 UR-5e 分拣、视觉空间推理复现积木、动态环境中的双臂整理，以及搭配灵巧手执行连续物流工序。"
+      ],
+      "capabilities": [
+        "通过自然语言或 App 指令驱动机器人完成任务规划、技能调用和执行反馈闭环",
+        "在 UR-5e 机械臂上进行工业物料识别、双臂协同分拣与运行状态反馈",
+        "控制人形机器人观察随机积木样例、拆解空间结构并按顺序复现搭建",
+        "在动态干扰下执行双臂桌面整理、垃圾收集和自主纠错",
+        "连续执行扫码、装入物品、打包、粘贴信息条和送入生产线等长程物流任务"
+      ],
+      "metrics": [
+        {
+          "label": "真机演示场景",
+          "note": "官方发布会现场展示工业分拣、积木搭建、桌面清理和物流打包。",
+          "value": "4 个场景"
+        },
+        {
+          "label": "兼容机器人构型",
+          "note": "官方明确列出的构型为机械臂、轮式机器人和人形机器人。",
+          "value": "3 类构型"
+        },
+        {
+          "label": "积木搭建结果",
+          "note": "天工机器人利用视觉大模型拆解样例并规划各层顺序。",
+          "value": "完成 3 层积木的毫米级精准搭建"
+        },
+        {
+          "label": "RoboMIND 首批开放数据",
+          "note": "官方公告称该数据集为慧思开物提供跨本体、多场景的数据支持。",
+          "value": "10 万条"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.x-humanoid.com/news-view-154.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.x-humanoid.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.beijing.gov.cn/ywdt/yaowen/202512/t20251212_4337327.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.bilibili.com/video/BV1nSQ6YpE4P/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.youtube.com/watch?v=jaqol5BN1Ls"
       }
     ]
   }
