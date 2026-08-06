@@ -9,6 +9,11 @@ const standardFields = [
   "Dexterous manipulation", "Tactile intelligence", "Data & benchmarks",
   "Robot systems", "Embodied AI",
 ];
+const allowedFields = new Set(standardFields);
+
+function displayFields(report: Report) {
+  return (report.fields ?? report.tags).filter((field) => allowedFields.has(field));
+}
 
 const kindLabels: Record<string, string> = {
   Company: "公司",
@@ -24,11 +29,11 @@ function ExternalIcon() {
 function SourceFrameworkFigure({ report, compact = false }: { report: Report; compact?: boolean }) {
   const [unavailable, setUnavailable] = useState(false);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  const asset = `${basePath}/frameworks/${report.id}.jpg`;
+  const asset = report.framework?.imageUrl ?? `${basePath}/frameworks/${report.id}.jpg`;
   return (
     <figure className={compact ? "source-framework card-framework" : "source-framework"}>
-      {!unavailable ? <img src={asset} alt={`${report.title} 的原始方法框架图`} onError={() => setUnavailable(true)} /> : <div className="framework-unavailable">暂未找到可公开提取的方法框架图</div>}
-      <>{!compact && <figcaption>原始方法图 · {report.framework?.caption ?? "自动从公开技术报告 PDF 的 Figure 1/首个方法图提取"}{report.framework?.page ? ` · PDF 第 ${report.framework.page} 页` : ""}</figcaption>}</>
+      {!unavailable ? <img src={asset} alt={`${report.title} 的原始方法框架图`} onError={() => setUnavailable(true)} /> : <div className="framework-unavailable">暂未找到可可靠提取的原始方法框架图</div>}
+      <>{!compact && <figcaption>原始方法图 · {report.framework?.caption ?? "来源为公开技术报告 PDF 或官方项目页"}{report.framework?.page ? ` · PDF 第 ${report.framework.page} 页` : ""}</figcaption>}</>
     </figure>
   );
 }
@@ -59,11 +64,11 @@ function DetailDialog({ report, onClose }: { report: Report; onClose: () => void
         <div className="dialog-columns">
           <div className="dialog-block">
             <div className="dialog-block-title"><span>02</span><h3>技术重点</h3></div>
-            <ul>{details.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul>
+            <ol className="detail-list">{details.keyPoints.map((point) => <li key={point}>{point}</li>)}</ol>
           </div>
           <div className="dialog-block">
             <div className="dialog-block-title"><span>03</span><h3>实现功能</h3></div>
-            <ul>{details.capabilities.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ol className="detail-list">{details.capabilities.map((item) => <li key={item}>{item}</li>)}</ol>
           </div>
         </div>
 
@@ -91,14 +96,14 @@ export function ReportExplorer({ reports }: { reports: Report[] }) {
   const [openOnly, setOpenOnly] = useState(false);
   const [selected, setSelected] = useState<Report | null>(null);
 
-  const fields = useMemo(() => [...new Set([...standardFields, ...reports.flatMap((report) => report.fields ?? report.tags)])].sort(), [reports]);
+  const fields = useMemo(() => standardFields.filter((item) => reports.some((report) => displayFields(report).includes(item))), [reports]);
   const organizations = useMemo(() => [...new Set(reports.map((report) => report.organization))].sort(), [reports]);
   const years = useMemo(() => [...new Set(reports.map((report) => String(report.year)))].sort((a, b) => b.localeCompare(a)), [reports]);
 
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
     return reports.filter((report) => {
-      const reportFields = report.fields ?? report.tags;
+      const reportFields = displayFields(report);
       const matchesField = field === "All" || reportFields.includes(field);
       const matchesOrganization = organization === "All" || report.organization === organization;
       const matchesYear = year === "All" || String(report.year) === year;
@@ -173,7 +178,7 @@ export function ReportExplorer({ reports }: { reports: Report[] }) {
                   <div className="badges"><span className="status">{report.verification === "Automated" ? "Auto-checked" : "Seed record"}</span>{report.openSource && <span className="status filled">Open source</span>}</div>
                 </div>
                 <SourceFrameworkFigure report={report} compact />
-                <div className="tags">{(report.fields ?? report.tags).map((tag) => <span key={tag}>{tag}</span>)}</div>
+                <div className="tags">{displayFields(report).map((tag) => <span key={tag}>{tag}</span>)}</div>
                 <p className="summary">{report.summary}</p>
                 <div className="card-bottom"><span className="details-hint">点击查看报告档案 <span aria-hidden="true">→</span></span><div className="links">{report.links.slice(0, 2).map((link) => <a key={link.label} href={link.url} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>{link.label} <ExternalIcon /></a>)}</div></div>
               </article>
