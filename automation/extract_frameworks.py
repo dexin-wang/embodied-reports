@@ -77,6 +77,16 @@ class ProjectImageParser(HTMLParser):
 
 def save_web_image(image: bytes, target: Path) -> tuple[int, int]:
     """Convert a real project-page asset (including WebP/AVIF) to JPEG."""
+    if image.lstrip().startswith(b"<svg"):
+        document = fitz.open(stream=image, filetype="svg")
+        try:
+            pixmap = document[0].get_pixmap(matrix=fitz.Matrix(1.5, 1.5), alpha=False)
+            if pixmap.width < 240 or pixmap.height < 140:
+                raise ValueError("candidate project image is too small to be a framework figure")
+            pixmap.save(target, jpg_quality=86)
+            return pixmap.width, pixmap.height
+        finally:
+            document.close()
     with Image.open(BytesIO(image)) as opened:
         image_rgb = opened.convert("RGB")
         if image_rgb.width < 240 or image_rgb.height < 140:
