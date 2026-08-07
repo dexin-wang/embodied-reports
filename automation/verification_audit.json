@@ -3627,34 +3627,39 @@
     }
   },
   "status-bae7d5b": {
-    "checked_at": "2026-08-05T12:53:48.730791+00:00",
+    "checked_at": "2026-08-07T05:12:56.615247+00:00",
     "title": "Status",
     "accepted": false,
-    "reason": "不收录。该候选实际上是一条资料整理状态说明，而不是可识别的具身机器人技术项目。所给 https://example.com 不是专属官方项目页、机构公告或研究实验室项目页；没有明确责任公司、大学或研究机构；没有可核实的物理机器人技术内容；也没有两个不同社交平台上的公开讨论及其中至少一个独立来源。由于核心身份和全部必要证据均缺失，不能推测项目名称、机构、链接、指标或社交证据。",
-    "policy_version": "official-project-impact-v2",
+    "reason": "不收录。缺少条件1、3和4所要求的证据：无法识别具体的软件型具身机器人发布物；提供的 example.com 不是专门的官方项目或机构发布页；没有明确负责该项目的公司、大学或具名研究机构。候选日期也没有官方来源支持。由于项目本体无法确认，不能核实其是否属于2025年及以后发布，也不能推断开源状态、技术能力、指标、所属机构或URL。",
+    "policy_version": "software-official-release-v3",
     "verdict": {
       "capabilities": [
-        "未提供任何可核实的机器人能力描述。",
-        "未提供可对应到实体机器人系统的实现信息。",
-        "未找到可归属于该候选项目的公开演示或实验结果。"
+        "无法确认存在名为“Status”的具身机器人软件项目；候选信息仅包含占位链接、日期和一段收录标准说明。",
+        "无法确认任何已实现的机器人模型、策略、数据集、仿真器、控制栈或评测工具。",
+        "无法确认该候选面向物理机器人，或涉及灵巧、触觉、力感知及接触丰富操作。"
       ],
       "fields": [
         "Embodied AI"
       ],
       "include": false,
       "key_points": [
-        "候选标题“Status”是通用状态词，无法唯一识别一个技术项目。",
-        "给出的主链接 example.com 是示例域名，不是机器人项目主页、机构公告或研究实验室项目页。",
-        "摘要描述的是收集和审核项目页面的工作流程，不是具身机器人项目的技术摘要。",
-        "没有作者、责任机构、机器人平台、技术报告或关联项目材料可供核实。",
-        "没有证据表明该候选内容涉及物理机器人或已经实现的具身智能系统。",
-        "未找到两个不同社交平台上的项目讨论，也无法满足至少一个独立来源的要求。"
+        "候选标题“Status”不足以唯一识别一个技术项目。",
+        "提供的 https://example.com 是示例占位域名，不是可核验的官方项目页、机构公告或研究实验室页面。",
+        "检索未找到能够将“Status”与一个自2025年起发布的具身机器人软件项目明确对应的官方来源。",
+        "候选资料没有给出负责该项目的公司、大学或具名研究机构。",
+        "摘要描述的是索引的筛选方法，并非候选项目的技术摘要。",
+        "因此无法从可靠来源提取技术架构、实现能力、实验结果或报告指标。"
       ],
       "metrics": [
         {
-          "label": "候选发布日期",
-          "note": "仅为输入中声明的日期；由于不存在可识别项目，无法由官方来源验证。",
-          "value": "2025-01-01"
+          "label": "发布日期",
+          "note": "候选记录填写了2025-01-01，但没有官方来源支持，不能作为已核实发布日期。",
+          "value": "未核实"
+        },
+        {
+          "label": "技术指标",
+          "note": "没有可访问的官方项目材料或技术报告可用于核实结果。",
+          "value": "无可核实指标"
         }
       ],
       "official_organization_url": "",
@@ -3663,9 +3668,10 @@
       "organization_en": "",
       "organization_kind": "Research Lab",
       "organization_zh": "",
-      "reason": "不收录。该候选实际上是一条资料整理状态说明，而不是可识别的具身机器人技术项目。所给 https://example.com 不是专属官方项目页、机构公告或研究实验室项目页；没有明确责任公司、大学或研究机构；没有可核实的物理机器人技术内容；也没有两个不同社交平台上的公开讨论及其中至少一个独立来源。由于核心身份和全部必要证据均缺失，不能推测项目名称、机构、链接、指标或社交证据。",
+      "reason": "不收录。缺少条件1、3和4所要求的证据：无法识别具体的软件型具身机器人发布物；提供的 example.com 不是专门的官方项目或机构发布页；没有明确负责该项目的公司、大学或具名研究机构。候选日期也没有官方来源支持。由于项目本体无法确认，不能核实其是否属于2025年及以后发布，也不能推断开源状态、技术能力、指标、所属机构或URL。",
       "social_evidence": [],
-      "summary_zh": "该条目无法形成项目档案。现有信息只表明提交者正在先收集官方发布页面，再核验日期并排除仅有论文页或会议页的条目；这是一段索引整理流程说明，不是项目发布。公开检索没有将“Status”、示例链接和所给摘要对应到某个由明确机构负责、面向物理机器人的2025年技术项目。因而无法可靠描述其模型架构、控制方法、机器人本体、训练数据、实现能力、实验设置或结果，也不能确认是否开源。"
+      "software_project": false,
+      "summary_zh": "该候选无法形成技术档案。“Status”是通用状态词，现有信息没有定义任何模型、策略、数据引擎、数据集、仿真器、规划控制系统、评测基准或具身智能框架。所附摘要实际上描述索引的收录范围，而不是项目目标、方法或实验结果；所附链接则是示例占位域名。公开检索未能找到可将该标题、日期与特定机器人软件发布及责任机构连接起来的官方页面。因此，本条不能证明软件属性、物理机器人适用性、2025年后的实际发布日期、实现能力或实验指标，必须排除。"
     }
   },
   "embodied-energy-worm-and-jellyfish-robots-f283d21": {
@@ -6031,6 +6037,522 @@
       "social_evidence": [],
       "software_project": false,
       "summary_zh": "正在核验官方项目页、技术材料与具体结果。"
+    }
+  },
+  "research-in-progress-57847cb": {
+    "checked_at": "2026-08-07T05:12:56.579039+00:00",
+    "title": "Research in progress",
+    "accepted": false,
+    "reason": "不收录。缺少可识别的软件项目和有效的官方项目页面；给定 URL 无效，标题只是通用状态描述，摘要也不是项目说明。公开检索未能将这些信息对应到一个由具名公司、大学或研究机构负责的具身机器人软件制品，因此条件 1、3、4 均无法得到支持。([aquila.sourceforge.net](https://aquila.sourceforge.net/?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "无法确认候选对象是否实现任何具身机器人能力",
+        "无法确认是否存在可供物理机器人使用的软件制品",
+        "无法从给定信息识别模型、数据集、仿真器、控制栈或评测基准"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "候选标题“Research in progress”只是通用状态描述，未能唯一指向具身机器人技术项目。",
+        "给定主链接使用无效的 example.invalid 域名，无法作为官方项目证据。",
+        "检索未找到与标题、链接和摘要相匹配的官方组织项目页或研究实验室项目页。",
+        "摘要描述的是信息核查过程，并非软件系统的技术摘要或发布说明。",
+        "无法确认负责该候选项目的公司、大学或具名研究机构。",
+        "无法验证所填日期 2026-08-07 是软件制品的正式发布日期。",
+        "由于项目身份和官方材料均无法确定，不能可靠提取技术实现、能力或实验结果。"
+      ],
+      "metrics": [
+        {
+          "label": "可验证指标",
+          "note": "没有找到可归属于该候选项目的官方技术报告或项目材料。",
+          "value": "无"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不收录。缺少可识别的软件项目和有效的官方项目页面；给定 URL 无效，标题只是通用状态描述，摘要也不是项目说明。公开检索未能将这些信息对应到一个由具名公司、大学或研究机构负责的具身机器人软件制品，因此条件 1、3、4 均无法得到支持。([aquila.sourceforge.net](https://aquila.sourceforge.net/?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该候选记录不是一个可核实的具身机器人技术项目条目。“Research in progress”无法唯一识别项目，所给链接不可访问，且摘要仅陈述正在进行来源核查。现有材料没有说明任何面向物理机器人的模型、策略、数据引擎、数据集、仿真器、规划控制栈、评测基准或智能体框架，也没有提供明确的责任机构、官方发布页、技术实现或实验结果。按照严格索引规则，应将其视为未完成的占位记录，而不是正式软件发布。"
+    }
+  },
+  "cosa-0-5-v-0-f1da964": {
+    "checked_at": "2026-08-07T05:12:56.583388+00:00",
+    "title": "COSA 0.5 / V³-0",
+    "accepted": false,
+    "reason": "正在进行网页来源核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、发布主体与软件技术内容，并确认发布日期和可引用的指标。不能由页面直接支持的字段将保持为空或明确标记缺失。兼容输出占位。",
+        "正在核验官方项目页、发布主体与软件技术内容，并确认发布日期和可引用的指标。不能由页面直接支持的字段将保持为空或明确标记缺失。兼容输出占位。",
+        "正在核验官方项目页、发布主体与软件技术内容，并确认发布日期和可引用的指标。不能由页面直接支持的字段将保持为空或明确标记缺失。兼容输出占位。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索。",
+        "正在检索。",
+        "正在检索。",
+        "正在检索。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.limxdynamics.com/cosa05v3/#zh",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在进行网页来源核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目页、发布主体与软件技术内容，并确认发布日期和可引用的指标。不能由页面直接支持的字段将保持为空或明确标记缺失。兼容输出占位。"
+    }
+  },
+  "fluxvla-engine-ef11103": {
+    "checked_at": "2026-08-07T05:12:56.588199+00:00",
+    "title": "FluxVLA Engine",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、开源仓库与关联技术材料，重点确认它是否是面向实体机器人的软件项目，以及发布日期、责任组织和报告指标。",
+        "同时会把硬件宣传与软件主体严格区分；任何无法由可访问来源支撑的字段都不会推测。”],",
+        "fields”:[],",
+        "include”:false,",
+        "key_points”:[],"
+      ],
+      "fields": [
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验官方项目页、开源仓库与关联技术材料，重点确认它是否是面向实体机器人的软件项目，以及发布日期、责任组织和报告指标。",
+        "同时会把硬件宣传与软件主体严格区分；任何无法由可访问来源支撑的字段都不会推测。”] ,",
+        "metrics”:[],",
+        "official_organization_url”:",
+        "official_project_url”:",
+        "open_source”:false,",
+        "organization_en”:"
+      ],
+      "metrics": [
+        {
+          "label": "status",
+          "note": "Research in progress",
+          "value": "pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.limxdynamics.com/zh/news/BK000058",
+      "open_source": false,
+      "organization_en": "LimX Dynamics",
+      "organization_kind": "Company",
+      "organization_zh": "逐际动力",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在检索官方来源并核验收录条件。"
+    }
+  },
+  "deepseek-v4-preview-b83295f": {
+    "checked_at": "2026-08-07T05:12:56.592250+00:00",
+    "title": "DeepSeek-V4 Preview",
+    "accepted": false,
+    "reason": "不收录：缺少条件 1。官方项目页将 DeepSeek-V4 Preview 描述为面向通用推理、世界知识、Agentic Coding、文档生成和长上下文处理的 LLM。可访问的官方材料没有将其作为物理机器人或具身智能软件发布，也没有提供 VLA、机器人策略、动作模型、机器人数据引擎、仿真器、控制规划栈、具身评测或机器人执行框架。页面中的“Agent”明确指向代码与数字工作流 Agent，不能据此推定具身机器人能力。官方项目页、责任组织和发布日期均可确认，但核心软件类别不符合索引范围。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供 DeepSeek-V4-Pro 与 DeepSeek-V4-Flash 两种通用语言模型",
+        "支持最长 1M token 上下文",
+        "同时提供思考模式与非思考模式",
+        "通过 OpenAI ChatCompletions 和 Anthropic 兼容接口调用",
+        "支持面向编程、文档生成等数字环境任务的 Agent 工作流"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "DeepSeek-V4 Preview 是面向通用推理、世界知识、代码和数字 Agent 任务的大语言模型系列，并非面向物理机器人或具身智能的软件项目。",
+        "系列包含 DeepSeek-V4-Pro 和 DeepSeek-V4-Flash；官方分别将其定位为高性能版本和更快速、经济的版本。",
+        "模型采用 token 维度压缩与 DSA（DeepSeek Sparse Attention）稀疏注意力，以降低长上下文推理的计算量和显存需求。",
+        "两个版本均支持 1M token 上下文，并提供思考与非思考两种运行模式；思考模式支持通过 reasoning_effort 参数选择 high 或 max 强度。",
+        "官方 API 支持 OpenAI ChatCompletions 与 Anthropic 接口，调用时使用 deepseek-v4-pro 或 deepseek-v4-flash 模型名。",
+        "官方所述 Agent 优化对象是 Claude Code、OpenClaw、OpenCode 和 CodeBuddy 等软件 Agent，展示的任务包括编程、文档和演示文稿生成，未展示机器人动作输出、机器人轨迹、传感器闭环控制或物理环境执行。",
+        "官方提供开放权重和技术报告，但开放权重本身不能满足本索引要求的物理机器人或具身智能软件条件。"
+      ],
+      "metrics": [
+        {
+          "label": "最大上下文长度",
+          "note": "V4-Pro 与 V4-Flash 官方服务均支持。",
+          "value": "1M tokens"
+        },
+        {
+          "label": "DeepSeek-V4-Pro 参数量",
+          "note": "官方发布页报告的总参数量与每 token 激活参数量。",
+          "value": "1.6T total / 49B active parameters"
+        },
+        {
+          "label": "DeepSeek-V4-Flash 参数量",
+          "note": "官方发布页报告的总参数量与每 token 激活参数量。",
+          "value": "284B total / 13B active parameters"
+        },
+        {
+          "label": "模型版本数量",
+          "note": "预览发布包含 V4-Pro 和 V4-Flash。",
+          "value": "2"
+        },
+        {
+          "label": "发布时间",
+          "note": "DeepSeek 官方透明度中心列出的发布日期。",
+          "value": "2026-04-24"
+        }
+      ],
+      "official_organization_url": "https://www.deepseek.com/",
+      "official_project_url": "https://api-docs.deepseek.com/zh-cn/news/news260424",
+      "open_source": true,
+      "organization_en": "DeepSeek",
+      "organization_kind": "Company",
+      "organization_zh": "杭州深度求索人工智能基础技术研究有限公司",
+      "reason": "不收录：缺少条件 1。官方项目页将 DeepSeek-V4 Preview 描述为面向通用推理、世界知识、Agentic Coding、文档生成和长上下文处理的 LLM。可访问的官方材料没有将其作为物理机器人或具身智能软件发布，也没有提供 VLA、机器人策略、动作模型、机器人数据引擎、仿真器、控制规划栈、具身评测或机器人执行框架。页面中的“Agent”明确指向代码与数字工作流 Agent，不能据此推定具身机器人能力。官方项目页、责任组织和发布日期均可确认，但核心软件类别不符合索引范围。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DeepSeek-V4 Preview 是深度求索于 2026 年 4 月 24 日发布并开放权重的通用大语言模型系列，由 V4-Pro 与 V4-Flash 组成。其主要技术方向是百万 token 长上下文、通用推理、世界知识、代码能力和数字 Agent 工作流。模型通过 token 维度压缩与 DSA 稀疏注意力提高长上下文效率；两个版本均提供思考和非思考模式，并可通过兼容 OpenAI ChatCompletions 与 Anthropic 的 API 使用。V4-Pro 具有 1.6T 总参数和 49B 激活参数，V4-Flash 具有 284B 总参数和 13B 激活参数。尽管官方强调 Agent 能力并提供 API、模型权重与技术报告，其适配对象和示例均属于编程、文档生成等计算机环境任务。官方材料没有机器人观测输入、动作空间、轨迹数据、具身训练、真实机器人实验或闭环控制能力，因此它是通用 LLM 软件发布，而不是本索引所要求的具身机器人技术项目。"
+    }
+  },
+  "sora-2-139a360": {
+    "checked_at": "2026-08-07T05:12:56.596004+00:00",
+    "title": "Sora 2",
+    "accepted": false,
+    "reason": "不满足条件 1。Sora 2 确实是软件模型，并具有世界模拟相关能力，但官方页面明确将其发布为通用视频与音频生成系统，实际部署于 Sora 内容创作应用。页面只把通用模拟和未来可在物理世界中运行的 AI 系统描述为长期方向，没有将 Sora 2 发布为用于实体机器人的模型、策略、控制或规划栈、数据引擎、机器人模拟器、评测基准或具身代理框架，也没有提供任何机器人接口或机器人实验。因此不能仅凭世界模拟能力和对机器人未来的概念性表述将其收录为具身机器人技术项目。([openai.com](https://openai.com/index/sora-2/))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据文本提示生成视频与同步音频",
+        "遵循跨多个镜头的复杂指令并维持场景状态",
+        "模拟物体恒存、碰撞、浮力、刚性及失败结果等物理现象",
+        "将经过验证的真人、动物或物体形象注入生成场景"
+      ],
+      "fields": [
+        "World models"
+      ],
+      "include": false,
+      "key_points": [
+        "Sora 2 的官方定位是旗舰级视频与音频生成模型，而不是面向实体机器人部署的策略、控制器、VLA、机器人基础模型或具身智能框架。",
+        "模型通过大规模视频数据的预训练和后训练提升世界模拟能力；OpenAI 将其视为通向通用模拟器的研究进展。",
+        "相较先前视频模型，Sora 2 更能表现浮力、刚性、碰撞和物体恒存等现象，并允许动作失败后产生符合场景因果关系的结果。",
+        "系统能够遵循跨多个镜头的复杂提示，在镜头切换过程中保持世界状态，并生成写实、电影和动漫等视觉风格。",
+        "模型同时生成背景声景、对白和音效，并使音频与生成视频同步。",
+        "官方部署对象是内容创作服务和 Sora 社交应用；页面没有说明机器人观测输入、动作输出、实体机器人训练接口、控制闭环或任何真实机器人实验。([openai.com](https://openai.com/index/sora-2/))"
+      ],
+      "metrics": [
+        {
+          "label": "官方发布日期",
+          "note": "OpenAI 官方项目公告所列发布日期。",
+          "value": "2025-09-30"
+        },
+        {
+          "label": "输出模态",
+          "note": "官方称其为视频与音频生成模型，可生成同步对白、背景声景和音效。",
+          "value": "视频 + 同步音频"
+        },
+        {
+          "label": "复杂物理案例",
+          "note": "官方展示或描述了体操动作、桨板后空翻、三周半跳以及篮球投失后的篮板反弹等案例，但没有公布机器人任务成功率或实体环境评测数据。",
+          "value": "能够生成包含浮力、刚性、碰撞和动作失败结果的场景"
+        },
+        {
+          "label": "长程可控性",
+          "note": "官方报告其可遵循涉及多个镜头的复杂指令，并在过程中保持世界状态；未提供标准化数值分数。",
+          "value": "跨镜头指令遵循与世界状态持续"
+        },
+        {
+          "label": "机器人验证结果",
+          "note": "官方页面未报告真实机器人、机器人仿真任务或具身控制基准结果。",
+          "value": "未报告"
+        }
+      ],
+      "official_organization_url": "https://openai.com/",
+      "official_project_url": "https://openai.com/index/sora-2/",
+      "open_source": false,
+      "organization_en": "OpenAI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不满足条件 1。Sora 2 确实是软件模型，并具有世界模拟相关能力，但官方页面明确将其发布为通用视频与音频生成系统，实际部署于 Sora 内容创作应用。页面只把通用模拟和未来可在物理世界中运行的 AI 系统描述为长期方向，没有将 Sora 2 发布为用于实体机器人的模型、策略、控制或规划栈、数据引擎、机器人模拟器、评测基准或具身代理框架，也没有提供任何机器人接口或机器人实验。因此不能仅凭世界模拟能力和对机器人未来的概念性表述将其收录为具身机器人技术项目。([openai.com](https://openai.com/index/sora-2/))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Sora 2 是 OpenAI 于 2025 年 9 月 30 日发布的视频与音频生成模型。其技术重点包括更准确的物理现象生成、复杂提示控制、跨镜头世界状态保持、同步对白与音效，以及将经过身份验证的真实人物或其他对象注入生成场景。OpenAI 将视频模型的世界模拟能力与未来通用模拟器、理解物理世界的 AI 系统及机器人代理联系起来，但这属于研究愿景，而非 Sora 2 的机器人软件发布范围。官方材料没有展示该模型接收机器人传感器观测、输出机器人动作、训练或评估实体策略，也没有机器人控制接口、操作任务、具身基准或真实机器人结果。按照严格索引规则，它属于具有世界模型特征的生成式媒体软件，而不是已发布的具身机器人技术项目。"
+    }
+  },
+  "limx-cosa-agentic-os-d95487b": {
+    "checked_at": "2026-08-07T05:12:56.599689+00:00",
+    "title": "LimX COSA Agentic OS",
+    "accepted": false,
+    "reason": "正在使用网页来源核验候选项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方发布页、组织归属、发布日期和软件属性，再从官方技术材料中提取可验证的能力与结果。需要特别排除把人形机器人硬件发布误收为软件项目的情况。",
+        "我会同时检查是否存在独立社交传播证据，但它不是收录条件，也不会用来替代官方项目证据。",
+        "最终将严格按给定字段返回，不猜测缺失的指标、链接或隶属关系。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索核验。",
+        "暂不作收录判断。",
+        "暂不填充未经核实的信息。",
+        "最终结果将以官方来源为主。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.limxdynamics.com/zh/news/BK000054",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在使用网页来源核验候选项目。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 LimX COSA Agentic OS 的官方发布材料、软件属性、组织责任主体与具体技术结果。"
+    }
+  },
+  "deepseek-v3-1-50a52a5": {
+    "checked_at": "2026-08-07T05:12:56.603873+00:00",
+    "title": "DeepSeek-V3.1",
+    "accepted": false,
+    "reason": "不满足条件 1。官方项目页将 DeepSeek-V3.1 定义为具有混合推理、工具调用、搜索/代码智能体能力和 128K 上下文的通用大语言模型；没有证据表明该发布物是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、机器人数据引擎、仿真器、控制规划栈、具身评测基准或机器人智能体框架。通用 Agent 和 Function Calling 能力本身不足以构成具身机器人软件。([api-docs.deepseek.com](https://api-docs.deepseek.com/news/news250821?asuniq=e312e687&utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "单一模型支持思考与非思考两种推理模式",
+        "提供面向代码、搜索和多步骤任务的智能体与工具调用能力",
+        "通过 API 提供 128K 上下文窗口",
+        "Beta API 支持严格模式 Function Calling，可约束函数输出满足既定 schema",
+        "兼容 Anthropic API 格式，并发布可下载的模型权重"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "DeepSeek-V3.1 是通用大语言模型，不是面向物理机器人控制或具身智能的软件项目。",
+        "模型采用混合推理架构，同一模型可在思考模式与非思考模式之间切换；API 中分别对应 deepseek-reasoner 和 deepseek-chat。",
+        "DeepSeek 报告其经过后训练后，在工具使用、代码智能体、搜索智能体和多步骤任务方面获得提升。",
+        "两个 API 模式的上下文长度均扩展至 128K，并增加 Anthropic API 格式兼容能力。",
+        "Beta API 提供 strict Function Calling，用于确保生成的函数调用满足指定 schema。",
+        "V3.1 Base 在 DeepSeek-V3 基础上继续使用 840B tokens 进行长上下文扩展训练，同时更新了 tokenizer 和 chat template。",
+        "官方发布了 DeepSeek-V3.1 与 DeepSeek-V3.1-Base 的开放权重，但官方材料未说明机器人动作输出、机器人轨迹训练、物理环境交互、机器人控制接口或具身评测。"
+      ],
+      "metrics": [
+        {
+          "label": "上下文长度",
+          "note": "deepseek-chat 与 deepseek-reasoner 均为官方报告值",
+          "value": "128K"
+        },
+        {
+          "label": "SWE-bench Verified",
+          "note": "官方发布页报告的智能体/软件工程基准成绩",
+          "value": "66.0"
+        },
+        {
+          "label": "SWE-bench Multilingual",
+          "note": "官方发布页报告的多语言软件工程基准成绩",
+          "value": "54.5"
+        },
+        {
+          "label": "Terminal-bench",
+          "note": "官方发布页报告的终端智能体基准成绩",
+          "value": "31.3"
+        },
+        {
+          "label": "继续预训练数据量",
+          "note": "V3.1 Base 在 DeepSeek-V3 基础上用于长上下文扩展的继续预训练规模",
+          "value": "840B tokens"
+        }
+      ],
+      "official_organization_url": "https://www.deepseek.com/",
+      "official_project_url": "https://api-docs.deepseek.com/zh-cn/news/news250821",
+      "open_source": true,
+      "organization_en": "DeepSeek",
+      "organization_kind": "Company",
+      "organization_zh": "深度求索",
+      "reason": "不满足条件 1。官方项目页将 DeepSeek-V3.1 定义为具有混合推理、工具调用、搜索/代码智能体能力和 128K 上下文的通用大语言模型；没有证据表明该发布物是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、机器人数据引擎、仿真器、控制规划栈、具身评测基准或机器人智能体框架。通用 Agent 和 Function Calling 能力本身不足以构成具身机器人软件。([api-docs.deepseek.com](https://api-docs.deepseek.com/news/news250821?asuniq=e312e687&utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DeepSeek-V3.1 是深度求索于 2025 年 8 月 21 日发布的通用大语言模型升级。其核心变化包括将思考与非思考推理整合到同一模型、提高推理效率、加强工具调用及代码和搜索智能体能力，并把 API 上下文扩展至 128K。官方还提供严格模式 Function Calling、Anthropic API 格式兼容，以及 V3.1 和 V3.1 Base 的开放权重。尽管这些能力可作为外部软件系统的语言推理组件，官方发布材料没有展示机器人观测输入、动作空间、控制策略、机器人轨迹数据、仿真或真实机器人实验，也没有具身任务评测。因此，它属于通用 LLM/软件智能体项目，而非本索引要求的具身机器人技术项目。"
+    }
+  },
+  "limx-dreamactor-e086841": {
+    "checked_at": "2026-08-07T05:12:56.607669+00:00",
+    "title": "LimX DreamActor",
+    "accepted": false,
+    "reason": "Verification in progress; this is not the final verdict.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official LimX Dynamics release and any linked technical material to verify that DreamActor is a software artifact, identify the responsible organization, and extract only supported technical claims and results.",
+        "I’ll also distinguish release-page claims from paper evidence and leave unsupported fields empty rather than infer them.",
+        "Starting with the supplied official URL and targeted searches for project documentation, publication details, and organization naming."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress.",
+        "Official-source verification pending.",
+        "No eligibility decision made yet.",
+        "Metrics not yet extracted."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification in progress.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.limxdynamics.com/en/news/BK000044",
+      "open_source": false,
+      "organization_en": "LimX Dynamics",
+      "organization_kind": "Company",
+      "organization_zh": "逐际动力",
+      "reason": "Verification in progress; this is not the final verdict.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目页面、技术材料与可复现的报告结果。"
+    }
+  },
+  "deepseek-r1-0528-f99db5b": {
+    "checked_at": "2026-08-07T05:12:56.611452+00:00",
+    "title": "DeepSeek-R1-0528",
+    "accepted": false,
+    "reason": "不收录：缺少资格条件 1。官方发布页将 DeepSeek-R1-0528 描述为面向数学、编程、通用逻辑、写作和工具调用的通用推理 LLM，没有提供其作为物理机器人或具身智能软件的证据，也没有机器人感知输入、动作输出、控制策略、VLA、机器人数据引擎、模拟器或实体机器人评测。Function Calling 和通用 Agent 工具调用本身不足以证明该模型属于具身机器人项目。官方项目页、明确责任组织和 2025-05-28 发布日期均可确认，但核心软件范围不符合本索引。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "复杂数学、编程与通用逻辑推理",
+        "通过 API 执行 Function Calling 和工具调用",
+        "生成符合指定结构的 JSON 输出",
+        "长文本创作、改写、摘要与阅读理解",
+        "前端代码生成和角色扮演"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "DeepSeek-R1-0528 是通用大语言推理模型 DeepSeek-R1 的后训练升级版本，继续使用 2024 年 12 月发布的 DeepSeek-V3 Base 作为基座。",
+        "官方称此次升级在后训练阶段投入了更多算力，以增加复杂问题上的推理深度；AIME 2025 中平均每题生成的推理 token 数由旧版约 12K 增至约 23K。",
+        "模型面向数学、编程、通用逻辑、写作、摘要、阅读理解和代码生成等数字任务；官方材料没有将其定义为机器人策略、VLA、动作模型、控制栈、模拟器、机器人数据集或具身智能框架。",
+        "API 保持原有调用方式，并新增 Function Calling 与 JSON Output；工具调用不能发生在 thinking 过程中。",
+        "API 的 max_tokens 限制思考过程与最终回答的总输出长度，默认值为 32K，最大值为 64K；官方网站、App、小程序和 API 的上下文长度为 64K。",
+        "开放权重版本包含 685B 参数，其中 14B 属于 MTP 层，上下文长度为 128K；私有化部署时可通过更新 checkpoint 与 tokenizer_config.json 完成升级。",
+        "模型权重及相关开放仓库采用 MIT License，并允许使用模型输出进行蒸馏或训练其他模型。"
+      ],
+      "metrics": [
+        {
+          "label": "AIME 2025 准确率",
+          "note": "官方报告相较旧版 DeepSeek-R1 的 70% 有明显提升。",
+          "value": "87.5%"
+        },
+        {
+          "label": "AIME 2025 平均推理长度",
+          "note": "旧版平均每题约 12K tokens。",
+          "value": "23K tokens/题"
+        },
+        {
+          "label": "幻觉率变化",
+          "note": "官方报告覆盖改写润色、总结摘要和阅读理解等场景，相较旧版降低。",
+          "value": "约 45%–50%"
+        },
+        {
+          "label": "Tau-Bench 工具调用",
+          "note": "官方报告的 airline / retail 成绩。",
+          "value": "53.5% / 63.9%"
+        },
+        {
+          "label": "开放权重规模与上下文",
+          "note": "总参数包含 14B MTP 层；开放版本上下文长度为 128K。",
+          "value": "685B 参数；128K context"
+        }
+      ],
+      "official_organization_url": "https://www.deepseek.com/",
+      "official_project_url": "https://api-docs.deepseek.com/zh-cn/news/news250528/",
+      "open_source": true,
+      "organization_en": "DeepSeek",
+      "organization_kind": "Company",
+      "organization_zh": "深度求索",
+      "reason": "不收录：缺少资格条件 1。官方发布页将 DeepSeek-R1-0528 描述为面向数学、编程、通用逻辑、写作和工具调用的通用推理 LLM，没有提供其作为物理机器人或具身智能软件的证据，也没有机器人感知输入、动作输出、控制策略、VLA、机器人数据引擎、模拟器或实体机器人评测。Function Calling 和通用 Agent 工具调用本身不足以证明该模型属于具身机器人项目。官方项目页、明确责任组织和 2025-05-28 发布日期均可确认，但核心软件范围不符合本索引。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DeepSeek-R1-0528 是深度求索于 2025 年 5 月 28 日发布的通用推理大语言模型更新。它基于 DeepSeek-V3 Base，通过强化后的后训练提高数学、编程和逻辑推理能力，并增加 Function Calling、JSON Output 和开放权重支持。官方报告了 AIME 2025、Tau-Bench、幻觉率及推理长度等结果，但所有已披露能力均属于文本推理、代码生成和数字工具调用。公开材料没有展示模型接收机器人视觉或传感输入、生成物理动作、控制机器人、学习操作策略或在实体/模拟机器人环境中接受评测，因此不能作为 embodied-robotics 技术项目收录。"
+    }
+  },
+  "limx-vgm-b5e3f66": {
+    "checked_at": "2026-08-07T05:12:56.619118+00:00",
+    "title": "LimX VGM",
+    "accepted": false,
+    "reason": "Pending source verification.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m verifying the official release, the responsible organization, and the linked technical material before applying the inclusion criteria.",
+        "I’ll keep reported capabilities and metrics limited to what those primary sources explicitly support.",
+        "I’m checking whether this is a dedicated software/model release rather than a robot hardware announcement."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress.",
+        "Research in progress.",
+        "Research in progress.",
+        "Research in progress."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Primary-source verification in progress.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.limxdynamics.com/en/news/BK000042",
+      "open_source": false,
+      "organization_en": "LimX Dynamics",
+      "organization_kind": "Company",
+      "organization_zh": "逐际动力",
+      "reason": "Pending source verification.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目页面及其链接的技术材料。"
     }
   }
 }

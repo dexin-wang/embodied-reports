@@ -2034,92 +2034,6 @@
     ]
   },
   {
-    "id": "gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde",
-    "title": "Gemini Robotics brings AI into the physical world",
-    "organization": "Google DeepMind",
-    "organizationKind": "Research Lab",
-    "date": "2025-03-12",
-    "year": 2025,
-    "summary": "Gemini Robotics 是 Google DeepMind 于 2025 年 3 月 12 日发布的机器人基础模型项目，由 Gemini Robotics 与 Gemini Robotics-ER 两部分组成。前者在 Gemini 2.0 上加入物理动作输出，是可直接控制机器人的视觉-语言-动作模型；后者侧重空间和时间层面的具身推理，可与机器人现有低层控制器及程序接口结合。项目重点解决机器人通用性、实时交互和精细操作三个问题：模型能响应开放式自然语言指令，在物体或目标位置变化后在线调整动作，并完成折纸、密封袋装填等多步骤灵巧操作。训练主要基于 ALOHA 2 双臂平台，但官方材料还展示了向 Franka 双臂系统及 Apptronik Apollo 人形机器人等不同本体迁移或专项适配的路径。Gemini Robotics-ER 则覆盖物体检测、部件指向、抓取和轨迹预测、多视角对应、三维检测、规划及代码生成，使具身推理能够嵌入完整机器人控制流程。官方报告称，Gemini Robotics 在综合泛化基准上的平均性能超过其他先进 VLA 模型的两倍；Gemini Robotics-ER 在端到端控制设置中的成功率为 Gemini 2.0 的 2 至 3 倍，并可用最少 100 条示范适配新的短时程任务。",
-    "tags": [
-      "Vision-language-action",
-      "Robot manipulation",
-      "Dexterous manipulation",
-      "Embodied AI"
-    ],
-    "fields": [
-      "Vision-language-action",
-      "Robot manipulation",
-      "Dexterous manipulation",
-      "Embodied AI"
-    ],
-    "featured": false,
-    "openSource": false,
-    "verification": "Automated",
-    "details": {
-      "keyPoints": [
-        "Gemini Robotics 是建立在 Gemini 2.0 基础上的视觉-语言-动作模型，将物理动作增加为模型输出模态，使模型能够直接产生机器人控制动作。",
-        "系统围绕通用性、交互性和灵巧性设计：可处理训练中未见的物体、环境和任务，并理解开放词汇、会话式及多语言指令。",
-        "模型持续监测环境和指令变化；当物体滑落或目标位置被人为改变时，能够重新规划动作并继续执行，而不是仅播放固定轨迹。",
-        "其精细操作展示包括折纸和把零食装入 Ziploc 密封袋，技术报告还研究了对长时程、高灵巧任务进行专项微调。",
-        "模型主要使用 ALOHA 2 双臂平台数据训练，同时展示了对基于 Franka 机械臂的双臂平台的控制，并可针对 Apptronik Apollo 人形机器人等新本体进行适配。",
-        "配套的 Gemini Robotics-ER 强化空间与时间理解，可输出物体检测、指向、抓取和轨迹预测、多视角对应及三维包围框，并能结合代码生成连接现有低层控制器。",
-        "安全设计采用分层方式：低层由碰撞规避、接触力限制和动态稳定性控制器处理物理安全，高层模型判断动作在给定语境中是否安全；项目同时发布 ASIMOV 数据集用于评估机器人动作的语义安全。"
-      ],
-      "capabilities": [
-        "通过视觉、语言与机器人动作联合建模，直接控制双臂机器人执行物体操作任务",
-        "理解开放词汇、日常会话式及多语言指令，并在指令发生变化时调整正在执行的动作",
-        "在物体滑落、目标被移动等环境变化发生后重新规划并继续任务",
-        "执行折纸、将零食装入密封袋等需要精细操作的多步骤任务",
-        "通过 Gemini Robotics-ER 完成物体检测、指向、抓取与轨迹预测、多视角对应和三维包围框预测"
-      ],
-      "metrics": [
-        {
-          "label": "综合泛化基准",
-          "note": "Google DeepMind 官方页面报告，相对于其他当时先进的视觉-语言-动作模型的平均表现。",
-          "value": "性能超过 2 倍"
-        },
-        {
-          "label": "端到端具身推理控制",
-          "note": "Gemini Robotics-ER 同时承担感知、状态估计、空间理解、规划和代码生成时，相对于 Gemini 2.0 的成功率。",
-          "value": "成功率达到 2-3 倍"
-        },
-        {
-          "label": "新短时程任务适配",
-          "note": "技术报告称，通用模型经过额外微调后可从少量示范学习新的短时程任务。",
-          "value": "最少 100 条示范"
-        },
-        {
-          "label": "专项长时程任务",
-          "note": "技术报告选择用于展示专项微调后高灵巧、长时程能力的任务数量。",
-          "value": "6 个任务"
-        }
-      ]
-    },
-    "links": [
-      {
-        "label": "Project",
-        "url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://deepmind.google/"
-      },
-      {
-        "label": "Report",
-        "url": "https://deepmind.google/discover/blog/gemini-robotics-brings-ai-into-the-physical-world/"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.reddit.com/r/singularity/comments/1j9m8et/gemini_robotics_brings_ai_into_the_physical_world/"
-      },
-      {
-        "label": "Evidence",
-        "url": "https://www.linkedin.com/posts/chandraai_geminirobotics-googledeepmind-ai-activity-7332321594897244160-TWzx"
-      }
-    ]
-  },
-  {
     "id": "hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01",
     "title": "Hui Si Kai Wu General Embodied Intelligence Platform",
     "organization": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center",
@@ -2209,85 +2123,88 @@
     ]
   },
   {
-    "id": "go-1-foundation-model-and-agibot-x2-b6bcba9",
-    "title": "GO-1 Foundation Model and AGIBOT X2",
-    "organization": "智元创新（上海）科技股份有限公司 / AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
-    "organizationKind": "Company",
-    "date": "2025-03-01",
+    "id": "gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde",
+    "title": "Gemini Robotics brings AI into the physical world",
+    "organization": "Google DeepMind",
+    "organizationKind": "Research Lab",
+    "date": "2025-03-12",
     "year": 2025,
-    "summary": "GO-1（Genie Operator-1）是智元机器人于2025年3月正式发布的通用具身基础策略，建立在AgiBot World大规模真实机器人数据体系之上。其核心ViLLA架构不直接从视觉和语言映射到底层控制，而是在VLM与动作专家之间加入Latent Planner，以离散隐式动作标记表达跨视频、跨任务和跨机器人本体的通用动作知识。基于InternVL-2B的多模态层接收多视角图像、力觉和语言输入，Latent Planner生成规划表示，扩散式Action Expert再输出连续精细动作。技术报告展示了其在真实双臂操作、长时序任务、分布外泛化和灵巧操作上的效果，并报告AgiBot World预训练策略在分布内和分布外评测中均明显超过OXE预训练基线。该项目后来由AGIBOT正式开放模型、代码和开发工具链；X2只是相关机器人载体，GO-1软件本身才是本索引的收录对象。",
+    "summary": "Gemini Robotics 是 Google DeepMind 于 2025 年 3 月 12 日发布的机器人基础模型项目，由 Gemini Robotics 与 Gemini Robotics-ER 两部分组成。前者在 Gemini 2.0 上加入物理动作输出，是可直接控制机器人的视觉-语言-动作模型；后者侧重空间和时间层面的具身推理，可与机器人现有低层控制器及程序接口结合。项目重点解决机器人通用性、实时交互和精细操作三个问题：模型能响应开放式自然语言指令，在物体或目标位置变化后在线调整动作，并完成折纸、密封袋装填等多步骤灵巧操作。训练主要基于 ALOHA 2 双臂平台，但官方材料还展示了向 Franka 双臂系统及 Apptronik Apollo 人形机器人等不同本体迁移或专项适配的路径。Gemini Robotics-ER 则覆盖物体检测、部件指向、抓取和轨迹预测、多视角对应、三维检测、规划及代码生成，使具身推理能够嵌入完整机器人控制流程。官方报告称，Gemini Robotics 在综合泛化基准上的平均性能超过其他先进 VLA 模型的两倍；Gemini Robotics-ER 在端到端控制设置中的成功率为 Gemini 2.0 的 2 至 3 倍，并可用最少 100 条示范适配新的短时程任务。",
     "tags": [
       "Vision-language-action",
       "Robot manipulation",
       "Dexterous manipulation",
-      "Data & benchmarks"
+      "Embodied AI"
     ],
     "fields": [
       "Vision-language-action",
       "Robot manipulation",
       "Dexterous manipulation",
-      "Data & benchmarks"
+      "Embodied AI"
     ],
     "featured": false,
-    "openSource": true,
+    "openSource": false,
     "verification": "Automated",
     "details": {
       "keyPoints": [
-        "GO-1（Genie Operator-1）是面向实体机器人的通用具身基础策略，而非AGIBOT X2硬件本身；AGIBOT为GO-1提供了独立官方发布材料、研究项目入口和技术报告，因此符合软件项目收录条件。",
-        "GO-1采用Vision-Language-Latent-Action（ViLLA）分层架构，在传统VLA输入与机器人底层动作之间引入离散的隐式动作标记，用于缩小图文语义和连续控制之间的表示差距。",
-        "系统由VLM、Latent Planner和Action Expert三部分协同组成：基于InternVL-2B的VLM处理多视角图像、力觉和语言；Latent Planner形成Chain of Planning；Action Expert根据中间视觉语言特征和隐式动作标记生成精细动作序列。",
-        "Latent Action Model使用带因果时间掩码的时空Transformer编码连续帧之间的动作变化，并通过VQ-VAE量化Latent Action Tokens，使人类视频和异构机器人数据能够参与动作知识预训练。",
-        "GO-1在AgiBot World真实机器人数据上训练；该数据体系覆盖家庭、零售、工业、餐饮和办公环境，并包含双臂操作、灵巧手、视觉与触觉信息、失败恢复数据以及任务和子步骤标注。",
-        "官方材料将其核心能力归纳为人类视频学习、少样本泛化、跨本体适配和持续自我进化；后续官方开源材料还报告其已在AGIBOT G1之外的松灵、方舟和Franka等机器人本体上验证。",
-        "候选日期“2025-03-01”缺少官方支持；AGIBOT公司时间线仅确认2025年3月发布，而可核实的正式发布公告日期为2025年3月11日。这一日期差异不影响其属于2025年后发布的软件项目。"
+        "Gemini Robotics 是建立在 Gemini 2.0 基础上的视觉-语言-动作模型，将物理动作增加为模型输出模态，使模型能够直接产生机器人控制动作。",
+        "系统围绕通用性、交互性和灵巧性设计：可处理训练中未见的物体、环境和任务，并理解开放词汇、会话式及多语言指令。",
+        "模型持续监测环境和指令变化；当物体滑落或目标位置被人为改变时，能够重新规划动作并继续执行，而不是仅播放固定轨迹。",
+        "其精细操作展示包括折纸和把零食装入 Ziploc 密封袋，技术报告还研究了对长时程、高灵巧任务进行专项微调。",
+        "模型主要使用 ALOHA 2 双臂平台数据训练，同时展示了对基于 Franka 机械臂的双臂平台的控制，并可针对 Apptronik Apollo 人形机器人等新本体进行适配。",
+        "配套的 Gemini Robotics-ER 强化空间与时间理解，可输出物体检测、指向、抓取和轨迹预测、多视角对应及三维包围框，并能结合代码生成连接现有低层控制器。",
+        "安全设计采用分层方式：低层由碰撞规避、接触力限制和动态稳定性控制器处理物理安全，高层模型判断动作在给定语境中是否安全；项目同时发布 ASIMOV 数据集用于评估机器人动作的语义安全。"
       ],
       "capabilities": [
-        "基于多视角图像、力觉信号和自然语言指令进行场景感知与任务理解",
-        "通过隐式动作标记执行高层规划，并生成高频、精细的连续机器人动作",
-        "从互联网人类视频、跨本体数据和真实机器人示范中进行统一预训练",
-        "以少样本方式适配新任务和新场景，并支持跨机器人本体迁移",
-        "执行双臂操作、工具使用、物体整理、倒水、擦桌等长时序真实世界任务"
+        "通过视觉、语言与机器人动作联合建模，直接控制双臂机器人执行物体操作任务",
+        "理解开放词汇、日常会话式及多语言指令，并在指令发生变化时调整正在执行的动作",
+        "在物体滑落、目标被移动等环境变化发生后重新规划并继续任务",
+        "执行折纸、将零食装入密封袋等需要精细操作的多步骤任务",
+        "通过 Gemini Robotics-ER 完成物体检测、指向、抓取与轨迹预测、多视角对应和三维包围框预测"
       ],
       "metrics": [
         {
-          "label": "真实机器人数据规模",
-          "note": "技术报告称数据来自100台真实机器人；官方研究页概括为100+ robots。",
-          "value": "1M+ trajectories"
+          "label": "综合泛化基准",
+          "note": "Google DeepMind 官方页面报告，相对于其他当时先进的视觉-语言-动作模型的平均表现。",
+          "value": "性能超过 2 倍"
         },
         {
-          "label": "相对OXE的平均成功率提升",
-          "note": "技术报告报告，在其评测任务中，使用AgiBot World预训练的策略相较使用Open X-Embodiment预训练的策略平均成功率提升。",
-          "value": "30%"
+          "label": "端到端具身推理控制",
+          "note": "Gemini Robotics-ER 同时承担感知、状态估计、空间理解、规划和代码生成时，相对于 Gemini 2.0 的成功率。",
+          "value": "成功率达到 2-3 倍"
         },
         {
-          "label": "分布内任务表现",
-          "note": "技术报告图6报告AgiBot World预训练策略与OXE预训练策略的任务完成分数对比。",
-          "value": "0.77 vs 0.47"
+          "label": "新短时程任务适配",
+          "note": "技术报告称，通用模型经过额外微调后可从少量示范学习新的短时程任务。",
+          "value": "最少 100 条示范"
         },
         {
-          "label": "分布外任务表现",
-          "note": "技术报告图6报告AgiBot World预训练策略在分布外设置中的任务完成分数，并与OXE预训练结果比较。",
-          "value": "0.67 vs 0.38"
-        },
-        {
-          "label": "低数据量泛化结果",
-          "note": "技术报告称，在仅使用相当于OXE约1/10小时数的数据时，预训练策略的泛化能力仍提升。",
-          "value": "18% improvement"
+          "label": "专项长时程任务",
+          "note": "技术报告选择用于展示专项微调后高灵巧、长时程能力的任务数量。",
+          "value": "6 个任务"
         }
       ]
     },
     "links": [
       {
         "label": "Project",
-        "url": "https://agibot-world.com/"
+        "url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/"
       },
       {
         "label": "Evidence",
-        "url": "https://www.agibot.com/"
+        "url": "https://deepmind.google/"
       },
       {
         "label": "Report",
-        "url": "https://agibot.com/about/news"
+        "url": "https://deepmind.google/discover/blog/gemini-robotics-brings-ai-into-the-physical-world/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.reddit.com/r/singularity/comments/1j9m8et/gemini_robotics_brings_ai_into_the_physical_world/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/chandraai_geminirobotics-googledeepmind-ai-activity-7332321594897244160-TWzx"
       }
     ]
   },
@@ -2370,6 +2287,89 @@
       {
         "label": "Report",
         "url": "https://homietele.github.io/"
+      }
+    ]
+  },
+  {
+    "id": "go-1-foundation-model-and-agibot-x2-b6bcba9",
+    "title": "GO-1 Foundation Model and AGIBOT X2",
+    "organization": "智元创新（上海）科技股份有限公司 / AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-03-01",
+    "year": 2025,
+    "summary": "GO-1（Genie Operator-1）是智元机器人于2025年3月正式发布的通用具身基础策略，建立在AgiBot World大规模真实机器人数据体系之上。其核心ViLLA架构不直接从视觉和语言映射到底层控制，而是在VLM与动作专家之间加入Latent Planner，以离散隐式动作标记表达跨视频、跨任务和跨机器人本体的通用动作知识。基于InternVL-2B的多模态层接收多视角图像、力觉和语言输入，Latent Planner生成规划表示，扩散式Action Expert再输出连续精细动作。技术报告展示了其在真实双臂操作、长时序任务、分布外泛化和灵巧操作上的效果，并报告AgiBot World预训练策略在分布内和分布外评测中均明显超过OXE预训练基线。该项目后来由AGIBOT正式开放模型、代码和开发工具链；X2只是相关机器人载体，GO-1软件本身才是本索引的收录对象。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "GO-1（Genie Operator-1）是面向实体机器人的通用具身基础策略，而非AGIBOT X2硬件本身；AGIBOT为GO-1提供了独立官方发布材料、研究项目入口和技术报告，因此符合软件项目收录条件。",
+        "GO-1采用Vision-Language-Latent-Action（ViLLA）分层架构，在传统VLA输入与机器人底层动作之间引入离散的隐式动作标记，用于缩小图文语义和连续控制之间的表示差距。",
+        "系统由VLM、Latent Planner和Action Expert三部分协同组成：基于InternVL-2B的VLM处理多视角图像、力觉和语言；Latent Planner形成Chain of Planning；Action Expert根据中间视觉语言特征和隐式动作标记生成精细动作序列。",
+        "Latent Action Model使用带因果时间掩码的时空Transformer编码连续帧之间的动作变化，并通过VQ-VAE量化Latent Action Tokens，使人类视频和异构机器人数据能够参与动作知识预训练。",
+        "GO-1在AgiBot World真实机器人数据上训练；该数据体系覆盖家庭、零售、工业、餐饮和办公环境，并包含双臂操作、灵巧手、视觉与触觉信息、失败恢复数据以及任务和子步骤标注。",
+        "官方材料将其核心能力归纳为人类视频学习、少样本泛化、跨本体适配和持续自我进化；后续官方开源材料还报告其已在AGIBOT G1之外的松灵、方舟和Franka等机器人本体上验证。",
+        "候选日期“2025-03-01”缺少官方支持；AGIBOT公司时间线仅确认2025年3月发布，而可核实的正式发布公告日期为2025年3月11日。这一日期差异不影响其属于2025年后发布的软件项目。"
+      ],
+      "capabilities": [
+        "基于多视角图像、力觉信号和自然语言指令进行场景感知与任务理解",
+        "通过隐式动作标记执行高层规划，并生成高频、精细的连续机器人动作",
+        "从互联网人类视频、跨本体数据和真实机器人示范中进行统一预训练",
+        "以少样本方式适配新任务和新场景，并支持跨机器人本体迁移",
+        "执行双臂操作、工具使用、物体整理、倒水、擦桌等长时序真实世界任务"
+      ],
+      "metrics": [
+        {
+          "label": "真实机器人数据规模",
+          "note": "技术报告称数据来自100台真实机器人；官方研究页概括为100+ robots。",
+          "value": "1M+ trajectories"
+        },
+        {
+          "label": "相对OXE的平均成功率提升",
+          "note": "技术报告报告，在其评测任务中，使用AgiBot World预训练的策略相较使用Open X-Embodiment预训练的策略平均成功率提升。",
+          "value": "30%"
+        },
+        {
+          "label": "分布内任务表现",
+          "note": "技术报告图6报告AgiBot World预训练策略与OXE预训练策略的任务完成分数对比。",
+          "value": "0.77 vs 0.47"
+        },
+        {
+          "label": "分布外任务表现",
+          "note": "技术报告图6报告AgiBot World预训练策略在分布外设置中的任务完成分数，并与OXE预训练结果比较。",
+          "value": "0.67 vs 0.38"
+        },
+        {
+          "label": "低数据量泛化结果",
+          "note": "技术报告称，在仅使用相当于OXE约1/10小时数的数据时，预训练策略的泛化能力仍提升。",
+          "value": "18% improvement"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://agibot-world.com/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.agibot.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://agibot.com/about/news"
       }
     ]
   },

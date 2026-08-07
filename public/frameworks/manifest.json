@@ -61,8 +61,13 @@
       "id": "being-h0",
       "asset": "frameworks/being-h0.jpg",
       "source_url": "https://arxiv.org/abs/2507.15597",
-      "page": 1,
-      "caption_detected": true
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "width": 1200,
+      "height": 700
     },
     {
       "id": "gr00t-n15",
@@ -103,9 +108,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://cdn.deepseek.com/api-docs/deepseek_r1_benchmark.png",
+      "image_url": "https://cdn.deepseek.com/api-docs/deepseek_r1_benchmark_table.png",
       "width": 1080,
-      "height": 789
+      "height": 533
     },
     {
       "id": "qwen3",
@@ -127,7 +132,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=zrXyWgQtBQkQ7kNvwFVfNfe&_nc_oc=AdoT22E0LfLy1YoHu5yrBqkMwDpVPWApGD9zBwBWoihfTecj0GyxyVyPvNvWQF_JfD0&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=-DMV3zfukbn7NyRFitQQQw&_nc_ss=7b20f&oh=00_AQH-U8an0tP1TI7KTASdG78A1jrefbyadtEOIAQfOyQD5w&oe=6A8FB073",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=zrXyWgQtBQkQ7kNvwG73Aie&_nc_oc=AdphXi6fjLs1Ic6mVoRzrD2GWvIipHA7MyrdGwzJoSagAQRh5D4m-oQ6knpqRN_cH3E&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=iKDRHY3iwSISOTz9BRkysA&_nc_ss=7b20f&oh=00_AQFggSfY00MdebHfzWXqEOH3CRgGtiF2LCIMfsjT6_Zj9Q&oe=6A8FB073",
       "width": 1920,
       "height": 1080
     },
@@ -348,18 +353,6 @@
       "height": 1080
     },
     {
-      "id": "gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde",
-      "asset": "frameworks/gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde.jpg",
-      "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://lh3.googleusercontent.com/I7a1f6DPm4Qs4JuiieahA4ki0Dc5IQDU8PxfsMRy3UCf3HF7Td_zZfXg35_M-Td1EELJUY2dJLEkdyjt7IVah658uuqvwAQFtarOukXs44MHGMiSd64=w1440-h810-n-nu",
-      "width": 1440,
-      "height": 810
-    },
-    {
       "id": "hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01",
       "asset": "frameworks/hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01.jpg",
       "source_url": "https://www.x-humanoid.com/detail/hskw.html",
@@ -370,6 +363,18 @@
       "image_url": "https://www.x-humanoid.com/oss/static/img/project/hskw.png",
       "width": 784,
       "height": 588
+    },
+    {
+      "id": "gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde",
+      "asset": "frameworks/gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde.jpg",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://lh3.googleusercontent.com/I7a1f6DPm4Qs4JuiieahA4ki0Dc5IQDU8PxfsMRy3UCf3HF7Td_zZfXg35_M-Td1EELJUY2dJLEkdyjt7IVah658uuqvwAQFtarOukXs44MHGMiSd64=w1440-h810-n-nu",
+      "width": 1440,
+      "height": 810
     },
     {
       "id": "homie-humanoid-loco-manipulation-with-isomorphic-aefe995",
