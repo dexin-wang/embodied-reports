@@ -1,0 +1,61 @@
+{
+  "description": "Curated official release URLs for major software projects. They are re-verified automatically before publication.",
+  "candidates": [
+    {
+      "title": "COSA 0.5 / V³-0",
+      "url": "https://www.limxdynamics.com/cosa05v3/#zh",
+      "date": "2026-07-15",
+      "organization_hint": "逐际动力 / LimX Dynamics",
+      "summary": "Official LimX Dynamics release for COSA 0.5 and its V³-0 humanoid vision-language-action software update."
+    },
+    {
+      "title": "LimX COSA Agentic OS",
+      "url": "https://www.limxdynamics.com/zh/news/BK000054",
+      "date": "2026-01-12",
+      "organization_hint": "逐际动力 / LimX Dynamics",
+      "summary": "Official release of LimX COSA, an embodied agentic operating system for humanoid robots."
+    },
+    {
+      "title": "FluxVLA Engine",
+      "url": "https://www.limxdynamics.com/zh/news/BK000058",
+      "date": "2026-04-30",
+      "organization_hint": "逐际动力 / LimX Dynamics",
+      "summary": "Official open-source VLA engineering foundation covering data, training, simulation evaluation, and real-robot deployment."
+    },
+    {
+      "title": "LimX DreamActor",
+      "url": "https://www.limxdynamics.com/en/news/BK000044",
+      "date": "2025-09-02",
+      "organization_hint": "逐际动力 / LimX Dynamics",
+      "summary": "Official LimX Dynamics release describing a multi-source-data training paradigm for embodied AI."
+    },
+    {
+      "title": "LimX VGM",
+      "url": "https://www.limxdynamics.com/en/news/BK000042",
+      "date": "2025-02-14",
+      "organization_hint": "逐际动力 / LimX Dynamics",
+      "summary": "Official LimX Dynamics release for embodied manipulation learned from human videos."
+    },
+    {
+      "title": "DeepSeek-V4 Preview",
+      "url": "https://api-docs.deepseek.com/zh-cn/news/news260424/",
+      "date": "2026-04-24",
+      "organization_hint": "深度求索 / DeepSeek",
+      "summary": "Official DeepSeek-V4 preview release covering 1M context, agent capabilities, DSA sparse attention, API access, weights, and technical report."
+    },
+    {
+      "title": "DeepSeek-V3.1",
+      "url": "https://api-docs.deepseek.com/zh-cn/news/news250821",
+      "date": "2025-08-21",
+      "organization_hint": "深度求索 / DeepSeek",
+      "summary": "Official DeepSeek-V3.1 release with hybrid thinking/non-thinking mode, agent improvements, extended context, and open weights."
+    },
+    {
+      "title": "DeepSeek-R1-0528",
+      "url": "https://api-docs.deepseek.com/zh-cn/news/news250528",
+      "date": "2025-05-28",
+      "organization_hint": "深度求索 / DeepSeek",
+      "summary": "Official DeepSeek-R1-0528 reasoning-model update with reinforced post-training, agent tool calling, and open weights."
+    }
+  ]
+}
