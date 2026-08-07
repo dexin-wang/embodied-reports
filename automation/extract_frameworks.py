@@ -65,24 +65,38 @@ class ProjectImageParser(HTMLParser):
                 self.order += 1
                 # OpenGraph/Twitter cards are the publisher's declared project
                 # visual and are used only after explicit in-page figures.
-                self.candidates.append((2, self.order, source))
+                self.candidates.append((3, self.order, source))
             return
-        if tag not in {"img", "source"}:
+        if tag == "link":
+            rel = values.get("rel", "").lower()
+            as_type = values.get("as", "").lower()
+            source = values.get("href") if "preload" in rel and as_type == "image" else None
+        elif tag == "video":
+            source = values.get("poster") or values.get("data-poster")
+        elif tag in {"img", "source"}:
+            source = values.get("src") or values.get("data-src") or values.get("data-original")
+        else:
+            style = " ".join(values.get(key, "") for key in ("style", "data-bg", "data-background-image", "data-background"))
+            match = re.search(r"""url\(\s*['"]?([^'")]+)""", style, flags=re.I)
+            source = match.group(1) if match else None
+        if not source:
             return
         self.order += 1
-        source = values.get("src") or values.get("data-src") or values.get("data-original")
         if not source and values.get("srcset"):
             source = values["srcset"].split(",", 1)[0].strip().split(" ", 1)[0]
         if not source:
             return
-        text = " ".join(values.get(key, "") for key in ("alt", "title", "class", "id", "src", "data-src", "srcset")).lower()
+        text = " ".join(values.get(key, "") for key in ("alt", "title", "class", "id", "src", "data-src", "srcset", "style", "poster")).lower()
         if source.startswith("data:") or any(term in text for term in self.EXCLUDED_TERMS):
             return
         method_score = sum(1 for term in self.METHOD_TERMS if term in text)
         related_score = sum(1 for term in self.RELATED_TERMS if term in text)
         # Keep non-decorative images as a final fallback in document order. The
         # size check below prevents icons and tiny UI thumbnails from winning.
-        score = method_score * 100 + related_score * 10 + 1
+        # Prefer an actual in-page image over the social-card image.  When no
+        # method diagram exists, this makes the first usable project visual the
+        # deterministic fallback required for every card.
+        score = method_score * 1000 + related_score * 100 + 10
         self.candidates.append((score, self.order, source))
 
 
@@ -127,8 +141,14 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
         # The decoded release markup is still nested inside its original
         # <script> node, so HTMLParser correctly treats it as text above.
         # Parse its image/source fragments once more as standalone tags.
-        for tag in re.findall(r"<(?:img|source)\b[^>]*>", embedded_markup, flags=re.I):
+        for tag in re.findall(r"<(?:img|source|video|link|[^>]+style=)[^>]*>", embedded_markup, flags=re.I):
             parser.feed(tag)
+        # Some release sites render the hero as a CSS background rather than an
+        # <img>.  It remains a real asset from that official page and is used
+        # only after the PDF / explicit method-image path has been exhausted.
+        for image_ref in re.findall(r"""(?:background(?:-image)?|data-background(?:-image)?)\s*[:=]\s*url\(\s*['"]?([^'")]+)""", embedded_markup, flags=re.I):
+            parser.order += 1
+            parser.candidates.append((8, parser.order, image_ref))
         if not parser.candidates:
             return None
         # First prefer an explicitly labelled framework. If unavailable, retain
