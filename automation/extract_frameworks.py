@@ -154,7 +154,7 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
         # First prefer an explicitly labelled framework. If unavailable, retain
         # the first sizeable method-related / dataset / results visual from the
         # official project page.  No synthetic or code-rendered diagram is used.
-        ordered = sorted(parser.candidates, key=lambda item: (-item[0], item[1]))[:16]
+        ordered = sorted(parser.candidates, key=lambda item: (-item[0], item[1]))[:64]
         for score, _, image_ref in ordered:
             # Treat the page URL as a directory so project-local assets such
             # as ``assets/images/overview.jpg`` resolve to /pages/<project>/.
