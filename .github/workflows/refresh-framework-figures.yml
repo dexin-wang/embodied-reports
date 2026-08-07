@@ -14,8 +14,10 @@ on:
 permissions:
   contents: write
 
+# Shares the write queue with discovery because both workflows update
+# public/frameworks and can otherwise cause non-fast-forward pushes.
 concurrency:
-  group: refresh-framework-figures
+  group: catalog-writers
   cancel-in-progress: false
 
 jobs:
@@ -37,8 +39,17 @@ jobs:
           git config user.name "embodied-reports-bot"
           git config user.email "embodied-reports-bot@users.noreply.github.com"
           git add public/frameworks
-          if ! git diff --cached --quiet; then
-            git commit -m "assets: refresh source framework figures"
-            git pull --rebase origin main
-            git push
+          if git diff --cached --quiet; then
+            exit 0
           fi
+          git commit -m "assets: refresh source framework figures"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "Push race detected; retrying ($attempt/3)"
+            sleep "$attempt"
+          done
+          echo "Unable to publish refreshed figures after three attempts."
+          exit 1
