@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - "automation/company_roster.json"
+      - "automation/official_seed_projects.json"
       - "automation/discover_official_projects.py"
       - "automation/verify_reports.py"
       - "automation/clean_catalog.py"
