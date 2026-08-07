@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = ROOT / "automation" / "candidates.json"
 COMPANY_ROSTER = ROOT / "automation" / "company_roster.json"
+OFFICIAL_SEEDS = ROOT / "automation" / "official_seed_projects.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
@@ -133,12 +134,30 @@ def discovery_topics() -> list[str]:
     return [*TOPICS, *company_topics]
 
 
+
+def official_seed_candidates() -> list[dict]:
+    """Load auditable official release leads maintained alongside the company roster."""
+    if not OFFICIAL_SEEDS.exists():
+        return []
+    payload = json.loads(OFFICIAL_SEEDS.read_text())
+    values = payload.get("candidates", payload) if isinstance(payload, dict) else payload
+    return [item for item in values if isinstance(item, dict) and item.get("url")]
+
 def main() -> None:
     if not API_KEY:
         raise SystemExit("OPENAI_API_KEY is required for official project discovery")
     payload = json.loads(CANDIDATES.read_text()) if CANDIDATES.exists() else {"candidates": []}
     by_url = {item["url"]: item for item in payload.get("candidates", []) if item.get("url")}
     added = 0
+    # Curated official URLs prevent influential releases from being missed when
+    # a search-provider result is delayed or phrased differently in Chinese.
+    for item in official_seed_candidates():
+        if item.get("url", "").startswith("https://") and item.get("date", "") >= "2025-01-01":
+            by_url[item["url"]] = {
+                **item, "authors": item.get("authors", []), "score": 100,
+                "reasons": ["official web-project discovery", "maintained official seed"],
+            }
+            added += 1
     for topic in discovery_topics():
         for item in call(topic):
             if item["url"].startswith("https://arxiv.org/") or not item["url"].startswith("https://"):
