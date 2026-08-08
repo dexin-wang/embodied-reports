@@ -1,11 +1,23 @@
 {
-  "generated_at": "2026-08-08T04:48:02.953238+00:00",
+  "generated_at": "2026-08-08T07:16:13.704977+00:00",
   "candidates": [
     {
-      "date": "2026-08-07",
-      "organization_hint": "Search status",
-      "summary": "I’m checking official organization and lab domains first, then validating that each result is a software release with a dedicated page and a source-supported date.",
-      "title": "Research in progress",
+      "date": "2026-08-08",
+      "organization_hint": "Research in progress",
+      "summary": "I’m checking each named organization’s official site and official announcements, then filtering out hardware releases and paper-only pages. Dates will be exact only where the official source states them; otherwise I’ll normalize to the first day of the known month.",
+      "title": "Status",
+      "url": "https://placeholder.invalid/status",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "organization_hint": "Research in progress",
+      "summary": "I’m checking official lab, university, and company release pages, then filtering out paper-only and hardware-only announcements. Dates will follow the official page where stated, with month-level dates normalized to the first day.",
+      "title": "Search status",
       "url": "https://example.invalid/status",
       "authors": [],
       "score": 100,
@@ -2221,6 +2233,18 @@
       "reasons": [
         "keywords: vision-language-action, vla",
         "report/model title"
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "organization_hint": "Sunday Robotics",
+      "summary": "Preview of ACT-2, a robotics model designed to combine broad task generalization with deployment-level reliability through iterative real-world evaluation and edge-case correction.",
+      "title": "ACT-2 Preview: Generalizing Reliability",
+      "url": "https://www.sunday.ai/blog/act-2-preview",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6498,6 +6522,18 @@
       "reasons": []
     },
     {
+      "date": "2026-01-01",
+      "organization_hint": "Mentee Robotics",
+      "summary": "Robot-learning system combining human mentoring, Real2Sim2Real training, few-shot task generalization, and natural-language instruction following.",
+      "title": "Mentoring and Instruction Following",
+      "url": "https://menteebot.com/blog/mentoring-instruction-following/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Embodied Robot Manipulation in the Era of Foundation Models: Planning and Learning Perspectives",
       "summary": "Recent advances in vision, language, and multimodal learning have substantially accelerated progress in robotic foundation models, with robot manipulation remaining a central and challenging problem. This survey examines robot manipulation from an algorithmic perspective and organizes recent learning-based approaches within a unified abstraction of high-level planning and low-level control. At the high level, we extend the classical notion of task planning to include reasoning over language, code, motion, affordances, and 3D representations, emphasizing their role in structured and long-horizon decision making. At the low level, we propose a training-paradigm-oriented taxonomy for learning-based control, organizing existing methods along input modeling, latent representation learning, and policy learning. Finally, we identify open challenges and prospective research directions related to scalability, data efficiency, multimodal physical interaction, and safety. Together, these analyses aim to clarify the design space of modern foundation models for robotic manipulation.",
       "date": "2025-12-28",
@@ -6778,6 +6814,18 @@
       ]
     },
     {
+      "date": "2025-11-19",
+      "organization_hint": "Sunday Robotics",
+      "summary": "Robot foundation model trained without robot-collected training data, using human activity data and an action representation intended to transfer human behaviors to robots.",
+      "title": "ACT-1: A Robot Foundation Model Trained on Zero Robot Data",
+      "url": "https://www.sunday.ai/blog/no-robot-data",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-14",
       "organization_hint": "University of Oxford",
       "summary": "These electronics-free fluidic soft robots use air pressure and mechanical coupling through the ground to produce complex rhythmic motion and synchronize with one another.",
@@ -6807,6 +6855,18 @@
         "keywords: vision-language-action, vla",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-11-05",
+      "organization_hint": "XPENG",
+      "summary": "A large model developed specifically for robots and described by XPENG as the core engine for autonomous action, deeper reasoning, and decision-making in its humanoid robotics stack.",
+      "title": "XPENG VLT Large Model",
+      "url": "https://www.xpeng.com/pressroom/news/019a56f54fe99a2a0a8d8a0282e402b7",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7135,6 +7195,18 @@
     },
     {
       "date": "2025-09-01",
+      "organization_hint": "Mentee Robotics",
+      "summary": "Technical overview of MenteeBot's AI-first software architecture, which integrates perception, simulation-based learning, control, and human-to-robot mentoring.",
+      "title": "MenteeBot AI Approach",
+      "url": "https://menteebot.com/blog/menteebot-ai-approach/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-09-01",
       "organization_hint": "Hugging Face",
       "summary": "LeRobot v0.3 is a robotics software-stack release for collecting datasets, training policies, evaluating models, and deploying learned robot behavior with standardized hardware and dataset interfaces.",
       "title": "LeRobot v0.3",
@@ -7204,6 +7276,18 @@
       "reasons": [
         "official web-project discovery",
         "maintained official seed"
+      ]
+    },
+    {
+      "date": "2025-08-18",
+      "organization_hint": "K-Scale Labs",
+      "summary": "Official K-Scale Labs release of its modular MuJoCo- and JAX-based framework for training humanoid locomotion and manipulation policies in simulation.",
+      "title": "K-Sim 0.2.10",
+      "url": "https://github.com/kscalelabs/ksim",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7646,6 +7730,18 @@
       ]
     },
     {
+      "date": "2025-06-10",
+      "organization_hint": "Hello Robot",
+      "summary": "Version 0.5 of the open-source, MuJoCo-based Stretch simulator, adding real-time Stretch 3 simulation, ROS 2 control, calibrated cameras, lidar, navigation, procedural environments, and deformable-object support.",
+      "title": "Stretch MuJoCo v0.5",
+      "url": "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-06-05",
       "organization_hint": "MIT Computer Science and Artificial Intelligence Laboratory",
       "summary": "cuTAMP uses GPU-parallel optimization to evaluate and refine thousands of candidate task-and-motion plans, enabling rapid manipulation planning across robot platforms.",
@@ -7991,6 +8087,18 @@
     },
     {
       "date": "2025-04-24",
+      "organization_hint": "Rerun",
+      "summary": "Rerun SDK and Viewer release introducing explicit timestamp and duration APIs, reserved data namespaces, gRPC API changes, and a forward-migration baseline for recorded RRD data.",
+      "title": "Rerun 0.23",
+      "url": "https://rerun.io/docs/reference/migration/migration-0-23",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-04-24",
       "organization_hint": "MIT Mechatronics Research Laboratory",
       "summary": "Relevance combines audio, visual perception, and task inference to identify the scene objects most pertinent to assisting a human and focus robot planning on them.",
       "title": "Relevance",
@@ -8035,6 +8143,18 @@
       "summary": "RHyME enables a robot to learn multistep tasks from one human how-to video by retrieving related robot experiences and adapting them to mismatched embodiments.",
       "title": "RHyME: Retrieval for Hybrid Imitation under Mismatched Execution",
       "url": "https://news.cornell.edu/stories/2025/04/robot-see-robot-do-system-learns-after-watching-how-tos",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-04-18",
+      "organization_hint": "Hello Robot",
+      "summary": "Stretch software release adding Firebase-based signaling for remote web operation alongside SDK, ROS, web-interface, and deployment updates.",
+      "title": "Stretch Software Drop - April 18, 2025",
+      "url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8502,6 +8622,18 @@
       ]
     },
     {
+      "date": "2025-02-28",
+      "organization_hint": "Hello Robot",
+      "summary": "Stretch software release covering web-interface development, demonstration collection, Stretch AI installation, Nav2 mapping, web teleoperation, Python SDK, and ROS 2 updates.",
+      "title": "Stretch Software Drop - February 28, 2025",
+      "url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-02-20",
       "organization_hint": "Figure",
       "summary": "Helix is a generalist vision-language-action model for humanoid upper-body control that maps natural-language commands and visual observations to continuous actions in real time.",
@@ -8541,11 +8673,35 @@
       ]
     },
     {
+      "date": "2025-02-06",
+      "organization_hint": "Rerun",
+      "summary": "Rerun SDK and Viewer release adding partial-update logging APIs and associated changes to the multimodal data model used for robotics visualization and analysis.",
+      "title": "Rerun 0.22",
+      "url": "https://rerun.io/docs/reference/migration/migration-0-22",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-02-01",
       "organization_hint": "Google DeepMind",
       "summary": "MuJoCo Playground is an open-source framework for GPU-accelerated robot learning, simulation, training, and sim-to-real deployment built around MuJoCo and MJX.",
       "title": "MuJoCo Playground",
       "url": "https://playground.mujoco.org/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-01-31",
+      "organization_hint": "Hello Robot",
+      "summary": "Stretch software release adding runtime URDF generation, reproducible virtual environments for FUNMAP, application startup tooling, and a mapping fix for lidar artifacts.",
+      "title": "Stretch Software Drop - January 31, 2025",
+      "url": "https://forum.hello-robot.com/t/software-drop-january-31-2025/1216",
       "authors": [],
       "score": 100,
       "reasons": [

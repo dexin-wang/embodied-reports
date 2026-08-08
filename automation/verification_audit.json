@@ -8236,5 +8236,729 @@
       "software_project": false,
       "summary_zh": "正在核验候选项目。"
     }
+  },
+  "act-2-preview-generalizing-reliability-d15a2c7": {
+    "checked_at": "2026-08-08T07:21:40.933592+00:00",
+    "title": "ACT-2 Preview: Generalizing Reliability",
+    "accepted": false,
+    "reason": "Verification in progress.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official ACT-2 material first, then I’ll verify the responsible organization, release date, technical scope, and any exact reported results before applying the eligibility rules.",
+        "I’ll keep unsupported fields empty and exclude the candidate if the official evidence does not establish that the artifact is embodied-robotics software.",
+        "I’ll also check whether the supplied date matches the publication date shown by accessible official sources."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Status update only; verdict pending web verification.",
+        "No eligibility conclusion has been made yet.",
+        "The supplied official-looking URL will be treated as a lead, not assumed valid evidence.",
+        "Exact metrics will be included only if reported in accessible project material."
+      ],
+      "metrics": [
+        {
+          "label": "Verification status",
+          "note": "Official sources are being checked.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.sunday.ai/blog/act-2-preview",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Verification in progress.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目页面、机构归属、发布日期、软件属性与报告结果。"
+    }
+  },
+  "mentoring-and-instruction-following-da3e8d9": {
+    "checked_at": "2026-08-08T07:21:40.939773+00:00",
+    "title": "Mentoring and Instruction Following",
+    "accepted": false,
+    "reason": "正在核验候选项目的官方证据。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验候选链接的官方归属、发布日期和页面主体，再检查其是否确实发布了面向实体机器人的软件技术项目，而非机器人硬件或产品介绍。随后只使用官方页面、技术报告及其直接链接材料整理技术点和指标。",
+        "正在检索官方项目页及关联的一手资料。不会用 arXiv 单独补足官方项目证据，也不会推测缺失的发布日期、指标或机构信息。",
+        "我会把“Mentoring and Instruction Following”本身作为待判定的软件项目，重点区分其中的学习系统、训练方法与 MenteeBot 硬件产品，并核对页面是否给出可复核的演示结果。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索中，尚未形成最终判定。",
+        "待核验官方页面是否明确发布独立的软件系统。",
+        "待核验机构主体、日期与技术指标。",
+        "待检查 Real2Sim2Real、few-shot generalization 和语言指令跟随的原始描述。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在进行网页核验",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://menteebot.com/blog/mentoring-instruction-following/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验候选项目的官方证据。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在检索和核验官方材料。"
+    }
+  },
+  "act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2": {
+    "checked_at": "2026-08-08T07:21:40.945430+00:00",
+    "title": "ACT-1: A Robot Foundation Model Trained on Zero Robot Data",
+    "accepted": true,
+    "reason": "符合收录条件：ACT-1 于 2025 年 11 月 19 日由 Sunday Robotics 的官方专门技术页面发布，是用于实体家庭机器人的基础模型及数据转换、导航和操作软件系统；页面明确给出负责组织、训练方法、已实现任务和量化结果。该项目不是硬件规格或硬件产品页。官方材料未声明开放源代码，因此 open_source=false；开源不是本索引的准入条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Skill Capture Glove 采集人类活动示范，并用 Skill Transform 将手套的运动学与视觉观测转换为等效机器人训练数据",
+        "在单个端到端模型中结合基于 3D 地图的室内导航与长时程移动操作",
+        "自主完成清理餐桌、处理食物残渣、装载餐具并操作洗碗机的连续家庭任务",
+        "执行折叠袜子、配对并收纳袜子、操作消费级意式咖啡机等双手精细操作",
+        "利用 Memo 的全身运动范围、力敏感控制和多指动作处理酒杯、餐盘、餐具、把手及柔性物体"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Whole-body control"
+      ],
+      "include": true,
+      "key_points": [
+        "ACT-1 是 Sunday Robotics 面向实体家庭机器人的基础模型；官方技术文章明确将软件模型及其训练数据系统作为发布主题，而不是仅介绍 Memo 机器人硬件。",
+        "模型不使用机器人遥操作轨迹训练，而是使用与 Memo 机器人手具有相同几何结构和传感器布局的 Skill Capture Glove 采集人类活动数据，以降低人类动作向机器人动作迁移时的形态差异。",
+        "Skill Transform 对原始运动学和视觉观测进行对齐，去除人类手臂外观、身高和臂长等人类特有因素，将手套采集数据转换成外观和运动方式类似机器人实际执行的数据。",
+        "ACT-1 在同一个端到端模型中整合长时程操作和地图条件导航；训练时输入多样住宅布局的 3D 地图，使模型学习解释地图，而不是记忆特定房屋。",
+        "官方展示的 Table-to-Dishwasher 任务覆盖餐桌清理、易碎餐具抓取、食物残渣倾倒、房间级移动、洗碗机装载与操作，并在毫米级操作和米级导航之间动态生成不同粒度的动作。",
+        "精细操作演示包括单手同时拿取两个酒杯或两件餐具、将酒杯插入洗碗机支架、从杂乱袜堆中配对和卷叠袜子，以及通过双手协调完成咖啡手柄压粉、插入和高扭矩锁紧。",
+        "官方页面称其在未参与训练的新住宅中无需环境专属训练即可执行任务；模型使用给定的 3D 地图定位餐桌、洗碗机等关键位置。"
+      ],
+      "metrics": [
+        {
+          "label": "Skill Transform 转换成功率",
+          "note": "官方称将手套数据转换为等效机器人数据的成功率。",
+          "value": "90%"
+        },
+        {
+          "label": "Table-to-Dishwasher 独特灵巧交互",
+          "note": "单次自主长时程任务中涉及的不同交互类型。",
+          "value": "33 次"
+        },
+        {
+          "label": "Table-to-Dishwasher 总灵巧交互",
+          "note": "同一任务完整执行过程中的交互总数。",
+          "value": "68 次"
+        },
+        {
+          "label": "任务涉及物体数量",
+          "note": "Table-to-Dishwasher 演示中处理的不同物体数量。",
+          "value": "21 个"
+        },
+        {
+          "label": "自主导航距离",
+          "note": "Table-to-Dishwasher 任务中的累计导航距离，官方以英尺报告。",
+          "value": "超过 130 英尺"
+        }
+      ],
+      "official_organization_url": "https://www.sunday.ai/",
+      "official_project_url": "https://www.sunday.ai/blog/no-robot-data",
+      "open_source": false,
+      "organization_en": "Sunday Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：ACT-1 于 2025 年 11 月 19 日由 Sunday Robotics 的官方专门技术页面发布，是用于实体家庭机器人的基础模型及数据转换、导航和操作软件系统；页面明确给出负责组织、训练方法、已实现任务和量化结果。该项目不是硬件规格或硬件产品页。官方材料未声明开放源代码，因此 open_source=false；开源不是本索引的准入条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "ACT-1 是 Sunday Robotics 为其家庭机器人 Memo 开发的机器人基础模型，核心主张是在不采集机器人遥操作训练轨迹的情况下，从人类活动示范中训练可部署的实体机器人策略。其数据链路由 Skill Capture Glove 和 Skill Transform 构成：手套与机器人手共享几何结构及传感器布局，随后通过运动学和视觉转换消除人类与机器人之间的形态及外观差异。ACT-1 面向房间尺度的移动操作，在单个端到端模型中结合 3D 地图条件导航、全身运动、力敏感抓取和多指灵巧操作。官方展示覆盖长时程餐桌至洗碗机任务、未见住宅中的零环境专属训练部署、袜子折叠以及意式咖啡机操作。其技术影响点主要在于以可分布式采集的人类活动数据替代昂贵的机器人遥操作数据，并将这种数据路线落实到长时程、跨房间且包含易碎物体和柔性物体的真实家庭操作中。"
+    }
+  },
+  "xpeng-vlt-large-model-94cea0a": {
+    "checked_at": "2026-08-08T07:21:40.950729+00:00",
+    "title": "XPENG VLT Large Model",
+    "accepted": true,
+    "reason": "收录。小鹏汽车于2025年11月5日通过官方组织公告发布VLT，并明确说明它是专门为机器人研发、用于自主行动、深度思考和自主决策的软件大模型；因此候选对象不是硬件产品。公告同时明确了责任组织、发布日期、IRON部署载体以及VLT与VLA、VLM的系统关系，满足官方证据要求。公开材料的技术披露较少，尚未发现模型权重、代码、参数规模或独立评测结果，故不将其标记为开源，也不补造未披露指标。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "为人形机器人自主行动提供核心模型能力",
+        "对物理环境与任务进行深度思考",
+        "根据当前情境进行自主决策",
+        "作为组合模型的一部分支持机器人对话、行走与交互"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Humanoid intelligence",
+        "LLM",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "VLT是小鹏汽车专门面向机器人研发的大模型，而非机器人本体、传感器或其他硬件产品。",
+        "小鹏将VLT定位为机器人自主行动的核心引擎，主要承担深度思考和自主决策。",
+        "VLT被部署于新一代IRON人形机器人，是小鹏第一代物理世界大模型体系的组成部分。",
+        "在IRON的软件架构中，VLT与VLA、VLM共同构成“VLT + VLA + VLM”的高阶大小脑能力组合。",
+        "官方将该组合对应到对话、行走和交互三类高阶智能，但没有分别披露VLT、VLA与VLM对各项能力的独立贡献。",
+        "VLT属于小鹏覆盖芯片、操作系统/大模型和智能硬件的全栈自研物理AI体系；机器人软件与小鹏AI汽车技术同源。",
+        "官方公告没有公开VLT的参数规模、训练数据、模型架构、基准测试、推理速度、接口或权重，因此目前只能确认其产品定位和系统级功能。"
+      ],
+      "metrics": [
+        {
+          "label": "系统级高阶智能",
+          "note": "该结果由VLT、VLA和VLM组合实现，官方未提供VLT单模型消融结果。",
+          "value": "支持对话、行走、交互三类高阶智能"
+        },
+        {
+          "label": "自主认知能力",
+          "note": "官方对VLT能力的定性描述，未公布数值基准。",
+          "value": "实现深度思考与自主决策"
+        },
+        {
+          "label": "部署载体",
+          "note": "官方确认VLT随第一代物理世界大模型体系首发搭载于新一代IRON。",
+          "value": "新一代IRON人形机器人"
+        },
+        {
+          "label": "部署计算平台",
+          "note": "这是承载整体机器人智能系统的硬件算力，不是VLT自身的性能指标。",
+          "value": "3颗图灵AI芯片，有效算力2250 TOPS"
+        }
+      ],
+      "official_organization_url": "https://www.xpeng.com/",
+      "official_project_url": "https://www.xpeng.com/pressroom/news/019a56f54fe99a2a0a8d8a0282e402b7",
+      "open_source": false,
+      "organization_en": "XPENG",
+      "organization_kind": "Company",
+      "organization_zh": "小鹏汽车",
+      "reason": "收录。小鹏汽车于2025年11月5日通过官方组织公告发布VLT，并明确说明它是专门为机器人研发、用于自主行动、深度思考和自主决策的软件大模型；因此候选对象不是硬件产品。公告同时明确了责任组织、发布日期、IRON部署载体以及VLT与VLA、VLM的系统关系，满足官方证据要求。公开材料的技术披露较少，尚未发现模型权重、代码、参数规模或独立评测结果，故不将其标记为开源，也不补造未披露指标。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "XPENG VLT Large Model是小鹏汽车在2025年小鹏科技日公布的机器人专用大模型，被定位为机器人自主行动的核心引擎，负责支持深度思考和自主决策。它首发部署在新一代IRON人形机器人中，并与负责动作和交互相关能力的VLA、VLM共同组成“VLT + VLA + VLM”高阶大小脑体系，使整机具备对话、行走和交互能力。该项目属于小鹏全栈自研物理AI体系的软件层，具有明确的具身智能用途和官方发布证据，因此符合索引的软件项目标准。不过，官方尚未披露VLT的具体网络架构、参数量、训练语料、任务接口、独立基准或消融实验，也没有宣布开放代码或模型权重；现阶段其影响主要体现为小鹏人形机器人技术栈中的高层推理与决策模块，而非一个可供外部复现的研究模型。"
+    }
+  },
+  "menteebot-ai-approach-d54bfcc": {
+    "checked_at": "2026-08-08T07:21:40.956060+00:00",
+    "title": "MenteeBot AI Approach",
+    "accepted": true,
+    "reason": "收录。该候选发布于 2025 年 9 月，存在由 Mentee Robotics 署名的官方专题页，并由 Head of AI、CTO 和 CEO 共同署名。专题及配套官方页面的核心对象是用于实体 MenteeBot 人形机器人的感知、仿真学习、世界建模、任务执行和控制软件架构，满足具身机器人软件项目条件，而不是硬件规格或产品销售页面。未发现官方公开源代码，因此 open_source=false，但开源并非收录前提。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于 Sim2Real 学习生成并迁移拟人步态与手部运动策略",
+        "利用 NeRF 构建实时三维环境地图并完成机器人定位",
+        "在复杂动态环境中自主导航、避障，并与抓取和放置动作衔接",
+        "通过大语言模型理解自然语言指令、构建世界认知地图并规划多阶段任务",
+        "观察人类示范后学习新技能，并在无持续遥操作的情况下自主执行"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Humanoid intelligence",
+        "Whole-body control",
+        "World models"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Mentee Robotics 于 2025 年 9 月发布的官方技术专题，主题明确是 MenteeBot 的 AI-first 软件架构，而非单纯介绍人形机器人硬件；官方将其概括为感知、学习与控制系统的组合。",
+        "软件栈把 AI 覆盖到机器人运行的多个层级：高层使用大语言模型理解指令、形成世界认知地图并组织任务执行，底层则通过学习式控制实现步态和手部运动。",
+        "感知与空间表示采用基于 NeRF 的实时三维映射和定位，使机器人能够建立环境模型，为目标搜索、导航和任务规划提供空间基础。",
+        "运动能力采用 Sim2Real 路线：先在仿真环境中学习步态和手部动作，再将策略迁移至实体机器人，以降低现实机器人训练和数据采集成本。",
+        "系统强调端到端自主任务组合，将环境感知、动态导航、抓取和放置串联为完整工作流；官方明确把相关演示标注为非遥操作。",
+        "其 human mentoring 机制允许机器人观察人的任务示范并学习新技能；公司进一步将整体方法描述为 human-to-robot mentoring、few-shot learning 与 simulation-first training 的结合。",
+        "后续官方仓储演示验证了该软件架构在实体 V3 人形机器人上的多机器人执行能力：两台机器人自主搬运箱体，在同一工作区完成导航、操作和协调。"
+      ],
+      "metrics": [
+        {
+          "label": "自主仓储搬运量",
+          "note": "官方 2025 年 11 月后续演示中，两台 V3 MenteeBot 自主完成的箱体搬运总量。",
+          "value": "32 个箱子"
+        },
+        {
+          "label": "取料起始位置",
+          "note": "箱子分布于不同高度的多个堆叠位置。",
+          "value": "8 堆"
+        },
+        {
+          "label": "连续演示时长",
+          "note": "官方称仓储任务以未经剪辑的连续视频展示。",
+          "value": "18 分钟"
+        },
+        {
+          "label": "端到端自主性",
+          "note": "官方 AI First 页面将导航、抓取和放置组合演示明确标记为非遥操作。",
+          "value": "Not Teleoperated"
+        },
+        {
+          "label": "技能获取方式",
+          "note": "官方报告机器人可通过观察人类示范学习新技能，随后自主执行。",
+          "value": "Human mentoring with few-shot, simulation-first learning"
+        }
+      ],
+      "official_organization_url": "https://www.menteebot.com/company/",
+      "official_project_url": "https://menteebot.com/blog/menteebot-ai-approach/",
+      "open_source": false,
+      "organization_en": "Mentee Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该候选发布于 2025 年 9 月，存在由 Mentee Robotics 署名的官方专题页，并由 Head of AI、CTO 和 CEO 共同署名。专题及配套官方页面的核心对象是用于实体 MenteeBot 人形机器人的感知、仿真学习、世界建模、任务执行和控制软件架构，满足具身机器人软件项目条件，而不是硬件规格或产品销售页面。未发现官方公开源代码，因此 open_source=false，但开源并非收录前提。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "MenteeBot AI Approach 是 Mentee Robotics 在 2025 年 9 月公开的 AI-first 人形机器人软件架构。其核心不是单一模型，而是覆盖感知、空间建模、学习、任务规划与运动控制的实体机器人全栈：系统利用 NeRF 进行实时三维映射和定位，以大语言模型理解自然语言、建立世界认知地图并组织任务，同时通过 Sim2Real 方法训练拟人步态和手部运动。该架构将导航、抓取和放置组成无需持续遥操作的端到端任务，并引入 human-to-robot mentoring，使机器人能够观察少量人类示范后学习和自主执行新技能。后续官方仓储演示中，两台 V3 MenteeBot 在一段未经剪辑的 18 分钟运行里，从 8 堆物料中自主搬运 32 个箱子，提供了该软件栈在真实人形机器人上的系统级验证。"
+    }
+  },
+  "k-sim-0-2-10-b69d5fd": {
+    "checked_at": "2026-08-08T07:21:40.961416+00:00",
+    "title": "K-Sim 0.2.10",
+    "accepted": true,
+    "reason": "符合收录条件：K-Sim 0.2.10 于 2025 年 8 月 18 日由 K-Scale Labs 的官方 GitHub 仓库发布；它是面向物理人形机器人运动与操作策略的 MuJoCo/MJX、JAX 强化学习训练框架，属于具备独立官方项目页的软件项目，而非机器人硬件或产品规格公告。仓库公开源码并采用 MIT License。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于 MuJoCo/MJX 与 JAX，在 CPU 或 GPU 环境中训练机器人强化学习策略",
+        "面向人形机器人的行走、平衡和全身运动控制策略训练",
+        "支持机器人操作策略训练，并以模块化框架组织任务、奖励、终止条件和随机化组件",
+        "支持 IMU 等观测随机化及仿真到现实迁移所需的域随机化",
+        "支持策略导出、sim-to-sim 评估以及后续真机部署工作流"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "K-Sim 是 K-Scale Labs 官方维护的机器人强化学习软件，而非 K-Bot 等机器人本体的产品页面；官方仓库明确将其定位为人形机器人运动与操作策略训练库。",
+        "框架建立在 MuJoCo 的 MJX 仿真器和 JAX 计算栈之上，可利用 JAX 的即时编译与硬件加速执行并行机器人仿真和策略训练。",
+        "项目采用模块化训练结构，官方将其描述为易于使用的仿真策略训练框架；代码库包含核心 ksim 软件包、示例和测试，并可通过 PyPI 安装。",
+        "0.2.10 版本加入静止指令下保持不动的处理、非目标轴运动惩罚和控制死区，针对人形机器人速度指令跟踪与站立稳定性调整训练行为。",
+        "该版本改进 IMU 随机化，并更新机器人高度异常时的终止逻辑，用于提高训练扰动覆盖和失败状态处理的可靠性。",
+        "0.2.10 将相关奖励计算改为指数核；这些改动集中于运动控制策略的奖励塑形、观测随机化和训练终止条件，而不是硬件规格。",
+        "K-Scale 的官方基准工作流将 K-Sim 用于 GPU 加速机器人学习和零样本 sim-to-real，覆盖全向行走、不平地形、推搡恢复及人体动作模仿。"
+      ],
+      "metrics": [
+        {
+          "label": "基础行走基准目标",
+          "note": "K-Scale 官方挑战页面规定的评估目标，不是 0.2.10 已宣称达到的测试结果。",
+          "value": "全向行走速度 > 1 m/s"
+        },
+        {
+          "label": "不平地形基准目标",
+          "note": "官方挑战要求策略在 Perlin 起伏地形和楼梯上持续行走；页面未给出 0.2.10 的完成率。",
+          "value": "通过 100 m Perlin hills and stairs"
+        },
+        {
+          "label": "推搡恢复基准目标",
+          "note": "官方挑战规定的外力扰动门槛，不应解释为该版本已经验证的最高抗冲击能力。",
+          "value": "承受至少 50 N 随机推力并保持躯干直立"
+        },
+        {
+          "label": "人体动作模仿基准目标",
+          "note": "官方挑战规定的动作跟踪时长；未报告 0.2.10 的数值跟踪误差。",
+          "value": "跟踪 30 秒人体舞蹈与行走动捕片段"
+        },
+        {
+          "label": "0.2.10 发布内容",
+          "note": "官方 GitHub release 列出的变更项数量，包括静止处理、非目标轴惩罚、死区、IMU 随机化、异常高度终止和指数核。",
+          "value": "6 项列明变更"
+        }
+      ],
+      "official_organization_url": "https://www.kscale.dev/",
+      "official_project_url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.10",
+      "open_source": true,
+      "organization_en": "K-Scale Labs",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：K-Sim 0.2.10 于 2025 年 8 月 18 日由 K-Scale Labs 的官方 GitHub 仓库发布；它是面向物理人形机器人运动与操作策略的 MuJoCo/MJX、JAX 强化学习训练框架，属于具备独立官方项目页的软件项目，而非机器人硬件或产品规格公告。仓库公开源码并采用 MIT License。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "K-Sim 0.2.10 是 K-Scale Labs 发布的人形机器人强化学习训练框架版本，核心用途是在 MuJoCo/MJX 仿真中借助 JAX 训练运动控制与操作策略，并衔接 sim-to-sim 和 sim-to-real 部署流程。该版本主要改进运动策略的奖励塑形和鲁棒性训练：增加静止状态约束、非目标轴惩罚与控制死区，增强 IMU 随机化，修订异常高度终止条件，并采用指数核计算相关奖励。K-Scale 的配套官方基准覆盖全向行走、不平地形、推搡恢复和人体动作模仿，说明该框架直接服务于真实人形机器人的全身控制训练。官方没有为 0.2.10 单独公布成功率、训练速度或真机性能对比，因此列出的数值均标注为官方基准目标，而非版本实测成绩。"
+    }
+  },
+  "stretch-mujoco-v0-5-ded15fc": {
+    "checked_at": "2026-08-08T07:21:40.966824+00:00",
+    "title": "Stretch MuJoCo v0.5",
+    "accepted": true,
+    "reason": "符合收录条件：这是 Hello Robot 于 2025 年 6 月 10 日正式发布的实体机器人仿真与控制软件版本，官方发布页、专门文档和公开代码仓库均可访问；其主体是面向 Stretch 3 的 MuJoCo 模拟器、Python/ROS 2 控制接口、传感器与环境生成系统，而不是硬件产品公告。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "面向 Stretch 3 移动操作机器人的实时高保真物理仿真",
+        "通过 Python 与 ROS 2 接口控制机械臂、头部、夹爪及移动底盘",
+        "模拟带标定内参的 RGB、深度相机和二维旋转激光雷达，并生成点云",
+        "在程序化 RoboCasa 厨房及自定义环境中测试导航、感知与操作软件",
+        "支持无界面运行，以及布料、可变形物体、SDF 碰撞和程序化模型生成"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Stretch MuJoCo v0.5 是 Hello Robot 为实体移动操作机器人 Stretch 3 开发的 MuJoCo 仿真软件栈，而非机器人硬件或产品规格页面；官方发布公告和文档均明确以模拟器及其软件接口为主体。",
+        "该版本以缩小仿真机器人与真实 Stretch 之间的行为差异为重点，对相机内参、深度范围、激光扫描顺序和运动质量等特性进行了表征与匹配，以帮助仿真中开发的软件迁移到实体机器人。",
+        "控制层同时提供 Python 与 ROS 2 接口，支持机械臂、头部和夹爪关节的位置控制、移动底盘的速度控制，以及关节状态和传感器数据读取。",
+        "传感器仿真包括具有标定内参和硬件渲染支持的彩色、深度相机，以及二维旋转激光雷达；ROS 2 集成还可生成点云，并用于 Lidar-SLAM 和 Nav2 导航流程。",
+        "环境系统可生成数百种 RoboCasa 厨房风格环境组合，也允许加载用户创建的自定义环境；模型生成接口可按任务、布局和风格构建厨房场景。",
+        "模拟器既提供可交互可视化模式，也提供效率更高的无界面模式，可在本地或 Google Colab 的 T4 GPU及纯 CPU 实例中运行。",
+        "高级接口开放底层 MuJoCo 模型与数据，并支持可变形物体、布料模拟、程序化模型生成和 SDF 碰撞等功能；官方还报告其已与 Stretch Web Teleop 进行兼容性测试。"
+      ],
+      "metrics": [
+        {
+          "label": "仿真速度",
+          "note": "官方发布说明称 Stretch 3 可在该模拟器中实时运行。",
+          "value": "实时"
+        },
+        {
+          "label": "程序化环境规模",
+          "note": "可生成由 RoboCasa 提供的厨房风格环境组合。",
+          "value": "数百种组合（100s of permutations）"
+        },
+        {
+          "label": "平台支持",
+          "note": "v0.5 官方列出的桌面操作系统。",
+          "value": "Ubuntu、macOS、Windows"
+        },
+        {
+          "label": "激光雷达模型",
+          "note": "模拟旋转式平面激光扫描，并支持 ROS 2 导航和 SLAM 工作流。",
+          "value": "二维旋转激光雷达"
+        },
+        {
+          "label": "实体软件兼容性验证",
+          "note": "官方称该版本已对照预期行为测试现有 Stretch 应用。",
+          "value": "已使用 Stretch Web Teleop 测试"
+        }
+      ],
+      "official_organization_url": "https://hello-robot.com/",
+      "official_project_url": "https://docs.hello-robot.com/0.3/stretch-mujoco/",
+      "open_source": true,
+      "organization_en": "Hello Robot",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是 Hello Robot 于 2025 年 6 月 10 日正式发布的实体机器人仿真与控制软件版本，官方发布页、专门文档和公开代码仓库均可访问；其主体是面向 Stretch 3 的 MuJoCo 模拟器、Python/ROS 2 控制接口、传感器与环境生成系统，而不是硬件产品公告。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Stretch MuJoCo v0.5 是 Hello Robot 面向 Stretch 3 移动操作机器人的开源 MuJoCo 仿真软件栈。该版本的核心目标是提升仿真与实体机器人之间的一致性：团队对相机内参与深度范围、激光扫描顺序和机器人运动质量进行了匹配，并通过 Stretch Web Teleop 等现有应用检查预期行为。系统可实时模拟机器人本体、RGB-D 相机和二维激光雷达，通过 Python 或 ROS 2 执行位置与速度控制，并接入 Lidar-SLAM、Nav2、点云和远程操作工作流。它还提供数百种 RoboCasa 厨房环境组合、自定义场景加载、交互式和无界面运行模式，以及可变形物体、布料和 SDF 碰撞等高级 MuJoCo 功能，适合作为 Stretch 感知、导航、操作和仿真到实体部署的软件开发平台。"
+    }
+  },
+  "rerun-0-23-4753a42": {
+    "checked_at": "2026-08-08T07:21:40.972269+00:00",
+    "title": "Rerun 0.23",
+    "accepted": true,
+    "reason": "纳入。候选项是由 Rerun 公司负责并于 2025 年 4 月 24 日发布的软件版本，具有独立的官方迁移/发布页面。Rerun SDK、RRD 数据层和 Viewer 用于记录、存储、传输和可视化多速率、多模态机器人及 Physical AI 数据，属于面向具身系统的软件数据引擎，而非机器人硬件或硬件产品页。官方文档还明确说明 SDK 与 Viewer 开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Python、C++ 和 Rust SDK 记录并流式传输多模态、时序与空间数据",
+        "在 Viewer 中同步检查图像、三维几何、时间序列和机器人运行日志",
+        "使用显式序列、持续时间或绝对时间戳组织异步传感器数据",
+        "通过 gRPC 将 RecordingStream 连接到远程 Viewer 或数据服务",
+        "保存可由后续 Rerun 版本前向迁移的 RRD 记录"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Rerun 0.23 是面向多模态时序与空间数据的 SDK、数据格式和 Viewer 软件版本；官方资料将 Rerun 用于机器人、无人机、自动驾驶及其他 Physical AI 系统的数据记录、流式传输、查询和可视化，因此符合具身机器人数据引擎类别。",
+        "0.23 引入显式时间 API，要求调用方区分序列编号、相对持续时间和 Unix Epoch 绝对时间戳，取代此前根据数值大小推测时间语义的行为。Python 统一使用 `rr.set_time`，并支持数值、`datetime` 和 NumPy 时间类型。",
+        "时间线在该版本中改为仅由名称唯一标识；同名时间线若使用不同类型，SDK 会记录警告，并以最新类型解释整组时间数据。时间单位命名也统一为 `secs`、`millis` 和 `nanos`。",
+        "SDK 开始使用以双下划线开头的保留实体路径命名空间，包括记录 SDK 异常的 `__warnings/` 和保存 recording 级属性的 `__properties/`；Viewer 会对这些保留命名空间作专门标识。",
+        "网络接口统一迁移到 gRPC：Python、C++ 和 Rust 中原有的 `connect`/`connect_tcp` 接口被移除或替代为 `connect_grpc`，并使用 `rerun+http://`、`rerun+https://` 或 `rerun://` URL。",
+        "0.23 建立 RRD 文件的前向迁移基线。官方格式文档承诺，由 Rerun SDK 0.23 及以后版本生成的 RRD 文件可迁移并由更新版本打开。",
+        "该版本还调整了 Viewer blueprint、可见性与交互递归覆盖、时间序列 archetype、Asset3D 构造函数和 Jupyter Viewer 导入方式，属于一次涉及数据模型、兼容性和多语言 SDK 接口的基础版本升级。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "PyPI 的 `rerun-sdk` 0.23.0 发布记录。",
+          "value": "2025-04-24"
+        },
+        {
+          "label": "RRD 前向兼容基线",
+          "note": "官方文档保证 0.23 及以后版本生成的 RRD 可由后续版本迁移；例如 0.24 可打开 0.23 RRD。",
+          "value": "0.23+"
+        },
+        {
+          "label": "持续时间浮点转换精度",
+          "note": "将纳秒持续时间转换为双精度秒值时，官方说明持续时间小于 100 天仍保持纳秒精度。",
+          "value": "<100 天时为纳秒精度"
+        },
+        {
+          "label": "绝对时间浮点转换精度",
+          "note": "将 Unix Epoch 纳秒值转换为双精度秒值时，官方说明在未来一个世纪仍保持微秒精度。",
+          "value": "未来约一个世纪为微秒精度"
+        },
+        {
+          "label": "官方 SDK 语言",
+          "note": "0.23 迁移文档分别提供 Python、C++ 和 Rust API 迁移说明。",
+          "value": "3 种：Python、C++、Rust"
+        }
+      ],
+      "official_organization_url": "https://rerun.io/",
+      "official_project_url": "https://rerun.io/docs/reference/migration/migration-0-23",
+      "open_source": true,
+      "organization_en": "Rerun",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。候选项是由 Rerun 公司负责并于 2025 年 4 月 24 日发布的软件版本，具有独立的官方迁移/发布页面。Rerun SDK、RRD 数据层和 Viewer 用于记录、存储、传输和可视化多速率、多模态机器人及 Physical AI 数据，属于面向具身系统的软件数据引擎，而非机器人硬件或硬件产品页。官方文档还明确说明 SDK 与 Viewer 开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Rerun 0.23 是 Rerun 多模态时序数据 SDK、RRD 记录格式与可视化 Viewer 的基础设施版本，面向机器人和其他 Physical AI 开发中的传感器日志、空间数据及模型输出。其主要变化不是新的机器人策略模型，而是强化具身数据管线的时间语义、网络接口和长期记录兼容性：API 明确区分序列、持续时间和绝对时间戳，连接接口统一到 gRPC，并从该版本起对 RRD 文件提供前向迁移保证。作为可嵌入 Python、C++ 和 Rust 机器人软件栈的数据记录与调试工具，它符合机器人数据引擎和系统基础设施项目的收录条件。"
+    }
+  },
+  "stretch-software-drop-april-18-2025-0770a27": {
+    "checked_at": "2026-08-08T07:21:40.977784+00:00",
+    "title": "Stretch Software Drop - April 18, 2025",
+    "accepted": true,
+    "reason": "收录。2025 年 4 月 18 日的 Stretch Forum 公告是 Hello Robot 发布的专门官方软件页面，明确汇总已发布的 Stretch 实体机器人软件，包括远程 Web 操作、SDK、ROS 2 控制驱动、轨迹执行、action server 和部署工具；页面还链接到 Hello Robot 名下的公开源代码与合并记录。因此满足软件对象、实体机器人用途、官方专页、明确责任组织和 2025 年后发布等条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 WebRTC 传输 Stretch 的摄像头、麦克风数据，并将浏览器端运动指令发送回实体机器人。",
+        "使用 Firebase Realtime Database 完成机器人与远程操作端之间的 WebRTC 信令交换，同时保留本地信令模式。",
+        "通过 Firebase Authentication 和受邀用户数据库控制远程操作权限，并展示机器人的在线、可用或占用状态。",
+        "通过 ROS 2 轨迹模式跟踪路点轨迹样条，并由 action server 发起和监控机器人关节运动。",
+        "维护 Stretch 的操作系统升级、Python SDK、ROS 2 驱动和操作规划软件，包括校准参数迁移与夹爪链路映射。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Whole-body control",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Hello Robot 面向实体 Stretch 移动操作机器人的官方软件发布汇总，涉及 Web 远程操作、底层 Python 库、ROS 2 驱动、操作规划和系统部署，不是硬件产品页。",
+        "Web 远程操作继续使用 WebRTC 承载摄像头、麦克风和运动控制数据，但新增基于 Firebase Realtime Database 的信令实现；其目标是改善互联网连接和错误处理，并使长期部署不再需要专用信令服务器。",
+        "信令代码引入 BaseSignaling 接口，并实现 LocalSignaling 与 FirebaseSignaling 两种后端，为后续接入其他信令服务器预留统一扩展点；官方公告同时说明默认配置仍为本地信令。",
+        "Web 界面新增登录页和机器人主页：登录页通过 Firebase Auth 对受邀用户进行认证，主页允许用户呼叫机器人，并在机器人被其他操作者使用时显示 occupied 状态；官方将这部分明确标为 alpha 代码。",
+        "Stretch Install 修复了操作系统升级中的 UNIX 文件权限和参数迁移边界问题，尤其处理从 USB 复制的校准数据缺少读取权限、进而导致复制和后续升级失败的情况。",
+        "ROS 2 驱动修复轨迹模式在开始跟踪路点样条后第一秒内失败的问题；另一个 action server 修复调整了腕部俯仰关节的完成判定，避免实际运动完成后仍被错误报告为目标失败。",
+        "配套更新还覆盖 Python SDK 的底盘 effort 状态、轨迹停止与重新执行、空值检查，以及 ROS 2 操作规划中的夹爪链路映射、启动参数和 mapping launch 配置。"
+      ],
+      "metrics": [
+        {
+          "label": "WebRTC 信令实现",
+          "note": "官方合并记录报告统一 BaseSignaling 接口下的具体实现。",
+          "value": "2 种：LocalSignaling、FirebaseSignaling"
+        },
+        {
+          "label": "Web 界面新增页面",
+          "note": "发布公告列出的面向互联网部署的新界面。",
+          "value": "2 个：Login、Homepage"
+        },
+        {
+          "label": "信令变更规模",
+          "note": "Hello Robot 的 stretch_web_teleop PR #103 合并记录。",
+          "value": "64 commits"
+        },
+        {
+          "label": "轨迹模式故障结果",
+          "note": "修复前硬件会开始跟踪轨迹，但在开始后的第一秒内失败；该发布宣布此问题已修复。",
+          "value": "修复首秒内轨迹跟踪失败"
+        },
+        {
+          "label": "库与 ROS 2 小型修复",
+          "note": "公告逐项列出 5 个 Python 库修复和 5 个 ROS 2 package 修复。",
+          "value": "10 项"
+        }
+      ],
+      "official_organization_url": "https://hello-robot.com/",
+      "official_project_url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332",
+      "open_source": true,
+      "organization_en": "Hello Robot",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。2025 年 4 月 18 日的 Stretch Forum 公告是 Hello Robot 发布的专门官方软件页面，明确汇总已发布的 Stretch 实体机器人软件，包括远程 Web 操作、SDK、ROS 2 控制驱动、轨迹执行、action server 和部署工具；页面还链接到 Hello Robot 名下的公开源代码与合并记录。因此满足软件对象、实体机器人用途、官方专页、明确责任组织和 2025 年后发布等条件。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "Stretch Forum",
+          "url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332"
+        },
+        {
+          "independent": false,
+          "platform": "GitHub",
+          "url": "https://github.com/hello-robot/stretch_web_teleop/pull/103"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "Hello Robot 的 2025 年 4 月 Stretch 软件发布以远程操作基础设施和 ROS 2 运动可靠性为核心。最主要的新功能是在 Stretch Web Teleop 中加入基于 Firebase Realtime Database 的 WebRTC 信令，并配套 Firebase 身份认证、机器人选择主页和占用状态管理，使实体 Stretch 机器人能够通过互联网接受浏览器端音视频与运动控制连接。发布还修复了 ROS 2 路点样条轨迹在启动后迅速失败、腕部俯仰 action server 错判超时、操作系统升级时校准文件权限与参数迁移失败等问题，并更新多个 Python SDK 和 ROS 2 操作规划组件。该页面属于软件发布公告，而非 Stretch 硬件或产品规格介绍。"
+    }
+  },
+  "stretch-software-drop-february-28-2025-f954b49": {
+    "checked_at": "2026-08-08T07:21:40.983474+00:00",
+    "title": "Stretch Software Drop - February 28, 2025",
+    "accepted": true,
+    "reason": "符合收录条件：该候选是 Hello Robot 于 2025 年 2 月 28 日在官方 Stretch Forum 发布的专门软件更新，明确覆盖用于实体 Stretch 机器人的 Web 遥操作、示范数据采集、Stretch AI/DynaMem、Nav2 建图、Python SDK 和 ROS 2 驱动栈。官方公告明确链接公开代码库、Pull Request 和技术文档；责任组织 Hello Robot 也可由其官方网站确认。该页面的主题是可运行的软件发布，不是硬件产品公告。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "支持通过浏览器经互联网连接并遥操作 Stretch，前端 React 组件可调用 ROS 2 API。",
+        "通过 Dex Teleop 跟踪操作者示范并采集机器人演示数据，fast mode 修复后可使用更高运动速度。",
+        "安装并运行 Stretch AI 及其 DynaMem 模块，用于 Stretch 上的具身智能开发。",
+        "使用游戏手柄控制 Stretch，并结合 Nav2 创建环境地图。",
+        "通过 Python SDK、Stretch Body 和 ROS 2 软件包开发、校准、驱动及启动机器人应用。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Hello Robot 在官方 Stretch Forum 发布的专门软件更新公告，发布日期为 2025 年 2 月 28 日；更新对象是实体移动操作机器人 Stretch 的软件栈，而非机器人硬件或产品规格。",
+        "Stretch Web Interface 是可通过互联网访问机器人的 Web 应用；新增教程说明如何编写能够调用 ROS 2 API 的 React 前端组件，并支持扩展或派生 Stretch Web Teleop 代码库。",
+        "Dex Teleop 的 fast mode 原先因升降关节电流限制参数不当而出现卡顿和运动不连贯，影响示范采集；该参数修复已合入主分支。",
+        "Stretch AI 与 DynaMem 模块的安装流程得到简化，相关修复已合入 Stretch AI 主线，并提供了对应安装说明。",
+        "Nav2 建图流程从 teleop_twist 控制节点切换到 Stretch ROS 2 新增的 gamepad 模式，使其采用与 stretch_gamepad_teleop.py 相同的游戏手柄交互方式。",
+        "Web Teleop 的 launch_interface.sh 与 stop_interface.sh 脚本得到改进，并补充了调试日志采集与故障排查说明。",
+        "本次发布还包括 Stretch Body Python 库的校准目录检查、轨迹关节不匹配处理，以及 Stretch ROS 2 中默认未校准 URDF/参数、独立运行 stretch_driver 等维护更新。"
+      ],
+      "metrics": [
+        {
+          "label": "Stretch Body 修复数量",
+          "note": "官方公告逐项列出了两个已合入的 Stretch Body Pull Request。",
+          "value": "2 项"
+        },
+        {
+          "label": "Stretch ROS 2 修复数量",
+          "note": "官方公告的 ROS 2 部分明确列出四个 Pull Request。",
+          "value": "4 项"
+        },
+        {
+          "label": "Dex Teleop fast mode",
+          "note": "升降关节电流限制修复已合入主分支；公告报告其目标是消除示范跟踪时的卡顿和不连贯运动。",
+          "value": "主线已修复"
+        },
+        {
+          "label": "Nav2 建图控制方式",
+          "note": "建图启动配置改用 Stretch ROS 2 的 gamepad 模式，取代此前的 teleop_twist 节点控制体验。",
+          "value": "已切换至 gamepad 模式"
+        },
+        {
+          "label": "Stretch AI 安装",
+          "note": "Stretch AI 及 DynaMem 的安装简化补丁已经合入主线，并可按更新后的安装说明部署。",
+          "value": "主线已合入"
+        }
+      ],
+      "official_organization_url": "https://hello-robot.com/",
+      "official_project_url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248",
+      "open_source": true,
+      "organization_en": "Hello Robot",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：该候选是 Hello Robot 于 2025 年 2 月 28 日在官方 Stretch Forum 发布的专门软件更新，明确覆盖用于实体 Stretch 机器人的 Web 遥操作、示范数据采集、Stretch AI/DynaMem、Nav2 建图、Python SDK 和 ROS 2 驱动栈。官方公告明确链接公开代码库、Pull Request 和技术文档；责任组织 Hello Robot 也可由其官方网站确认。该页面的主题是可运行的软件发布，不是硬件产品公告。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "Stretch Forum",
+          "url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "Stretch Software Drop（2025-02-28）是 Hello Robot 面向实体移动操作机器人 Stretch 发布的一组软件栈更新。它不是单一基础模型或研究基准，而是覆盖机器人开发、遥操作、示范采集、具身 AI 安装、导航建图和底层驱动的工程版本汇总。发布新增了 Web Interface 开发教程，使开发者能够用 React 组件调用 ROS 2 API；修复 Dex Teleop fast mode 的升降关节电流限制问题，以改善高速示范跟踪与数据采集；简化 Stretch AI 和 DynaMem 的安装；将 Nav2 建图切换到与 Stretch 标准游戏手柄遥操作一致的 gamepad 模式；并更新 Web Teleop 启停及调试流程。此外，版本还合入两个 Stretch Body Python 修复和四个 Stretch ROS 2 修复，包括校准目录检查、轨迹关节一致性处理、未校准 URDF 默认配置及 stretch_driver 独立启动支持。其影响主要体现在降低 Stretch 实机具身智能实验的部署与维护成本，并改善遥操作数据采集和导航开发流程。"
+    }
+  },
+  "stretch-software-drop-january-31-2025-d741333": {
+    "checked_at": "2026-08-08T07:21:40.989354+00:00",
+    "title": "Stretch Software Drop - January 31, 2025",
+    "accepted": false,
+    "reason": "这是检索过程更新，不是最终判定。This is an interim search update, not the final eligibility decision.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方发布页、软件范围、组织归属与可精确引用的更新结果。重点是确认它是否属于面向实体机器人的独立软件发布，而非 Stretch 硬件产品公告。Status update only.",
+        "随后会仅依据官方页面及其链接材料填写技术要点、能力和指标；无法支持的字段会留空或明确判为不收录。Status update only.",
+        "I’m verifying the official release page, software scope, organizational ownership, and any exact reported results. The key eligibility question is whether this is a dedicated physical-robot software release rather than a Stretch hardware announcement."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。Interim status only.",
+        "下一步核对 Hello Robot 官方论坛帖及其链接的 GitHub/文档材料。Interim status only.",
+        "Search in progress; next I’m checking the Hello Robot forum post and its linked GitHub/documentation materials.",
+        "No verdict yet; this is a progress update."
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验，非最终结论。Interim status only.",
+          "value": "核验中 / Verifying"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "这是检索过程更新，不是最终判定。This is an interim search update, not the final eligibility decision.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在使用官方来源核验候选项目；本条仅为进度说明，最终结构化结论将在检索完成后给出。Interim status only."
+    }
+  },
+  "rerun-0-22-064d654": {
+    "checked_at": "2026-08-08T07:21:40.994970+00:00",
+    "title": "Rerun 0.22",
+    "accepted": false,
+    "reason": "正在核验官方来源，尚未作出最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核对 Rerun 0.22 的官方迁移文档、发布说明和组织信息，重点判断该版本是否是面向实体机器人/具身智能的专门软件项目，而非通用可视化 SDK。然后只采用可访问来源中明确支持的日期、功能与指标。若软件适用范围不满足严格条件，我仍会给出有证据的技术摘要并明确排除原因。",
+        "我会核对 Rerun 0.22 的官方迁移文档、发布说明和组织信息，重点判断该版本是否是面向实体机器人/具身智能的专门软件项目，而非通用可视化 SDK。然后只采用可访问来源中明确支持的日期、功能与指标。若软件适用范围不满足严格条件，我仍会给出有证据的技术摘要并明确排除原因。",
+        "我会核对 Rerun 0.22 的官方迁移文档、发布说明和组织信息，重点判断该版本是否是面向实体机器人/具身智能的专门软件项目，而非通用可视化 SDK。然后只采用可访问来源中明确支持的日期、功能与指标。若软件适用范围不满足严格条件，我仍会给出有证据的技术摘要并明确排除原因。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验官方来源。",
+        "正在核验官方来源。",
+        "正在核验官方来源。",
+        "正在核验官方来源。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方资料",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://rerun.io/docs/reference/migration/migration-0-22",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验官方来源，尚未作出最终判定。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验。"
+    }
   }
 }
