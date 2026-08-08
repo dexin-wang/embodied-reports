@@ -44,7 +44,7 @@ jobs:
           fi
           git commit -m "assets: refresh source framework figures"
           for attempt in 1 2 3; do
-            if git pull --rebase origin main && git push; then
+            if git pull --rebase -X theirs origin main && git push; then
               exit 0
             fi
             git rebase --abort || true
