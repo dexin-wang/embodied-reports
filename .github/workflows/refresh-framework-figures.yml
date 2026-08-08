@@ -1,14 +1,9 @@
 name: Refresh framework figures
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "automation/extract_frameworks.py"
-      - "automation/framework_sources.json"
-      - "data/verified.json"
-      - "app/reports.ts"
-      - ".github/workflows/refresh-framework-figures.yml"
+  # Discover already refreshes figures before publishing catalog data. Keeping
+  # this workflow manual prevents two jobs from committing the same generated
+  # catalog assets concurrently.
   workflow_dispatch:
 
 permissions:
