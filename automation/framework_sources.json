@@ -55,5 +55,9 @@
   {
     "id": "gemma-3",
     "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/"
+  },
+  {
+    "id": "cosa-05-v3",
+    "source_url": "https://limx-video.oss-cn-beijing.aliyuncs.com/cosa05v3/limx-vla-architecture.svg"
   }
 ]
