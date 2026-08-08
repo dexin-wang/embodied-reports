@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - "automation/company_roster.json"
+      - "automation/media_watchlist.json"
       - "automation/official_seed_projects.json"
       - "automation/discover_official_projects.py"
       - "automation/verify_reports.py"
@@ -38,11 +39,21 @@ jobs:
           python-version: "3.12"
       - name: Discover candidate leads
         run: python automation/discover.py
-      - name: Discover official project releases without papers
+      - name: Discover influential releases from independent WeChat media
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_VERIFIER_MODEL: gpt-5.6
-        run: python automation/discover_official_projects.py
+        run: python automation/discover_official_projects.py --mode media
+      - name: Discover official company releases (every three days)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_VERIFIER_MODEL: gpt-5.6
+        run: |
+          if [ $(( $(date -u +%s) / 86400 % 3 )) -eq 0 ]; then
+            python automation/discover_official_projects.py --mode official
+          else
+            echo "Skipping official-company scan today; it runs every three days."
+          fi
       - name: Verify official source, institution and public impact
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
