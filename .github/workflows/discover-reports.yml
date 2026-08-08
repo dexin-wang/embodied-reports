@@ -37,6 +37,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Restore last generated catalog
+        run: |
+          git fetch origin catalog-data
+          git checkout origin/catalog-data -- data public/frameworks automation/candidates.json automation/verification_audit.json
       - name: Discover candidate leads
         run: python automation/discover.py
       - name: Discover influential releases from independent WeChat media
@@ -72,30 +76,21 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check Pillow
           python automation/extract_frameworks.py --refresh
-      - name: Save verified updates
+      - name: Validate generated catalog
+        run: |
+          python -m py_compile automation/discover_official_projects.py automation/verify_reports.py automation/extract_frameworks.py
+          python automation/validate_catalog.py
+      - name: Publish generated catalog branch
         run: |
           git config user.name "embodied-reports-bot"
           git config user.email "embodied-reports-bot@users.noreply.github.com"
-          git add data/verified.json data/dossiers.json automation/candidates.json automation/verification_audit.json public/frameworks
-          if git diff --cached --quiet; then
-            exit 0
-          fi
+          git worktree add ../catalog-output origin/catalog-data
+          cp -a data ../catalog-output/
+          cp -a public/frameworks ../catalog-output/public/
+          cp -a automation/candidates.json automation/verification_audit.json ../catalog-output/automation/
+          cd ../catalog-output
+          git switch -C catalog-data origin/catalog-data
+          git add data public/frameworks automation/candidates.json automation/verification_audit.json
+          if git diff --cached --quiet; then exit 0; fi
           git commit -m "data: refresh verified embodied reports"
-          for attempt in 1 2 3; do
-            if git pull --rebase origin main && git push; then
-              exit 0
-            fi
-            # Discover writes a complete manifest after refreshing every source.
-            # If a concurrent figure-refresh commit touched only that manifest,
-            # retain this run's manifest and complete the rebase deterministically.
-            if git diff --name-only --diff-filter=U | grep -qx "public/frameworks/manifest.json"; then
-              git checkout --theirs public/frameworks/manifest.json
-              git add public/frameworks/manifest.json
-              GIT_EDITOR=true git rebase --continue && git push && exit 0
-            fi
-            git rebase --abort || true
-            echo "Push race detected; retrying ($attempt/3)"
-            sleep "$attempt"
-          done
-          echo "Unable to publish generated updates after three attempts."
-          exit 1
+          git push origin HEAD:catalog-data
