@@ -8960,5 +8960,46 @@
       "software_project": true,
       "summary_zh": "正在核验。"
     }
+  },
+  "search-in-progress-26f6910": {
+    "checked_at": "2026-08-08T08:28:44.030355+00:00",
+    "title": "Search in progress",
+    "accepted": false,
+    "reason": "不收录。缺少可识别的候选项目以及专门的官方项目页面或机构公告，因此无法支持条件1、条件3和条件4。标题“Search in progress”是占位状态而非项目名称；https://example.invalid 是不可访问的保留无效域名；摘要仅描述检索和筛选过程，没有说明任何已发布的具身机器人软件。负责组织、软件性质、发布日期、能力和指标均无法由可访问来源核实。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "无法确定候选项目：给出的标题是检索状态占位语，摘要是筛选流程说明，并非软件功能描述。",
+        "无法核实该项目是否面向物理机器人或具身智能。",
+        "无法核实是否存在已发布的软件、模型、数据集、模拟器、基准或控制框架。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "“Search in progress”不是可识别的项目名称。",
+        "提供的主链接使用保留的无效域名 example.invalid，无法作为项目或论文证据。",
+        "检索未找到能与标题、日期和摘要唯一对应的官方具身机器人项目页面。",
+        "未提供作者、负责机构或可用于消歧的技术摘要。"
+      ],
+      "metrics": [
+        {
+          "label": "可核实的报告结果",
+          "note": "没有找到可归属于该候选项目的官方页面、技术报告或关联材料。",
+          "value": "0"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不收录。缺少可识别的候选项目以及专门的官方项目页面或机构公告，因此无法支持条件1、条件3和条件4。标题“Search in progress”是占位状态而非项目名称；https://example.invalid 是不可访问的保留无效域名；摘要仅描述检索和筛选过程，没有说明任何已发布的具身机器人软件。负责组织、软件性质、发布日期、能力和指标均无法由可访问来源核实。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该记录不能被识别为一个实际发布的具身机器人技术项目。现有输入没有项目名称、作者或负责机构，所谓摘要也只是关于检查组织官网和排除硬件公告的流程说明。给出的链接不是有效的论文、项目页或机构页面。公开检索无法将这些信息对应到某个在2025年1月1日发布的软件项目，因此不能判断其是否属于VLA、机器人基础模型、策略、数据引擎、模拟器、控制栈、评测基准或具身智能框架，也没有可靠材料可用于提取技术能力或实验结果。"
+    }
   }
 }

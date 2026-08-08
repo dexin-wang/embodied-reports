@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T07:16:13.704977+00:00",
+  "generated_at": "2026-08-08T08:28:20.959801+00:00",
   "candidates": [
     {
       "date": "2026-08-08",
@@ -8895,6 +8895,18 @@
       "summary": "I’m collecting only official project, company, or research-lab release pages and checking that each item is software-centric, dated no earlier than 2025, and relevant to dexterous, tactile, force-aware, or contact-rich embodied robotics.",
       "title": "Status",
       "url": "https://example.com",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-01-01",
+      "organization_hint": "Researching official sources",
+      "summary": "I’m checking each organization’s official site for dated software or research project releases, then filtering out vehicle, robot, sensor, and generic company-product announcements.",
+      "title": "Search in progress",
+      "url": "https://example.invalid",
       "authors": [],
       "score": 100,
       "reasons": [
