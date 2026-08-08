@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T05:09:28.215598+00:00",
+  "generated_at": "2026-08-08T04:48:02.953238+00:00",
   "candidates": [
     {
       "date": "2026-08-07",
@@ -6810,6 +6810,18 @@
       ]
     },
     {
+      "date": "2025-11-01",
+      "organization_hint": "Physical Intelligence",
+      "summary": "π0.6 is a vision-language-action model release focused on improved dexterity, robustness, and long-horizon manipulation across multiple robot embodiments.",
+      "title": "π0.6",
+      "url": "https://www.physicalintelligence.company/blog/pi06",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "EmbodiedBrain: Expanding Performance Boundaries of Task Planning for Embodied Intelligence",
       "summary": "The realization of Artificial General Intelligence (AGI) necessitates Embodied AI agents capable of robust spatial perception, effective task planning, and adaptive execution in physical environments. However, current large language models (LLMs) and multimodal LLMs (MLLMs) for embodied tasks suffer from key limitations, including a significant gap between model design and agent requirements, an unavoidable trade-off between real-time latency and performance, and the use of unauthentic, offline evaluation metrics. To address these challenges, we propose EmbodiedBrain, a novel vision-language foundation model available in both 7B and 32B parameter sizes. Our framework features an agent-aligned data structure and employs a powerful training methodology that integrates large-scale Supervised Fine-Tuning (SFT) with Step-Augumented Group Relative Policy Optimization (Step-GRPO), which boosts long-horizon task success by integrating preceding steps as Guided Precursors. Furthermore, we incorporate a comprehensive reward system, including a Generative Reward Model (GRM) accelerated at the infrastructure level, to improve training efficiency. For enable thorough validation, we establish a three-part evaluation system encompassing General, Planning, and End-to-End Simulation Benchmarks, highlighted by the proposal and open-sourcing of a novel, challenging simulation environment. Experimental results demonstrate that EmbodiedBrain achieves superior performance across all metrics, establishing a new state-of-the-art for embodied foundation models. Towards paving the way for the next generation of generalist embodied agents, we open-source all of our data, model weight, and evaluating methods, which are available at https://zterobot.github.io/EmbodiedBrain.github.io.",
       "date": "2025-10-23",
@@ -6903,6 +6915,18 @@
       ]
     },
     {
+      "date": "2025-10-01",
+      "organization_hint": "Hugging Face",
+      "summary": "LeRobot v0.4 is an open robotics framework release covering datasets, policy training, simulation environments, and deployment workflows for real-world robots.",
+      "title": "LeRobot v0.4",
+      "url": "https://huggingface.co/blog/lerobot-release-v04",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-09-30",
       "organization_hint": "OpenAI",
       "summary": "A video-and-audio generation model with improved physical accuracy, controllability, object permanence, and world-simulation capabilities; OpenAI presents it as progress toward general-purpose simulators and AI systems that can function in the physical world.",
@@ -6963,8 +6987,8 @@
     {
       "date": "2025-09-25",
       "organization_hint": "Google DeepMind",
-      "summary": "Gemini Robotics 1.5 and Gemini Robotics-ER 1.5 added embodied reasoning, planning, tool use, and cross-embodiment learning for multi-step physical tasks.",
-      "title": "Gemini Robotics 1.5 brings AI agents into the physical world",
+      "summary": "Gemini Robotics 1.5 and Gemini Robotics-ER 1.5 add improved embodied reasoning, multi-step planning, tool use, and cross-embodiment transfer for robot-control applications.",
+      "title": "Gemini Robotics 1.5",
       "url": "https://deepmind.google/discover/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
       "authors": [],
       "score": 100,
@@ -7098,6 +7122,30 @@
       ]
     },
     {
+      "date": "2025-09-01",
+      "organization_hint": "Stanford Vision and Learning Lab",
+      "summary": "SpatialVLA is a spatially grounded vision-language-action model that encodes 3D spatial structure for generalist robot manipulation and cross-embodiment learning.",
+      "title": "SpatialVLA",
+      "url": "https://spatialvla.github.io/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-09-01",
+      "organization_hint": "Hugging Face",
+      "summary": "LeRobot v0.3 is a robotics software-stack release for collecting datasets, training policies, evaluating models, and deploying learned robot behavior with standardized hardware and dataset interfaces.",
+      "title": "LeRobot v0.3",
+      "url": "https://huggingface.co/blog/lerobot-release-v03",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Constrained Decoding for Safe Robot Navigation Foundation Models",
       "summary": "Recent advances in the development of robotic foundation models have led to promising end-to-end and general-purpose capabilities in robotic systems. Trained on vast datasets of simulated and real-world trajectories, these policies map multimodal observations directly to action sequences for physical execution. Despite promising real-world capabilities, these models are still data-driven and, therefore, lack explicit notions of behavioral correctness. We address this gap by introducing SafeDec, a constrained decoding framework for autoregressive, transformer-based robot navigation foundation models that enforces safety specifications expressed as Signal Temporal Logic (STL) formulas. Our method ensures that generated actions provably satisfy STL specifications under assumed dynamics at runtime without retraining while remaining agnostic of the underlying policy. We evaluate SafeDec on tasks from the CHORES benchmark for state-of-the-art embodied navigation policies across hundreds of procedurally generated environments and show that our decoding-time interventions are useful not only for filtering unsafe actions but also for conditional action generation. Videos are available at constrained-robot-fms.github.io",
       "date": "2025-09-01",
@@ -7160,10 +7208,22 @@
     },
     {
       "date": "2025-08-12",
-      "organization_hint": "Figure",
-      "summary": "Figure announced Helix 02, a unified vision-language-action system for full-body humanoid autonomy that controls walking, balance, and manipulation through a single neural architecture.",
-      "title": "Helix 02: Full-Body Autonomy",
+      "organization_hint": "Figure AI",
+      "summary": "Helix 02 extends Figure's vision-language-action system to full-body control, integrating perception, high-level planning, and whole-body robot actions.",
+      "title": "Helix 02",
       "url": "https://www.figure.ai/news/helix-02",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-08-11",
+      "organization_hint": "NVIDIA",
+      "summary": "Isaac GR00T N1.5 is an updated open robot foundation model with improved language conditioning, generalization, and support for post-training on new robot tasks and embodiments.",
+      "title": "NVIDIA Isaac GR00T N1.5",
+      "url": "https://developer.nvidia.com/blog/isaac-gr00t-n1-5-a-foundation-model-for-generalist-humanoid-robots/",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7244,6 +7304,18 @@
       "summary": "Next-generation wheeled humanoid robot released alongside the ArtiXon five-finger dexterous hand, which provides 20 degrees of freedom per hand.",
       "title": "Quanta X2 and ArtiXon Hand",
       "url": "https://x2robot.com/en/product/68ad9a319d9a1f1ecd40c31d",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-08-01",
+      "organization_hint": "NVIDIA",
+      "summary": "Isaac Lab 2.2 is an open robot-learning framework release for reinforcement learning, imitation learning, motion planning, and policy training on top of Isaac Sim.",
+      "title": "NVIDIA Isaac Lab 2.2",
+      "url": "https://developer.nvidia.com/blog/nvidia-isaac-sim-5-0-and-nvidia-isaac-lab-2-2-available-now/",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7415,6 +7487,18 @@
     },
     {
       "date": "2025-07-01",
+      "organization_hint": "Massachusetts Institute of Technology",
+      "summary": "Steerable Scene Generation is a generative simulation system for creating controllable, physically grounded 3D scenes and task variations for embodied-agent and robot learning.",
+      "title": "Steerable Scene Generation",
+      "url": "https://steerable-scene-generation.github.io/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-07-01",
       "organization_hint": "Beijing Xingdongjiyuan Technology Co., Ltd. (ROBOTERA)",
       "summary": "Full-size bipedal humanoid robot designed for both dynamic movement and embodied manipulation tasks, including logistics sorting, scanning and fastening.",
       "title": "ROBOTERA L7",
@@ -7431,6 +7515,18 @@
       "summary": "LeVERB learns versatile bipedal locomotion from large-scale human motion data and supports natural gait, recovery, steering, and traversal over varied terrain.",
       "title": "LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction",
       "url": "https://leverb.github.io/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-07-01",
+      "organization_hint": "ByteDance Seed",
+      "summary": "GR-3 is a vision-language-action model that combines web-scale vision-language pretraining, robot trajectory data, and human trajectory data for generalizable manipulation and instruction following.",
+      "title": "GR-3",
+      "url": "https://seed.bytedance.com/en/blog/gr-3-a-generalist-robot-policy-with-scaling-up-and-enhanced-generalization",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7485,8 +7581,8 @@
     {
       "date": "2025-06-24",
       "organization_hint": "Google DeepMind",
-      "summary": "Gemini Robotics On-Device is a robotics model optimized to run locally on robots, with low-latency operation, adaptation to new tasks, and support for multiple robot embodiments.",
-      "title": "Gemini Robotics On-Device brings AI to local robotic devices",
+      "summary": "Gemini Robotics On-Device is a low-latency vision-language-action model designed to run locally on robots and adapt to new tasks with relatively few demonstrations.",
+      "title": "Gemini Robotics On-Device",
       "url": "https://deepmind.google/discover/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
       "authors": [],
       "score": 100,
@@ -7521,6 +7617,18 @@
       ]
     },
     {
+      "date": "2025-06-11",
+      "organization_hint": "Meta AI",
+      "summary": "V-JEPA 2 is a self-supervised video world model for understanding, predicting, and planning in the physical world, accompanied by robot-planning experiments and model releases.",
+      "title": "V-JEPA 2",
+      "url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Analytic Task Scheduler: Recursive Least Squares Based Method for Continual Learning in Embodied Foundation Models",
       "summary": "Embodied foundation models are crucial for Artificial Intelligence (AI) interacting with the physical world by integrating multi-modal inputs, such as proprioception, vision and language, to understand human intentions and generate actions to control robots. While these models demonstrate strong generalization and few-shot learning capabilities, they face significant challenges in continually acquiring new skills without forgetting previously learned skills, a problem known as catastrophic forgetting. To address this issue, we propose the Analytic Task Scheduler (ATS), a novel framework for continual learning in embodied foundation models. ATS consists of a task-specific model library, where each model is fine-tuned independently on a single task, and an analytic scheduler trained using recursive least squares (RLS) to learn the mapping between language instructions and task-specific models. This architecture enables accurate task recognition and dynamic model selection while fundamentally avoiding parameter interference across tasks. The scheduler updates its parameters incrementally using only statistics (autocorrelation and cross-correlation matrices), enabling forgetting-resistant learning without the need to revisit historical data. We validate ATS on a real-world robot platform (RM65B), demonstrating superior resistance to forgetting and strong adaptability to task variations. The results highlight ATS as an effective, scalable, and deployable solution for continual learning in embodied foundation models operating in complex, dynamic environments. Our code will be available at https://github.com/MIAA-Embodied-AI/AnalyticTaskScheduler",
       "date": "2025-06-11",
@@ -7543,6 +7651,42 @@
       "summary": "cuTAMP uses GPU-parallel optimization to evaluate and refine thousands of candidate task-and-motion plans, enabling rapid manipulation planning across robot platforms.",
       "title": "cuTAMP",
       "url": "https://news.mit.edu/2025/new-system-enables-robots-to-solve-manipulation-problems-seconds-0605",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-06-03",
+      "organization_hint": "Hugging Face",
+      "summary": "SmolVLA is a compact open vision-language-action model designed for affordable hardware, asynchronous inference, and integration with the LeRobot robotics ecosystem.",
+      "title": "SmolVLA",
+      "url": "https://huggingface.co/blog/smolvla",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-06-01",
+      "organization_hint": "Stanford Vision and Learning Lab",
+      "summary": "RoboArena is a distributed real-world evaluation platform and benchmark that compares generalist robot policies through standardized manipulation tasks and community-contributed trials.",
+      "title": "RoboArena",
+      "url": "https://robo-arena.github.io/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-06-01",
+      "organization_hint": "Stanford Vision and Learning Lab",
+      "summary": "OpenVLA-OFT is an optimized fine-tuning recipe and software release that improves OpenVLA training efficiency and manipulation-policy performance.",
+      "title": "OpenVLA-OFT",
+      "url": "https://openvla-oft.github.io/",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7641,6 +7785,18 @@
       ]
     },
     {
+      "date": "2025-05-21",
+      "organization_hint": "Meta AI",
+      "summary": "PARTNR is a benchmark and large-scale dataset for training and evaluating planning and reasoning in embodied human-robot collaboration using the Habitat simulator.",
+      "title": "PARTNR",
+      "url": "https://ai.meta.com/blog/partnr-benchmark-dataset-human-robot-collaboration/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Policy Contrastive Decoding for Robotic Foundation Models",
       "summary": "Robotic foundation models, or generalist robot policies, hold immense potential to enable flexible, general-purpose and dexterous robotic systems. Despite their advancements, our empirical experiments reveal that existing robot policies are prone to learning spurious correlations from pre-training trajectories, adversely affecting their generalization capabilities beyond the training data. To tackle this, we propose a novel Policy Contrastive Decoding (PCD) approach, which redirects the robot policy's focus toward object-relevant visual clues by contrasting action probability distributions derived from original and object-masked visual inputs. As a training-free method, our PCD can be used as a plugin to improve different types of robot policies without needing to finetune or access model weights. We conduct extensive experiments on top of three open-source robot policies, including the autoregressive policy OpenVLA and the diffusion-based policies Octo and $π_0$. The obtained results in both simulation and real-world environments prove PCD's flexibility and effectiveness, e.g., PCD enhances the state-of-the-art policy $π_0$ by 8.9% in the simulation environment and by 108% in the real-world environment. Code and demos are publicly available at: https://koorye.github.io/PCD.",
       "date": "2025-05-19",
@@ -7660,6 +7816,18 @@
         "report/model title",
         "physical-robot evidence",
         "release signal"
+      ]
+    },
+    {
+      "date": "2025-05-19",
+      "organization_hint": "NVIDIA",
+      "summary": "Isaac GR00T N1.5 updated NVIDIA's open robot foundation model with improved reasoning, task generalization, and synthetic-data workflows for humanoid manipulation.",
+      "title": "NVIDIA Isaac GR00T N1.5",
+      "url": "https://developer.nvidia.com/blog/advancing-humanoid-robot-intelligence-with-nvidia-isaac-gr00t-n1-5/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7727,6 +7895,18 @@
     },
     {
       "date": "2025-05-01",
+      "organization_hint": "Physical Intelligence",
+      "summary": "openpi is Physical Intelligence's open-source repository for running and adapting π-family vision-language-action models, including inference, fine-tuning, and robot-policy deployment tooling.",
+      "title": "openpi",
+      "url": "https://www.physicalintelligence.company/openpi",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-05-01",
       "organization_hint": "University of Oxford",
       "summary": "RoboMamba is an embodied reasoning model that combines vision-language understanding with robot action prediction in a compact architecture intended for efficient deployment.",
       "title": "RoboMamba: Multimodal State Space Model for Efficient Robot Reasoning and Manipulation",
@@ -7751,10 +7931,34 @@
     },
     {
       "date": "2025-05-01",
+      "organization_hint": "NVIDIA",
+      "summary": "GR00T-Dreams is a blueprint for generating synthetic robot trajectories from limited demonstrations using video generation and world-foundation-model techniques to expand policy-training data.",
+      "title": "NVIDIA GR00T-Dreams",
+      "url": "https://developer.nvidia.com/blog/nvidia-isaac-gr00t-dreams-enables-scalable-synthetic-motion-data-generation-for-robot-training/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-05-01",
       "organization_hint": "University of California, Berkeley",
       "summary": "HumanPlus is a whole-body humanoid system that learns shadowing from human motion and uses the resulting data to acquire autonomous skills including jumping, rearrangement, and warehouse tasks.",
       "title": "HumanPlus: Humanoid Shadowing and Imitation from Humans",
       "url": "https://humanoid-ai.github.io/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-05-01",
+      "organization_hint": "UC Berkeley AUTOLAB",
+      "summary": "DexMimicGen is a data-generation system that produces large robot-manipulation datasets from a small number of human demonstrations, including bimanual and dexterous tasks.",
+      "title": "DexMimicGen",
+      "url": "https://dexmimicgen.github.io/",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7816,8 +8020,8 @@
     {
       "date": "2025-04-22",
       "organization_hint": "Physical Intelligence",
-      "summary": "π0.5 is a vision-language-action model developed for open-world generalization, including heterogeneous co-training and long-horizon mobile manipulation in previously unseen homes.",
-      "title": "π0.5: a Vision-Language-Action Model with Open-World Generalization",
+      "summary": "π0.5 is an open-world generalist robot policy that combines heterogeneous robot data, web data, and high-level semantic prediction to generalize to unseen environments.",
+      "title": "π0.5",
       "url": "https://www.physicalintelligence.company/blog/pi05",
       "authors": [],
       "score": 100,
@@ -7877,6 +8081,18 @@
       "summary": "The X-Humanoid open-source community released robot-development resources including the RoboMIND dataset and a Tiangong-compatible training toolchain.",
       "title": "X-Humanoid Open-Source Community, RoboMIND and Training Toolchain",
       "url": "https://kfqgw.beijing.gov.cn/zwgkkfq/ztzl/lqztkfq/lqzx/zsdt/202505/t20250514_4088610.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-04-01",
+      "organization_hint": "Toyota Research Institute",
+      "summary": "Large Behavior Models are robot policies trained across diverse manipulation data to acquire broad reusable behaviors and adapt to new tasks and environments.",
+      "title": "Large Behavior Models",
+      "url": "https://www.tri.global/research/large-behavior-models",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8016,9 +8232,57 @@
     {
       "date": "2025-03-18",
       "organization_hint": "NVIDIA",
+      "summary": "Newton is an open-source, GPU-accelerated physics engine for robot learning and simulation, developed with Google DeepMind and Disney Research.",
+      "title": "Newton Physics Engine",
+      "url": "https://developer.nvidia.com/blog/introducing-newton-an-open-source-physics-engine-for-robotics-simulation/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-03-18",
+      "organization_hint": "NVIDIA, Google DeepMind, and Disney Research",
+      "summary": "Newton is an open-source, GPU-accelerated physics engine developed for robot simulation and learning workflows and designed for integration with robotics simulation ecosystems.",
+      "title": "Newton Physics Engine",
+      "url": "https://developer.nvidia.com/blog/announcing-newton-an-open-source-physics-engine-for-robotics-simulation/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-03-18",
+      "organization_hint": "NVIDIA",
       "summary": "NVIDIA announced GR00T N1, an open humanoid robot foundation model using a dual-system architecture for language reasoning and continuous motor action generation.",
       "title": "NVIDIA Isaac GR00T N1",
       "url": "https://developer.nvidia.com/isaac/gr00t",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-03-18",
+      "organization_hint": "NVIDIA",
+      "summary": "Isaac GR00T N1 is an open foundation model for humanoid robot reasoning and skills, combining a vision-language module with a diffusion-transformer action module.",
+      "title": "NVIDIA Isaac GR00T N1",
+      "url": "https://developer.nvidia.com/blog/nvidia-isaac-gr00t-n1-an-open-foundation-model-for-generalist-humanoid-robots/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-03-18",
+      "organization_hint": "NVIDIA",
+      "summary": "Isaac GR00T N1 is an open humanoid robot foundation model with a dual-system architecture for language reasoning and continuous real-time motor-action generation.",
+      "title": "NVIDIA Isaac GR00T N1",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8117,8 +8381,8 @@
     {
       "date": "2025-03-12",
       "organization_hint": "Google DeepMind",
-      "summary": "Gemini Robotics introduced robot-focused vision-language-action models designed to add physical actions as an output modality and improve generalization, interactivity, and dexterity across robot embodiments.",
-      "title": "Gemini Robotics brings AI into the physical world",
+      "summary": "Gemini Robotics introduced vision-language-action models built on Gemini 2.0 for direct robot control, including a general model and an embodied-reasoning variant for spatial understanding and planning.",
+      "title": "Gemini Robotics",
       "url": "https://deepmind.google/discover/blog/gemini-robotics-brings-ai-into-the-physical-world/",
       "authors": [],
       "score": 100,
@@ -8179,6 +8443,18 @@
     },
     {
       "date": "2025-03-01",
+      "organization_hint": "Stanford Vision and Learning Lab",
+      "summary": "RoboCasa365 is a large-scale simulation and data-generation project providing thousands of household manipulation tasks, demonstrations, and assets for training generalist robot policies.",
+      "title": "RoboCasa365",
+      "url": "https://robocasa.ai/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-03-01",
       "organization_hint": "Beijing Humanoid Robot Innovation Center",
       "summary": "Huisi Kaiwu is a general embodied-intelligence platform designed to provide shared perception, decision-making and control capabilities across multiple robot bodies.",
       "title": "Huisi Kaiwu General Embodied Intelligence Platform",
@@ -8228,8 +8504,8 @@
     {
       "date": "2025-02-20",
       "organization_hint": "Figure",
-      "summary": "Helix is a generalist vision-language-action model for humanoid robots that maps language and visual observations to continuous upper-body control and coordinated two-robot manipulation.",
-      "title": "Helix: A Vision-Language-Action Model for Generalist Humanoid Control",
+      "summary": "Helix is a generalist vision-language-action model for humanoid upper-body control that maps natural-language commands and visual observations to continuous actions in real time.",
+      "title": "Helix",
       "url": "https://www.figure.ai/news/helix",
       "authors": [],
       "score": 100,
@@ -8262,6 +8538,18 @@
       "reasons": [
         "keywords: robot foundation",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-02-01",
+      "organization_hint": "Google DeepMind",
+      "summary": "MuJoCo Playground is an open-source framework for GPU-accelerated robot learning, simulation, training, and sim-to-real deployment built around MuJoCo and MJX.",
+      "title": "MuJoCo Playground",
+      "url": "https://playground.mujoco.org/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8366,6 +8654,18 @@
       ]
     },
     {
+      "date": "2025-01-14",
+      "organization_hint": "Skild AI",
+      "summary": "Skild Brain is an omni-bodied robotics foundation model intended to control different robot embodiments and perform mobile-manipulation and locomotion tasks.",
+      "title": "Skild Brain",
+      "url": "https://www.skild.ai/blog/introducing-skild-brain",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "RoboHorizon: An LLM-Assisted Multi-View World Model for Long-Horizon Robotic Manipulation",
       "summary": "Efficient control in long-horizon robotic manipulation is challenging due to complex representation and policy learning requirements. Model-based visual reinforcement learning (RL) has shown great potential in addressing these challenges but still faces notable limitations, particularly in handling sparse rewards and complex visual features in long-horizon environments. To address these limitations, we propose the Recognize-Sense-Plan-Act (RSPA) pipeline for long-horizon tasks and further introduce RoboHorizon, an LLM-assisted multi-view world model tailored for long-horizon robotic manipulation. In RoboHorizon, pre-trained LLMs generate dense reward structures for multi-stage sub-tasks based on task language instructions, enabling robots to better recognize long-horizon tasks. Keyframe discovery is then integrated into the multi-view masked autoencoder (MAE) architecture to enhance the robot's ability to sense critical task sequences, strengthening its multi-stage perception of long-horizon processes. Leveraging these dense rewards and multi-view representations, a robotic world model is constructed to efficiently plan long-horizon tasks, enabling the robot to reliably act through RL algorithms. Experiments on two representative benchmarks, RLBench and FurnitureBench, show that RoboHorizon outperforms state-of-the-art visual model-based RL methods, achieving a 23.35% improvement in task success rates on RLBench's 4 short-horizon tasks and a 29.23% improvement on 6 long-horizon tasks from RLBench and 3 furniture assembly tasks from FurnitureBench.",
       "date": "2025-01-11",
@@ -8396,6 +8696,18 @@
       "score": 28,
       "reasons": [
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-01-06",
+      "organization_hint": "NVIDIA",
+      "summary": "NVIDIA Cosmos is a platform of world foundation models, tokenizers, guardrails, and data-processing tools for generating and evaluating physics-aware synthetic data for physical AI.",
+      "title": "NVIDIA Cosmos",
+      "url": "https://nvidianews.nvidia.com/news/cosmos-world-foundation-models",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8439,6 +8751,18 @@
       "summary": "SOP is a framework for rapidly updating vision-language-action policies across deployed robot fleets using distributed real-world experience.",
       "title": "SOP: Scaling General-Purpose Robots in the Real World",
       "url": "https://www.agibot.com/research/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-01-01",
+      "organization_hint": "AgiBot",
+      "summary": "AgiBot World is a large-scale open-source dataset and evaluation ecosystem containing diverse real-robot manipulation trajectories for training and benchmarking embodied foundation models.",
+      "title": "AgiBot World",
+      "url": "https://agibot-world.com/",
       "authors": [],
       "score": 100,
       "reasons": [

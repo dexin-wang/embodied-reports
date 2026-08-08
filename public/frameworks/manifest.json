@@ -73,6 +73,18 @@
       "height": 810
     },
     {
+      "id": "lerobot-v0-4-d36c040",
+      "asset": "frameworks/lerobot-v0-4-d36c040.jpg",
+      "source_url": "https://huggingface.co/blog/lerobot-release-v040",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.4.0/lerobot-libero-groot-v040.gif",
+      "width": 1152,
+      "height": 648
+    },
+    {
       "id": "gemini-robotics-1-5-brings-ai-agents-into-the-ph-5fd6c1e",
       "asset": "frameworks/gemini-robotics-1-5-brings-ai-agents-into-the-ph-5fd6c1e.jpg",
       "source_url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
@@ -83,6 +95,18 @@
       "image_url": "https://lh3.googleusercontent.com/vSMY895gzWpK-nGK2Vn__6OsjX5DIlTkiBBqggd0f-oAw1oNgh5tFPiZPKtSKIONx4UCT7kiop72Nuj0RMrJ-bICxx21SZCG55LlqcqBA-n_znJw=w1440",
       "width": 1440,
       "height": 809
+    },
+    {
+      "id": "lerobot-v0-3-29c251d",
+      "asset": "frameworks/lerobot-v0-3-29c251d.jpg",
+      "source_url": "https://github.com/huggingface/lerobot/releases/tag/v0.3.2",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/0166d75b5fc825909caca2e2a99b4541da03876ae4ec93dc243cf8225e84d6cf/huggingface/lerobot/releases/tag/v0.3.2",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "deepseek-v31",
@@ -109,6 +133,18 @@
       "height": 630
     },
     {
+      "id": "helix-02-95fd74a",
+      "asset": "frameworks/helix-02-95fd74a.jpg",
+      "source_url": "https://www.figure.ai/news/helix-02",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
       "id": "atlas-and-large-behavior-models-advancing-genera-364007f",
       "asset": "frameworks/atlas-and-large-behavior-models-advancing-genera-364007f.jpg",
       "source_url": "https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/",
@@ -119,6 +155,18 @@
       "image_url": "https://bostondynamics.com/wp-content/uploads/2025/08/Atlas-TRI-Blog-Post-Policy-Architecture-Diagram-v2e-1024x372.png",
       "width": 1024,
       "height": 372
+    },
+    {
+      "id": "nvidia-isaac-lab-2-2-38fa3a4",
+      "asset": "frameworks/nvidia-isaac-lab-2-2-38fa3a4.jpg",
+      "source_url": "https://github.com/isaac-sim/IsaacLab/releases/tag/v2.2.0",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/96f0028c69910d84f7be4ad3456381e42485f84ea9eec03c1db527c679a83e5b/isaac-sim/IsaacLab/releases/tag/v2.2.0",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "neural-jacobian-fields-c795ce5",
@@ -133,6 +181,18 @@
       "height": 878
     },
     {
+      "id": "steerable-scene-generation-3d840a5",
+      "asset": "frameworks/steerable-scene-generation-3d840a5.jpg",
+      "source_url": "https://steerable-scene-generation.github.io/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://steerable-scene-generation.github.io/static/images/teaser.webp",
+      "width": 5097,
+      "height": 2464
+    },
+    {
       "id": "gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4",
       "asset": "frameworks/gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4.jpg",
       "source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
@@ -145,6 +205,54 @@
       "height": 775
     },
     {
+      "id": "gemini-robotics-on-device-64ad1ab",
+      "asset": "frameworks/gemini-robotics-on-device-64ad1ab.jpg",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://lh3.googleusercontent.com/I6Zopg7Y_-VweSLsrzuRFGXeuIvUAJPXwEnxvnFyGjqWl65K3luU2WFHyGEu4xvC-QWB7jW62FM5j_oKk6pvZB7X6QXsKKdYehyJZYoKmHem7MAJ35U=w1440",
+      "width": 1232,
+      "height": 775
+    },
+    {
+      "id": "v-jepa-2-f0219df",
+      "asset": "frameworks/v-jepa-2-f0219df.jpg",
+      "source_url": "https://ai.meta.com/research/vjepa/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=DJQLzU9YD0oQ7kNvwFHdnd2&_nc_oc=Adoep9ITlzuDx5VdxkRb_BhDUsG5KVvdDgaB2BtHsA1htHKL7F4GEyR6W110PysRqvw&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=hILw4HRxoX3cEiHSJFUMIw&_nc_ss=7b20f&oh=00_AQEa7CySfjOCb2D57vj_krz8PgN39i9mSUQ8QHPy4PNYVg&oe=6A7C729C",
+      "width": 1440,
+      "height": 630
+    },
+    {
+      "id": "smolvla-bd300e4",
+      "asset": "frameworks/smolvla-bd300e4.jpg",
+      "source_url": "https://huggingface.co/blog/smolvla",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://cdn-uploads.huggingface.co/production/uploads/640e21ef3c82bd463ee5a76d/aooU0a3DMtYmy_1IWMaIM.png",
+      "width": 2554,
+      "height": 1434
+    },
+    {
+      "id": "openvla-oft-d2d6db6",
+      "asset": "frameworks/openvla-oft-d2d6db6.jpg",
+      "source_url": "https://openvla-oft.github.io/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://openvla-oft.github.io/static/images/libero_task_performance_results.png",
+      "width": 3370,
+      "height": 1740
+    },
+    {
       "id": "deepseek-r1-0528",
       "asset": "frameworks/deepseek-r1-0528.jpg",
       "source_url": "https://api-docs.deepseek.com/zh-cn/news/news250528",
@@ -155,6 +263,30 @@
       "image_url": "https://cdn.deepseek.com/api-docs/r1_0528_benchmark_1.webp",
       "width": 1080,
       "height": 637
+    },
+    {
+      "id": "nvidia-isaac-gr00t-n1-5-5ed4eff",
+      "asset": "frameworks/nvidia-isaac-gr00t-n1-5-5ed4eff.jpg",
+      "source_url": "https://research.nvidia.com/labs/gear/gr00t-n15/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://research.nvidia.com/labs/gear/n1_5/architecture.svg",
+      "width": 13421,
+      "height": 6848
+    },
+    {
+      "id": "openpi-9ed54eb",
+      "asset": "frameworks/openpi-9ed54eb.jpg",
+      "source_url": "https://github.com/Physical-Intelligence/openpi",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/35f46cbb069dd337652225f3d26ba96cfc01e7bdae498e18e9db0cdf3c6d596d/Physical-Intelligence/openpi",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "asap-aligning-simulation-and-real-world-physics--5ccdc93",
@@ -191,6 +323,18 @@
       "image_url": "https://www.pi.website/_next/image?url=%2Fimages%2Fpi05%2Fmultimodal_web_data.jpg&w=828&q=75",
       "width": 400,
       "height": 286
+    },
+    {
+      "id": "large-behavior-models-9a3de3c",
+      "asset": "frameworks/large-behavior-models-9a3de3c.jpg",
+      "source_url": "https://toyotaresearchinstitute.github.io/lbm1/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://toyotaresearchinstitute.github.io/lbm1/images/arch4.png",
+      "width": 2908,
+      "height": 966
     },
     {
       "id": "nvidia-isaac-gr00t-n1-9042646",
@@ -239,6 +383,18 @@
       "image_url": "https://homietele.github.io/static/images/overview.png",
       "width": 3822,
       "height": 1407
+    },
+    {
+      "id": "helix-096df70",
+      "asset": "frameworks/helix-096df70.jpg",
+      "source_url": "https://www.figure.ai/news/helix",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=3840&q=70",
+      "width": 3840,
+      "height": 2161
     },
     {
       "id": "being-h08",
@@ -387,7 +543,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=zrXyWgQtBQkQ7kNvwEeMOfZ&_nc_oc=AdoTMPtbLONFKxaIbmiW9v4gk5cKWSFhKboCN-ynIIgXOb3KpFSZI1co2aySu6A9FV0&_nc_zt=14&_nc_ht=scontent-sjc3-1.xx&_nc_gid=g66Og5ak2bPyvMvxdXIjgg&_nc_ss=7b20f&oh=00_AQESwH5e1eZIlN-bagP0NQoUkq9nFXExCOslwf9SSzku1A&oe=6A90C9B3",
+      "image_url": "https://scontent-sin2-2.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=zrXyWgQtBQkQ7kNvwG73Aie&_nc_oc=AdphXi6fjLs1Ic6mVoRzrD2GWvIipHA7MyrdGwzJoSagAQRh5D4m-oQ6knpqRN_cH3E&_nc_zt=14&_nc_ht=scontent-sin2-2.xx&_nc_gid=ZixH2f-gWYw3tkH2X8MiwA&_nc_ss=7b20f&oh=00_AQHY6XrqEY_swQEiS-VCKqwxRK45BjTmV57GtNssaW4bZQ&oe=6A9101F3",
       "width": 1920,
       "height": 1080
     },

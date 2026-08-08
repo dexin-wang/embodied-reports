@@ -6554,5 +6554,1687 @@
       "software_project": false,
       "summary_zh": "正在核验官方项目页面及其链接的技术材料。"
     }
+  },
+  "0-6-6284019": {
+    "checked_at": "2026-08-08T05:08:47.876912+00:00",
+    "title": "π0.6",
+    "accepted": true,
+    "reason": "收录。π0.6 是由 Physical Intelligence 明确负责、面向真实物理机器人的 VLA 软件项目，具有独立官方项目页和官方模型卡，并报告了模型架构、训练数据以及真实机器人操作评测，满足软件与官方证据条件。需要纠正候选资料中的日期：官方模型卡标注的发布日期是 2025 年 11 月 17 日，而不是 2025 年 11 月 1 日。官方 openpi 仓库公开支持 π0 和 π0.5，但未列出 π0.6 的实现或权重，因此不将 π0.6 标记为开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据自然语言指令和多路相机图像直接生成机器人动作块",
+        "在静态机械臂平台上执行衣物折叠、纸箱组装和餐桌收拾等多阶段操作",
+        "控制移动双臂机器人完成收纳衣物、整理床铺、将餐具放入水槽和物品入抽屉",
+        "在不进行任务专用微调的条件下执行涉及未见指令、未见物体和新技能的泛化任务",
+        "通过高层子任务预测与低层连续动作生成处理长时程操作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "π0.6 是 Physical Intelligence 发布的视觉-语言-动作模型，而非机器人硬件产品；官方项目材料将其定位为 π0.5 的后继模型，并以真实机器人操作为直接输出目标。",
+        "模型延续 π0.5 的分层设计，同时进行高层语言子任务预测和低层动作生成；动作块结合流匹配连续输出与 token 化离散输出。",
+        "视觉语言骨干由 Gemma 3 4B 初始化，架构图同时标明约 400M 参数的 SigLIP 视觉组件；独立动作专家与骨干具有相同层数，规模约 860M 参数。",
+        "模型最多接收四路 448×448 图像，包括基座相机、最多两个腕部相机，以及移动操作机器人可选的后向相机；图像、语言提示和本体感知状态共同构成策略输入。",
+        "训练采用 Knowledge Insulation：视觉语言骨干预测 FAST 动作 token 和多模态共训练样本，动作专家预测连续动作，并阻断动作专家梯度回传至主 VLM 骨干。",
+        "训练数据延续 π0.5 的跨本体组合，包含内部及外部机器人数据、家庭环境中的移动与非移动操作数据、高层子任务监督，以及边界框和关键点预测等多模态网页数据。",
+        "官方评测比较了未进行任务专用微调的 π0.6 与采用 Knowledge Insulation 的 π0.5；π0.6 在静态任务、移动双臂任务和语言／技能泛化任务中普遍提高执行速度，并在部分任务上同时提高成功率或任务进度。"
+      ],
+      "metrics": [
+        {
+          "label": "动作专家参数量",
+          "note": "官方模型卡报告动作专家与 VLM 骨干层数相同。",
+          "value": "约 860M"
+        },
+        {
+          "label": "视觉输入规格",
+          "note": "最多包括基座、双腕部及移动机器人后向相机。",
+          "value": "最多 4 路，每路 448×448"
+        },
+        {
+          "label": "动作块生成延迟",
+          "note": "单张 H100 GPU、3 路相机输入、5 个去噪步骤。",
+          "value": "63 ms"
+        },
+        {
+          "label": "纸箱完整组装成功率",
+          "note": "未进行任务专用微调的开箱即用评测。",
+          "value": "20%"
+        },
+        {
+          "label": "泛化评测规模",
+          "note": "每个任务套件分为三个难度等级。",
+          "value": "4 个任务套件，每套 12–18 条指令"
+        }
+      ],
+      "official_organization_url": "https://www.physicalintelligence.company/",
+      "official_project_url": "https://www.physicalintelligence.company/blog/pi06",
+      "open_source": false,
+      "organization_en": "Physical Intelligence",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。π0.6 是由 Physical Intelligence 明确负责、面向真实物理机器人的 VLA 软件项目，具有独立官方项目页和官方模型卡，并报告了模型架构、训练数据以及真实机器人操作评测，满足软件与官方证据条件。需要纠正候选资料中的日期：官方模型卡标注的发布日期是 2025 年 11 月 17 日，而不是 2025 年 11 月 1 日。官方 openpi 仓库公开支持 π0 和 π0.5，但未列出 π0.6 的实现或权重，因此不将 π0.6 标记为开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "π0.6 是 Physical Intelligence 于 2025 年 11 月 17 日发布的新一代通用机器人视觉-语言-动作模型，重点提升无需任务专用后训练时的灵巧操作、执行速度和跨场景泛化。它保留 π0.5 的分层策略结构，由高层语言子任务预测负责长时程任务分解，并由动作专家通过流匹配生成连续动作，同时支持 FAST 离散动作 token。模型以 Gemma 3 4B 为视觉语言骨干，接收多路相机、语言和本体感知输入，并通过 Knowledge Insulation 隔离连续动作训练对主 VLM 的梯度影响。训练组合覆盖多种机器人本体、家庭环境中的移动及固定平台数据和多模态网页监督。官方开箱即用评测涵盖衣物折叠、纸箱组装、餐桌收拾、移动双臂家庭整理以及未见语言、物体和技能的泛化；报告显示 π0.6 相比 π0.5 在所有评测类别中提高速度，并能在不做任务微调的情况下稳定折叠篮中衣物、以 20% 成功率完整组装纸箱。"
+    }
+  },
+  "lerobot-v0-4-d36c040": {
+    "checked_at": "2026-08-08T05:08:47.881755+00:00",
+    "title": "LeRobot v0.4",
+    "accepted": true,
+    "reason": "纳入。该项目满足全部条件：它是用于真实机器人和具身智能的软件框架版本，具有 Hugging Face 官方专项发布页及版本化文档，明确覆盖数据基础设施、VLA 策略、训练、仿真评测、机器人控制和硬件插件，而非硬件产品页；官方 GitHub 仓库公开源代码并采用 Apache-2.0 许可证。候选 URL 中的 `lerobot-release-v04` 并非实际发布页，正确官方地址以 `lerobot-release-v040` 结尾；候选日期 2025-10-01 也应更正为官方博客的 2025-10-24。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向真实机器人学习的端到端框架，覆盖数据采集与编辑、策略训练、仿真评测以及实体机器人部署。",
+        "通过 LeRobotDataset v3.0 管理、流式读取和迁移大规模机器人数据集，并支持删除、拆分、增删特征及合并数据集。",
+        "在统一接口中训练和评测 PI0、PI0.5、GR00T N1.5 等视觉-语言-动作策略。",
+        "通过模块化处理流水线完成传感器观测、语言指令、张量和机器人动作之间的预处理与后处理。",
+        "使用插件机制接入第三方机器人、相机和遥操作器，并支持真实机器人控制与仿真。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "LeRobot v0.4.0 是 Hugging Face 发布的实体机器人学习软件框架版本，而非机器人硬件产品；官方文档将项目定义为面向真实机器人、基于 PyTorch 的模型、数据集和工具集合。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+        "LeRobotDataset v3.0 采用分块 episode 格式、视频流式读取和统一 Parquet 元数据，并提供从 v2.1 数据格式迁移到 v3.0 的转换脚本。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+        "新增 `lerobot-edit-dataset` 命令行工具，可删除指定 episode、按比例或索引拆分数据集、添加或移除特征，以及合并多个数据集。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+        "仿真与评测层新增 LIBERO 和 Meta-World 集成；Meta-World 接口统一采用 `gymnasium >= 1.0.0` 与 `mujoco >= 3.0.0`，并支持确定性随机种子。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+        "新的 Processor 架构把处理步骤组合成流水线：`PolicyProcessorPipeline` 面向批量训练与推理张量，`RobotProcessorPipeline` 面向实时机器人观测和动作，并可执行归一化、文本分词、设备迁移及动作反归一化。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+        "训练栈直接集成 Hugging Face Accelerate，可通过一条启动命令运行多 GPU 策略训练；策略层原生集成 PI0、PI0.5 和跨本体模型 GR00T N1.5。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+        "新的硬件插件系统允许将机器人、相机或遥操作器实现为独立 Python 包，无须修改 LeRobot 核心代码；官方展示了 Reachy 2 的真实控制/仿真接入和使用 iOS/Android 手机遥操作机械臂的流程。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))"
+      ],
+      "metrics": [
+        {
+          "label": "官方发布日期",
+          "note": "候选资料所给 2025-10-01 不准确；官方博客发布于 2025-10-24，GitHub v0.4.0 release 记录为 2025-10-23。([huggingface.co](https://huggingface.co/blog/zh/lerobot-release-v040))",
+          "value": "2025-10-24（博客）／2025-10-23（GitHub release）"
+        },
+        {
+          "label": "数据集规模支持",
+          "note": "Datasets v3.0 官方宣称可支持 OXE 量级的数据集。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+          "value": ">400 GB"
+        },
+        {
+          "label": "LIBERO 任务覆盖",
+          "note": "官方发布页称集成的 LIBERO VLA 基准包含超过 130 个任务。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+          "value": ">130 tasks"
+        },
+        {
+          "label": "Meta-World 任务覆盖",
+          "note": "官方发布页称 Meta-World 集成包含超过 50 个机器人操作任务。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+          "value": ">50 tasks"
+        },
+        {
+          "label": "多 GPU 训练扩展结果",
+          "note": "官方报告在其他条件相同时，2 块 GPU 可把训练时间缩短至约一半，3 块 GPU 可缩短至约三分之一；页面未提供独立基准表。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+          "value": "2 GPUs: ~1/2 time; 3 GPUs: ~1/3 time"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co/",
+      "official_project_url": "https://huggingface.co/blog/lerobot-release-v040",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。该项目满足全部条件：它是用于真实机器人和具身智能的软件框架版本，具有 Hugging Face 官方专项发布页及版本化文档，明确覆盖数据基础设施、VLA 策略、训练、仿真评测、机器人控制和硬件插件，而非硬件产品页；官方 GitHub 仓库公开源代码并采用 Apache-2.0 许可证。候选 URL 中的 `lerobot-release-v04` 并非实际发布页，正确官方地址以 `lerobot-release-v040` 结尾；候选日期 2025-10-01 也应更正为官方博客的 2025-10-24。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "LeRobot v0.4.0 是 Hugging Face 在 2025 年 10 月发布的开源实体机器人学习框架升级。它并非单一模型，而是将大规模机器人数据管理、模仿学习与 VLA 策略训练、仿真基准评测、数据处理流水线、多 GPU 训练和实体硬件部署整合到同一套 PyTorch 工具链中。该版本的核心变化包括可处理 OXE 量级数据的 LeRobotDataset v3.0、LIBERO 与 Meta-World 环境接入、PI0/PI0.5 和 GR00T N1.5 原生集成，以及可由独立 Python 包扩展机器人、相机和遥操作器的插件系统。官方还给出了 Reachy 2 实机/仿真控制和手机遥操作机械臂等落地路径，因此其软件主体、实体机器人用途、责任组织和官方专项页面均有充分证据。([huggingface.co](https://huggingface.co/blog/lerobot-release-v040))"
+    }
+  },
+  "spatialvla-292f11c": {
+    "checked_at": "2026-08-08T05:08:47.885882+00:00",
+    "title": "SpatialVLA",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验项目主页、责任机构、发布日期及技术报告，并只采用可追溯到官方或论文材料的技术点和指标。",
+        "重点确认 SpatialVLA 是否属于面向实体机器人的软件项目，而非仅有论文或硬件介绍。 ",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索证据。",
+        "正在核对项目归属。",
+        "正在核对发布材料。",
+        "正在提取可验证结果。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "检索进行中",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://spatialvla.github.io/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于公开来源核验 SpatialVLA。"
+    }
+  },
+  "gemini-robotics-1-5-a8b48d1": {
+    "checked_at": "2026-08-08T05:08:47.889855+00:00",
+    "title": "Gemini Robotics 1.5",
+    "accepted": false,
+    "reason": "尚未完成来源核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目页、发布日期、责任组织及软件属性，再从官方技术材料提取可审计的技术点与指标。不会把硬件演示或仅有 arXiv 的材料当作合格证据。噢，格式错了。这里应该只是更新，但受响应格式限制？ Need all messages format likely. We must produce JSON even commentary. Better no commentary? Already malformed against enum? Response schema commentary likely also enforced. Need now tool. Fields maybe final only? We need use web. Search official. ",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "将优先使用 Google DeepMind 官方页面及其链接的技术材料。",
+        "将核验 Gemini Robotics 1.5 是否为面向物理机器人的独立软件发布。",
+        "将只记录来源明确支持的能力和指标。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方资料",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "尚未完成来源核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在检索与核验候选项目。"
+    }
+  },
+  "helix-02-95fd74a": {
+    "checked_at": "2026-08-08T05:08:47.894197+00:00",
+    "title": "Helix 02",
+    "accepted": true,
+    "reason": "收录。Figure 的官方专页明确将 Helix 02 描述为直接用于实体人形机器人的全身视觉-语言-动作软件系统，并公开其分层模型架构、传感器与执行器接口、训练方式和实体机器人自主执行结果；它不是硬件产品页。官方公司页面明确了责任组织。官方页面未宣布开放源代码，因此 open_source=false。候选日期有误：Helix 02 专页发布于 2026 年 1 月 27 日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从机载视觉、触觉和本体感知输入直接生成覆盖全身关节的动作",
+        "执行融合行走、平衡、双手操作和任务排序的长时程自主作业",
+        "利用指尖触觉与掌心相机完成受遮挡条件下的精细多指操作",
+        "理解自然语言目标并将其转换为语义子目标及连续机器人控制",
+        "通过仿真训练的运动先验在实体人形机器人上实现稳定的全身控制"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "Helix 02 是 Figure 面向人形机器人的统一全身 loco-manipulation VLA，将视觉感知、语言理解、任务推理、移动、操作和平衡整合为从像素到执行器的分层神经系统。",
+        "系统采用三个时间尺度：System 2 负责场景和语言理解及语义目标生成；Transformer 架构的 System 1 以 200 Hz 输出全身关节目标；System 0 以 1 kHz 处理接触、平衡和全身协调。",
+        "System 0 是基于人类运动数据学习的全身控制基础模型，以全身关节状态和基座运动为输入，直接输出关节级执行器命令；其训练结合大规模人体动作重定向、仿真强化学习和域随机化。",
+        "System 1 实现“全部传感器输入、全部关节输出”：输入包括头部相机、掌心相机、指尖触觉和全身本体感知，输出覆盖腿、躯干、头、手臂、手腕及独立手指。",
+        "掌心相机为头部视角受到自身手部或物体遮挡时提供手内视觉反馈；指尖触觉用于接触确认、抓握力调节和受力控制，支持取药片、操作注射器及从杂乱物料中分拣小零件。",
+        "官方展示的厨房任务由机器人完全自主连续执行，包含跨房间移动、装卸洗碗机、物体堆叠、双手交接以及用髋部或脚操作环境机构，全程没有人工干预或中途重置。",
+        "官方发布日期为 2026 年 1 月 27 日，而不是候选信息给出的 2025 年 8 月 12 日；后者对应 Figure 的“Helix Learns to Fold Laundry”公告。"
+      ],
+      "metrics": [
+        {
+          "label": "长时程自主任务",
+          "note": "在完整厨房中连续完成洗碗机卸载、物品收纳、重新装载和启动等流程，无人工干预、无重置。",
+          "value": "4 分钟"
+        },
+        {
+          "label": "连续动作数量",
+          "note": "厨房演示中按正确顺序执行的 loco-manipulation 动作，并包含隐式错误恢复。",
+          "value": "61 个"
+        },
+        {
+          "label": "System 0 训练数据",
+          "note": "关节级重定向的人体运动数据。",
+          "value": "超过 1,000 小时"
+        },
+        {
+          "label": "System 0 规模与训练环境",
+          "note": "System 0 为全身控制网络，并在大规模并行仿真环境中训练。",
+          "value": "1,000 万参数；超过 200,000 个并行环境"
+        },
+        {
+          "label": "控制频率与触觉灵敏度",
+          "note": "System 1 生成全身关节目标，System 0 执行关节级控制；指尖传感器可检测微小作用力。",
+          "value": "System 1：200 Hz；System 0：1 kHz；触觉最低约 3 克力"
+        }
+      ],
+      "official_organization_url": "https://www.figure.ai/company",
+      "official_project_url": "https://www.figure.ai/news/helix-02",
+      "open_source": false,
+      "organization_en": "Figure",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Figure 的官方专页明确将 Helix 02 描述为直接用于实体人形机器人的全身视觉-语言-动作软件系统，并公开其分层模型架构、传感器与执行器接口、训练方式和实体机器人自主执行结果；它不是硬件产品页。官方公司页面明确了责任组织。官方页面未宣布开放源代码，因此 open_source=false。候选日期有误：Helix 02 专页发布于 2026 年 1 月 27 日。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Helix 02 是 Figure 于 2026 年 1 月 27 日发布的全身人形机器人视觉-语言-动作系统。它在原有 Helix 的高层语义推理和视觉运动策略之下加入学习式 System 0 全身控制模型，使同一个分层神经系统能够把头部及掌心视觉、指尖触觉和本体感知映射到腿、躯干、头部、双臂、手腕和手指的连续控制。官方实体演示显示，该系统可在完整厨房中自主执行持续 4 分钟、包含 61 个动作的洗碗机作业，并能结合移动、平衡、双手协调、精细触觉操作和隐式错误恢复。该项目具备明确的软件主体、官方技术专页、具名责任公司及可核验的技术架构和结果，符合收录条件。"
+    }
+  },
+  "lerobot-v0-3-29c251d": {
+    "checked_at": "2026-08-08T05:08:47.898388+00:00",
+    "title": "LeRobot v0.3",
+    "accepted": true,
+    "reason": "符合收录条件：它是面向物理机器人和具身学习的开源软件栈，具有 Hugging Face 明确归属的官方代码库、版本化源码和正式 GitHub 发布页，且软件本身覆盖数据采集、策略训练、评估与真实机器人部署。需要更正候选元数据：所给 `https://huggingface.co/blog/lerobot-release-v03` 未能访问，官方可核验的 v0.3.2 发布页显示发布时间为 8 月 1 日，而不是所给的 2025-09-01；因此项目 URL采用可访问的官方 v0.3.2 发布页，不猜测不存在的博客地址。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从真实机器人采集、版本化、可视化并上传具有关节状态、动作和多相机视频的示范数据",
+        "使用统一策略接口训练和评估 ACT、Diffusion Policy、VQ-BeT、TD-MPC 等机器人学习策略",
+        "将训练后的策略部署到 ALOHA/Aloha 2 等真实机器人，并执行推理和动作控制",
+        "通过 PushT、ALOHA 等环境和数据集进行仿真评估与端到端回归测试",
+        "从 Hugging Face Hub 下载机器人数据集、加载预训练模型并管理训练产物"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "LeRobot 是 Hugging Face 负责开发的端到端机器人学习软件库，覆盖真实机器人数据采集、数据集管理、策略训练、评估和部署，而非机器人硬件产品页。",
+        "v0.3 系列以 LeRobotDataset 统一机器人轨迹数据，支持视频解码、数据增强、按 episode 切分、EpisodeAwareSampler，以及组合多个数据集训练的 MultiLeRobotDataset。",
+        "策略层提供统一 API，并实现或集成 ACT、Diffusion Policy、VQ-BeT 和 TD-MPC；ACT 支持 temporal ensembling，Diffusion Policy 支持多图像输入与 DDIMScheduler。",
+        "真实机器人链路包含设备接口、控制脚本和电机索引配置，并明确加入 ALOHA/Aloha 2 上的 ACT 真实机器人支持。",
+        "工程工具覆盖训练恢复、最终步骤 checkpoint、自动混合精度、CPU-only 与 Apple Silicon MPS 后端，以及训练和评估信息记录。",
+        "数据与模型能够接入 Hugging Face Hub，包括自动下载数据集、运行 Hub 上的模型、发布数据集及生成 dataset card；数据还可通过 Rerun 或 HTML 工具可视化。",
+        "候选所给博客地址无法访问，且官方材料未支持“2025-09-01”这一具体日期；本条依据 Hugging Face 官方 GitHub 的 v0.3.2 发布页和版本化源码页收录，官方发布页显示其于 8 月 1 日发布。"
+      ],
+      "metrics": [
+        {
+          "label": "仿真数据集",
+          "note": "v0.3.2 官方发布记录称加入 ALOHA replay buffer 及 4 个仿真数据集。",
+          "value": "4 个"
+        },
+        {
+          "label": "真实机器人数据集",
+          "note": "官方发布记录称加入 static ALOHA 与 mobile ALOHA 的真实世界数据集。",
+          "value": "25 个"
+        },
+        {
+          "label": "策略实现",
+          "note": "官方发布记录明确列出 ACT、Diffusion Policy、VQ-BeT 和 TD-MPC 的实现或集成。",
+          "value": "至少 4 类"
+        },
+        {
+          "label": "计算后端",
+          "note": "官方发布记录明确支持 CPU-only、CUDA、Apple Silicon MPS，并提供自动混合精度选项。",
+          "value": "3 类主要执行后端"
+        },
+        {
+          "label": "ALOHA 真实机器人部署",
+          "note": "官方发布记录明确实现 ACT 对 ALOHA/Aloha 2 的真实机器人支持。",
+          "value": "2 个 ALOHA 系列平台"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co",
+      "official_project_url": "https://github.com/huggingface/lerobot/releases/tag/v0.3.2",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：它是面向物理机器人和具身学习的开源软件栈，具有 Hugging Face 明确归属的官方代码库、版本化源码和正式 GitHub 发布页，且软件本身覆盖数据采集、策略训练、评估与真实机器人部署。需要更正候选元数据：所给 `https://huggingface.co/blog/lerobot-release-v03` 未能访问，官方可核验的 v0.3.2 发布页显示发布时间为 8 月 1 日，而不是所给的 2025-09-01；因此项目 URL采用可访问的官方 v0.3.2 发布页，不猜测不存在的博客地址。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "LeRobot v0.3 系列是 Hugging Face 面向端到端机器人学习的软件栈版本，统一了真实机器人数据采集、LeRobotDataset 数据管理、模仿学习与模型式策略训练、仿真评估以及实体机器人部署。其版本记录显示，系统不仅提供 ACT、Diffusion Policy、VQ-BeT、TD-MPC 等策略实现，还构建了从多相机机器人轨迹、视频解码和数据增强，到 Hub 数据与模型分发、训练恢复、自动混合精度和 ALOHA 实机控制的完整工具链。虽然候选给出的博客地址及 2025-09-01 日期无法由官方页面支持，但 Hugging Face 官方 v0.3.2 发布页和版本化源码足以确认该软件项目及其 2025 年发布事实。"
+    }
+  },
+  "nvidia-isaac-lab-2-2-38fa3a4": {
+    "checked_at": "2026-08-08T05:08:47.902657+00:00",
+    "title": "NVIDIA Isaac Lab 2.2",
+    "accepted": true,
+    "reason": "符合收录条件。Isaac Lab 2.2 是由 NVIDIA 明确负责并通过官方技术博客、版本化文档和官方 GitHub 仓库发布的开源机器人学习软件框架；其专门用途是为物理机器人与具身智能提供策略训练、仿真、数据生成、操作任务和评估工作流，不是硬件产品页。官方 v2.2.0 软件版本发布于 2025 年 8 月 7 日，正式 GA 公告发布于 2025 年 8 月 11 日，满足 2025 年以来发布的时间要求。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "面向机器人策略训练与评估，统一支持强化学习、模仿学习、示范学习和运动规划工作流",
+        "通过 Isaac Lab Mimic 的双臂环境采集、扩增并训练机器人操作数据",
+        "在 GPU 加速物理仿真中构建、并行运行和测试接触丰富型操作与工业装配任务",
+        "使用 Omniverse Fabric 加快场景载入，并提高物理仿真与传感器数据采集的执行效率",
+        "仿真张量化吸盘、力感知接触、空间肌腱及关节摩擦等机器人执行器与交互机制"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Humanoid intelligence",
+        "Data & benchmarks",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "Isaac Lab 2.2 是建立在 NVIDIA Isaac Sim 上的开源机器人学习软件框架，主要对象是策略训练、测试和评估，而不是机器人硬件产品；框架覆盖强化学习、从示范学习和运动规划等研究工作流。",
+        "2.2 版增强了基于 NVIDIA Isaac GR00T-Mimic 双臂训练环境的合成运动生成能力，用于扩增已采集的机器人操作数据，并加入两个面向 Fourier GR-1 人形机器人的 Mimic 环境及相应的域随机化、视觉鲁棒性评估工作流。",
+        "该版本集成 Omniverse Fabric，支持内存中 Stage 和 Fabric cloning，以缩短大规模并行环境的场景创建与载入过程，并提高物理仿真和传感器数据收集效率。",
+        "操作仿真方面新增张量化吸盘与 Surface Gripper 支持，可在并行训练环境中模拟动态吸附抓取；同时采用 Isaac Sim 5.0 PhysX API 更新关节摩擦模型，并加入空间肌腱支持。",
+        "环境套件加入 FORGE 多阶段、力感知的接触丰富型装配任务，以及 AutoMate 工业装配环境；AutoMate 的全部 100 个装配零件及其对应环境已纳入套件。",
+        "版本还提供面向大规模场景的 GPU 动画记录功能、视觉鲁棒性评估，以及用于训练和评估 GR00T N1 等操作策略的工业人形机器人任务。",
+        "官方 GitHub 的 v2.2.0 版本记录显示代码于 2025 年 8 月 7 日发布；NVIDIA 的正式 GA 公告日期为 2025 年 8 月 11 日，因此候选资料所写的 2025 年 8月1日不是可由官方页面支持的正式发布日期。"
+      ],
+      "metrics": [
+        {
+          "label": "新增 GR-1 Mimic 环境",
+          "note": "官方 v2.2.0 发布说明明确报告新增两个用于 Isaac Lab Mimic 的 GR-1 环境。",
+          "value": "2 个"
+        },
+        {
+          "label": "AutoMate 装配资产覆盖",
+          "note": "官方发布说明称全部装配零件及其各自环境均已纳入 Isaac Lab 环境套件。",
+          "value": "100 个装配零件及对应环境"
+        },
+        {
+          "label": "Isaac Sim 兼容性",
+          "note": "v2.2.x 完整兼容 Isaac Sim 5.0，并保持对 Isaac Sim 4.5 的向后兼容。",
+          "value": "Isaac Sim 4.5 和 5.0"
+        },
+        {
+          "label": "场景与仿真执行改进",
+          "note": "官方报告 Omniverse Fabric 集成可实现更快的载入，并提高物理仿真和传感器数据采集效率；官方材料未提供统一数值加速比。",
+          "value": "支持 Fabric 加速载入与执行"
+        },
+        {
+          "label": "接触丰富型操作覆盖",
+          "note": "该版本将 FORGE 的多阶段力感知装配任务和 AutoMate 工业装配任务集成到正式环境套件中。",
+          "value": "FORGE 与 AutoMate 两类环境套件"
+        }
+      ],
+      "official_organization_url": "https://www.nvidia.com/",
+      "official_project_url": "https://github.com/isaac-sim/IsaacLab/releases/tag/v2.2.0",
+      "open_source": true,
+      "organization_en": "NVIDIA",
+      "organization_kind": "Company",
+      "organization_zh": "英伟达",
+      "reason": "符合收录条件。Isaac Lab 2.2 是由 NVIDIA 明确负责并通过官方技术博客、版本化文档和官方 GitHub 仓库发布的开源机器人学习软件框架；其专门用途是为物理机器人与具身智能提供策略训练、仿真、数据生成、操作任务和评估工作流，不是硬件产品页。官方 v2.2.0 软件版本发布于 2025 年 8 月 7 日，正式 GA 公告发布于 2025 年 8 月 11 日，满足 2025 年以来发布的时间要求。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "NVIDIA Isaac Lab 2.2 是基于 Isaac Sim 5.0 的开源机器人学习框架版本，面向强化学习、模仿学习、运动规划、策略训练和闭环仿真评估。此次更新重点扩展了双臂与人形机器人操作数据生成、Fabric 加速的并行仿真、张量化吸盘和接触丰富型工业装配环境，并将 FORGE、AutoMate 和 GR-1 Mimic 任务纳入统一的软件工作流。它具有明确的官方项目页、版本化源代码和 NVIDIA 责任主体，且软件本身是发布主题，因此应纳入具身机器人技术项目索引。"
+    }
+  },
+  "nvidia-isaac-gr00t-n1-5-5ed4eff": {
+    "checked_at": "2026-08-08T05:08:47.943254+00:00",
+    "title": "NVIDIA Isaac GR00T N1.5",
+    "accepted": true,
+    "reason": "符合收录条件。它是面向物理人形机器人、可将视觉、语言和本体状态映射为连续动作的 VLA 软件模型，而非机器人硬件或产品规格页；NVIDIA GEAR 官方研究项目页明确介绍了模型架构、训练数据、后训练流程以及模拟和真实 GR-1 机器人实验。NVIDIA 还发布了模型权重和 Isaac-GR00T 代码。需要纠正候选元数据：当前可访问的官方专属项目页标示发布日期为 2025 年 6 月 9 日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "接收语言指令、一个或多个 RGB 相机视角及机器人本体状态，输出连续值动作序列",
+        "在跨本体设置下通过后训练适配特定人形机器人、操作任务和环境",
+        "执行语言条件下的抓取、放置及双臂操作，并根据指代表达选择目标物体",
+        "利用少量机器人示范以及人类第一视角视频学习新物体的操作策略",
+        "通过 DreamGen 合成轨迹学习训练数据中未覆盖的新操作行为"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "World models"
+      ],
+      "include": true,
+      "key_points": [
+        "GR00T N1.5 是 NVIDIA GEAR 研究实验室发布的开放式通用人形机器人基础模型；官方独立项目页的发布日期为 2025 年 6 月 9 日，而候选资料所列 2025 年 5 月 19 日不是该项目页标示的发布日期。",
+        "模型使用 NVIDIA Eagle 视觉语言模型编码文本和视觉观测，再由处理机器人状态、噪声动作及动作流的 DiT 通过交叉注意力读取视觉语言嵌入；发布的中型检查点规模为 3B 参数。",
+        "相较 N1，N1.5 在预训练和微调期间冻结 VLM，并简化连接视觉编码器与语言模型的适配器 MLP，同时对输入语言模型的视觉与文本 token 嵌入增加层归一化，以改善语言遵循和泛化。",
+        "N1.5 从 Eagle 2.5 出发增强视觉语言 grounding 与物理理解能力；其 2.1B VLM 在 NVIDIA 的 GR-1 指代表达数据及 RefCOCOg-val 上均超过页面对比的 Qwen2.5-VL-3B。",
+        "训练目标在流匹配策略损失之外加入 FLARE（Future Latent Representation Alignment），使模型对齐未来状态的潜在表示，而不是直接生成未来图像；该目标同时用于提升策略表现并从人类视频学习。",
+        "预训练数据混合包含内部 GR-1 数据、Open X-Embodiment、模拟 GR-1/DexMG、DreamGen 神经轨迹和 AgiBot-Beta；训练进行了 250,000 步，使用 1,000 张 H100、全局批量 16,384，并将 FLARE 损失系数设为 0.2。",
+        "模型支持由 DreamGen 生成的合成机器人轨迹进行后训练；官方实验使用每种行为 50 条合成轨迹，使模型学习倒水、移动鼠标、敲键盘、按按钮、展开垫子、使用吸尘器、点蜡烛和浇花八种新行为。"
+      ],
+      "metrics": [
+        {
+          "label": "视觉语言 grounding",
+          "note": "官方项目页报告；对比 Qwen2.5-VL-3B 的 35.5 和 85.2。",
+          "value": "GR-1 grounding IoU 40.4；RefCOCOg-val IoU 89.6"
+        },
+        {
+          "label": "语言条件模拟控制",
+          "note": "N1.5 架构从头训练；GR00T N1 对应结果分别为 52.8% 和 36.4%。",
+          "value": "Language Table 成功率 93.2%；Sim GR-1 Language 成功率 54.4%"
+        },
+        {
+          "label": "少数据模拟后训练",
+          "note": "每项任务使用 30 条示范；GR00T N1 在 RoboCasa 上为 17.4。",
+          "value": "RoboCasa 得分 47.5"
+        },
+        {
+          "label": "真实 GR-1 语言操作",
+          "note": "机器人根据语言指令从桌面上的两种水果中选择目标并放到盘子上；GR00T N1 分别为 46.6% 和 43.3%。",
+          "value": "语言遵循率 93.3%；总体成功率 83.0%"
+        },
+        {
+          "label": "新物体泛化",
+          "note": "测试包含 10 个预训练期间未见物体；N1.5 零样本为 15.0%，使用包含新物体的人类视频进行 FLARE 后训练后达到 55.0%。",
+          "value": "零样本成功率 15.0%；人类视频后训练成功率 55.0%"
+        }
+      ],
+      "official_organization_url": "https://www.nvidia.com/",
+      "official_project_url": "https://research.nvidia.com/labs/gear/gr00t-n15/",
+      "open_source": true,
+      "organization_en": "NVIDIA",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。它是面向物理人形机器人、可将视觉、语言和本体状态映射为连续动作的 VLA 软件模型，而非机器人硬件或产品规格页；NVIDIA GEAR 官方研究项目页明确介绍了模型架构、训练数据、后训练流程以及模拟和真实 GR-1 机器人实验。NVIDIA 还发布了模型权重和 Isaac-GR00T 代码。需要纠正候选元数据：当前可访问的官方专属项目页标示发布日期为 2025 年 6 月 9 日。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "GitHub",
+          "url": "https://github.com/NVIDIA/Isaac-GR00T"
+        },
+        {
+          "independent": false,
+          "platform": "Hugging Face",
+          "url": "https://huggingface.co/nvidia/GR00T-N1.5-3B"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "NVIDIA Isaac GR00T N1.5 是 NVIDIA GEAR 面向通用人形机器人的开放式视觉-语言-动作基础模型。它以语言、多个相机视角和机器人本体状态为条件，通过视觉语言编码器与流匹配 DiT 生成连续动作，并可使用真实示范、模拟数据、人类第一视角视频和 DreamGen 合成轨迹进行后训练。N1.5 的核心更新包括冻结并增强 Eagle 系列 VLM、简化视觉语言适配器、加入 token 层归一化，以及将 FLARE 未来潜在表示对齐目标与动作流匹配联合训练。官方结果显示，它相较 N1 显著改善了指代表达 grounding、语言条件控制、少样本操作和真实 GR-1 上的语言遵循，同时能够从人类视频学习未见物体，并用少量合成轨迹获得八种新操作行为。"
+    }
+  },
+  "gr-3-9031c83": {
+    "checked_at": "2026-08-08T05:08:47.911332+00:00",
+    "title": "GR-3",
+    "accepted": true,
+    "reason": "符合收录条件。GR-3 是面向物理机器人的视觉-语言-动作软件策略，而非仅介绍 ByteMini 硬件；字节跳动 Seed 提供了独立的官方模型发布文章、项目主页和技术报告页面，并明确由 Seed Robotics Team 负责。官方材料记录了真实机器人上的拾取放置、长程任务、双臂柔性物体操作和移动操作实验。未发现官方公开的 GR-3 源代码或模型权重，因此 open_source=false，但开源并非收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据摄像头视觉观测和自然语言指令端到端生成机器人动作",
+        "执行面向新物体、新环境及抽象语言概念的通用拾取放置",
+        "完成包含至少 10 个子任务的长程餐桌整理，并支持执行过程中动态跟随分步指令",
+        "通过双臂协同完成衣架穿衣、挂衣等柔性物体精细操作",
+        "联合机械臂与移动底盘执行全身移动操作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Whole-body control"
+      ],
+      "include": true,
+      "key_points": [
+        "GR-3 是字节跳动 Seed Robotics Team 开发的 40 亿参数端到端视觉-语言-动作模型，采用 Mixture-of-Transformers 架构，将视觉语言模块与动作生成模块组合在统一策略中。",
+        "动作生成模块采用 Diffusion Transformer 和 Flow Matching；团队在 DiT block 的注意力与前馈网络中加入 RMSNorm，以增强动态语言指令跟随能力。",
+        "训练方案联合三类数据：遥操作采集的真实机器人轨迹、通过 VR 设备采集的人类操作轨迹，以及公开可用的大规模视觉语言数据；其中机器人轨迹用于模仿学习，视觉语言数据用于强化物体、空间关系和抽象概念理解。",
+        "人类 VR 轨迹被用于少样本适配新物体和新任务。官方报告称 VR 数据采集约为每小时 450 条轨迹，而机器人遥操作约为每小时 250 条，支持更低成本的持续微调。",
+        "GR-3 面向真实机器人操作而非离线视觉任务，实验覆盖 99 个现实物品、训练未见的新物体、四类新环境、抽象指令、长程餐桌清理以及双臂柔性衣物操作。",
+        "模型与 ByteMini 双臂移动机器人联合验证；该平台提供 22 个全身自由度、双 7 自由度机械臂、腕部与头部摄像头，以及全身柔顺控制和全身遥操作系统。",
+        "官方发布页日期为 2025-07-22，官方技术报告页面标注 2025-07-21；因此候选材料所给的 2025-07-01 不是可核实的正式发布日期。"
+      ],
+      "metrics": [
+        {
+          "label": "基础拾取放置",
+          "note": "训练中见过的环境和物体；官方同时报告指令遵循率与任务成功率。",
+          "value": "指令遵循率 98.1%，成功率 96.3%"
+        },
+        {
+          "label": "视觉语言联合训练增益",
+          "note": "相对于不使用公开图文数据联合训练的 GR-3 变体。",
+          "value": "未见复杂指令成功率提高 42.8%，未见物体成功率提高 33.4%"
+        },
+        {
+          "label": "少样本人类轨迹适配",
+          "note": "针对机器人训练数据中未见的物体，加入通过 VR 采集的 10 条人类轨迹。",
+          "value": "成功率由不足 60% 提升至超过 80%"
+        },
+        {
+          "label": "长程餐桌清理",
+          "note": "仅接收“收拾餐桌”这一总体指令，执行打包剩菜、收纳餐具、处理垃圾和搬运收纳盒等多阶段流程。",
+          "value": "平均任务完成度超过 95%"
+        },
+        {
+          "label": "双臂柔性衣物操作",
+          "note": "将衣架穿入衣物并挂到晾衣杆，测试包含不同衣物摆放状态及机器人数据中未见的短袖衣物。",
+          "value": "平均任务完成度 86.7%"
+        }
+      ],
+      "official_organization_url": "https://seed.bytedance.com/en",
+      "official_project_url": "https://seed.bytedance.com/en/blog/gr-3-a-generalist-robot-policy-with-scaling-up-and-enhanced-generalization",
+      "open_source": false,
+      "organization_en": "ByteDance Seed",
+      "organization_kind": "Research Lab",
+      "organization_zh": "字节跳动 Seed",
+      "reason": "符合收录条件。GR-3 是面向物理机器人的视觉-语言-动作软件策略，而非仅介绍 ByteMini 硬件；字节跳动 Seed 提供了独立的官方模型发布文章、项目主页和技术报告页面，并明确由 Seed Robotics Team 负责。官方材料记录了真实机器人上的拾取放置、长程任务、双臂柔性物体操作和移动操作实验。未发现官方公开的 GR-3 源代码或模型权重，因此 open_source=false，但开源并非收录条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "GR-3 是字节跳动 Seed 于 2025 年 7 月正式发布的 40 亿参数通用机器人视觉-语言-动作策略。它通过 Mixture-of-Transformers 将视觉语言理解与基于 Flow Matching 的 DiT 动作生成结合，并联合训练网页级视觉语言数据、真实机器人轨迹和 VR 人类轨迹。其核心价值在于把开放概念理解、少样本技能适配与真实机器人控制放进同一训练框架：模型能够操作训练未见的物体、适应新环境、理解空间关系和大小等抽象指令，并执行餐桌整理和挂衣等长程或双臂柔性物体任务。官方在 99 个现实物品及多种真实场景上进行了系统测试，报告基础拾取放置成功率为 96.3%，长程餐桌清理平均完成度超过 95%，挂衣任务平均完成度为 86.7%。项目虽同时介绍配套的 ByteMini 双臂移动机器人，但专门页面的主要技术对象是可部署于物理机器人的 GR-3 VLA 软件模型，因而不是硬件产品公告。"
+    }
+  },
+  "steerable-scene-generation-3d840a5": {
+    "checked_at": "2026-08-08T05:08:47.915647+00:00",
+    "title": "Steerable Scene Generation",
+    "accepted": true,
+    "reason": "纳入。该项目于 2025 年 5 月 7 日首次公开，并非题目所给的 2025 年 7 月 1 日；它具有独立官方项目页，明确列出 Massachusetts Institute of Technology、Toyota Research Institute 和 Carnegie Mellon University 的作者隶属关系。发布物是面向机器人训练与评测的可控 SE(3) 仿真场景生成软件及数据引擎，而不是机器人硬件或产品规格页。官方页面同时提供代码、模型权重、数据集和机器人交互演示；代码仓库采用 MIT License。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从固定三维资产库联合生成物体类别及其连续 SE(3) 位姿，覆盖桌面、货架和房间尺度场景。",
+        "通过文本条件生成、场景补全和局部重排控制场景内容，并支持 classifier-free guidance。",
+        "通过强化学习后训练或基于蒙特卡洛树搜索的推理时优化，使场景满足拥挤度、可容纳物体数量和物理可行性等目标。",
+        "使用无穿透投影与 Drake 刚体仿真修正碰撞和不稳定物体，生成可直接用于机器人交互与数据采集的仿真场景。",
+        "提供训练、采样、评测、Drake 场景导出、模型检查点和大规模 SE(3) 场景数据集。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "核心模型是统一的扩散式场景生成器，将场景表示为无序物体集合，同时预测固定资产库中的物体类别和每个物体的连续 SE(3) 位姿，而非只生成二维布局或视觉图像。",
+        "训练数据由程序化场景生成器构建，涵盖 Dimsum Table、Breakfast Table、Living Room Shelf、Pantry Shelf 和 Restaurant 五类环境；Breakfast Table 与 Restaurant 还按低拥挤和高拥挤设置划分变体。",
+        "系统提供三种互补的可控生成机制：强化学习后训练用于改变整体生成分布，文本条件生成和 inpainting 用于指定、补全或重排内容，MCTS 则可在不重新训练模型的情况下优化任意可计算奖励。",
+        "推理时 MCTS 将部分完成的场景作为树节点，通过掩码选择需要重新生成的物体或空槽，再以场景奖励评估候选分支；该设计允许使用不可微目标，例如最大化处于静态平衡且没有穿透的物体数量。",
+        "物理后处理首先优化物体平移，将其投影到无碰撞配置并保持姿态方向不变；随后在 Drake 中执行重力仿真，使不稳定物体自然沉降，从而提高场景的物理合理性。",
+        "官方实现支持无条件采样、文本条件采样、场景重排与补全、推理时搜索、强化学习后训练、检查点评测以及 Drake directives 或结构化 pickle 场景导出。",
+        "项目页面展示了移动式 KUKA iiwa 在未经人工修改的生成场景中进行遥操作和拾放交互；机器人通过 SpaceMouse 输入末端位姿增量，并由微分逆运动学执行。"
+      ],
+      "metrics": [
+        {
+          "label": "场景数据规模",
+          "note": "论文报告的五类 SE(3) 场景总数。",
+          "value": "44,790,942 个场景"
+        },
+        {
+          "label": "单场景复杂度",
+          "note": "数据集中单个场景可包含的物体数量上限。",
+          "value": "最多 125 个物体"
+        },
+        {
+          "label": "MCTS 推理时搜索",
+          "note": "Dimsum 场景中，训练集平均为 17.1 个物体；最佳无条件候选包含 21 个物理可行物体，MCTS 在 313 次迭代后达到训练集上限。",
+          "value": "34 个物理可行物体，313 次迭代"
+        },
+        {
+          "label": "高拥挤餐厅无条件生成",
+          "note": "项目模型在 Restaurant High-Clutter 测试中的分类器准确率、FID 和平均总穿透深度；这些指标分别以接近 50%、更低和更低为佳。",
+          "value": "CA 70.74 ± 8.05%；FID 1.31；MTP 6.31 cm"
+        },
+        {
+          "label": "客厅货架无条件生成",
+          "note": "项目模型在 Living Room Shelf 测试中的分类器准确率、FID 和平均总穿透深度。",
+          "value": "CA 52.84 ± 1.26%；FID 2.09；MTP 0.02 cm"
+        }
+      ],
+      "official_organization_url": "https://www.mit.edu/",
+      "official_project_url": "https://steerable-scene-generation.github.io/",
+      "open_source": true,
+      "organization_en": "Massachusetts Institute of Technology",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "纳入。该项目于 2025 年 5 月 7 日首次公开，并非题目所给的 2025 年 7 月 1 日；它具有独立官方项目页，明确列出 Massachusetts Institute of Technology、Toyota Research Institute 和 Carnegie Mellon University 的作者隶属关系。发布物是面向机器人训练与评测的可控 SE(3) 仿真场景生成软件及数据引擎，而不是机器人硬件或产品规格页。官方页面同时提供代码、模型权重、数据集和机器人交互演示；代码仓库采用 MIT License。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Steerable Scene Generation 是由麻省理工学院牵头，并与 Toyota Research Institute、Carnegie Mellon University 合作开发的机器人仿真场景生成系统。项目将大规模程序化场景数据蒸馏进统一扩散模型，由模型联合选择三维资产并预测完整 SE(3) 位姿，再通过文本条件、场景 inpainting、强化学习后训练和 MCTS 推理时搜索，将生成分布导向具体机器人任务需求。系统还把无碰撞投影与 Drake 物理仿真串联起来，修复物体穿透和静态不稳定问题。其公开资产包括 MIT 许可代码、模型检查点以及 44,790,942 个场景的数据集，并通过移动式 KUKA iiwa 的实际遥操作证明生成场景可用于机器人交互和数据采集。"
+    }
+  },
+  "gemini-robotics-on-device-64ad1ab": {
+    "checked_at": "2026-08-08T05:08:47.920018+00:00",
+    "title": "Gemini Robotics On-Device",
+    "accepted": true,
+    "reason": "符合收录条件：Google DeepMind 于 2025 年 6 月 24 日发布了专门的官方项目公告，明确将其定义为可在实体机器人本地运行、接收视觉和语言输入并输出动作的 VLA 软件模型；公告还提供了任务适配、实体机器人评测、跨形态迁移和 SDK 使用材料。它不是硬件产品页。模型权重并未开放，且发布时仅向 trusted testers 提供访问，因此 open_source=false；配套 Gemini Robotics SDK 后续具有公开代码，不改变模型本身的闭源状态。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在双臂实体机器人上依据图像输入与自然语言指令直接生成动作，并在机器人本地完成低延迟推理。",
+        "执行拉开袋子拉链、折叠衣物、抽取卡片和倾倒沙拉酱等精细操作任务。",
+        "通过少量任务示范进行微调，适配新的物体、场景和操作任务。",
+        "从主要训练使用的 ALOHA 平台迁移到双臂 Franka FR3，并执行服装折叠和工业皮带装配等任务。",
+        "适配 Apptronik Apollo 人形机器人，按照自然语言指令操作不同物体，包括训练中未见过的物体。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Gemini Robotics On-Device 是面向双臂机器人的视觉-语言-动作基础模型，输入视觉与文本信息并输出机器人动作；项目主体明确是机器人软件模型，而非机器人硬件或产品规格。",
+        "模型针对机器人端侧部署优化，强调较低计算资源需求、低延迟推理以及脱离数据网络运行，因此可用于网络间歇或完全离线的机器人环境。",
+        "模型继承 Gemini Robotics 的视觉、语义和行为泛化能力，可遵循自然语言指令，并完成拉开袋子拉链、折叠衣物等高灵巧度任务。",
+        "这是 Google DeepMind 首个向机器人开发者提供微调能力的 VLA 模型；官方 SDK 支持模型评估、MuJoCo 仿真测试、数据处理和面向新任务的适配流程，但模型访问在发布时限于 trusted tester 计划。",
+        "官方在视觉、语义和动作泛化三类测试中，将其与旗舰 Gemini Robotics 及此前最佳端侧模型比较；On-Device 模型在完全本地运行的同时显著超过此前端侧基线，但整体低于云端旗舰模型。",
+        "快速适配评估覆盖七项不同难度的灵巧操作任务；官方报告模型可用 50 至 100 条示范适配新任务，并在平均成功率上超过此前最佳端侧 VLA。",
+        "模型主要针对 ALOHA 训练，但进一步适配到了双臂 Franka FR3 和 Apptronik Apollo 人形机器人，展示了跨机器人形态迁移能力。"
+      ],
+      "metrics": [
+        {
+          "label": "新任务适配所需示范",
+          "note": "官方称模型可通过微调快速适配新领域和任务。",
+          "value": "50–100 条示范"
+        },
+        {
+          "label": "泛化评测规模",
+          "note": "官方图表覆盖视觉、语义和动作泛化，并比较 Gemini Robotics、此前最佳端侧模型和 Gemini Robotics On-Device。",
+          "value": "9 项任务"
+        },
+        {
+          "label": "快速适配评测规模",
+          "note": "任务包括给午餐盒拉拉链、抽取卡片和倾倒沙拉酱等不同难度的灵巧操作。",
+          "value": "7 项灵巧操作任务"
+        },
+        {
+          "label": "快速适配平均成功率",
+          "note": "官方图表报告的近似值；旗舰 Gemini Robotics 约为 0.80，此前最佳端侧模型约为 0.53。",
+          "value": "约 0.68"
+        },
+        {
+          "label": "跨形态适配",
+          "note": "模型主要针对 ALOHA 训练，官方随后展示了对其他机器人形态的适配。",
+          "value": "ALOHA、双臂 Franka FR3、Apollo 人形机器人，共 3 类平台"
+        }
+      ],
+      "official_organization_url": "https://deepmind.google/",
+      "official_project_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
+      "open_source": false,
+      "organization_en": "Google DeepMind",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "符合收录条件：Google DeepMind 于 2025 年 6 月 24 日发布了专门的官方项目公告，明确将其定义为可在实体机器人本地运行、接收视觉和语言输入并输出动作的 VLA 软件模型；公告还提供了任务适配、实体机器人评测、跨形态迁移和 SDK 使用材料。它不是硬件产品页。模型权重并未开放，且发布时仅向 trusted testers 提供访问，因此 open_source=false；配套 Gemini Robotics SDK 后续具有公开代码，不改变模型本身的闭源状态。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Gemini Robotics On-Device 是 Google DeepMind 于 2025 年 6 月 24 日发布的端侧视觉-语言-动作模型，面向双臂机器人和其他可适配机器人形态。它把视觉观察与自然语言指令转换为机器人动作，并针对较低计算资源和本地低延迟推理进行优化，可在没有持续网络连接的条件下工作。官方展示了模型在视觉、语义和行为泛化方面的能力，以及拉拉链、折叠衣物、抽取卡片、倾倒液体和精密装配等灵巧操作。其核心工程特点是允许开发者通过 50 至 100 条示范进行任务微调，并借助 Gemini Robotics SDK 在实体机器人或 MuJoCo 仿真中评估和适配模型。模型主要使用 ALOHA 平台训练，但官方进一步将其迁移至双臂 Franka FR3 和 Apptronik Apollo 人形机器人，验证了跨形态适配。发布时模型处于受限的 trusted tester 访问状态，并非开放权重项目。"
+    }
+  },
+  "v-jepa-2-f0219df": {
+    "checked_at": "2026-08-08T05:08:47.924397+00:00",
+    "title": "V-JEPA 2",
+    "accepted": true,
+    "reason": "符合收录条件。Meta FAIR提供了独立的官方项目页和官方技术公告，页面主体明确是可下载的自监督视频世界模型及其动作条件机器人规划模型，而不是机械臂硬件或机器人产品。官方资料明确记录了V-JEPA 2-AC在真实Franka机械臂上的零样本规划与控制，并公开PyTorch代码、模型检查点和配置。([ai.meta.com](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从超过100万小时互联网视频和100万张图像中进行无文本标注的自监督表征学习。",
+        "通过编码器与预测器在潜在表征空间理解运动、物体交互并预测视频状态变化。",
+        "将V-JEPA 2与语言模型对齐，执行视频问答和物理、时间推理。",
+        "将动作条件世界模型用于闭环模型预测控制，在真实Franka机械臂上完成到达、抓取和取放操作。"
+      ],
+      "fields": [
+        "World models",
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "V-JEPA 2采用联合嵌入预测架构：编码器把原始视频转换为语义状态表征，预测器根据可见上下文预测被遮挡部分的潜在表征，而不是直接重建像素。([ai.meta.com](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/))",
+        "训练分为两个阶段：首先使用超过100万小时的视频和100万张图像进行无动作自监督预训练；随后冻结视频编码器，利用少量机器人交互轨迹训练动作条件预测器。([ai.meta.com](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/))",
+        "机器人版本V-JEPA 2-AC是一个约3亿参数、采用块因果注意力的自回归动作条件世界模型，根据历史状态、动作和本体感知信息预测未来视频表征。([arxiv.org](https://arxiv.org/abs/2506.09985))",
+        "V-JEPA 2-AC使用DROID数据集中不足62小时的无标签机器人视频进行后训练，不依赖部署实验室中的环境专用数据、任务专用训练或人工设计奖励。([ai.meta.com](https://ai.meta.com/research/vjepa/))",
+        "控制时以目标图像或子目标作为任务描述，在潜在空间评估候选动作，并置于闭环模型预测控制流程中执行规划。([arxiv.org](https://arxiv.org/abs/2506.09985))",
+        "官方实验将模型零样本部署到两个实验室的Franka机械臂，通过单目RGB视觉完成到达、杯子或盒子抓取以及取放等先取后放操作。([github.com](https://github.com/facebookresearch/vjepa2))",
+        "Meta公开了官方PyTorch实现、预训练检查点、动作条件模型检查点、训练配置、评估探针以及PyTorch Hub和Hugging Face加载接口。([github.com](https://github.com/facebookresearch/vjepa2))"
+      ],
+      "metrics": [
+        {
+          "label": "Something-Something v2动作识别",
+          "note": "ViT-g/16、384分辨率，冻结表征上使用attentive probe；官方列出的此前最佳结果为69.7%。",
+          "value": "77.3% top-1 accuracy"
+        },
+        {
+          "label": "EPIC-KITCHENS-100动作预判",
+          "note": "预测未来1秒的人类动作；官方论文称相对此前最佳模型提高44%。",
+          "value": "39.7 Recall@5"
+        },
+        {
+          "label": "真实机器人到达成功率",
+          "note": "V-JEPA 2-AC在Franka机械臂实验中的Reach结果。",
+          "value": "100%"
+        },
+        {
+          "label": "杯子取放成功率",
+          "note": "V-JEPA 2-AC在单目RGB输入的真实机器人实验中完成杯子pick-and-place。",
+          "value": "80%"
+        },
+        {
+          "label": "盒子取放成功率",
+          "note": "V-JEPA 2-AC在单目RGB输入的真实机器人实验中完成盒子pick-and-place。",
+          "value": "50%"
+        }
+      ],
+      "official_organization_url": "https://ai.meta.com/research/",
+      "official_project_url": "https://ai.meta.com/research/vjepa/",
+      "open_source": true,
+      "organization_en": "Meta FAIR",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "符合收录条件。Meta FAIR提供了独立的官方项目页和官方技术公告，页面主体明确是可下载的自监督视频世界模型及其动作条件机器人规划模型，而不是机械臂硬件或机器人产品。官方资料明确记录了V-JEPA 2-AC在真实Franka机械臂上的零样本规划与控制，并公开PyTorch代码、模型检查点和配置。([ai.meta.com](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "V-JEPA 2是Meta FAIR发布的自监督视频基础世界模型，目标是通过观察学习物理世界的状态表征、动态预测和行动规划。基础模型先在超过100万小时互联网视频及100万张图像上进行无动作预训练，并可通过轻量探针或语言模型对齐用于运动理解、动作预判和视频问答。其机器人扩展V-JEPA 2-AC冻结预训练编码器，再用不足62小时DROID机器人轨迹训练动作条件预测器；该模型在潜在空间预测动作造成的未来视觉状态，并通过模型预测控制在未采集本地训练数据的新环境中驱动Franka机械臂。官方真实机器人实验覆盖到达、抓取和取放任务，其中到达成功率100%，杯子取放80%，盒子取放50%。项目提供官方PyTorch代码、多个规模的预训练权重、动作条件检查点和评估配置，因此属于具有明确实体机器人控制用途和可复用软件产物的具身世界模型项目。([ai.meta.com](https://ai.meta.com/research/vjepa/))"
+    }
+  },
+  "smolvla-bd300e4": {
+    "checked_at": "2026-08-08T05:08:47.929169+00:00",
+    "title": "SmolVLA",
+    "accepted": true,
+    "reason": "符合收录条件：SmolVLA 于 2025 年 6 月由 Hugging Face 通过专门官方项目文章发布，是面向实体机器人控制的可下载、可训练和可部署 VLA 软件模型；官方页面明确给出了架构、LeRobot 代码与权重、训练和微调方法、异步推理栈，以及仿真和实体机器人评测结果。它不是硬件产品页，且责任组织、发布日期和软件交付物均有官方来源支持。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "接收多相机 RGB 图像、机器人当前传感运动状态和自然语言指令，并生成连续机器人动作块",
+        "通过 LeRobot 训练框架在用户采集的机器人数据集上微调预训练策略，或从 VLM 与动作专家架构开始训练",
+        "在 SO100、SO101 等低成本实体机械臂上执行拾放、堆叠和分类操作",
+        "采用异步推理，将感知与动作预测同动作执行解耦，以提高实体机器人的响应速度和任务吞吐量"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "SmolVLA 是 Hugging Face 发布的轻量级机器人视觉-语言-动作基础模型，官方页面、模型权重、训练代码和 LeRobot 集成均可访问；其核心交付物是可训练、微调和部署的软件策略，而非机器人硬件产品。",
+        "模型以多视角 RGB 图像、机器人传感运动状态和自然语言任务指令为输入；VLM 将这些输入编码为上下文特征，再由基于流匹配 Transformer 的动作专家生成连续动作块。",
+        "模型规模为 450M 参数，预训练基础来自 SmolVLM2-500M-Video-Instruct，并通过视觉 token 缩减、跳层推理以及交错的交叉注意力和自注意力设计降低训练与推理成本。",
+        "SmolVLA 使用带兼容许可的 LeRobot 社区共享数据进行预训练；官方消融结果显示，社区数据预训练显著提高了 SO100 实体任务成功率，多任务微调还能支持低数据条件下的任务迁移。",
+        "项目提供预训练的 smolvla_base，可通过 LeRobot 命令行在自定义数据集上微调，也可通过 SmolVLAPolicy.from_pretrained 直接加载；官方还提供从预训练 VLM 加动作专家开始训练的路径。",
+        "异步推理栈将模型推理与机器人动作执行分离，使机器人在执行当前动作时计算后续动作块；官方实验显示，其任务成功率与同步模式接近，但完成速度和固定时间内的任务吞吐量更高。",
+        "评测覆盖 LIBERO、Meta-World 仿真基准以及 SO100、SO101 实体机械臂任务，包括拾放、堆叠、分类、分布外物体配置、扰动条件和新机器人形态上的泛化。"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方发布的预训练 SmolVLA 基础模型。",
+          "value": "450M 参数"
+        },
+        {
+          "label": "社区数据预训练收益",
+          "note": "SO100 成功率由未使用 LeRobot 社区数据预训练时的 51.7% 提升至 78.3%，绝对提升 26.6 个百分点。",
+          "value": "51.7% → 78.3%（+26.6 个百分点）"
+        },
+        {
+          "label": "异步推理完成时间",
+          "note": "异步与同步模式任务成功率均约为 78%；异步模式的平均任务完成时间更短。",
+          "value": "9.7 秒 vs. 13.75 秒，约快 30%"
+        },
+        {
+          "label": "固定时间任务吞吐量",
+          "note": "官方立方体拾放计数实验中，异步推理在相同时间窗口内完成更多任务。",
+          "value": "19 次 vs. 9 次，约 2 倍"
+        },
+        {
+          "label": "微调计算成本",
+          "note": "官方 LeRobot 文档给出的 smolvla_base 参考训练配置；实际时间取决于数据和配置。",
+          "value": "单张 A100 上训练 20,000 步约 4 小时"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co/",
+      "official_project_url": "https://huggingface.co/blog/smolvla",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：SmolVLA 于 2025 年 6 月由 Hugging Face 通过专门官方项目文章发布，是面向实体机器人控制的可下载、可训练和可部署 VLA 软件模型；官方页面明确给出了架构、LeRobot 代码与权重、训练和微调方法、异步推理栈，以及仿真和实体机器人评测结果。它不是硬件产品页，且责任组织、发布日期和软件交付物均有官方来源支持。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "SmolVLA 是 Hugging Face 于 2025 年发布的 4.5 亿参数开源视觉-语言-动作模型，目标是在消费级计算设备和低成本机器人平台上实现可训练、可微调的自然语言条件机器人控制。其输入同时覆盖多相机 RGB 观察、机器人本体状态与文字指令，由视觉语言模型构建上下文，再通过流匹配动作专家预测连续动作块。项目直接集成于 LeRobot，公开了模型权重、训练代码、社区预训练数据路径和面向自定义实体任务的微调流程。除降低模型规模外，SmolVLA 还实现了异步机器人推理栈，将动作预测与执行解耦，在保持约 78% 任务成功率的实验中，将平均完成时间从 13.75 秒降至 9.7 秒，并将固定时间窗口内的完成次数从 9 次提高到 19 次。官方评测覆盖 LIBERO、Meta-World、SO100 和 SO101，涉及拾放、堆叠、分类、扰动响应和跨机器人形态泛化，因此属于具有明确实体机器人用途、完整软件交付和公开技术结果的 embodied robotics 项目。"
+    }
+  },
+  "roboarena-1e00ba0": {
+    "checked_at": "2026-08-08T05:08:47.933683+00:00",
+    "title": "RoboArena",
+    "accepted": false,
+    "reason": "尚在核实，当前不是最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核实官方项目页、负责机构、发布时间及软件属性，再从官方技术材料提取可复核的能力和指标。评估会严格区分真实机器人评测平台与单纯硬件或论文页面。",
+        "随后检查项目页链接的论文、代码或数据说明，确保组织归属和数值结果都有明确来源。预计只采用项目方的一手材料。下列字段为内部处理状态，不代表最终结论。",
+        "正在检索 RoboArena 官方页面与相关一手材料。"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "核实 dedicated official page。",
+        "核实 responsible organization。",
+        "核实 release date。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "待核实",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://robo-arena.github.io/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "尚在核实，当前不是最终判定。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在依据官方项目页面及其链接材料核验 RoboArena 是否符合收录标准。"
+    }
+  },
+  "openvla-oft-d2d6db6": {
+    "checked_at": "2026-08-08T05:08:47.938250+00:00",
+    "title": "OpenVLA-OFT",
+    "accepted": true,
+    "reason": "符合收录条件：这是面向物理机器人操作的 VLA 微调配方、策略、代码和模型权重发布；存在由 Stanford University 作者明确署名的独立官方项目页，并包含 LIBERO 仿真与双臂 ALOHA 实机结果。需要更正候选日期：可访问资料显示项目页 FAQ 已于 2025年2月22日更新，论文于 2025年2月27日提交，OpenVLA 官方仓库于 2025年3月3日记录 OFT 发布；候选所给的 2025年6月1日不能作为最早发布日期。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过图像、语言指令和可选本体状态生成连续机器人动作",
+        "在四个 LIBERO 仿真任务套件上执行语言条件机器人操作",
+        "在双臂 ALOHA 机器人上执行折叠衣物、舀取食材和将指定物体放入锅中等操作",
+        "通过 FiLM 增强版本 OpenVLA-OFT+ 根据语言指定目标物体，并进行高频双臂控制",
+        "支持第三人称相机、腕部相机、本体状态、多维连续动作及动作分块等不同输入输出配置"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "OpenVLA-OFT 是针对 OpenVLA 视觉-语言-动作模型的软件微调方案及策略发布，不是机器人硬件产品；官方项目页提供代码、预训练模型、实验结果和真实机器人演示。",
+        "OFT 配方组合并行解码、动作分块、连续动作表示和 L1 回归目标，以替代基础 OpenVLA 逐 token 生成离散动作的方式，提高动作生成吞吐量和策略性能。",
+        "项目使用 LoRA 适配 OpenVLA，并以 Distributed Data Parallel 训练，无需进行完整模型微调或模型分片；官方代码支持梯度累积和多 GPU 训练。",
+        "OpenVLA-OFT 可纳入额外腕部相机图像和机器人本体状态。面向 ALOHA 的配置可接收第三人称相机与两个腕部相机，并输出 14 维、分块长度为 25 的动作。",
+        "增强版本 OpenVLA-OFT+ 使用 FiLM 将语言嵌入注入视觉特征，以改善语言落地能力，并在双臂 ALOHA 上实现语言驱动的高频操作。",
+        "项目同时覆盖 LIBERO 仿真评测和真实 ALOHA 操作实验；真实任务包括折叠短裤、折叠衬衫、将语言指定食材舀入碗中，以及将指定物体放入锅中。"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO 平均成功率",
+          "note": "覆盖 LIBERO-Spatial、LIBERO-Object、LIBERO-Goal 和 LIBERO-10 四个任务套件。",
+          "value": "97.1%"
+        },
+        {
+          "label": "相对基础 OpenVLA 的成功率变化",
+          "note": "论文报告四套 LIBERO 任务的平均成功率由 76.5% 提升至 97.1%。",
+          "value": "76.5% → 97.1%"
+        },
+        {
+          "label": "动作生成吞吐量",
+          "note": "通过并行解码和动作分块，相对于基础 OpenVLA。",
+          "value": "26×"
+        },
+        {
+          "label": "推理延迟",
+          "note": "官方项目页报告相对于基础 OpenVLA 的延迟降低幅度。",
+          "value": "3× lower latency"
+        },
+        {
+          "label": "真实 ALOHA 平均成功率优势",
+          "note": "相对于使用默认配方微调的 π0、RDT-1B，以及从头训练的 ACT、Diffusion Policy，论文报告的最大绝对优势。",
+          "value": "最高 15 个百分点"
+        }
+      ],
+      "official_organization_url": "https://www.stanford.edu/",
+      "official_project_url": "https://openvla-oft.github.io/",
+      "open_source": true,
+      "organization_en": "Stanford University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是面向物理机器人操作的 VLA 微调配方、策略、代码和模型权重发布；存在由 Stanford University 作者明确署名的独立官方项目页，并包含 LIBERO 仿真与双臂 ALOHA 实机结果。需要更正候选日期：可访问资料显示项目页 FAQ 已于 2025年2月22日更新，论文于 2025年2月27日提交，OpenVLA 官方仓库于 2025年3月3日记录 OFT 发布；候选所给的 2025年6月1日不能作为最早发布日期。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "OpenVLA-OFT 是 Stanford University 团队面向视觉-语言-动作模型提出并发布的优化微调配方及机器人策略实现。它以 OpenVLA 为基础，将并行动作解码、动作分块、连续动作表示和 L1 回归目标结合起来，解决基础 VLA 逐 token 动作生成速度慢、机器人适配性能不足以及输入输出规格不够灵活的问题。项目发布了训练与评估代码、LoRA 微调流程和预训练检查点，并在 LIBERO 四个仿真任务套件及真实双臂 ALOHA 平台上验证。增强版本 OpenVLA-OFT+ 进一步通过 FiLM 强化语言信息对视觉特征的调制，使策略能够根据语言选择目标对象并执行折叠、舀取、放置等高频双臂操作。官方报告其 LIBERO 平均成功率达到 97.1%，动作生成吞吐量相对基础 OpenVLA 提高 26 倍，并在真实 ALOHA 评测中优于多种微调 VLA 和从头训练的模仿学习策略。"
+    }
+  },
+  "partnr-295260d": {
+    "checked_at": "2026-08-08T05:08:47.948118+00:00",
+    "title": "PARTNR",
+    "accepted": false,
+    "reason": "不纳入。虽然 PARTNR 明确属于具身机器人软件项目，具备 Meta FAIR 官方项目页、代码、数据集、基准和规划模型，但不满足“自 2025 年起发布”的时间条件。Meta 官方项目/研究页面将 PARTNR 的公开日期标为 2024 年 10 月 31 日，官方项目页页脚亦为 2024；2025 年 2 月 7 日是后续数据与模型发布公告。候选提供的 2025 年 5 月 21 日日期无法作为该项目首次发布日得到官方来源支持。([ai.meta.com](https://ai.meta.com/blog/machine-intelligence-research-new-models/))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 Habitat 模拟器中运行面向家庭活动的人机协作任务，并支持机器人与人类化身共同参与。",
+        "通过自由形式自然语言指令驱动集中式、分布式或单智能体 LLM 规划器。",
+        "提供人类在环的任务演示、轨迹分析和智能体协作评测基础设施。",
+        "利用分层世界图、感知模块、工具和低层技能执行导航、拾取、放置、打开与关闭等操作。",
+        "使用 LLM 生成候选任务，并通过 simulation-in-the-loop 进行环境落地、验证和筛选。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "LLM",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "PARTNR 是面向家庭场景人机协作的具身多智能体规划与推理基准，任务包含空间、时间以及不同智能体能力约束。",
+        "项目建立在 Habitat 3.0 之上，以可扩展仿真替代难以大规模开展且存在安全约束的真实人机协作数据采集和测试。",
+        "任务生成流程使用 LLM 半自动生成自然语言任务，并将模拟器纳入生成回路，以完成环境落地、可执行性验证和错误削减。",
+        "官方代码实现 Agent、Planner、Tool、Skill、WorldGraph、Perception 和 EvaluationRunner 等模块，并提供集中式、分布式、单智能体及启发式规划基线。",
+        "数据发布包括经人类在环验证的任务、独立验证集、去标识化的人类操作轨迹、预计算概念图，以及拾取、放置、导航、打开和关闭等低层技能权重。",
+        "2025 年 2 月 7 日的 Meta FAIR 公告进一步发布了人类演示数据和大型规划模型，并报告该模型已部署到 Boston Dynamics Spot 上进行现实环境中的人机协作展示。",
+        "不过，PARTNR 官方项目页、Meta 官方研究记录和数据集关联论文均表明项目及基准已于 2024 年 10 月 31 日公开；因此它不是一个自 2025 年起首次发布的项目。"
+      ],
+      "metrics": [
+        {
+          "label": "基准任务规模",
+          "note": "官方项目页报告的自然语言多智能体任务数量。",
+          "value": "100,000 个任务"
+        },
+        {
+          "label": "环境与对象规模",
+          "note": "Meta 官方研究页面报告覆盖 60 个住宅环境。对象数按该页面的精确数值记录。",
+          "value": "60 个住宅，5,819 个独特对象"
+        },
+        {
+          "label": "人类与 LLM 任务成功率",
+          "note": "官方项目页报告人类完成 93% 的任务，而受测 LLM 规划器完成 30%。",
+          "value": "人类 93%；LLM 30%"
+        },
+        {
+          "label": "协作步骤效率差距",
+          "note": "LLM 与真人协作时，相比两名真人协作以及单名真人完成任务所需的步骤倍数。",
+          "value": "分别需要 1.5 倍和 1.1 倍步骤"
+        },
+        {
+          "label": "微调规划模型效率",
+          "note": "较小 LLM 经规划数据微调后达到与大 9 倍模型相当的表现，同时提升推理速度。",
+          "value": "模型小 9 倍；推理快 8.6 倍"
+        }
+      ],
+      "official_organization_url": "https://ai.meta.com/research/",
+      "official_project_url": "https://aihabitat.org/partnr/",
+      "open_source": true,
+      "organization_en": "Meta Fundamental AI Research (FAIR)",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不纳入。虽然 PARTNR 明确属于具身机器人软件项目，具备 Meta FAIR 官方项目页、代码、数据集、基准和规划模型，但不满足“自 2025 年起发布”的时间条件。Meta 官方项目/研究页面将 PARTNR 的公开日期标为 2024 年 10 月 31 日，官方项目页页脚亦为 2024；2025 年 2 月 7 日是后续数据与模型发布公告。候选提供的 2025 年 5 月 21 日日期无法作为该项目首次发布日得到官方来源支持。([ai.meta.com](https://ai.meta.com/blog/machine-intelligence-research-new-models/))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PARTNR（Planning And Reasoning Tasks in humaN-Robot collaboration）是 Meta FAIR 基于 Habitat 构建的人机协作具身智能研究框架，包含大规模自然语言任务基准、人类演示数据、LLM 规划基线、任务生成工具和评测基础设施。它面向家庭环境中的多智能体协作，系统性考察规划、感知、技能执行、协调、任务状态跟踪与失败恢复。官方实现采用 Agent、Planner、Tool、Skill、WorldGraph 和 Perception 等模块化抽象，可运行集中式或分布式 LLM 规划器，并支持导航、拾取、放置和操作可动家具等低层技能。官方结果显示现有 LLM 规划器与人类表现仍有明显差距；微调后的较小规划模型则能以更高推理速度达到大型模型的相当表现。项目本身符合软件、责任机构和官方专页要求，但首次公开时间为 2024 年 10 月 31 日，因而不符合本索引限定的 2025 年及以后首次发布条件。"
+    }
+  },
+  "nvidia-gr00t-dreams-6f668f6": {
+    "checked_at": "2026-08-08T05:08:47.952924+00:00",
+    "title": "NVIDIA GR00T-Dreams",
+    "accepted": true,
+    "reason": "收录。GR00T-Dreams具有NVIDIA官方专题技术文章、官方公司公告、NVIDIA GEAR实验室DreamGen项目页以及Apache-2.0许可的官方端到端代码库。其核心产物是面向实体机器人策略训练的世界模型合成数据与动作轨迹生成软件流程，明确支持真实机器人执行，不是硬件产品页。需要纠正候选日期：NVIDIA在2025年5月19日的COMPUTEX公告中正式公布GR00T-Dreams，DreamGen官方项目页日期为2025年5月20日；候选所列2025年5月1日未获官方来源支持。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从单张机器人场景初始图像和自然语言任务指令生成多样化的合成机器人操作视频。",
+        "使用逆动力学模型或潜动作模型从生成视频中恢复伪动作，将视频转换为可训练策略的神经轨迹。",
+        "利用有限的单任务遥操作数据训练机器人执行新行为，并泛化到训练阶段未见的环境。",
+        "支持在人形机器人、Franka Panda、SO-100机械臂及RoboCasa仿真环境上生成数据和训练视觉运动策略。",
+        "提供DreamGen Bench代码，评估视频世界模型的指令遵循能力、物理合理性及其与下游机器人策略表现的关系。"
+      ],
+      "fields": [
+        "World models",
+        "Data & benchmarks",
+        "Robot manipulation",
+        "Humanoid intelligence"
+      ],
+      "include": true,
+      "key_points": [
+        "GR00T-Dreams是NVIDIA面向物理机器人的合成轨迹数据生成软件蓝图，而非机器人本体或硬件产品；其研究基础和首个开源实现为NVIDIA GEAR实验室的DreamGen。",
+        "完整流程先用少量目标机器人遥操作轨迹后训练Cosmos Predict-2视频世界模型，使其学习特定机器人形态的运动能力和功能约束。",
+        "后训练的世界模型接收初始场景图像和语言指令，生成机器人在新任务、新物体或新环境中操作的二维视频；Cosmos Reason可对生成结果进行成功性和质量筛选。",
+        "系统通过逆动力学模型读取视频中的前后图像帧并预测中间动作段，也支持潜动作模型，由此把纯像素视频转换为带伪动作标签的神经轨迹。",
+        "生成的神经轨迹可与真实数据共同训练视觉运动策略，也可单独用于训练，以获得新行为、未见环境以及二者组合条件下的泛化能力。",
+        "官方实现覆盖视频世界模型微调、合成视频生成、IDM动作提取、GR00T N1微调和DreamGen Bench复现，并提供Franka、Fourier GR-1、SO-100及RoboCasa的数据预处理与训练配置。",
+        "该方法还用于折叠柔性物体、锤击、堆碗和擦桌等接触密集任务，并在GR00T N1、扩散策略及π0等不同视觉运动策略上研究合成数据增益。"
+      ],
+      "metrics": [
+        {
+          "label": "零样本行为泛化",
+          "note": "DreamGen官方项目页报告，世界模型和IDM仅使用一个环境中的单一拾取放置任务遥操作数据进行训练。",
+          "value": "22个新行为"
+        },
+        {
+          "label": "零样本环境泛化",
+          "note": "官方项目页报告机器人可在新场景中执行见过或未见过的行为。",
+          "value": "10个新环境"
+        },
+        {
+          "label": "每任务合成训练量",
+          "note": "项目演示中的视觉运动策略仅使用神经轨迹训练时采用的数量。",
+          "value": "每个任务50条神经轨迹"
+        },
+        {
+          "label": "数据扩展实验规模",
+          "note": "RoboCasa实验将神经轨迹数量从0逐步扩展，并观察到数据量与下游策略表现之间的对数线性趋势。",
+          "value": "最高240,000条神经轨迹"
+        },
+        {
+          "label": "GR00T N1.5数据开发时间",
+          "note": "NVIDIA官方公告称，使用GR00T-Dreams生成合成训练数据完成该阶段，而人工收集预计接近三个月。",
+          "value": "36小时，对比近3个月人工数据收集"
+        }
+      ],
+      "official_organization_url": "https://www.nvidia.com/",
+      "official_project_url": "https://developer.nvidia.com/blog/nvidia-isaac-gr00t-dreams-enables-scalable-synthetic-motion-data-generation-for-robot-training/",
+      "open_source": true,
+      "organization_en": "NVIDIA",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。GR00T-Dreams具有NVIDIA官方专题技术文章、官方公司公告、NVIDIA GEAR实验室DreamGen项目页以及Apache-2.0许可的官方端到端代码库。其核心产物是面向实体机器人策略训练的世界模型合成数据与动作轨迹生成软件流程，明确支持真实机器人执行，不是硬件产品页。需要纠正候选日期：NVIDIA在2025年5月19日的COMPUTEX公告中正式公布GR00T-Dreams，DreamGen官方项目页日期为2025年5月20日；候选所列2025年5月1日未获官方来源支持。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "NVIDIA Isaac GR00T-Dreams是一套为实体机器人训练生成大规模合成运动数据的参考蓝图，其公开研究和实现以DreamGen为核心。系统从少量真实遥操作轨迹出发，对Cosmos Predict-2等视频世界模型进行机器人形态适配；随后以单张场景图像和语言指令生成新任务、新物体及新环境中的机器人操作视频，并通过Cosmos Reason筛选生成质量。逆动力学模型或潜动作模型进一步从视频中恢复动作标签，将像素序列转化为可用于视觉运动策略训练的“神经轨迹”。官方材料展示了仅从单一环境中的拾取放置示范出发，对22个新行为和10个新环境进行泛化，并覆盖Fourier GR-1人形机器人、Franka Panda、SO-100机械臂与RoboCasa。开源代码包含世界模型微调、视频生成、IDM动作提取、GR00T N1微调及DreamGen Bench评测流程，因此符合具身机器人软件项目的收录标准。"
+    }
+  },
+  "dexmimicgen-ec48d52": {
+    "checked_at": "2026-08-08T05:08:47.957837+00:00",
+    "title": "DexMimicGen",
+    "accepted": false,
+    "reason": "正在核验来源，当前不是最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、责任机构、发布日期、技术能力与定量结果。后续判断会严格区分软件数据生成系统与机器人硬件本体。",
+        "同时检查项目页链接的论文或技术材料，仅收录来源明确支持的字段。",
+        "检索结果将用于确认 DexMimicGen 是否满足 2025 年后发布且具有专属官方页面的准入条件。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "尚未形成最终准入结论。",
+        "不会依据候选摘要猜测指标或机构。",
+        "不会将 arXiv 单独作为官方项目证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待官方来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://dexmimicgen.github.io/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验来源，当前不是最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在检索并核验 DexMimicGen 的官方项目资料。"
+    }
+  },
+  "0-5-aa69aaa": {
+    "checked_at": "2026-08-08T05:08:47.962865+00:00",
+    "title": "π0.5",
+    "accepted": false,
+    "reason": "正在使用公开网页来源核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、技术报告及其链接材料，重点确认它是面向物理机器人的软件策略，而非硬件产品，并提取可复核的能力与指标。",
+        "fields",
+        "include",
+        "key_points",
+        "metrics"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中",
+        "metrics",
+        "official_organization_url",
+        "official_project_url",
+        "open_source",
+        "organization_en",
+        "organization_kind"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未形成最终判定",
+          "value": "核验中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在使用公开网页来源核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验。"
+    }
+  },
+  "openpi-9ed54eb": {
+    "checked_at": "2026-08-08T05:08:47.967783+00:00",
+    "title": "openpi",
+    "accepted": true,
+    "reason": "收录。openpi 是由 Physical Intelligence 明确负责并通过官方 GitHub 组织发布的实体机器人软件项目，具备专用官方项目仓库，提供 VLA 模型权重、推理、微调和机器人策略部署工具，符合软件主体要求。公开资料显示其实际开源发布日为 2025 年 2 月 4 日，而不是候选信息所列的 2025 年 5 月 1 日；两者均满足“2025 年以来”的时间范围。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "运行并部署 π 系列视觉-语言-动作策略，将图像、机器人状态和语言指令转换为动作块",
+        "使用预训练基础检查点在自有机器人数据上进行全量微调，并将数据转换为 LeRobot 格式",
+        "在 DROID Franka 与 ALOHA 等实体机器人平台上执行桌面操作、毛巾折叠、开笔帽和容器取物任务",
+        "通过 WebSocket 将策略推理与机器人控制环境分离，在远端 GPU 服务器上生成并流式传输动作",
+        "使用 FAST 动作分词和自回归 VLA 处理高频、长时程及双臂灵巧操作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "openpi 是 Physical Intelligence 官方发布的机器人软件仓库，提供 π₀、π₀-FAST 和后续 π₀.₅ 模型的实现、预训练权重、推理代码、微调管线及实体机器人部署示例；它不是机器人硬件或产品规格页面。",
+        "π₀ 是基于流匹配的 VLA：在预训练视觉语言模型上增加动作专家，以连续动作块支持高频机器人控制；仓库同时提供 JAX 实现，并在后续版本中加入经过 LIBERO 推理与微调验证的 PyTorch 实现。",
+        "π₀-FAST 将动作生成改为自回归建模，并使用 FAST 动作分词器。FAST 先通过离散余弦变换压缩动作轨迹，再使用字节对编码合并高频符号，使连续机器人动作能够以语言模型兼容的离散 token 表示。",
+        "仓库提供基础模型和面向具体平台或任务的专家检查点，包括 π₀-FAST-DROID、π₀-DROID、ALOHA 毛巾折叠、容器取物和开笔帽策略；官方明确提醒，这些小规模微调检查点不保证迁移到不同机器人配置。",
+        "微调流程包括将用户数据转换为 LeRobot 数据集、定义训练配置、计算归一化统计量、启动训练以及部署策略服务器；项目同时支持完整参数微调，并提供相应的显存需求说明。",
+        "部署层提供 DROID 与 ALOHA 的逐步示例、无需实体机器人的随机观测推理测试，以及基于 WebSocket 的远程推理，使高性能 GPU 可以与机器人运行环境分离。",
+        "FAST 技术报告显示，π₀-FAST 可扩展到跨本体数据混合，并在 T 恤折叠、桌面整理、杂货装袋、从烤面包机取吐司和洗衣折叠等任务上达到与扩散式 π₀ 相当的总体表现；其代价是自回归推理延迟高于扩散动作头。"
+      ],
+      "metrics": [
+        {
+          "label": "预训练机器人数据规模",
+          "note": "openpi 官方仓库称各基础模型检查点使用机器人数据预训练。",
+          "value": "10,000+ 小时"
+        },
+        {
+          "label": "π₀-FAST 训练计算量",
+          "note": "FAST 技术报告称，在通用策略评测中达到与扩散式 π₀ 相当的表现时，所需 GPU 小时数更少。",
+          "value": "约减少 5 倍 GPU 小时"
+        },
+        {
+          "label": "单任务收敛效率",
+          "note": "在大型 Table Bussing 数据集实验中，FAST 版本达到高性能所需训练步数相对于扩散式 π₀ 更少。",
+          "value": "少 3 倍训练步数"
+        },
+        {
+          "label": "动作块推理延迟",
+          "note": "FAST 报告在 NVIDIA RTX 4090 上的近似结果：自回归 π₀-FAST 通常解码 30–60 个动作 token；扩散式 π₀ 约使用 10 个扩散步骤。",
+          "value": "π₀-FAST 约 750 ms；扩散式 π₀ 低于 100 ms"
+        },
+        {
+          "label": "DROID 评测规模",
+          "note": "FAST 技术报告使用成功数据训练，并在新场景、背景、相机角度和物体上进行零样本部署评测。",
+          "value": "75,000 个成功 episode、2,100 万样本；16 项任务、每策略共 44 次试验"
+        }
+      ],
+      "official_organization_url": "https://www.physicalintelligence.company/",
+      "official_project_url": "https://github.com/Physical-Intelligence/openpi",
+      "open_source": true,
+      "organization_en": "Physical Intelligence",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。openpi 是由 Physical Intelligence 明确负责并通过官方 GitHub 组织发布的实体机器人软件项目，具备专用官方项目仓库，提供 VLA 模型权重、推理、微调和机器人策略部署工具，符合软件主体要求。公开资料显示其实际开源发布日为 2025 年 2 月 4 日，而不是候选信息所列的 2025 年 5 月 1 日；两者均满足“2025 年以来”的时间范围。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "openpi 是 Physical Intelligence 面向机器人研究者发布的 π 系列视觉-语言-动作模型软件栈。其核心价值不只是公开模型权重，而是把基础检查点、数据适配、归一化统计、训练配置、策略推理、远程服务以及 DROID/ALOHA 实机部署示例组织成可运行的工程体系。项目覆盖基于流匹配连续动作头的 π₀，以及利用 DCT 与 BPE 压缩高频动作序列的自回归 π₀-FAST；后者显著降低训练计算需求，并支持复杂、长时程和双臂灵巧任务，但自回归解码延迟更高。官方还提供针对桌面操作、毛巾折叠、容器取物和开笔帽等任务的专家检查点，并允许研究者使用 LeRobot 格式数据适配自己的机器人。"
+    }
+  },
+  "large-behavior-models-9a3de3c": {
+    "checked_at": "2026-08-08T05:08:47.972626+00:00",
+    "title": "Large Behavior Models",
+    "accepted": true,
+    "reason": "收录。Toyota Research Institute 提供了专门的官方项目页，明确将 Large Behavior Models 定义为接收实体机器人传感器输入并输出动作的软件策略，并公开了模型架构、训练数据、真实机器人任务和大规模评测结果，满足具身机器人软件项目条件。官方项目材料未表明模型权重或实现代码已开源，因此 open_source=false。候选所给 2025-04-01 日期未获官方页面支持；TRI 官方出版物目录将该项目列为 2025-07-07，但这不影响其属于 2025 年以后发布的项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过腕部与场景相机、机器人本体状态和语言指令联合生成动作",
+        "在双臂机器人上执行多任务精细操作",
+        "通过预训练后微调学习未见过的长时程任务",
+        "在真实机器人和 Drake 仿真环境中使用同一模型检查点进行评测",
+        "处理摆放早餐餐具、苹果去芯切片和安装自行车碟片等复杂操作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "LBM 是面向实体机器人的多任务扩散策略：接收机器人传感器数据、语言提示和本体状态，直接输出机器人动作。",
+        "模型采用多模态 ViT 视觉—语言编码器与 Transformer 去噪头，并通过 AdaLN 将编码后的观测条件注入动作生成过程。",
+        "策略一次预测 16 个时间步、覆盖 1.6 秒的动作块，以支持连续操作和长时程行为。",
+        "预训练数据混合了内部双臂遥操作、仿真遥操作、Universal Manipulation Interface 数据，以及从 Open X-Embodiment 整理的互联网机器人数据。",
+        "系统在配备 Franka Panda FR3 双臂和最多六个相机的平台上评测，同时覆盖实体机器人与 Drake 仿真站。",
+        "评测包含预训练中出现过的任务和微调前未见过的长时程任务，并采用受控初始条件、真实环境盲式 A/B 测试及序贯假设检验。",
+        "研究发现微调性能随预训练数据规模平滑提升，但未经微调的预训练模型并未稳定优于从零训练的单任务策略，说明迁移收益主要体现在预训练后微调场景。"
+      ],
+      "metrics": [
+        {
+          "label": "预训练数据规模",
+          "note": "官方项目页称总量接近 1,700 小时。细分为 468 小时内部双臂遥操作、45 小时仿真遥操作、32 小时 UMI 数据和约 1,150 小时 Open X-Embodiment 数据。",
+          "value": "约 1,700 小时"
+        },
+        {
+          "label": "完整实验评测规模",
+          "note": "官方结果摘要报告的真实世界与仿真评测总量。",
+          "value": "1,800 次真实机器人 rollout；超过 47,000 次仿真 rollout"
+        },
+        {
+          "label": "预训练模型核心评测",
+          "note": "覆盖 29 个任务；真实任务每个模型测试 50 次，仿真任务每个模型测试 200 次。",
+          "value": "4,200 次 rollout，29 个任务"
+        },
+        {
+          "label": "任务覆盖",
+          "note": "包括预训练中出现的任务和此前未见的长时程任务。",
+          "value": "16 个仿真已见任务、3 个真实已见任务、5 个仿真未见任务、5 个真实未见任务"
+        },
+        {
+          "label": "新任务数据效率",
+          "note": "在需要适应多种环境因素的挑战性设置中，相比从零训练策略。",
+          "value": "减少 3–5 倍任务数据"
+        }
+      ],
+      "official_organization_url": "https://www.tri.global/",
+      "official_project_url": "https://toyotaresearchinstitute.github.io/lbm1/",
+      "open_source": false,
+      "organization_en": "Toyota Research Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。Toyota Research Institute 提供了专门的官方项目页，明确将 Large Behavior Models 定义为接收实体机器人传感器输入并输出动作的软件策略，并公开了模型架构、训练数据、真实机器人任务和大规模评测结果，满足具身机器人软件项目条件。官方项目材料未表明模型权重或实现代码已开源，因此 open_source=false。候选所给 2025-04-01 日期未获官方页面支持；TRI 官方出版物目录将该项目列为 2025-07-07，但这不影响其属于 2025 年以后发布的项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Toyota Research Institute 的 Large Behavior Models（LBM 1.0）是一组面向双臂实体机器人精细操作的多任务扩散策略。模型把腕部及场景图像、机器人本体状态和语言提示编码后，通过扩散 Transformer 生成连续动作块，并利用约 1,700 小时的异构机器人数据进行预训练。项目重点不是单次演示某种硬件能力，而是系统研究大规模、多任务预训练能否改善新任务微调、数据效率和长时程操作表现。团队在 Franka Panda FR3 双臂实体平台和 Drake 仿真环境中进行了覆盖 29 个任务的大样本受控评测，结果显示预训练后的微调策略相对从零训练具有稳定增益，新任务在挑战性设置下可少用 3–5 倍数据，并且性能会随预训练数据规模平滑提高。"
+    }
+  },
+  "newton-physics-engine-78dbbb6": {
+    "checked_at": "2026-08-08T05:08:47.982260+00:00",
+    "title": "Newton Physics Engine",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、发布主体、发布日期与技术指标。重点会区分 Newton 物理引擎软件本身和任何伴随的机器人硬件内容。​​足下稍候，我会基于可访问的一手来源给出严格结论。The previous Chinese sentence accidentally included a rare token; I'll continue in English? Actually response must final JSON Chinese dossier. We can still commentary. Let's search.",
+        "Search official NVIDIA, Linux Foundation, GitHub official docs.",
+        "Need use web."
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "将核对官方证据。",
+        "将避免使用仅来自 arXiv 的信息。",
+        "将提取精确指标。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在检索官方来源并核验 Newton Physics Engine 是否满足收录条件。"
+    }
+  },
+  "gemini-robotics-8f36763": {
+    "checked_at": "2026-08-08T05:08:47.986657+00:00",
+    "title": "Gemini Robotics",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、技术报告及发布材料，重点确认它是面向实体机器人的软件模型，而非硬件产品公告。核验后会仅保留来源明确支持的能力与指标。], ",
+        "fields",
+        "include",
+        "key_points",
+        "metrics"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索中。",
+        "正在检索中。",
+        "正在检索中。",
+        "正在检索中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方资料",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方资料。"
+    }
+  },
+  "robocasa365-c8d1601": {
+    "checked_at": "2026-08-08T05:08:47.990810+00:00",
+    "title": "RoboCasa365",
+    "accepted": false,
+    "reason": "正在核验官方证据。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验 RoboCasa365 的官方项目页、责任机构、发布日期与可引用技术指标。完成后会严格按准入条件给出结论。可访问性或证据不足的字段不会推断。可访问性或证据不足的字段不会推断。",
+        "可访问性或证据不足的字段不会推断。",
+        "可访问性或证据不足的字段不会推断。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在查证",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://robocasa.ai/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验官方证据。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验。"
+    }
+  },
+  "helix-096df70": {
+    "checked_at": "2026-08-08T05:08:47.995121+00:00",
+    "title": "Helix",
+    "accepted": true,
+    "reason": "符合收录条件。Figure AI于2025年2月20日在官方独立技术项目页面发布Helix；页面明确将其定义为面向实体人形机器人的通用视觉-语言-动作软件模型，并详细披露模型架构、训练数据、机载推理、连续控制接口及真实机器人评测。该页面的主体是VLA软件系统而非Figure机器人硬件产品。官方材料没有表明完整Helix模型、训练代码或权重已经公开，因此open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过自然语言指令和机载视觉输入，实时生成整个人形机器人上半身的连续控制动作",
+        "对训练阶段未出现过的数千种小型家居物品执行零样本识别、抓取、放置与容器操作",
+        "协调手腕、手指、头部和躯干，在35自由度动作空间中完成精细双手操作",
+        "让两台搭载相同模型权重的机器人通过自然语言指定角色，协作完成杂货传递和收纳",
+        "使用统一模型执行拾放、抽屉与冰箱操作、多机器人交接等多类行为，无需逐任务微调"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "Helix采用端到端训练的System 2/System 1分层VLA架构：较慢的System 2负责场景与语言理解，快速的System 1把语义潜变量转换为连续机器人动作。",
+        "System 2基于一个互联网规模预训练的70亿参数开放权重VLM，输入单目机器人图像、手腕位姿、手指位置及自然语言指令，并将任务相关信息压缩为连续潜变量。",
+        "System 1是8000万参数的交叉注意力编码器-解码器Transformer，配备全卷积多尺度视觉骨干；该视觉骨干从完全在仿真中进行的预训练初始化。",
+        "训练数据约为500小时，来自多机器人、多操作员的遥操作行为；系统使用自动标注VLM分析分段机载视频并生成事后自然语言指令，评测物品全部排除在训练集之外。",
+        "模型从原始像素和文本直接回归连续动作，梯度通过System 1与System 2之间的潜变量反向传播；全系统只有一个训练阶段和一套权重，不设置逐任务动作头或微调流程。",
+        "部署时两个子系统分别运行在机器人机载的两块低功耗GPU上：System 2异步更新共享语义潜变量，System 1维持200 Hz实时闭环；训练时还加入与实际推理延迟匹配的时间偏移。",
+        "动作空间覆盖手腕目标位姿、手指屈曲与外展、头部和躯干朝向，并加入“任务完成百分比”预测，使模型能够判断行为终止并串联多个学习到的行为。"
+      ],
+      "metrics": [
+        {
+          "label": "连续控制频率与动作维度",
+          "note": "官方报告Helix同时控制手指、手腕、头部和躯干等整个人形机器人上半身。",
+          "value": "35 DoF，200 Hz"
+        },
+        {
+          "label": "System 2运行频率",
+          "note": "负责场景理解、语言理解和高层语义条件生成。",
+          "value": "7–9 Hz"
+        },
+        {
+          "label": "模型规模",
+          "note": "System 2为开放权重VLM，System 1为交叉注意力视觉运动Transformer。",
+          "value": "System 2：7B参数；System 1：80M参数"
+        },
+        {
+          "label": "训练数据规模",
+          "note": "多机器人、多操作员遥操作数据；官方称其不足既有VLA数据集规模的5%。",
+          "value": "约500小时，<5%"
+        },
+        {
+          "label": "零样本物体泛化",
+          "note": "官方系统测试称机器人能够处理训练中未出现、位于杂乱场景中的玻璃器皿、玩具、工具、衣物等物品。",
+          "value": "数千种新物品"
+        }
+      ],
+      "official_organization_url": "https://www.figure.ai/company",
+      "official_project_url": "https://www.figure.ai/news/helix",
+      "open_source": false,
+      "organization_en": "Figure AI Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。Figure AI于2025年2月20日在官方独立技术项目页面发布Helix；页面明确将其定义为面向实体人形机器人的通用视觉-语言-动作软件模型，并详细披露模型架构、训练数据、机载推理、连续控制接口及真实机器人评测。该页面的主体是VLA软件系统而非Figure机器人硬件产品。官方材料没有表明完整Helix模型、训练代码或权重已经公开，因此open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Helix是Figure AI于2025年2月20日发布的通用人形机器人视觉-语言-动作模型，目标是把互联网预训练视觉语言模型的语义知识转化为高频、连续的实体机器人控制。它通过分层但联合训练的System 2/System 1架构解决通用语义推理速度较慢与灵巧控制需要高频反馈之间的矛盾：System 2以7–9 Hz解释场景和自然语言，System 1以200 Hz生成35自由度上半身动作。模型使用约500小时多机器人遥操作数据，通过VLM自动生成事后指令，并以统一权重覆盖拾放、容器操作、冰箱和抽屉操作、双手机械操作以及双机器人协作。官方演示还报告了对数千种训练集外家居物品的零样本抓取，以及两台机器人使用相同权重、无需显式角色专用训练完成杂货传递与收纳。Helix可完全运行在Figure机器人的双低功耗机载GPU上，是明确面向物理机器人部署的VLA软件项目。"
+    }
+  },
+  "mujoco-playground-1d60f8b": {
+    "checked_at": "2026-08-08T05:08:47.999058+00:00",
+    "title": "MuJoCo Playground",
+    "accepted": false,
+    "reason": "正在核验官方证据。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该项目的官方页面、维护组织、发布日期、软件属性、技术能力与可量化结果，并以严格纳入标准输出。接下来只采用可访问且能明确支撑字段的来源。领域。机器人。software.",
+        "I’m checking the official project site, responsible organization, release timing, software scope, capabilities, and reported results against the inclusion rules.",
+        "MuJoCo Playground official DeepMind GitHub announcement February 2025"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索官方来源。",
+        "This is a progress update, not the final verdict.",
+        "Use web search before deciding.",
+        "candidate MuJoCo Playground"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Research in progress",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://playground.mujoco.org/",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验官方证据。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 MuJoCo Playground 是否满足严格收录条件。"
+    }
+  },
+  "skild-brain-e64a5c6": {
+    "checked_at": "2026-08-08T05:08:48.003073+00:00",
+    "title": "Skild Brain",
+    "accepted": false,
+    "reason": "尚未完成必要的网页核验，暂不能纳入。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核对 Skild 官方项目页、组织身份、发布日期与可验证的技术指标，再按严格纳入条件给出结构化结论。没有来源支撑的字段会留空或明确标为缺失。已开始检查官方发布材料及其链接的技术内容。",
+        "重点会区分“机器人硬件产品”与“以跨本体控制模型为主体的软件项目”，并只记录官方材料明确报告的结果。不会用 arXiv 单独补足官方项目证据。",
+        "正在复核可精确引用的量化结果及开放源码状态。官方页面对模型能力的描述较充分，但指标需要区分演示性陈述、相对提升和可复现数值。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Vision-language-action",
+        "Robot manipulation",
+        "Whole-body control"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，最终结论待官方来源核验。",
+        "当前仅依据用户提供信息无法完成严格收录判断。",
+        "不会猜测未验证的组织名称、指标、URL 或开源状态。",
+        "将优先采用 Skild AI 官方材料。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待完成官方网页核验",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.skild.ai/blog/introducing-skild-brain",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "尚未完成必要的网页核验，暂不能纳入。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Skild Brain 是否满足严格公开索引的全部条件。"
+    }
+  },
+  "nvidia-cosmos-8429b95": {
+    "checked_at": "2026-08-08T05:08:48.007103+00:00",
+    "title": "NVIDIA Cosmos",
+    "accepted": false,
+    "reason": "正在使用官方来源核验候选资格与技术细节。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验 NVIDIA 官方发布页、项目/开发者页面及其链接材料，重点确认这是面向物理 AI 的软件平台，而不是硬件或泛产品公告。随后只保留可由这些来源直接支持的技术点、能力和指标。",
+        "正在检索项目的官方技术材料与可验证结果。不会把 arXiv 单独作为项目成立依据，也不会补猜社交链接或性能数字。",
+        "初步确认该候选有 NVIDIA 官方发布公告，且公告明确将 Cosmos 描述为世界基础模型、tokenizer、guardrail 与数据处理流水线组成的软件平台。接下来核对专门项目页、开放状态和精确指标。"
+      ],
+      "fields": [
+        "World models"
+      ],
+      "include": false,
+      "key_points": [
+        "检索中，尚未形成最终判定。",
+        "检索中，尚未形成最终判定。",
+        "检索中，尚未形成最终判定。",
+        "检索中，尚未形成最终判定。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方来源",
+          "value": "pending"
+        }
+      ],
+      "official_organization_url": "https://www.nvidia.com/",
+      "official_project_url": "https://nvidianews.nvidia.com/news/cosmos-world-foundation-models",
+      "open_source": false,
+      "organization_en": "NVIDIA",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在使用官方来源核验候选资格与技术细节。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 NVIDIA Cosmos 的官方项目证据、软件属性、发布日期、开放状态和报告结果。"
+    }
+  },
+  "agibot-world-808ee2f": {
+    "checked_at": "2026-08-08T05:08:48.011254+00:00",
+    "title": "AgiBot World",
+    "accepted": false,
+    "reason": "正在检索，尚未形成最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、技术报告与组织归属，并重点确认发布日期、软件属性和可复述的指标。",
+        "",
+        ""
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "检索进行中",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://agibot-world.com/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索，尚未形成最终判定。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
   }
 }
