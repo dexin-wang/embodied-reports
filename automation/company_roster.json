@@ -1,51 +1,274 @@
 [
-  {"name": "自变量机器人 / X² Robotics", "region": "China"},
-  {"name": "智元机器人 / AgiBot", "region": "China"},
-  {"name": "银河通用 / Galbot", "region": "China"},
-  {"name": "逐际动力 / LimX Dynamics", "region": "China"},
-  {"name": "星海图 / Robot Era", "region": "China"},
-  {"name": "星动纪元 / ROBOTERA", "region": "China"},
-  {"name": "千寻智能 / Spirit AI", "region": "China"},
-  {"name": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center", "region": "China"},
-  {"name": "宇树科技 / Unitree Robotics", "region": "China"},
-  {"name": "傅利叶智能 / Fourier Intelligence", "region": "China"},
-  {"name": "优必选 / UBTECH Robotics", "region": "China"},
-  {"name": "松延动力 / Noetix Robotics", "region": "China"},
-  {"name": "魔法原子 / MagicLab", "region": "China"},
-  {"name": "加速进化 / Booster Robotics", "region": "China"},
-  {"name": "众擎机器人 / EngineAI", "region": "China"},
-  {"name": "乐聚机器人 / Leju Robotics", "region": "China"},
-  {"name": "深度求索 / DeepSeek", "region": "China"},
-  {"name": "阿里云通义 / Qwen", "region": "China"},
-  {"name": "腾讯 Robotics X", "region": "China"},
-  {"name": "字节跳动 Seed", "region": "China"},
-  {"name": "百度 Research", "region": "China"},
-  {"name": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab", "region": "China"},
-  {"name": "美团机器人研究院 / Meituan Robotics", "region": "China"},
-  {"name": "小米机器人 / Xiaomi Robotics", "region": "China"},
-  {"name": "北京通用人工智能研究院 / BIGAI", "region": "China"},
-  {"name": "Physical Intelligence", "region": "International"},
-  {"name": "Figure AI", "region": "International"},
-  {"name": "1X Technologies", "region": "International"},
-  {"name": "NVIDIA Robotics Research", "region": "International"},
-  {"name": "Google DeepMind Robotics", "region": "International"},
-  {"name": "Meta FAIR", "region": "International"},
-  {"name": "Toyota Research Institute", "region": "International"},
-  {"name": "Covariant", "region": "International"},
-  {"name": "Skild AI", "region": "International"},
-  {"name": "Dexterity AI", "region": "International"},
-  {"name": "Dyna Robotics", "region": "International"},
-  {"name": "Field AI", "region": "International"},
-  {"name": "Intrinsic", "region": "International"},
-  {"name": "Hugging Face LeRobot", "region": "International"},
-  {"name": "Boston Dynamics AI Institute", "region": "International"},
-  {"name": "Robotics and AI Institute", "region": "International"},
-  {"name": "Agility Robotics", "region": "International"},
-  {"name": "Sanctuary AI", "region": "International"},
-  {"name": "Apptronik", "region": "International"},
-  {"name": "Tesla AI / Optimus", "region": "International"},
-  {"name": "Amazon Robotics", "region": "International"},
-  {"name": "Microsoft Research Robotics", "region": "International"},
-  {"name": "ANYbotics", "region": "International"},
-  {"name": "OpenAI", "region": "International"}
+  {
+    "name": "自变量机器人 / X² Robotics",
+    "region": "China"
+  },
+  {
+    "name": "智元机器人 / AgiBot",
+    "region": "China"
+  },
+  {
+    "name": "银河通用 / Galbot",
+    "region": "China"
+  },
+  {
+    "name": "逐际动力 / LimX Dynamics",
+    "region": "China"
+  },
+  {
+    "name": "星海图 / Robot Era",
+    "region": "China"
+  },
+  {
+    "name": "星动纪元 / ROBOTERA",
+    "region": "China"
+  },
+  {
+    "name": "千寻智能 / Spirit AI",
+    "region": "China"
+  },
+  {
+    "name": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center",
+    "region": "China"
+  },
+  {
+    "name": "宇树科技 / Unitree Robotics",
+    "region": "China"
+  },
+  {
+    "name": "傅利叶智能 / Fourier Intelligence",
+    "region": "China"
+  },
+  {
+    "name": "优必选 / UBTECH Robotics",
+    "region": "China"
+  },
+  {
+    "name": "松延动力 / Noetix Robotics",
+    "region": "China"
+  },
+  {
+    "name": "魔法原子 / MagicLab",
+    "region": "China"
+  },
+  {
+    "name": "加速进化 / Booster Robotics",
+    "region": "China"
+  },
+  {
+    "name": "众擎机器人 / EngineAI",
+    "region": "China"
+  },
+  {
+    "name": "乐聚机器人 / Leju Robotics",
+    "region": "China"
+  },
+  {
+    "name": "深度求索 / DeepSeek",
+    "region": "China"
+  },
+  {
+    "name": "阿里云通义 / Qwen",
+    "region": "China"
+  },
+  {
+    "name": "腾讯 Robotics X",
+    "region": "China"
+  },
+  {
+    "name": "字节跳动 Seed",
+    "region": "China"
+  },
+  {
+    "name": "百度 Research",
+    "region": "China"
+  },
+  {
+    "name": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab",
+    "region": "China"
+  },
+  {
+    "name": "美团机器人研究院 / Meituan Robotics",
+    "region": "China"
+  },
+  {
+    "name": "小米机器人 / Xiaomi Robotics",
+    "region": "China"
+  },
+  {
+    "name": "北京通用人工智能研究院 / BIGAI",
+    "region": "China"
+  },
+  {
+    "name": "Physical Intelligence",
+    "region": "International"
+  },
+  {
+    "name": "Figure AI",
+    "region": "International"
+  },
+  {
+    "name": "1X Technologies",
+    "region": "International"
+  },
+  {
+    "name": "NVIDIA Robotics Research",
+    "region": "International"
+  },
+  {
+    "name": "Google DeepMind Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Meta FAIR",
+    "region": "International"
+  },
+  {
+    "name": "Toyota Research Institute",
+    "region": "International"
+  },
+  {
+    "name": "Covariant",
+    "region": "International"
+  },
+  {
+    "name": "Skild AI",
+    "region": "International"
+  },
+  {
+    "name": "Dexterity AI",
+    "region": "International"
+  },
+  {
+    "name": "Dyna Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Field AI",
+    "region": "International"
+  },
+  {
+    "name": "Intrinsic",
+    "region": "International"
+  },
+  {
+    "name": "Hugging Face LeRobot",
+    "region": "International"
+  },
+  {
+    "name": "Boston Dynamics AI Institute",
+    "region": "International"
+  },
+  {
+    "name": "Robotics and AI Institute",
+    "region": "International"
+  },
+  {
+    "name": "Agility Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Sanctuary AI",
+    "region": "International"
+  },
+  {
+    "name": "Apptronik",
+    "region": "International"
+  },
+  {
+    "name": "Tesla AI / Optimus",
+    "region": "International"
+  },
+  {
+    "name": "Amazon Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Microsoft Research Robotics",
+    "region": "International"
+  },
+  {
+    "name": "ANYbotics",
+    "region": "International"
+  },
+  {
+    "name": "OpenAI",
+    "region": "International"
+  },
+  {
+    "name": "星尘智能 / Astribot",
+    "region": "China"
+  },
+  {
+    "name": "智平方 / AI² Robotics",
+    "region": "China"
+  },
+  {
+    "name": "云深处科技 / DEEP Robotics",
+    "region": "China"
+  },
+  {
+    "name": "维他动力 / Vbot",
+    "region": "China"
+  },
+  {
+    "name": "Genelist",
+    "region": "International"
+  },
+  {
+    "name": "Sunday Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Foundation Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Mentee Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Rerun",
+    "region": "International"
+  },
+  {
+    "name": "Mujin",
+    "region": "International"
+  },
+  {
+    "name": "Hello Robot",
+    "region": "International"
+  },
+  {
+    "name": "Vention",
+    "region": "International"
+  },
+  {
+    "name": "Brain Corp",
+    "region": "International"
+  },
+  {
+    "name": "Nuro",
+    "region": "International"
+  },
+  {
+    "name": "Torc Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Waabi",
+    "region": "International"
+  },
+  {
+    "name": "Wayve",
+    "region": "International"
+  },
+  {
+    "name": "K-Scale Labs",
+    "region": "International"
+  },
+  {
+    "name": "XPENG Robotics",
+    "region": "International"
+  }
 ]
