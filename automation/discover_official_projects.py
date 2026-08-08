@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import os
+import argparse
 import time
 import urllib.error
 import urllib.request
@@ -20,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = ROOT / "automation" / "candidates.json"
 COMPANY_ROSTER = ROOT / "automation" / "company_roster.json"
-OFFICIAL_SEEDS = ROOT / "automation" / "official_seed_projects.json"
+MEDIA_WATCHLIST = ROOT / "automation" / "media_watchlist.json"
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
@@ -121,54 +122,43 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
     return []
 
 
-def discovery_topics() -> list[str]:
-    """Search the named company roster in small, auditable groups."""
+def discovery_topics(mode: str) -> list[str]:
+    """Use identical admission rules; only discovery inputs differ by cadence."""
     roster = json.loads(COMPANY_ROSTER.read_text()) if COMPANY_ROSTER.exists() else []
     names = [item["name"] for item in roster if isinstance(item, dict) and item.get("name")]
-    groups = [names[index:index + 6] for index in range(0, len(names), 6)]
     company_topics = [
-        "Official dedicated pages for embodied-robotics SOFTWARE releases from these organizations: "
-        + ", ".join(group)
-        for group in groups
+        "Official dedicated pages for embodied-robotics SOFTWARE releases from these organizations: " + ", ".join(names[index:index + 6])
+        for index in range(0, len(names), 6)
     ]
+    if mode == "media":
+        watchlist = json.loads(MEDIA_WATCHLIST.read_text()) if MEDIA_WATCHLIST.exists() else []
+        accounts = [item.get("name", "") for item in watchlist if isinstance(item, dict)]
+        return ["Search public WeChat Official Account articles from these independent AI/robotics media accounts: "
+          + ", ".join(accounts)
+          + ". Find influential embodied-robotics or LLM SOFTWARE releases since 2025. Return the media article as discovery evidence only; the candidate must still name a company/university so later verification can find its official project page."]
     return [*TOPICS, *company_topics]
 
-
-
-def official_seed_candidates() -> list[dict]:
-    """Load auditable official release leads maintained alongside the company roster."""
-    if not OFFICIAL_SEEDS.exists():
-        return []
-    payload = json.loads(OFFICIAL_SEEDS.read_text())
-    values = payload.get("candidates", payload) if isinstance(payload, dict) else payload
-    return [item for item in values if isinstance(item, dict) and item.get("url")]
-
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", choices=("official", "media"), default="official")
+    args = parser.parse_args()
     if not API_KEY:
         raise SystemExit("OPENAI_API_KEY is required for official project discovery")
     payload = json.loads(CANDIDATES.read_text()) if CANDIDATES.exists() else {"candidates": []}
     by_url = {item["url"]: item for item in payload.get("candidates", []) if item.get("url")}
     added = 0
-    # Curated official URLs prevent influential releases from being missed when
-    # a search-provider result is delayed or phrased differently in Chinese.
-    for item in official_seed_candidates():
-        if item.get("url", "").startswith("https://") and item.get("date", "") >= "2025-01-01":
-            by_url[item["url"]] = {
-                **item, "authors": item.get("authors", []), "score": 100,
-                "reasons": ["official web-project discovery", "maintained official seed"],
-            }
-            added += 1
-    for topic in discovery_topics():
+    for topic in discovery_topics(args.mode):
         for item in call(topic):
             if item["url"].startswith("https://arxiv.org/") or not item["url"].startswith("https://"):
                 continue
             if item["date"] < "2025-01-01":
                 continue
-            by_url[item["url"]] = {**item, "authors": [], "score": 100, "reasons": ["official web-project discovery"]}
+            reason = "independent media discovery" if args.mode == "media" else "official web-project discovery"
+            by_url[item["url"]] = {**item, "authors": [], "score": 100, "reasons": [reason]}
             added += 1
     merged = sorted(by_url.values(), key=lambda item: (item.get("date", ""), item.get("title", "")), reverse=True)
     CANDIDATES.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(), "candidates": merged}, ensure_ascii=False, indent=2) + "\n")
-    print(f"official_project_leads_added={added} candidates_total={len(merged)}")
+    print(f"{args.mode}_project_leads_added={added} candidates_total={len(merged)}")
 
 
 if __name__ == "__main__":
