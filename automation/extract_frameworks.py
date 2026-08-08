@@ -233,7 +233,16 @@ def extract(report_id: str, source_url: str, official_url: str | None = None, re
     target = OUT_DIR / f"{report_id}.jpg"
     if target.exists() and not refresh:
         return {"id": report_id, "asset": f"frameworks/{report_id}.jpg", "source_url": official_url or source_url, "page": None, "caption_detected": False, "cached": True, "source_kind": "official_project_page"}
-    return extract_web_figure(report_id, official_url or source_url, target)
+    project_url = official_url or source_url
+    if re.search(r"\.(?:svg|png|jpe?g|webp|avif)(?:[?#].*)?$", project_url, re.I):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(project_url, headers={"User-Agent": "EmbodiedReports/1.0"}), timeout=30) as response:
+                width, height = save_web_image(response.read(), target)
+            return {"id": report_id, "asset": f"frameworks/{report_id}.jpg", "source_url": project_url, "image_url": project_url, "page": None, "caption_detected": True, "source_kind": "official_project_page", "selection": "official_project_visual", "width": width, "height": height}
+        except Exception as exc:
+            print(f"warning: direct official project image failed for {project_url}: {exc}")
+            return None
+    return extract_web_figure(report_id, project_url, target)
 
 def sources() -> list[dict]:
     static = json.loads(STATIC.read_text()) if STATIC.exists() else []
