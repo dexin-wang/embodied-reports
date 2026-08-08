@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract the first method figure from public technical-report PDFs.
+"""Extract original visuals from official project pages only.
 
 This job intentionally stores a rasterized crop from the source PDF rather than
 recreating a method diagram.  Figure 1 is normally the overview/method figure
@@ -229,34 +229,11 @@ def find_method_figure(document: fitz.Document) -> tuple[int, fitz.Rect, bool]:
 
 
 def extract(report_id: str, source_url: str, official_url: str | None = None, refresh: bool = False) -> dict | None:
+    """Use only project-page media; PDFs are intentionally not a fallback."""
     target = OUT_DIR / f"{report_id}.jpg"
     if target.exists() and not refresh:
-        return {"id": report_id, "asset": f"frameworks/{report_id}.jpg", "source_url": source_url, "page": None, "caption_detected": False, "cached": True}
-    body = fetch_pdf(arxiv_pdf(source_url))
-    if body is None:
-        # A non-PDF report link can be an announcement or an arXiv lead.  In
-        # that case, look for an explicitly labelled diagram on the dedicated
-        # official project page instead of treating the report URL as the only
-        # possible web source.
-        return extract_web_figure(report_id, official_url or source_url, target)
-    document = fitz.open(stream=body, filetype="pdf")
-    try:
-        selected_page, selected_crop, found_caption = find_method_figure(document)
-        pixmap = document[selected_page].get_pixmap(matrix=fitz.Matrix(1.35, 1.35), clip=selected_crop, alpha=False)
-        pixmap.save(target, jpg_quality=86)
-        return {
-            "id": report_id,
-            "asset": f"frameworks/{report_id}.jpg",
-            "source_url": source_url,
-            "page": selected_page + 1,
-            "caption_detected": found_caption,
-        }
-    except Exception as exc:
-        print(f"warning: extraction failed for {report_id}: {exc}")
-        return None
-    finally:
-        document.close()
-
+        return {"id": report_id, "asset": f"frameworks/{report_id}.jpg", "source_url": official_url or source_url, "page": None, "caption_detected": False, "cached": True, "source_kind": "official_project_page"}
+    return extract_web_figure(report_id, official_url or source_url, target)
 
 def sources() -> list[dict]:
     static = json.loads(STATIC.read_text()) if STATIC.exists() else []
@@ -268,7 +245,7 @@ def sources() -> list[dict]:
         official = next((link["url"] for link in links if link.get("label") == "Project"), None)
         if primary or official:
             dynamic.append({"id": report["id"], "source_url": primary or official, "official_url": official})
-    all_sources = {item["id"]: item for item in [*static, *dynamic]}
+    all_sources = {item["id"]: item for item in [*dynamic, *static]}
     return list(all_sources.values())[:MAX_REPORTS]
 
 
