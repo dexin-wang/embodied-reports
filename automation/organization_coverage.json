@@ -1,0 +1,1616 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-10T05:40:00+00:00",
+  "organizations": [
+    {
+      "id": "自变量机器人-x-robotics-d9608c5b",
+      "name": "自变量机器人 / X² Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "智元机器人-agibot-f391a81b",
+      "name": "智元机器人 / AgiBot",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "银河通用-galbot-cdbd3898",
+      "name": "银河通用 / Galbot",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "逐际动力-limx-dynamics-3b8606bb",
+      "name": "逐际动力 / LimX Dynamics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "星海图-robot-era-c87e43c7",
+      "name": "星海图 / Robot Era",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "星动纪元-robotera-24b87dcd",
+      "name": "星动纪元 / ROBOTERA",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "千寻智能-spirit-ai-b51f75bc",
+      "name": "千寻智能 / Spirit AI",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "北京人形机器人创新中心-beijing-humanoid-robot-innovation-ce-385a74e1",
+      "name": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "宇树科技-unitree-robotics-f0b06567",
+      "name": "宇树科技 / Unitree Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "傅利叶智能-fourier-intelligence-4d47097d",
+      "name": "傅利叶智能 / Fourier Intelligence",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "优必选-ubtech-robotics-070826f1",
+      "name": "优必选 / UBTECH Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "松延动力-noetix-robotics-d26d983a",
+      "name": "松延动力 / Noetix Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "魔法原子-magiclab-6858b8ab",
+      "name": "魔法原子 / MagicLab",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "加速进化-booster-robotics-3be093ff",
+      "name": "加速进化 / Booster Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "众擎机器人-engineai-595f3e8f",
+      "name": "众擎机器人 / EngineAI",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "乐聚机器人-leju-robotics-9474f42b",
+      "name": "乐聚机器人 / Leju Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "深度求索-deepseek-e3a07c8f",
+      "name": "深度求索 / DeepSeek",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "阿里云通义-qwen-80eac9b3",
+      "name": "阿里云通义 / Qwen",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "腾讯-robotics-x-3e9d9ec0",
+      "name": "腾讯 Robotics X",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "字节跳动-seed-96dcb92c",
+      "name": "字节跳动 Seed",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "百度-research-44ec43f8",
+      "name": "百度 Research",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "华为诺亚方舟实验室-huawei-noah-s-ark-lab-c776db87",
+      "name": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "美团机器人研究院-meituan-robotics-d8ad242c",
+      "name": "美团机器人研究院 / Meituan Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "小米机器人-xiaomi-robotics-1410e41b",
+      "name": "小米机器人 / Xiaomi Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "北京通用人工智能研究院-bigai-0ed28057",
+      "name": "北京通用人工智能研究院 / BIGAI",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "physical-intelligence-898d6b18",
+      "name": "Physical Intelligence",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "figure-ai-de2350a7",
+      "name": "Figure AI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "1x-technologies-8e44a4e2",
+      "name": "1X Technologies",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "nvidia-robotics-research-3cc46e02",
+      "name": "NVIDIA Robotics Research",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "google-deepmind-robotics-9b690af4",
+      "name": "Google DeepMind Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "meta-fair-a8b34963",
+      "name": "Meta FAIR",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "toyota-research-institute-f2bbd32a",
+      "name": "Toyota Research Institute",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "covariant-1757f883",
+      "name": "Covariant",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "skild-ai-92215b37",
+      "name": "Skild AI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "dexterity-ai-68351a04",
+      "name": "Dexterity AI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "dyna-robotics-96e12d93",
+      "name": "Dyna Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "field-ai-17328e07",
+      "name": "Field AI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "intrinsic-06d5cd3a",
+      "name": "Intrinsic",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "hugging-face-lerobot-bed8f8e0",
+      "name": "Hugging Face LeRobot",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "boston-dynamics-ai-institute-9b7af36f",
+      "name": "Boston Dynamics AI Institute",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "robotics-and-ai-institute-b157b979",
+      "name": "Robotics and AI Institute",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "agility-robotics-9bedbd14",
+      "name": "Agility Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "sanctuary-ai-15500ff7",
+      "name": "Sanctuary AI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "apptronik-4732b8de",
+      "name": "Apptronik",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "tesla-ai-optimus-80f33fc5",
+      "name": "Tesla AI / Optimus",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "amazon-robotics-a84b4477",
+      "name": "Amazon Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "microsoft-research-robotics-ac5d58b3",
+      "name": "Microsoft Research Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "anybotics-e344608f",
+      "name": "ANYbotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "openai-a19ee5a9",
+      "name": "OpenAI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "星尘智能-astribot-0a43063c",
+      "name": "星尘智能 / Astribot",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "智平方-ai-robotics-4866b785",
+      "name": "智平方 / AI² Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "云深处科技-deep-robotics-dd7d75c1",
+      "name": "云深处科技 / DEEP Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "维他动力-vbot-8692075d",
+      "name": "维他动力 / Vbot",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "genelist-a43ce928",
+      "name": "Genelist",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "sunday-robotics-52bbfa7b",
+      "name": "Sunday Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "foundation-robotics-5bf09bb6",
+      "name": "Foundation Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "mentee-robotics-c88f5969",
+      "name": "Mentee Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "rerun-afd8524d",
+      "name": "Rerun",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "mujin-50fa403a",
+      "name": "Mujin",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "hello-robot-82afe1d3",
+      "name": "Hello Robot",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "vention-78e5b33f",
+      "name": "Vention",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "brain-corp-b574a870",
+      "name": "Brain Corp",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "nuro-002a0bc2",
+      "name": "Nuro",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "torc-robotics-3e402840",
+      "name": "Torc Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "waabi-c58d5952",
+      "name": "Waabi",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "wayve-e6aa6b85",
+      "name": "Wayve",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "k-scale-labs-5ddf8a4f",
+      "name": "K-Scale Labs",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "小鹏机器人-xpeng-robotics-701a3779",
+      "name": "小鹏机器人 / XPENG Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "generalist-ai-a7dbd5e1",
+      "name": "Generalist AI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "破壳机器人-5a2cab0c",
+      "name": "破壳机器人",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "灵心巧手-5c145977",
+      "name": "灵心巧手",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "帕西尼感知-paxini-8ac96073",
+      "name": "帕西尼感知 / PaXini",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "因时机器人-inspire-robots-49102d0b",
+      "name": "因时机器人 / Inspire Robots",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "越疆科技-dobot-29efa37f",
+      "name": "越疆科技 / DOBOT",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "节卡机器人-jaka-robotics-42e5322f",
+      "name": "节卡机器人 / JAKA Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "珞石机器人-rokae-de1d840b",
+      "name": "珞石机器人 / ROKAE",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "非夕科技-flexiv-bf946169",
+      "name": "非夕科技 / Flexiv",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "梅卡曼德-mech-mind-0e020625",
+      "name": "梅卡曼德 / Mech-Mind",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "仙工智能-seer-robotics-bf553975",
+      "name": "仙工智能 / SEER Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "海柔创新-hai-robotics-adaf89c6",
+      "name": "海柔创新 / HAI Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "极智嘉-geek-c7f112cb",
+      "name": "极智嘉 / Geek+",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "快仓智能-quicktron-e37746ac",
+      "name": "快仓智能 / Quicktron",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "思灵机器人-agile-robots-ccb0c2f2",
+      "name": "思灵机器人 / Agile Robots",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "普渡科技-pudu-robotics-de9f05f3",
+      "name": "普渡科技 / Pudu Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "优艾智合-youibot-4a290aca",
+      "name": "优艾智合 / Youibot",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "斯坦德机器人-standard-robots-9bedb744",
+      "name": "斯坦德机器人 / Standard Robots",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "睿尔曼智能-realman-robotics-8a62e981",
+      "name": "睿尔曼智能 / RealMan Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "大族机器人-han-s-robot-46f548fc",
+      "name": "大族机器人 / Han's Robot",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "埃斯顿-estun-automation-160bef29",
+      "name": "埃斯顿 / Estun Automation",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "遨博智能-aubo-robotics-7851cc80",
+      "name": "遨博智能 / AUBO Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "新松机器人-siasun-robot-automation-91a532c6",
+      "name": "新松机器人 / SIASUN Robot & Automation",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "慧灵科技-huiling-technology-bedff6d7",
+      "name": "慧灵科技 / Huiling Technology",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "开普勒机器人-kepler-robot-b6fb68f0",
+      "name": "开普勒机器人 / Kepler Robot",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "松灵机器人-agilex-robotics-e8695288",
+      "name": "松灵机器人 / AgileX Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "穹彻智能-noematrix-ai-1a0c07db",
+      "name": "穹彻智能 / Noematrix AI",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "地瓜机器人-d-robotics-d3c62e0a",
+      "name": "地瓜机器人 / D-Robotics",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "清华大学智能产业研究院-air-91301b27",
+      "name": "清华大学智能产业研究院 / AIR",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "北京大学前沿计算研究中心-peking-university-frontier-computin-979671e4",
+      "name": "北京大学前沿计算研究中心 / Peking University Frontier Computing",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "上海人工智能实验室-shanghai-ai-laboratory-04be948a",
+      "name": "上海人工智能实验室 / Shanghai AI Laboratory",
+      "region": "China",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "robust-ai-8b2adccc",
+      "name": "Robust AI",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "osaro-cb68bc3a",
+      "name": "Osaro",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "nimble-robotics-6df32c79",
+      "name": "Nimble Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "pickle-robot-320d1615",
+      "name": "Pickle Robot",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "righthand-robotics-6e80faaf",
+      "name": "RightHand Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "pollen-robotics-722bdf65",
+      "name": "Pollen Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "enchanted-tools-564afbfe",
+      "name": "Enchanted Tools",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "neura-robotics-4f3a6642",
+      "name": "NEURA Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "wandercraft-2c0421b0",
+      "name": "Wandercraft",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "cartwheel-robotics-bc2c9d62",
+      "name": "Cartwheel Robotics",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "roboforce-186bd3c0",
+      "name": "RoboForce",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "micropsi-industries-ef3879a1",
+      "name": "Micropsi Industries",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "machina-labs-55103728",
+      "name": "Machina Labs",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "viam-9b65dd6d",
+      "name": "Viam",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "sereact-f5b2a93d",
+      "name": "Sereact",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    },
+    {
+      "id": "preferred-networks-4812cef0",
+      "name": "Preferred Networks",
+      "region": "International",
+      "official_scan": {
+        "status": "pending",
+        "attempt_count": 0,
+        "last_attempt_at": null,
+        "last_batch": null,
+        "candidate_count": 0,
+        "candidate_urls": [],
+        "last_error": null
+      }
+    }
+  ]
+}
