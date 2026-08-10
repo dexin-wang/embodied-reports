@@ -3,17 +3,6 @@ name: Discover embodied reports
 on:
   schedule:
     - cron: "17 2 * * *"
-  push:
-    branches: [main]
-    paths:
-      - "automation/company_roster.json"
-      - "automation/media_watchlist.json"
-      - "automation/official_seed_projects.json"
-      - "automation/discover_official_projects.py"
-      - "automation/verify_reports.py"
-      - "automation/clean_catalog.py"
-      - "automation/sources.json"
-      - ".github/workflows/discover-reports.yml"
   workflow_dispatch:
 
 permissions:
@@ -84,13 +73,18 @@ jobs:
         run: |
           git config user.name "embodied-reports-bot"
           git config user.email "embodied-reports-bot@users.noreply.github.com"
-          git worktree add ../catalog-output origin/catalog-data
-          cp -a data ../catalog-output/
-          cp -a public/frameworks ../catalog-output/public/
-          cp -a automation/candidates.json automation/verification_audit.json ../catalog-output/automation/
-          cd ../catalog-output
-          git switch -C catalog-data origin/catalog-data
-          git add data public/frameworks automation/candidates.json automation/verification_audit.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "data: refresh verified embodied reports"
-          git push origin HEAD:catalog-data
+          git worktree prune
+          CATALOG_OUTPUT="$(mktemp -d "${RUNNER_TEMP}/catalog-output.XXXXXX")"
+          rmdir "$CATALOG_OUTPUT"
+          cleanup() {
+            git worktree remove --force "$CATALOG_OUTPUT" >/dev/null 2>&1 || true
+          }
+          trap cleanup EXIT
+          git worktree add --detach "$CATALOG_OUTPUT" origin/catalog-data
+          cp -a data "$CATALOG_OUTPUT/"
+          cp -a public/frameworks "$CATALOG_OUTPUT/public/"
+          cp -a automation/candidates.json automation/verification_audit.json "$CATALOG_OUTPUT/automation/"
+          git -C "$CATALOG_OUTPUT" add data public/frameworks automation/candidates.json automation/verification_audit.json
+          if git -C "$CATALOG_OUTPUT" diff --cached --quiet; then exit 0; fi
+          git -C "$CATALOG_OUTPUT" commit -m "data: refresh verified embodied reports"
+          git -C "$CATALOG_OUTPUT" push origin HEAD:catalog-data
