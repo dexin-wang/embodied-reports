@@ -11,7 +11,7 @@ export type Report = {
   featured?: boolean;
   openSource?: boolean;
   verification?: "Automated" | "Seed";
-  framework?: { sourceUrl?: string; imageUrl?: string; page?: number; caption?: string };
+  framework?: { sourceUrl?: string; imageUrl?: string; asset?: string; page?: number; caption?: string };
   details?: ReportDetails;
   links: { label: "Report" | "Project" | "GitHub" | "Model" | "Evidence"; url: string }[];
 };
@@ -339,6 +339,45 @@ export const reports: Report[] = [
     links: [
       { label: "Project", url: "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/" },
       { label: "Model", url: "https://ai.google.dev/gemma" },
+    ],
+  },
+  {
+    id: "generalist-gen-1",
+    title: "GEN-1: Scaling Embodied Foundation Models to Mastery",
+    organization: "Generalist AI",
+    organizationKind: "Company",
+    date: "2026-04-02",
+    year: 2026,
+    summary: "GEN-1 是 Generalist AI 发布的通用具身基础模型系统。官方称其通过扩大预训练数据与计算、后训练和推理时系统改进，在多项真实操作任务上把平均成功率提升至 99%，并以约 1 小时机器人数据完成各任务适配。",
+    tags: ["VLA", "Manipulation", "Datasets"],
+    fields: ["Vision-language-action", "Robot manipulation", "Data & benchmarks", "Embodied AI"],
+    featured: true,
+    verification: "Seed",
+    details: {
+      keyPoints: [
+        "GEN-1 是面向物理世界操作的多模态动作生成系统，而非单一硬件产品；其发布页将模型能力、训练与推理系统共同定义为 GEN-1。",
+        "系统在 GEN-0 的基础上继续扩大数据与计算，并整合预训练、后训练、从经验中学习、强化学习、多模态人类指导和推理时技术。",
+        "官方称基础预训练使用人类可穿戴设备采集的低成本物理交互数据，GEN-1 针对新任务首次适配相应机器人本体与任务。",
+        "其“mastery”评估框架将可靠性、完成速度和面对扰动时的即兴恢复能力作为共同目标。",
+        "发布页强调系统级推理与模型编排组件对实际性能的重要性，并非只报告一组静态权重。",
+      ],
+      capabilities: [
+        "在装配、折叠、分拣和包装等真实操作任务中执行端到端视觉动作控制。",
+        "用少量任务专属机器人数据适配新任务与新机器人本体。",
+        "在物体移位、夹持失败或形变等分布外扰动下恢复任务执行。",
+        "以更高动作速度完成灵巧操作，同时维持长时间连续自主运行。",
+      ],
+      metrics: [
+        { label: "平均任务成功率", value: "99%", note: "Generalist 官方发布页称：GEN-1 在所列简单物理任务上达到约 99% 平均成功率，之前模型为 64%。" },
+        { label: "任务完成速度", value: "最高约 3×", note: "官方发布页所述相对于此前最佳水平的完成速度提升。" },
+        { label: "任务适配数据", value: "约 1 小时机器人数据", note: "官方称所展示结果均以约一小时机器人数据实现任务适配。" },
+        { label: "预训练交互数据", value: "50 万+ 小时", note: "官方发布页披露的高保真物理交互数据规模。" },
+        { label: "折盒速度", value: "约 12 秒 / 2.8×", note: "官方将 GEN-1 与约 34 秒的此前基线比较。" },
+      ],
+    },
+    links: [
+      { label: "Project", url: "https://generalistai.com/blog/gen-1" },
+      { label: "Evidence", url: "https://generalistai.com/" },
     ],
   },
 ];
