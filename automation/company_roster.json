@@ -268,11 +268,195 @@
     "region": "International"
   },
   {
-    "name": "XPENG Robotics",
-    "region": "International"
+    "name": "小鹏机器人 / XPENG Robotics",
+    "region": "China"
   },
   {
     "name": "Generalist AI",
+    "region": "International"
+  },
+  {
+    "name": "破壳机器人",
+    "region": "China"
+  },
+  {
+    "name": "灵心巧手",
+    "region": "China"
+  },
+  {
+    "name": "帕西尼感知 / PaXini",
+    "region": "China"
+  },
+  {
+    "name": "因时机器人 / Inspire Robots",
+    "region": "China"
+  },
+  {
+    "name": "越疆科技 / DOBOT",
+    "region": "China"
+  },
+  {
+    "name": "节卡机器人 / JAKA Robotics",
+    "region": "China"
+  },
+  {
+    "name": "珞石机器人 / ROKAE",
+    "region": "China"
+  },
+  {
+    "name": "非夕科技 / Flexiv",
+    "region": "China"
+  },
+  {
+    "name": "梅卡曼德 / Mech-Mind",
+    "region": "China"
+  },
+  {
+    "name": "仙工智能 / SEER Robotics",
+    "region": "China"
+  },
+  {
+    "name": "海柔创新 / HAI Robotics",
+    "region": "China"
+  },
+  {
+    "name": "极智嘉 / Geek+",
+    "region": "China"
+  },
+  {
+    "name": "快仓智能 / Quicktron",
+    "region": "China"
+  },
+  {
+    "name": "思灵机器人 / Agile Robots",
+    "region": "China"
+  },
+  {
+    "name": "普渡科技 / Pudu Robotics",
+    "region": "China"
+  },
+  {
+    "name": "优艾智合 / Youibot",
+    "region": "China"
+  },
+  {
+    "name": "斯坦德机器人 / Standard Robots",
+    "region": "China"
+  },
+  {
+    "name": "睿尔曼智能 / RealMan Robotics",
+    "region": "China"
+  },
+  {
+    "name": "大族机器人 / Han's Robot",
+    "region": "China"
+  },
+  {
+    "name": "埃斯顿 / Estun Automation",
+    "region": "China"
+  },
+  {
+    "name": "遨博智能 / AUBO Robotics",
+    "region": "China"
+  },
+  {
+    "name": "新松机器人 / SIASUN Robot & Automation",
+    "region": "China"
+  },
+  {
+    "name": "慧灵科技 / Huiling Technology",
+    "region": "China"
+  },
+  {
+    "name": "开普勒机器人 / Kepler Robot",
+    "region": "China"
+  },
+  {
+    "name": "松灵机器人 / AgileX Robotics",
+    "region": "China"
+  },
+  {
+    "name": "穹彻智能 / Noematrix AI",
+    "region": "China"
+  },
+  {
+    "name": "地瓜机器人 / D-Robotics",
+    "region": "China"
+  },
+  {
+    "name": "清华大学智能产业研究院 / AIR",
+    "region": "China"
+  },
+  {
+    "name": "北京大学前沿计算研究中心 / Peking University Frontier Computing",
+    "region": "China"
+  },
+  {
+    "name": "上海人工智能实验室 / Shanghai AI Laboratory",
+    "region": "China"
+  },
+  {
+    "name": "Robust AI",
+    "region": "International"
+  },
+  {
+    "name": "Osaro",
+    "region": "International"
+  },
+  {
+    "name": "Nimble Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Pickle Robot",
+    "region": "International"
+  },
+  {
+    "name": "RightHand Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Pollen Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Enchanted Tools",
+    "region": "International"
+  },
+  {
+    "name": "NEURA Robotics",
+    "region": "International"
+  },
+  {
+    "name": "Wandercraft",
+    "region": "International"
+  },
+  {
+    "name": "Cartwheel Robotics",
+    "region": "International"
+  },
+  {
+    "name": "RoboForce",
+    "region": "International"
+  },
+  {
+    "name": "Micropsi Industries",
+    "region": "International"
+  },
+  {
+    "name": "Machina Labs",
+    "region": "International"
+  },
+  {
+    "name": "Viam",
+    "region": "International"
+  },
+  {
+    "name": "Sereact",
+    "region": "International"
+  },
+  {
+    "name": "Preferred Networks",
     "region": "International"
   }
 ]
