@@ -1,0 +1,33 @@
+name: Validate discovery automation
+
+on:
+  pull_request:
+    paths:
+      - "automation/**"
+      - ".github/workflows/validate-automation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile discovery scripts
+        run: |
+          python -m py_compile \
+            automation/organization_coverage.py \
+            automation/test_organization_coverage.py \
+            automation/test_official_discovery.py \
+            automation/discover_official_projects.py \
+            automation/verify_reports.py
+      - name: Run no-network coverage tests
+        run: |
+          python automation/test_organization_coverage.py
+          python automation/test_official_discovery.py
+          python automation/organization_coverage.py --initialize --check --summary
