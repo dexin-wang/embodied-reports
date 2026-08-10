@@ -126,9 +126,6 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
             time.sleep(delay)
         else:
             print(f"warning: skipping one discovery topic after {RETRY_ATTEMPTS} attempts: {error}")
-    return []
-
-
     return None
 
 
