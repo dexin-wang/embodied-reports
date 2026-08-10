@@ -1,6 +1,193 @@
 {
   "figures": [
     {
+      "id": "being-h08",
+      "asset": "frameworks/being-h08.jpg",
+      "source_url": "https://research.beingbeyond.com/being-h08",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://research.beingbeyond.com/being-h08/images/teaser.webp",
+      "width": 3602,
+      "height": 2209
+    },
+    {
+      "id": "lingbot-video",
+      "asset": "frameworks/lingbot-video.jpg",
+      "source_url": "https://arxiv.org/abs/2607.07675",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "width": 1200,
+      "height": 700
+    },
+    {
+      "id": "wall-oss-05",
+      "asset": "frameworks/wall-oss-05.jpg",
+      "source_url": "https://arxiv.org/abs/2605.30877",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "width": 1200,
+      "height": 700
+    },
+    {
+      "id": "pi07",
+      "asset": "frameworks/pi07.jpg",
+      "source_url": "https://www.pi.website/download/pi07.pdf",
+      "page": 4,
+      "caption_detected": true
+    },
+    {
+      "id": "helix-02",
+      "asset": "frameworks/helix-02.jpg",
+      "source_url": "https://www.figure.ai/news/helix-02",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "id": "gr00t-n16",
+      "asset": "frameworks/gr00t-n16.jpg",
+      "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_6/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://research.nvidia.com/labs/gear/n1_6/training_data_distribution_v3.svg",
+      "width": 900,
+      "height": 557
+    },
+    {
+      "id": "being-h0",
+      "asset": "frameworks/being-h0.jpg",
+      "source_url": "https://arxiv.org/abs/2507.15597",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "width": 1200,
+      "height": 700
+    },
+    {
+      "id": "gr00t-n15",
+      "asset": "frameworks/gr00t-n15.jpg",
+      "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_5/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://research.nvidia.com/labs/gear/n1_5/architecture.svg",
+      "width": 13421,
+      "height": 6848
+    },
+    {
+      "id": "smolvla",
+      "asset": "frameworks/smolvla.jpg",
+      "source_url": "https://arxiv.org/abs/2506.01844",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "width": 1200,
+      "height": 700
+    },
+    {
+      "id": "helix",
+      "asset": "frameworks/helix.jpg",
+      "source_url": "https://www.figure.ai/news/helix",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=3840&q=70",
+      "width": 3840,
+      "height": 2161
+    },
+    {
+      "id": "deepseek-r1",
+      "asset": "frameworks/deepseek-r1.jpg",
+      "source_url": "https://api-docs.deepseek.com/news/news250120/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://cdn.deepseek.com/api-docs/deepseek_r1_benchmark.png",
+      "width": 1080,
+      "height": 789
+    },
+    {
+      "id": "qwen3",
+      "asset": "frameworks/qwen3.jpg",
+      "source_url": "https://qwenlm.github.io/blog/qwen3/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/qwen3-banner.png",
+      "width": 2350,
+      "height": 1000
+    },
+    {
+      "id": "llama-4",
+      "asset": "frameworks/llama-4.jpg",
+      "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=eEsoBuKBK4TAn7o2wpW6oQ&_nc_ss=7b20f&oh=00_AQFzdHUvkD6GLdoJUyyT25xaHp5UhAqecl7QczzjCdaJ7Q&oe=6A93A4F3",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "gemma-3",
+      "asset": "frameworks/gemma-3.jpg",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_hero.2e16d0ba.fill-300x300.format-webp.webp",
+      "width": 300,
+      "height": 300
+    },
+    {
+      "id": "cosa-05-v3",
+      "asset": "frameworks/cosa-05-v3.jpg",
+      "source_url": "https://limx-video.oss-cn-beijing.aliyuncs.com/cosa05v3/limx-vla-architecture.svg",
+      "image_url": "https://limx-video.oss-cn-beijing.aliyuncs.com/cosa05v3/limx-vla-architecture.svg",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "width": 1920,
+      "height": 1194
+    },
+    {
+      "id": "generalist-gen-1",
+      "asset": "frameworks/generalist-gen-1.jpg",
+      "source_url": "https://generalistai.com/blog/gen-1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://generalistai.com/assets/pages/blog/gen-1/assets/generalist-gen1-og.png",
+      "width": 1200,
+      "height": 630
+    },
+    {
       "id": "vlash-vision-language-action-speculative-handove-fbddb1a",
       "asset": "frameworks/vlash-vision-language-action-speculative-handove-fbddb1a.jpg",
       "source_url": "https://github.com/mit-han-lab/vlash",
@@ -272,7 +459,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=DJQLzU9YD0oQ7kNvwFHdnd2&_nc_oc=Adoep9ITlzuDx5VdxkRb_BhDUsG5KVvdDgaB2BtHsA1htHKL7F4GEyR6W110PysRqvw&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=iCs6kWY6b9C1yQhR6TdTwg&_nc_ss=7b20f&oh=00_AQEkjnR0zTjqqVrvgynKz04U7YOpy3zAoTM68tNQquc02A&oe=6A7CAADC",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=DJQLzU9YD0oQ7kNvwFHdnd2&_nc_oc=Adoep9ITlzuDx5VdxkRb_BhDUsG5KVvdDgaB2BtHsA1htHKL7F4GEyR6W110PysRqvw&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=4-aw6oDxGcUD9hxt03X0Sg&_nc_ss=7b20f&oh=00_AQGOoDFp91z6cHgUA2xA6qj92R1wWaU5YsVXHjckoOdDUg&oe=6A7F159C",
       "width": 1440,
       "height": 630
     },
@@ -284,9 +471,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://cdn-uploads.huggingface.co/production/uploads/640e21ef3c82bd463ee5a76d/aooU0a3DMtYmy_1IWMaIM.png",
-      "width": 2554,
-      "height": 1434
+      "image_url": "https://cdn-uploads.huggingface.co/production/uploads/640e21ef3c82bd463ee5a76d/V4QU-B-6YBONb-8K_lSpj.gif",
+      "width": 320,
+      "height": 240
     },
     {
       "id": "openvla-oft-d2d6db6",
@@ -308,9 +495,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://cdn.deepseek.com/api-docs/r1_0528_benchmark_1.webp",
-      "width": 1080,
-      "height": 637
+      "image_url": "https://cdn.deepseek.com/api-docs/r1_0528_benchmark_2.webp",
+      "width": 1000,
+      "height": 561
     },
     {
       "id": "nvidia-isaac-gr00t-n1-5-5ed4eff",
@@ -428,9 +615,9 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://lh3.googleusercontent.com/I7a1f6DPm4Qs4JuiieahA4ki0Dc5IQDU8PxfsMRy3UCf3HF7Td_zZfXg35_M-Td1EELJUY2dJLEkdyjt7IVah658uuqvwAQFtarOukXs44MHGMiSd64=w1440-h810-n-nu",
-      "width": 1440,
-      "height": 810
+      "image_url": "https://lh3.googleusercontent.com/I7a1f6DPm4Qs4JuiieahA4ki0Dc5IQDU8PxfsMRy3UCf3HF7Td_zZfXg35_M-Td1EELJUY2dJLEkdyjt7IVah658uuqvwAQFtarOukXs44MHGMiSd64=w393-h221-n-nu-rw-lo",
+      "width": 393,
+      "height": 221
     },
     {
       "id": "homie-humanoid-loco-manipulation-with-isomorphic-aefe995",
@@ -467,169 +654,6 @@
       "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=3840&q=70",
       "width": 3840,
       "height": 2161
-    },
-    {
-      "id": "being-h08",
-      "asset": "frameworks/being-h08.jpg",
-      "source_url": "https://research.beingbeyond.com/being-h08",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://research.beingbeyond.com/being-h08/images/teaser.webp",
-      "width": 3602,
-      "height": 2209
-    },
-    {
-      "id": "lingbot-video",
-      "asset": "frameworks/lingbot-video.jpg",
-      "source_url": "https://arxiv.org/abs/2607.07675",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-      "width": 1200,
-      "height": 700
-    },
-    {
-      "id": "wall-oss-05",
-      "asset": "frameworks/wall-oss-05.jpg",
-      "source_url": "https://arxiv.org/abs/2605.30877",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-      "width": 1200,
-      "height": 700
-    },
-    {
-      "id": "pi07",
-      "asset": "frameworks/pi07.jpg",
-      "source_url": "https://www.pi.website/download/pi07.pdf",
-      "page": 4,
-      "caption_detected": true
-    },
-    {
-      "id": "helix-02",
-      "asset": "frameworks/helix-02.jpg",
-      "source_url": "https://www.figure.ai/news/helix-02",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
-      "width": 1200,
-      "height": 630
-    },
-    {
-      "id": "gr00t-n16",
-      "asset": "frameworks/gr00t-n16.jpg",
-      "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_6/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://research.nvidia.com/labs/gear/n1_6/training_data_distribution_v3.svg",
-      "width": 900,
-      "height": 557
-    },
-    {
-      "id": "being-h0",
-      "asset": "frameworks/being-h0.jpg",
-      "source_url": "https://arxiv.org/abs/2507.15597",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-      "width": 1200,
-      "height": 700
-    },
-    {
-      "id": "gr00t-n15",
-      "asset": "frameworks/gr00t-n15.jpg",
-      "source_url": "https://research.nvidia.com/labs/gear/gr00t-n1_5/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://research.nvidia.com/labs/gear/n1_5/architecture.svg",
-      "width": 13421,
-      "height": 6848
-    },
-    {
-      "id": "smolvla",
-      "asset": "frameworks/smolvla.jpg",
-      "source_url": "https://arxiv.org/abs/2506.01844",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
-      "width": 1200,
-      "height": 700
-    },
-    {
-      "id": "helix",
-      "asset": "frameworks/helix.jpg",
-      "source_url": "https://www.figure.ai/news/helix",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=3840&q=70",
-      "width": 3840,
-      "height": 2161
-    },
-    {
-      "id": "deepseek-r1",
-      "asset": "frameworks/deepseek-r1.jpg",
-      "source_url": "https://api-docs.deepseek.com/news/news250120/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://cdn.deepseek.com/api-docs/deepseek_r1_benchmark.png",
-      "width": 1080,
-      "height": 789
-    },
-    {
-      "id": "qwen3",
-      "asset": "frameworks/qwen3.jpg",
-      "source_url": "https://qwenlm.github.io/blog/qwen3/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/qwen3-banner.png",
-      "width": 2350,
-      "height": 1000
-    },
-    {
-      "id": "llama-4",
-      "asset": "frameworks/llama-4.jpg",
-      "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=zrXyWgQtBQkQ7kNvwG73Aie&_nc_oc=AdphXi6fjLs1Ic6mVoRzrD2GWvIipHA7MyrdGwzJoSagAQRh5D4m-oQ6knpqRN_cH3E&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=uy0IGGmJFF6wJyqV4D9bTA&_nc_ss=7b20f&oh=00_AQHM4RhukZbujCZnvaHUBbJPSqHt-dRr9TnR_Ajdbbarow&oe=6A913A33",
-      "width": 1920,
-      "height": 1080
-    },
-    {
-      "id": "gemma-3",
-      "asset": "frameworks/gemma-3.jpg",
-      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_hero.2e16d0ba.fill-300x300.format-webp.webp",
-      "width": 300,
-      "height": 300
     }
   ]
 }
