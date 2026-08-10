@@ -17,6 +17,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+from organization_coverage import ensure_coverage, record_official_batch
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES = ROOT / "automation" / "candidates.json"
@@ -26,6 +28,7 @@ API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 RETRY_ATTEMPTS = 3
+COMPANY_BATCH_SIZE = 8
 
 TOPICS = [
     "generalist vision-language-action, robot foundation-model and embodied-agent software releases",
@@ -85,8 +88,12 @@ def response_json(result: dict) -> dict:
     return value
 
 
-def call(topic: str) -> list[dict]:
+def call(topic: str, *, mode: str) -> list[dict] | None:
+    media_instruction = """The independent-media article is discovery evidence only. For every result, resolve the corresponding dedicated official project/release page first and return that official page as url. Never return the WeChat/media article itself."""
+    official_instruction = """Search the official organization website, project page, news/blog, research page, GitHub, or sitemap. Every named organization in this batch is a required coverage target; if no qualifying release is found, return no invented candidate for it."""
+    source_instruction = media_instruction if mode == "media" else official_instruction
     prompt = f"""Search the web for up to 20 influential embodied-robotics project releases since 2025 in this area: {topic}.
+{source_instruction}
 Return only software candidates that have a dedicated official project page, official company announcement, or official university/research-lab project page. Do not return an arXiv abstract as the URL. A paper/PDF and open source are optional.
 Include VLA/foundation models, world/action models, policies, data engines/datasets, simulators, control/planning stacks, benchmarks, or embodied-agent frameworks. Exclude all hardware-only robot/product announcements: robot bodies, humanoids, quadrupeds, hands, sensors, motors, teleoperation devices, and product specifications are not technical reports for this index.
 The candidate may later be rejected, so do not guess any value. Use a precise YYYY-MM-DD date only when the official page gives one; otherwise return the first day of the known release month. Include a short factual English summary and the named organization shown by the official source.
@@ -119,24 +126,33 @@ Exclude generic autonomous-driving, normal computer-vision, and purely academic 
             time.sleep(delay)
         else:
             print(f"warning: skipping one discovery topic after {RETRY_ATTEMPTS} attempts: {error}")
-    return []
+    return None
 
 
-def discovery_topics(mode: str) -> list[str]:
-    """Use identical admission rules; only discovery inputs differ by cadence."""
+def official_topics() -> list[tuple[str, list[str]]]:
+    """Return global topics plus every canonical organization in bounded batches."""
     roster = json.loads(COMPANY_ROSTER.read_text()) if COMPANY_ROSTER.exists() else []
     names = [item["name"] for item in roster if isinstance(item, dict) and item.get("name")]
     company_topics = [
-        "Official dedicated pages for embodied-robotics SOFTWARE releases from these organizations: " + ", ".join(names[index:index + 6])
-        for index in range(0, len(names), 6)
+        (
+            "Official dedicated pages for embodied-robotics SOFTWARE releases from these organizations: "
+            + ", ".join(names[index:index + COMPANY_BATCH_SIZE]),
+            names[index:index + COMPANY_BATCH_SIZE],
+        )
+        for index in range(0, len(names), COMPANY_BATCH_SIZE)
     ]
-    if mode == "media":
-        watchlist = json.loads(MEDIA_WATCHLIST.read_text()) if MEDIA_WATCHLIST.exists() else []
-        accounts = [item.get("name", "") for item in watchlist if isinstance(item, dict)]
-        return ["Search public WeChat Official Account articles from these independent AI/robotics media accounts: "
-          + ", ".join(accounts)
-          + ". Find influential embodied-robotics or LLM SOFTWARE releases since 2025. Return the media article as discovery evidence only; the candidate must still name a company/university so later verification can find its official project page."]
-    return [*TOPICS, *company_topics]
+    return [(topic, []) for topic in TOPICS] + company_topics
+
+
+def media_topic() -> str:
+    watchlist = json.loads(MEDIA_WATCHLIST.read_text()) if MEDIA_WATCHLIST.exists() else []
+    accounts = [item.get("name", "") for item in watchlist if isinstance(item, dict) and item.get("name")]
+    return (
+        "Search public WeChat Official Account articles from these independent AI/robotics media accounts: "
+        + ", ".join(accounts)
+        + ". Find influential embodied-robotics or LLM SOFTWARE releases since 2025 and resolve each lead to its dedicated official project page."
+    )
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -144,20 +160,59 @@ def main() -> None:
     args = parser.parse_args()
     if not API_KEY:
         raise SystemExit("OPENAI_API_KEY is required for official project discovery")
+
     payload = json.loads(CANDIDATES.read_text()) if CANDIDATES.exists() else {"candidates": []}
-    by_url = {item["url"]: item for item in payload.get("candidates", []) if item.get("url")}
+    by_url = {item["url"]: item for item in payload.get("candidates", []) if isinstance(item, dict) and item.get("url")}
+    topics = official_topics() if args.mode == "official" else [(media_topic(), [])]
+    if args.mode == "official":
+        ensure_coverage()
+
     added = 0
-    for topic in discovery_topics(args.mode):
-        for item in call(topic):
-            if item["url"].startswith("https://arxiv.org/") or not item["url"].startswith("https://"):
+    batch_prefix = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    for index, (topic, names) in enumerate(topics, 1):
+        items = call(topic, mode=args.mode)
+        if items is None:
+            if names:
+                record_official_batch(
+                    names, [], status="failed", batch=f"official-{batch_prefix}-{index:02d}",
+                    error="discovery provider exhausted retries",
+                )
+            continue
+
+        valid_items = []
+        for item in items:
+            url = item.get("url", "")
+            date = item.get("date", "")
+            if not isinstance(url, str) or url.startswith("https://arxiv.org/") or not url.startswith("https://"):
                 continue
-            if item["date"] < "2025-01-01":
+            if not isinstance(date, str) or date < "2025-01-01":
                 continue
-            reason = "independent media discovery" if args.mode == "media" else "official web-project discovery"
-            by_url[item["url"]] = {**item, "authors": [], "score": 100, "reasons": [reason]}
+            valid_items.append(item)
+
+        if names:
+            record_official_batch(
+                names, valid_items, status="completed", batch=f"official-{batch_prefix}-{index:02d}",
+            )
+
+        reason = "official web-project discovery" if args.mode == "official" else "media-resolved official project discovery"
+        for item in valid_items:
+            previous = by_url.get(item["url"], {})
+            reasons = sorted(set([*previous.get("reasons", []), reason]))
+            by_url[item["url"]] = {
+                **previous, **item, "authors": [], "score": 100, "reasons": reasons,
+            }
             added += 1
+
     merged = sorted(by_url.values(), key=lambda item: (item.get("date", ""), item.get("title", "")), reverse=True)
     CANDIDATES.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(), "candidates": merged}, ensure_ascii=False, indent=2) + "\n")
+    if args.mode == "official":
+        coverage = ensure_coverage()
+        summary = {
+            "organizations": len(coverage["organizations"]),
+            "completed": sum(item["official_scan"]["status"] == "completed" for item in coverage["organizations"]),
+            "failed": sum(item["official_scan"]["status"] == "failed" for item in coverage["organizations"]),
+        }
+        print(f"official_coverage={json.dumps(summary, ensure_ascii=False, sort_keys=True)}")
     print(f"{args.mode}_project_leads_added={added} candidates_total={len(merged)}")
 
 
