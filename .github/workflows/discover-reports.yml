@@ -26,10 +26,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate organization coverage registry (no API)
-        run: |
-          python automation/organization_coverage.py --initialize --check --summary
-          python automation/test_organization_coverage.py
       - name: Restore last generated catalog
         run: |
           git fetch origin catalog-data
@@ -37,6 +33,10 @@ jobs:
           if git cat-file -e origin/catalog-data:automation/organization_coverage.json 2>/dev/null; then
             git show origin/catalog-data:automation/organization_coverage.json > automation/organization_coverage.json
           fi
+      - name: Validate organization coverage registry (no API)
+        run: |
+          python automation/organization_coverage.py --initialize --check --summary
+          python automation/test_organization_coverage.py
       - name: Discover candidate leads
         run: python automation/discover.py
       - name: Discover influential releases from independent WeChat media
