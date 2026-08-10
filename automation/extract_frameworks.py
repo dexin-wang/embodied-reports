@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """Extract original visuals from official project pages only.
 
-This job intentionally stores a rasterized crop from the source PDF rather than
-recreating a method diagram.  Figure 1 is normally the overview/method figure
-in technical reports.  The generated manifest records its source and page so
-the website can attribute every displayed image.
+The index never generates diagrams. It stores only decoded, rasterized assets
+served by the official project page and records their provenance in the manifest.
 """
 
 from __future__ import annotations
@@ -14,6 +12,7 @@ import re
 import html as html_lib
 import urllib.request
 import argparse
+import tempfile
 from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
 from io import BytesIO
@@ -33,7 +32,7 @@ VERIFIED = ROOT / "data" / "verified.json"
 STATIC = ROOT / "automation" / "framework_sources.json"
 OUT_DIR = ROOT / "public" / "frameworks"
 MANIFEST = OUT_DIR / "manifest.json"
-MAX_REPORTS = 80
+MAX_REPORTS = 120
 
 
 class ProjectImageParser(HTMLParser):
@@ -79,13 +78,13 @@ class ProjectImageParser(HTMLParser):
             style = " ".join(values.get(key, "") for key in ("style", "data-bg", "data-background-image", "data-background"))
             match = re.search(r"""url\(\s*['"]?([^'")]+)""", style, flags=re.I)
             source = match.group(1) if match else None
-        if not source:
-            return
-        self.order += 1
+        # Some responsive project pages expose only srcset; resolve it before
+        # rejecting the tag so an otherwise valid official image is not lost.
         if not source and values.get("srcset"):
             source = values["srcset"].split(",", 1)[0].strip().split(" ", 1)[0]
         if not source:
             return
+        self.order += 1
         text = " ".join(values.get(key, "") for key in ("alt", "title", "class", "id", "src", "data-src", "srcset", "style", "poster")).lower()
         if source.startswith("data:") or any(term in text for term in self.EXCLUDED_TERMS):
             return
@@ -100,9 +99,15 @@ class ProjectImageParser(HTMLParser):
         self.candidates.append((score, self.order, source))
 
 
+def looks_like_svg(image: bytes) -> bool:
+    """Accept SVG documents with an XML declaration, BOM, or whitespace."""
+    head = image[:4096].lstrip().lower()
+    return head.startswith(b"<svg") or head.startswith(b"<?xml") and b"<svg" in head
+
+
 def save_web_image(image: bytes, target: Path) -> tuple[int, int]:
-    """Convert a real project-page asset (including WebP/AVIF) to JPEG."""
-    if image.lstrip().startswith(b"<svg"):
+    """Convert a real project-page asset (including XML-prefixed SVG) to JPEG."""
+    if looks_like_svg(image):
         document = fitz.open(stream=image, filetype="svg")
         try:
             pixmap = document[0].get_pixmap(matrix=fitz.Matrix(1.5, 1.5), alpha=False)
@@ -144,8 +149,7 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
         for tag in re.findall(r"<(?:img|source|video|link|[^>]+style=)[^>]*>", embedded_markup, flags=re.I):
             parser.feed(tag)
         # Some release sites render the hero as a CSS background rather than an
-        # <img>.  It remains a real asset from that official page and is used
-        # only after the PDF / explicit method-image path has been exhausted.
+        # <img>. It remains a real asset from that official project page.
         for image_ref in re.findall(r"""(?:background(?:-image)?|data-background(?:-image)?)\s*[:=]\s*url\(\s*['"]?([^'")]+)""", embedded_markup, flags=re.I):
             parser.order += 1
             parser.candidates.append((8, parser.order, image_ref))
@@ -186,51 +190,15 @@ def extract_web_figure(report_id: str, source_url: str, target: Path) -> dict | 
         return None
 
 
-def arxiv_pdf(url: str) -> str:
-    match = re.search(r"arxiv\.org/(?:abs|pdf)/([^?#]+)", url)
-    return f"https://arxiv.org/pdf/{match.group(1).replace('.pdf', '')}.pdf" if match else url
-
-
-def fetch_pdf(url: str) -> bytes | None:
-    request = urllib.request.Request(url, headers={"User-Agent": "EmbodiedReports/0.2 (+https://github.com/dexin-wang/embodied-reports)"})
-    try:
-        with urllib.request.urlopen(request, timeout=25) as response:
-            body = response.read()
-            return body if body.startswith(b"%PDF") else None
-    except Exception as exc:
-        print(f"warning: fetch failed for {url}: {exc}")
-        return None
-
-
-def find_method_figure(document: fitz.Document) -> tuple[int, fitz.Rect, bool]:
-    """Locate an early caption that most likely describes a method/framework."""
-    best: tuple[int, int, fitz.Rect] | None = None
-    method_terms = ("framework", "architecture", "method", "pipeline", "approach", "model overview", "system overview")
-    for page_number in range(min(6, len(document))):
-        page = document[page_number]
-        for block in page.get_text("blocks"):
-            text = " ".join(block[4].split())
-            match = re.match(r"^(?:Figure|Fig\.)\s*(\d+)(?:\s|[.:—–-])", text, re.I)
-            if not match:
-                continue
-            figure_number = int(match.group(1))
-            lower = text.lower()
-            score = 1 if figure_number == 1 else 0
-            score += sum(8 for term in method_terms if term in lower)
-            _, y0, _, y1, *_ = block
-            crop = fitz.Rect(18, max(18, y0 - page.rect.height * 0.58), page.rect.width - 18, min(page.rect.height - 18, y1 + 42))
-            candidate = (score, page_number, crop)
-            if best is None or candidate[0] > best[0]:
-                best = candidate
-    if best:
-        return best[1], best[2], True
-    page = document[0]
-    return 0, fitz.Rect(18, 18, page.rect.width - 18, page.rect.height - 18), False
-
-
-def extract(report_id: str, source_url: str, official_url: str | None = None, refresh: bool = False) -> dict | None:
+def extract(
+    report_id: str,
+    source_url: str,
+    official_url: str | None = None,
+    refresh: bool = False,
+    target: Path | None = None,
+) -> dict | None:
     """Use only project-page media; PDFs are intentionally not a fallback."""
-    target = OUT_DIR / f"{report_id}.jpg"
+    target = target or OUT_DIR / f"{report_id}.jpg"
     if target.exists() and not refresh:
         return {"id": report_id, "asset": f"frameworks/{report_id}.jpg", "source_url": official_url or source_url, "page": None, "caption_detected": False, "cached": True, "source_kind": "official_project_page"}
     project_url = official_url or source_url
@@ -254,20 +222,57 @@ def sources() -> list[dict]:
         official = next((link["url"] for link in links if link.get("label") == "Project"), None)
         if primary or official:
             dynamic.append({"id": report["id"], "source_url": primary or official, "official_url": official})
-    all_sources = {item["id"]: item for item in [*dynamic, *static]}
-    return list(all_sources.values())[:MAX_REPORTS]
+    # Explicit official-image sources are a deterministic priority list. They
+    # remain testable even when the automatically generated catalog grows.
+    by_id = {item["id"]: item for item in dynamic}
+    static_ids = []
+    for item in static:
+        if item.get("id") and item.get("source_url"):
+            by_id[item["id"]] = item
+            static_ids.append(item["id"])
+    ordered_ids = [*dict.fromkeys(static_ids), *(item["id"] for item in dynamic if item.get("id") not in static_ids)]
+    return [by_id[item_id] for item_id in ordered_ids[:MAX_REPORTS]]
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--cached-only", action="store_true", help="write a manifest for previously extracted figures without fetching PDFs")
+    parser.add_argument("--cached-only", action="store_true", help="write a manifest for previously extracted official project images without fetching")
     parser.add_argument("--refresh", action="store_true", help="re-fetch and replace previously extracted crops")
     parser.add_argument("--limit", type=int, default=None, help="only process the first N stable source entries")
+    parser.add_argument(
+        "--preflight-ids",
+        default="",
+        help="comma-separated official-image source IDs to fetch and decode without changing the catalog",
+    )
     args = parser.parse_args()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     source_items = sources()
     if args.limit is not None:
         source_items = source_items[:args.limit]
+    required_ids = [item.strip() for item in args.preflight_ids.split(",") if item.strip()]
+    if required_ids:
+        by_id = {item["id"]: item for item in source_items}
+        missing = [item_id for item_id in required_ids if item_id not in by_id]
+        if missing:
+            raise SystemExit(f"preflight sources not registered: {', '.join(missing)}")
+        with tempfile.TemporaryDirectory(prefix="framework-preflight-") as temp_dir:
+            temp_root = Path(temp_dir)
+            failures = []
+            for item_id in required_ids:
+                item = by_id[item_id]
+                result = extract(
+                    item["id"],
+                    item["source_url"],
+                    item.get("official_url"),
+                    refresh=True,
+                    target=temp_root / f"{item_id}.jpg",
+                )
+                if not result:
+                    failures.append(item_id)
+            if failures:
+                raise SystemExit(f"required official project images could not be fetched/decoded: {', '.join(failures)}")
+        print(f"preflight_passed={len(required_ids)}")
+        return
     previous_entries = {
         item.get("id"): item
         for item in (json.loads(MANIFEST.read_text()).get("figures", []) if MANIFEST.exists() else [])
