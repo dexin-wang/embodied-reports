@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=sAuT0t2NeCZ1H4rqV7wKUw&_nc_ss=7b20f&oh=00_AQFoz5ENxsGoFDdtUPEX8gyM1APWIgPmLVSj7WW47RXAhA&oe=6A93A4F3",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=VeqnZYRLZR0Rz9nHxEVvyw&_nc_ss=7b20f&oh=00_AQFc5HVkSUU60R1MG18O-aWkD7jCKJCB4Po8TuicyS73qg&oe=6A941573",
       "width": 1920,
       "height": 1080
     },
@@ -200,6 +200,18 @@
       "height": 1468
     },
     {
+      "id": "cortex-2-5-ea0ac17",
+      "asset": "frameworks/cortex-2-5-ea0ac17.jpg",
+      "source_url": "https://sereact.ai/posts/cortex-2-5",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://sereact.ai/_next/image?url=%2Fassets%2Fcortex-2-5%2Fthumbnail.webp%3Fv%3D3&w=3840&q=75",
+      "width": 1200,
+      "height": 675
+    },
+    {
       "id": "wall-wm-world-action-model-9de8900",
       "asset": "frameworks/wall-wm-world-action-model-9de8900.jpg",
       "source_url": "https://x2robot.com/pages/wm",
@@ -210,6 +222,30 @@
       "image_url": "https://x2robot.com/pages/wm/assets/images/fig_teaser.jpg",
       "width": 4258,
       "height": 2379
+    },
+    {
+      "id": "subtask-prediction-for-cortex-2-0-066341c",
+      "asset": "frameworks/subtask-prediction-for-cortex-2-0-066341c.jpg",
+      "source_url": "https://sereact.ai/posts/subtask-prediction",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://sereact.ai/_next/image?url=%2Fassets%2Fsubtask-prediction%2Fthumbnail.png&w=3840&q=75",
+      "width": 1776,
+      "height": 996
+    },
+    {
+      "id": "cortex-2-0-00c4a80",
+      "asset": "frameworks/cortex-2-0-00c4a80.jpg",
+      "source_url": "https://cortex2.sereact.ai/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://investor.sereact.ai/assets/benchmark/experiment3/all_metrics_shoe_box-2.png",
+      "width": 4469,
+      "height": 1277
     },
     {
       "id": "deepseek-v4-preview",
@@ -246,6 +282,54 @@
       "image_url": "https://agibot.com/public/uploads/images/20241230/a71076b43f1846bdaae754407a9009ac.jpg",
       "width": 451,
       "height": 654
+    },
+    {
+      "id": "lerobot-v0-5-0-123525a",
+      "asset": "frameworks/lerobot-v0-5-0-123525a.jpg",
+      "source_url": "https://huggingface.co/blog/lerobot-release-v050",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.5.0/unitree_bosswalk.JPG",
+      "width": 3024,
+      "height": 3024
+    },
+    {
+      "id": "the-real-world-learning-loop-c472922",
+      "asset": "frameworks/the-real-world-learning-loop-c472922.jpg",
+      "source_url": "https://sereact.ai/posts/real-world-learning-loop",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://sereact.ai/_next/image?url=https%3A%2F%2Ft03apfsmwkxr60hu.public.blob.vercel-storage.com%2Fnews%2FReal%2520World%2520Learning%2520Loop%2FUntitled%2520design.png&w=3840&q=75",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "cortex-1-6-learning-from-the-way-things-unfold-05f9aa7",
+      "asset": "frameworks/cortex-1-6-learning-from-the-way-things-unfold-05f9aa7.jpg",
+      "source_url": "https://sereact.ai/posts/cortex-1-6",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://sereact.ai/_next/image?url=https%3A%2F%2Ft03apfsmwkxr60hu.public.blob.vercel-storage.com%2Fnews%2Fcortex%25201.6%2Fcortex%25201.6%2520thumbnail.png&w=3840&q=75",
+      "width": 2752,
+      "height": 1536
+    },
+    {
+      "id": "viam-platform-roundup-january-2026-9cf1b2c",
+      "asset": "frameworks/viam-platform-roundup-january-2026-9cf1b2c.jpg",
+      "source_url": "https://www.viam.com/post/january-2026-platform-roundup",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/6968f4eb3666d4655bb7d101_model%20selection%20UI.png",
+      "width": 1317,
+      "height": 663
     },
     {
       "id": "act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2",
@@ -291,7 +375,7 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.4.0/lerobot-libero-groot2-v040.gif",
+      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.4.0/lerobot-libero-groot-v040.gif",
       "width": 1152,
       "height": 648
     },
@@ -306,6 +390,18 @@
       "image_url": "https://lh3.googleusercontent.com/vSMY895gzWpK-nGK2Vn__6OsjX5DIlTkiBBqggd0f-oAw1oNgh5tFPiZPKtSKIONx4UCT7kiop72Nuj0RMrJ-bICxx21SZCG55LlqcqBA-n_znJw=w1440",
       "width": 1440,
       "height": 809
+    },
+    {
+      "id": "viam-apps-for-robot-fleet-dashboards-fee2211",
+      "asset": "frameworks/viam-apps-for-robot-fleet-dashboards-fee2211.jpg",
+      "source_url": "https://www.viam.com/post/build-a-custom-dashboard-for-your-fleet-operators-minus-the-complex-infrastructure",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/68c2f5c20eeb5d84dd5f5817_202509_ViamApps_main.png",
+      "width": 750,
+      "height": 500
     },
     {
       "id": "menteebot-ai-approach-d54bfcc",
@@ -404,6 +500,18 @@
       "height": 600
     },
     {
+      "id": "skild-brain-general-purpose-robotic-intelligence-b4c16d2",
+      "asset": "frameworks/skild-brain-general-purpose-robotic-intelligence-b4c16d2.jpg",
+      "source_url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.skild.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fomni-body.3981c022.jpg&w=3840&q=75",
+      "width": 2062,
+      "height": 1405
+    },
+    {
       "id": "neural-jacobian-fields-c795ce5",
       "asset": "frameworks/neural-jacobian-fields-c795ce5.jpg",
       "source_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/",
@@ -411,9 +519,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/static/images/teaser.png",
-      "width": 2588,
-      "height": 1000
+      "image_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/static/images/data.png",
+      "width": 2624,
+      "height": 878
     },
     {
       "id": "steerable-scene-generation-3d840a5",
@@ -452,6 +560,18 @@
       "height": 775
     },
     {
+      "id": "nvidia-isaac-sim-5-0-and-isaac-lab-2-2-3d3ac23",
+      "asset": "frameworks/nvidia-isaac-sim-5-0-and-isaac-lab-2-2-3d3ac23.jpg",
+      "source_url": "https://developer.nvidia.com/blog/?p=101431",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2025/06/gr-1_pick_place-cropped-jpg.webp",
+      "width": 1246,
+      "height": 701
+    },
+    {
       "id": "v-jepa-2-f0219df",
       "asset": "frameworks/v-jepa-2-f0219df.jpg",
       "source_url": "https://ai.meta.com/research/vjepa/",
@@ -459,7 +579,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=DJQLzU9YD0oQ7kNvwFHdnd2&_nc_oc=Adoep9ITlzuDx5VdxkRb_BhDUsG5KVvdDgaB2BtHsA1htHKL7F4GEyR6W110PysRqvw&_nc_zt=23&_nc_ht=scontent-sin11-1.xx&_nc_gid=IQQXVvvadYa9OhWAh5leMA&_nc_ss=7b20f&oh=00_AQGLtF9W5z8622TMF25f5Q-vWpHS-vHJCqbgwrxqQ2JaRA&oe=6A7F159C",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=v0kwxINHbPgQ7kNvwGWMSeV&_nc_oc=AdrXdKOxeUlC6BlhSNmG1BH4azH2kXt6Hl24eWaJYUGDhR8ThPnKEFmCv6CRuje_mHQ&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=EAu2KGU0_9hAII90rWxLOA&_nc_ss=7b20f&oh=00_AQEIV-RITHSgZ8Yxg1MdZEvngtz6yFQyBctrgWx8HQPaWg&oe=6A7FBE5C",
       "width": 1440,
       "height": 630
     },
@@ -560,6 +680,18 @@
       "height": 286
     },
     {
+      "id": "viam-tensorflow-model-training-support-454c487",
+      "asset": "frameworks/viam-tensorflow-model-training-support-454c487.jpg",
+      "source_url": "https://www.viam.com/post/platform-roundup-april-2025",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/6802a4dfde77d5a410d2f13f_April%20platform%20update%20main.png",
+      "width": 750,
+      "height": 500
+    },
+    {
       "id": "stretch-software-drop-april-18-2025-0770a27",
       "asset": "frameworks/stretch-software-drop-april-18-2025-0770a27.jpg",
       "source_url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332",
@@ -620,6 +752,18 @@
       "height": 221
     },
     {
+      "id": "gemini-robotics-and-gemini-robotics-er-4196177",
+      "asset": "frameworks/gemini-robotics-and-gemini-robotics-er-4196177.jpg",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://lh3.googleusercontent.com/I7a1f6DPm4Qs4JuiieahA4ki0Dc5IQDU8PxfsMRy3UCf3HF7Td_zZfXg35_M-Td1EELJUY2dJLEkdyjt7IVah658uuqvwAQFtarOukXs44MHGMiSd64=w393-h221-n-nu-rw-lo",
+      "width": 393,
+      "height": 221
+    },
+    {
       "id": "homie-humanoid-loco-manipulation-with-isomorphic-aefe995",
       "asset": "frameworks/homie-humanoid-loco-manipulation-with-isomorphic-aefe995.jpg",
       "source_url": "https://homietele.github.io/",
@@ -654,6 +798,30 @@
       "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=3840&q=70",
       "width": 3840,
       "height": 2161
+    },
+    {
+      "id": "viam-nested-fragments-d5993e4",
+      "asset": "frameworks/viam-nested-fragments-d5993e4.jpg",
+      "source_url": "https://www.viam.com/post/nested-fragments",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/67acc0a62ee42b572b130c3e_viam-blog-feb-nested-fragments-main-image.png",
+      "width": 1563,
+      "height": 1042
+    },
+    {
+      "id": "nvidia-cosmos-world-foundation-model-platform-080cd9a",
+      "asset": "frameworks/nvidia-cosmos-world-foundation-model-platform-080cd9a.jpg",
+      "source_url": "https://www.nvidia.com/en-us/ai/cosmos/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://www.nvidia.com/content/nvidiaGDC/us/en_US/ai/cosmos/_jcr_content/root/responsivegrid/nv_container_9381701/nv_tabs/item_1724183178409/nv_image_copy.coreimg.jpeg/1784544089108/nvidia-cosmo-synthetics-data-generation-auto-ari.jpeg",
+      "width": 1280,
+      "height": 720
     }
   ]
 }

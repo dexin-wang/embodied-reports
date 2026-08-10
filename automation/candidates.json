@@ -1,12 +1,24 @@
 {
-  "generated_at": "2026-08-10T04:09:13.571784+00:00",
+  "generated_at": "2026-08-10T14:25:39.618858+00:00",
   "candidates": [
     {
-      "date": "2026-08-08",
-      "organization_hint": "Research in progress",
-      "summary": "I’m checking each named organization’s official site and official announcements, then filtering out hardware releases and paper-only pages. Dates will be exact only where the official source states them; otherwise I’ll normalize to the first day of the known month.",
-      "title": "Status",
-      "url": "https://placeholder.invalid/status",
+      "date": "2026-08-10",
+      "organization_hint": "Search in progress",
+      "summary": "I’m checking each required organization’s official website, announcement pages, research pages, and official GitHub presence, and will omit organizations where no qualifying software release can be verified.",
+      "title": "Coverage verification",
+      "url": "https://example.com",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "organization_hint": "Search status",
+      "summary": "I’m checking each required organization against official project, research, announcement, GitHub, and sitemap sources, and will omit organizations where no qualifying software release can be verified.",
+      "title": "Coverage in progress",
+      "url": "https://example.invalid/status",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -16,9 +28,9 @@
     {
       "date": "2026-08-08",
       "organization_hint": "Research in progress",
-      "summary": "I’m checking official lab, university, and company release pages, then filtering out paper-only and hardware-only announcements. Dates will follow the official page where stated, with month-level dates normalized to the first day.",
-      "title": "Search status",
-      "url": "https://example.invalid/status",
+      "summary": "I’m checking each named organization’s official site and official announcements, then filtering out hardware releases and paper-only pages. Dates will be exact only where the official source states them; otherwise I’ll normalize to the first day of the known month.",
+      "title": "Status",
+      "url": "https://placeholder.invalid/status",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -2612,6 +2624,18 @@
       ]
     },
     {
+      "date": "2026-07-15",
+      "organization_hint": "Sereact",
+      "summary": "Cortex 2.5 adds in-context robot learning from a small number of video demonstrations, allowing the manipulation policy to perform new task variations without a separate training run.",
+      "title": "Cortex 2.5",
+      "url": "https://sereact.ai/posts/cortex-2-5",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "COSA 0.5 / V³-0",
       "url": "https://www.limxdynamics.com/cosa05v3/#zh",
       "date": "2026-07-15",
@@ -2949,6 +2973,18 @@
         "keywords: humanoid, cross-embodiment",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "organization_hint": "NVIDIA",
+      "summary": "Open reasoning VLA and integrated development platform covering robot-data collection, simulation, policy training, evaluation, optimization, and deployment across humanoid embodiments.",
+      "title": "NVIDIA Isaac GR00T 1.7 Development Platform",
+      "url": "https://developer.nvidia.com/blog/develop-humanoid-robot-policies-end-to-end-with-nvidia-isaac-gr00t/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -4361,6 +4397,18 @@
       ]
     },
     {
+      "date": "2026-05-28",
+      "organization_hint": "Sereact",
+      "summary": "A task-phase prediction module for Cortex 2.0 that processes recent video history and conditions its world model before candidate robot trajectories are generated.",
+      "title": "Subtask Prediction for Cortex 2.0",
+      "url": "https://sereact.ai/posts/subtask-prediction",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments",
       "summary": "Embodied intelligence is often studied through specialized models for individual tasks such as manipulation or navigation, resulting in fragmented capabilities and limited generalization across tasks, environments, and robot embodiments. In this work, we study whether heterogeneous embodied decision-making problems can be unified within a single vision-language-action model. We present Qwen-VLA, a unified embodied foundation model that extends Qwen's vision-language modeling stack from perception, understanding, and reasoning to continuous action and trajectory generation through a DiT-based action decoder. Qwen-VLA is trained with a large-scale joint pretraining recipe over diverse data sources, including robotics manipulation trajectories, human egocentric demonstrations, synthetic simulation data, vision-and-language navigation data, trajectory-centric supervision, and auxiliary vision-language data. To support multiple robot platforms, we introduce embodiment-aware prompt conditioning, where robot-specific textual descriptions specify the current embodiment and control convention. We further cast manipulation, navigation, and trajectory prediction into a unified action-and-trajectory prediction framework, enabling transferable visual grounding, spatial reasoning, and continuous action generation across robot morphologies, task families, and environments. Experiments on manipulation, navigation, and trajectory-centric benchmarks show consistent multi-task performance and out-of-distribution generalization under variations in scene layout, background, lighting, object configuration, and robot embodiment. Qwen-VLA-Instruct achieves 97.9% on LIBERO, 73.7% on Simpler-WidowX, 86.1%/87.2% on RoboTwin-Easy/Hard, 69.0% OSR on R2R, 59.6% SR on RxR, 76.9% average OOD success in real-world ALOHA experiments, and 26.6% zero-shot success on DOMINO dynamic manipulation.",
       "date": "2026-05-28",
@@ -5203,6 +5251,18 @@
       ]
     },
     {
+      "date": "2026-04-27",
+      "organization_hint": "Sereact",
+      "summary": "Cortex 2.0 combines a vision-language-action model with a world model that generates and evaluates candidate future trajectories before executing manipulation actions.",
+      "title": "Cortex 2.0",
+      "url": "https://sereact.ai/posts/series-b",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "GazeVLA: Learning Human Intention for Robotic Manipulation",
       "summary": "Embodied foundation models have achieved significant breakthroughs in robotic manipulation, yet they still depend heavily on large-scale robot demonstrations. Although recent works have explored leveraging human data to alleviate this dependency, effectively extracting transferable knowledge remains a significant challenge due to the inherent embodiment gap between human and robot. We argue that the intention underlying human actions can serve as a powerful intermediate representation for bridging this gap. In this paper, we introduce a novel framework that explicitly learns and transfers human intention to facilitate robotic manipulation. Specifically, we model intention through gaze, as it naturally precedes physical actions and serves as an observable proxy for human intent. Our model is first pretrained on a large-scale egocentric human dataset to capture human intention and its synergy with action, followed by finetuning on a small set of robot and human data. During inference, the model adopts a Chain-of-Thought reasoning paradigm, sequentially predicting intention before executing the action. Extensive evaluations in simulation and real-world settings, across long-horizon and fine-grained tasks, and under few-shot and robustness benchmarks, show that our method consistently outperforms strong baselines, generalizes better, and achieves state-of-the-art performance. Project page: https://gazevla.github.io .",
       "date": "2026-04-24",
@@ -5590,6 +5650,18 @@
       "reasons": [
         "keywords: cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-04-14",
+      "organization_hint": "Google DeepMind",
+      "summary": "Embodied-reasoning model for spatial understanding, multi-view perception, instrument reading, task planning, success detection, and orchestration of robot tools and VLA policies.",
+      "title": "Gemini Robotics-ER 1.6",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6103,6 +6175,18 @@
       ]
     },
     {
+      "date": "2026-03-09",
+      "organization_hint": "Hugging Face",
+      "summary": "LeRobot release adding EnvHub simulation loading, IsaacLab-Arena integration, third-party policy plugins, updated distributed training, and additional VLA support.",
+      "title": "LeRobot v0.5.0",
+      "url": "https://huggingface.co/blog/lerobot-release-v050",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Robotic Foundation Models for Industrial Control: A Comprehensive Survey and Readiness Assessment Framework",
       "summary": "Robotic foundation models (RFMs) are emerging as a promising route towards flexible, instruction- and demonstration-driven robot control, however, a critical investigation of their industrial applicability is still lacking. This survey gives an extensive overview over the RFM-landscape and analyses, driven by concrete implications, how industrial domains and use cases shape the requirements of RFMs, with particular focus on collaborative robot platforms, heterogeneous sensing and actuation, edge-computing constraints, and safety-critical operation. We synthesise industrial deployment perspectives into eleven interdependent implications and operationalise them into an assessment framework comprising a catalogue of 149 concrete criteria, spanning both model capabilities and ecosystem requirements. Using this framework, we evaluate 324 manipulation-capable RFMs via 48,276 criterion-level decisions obtained via a conservative LLM-assisted evaluation pipeline, validated against expert judgements. The results indicate that industrial maturity is limited and uneven: even the highest-rated models satisfy only a fraction of criteria and typically exhibit narrow implication-specific peaks rather than integrated coverage. We conclude that progress towards industry-grade RFMs depends less on isolated benchmark successes than on systematic incorporation of safety, real-time feasibility, robust perception, interaction, and cost-effective system integration into auditable deployment stacks.",
       "date": "2026-03-06",
@@ -6266,6 +6350,18 @@
       ]
     },
     {
+      "date": "2026-02-12",
+      "organization_hint": "Sereact",
+      "summary": "A production robotics data engine in which successful actions, failures, and recoveries from deployed robots become training signals for continuously updated manipulation policies.",
+      "title": "The Real-World Learning Loop",
+      "url": "https://sereact.ai/posts/real-world-learning-loop",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "LDA-1B: Scaling Latent Dynamics Action Model via Universal Embodied Data Ingestion",
       "summary": "Recent robot foundation models largely rely on large-scale behavior cloning, which imitates expert actions but discards transferable dynamics knowledge embedded in heterogeneous embodied data. While the Unified World Model (UWM) formulation has the potential to leverage such diverse data, existing instantiations struggle to scale to foundation-level due to coarse data usage and fragmented datasets. We introduce LDA-1B, a robot foundation model that scales through universal embodied data ingestion by jointly learning dynamics, policy, and visual forecasting, assigning distinct roles to data of varying quality. To support this regime at scale, we assemble and standardize EI-30k, an embodied interaction dataset comprising over 30k hours of human and robot trajectories in a unified format. Scalable dynamics learning over such heterogeneous data is enabled by prediction in a structured DINO latent space, which avoids redundant pixel-space appearance modeling. Complementing this representation, LDA-1B employs a multi-modal diffusion transformer to handle asynchronous vision and action streams, enabling stable training at the 1B-parameter scale. Experiments in simulation and the real world show LDA-1B outperforms prior methods (e.g., $π_{0.5}$) by up to 21\\%, 48\\%, and 23\\% on contact-rich, dexterous, and long-horizon tasks, respectively. Notably, LDA-1B enables data-efficient fine-tuning, gaining 10\\% by leveraging 30\\% low-quality trajectories typically harmful and discarded.",
       "date": "2026-02-12",
@@ -6319,6 +6415,18 @@
       "summary": "Tiangong 3.0 is a full-size general humanoid platform supporting contact-interactive, highly dynamic whole-body control and operation over difficult terrain.",
       "title": "Embodied Tiangong 3.0",
       "url": "https://www.bjdch.gov.cn/ztzl/tzdc/tzdt/sjdt/202602/t20260211_4507920.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2026-02-10",
+      "organization_hint": "Sereact",
+      "summary": "Cortex 1.6 introduces the Process-Reward Operator, a learned reward model that extracts dense training signals from continuous multimodal records of real robot execution.",
+      "title": "Cortex 1.6: Learning From the Way Things Unfold",
+      "url": "https://sereact.ai/posts/cortex-1-6",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6441,6 +6549,18 @@
       ]
     },
     {
+      "date": "2026-01-27",
+      "organization_hint": "Figure",
+      "summary": "Whole-body humanoid VLA stack integrating language-conditioned reasoning, visuomotor control, tactile sensing, locomotion, manipulation, and a learned balance-and-motion prior.",
+      "title": "Helix 02: Full-Body Autonomy",
+      "url": "https://www.figure.ai/news/helix-02",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Point Bridge: 3D Representations for Cross Domain Policy Learning",
       "summary": "Robot foundation models are beginning to deliver on the promise of generalist robotic agents, yet progress remains constrained by the scarcity of large-scale real-world manipulation datasets. Simulation and synthetic data generation offer a scalable alternative, but their usefulness is limited by the visual domain gap between simulation and reality. In this work, we present Point Bridge, a framework that leverages unified, domain-agnostic point-based representations to unlock synthetic datasets for zero-shot sim-to-real policy transfer, without explicit visual or object-level alignment. Point Bridge combines automated point-based representation extraction via Vision-Language Models (VLMs), transformer-based policy learning, and efficient inference-time pipelines to train capable real-world manipulation agents using only synthetic data. With additional co-training on small sets of real demonstrations, Point Bridge further improves performance, substantially outperforming prior vision-based sim-and-real co-training methods. It achieves up to 44% gains in zero-shot sim-to-real transfer and up to 66% with limited real data across both single-task and multitask settings. Videos of the robot are best viewed at: https://pointbridge3d.github.io/",
       "date": "2026-01-22",
@@ -6458,6 +6578,18 @@
       "reasons": [
         "keywords: robot foundation",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2026-01-15",
+      "organization_hint": "Viam",
+      "summary": "Viam's January platform release added a redesigned ML-model selection interface and field-development improvements including resumable downloads for robots on unreliable networks.",
+      "title": "Viam Platform Roundup: January 2026",
+      "url": "https://www.viam.com/post/january-2026-platform-roundup",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6619,6 +6751,18 @@
         "keywords: vision-language-action, vla",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-12-08",
+      "organization_hint": "Viam",
+      "summary": "A Viam platform release adding a natural-language AI data-query assistant, reusable saved queries, prefixed reusable robot configurations, and more reliable remote machine restarts.",
+      "title": "Viam Platform Roundup: December 2025",
+      "url": "https://www.viam.com/post/platform-roundup-december-2025",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6813,11 +6957,35 @@
       ]
     },
     {
+      "date": "2025-11-17",
+      "organization_hint": "Physical Intelligence",
+      "summary": "VLA release that improves robot behavior through experience, using reinforcement-learning-based post-training and evaluation on manipulation tasks.",
+      "title": "pi-star-zero-point-six: A VLA That Learns From Experience",
+      "url": "https://www.pi.website/research/pistar06",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-14",
       "organization_hint": "University of Oxford",
       "summary": "These electronics-free fluidic soft robots use air pressure and mechanical coupling through the ground to produce complex rhythmic motion and synchronize with one another.",
       "title": "Self-Synchronizing Fluidic Robots",
       "url": "https://www.ox.ac.uk/news/2025-11-14-researchers-develop-air-powered-robots-move-sync-without-electronics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-11-07",
+      "organization_hint": "Viam",
+      "summary": "A production robotic-sanding software stack built on Viam's hardware abstraction and motion service, supporting interchangeable arms and depth cameras without rewriting application logic.",
+      "title": "Viam Production Robotic Sanding Solution",
+      "url": "https://www.viam.com/post/build-iterate-launch-robotic-solution",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6862,6 +7030,18 @@
       "summary": "π0.6 is a vision-language-action model release focused on improved dexterity, robustness, and long-horizon manipulation across multiple robot embodiments.",
       "title": "π0.6",
       "url": "https://www.physicalintelligence.company/blog/pi06",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-10-24",
+      "organization_hint": "Hugging Face",
+      "summary": "Major LeRobot release adding Datasets 3.0, VLA integrations including pi-zero-point-five and GR00T N1.5, simulation support, multi-GPU training, and a hardware plugin system.",
+      "title": "LeRobot v0.4.0",
+      "url": "https://huggingface.co/blog/lerobot-release-v040",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7034,6 +7214,18 @@
     {
       "date": "2025-09-25",
       "organization_hint": "Google DeepMind",
+      "summary": "Agentic robotics release pairing a cross-embodiment VLA policy with an embodied-reasoning model that performs spatial reasoning, tool use, and multi-step planning.",
+      "title": "Gemini Robotics 1.5 and Gemini Robotics-ER 1.5",
+      "url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-09-25",
+      "organization_hint": "Google DeepMind",
       "summary": "Gemini Robotics 1.5 and Gemini Robotics-ER 1.5 add improved embodied reasoning, multi-step planning, tool use, and cross-embodiment transfer for robot-control applications.",
       "title": "Gemini Robotics 1.5",
       "url": "https://deepmind.google/discover/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
@@ -7063,6 +7255,18 @@
       ]
     },
     {
+      "date": "2025-09-19",
+      "organization_hint": "OpenDriveLab",
+      "summary": "Open-source release of the GO-1 generalist embodied foundation model, associated training resources, and cross-robot data and policy infrastructure.",
+      "title": "OpenGO1",
+      "url": "https://opendrivelab.com/OpenGO1/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Self-Improving Embodied Foundation Models",
       "summary": "Foundation models trained on web-scale data have revolutionized robotics, but their application to low-level control remains largely limited to behavioral cloning. Drawing inspiration from the success of the reinforcement learning stage in fine-tuning large language models, we propose a two-stage post-training approach for robotics. The first stage, Supervised Fine-Tuning (SFT), fine-tunes pretrained foundation models using both: a) behavioral cloning, and b) steps-to-go prediction objectives. In the second stage, Self-Improvement, steps-to-go prediction enables the extraction of a well-shaped reward function and a robust success detector, enabling a fleet of robots to autonomously practice downstream tasks with minimal human supervision. Through extensive experiments on real-world and simulated robot embodiments, our novel post-training recipe unveils significant results on Embodied Foundation Models. First, we demonstrate that the combination of SFT and Self-Improvement is significantly more sample-efficient than scaling imitation data collection for supervised learning, and that it leads to policies with significantly higher success rates. Further ablations highlight that the combination of web-scale pretraining and Self-Improvement is the key to this sample-efficiency. Next, we demonstrate that our proposed combination uniquely unlocks a capability that current methods cannot achieve: autonomously practicing and acquiring novel skills that generalize far beyond the behaviors observed in the imitation learning datasets used during training. These findings highlight the transformative potential of combining pretrained foundation models with online Self-Improvement to enable autonomous skill acquisition in robotics. Our project website can be found at https://self-improving-efms.github.io .",
       "date": "2025-09-18",
@@ -7079,6 +7283,18 @@
         "keywords: embodied foundation",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-09-15",
+      "organization_hint": "Viam",
+      "summary": "Viam Apps provides hosted, authenticated web applications with multi-machine support for monitoring and controlling individual robots or complete fleets through custom operator interfaces.",
+      "title": "Viam Apps for Robot Fleet Dashboards",
+      "url": "https://www.viam.com/post/build-a-custom-dashboard-for-your-fleet-operators-minus-the-complex-infrastructure",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7278,11 +7494,11 @@
       ]
     },
     {
-      "date": "2025-08-12",
-      "organization_hint": "Figure AI",
-      "summary": "Helix 02 extends Figure's vision-language-action system to full-body control, integrating perception, high-level planning, and whole-body robot actions.",
-      "title": "Helix 02",
-      "url": "https://www.figure.ai/news/helix-02",
+      "date": "2025-08-15",
+      "organization_hint": "Viam",
+      "summary": "Viam's auto-labeling workflow uses existing machine-learning models to generate annotations for collected edge data, accelerating dataset preparation and iterative model training.",
+      "title": "Auto-Labeling in Viam",
+      "url": "https://www.viam.com/post/3-ways-auto-labeling-in-viam-can-elevate-your-edge-ml-project",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7411,6 +7627,18 @@
       "reasons": [
         "keywords: cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "date": "2025-07-29",
+      "organization_hint": "Skild AI",
+      "summary": "Cross-embodiment robotics foundation-model system intended to transfer learned behavior across humanoids, quadrupeds, mobile manipulators, and tabletop robots.",
+      "title": "Skild Brain: General-Purpose Robotic Intelligence",
+      "url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7662,6 +7890,18 @@
       ]
     },
     {
+      "date": "2025-06-24",
+      "organization_hint": "Google DeepMind",
+      "summary": "Efficient general-purpose VLA model that runs locally on robots and can be adapted to new manipulation tasks through the Gemini Robotics SDK.",
+      "title": "Gemini Robotics On-Device",
+      "url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Risk-Guided Diffusion: Toward Deploying Robot Foundation Models in Space, Where Failure Is Not An Option",
       "summary": "Safe, reliable navigation in extreme, unfamiliar terrain is required for future robotic space exploration missions. Recent generative-AI methods learn semantically aware navigation policies from large, cross-embodiment datasets, but offer limited safety guarantees. Inspired by human cognitive science, we propose a risk-guided diffusion framework that fuses a fast, learned \"System-1\" with a slow, physics-based \"System-2\", sharing computation at both training and inference to couple adaptability with formal safety. Hardware experiments conducted at the NASA JPL's Mars-analog facility, Mars Yard, show that our approach reduces failure rates by up to $4\\times$ while matching the goal-reaching performance of learning-based robotic models by leveraging inference-time compute without any additional training.",
       "date": "2025-06-21",
@@ -7688,9 +7928,21 @@
       ]
     },
     {
+      "date": "2025-06-16",
+      "organization_hint": "NVIDIA",
+      "summary": "General-availability releases of the Isaac Sim robotics simulator and Isaac Lab robot-learning framework, adding updated simulation, training, and model-evaluation capabilities.",
+      "title": "NVIDIA Isaac Sim 5.0 and Isaac Lab 2.2",
+      "url": "https://developer.nvidia.com/blog/announcing-general-availability-for-nvidia-isaac-sim-5-0-and-nvidia-isaac-lab-2-2/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-06-11",
-      "organization_hint": "Meta AI",
-      "summary": "V-JEPA 2 is a self-supervised video world model for understanding, predicting, and planning in the physical world, accompanied by robot-planning experiments and model releases.",
+      "organization_hint": "Meta FAIR",
+      "summary": "Self-supervised video world model and action-conditioned predictor supporting physical-world prediction, zero-shot robot planning, and robot control, accompanied by three physical-reasoning benchmarks.",
       "title": "V-JEPA 2",
       "url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
       "authors": [],
@@ -7743,7 +7995,7 @@
     {
       "date": "2025-06-03",
       "organization_hint": "Hugging Face",
-      "summary": "SmolVLA is a compact open vision-language-action model designed for affordable hardware, asynchronous inference, and integration with the LeRobot robotics ecosystem.",
+      "summary": "Open 450-million-parameter vision-language-action model trained on LeRobot community datasets, with asynchronous inference for deployment on consumer hardware.",
       "title": "SmolVLA",
       "url": "https://huggingface.co/blog/smolvla",
       "authors": [],
@@ -8126,10 +8378,34 @@
     },
     {
       "date": "2025-04-22",
+      "organization_hint": "Physical Intelligence",
+      "summary": "Generalist VLA policy co-trained on heterogeneous robot, web, and semantic-task data to execute long-horizon manipulation in previously unseen homes.",
+      "title": "pi-zero-point-five: A VLA with Open-World Generalization",
+      "url": "https://www.pi.website/research/pi05",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-04-22",
       "organization_hint": "Cornell University Robot Learning Lab",
       "summary": "RHyME enables a robot to learn multistep tasks from one human how-to video by retrieving related robot experiences and adapting them to mismatched embodiments.",
       "title": "RHyME: Retrieval for Hybrid Imitation under Mismatched Execution",
       "url": "https://news.cornell.edu/stories/2025/04/robot-see-robot-do-system-learns-after-watching-how-tos",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-04-18",
+      "organization_hint": "Viam",
+      "summary": "The April Viam platform release added built-in training support for full TensorFlow models alongside existing TFLite workflows and expanded hardware discovery and configuration tools.",
+      "title": "Viam TensorFlow Model Training Support",
+      "url": "https://www.viam.com/post/platform-roundup-april-2025",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8397,6 +8673,18 @@
       ]
     },
     {
+      "date": "2025-03-18",
+      "organization_hint": "NVIDIA",
+      "summary": "Open, customizable robot foundation model combining vision-language reasoning with a diffusion-transformer action module for generalized humanoid manipulation.",
+      "title": "NVIDIA Isaac GR00T N1",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
       "summary": "General-purpose robots need a versatile body and an intelligent mind. Recent advancements in humanoid robots have shown great promise as a hardware platform for building generalist autonomy in the human world. A robot foundation model, trained on massive and diverse data sources, is essential for enabling the robots to reason about novel situations, robustly handle real-world variability, and rapidly learn new tasks. To this end, we introduce GR00T N1, an open foundation model for humanoid robots. GR00T N1 is a Vision-Language-Action (VLA) model with a dual-system architecture. The vision-language module (System 2) interprets the environment through vision and language instructions. The subsequent diffusion transformer module (System 1) generates fluid motor actions in real time. Both modules are tightly coupled and jointly trained end-to-end. We train GR00T N1 with a heterogeneous mixture of real-robot trajectories, human videos, and synthetically generated datasets. We show that our generalist robot model GR00T N1 outperforms the state-of-the-art imitation learning baselines on standard simulation benchmarks across multiple robot embodiments. Furthermore, we deploy our model on the Fourier GR-1 humanoid robot for language-conditioned bimanual manipulation tasks, achieving strong performance with high data efficiency.",
       "date": "2025-03-18",
@@ -8475,10 +8763,34 @@
     },
     {
       "date": "2025-03-12",
+      "organization_hint": "Viam",
+      "summary": "Fragment Versions adds version histories, fixed-version references, movable deployment tags, staged fleet rollouts, and rollback support for reusable robot configurations.",
+      "title": "Viam Fragment Versions",
+      "url": "https://www.viam.com/post/fragment-versions",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-03-12",
       "organization_hint": "Beijing Humanoid Robot Innovation Center",
       "summary": "General embodied-intelligence platform designed as a shared robot brain for autonomous decision-making and deployment across multiple robotic embodiments.",
       "title": "Hui Si Kai Wu General Embodied Intelligence Platform",
       "url": "https://english.beijing.gov.cn/beijinginfo/sci/latesttrends/202503/t20250318_4036993.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-03-12",
+      "organization_hint": "Google DeepMind",
+      "summary": "Introduction of a Gemini-based vision-language-action model for direct robot control and a companion embodied-reasoning model for spatial understanding and planning.",
+      "title": "Gemini Robotics and Gemini Robotics-ER",
+      "url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8623,8 +8935,8 @@
     {
       "date": "2025-02-20",
       "organization_hint": "Figure",
-      "summary": "Helix is a generalist vision-language-action model for humanoid upper-body control that maps natural-language commands and visual observations to continuous actions in real time.",
-      "title": "Helix",
+      "summary": "Generalist vision-language-action system combining a vision-language model with a high-frequency visuomotor policy for dexterous humanoid upper-body control.",
+      "title": "Helix: A Vision-Language-Action Model for Generalist Humanoid Control",
       "url": "https://www.figure.ai/news/helix",
       "authors": [],
       "score": 100,
@@ -8643,6 +8955,18 @@
       "reasons": [
         "official web-project discovery",
         "maintained official seed"
+      ]
+    },
+    {
+      "date": "2025-02-12",
+      "organization_hint": "Viam",
+      "summary": "Nested Fragments lets reusable robot and machine configurations reference other fragments, enabling layered component stacks and propagated configuration updates across fleets.",
+      "title": "Viam Nested Fragments",
+      "url": "https://www.viam.com/post/nested-fragments",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8665,6 +8989,18 @@
       "summary": "Rerun SDK and Viewer release adding partial-update logging APIs and associated changes to the multimodal data model used for robotics visualization and analysis.",
       "title": "Rerun 0.22",
       "url": "https://rerun.io/docs/reference/migration/migration-0-22",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-02-04",
+      "organization_hint": "Physical Intelligence",
+      "summary": "Release of model weights and code for the generalist pi-zero robot policy, together with the autoregressive pi-zero-FAST model.",
+      "title": "Open Sourcing pi-zero",
+      "url": "https://www.pi.website/blog/openpi",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8797,6 +9133,18 @@
       ]
     },
     {
+      "date": "2025-01-16",
+      "organization_hint": "Physical Intelligence",
+      "summary": "Robot-action tokenization method and FAST+ tokenizer designed to accelerate autoregressive training of generalist vision-language-action policies.",
+      "title": "FAST: Efficient Robot Action Tokenization",
+      "url": "https://www.pi.website/research/fast",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-01-14",
       "organization_hint": "Skild AI",
       "summary": "Skild Brain is an omni-bodied robotics foundation model intended to control different robot embodiments and perform mobile-manipulation and locomotion tasks.",
@@ -8844,6 +9192,18 @@
     {
       "date": "2025-01-06",
       "organization_hint": "NVIDIA",
+      "summary": "Open physical-AI platform comprising world foundation models, video tokenizers, guardrails, and an accelerated data-processing pipeline for generating and predicting robotics environments.",
+      "title": "NVIDIA Cosmos World Foundation Model Platform",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-platform-to-accelerate-physical-ai-development",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-01-06",
+      "organization_hint": "NVIDIA",
       "summary": "NVIDIA Cosmos is a platform of world foundation models, tokenizers, guardrails, and data-processing tools for generating and evaluating physics-aware synthetic data for physical AI.",
       "title": "NVIDIA Cosmos",
       "url": "https://nvidianews.nvidia.com/news/cosmos-world-foundation-models",
@@ -8874,18 +9234,6 @@
       "score": 28,
       "reasons": [
         "physical-robot evidence"
-      ]
-    },
-    {
-      "date": "2025-01-01",
-      "organization_hint": "Search underway",
-      "summary": "I’m collecting only official project, company, or research-lab release pages and checking that each item is software-centric, dated no earlier than 2025, and relevant to dexterous, tactile, force-aware, or contact-rich embodied robotics.",
-      "title": "Status",
-      "url": "https://example.com",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
       ]
     },
     {
