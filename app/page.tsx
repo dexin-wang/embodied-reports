@@ -2,6 +2,7 @@ import { ReportExplorer } from "./report-explorer";
 import { reports } from "./reports";
 import verifiedReports from "../data/verified.json";
 import dossiers from "../data/dossiers.json";
+import frameworkManifest from "../public/frameworks/manifest.json";
 import type { Report } from "./reports";
 
 const organizationAliases: Record<string, string> = {
@@ -27,6 +28,9 @@ function detailScore(report: Report) {
 
 export default function Home() {
   const byId = new Map<string, Report>();
+  const frameworkById = new Map(
+    (frameworkManifest.figures as Array<{ id: string; asset: string; source_url?: string; selection?: string }>).map((figure) => [figure.id, figure]),
+  );
   const dossierById = new Map(
     (dossiers as Array<Partial<Report> & Pick<Report, "id">>).map((dossier) => [dossier.id, dossier]),
   );
@@ -35,7 +39,20 @@ export default function Home() {
   // the original report/project links intact.
   for (const report of [...reports, ...(verifiedReports as Report[])]) {
     const dossier = dossierById.get(report.id);
-    const merged = { ...report, ...dossier, organization: canonicalOrganization(report.organization), links: report.links };
+    const figure = frameworkById.get(report.id);
+    const managedFramework = figure ? {
+      asset: figure.asset,
+      sourceUrl: figure.source_url,
+      caption: figure.selection === "method_figure" ? "已验证的官方项目页方法图" : "已验证的官方项目页主图",
+    } : undefined;
+    const merged = {
+      ...report,
+      ...dossier,
+      organization: canonicalOrganization(report.organization),
+      links: report.links,
+      // Only a local asset validated by validate_catalog.py may override a card.
+      framework: managedFramework ?? report.framework,
+    };
     const key = projectKey(merged.title);
     const current = byId.get(key);
     if (!current || detailScore(merged) > detailScore(current)) byId.set(key, merged);
