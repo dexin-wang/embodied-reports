@@ -29,11 +29,19 @@ function ExternalIcon() {
 function SourceFrameworkFigure({ report, compact = false }: { report: Report; compact?: boolean }) {
   const [unavailable, setUnavailable] = useState(false);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  const asset = report.framework?.imageUrl ?? `${basePath}/frameworks/${report.id}.jpg`;
+  const imageUrl = report.framework?.imageUrl;
+  const localAsset = report.framework?.asset;
+  const asset = imageUrl ?? (localAsset ? `${basePath}/${localAsset}` : null);
+
+  // Do not construct a guessed /frameworks/<id>.jpg URL. Cards receive an
+  // image only when the validated manifest explicitly contains one.
+  if (!asset) {
+    return compact ? null : <figure className="source-framework"><div className="framework-unavailable">该项目尚未找到可验证的官方主图。</div></figure>;
+  }
   return (
     <figure className={compact ? "source-framework card-framework" : "source-framework"}>
-      {!unavailable ? <img src={asset} alt={`${report.title} 的原始方法框架图`} onError={() => setUnavailable(true)} /> : <div className="framework-unavailable">暂未找到可可靠提取的原始方法框架图</div>}
-      <>{!compact && <figcaption>原始方法图 · {report.framework?.caption ?? "来源为公开技术报告 PDF 或官方项目页"}{report.framework?.page ? ` · PDF 第 ${report.framework.page} 页` : ""}</figcaption>}</>
+      {!unavailable ? <img src={asset} alt={`${report.title} 的官方项目主图`} onError={() => setUnavailable(true)} /> : (compact ? null : <div className="framework-unavailable">该项目主图暂时不可用。</div>)}
+      {!compact && !unavailable && <figcaption>官方项目图 · {report.framework?.caption ?? "已验证的官方项目页资产"}{report.framework?.page ? ` · PDF 第 ${report.framework.page} 页` : ""}</figcaption>}
     </figure>
   );
 }
