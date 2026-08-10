@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=eEsoBuKBK4TAn7o2wpW6oQ&_nc_ss=7b20f&oh=00_AQFzdHUvkD6GLdoJUyyT25xaHp5UhAqecl7QczzjCdaJ7Q&oe=6A93A4F3",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=sAuT0t2NeCZ1H4rqV7wKUw&_nc_ss=7b20f&oh=00_AQFoz5ENxsGoFDdtUPEX8gyM1APWIgPmLVSj7WW47RXAhA&oe=6A93A4F3",
       "width": 1920,
       "height": 1080
     },
@@ -291,7 +291,7 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.4.0/lerobot-libero-groot-v040.gif",
+      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.4.0/lerobot-libero-groot2-v040.gif",
       "width": 1152,
       "height": 648
     },
@@ -411,9 +411,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/static/images/data.png",
-      "width": 2624,
-      "height": 878
+      "image_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/static/images/teaser.png",
+      "width": 2588,
+      "height": 1000
     },
     {
       "id": "steerable-scene-generation-3d840a5",
@@ -459,7 +459,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=DJQLzU9YD0oQ7kNvwFHdnd2&_nc_oc=Adoep9ITlzuDx5VdxkRb_BhDUsG5KVvdDgaB2BtHsA1htHKL7F4GEyR6W110PysRqvw&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=4-aw6oDxGcUD9hxt03X0Sg&_nc_ss=7b20f&oh=00_AQGOoDFp91z6cHgUA2xA6qj92R1wWaU5YsVXHjckoOdDUg&oe=6A7F159C",
+      "image_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=DJQLzU9YD0oQ7kNvwFHdnd2&_nc_oc=Adoep9ITlzuDx5VdxkRb_BhDUsG5KVvdDgaB2BtHsA1htHKL7F4GEyR6W110PysRqvw&_nc_zt=23&_nc_ht=scontent-sin11-1.xx&_nc_gid=IQQXVvvadYa9OhWAh5leMA&_nc_ss=7b20f&oh=00_AQGLtF9W5z8622TMF25f5Q-vWpHS-vHJCqbgwrxqQ2JaRA&oe=6A7F159C",
       "width": 1440,
       "height": 630
     },
@@ -471,9 +471,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://cdn-uploads.huggingface.co/production/uploads/640e21ef3c82bd463ee5a76d/V4QU-B-6YBONb-8K_lSpj.gif",
-      "width": 320,
-      "height": 240
+      "image_url": "https://cdn-uploads.huggingface.co/production/uploads/640e21ef3c82bd463ee5a76d/aooU0a3DMtYmy_1IWMaIM.png",
+      "width": 2554,
+      "height": 1434
     },
     {
       "id": "openvla-oft-d2d6db6",
@@ -495,9 +495,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://cdn.deepseek.com/api-docs/r1_0528_benchmark_2.webp",
-      "width": 1000,
-      "height": 561
+      "image_url": "https://cdn.deepseek.com/api-docs/r1_0528_benchmark_1.webp",
+      "width": 1080,
+      "height": 637
     },
     {
       "id": "nvidia-isaac-gr00t-n1-5-5ed4eff",
@@ -519,7 +519,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/2895b255f2d67e10059fd9cc9e898c34854e6fe1a22ef6e997d9be68b072ec4d/Physical-Intelligence/openpi",
+      "image_url": "https://opengraph.githubassets.com/335b3608ae69df6481635cab323b7c738652fcb4f270375d83533bbb5bc9c7a9/Physical-Intelligence/openpi",
       "width": 1200,
       "height": 600
     },
