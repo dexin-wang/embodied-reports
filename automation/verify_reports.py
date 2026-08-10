@@ -33,6 +33,7 @@ MODEL = os.getenv("OPENAI_VERIFIER_MODEL", "gpt-5.6")
 API_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 AUDIT_POLICY_VERSION = str(CONFIG.get("discovery_policy_version", "software-official-release-v3"))
 RETRY_ATTEMPTS = 3
+OFFICIAL_DISCOVERY_REASONS = {"official web-project discovery", "media-resolved official project discovery"}
 
 
 class RetryableProviderError(RuntimeError):
@@ -262,7 +263,7 @@ def main() -> None:
     # official-release search, which supplies a non-arXiv project lead.
     official_candidates = [
         item for item in candidates
-        if "official web-project discovery" in item.get("reasons", [])
+        if any(reason in OFFICIAL_DISCOVERY_REASONS for reason in item.get("reasons", []))
     ]
     todo = [
         item for item in official_candidates
