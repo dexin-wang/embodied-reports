@@ -26,10 +26,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Validate organization coverage registry (no API)
+        run: |
+          python automation/organization_coverage.py --initialize --check --summary
+          python automation/test_organization_coverage.py
       - name: Restore last generated catalog
         run: |
           git fetch origin catalog-data
           git checkout origin/catalog-data -- data public/frameworks automation/candidates.json automation/verification_audit.json
+          if git cat-file -e origin/catalog-data:automation/organization_coverage.json 2>/dev/null; then
+            git show origin/catalog-data:automation/organization_coverage.json > automation/organization_coverage.json
+          fi
       - name: Discover candidate leads
         run: python automation/discover.py
       - name: Discover influential releases from independent WeChat media
@@ -67,7 +74,9 @@ jobs:
           python automation/extract_frameworks.py --refresh
       - name: Validate generated catalog
         run: |
-          python -m py_compile automation/discover_official_projects.py automation/verify_reports.py automation/extract_frameworks.py
+          python -m py_compile automation/organization_coverage.py automation/test_organization_coverage.py automation/discover_official_projects.py automation/verify_reports.py automation/extract_frameworks.py
+          python automation/test_organization_coverage.py
+          python automation/organization_coverage.py --check --summary
           python automation/validate_catalog.py
       - name: Publish generated catalog branch
         run: |
@@ -83,8 +92,8 @@ jobs:
           git worktree add --detach "$CATALOG_OUTPUT" origin/catalog-data
           cp -a data "$CATALOG_OUTPUT/"
           cp -a public/frameworks "$CATALOG_OUTPUT/public/"
-          cp -a automation/candidates.json automation/verification_audit.json "$CATALOG_OUTPUT/automation/"
-          git -C "$CATALOG_OUTPUT" add data public/frameworks automation/candidates.json automation/verification_audit.json
+          cp -a automation/candidates.json automation/verification_audit.json automation/organization_coverage.json "$CATALOG_OUTPUT/automation/"
+          git -C "$CATALOG_OUTPUT" add data public/frameworks automation/candidates.json automation/verification_audit.json automation/organization_coverage.json
           if git -C "$CATALOG_OUTPUT" diff --cached --quiet; then exit 0; fi
           git -C "$CATALOG_OUTPUT" commit -m "data: refresh verified embodied reports"
           git -C "$CATALOG_OUTPUT" push origin HEAD:catalog-data
