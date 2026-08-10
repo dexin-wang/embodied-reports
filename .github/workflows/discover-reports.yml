@@ -44,15 +44,15 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_VERIFIER_MODEL: gpt-5.6
         run: python automation/discover_official_projects.py --mode media
-      - name: Discover official company releases (every three days)
+      - name: Discover official company releases (every three days or on manual request)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_VERIFIER_MODEL: gpt-5.6
         run: |
-          if [ $(( $(date -u +%s) / 86400 % 3 )) -eq 0 ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $(( $(date -u +%s) / 86400 % 3 )) -eq 0 ]; then
             python automation/discover_official_projects.py --mode official
           else
-            echo "Skipping official-company scan today; it runs every three days."
+            echo "Skipping official-company scan today; scheduled scans run every three days."
           fi
       - name: Verify official source, institution and public impact
         env:
