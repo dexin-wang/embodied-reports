@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T09:41:06.367439+00:00",
+  "generated_at": "2026-08-11T14:52:31.118849+00:00",
   "candidates": [
     {
       "title": "World Tokens: Enhancing Embodied Policies with Training-Time World Modeling",
@@ -101,6 +101,18 @@
       "reasons": [
         "keywords: vision-language-action, vla, world model",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Rerun 0.36.0",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.36.0",
+      "date": "2026-08-10",
+      "summary": "Rerun 0.36.0 adds experimental 3D Gaussian splat support, larger-than-memory web catalogs, PyTorch dataloader improvements, manifest datasets and enhanced multimodal robotics-data streaming.",
+      "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -2239,6 +2251,18 @@
       ]
     },
     {
+      "title": "Rerun 0.35.0",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.35.0",
+      "date": "2026-07-23",
+      "summary": "Rerun 0.35.0 advances the robotics data engine and viewer with updates to data loading, querying, visualization and multimodal dataset workflows.",
+      "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving",
       "summary": "Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises robustness in noisy driving scenarios. Conversely, latent-based world models alleviate this sensitivity but often incur limited interpretability and representational degradation due to absent pixel-level grounding. To reconcile this trade-off, we propose HyWorldVLA, a hybrid world-VLA framework that unifies pixel-level supervision and latent representation learning. In the pre-training stage, HyWorldVLA predicts video latents encoded by a pre-trained video VAE, while simultaneously reconstructing video frames to provide precise pixel-level grounding. During the subsequent co-fine-tuning phase, the model exclusively predicts latent features, which are fed into an action expert to generate trajectories. Extensive experiments on NAVSIM v1 and v2 benchmarks demonstrate that HyWorldVLA significantly outperforms both pixel-based and latent-based world model baselines. Notably, we present the first comprehensive qualitative and quantitative analysis of world model noise robustness in autonomous driving, establishing a new benchmark for evaluating future architectures.",
       "date": "2026-07-23",
@@ -2595,7 +2619,7 @@
     {
       "date": "2026-07-17",
       "organization_hint": "Sunday Robotics",
-      "summary": "Preview of ACT-2, a robotics model designed to combine broad task generalization with deployment-level reliability through iterative real-world evaluation and edge-case correction.",
+      "summary": "Preview of ACT-2, a robot foundation model that combines broad generalization with post-training on limited in-house data. Sunday reports 99.1% zero-shot success across 785 autonomous laundry-folding attempts in unseen home environments.",
       "title": "ACT-2 Preview: Generalizing Reliability",
       "url": "https://www.sunday.ai/blog/act-2-preview",
       "authors": [],
@@ -2945,6 +2969,18 @@
       ]
     },
     {
+      "title": "GPT-5.6",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "date": "2026-07-09",
+      "summary": "OpenAI released the GPT-5.6 family, comprising the Sol, Terra and Luna language models, across ChatGPT, Codex and the OpenAI API, with support for tool use, computer use and multi-agent workflows.",
+      "organization_hint": "OpenAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space",
       "summary": "Pretrained generative robot policies based on flow matching and diffusion have achieved impressive results across a wide range of manipulation tasks. Yet real-world deployments routinely expose failure modes outside the pretraining distribution. Closing these gaps typically requires large-scale data collection or online reinforcement learning on physical hardware, which is impractical for rapid and safe adaptation. We present FlowDAgger, a sample- and compute-efficient method for adapting frozen generative robot policies from human interventions in latent space. Our key idea is action inversion: each human expert action is mapped to the noise that would have produced it under the frozen base policy, using reverse-time integration followed by local refinement. The resulting inverted noise provides supervision for a lightweight latent policy that steers the base model at deployment time, enabling rapid skill acquisition while preserving its behavioral priors. We evaluate FlowDAgger in simulation and on real-world bimanual and single-arm manipulation, adapting both action-head VLAs and world-action models from a handful of interventions. FlowDAgger outperforms supervised fine-tuning and latent-space RL baselines and preserves pretrained skills on held-out tasks, offering a practical path for adapting robot foundation models in the real world. Website: https://microsoft.github.io/FlowDAgger",
       "date": "2026-07-09",
@@ -3126,6 +3162,30 @@
       ]
     },
     {
+      "title": "Vbot Embodied AI Agent Capability",
+      "url": "https://forum.vbot.cn/t/ai-agent-%E8%83%BD%E5%8A%9B%E5%85%A8%E9%87%8F%E4%B8%8A%E7%BA%BF%EF%BD%9Cvbot-%E4%BB%8E%E8%BD%AF%E4%BB%B6%E5%8A%A9%E7%90%86%E8%BF%88%E5%85%A5%E5%85%B7%E8%BA%AB%E5%BD%A2%E6%80%81/15",
+      "date": "2026-07-07",
+      "summary": "Vbot deployed an embodied AI Agent capability by OTA to all public-beta users. The software supports persistent dialogue and memory, long-running tasks, spatial perception, scheduled actions, tool use, autonomous skill creation, and execution through the robot in real environments.",
+      "organization_hint": "维他动力 / Vbot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Rerun 0.34.1",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.34.1",
+      "date": "2026-07-07",
+      "summary": "Rerun 0.34.1 is a maintenance release fixing catalog refresh, live-stream stability and unsupported video-codec handling in the robotics data platform.",
+      "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-07-07",
       "organization_hint": "NVIDIA",
       "summary": "Open reasoning VLA and integrated development platform covering robot-data collection, simulation, policy training, evaluation, optimization, and deployment across humanoid embodiments.",
@@ -3208,6 +3268,30 @@
       "reasons": [
         "keywords: vla, cross-embodiment, whole-body",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "AI Agent 能力全量上线｜Vbot 从软件助理迈入具身形态 - 官方公告 - Vbot 超能社区",
+      "url": "https://forum.vbot.cn/t/ai-agent-vbot/15",
+      "date": "2026-07-07",
+      "summary": "当一个能够理解指令、持续执行任务的 AI Agent，第一次获得进入真实世界的能力，会发生什么？  Ta 不再局限于云端对话，而是开始 感知环境、理解空间关系，并将指令转化为连续可执行的行动。  我们已通过 OTA 将新的 AI Agent 能力推送到所有公测用户的 Vbot 超能机器狗上。  打开「Vbot」App，进入 实验室，就可以直接与你的专属机器人助理对话。  现在的 Ta，可以做什么  持续对话，理解自己能完成的任务 保持长期记忆，持续执行任务 将语言理解为长期行为规则 结合真实家庭环境，生成个性化内容  真实场景示例 以下场景拍摄于 Vbot 实验室。  场景 1：空间判断   用户：“帮我看看办公室还有人吗？”   Ta 会理解这是一个关于 空间判断 的任务，主动转头、移动，调整视角观察周围环境。  通过摄像头识别人形目标，再根据真实所见给出反馈。  场景 2：时间条件任务   用户：“10 秒后提醒我喝水。”   Ta 会理解这是一个 带时间条件 的任务，将\"10 秒后提醒\"加入调度逻辑。  到点后不仅在手机上推送通知，还会确认用户位置、规划路径主动走到用户面前，  ...",
+      "organization_hint": "维他动力 / Vbot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Rerun 0.34.0 - Viewer MCP & Learning Course",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.34.0",
+      "date": "2026-07-06",
+      "summary": "Rerun 0.34.0 introduces an MCP server through which LLM agents can inspect and operate the Viewer, plus robotics-data agent skills, sparse voxel-grid support and data-loader improvements.",
+      "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -3687,6 +3771,18 @@
       ]
     },
     {
+      "title": "Rerun 0.33.1",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.33.1",
+      "date": "2026-06-22",
+      "summary": "Rerun 0.33.1 fixes preservation of transform-bearing data chunks and improves timeline scrubbing in the multimodal robotics-data viewer.",
+      "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "LaST-HD: Learning Latent Physical Reasoning from Scalable Human Data for Robot Manipulation",
       "summary": "Human-hand demonstrations provide a direct and scalable source of physical interaction data for robot learning. While manual retargeting is indispensable for establishing kinematic action correspondence across different morphologies, robust transfer requires going beyond geometry to address the underlying alignment of physical dynamics between human and robot manipulation. To address this, we introduce LaST-HD, a novel human-to-robot action learning paradigm that extends reasoning-before-acting VLA by aligning human-hand and robot demonstrations in a shared latent reasoning space. Rather than mimicking human kinematics, LaST-HD trains an auxiliary action-conditioned world model on unpaired human-hand and robot trajectories to synthesize unified latent targets. After aligning cross-embodiment representations in this shared forward-dynamics space, these targets supervise LaST-HD's latent reasoning process, enabling it to internalize shared physical dynamics and drive efficient human-hand action learning. Moreover, we develop Out-of-Lab (OOL) Glove, a low-cost motion-capture glove tailored to LaST-HD for human-hand data collection. The captured human data provide precise keypoints and serve as universal action supervision across grippers and dexterous hands. Armed with the aligned latent space and high-fidelity human-hand data, we develop a progressive mixed-to-human training recipe comprising mixed human-robot co-training and human-hand online correction post-training. Through mixed co-training, LaST-HD improves generalization to novel objects, scenes, and positions using only human-hand demonstrations. With online correction, LaST-HD further adapts to novel environments and achieves over 90\\% accuracy using only 20 minutes of OOL glove data.",
       "date": "2026-06-22",
@@ -3866,18 +3962,6 @@
       ]
     },
     {
-      "title": "Sanctuary AI Expands Physical AI Strategy to Industrial Robotics, Demonstrating Production-Ready AI Performance",
-      "url": "https://sanctuary.ai/news/sanctuary-ai-expands-physical-ai-strategy-to-industrial-robotics-demonstrating-production-ready-ai-performance/",
-      "date": "2026-06-17",
-      "summary": "Sanctuary AI announced a hardware-agnostic Physical AI policy deployment for a contact-rich automotive wire-plugging task, reporting a 99.5%+ success rate and a 2.54-second cycle time against live production benchmarks.",
-      "organization_hint": "Sanctuary AI",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
       "summary": "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts accumulate compounding errors, observations across multiple camera views must remain mutually consistent, and the evaluator must generalize to policies whose behaviors lie outside the training distribution. We address these challenges with SC3-Eval, a self-consistent video generation recipe that adapts a pre-trained video foundation model into an accurate policy evaluator by enforcing three complementary forms of consistency. First, forward-inverse dynamics consistency jointly trains the model to predict frames from actions and to recover actions from frames, anchoring generated rollouts to a physically plausible action manifold and counteracting the drift a forward-only model cannot penalize. Second, cross-view consistency trains the model to inpaint each camera view from the other, keeping the multi-camera observation coherent over long rollouts without any explicit memory mechanism. Third, test-time consistency reuses the inverse dynamics mode at inference as a per-action-chunk uncertainty signal that terminates rollouts whose generated frames drift away from the requested actions. We also demonstrate SC3-Eval rollouts reproduce the failure modes that policies exhibit in real-world rollouts, supporting fine-grained diagnostic comparison rather than aggregate ranking alone. Across seven real-world vision-language-action policies, SC3-Eval attains a closed-loop Pearson correlation of $0.929$ and MMRV of $0.119$, outperforming three strong prior video-model-based baselines, and generalizes to new tasks.",
       "date": "2026-06-17",
@@ -3932,18 +4016,6 @@
         "keywords: embodied foundation",
         "report/model title",
         "physical-robot evidence"
-      ]
-    },
-    {
-      "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
-      "url": "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
-      "date": "2026-06-17",
-      "summary": "Object-Centric Residual RL is a reinforcement-learning framework that trains a lightweight residual policy in simulation to correct a frozen vision-language-action model during real-world robot manipulation.",
-      "organization_hint": "Microsoft Research Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
       ]
     },
     {
@@ -4341,18 +4413,6 @@
       ]
     },
     {
-      "title": "Show, Don't Tell: Detecting Novel Objects by Watching Human Demonstrations",
-      "url": "https://rai-inst.com/resources/blog/show-dont-tell-detecting-novel-objects-by-watching-human-demonstrations/",
-      "date": "2026-06-10",
-      "summary": "Show, Don't Tell is an embodied-robotics data pipeline that converts a human task demonstration into an automatically labeled object dataset, trains a task-specific detector, and uses the detector to reproduce the demonstrated task with novel objects.",
-      "organization_hint": "Robotics and AI Institute",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "UniDexTok: A Unified Dexterous Hand Tokenizer from Real Data",
       "summary": "Dexterous hands are essential for fine-grained manipulation, but their hardware designs vary substantially across embodiments. Differences in kinematics, joint definitions, and degrees of freedom make it difficult to define a shared state representation compared with parallel grippers. As a result, dexterous-hand data remains fragmented and difficult to use for joint training. In this work, we propose the Unified Dexterous Hand Model (UDHM), which maps human and robot hand states into a shared 22-DoF semantic interface. Based on UDHM, we introduce UniDexTok, a retargeting-free state tokenizer that learns embodiment-conditioned discrete tokens from standardized real joint states. UniDexTok provides a unified representation for heterogeneous dexterous hands without relying on retargeting or simulation data. Compared with the recent baseline UniHM, UniDexTok reduces MPJAE from 15.63 degrees to 0.16 degrees and MPJPE from 18.51 mm to 0.18 mm, corresponding to error reductions of 98.98% and 99.03%, respectively. These results improve reconstruction from centimeter-scale to sub-millimeter accuracy. Experiments further show that data from other embodiments improves target-embodiment reconstruction accuracy, demonstrating the benefit of cross-embodiment tokenization. UniDexTok also shows strong zero-shot and few-shot reconstruction ability when new dexterous hands are introduced.",
       "date": "2026-06-09",
@@ -4646,6 +4706,30 @@
       ]
     },
     {
+      "title": "Scaling Simulation Data Generation | RAI Institute",
+      "url": "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
+      "date": "2026-06-01",
+      "summary": "How AnyTask and ExpertGen Bridge the Sim-to-Real Gap",
+      "organization_hint": "Robotics and AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Sanctuary AI Expands Physical AI Strategy to Industrial Robotics, Demonstrating Production-Ready AI Performance | Robotics News & Insights | Sanctuary AI",
+      "url": "https://sanctuary.ai/news/sanctuary-ai-expands-physical-ai-strategy-to-industrial-robotics-demonstrating-production-ready-ai-performance/",
+      "date": "2026-06-01",
+      "summary": "Production-ready performance validated with industrial-level throughput at a global Tier 1 automotive supplier Two robotic arms with cables and sensors",
+      "organization_hint": "Sanctuary AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "PHASOR: Phase-Anchored Universal Action Representations for Humanoid Embodiments",
       "summary": "Learning a good action embedding space is fundamental to scalable robot policy learning, yet existing methods treat action latents as task-specific intermediates rather than first-class representations. The resulting latents are unstructured, embodiment-specific, and weakly tied to motion semantics, limiting interpretability, controllability, and transferability across robots. We position the action embedding space itself as a first-class design target, with downstream policy quality emerging from representation quality. Exploiting motion's intrinsic periodicity, we factorize it into a phase manifold that captures cyclic structure via FFT-parametric coefficients, together with a pose branch that conditions the manifold on non-periodic configuration detail. Combined with motion-semantic distillation, this factorized structure yields a cross-embodiment motion manifold that is interpretable and embodiment-agnostic by design. Anchoring multiple humanoid robots to a shared human-pretrained manifold then produces a unified action embedding space across diverse platforms, achieving strong cross-embodiment retrieval and consistent gains on downstream robot tasks.",
       "date": "2026-06-01",
@@ -4662,6 +4746,18 @@
       "score": 26,
       "reasons": [
         "keywords: humanoid, cross-embodiment"
+      ]
+    },
+    {
+      "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement - Microsoft Research Your Privacy Choices Opt-Out Icon Your Privacy Choices Opt-Out Icon",
+      "url": "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
+      "date": "2026-06-01",
+      "summary": "By Kinam Kim, Namiko Saito, Heecheol Kim, Katsushi Ikeuchi, Jaegul Choo and Yasuyuki Matsushita Vision-Language-Action (VLA) models enable broad manipulation capabilities by leveraging large-scale pretraining and robot demonstrations. However, imitation learning can cause small execution errors to accumulate over time, pushing the robot into states that demonstrations did not cover well. Therefore, we present an object-centric residual […]",
+      "organization_hint": "Microsoft Research Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -4734,6 +4830,18 @@
       ]
     },
     {
+      "title": "Rerun 0.33.0",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.33.0",
+      "date": "2026-05-29",
+      "summary": "Rerun 0.33.0 adds a headless viewer for automation and LLM workflows, push-down filtering for robotics-data pipelines and improvements to experimental dataset review.",
+      "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Qwen-VLA",
       "url": "https://qwen.ai/blog?id=qwenvla",
       "date": "2026-05-29",
@@ -4780,18 +4888,6 @@
       "summary": "A task-phase prediction module for Cortex 2.0 that processes recent video history and conditions its world model before candidate robot trajectories are generated.",
       "title": "Subtask Prediction for Cortex 2.0",
       "url": "https://sereact.ai/posts/subtask-prediction",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Real-is-Sim: Bridging the Sim-to-Real Gap with a Dynamic Digital Twin",
-      "url": "https://rai-inst.com/resources/papers/real-is-sim-bridging-the-sim-to-real-gap-with-a-dynamic-digital-twin/",
-      "date": "2026-05-28",
-      "summary": "Real-is-Sim is a behavior-cloning framework built around a dynamic digital twin that synchronizes simulation with a physical robot, allowing policies to move between parallel virtual evaluation and real-world deployment.",
-      "organization_hint": "Robotics and AI Institute",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -4884,18 +4980,6 @@
       "score": 18,
       "reasons": [
         "keywords: world model"
-      ]
-    },
-    {
-      "title": "Accelerating Residual Reinforcement Learning with Uncertainty Estimation",
-      "url": "https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/",
-      "date": "2026-05-28",
-      "summary": "A residual reinforcement learning method that uses base-policy uncertainty to focus exploration and modifies off-policy residual learning to support stochastic Gaussian and diffusion policies.",
-      "organization_hint": "Boston Dynamics AI Institute",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
       ]
     },
     {
@@ -5061,23 +5145,11 @@
       ]
     },
     {
-      "title": "Generalizing from References using a Multi-Task Reference and Goal-Driven RL Framework",
-      "url": "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
-      "date": "2026-05-21",
-      "summary": "This multi-task reinforcement-learning framework jointly trains reference-guided imitation and goal-conditioned generalization, producing humanoid control policies that retain natural motion while adapting to goals outside the reference trajectories.",
-      "organization_hint": "Robotics and AI Institute",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "ExpertGen",
-      "url": "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
+      "title": "Rerun 0.32.2",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.32.2",
       "date": "2026-05-20",
-      "summary": "ExpertGen is a simulated behavior-generation pipeline that combines scripted demonstrations, diffusion-policy behavior priors, and massively parallel reinforcement learning to produce expert policies for contact-rich tasks and distill them into visual policies.",
-      "organization_hint": "Robotics and AI Institute",
+      "summary": "Rerun 0.32.2 improves query performance and MCAP ingestion, including preservation of channels without schemas as raw robotics data.",
+      "organization_hint": "Rerun",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -5155,6 +5227,18 @@
       "score": 18,
       "reasons": [
         "keywords: cross-embodiment"
+      ]
+    },
+    {
+      "title": "Rerun 0.32.1",
+      "url": "https://github.com/rerun-io/rerun/releases/tag/0.32.1",
+      "date": "2026-05-18",
+      "summary": "Rerun 0.32.1 fixes handling of interleaved store messages in RRD recordings used by the multimodal robotics-data engine.",
+      "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -5621,11 +5705,59 @@
       ]
     },
     {
+      "title": "“Show, Don’t Tell.” Detecting Novel Objects by Watching Human Demonstrations | RAI Institute",
+      "url": "https://rai-inst.com/resources/blog/show-dont-tell-detecting-novel-objects-by-watching-human-demonstrations/",
+      "date": "2026-05-02",
+      "summary": "Automatically converting demos into labeled datasets to enable the rapid training of task-specific object detectors that outperform existing state-of-the-art VLMs.",
+      "organization_hint": "Robotics and AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Web Summit Reflections: Canada’s Physical AI Moment Can’t Wait | Robotics News & Insights | Sanctuary AI",
       "url": "https://sanctuary.ai/news/web-summit-reflections-canadas-physical-ai-moment-cant-wait/",
       "date": "2026-05-02",
       "summary": "James Wells, CEO at Sanctuary AI, participating in a AI Roundtable with the Honourable Evan Solomon, Minister of Artificial Intelligence and Digital",
       "organization_hint": "Sanctuary AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Real-is-Sim: Bridging the Sim-to-Real Gap with a Dynamic Digital Twin | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/real-is-sim-bridging-the-sim-to-real-gap-with-a-dynamic-digital-twin/",
+      "date": "2026-05-02",
+      "summary": "We introduce real-is-sim, a new approach to integrating simulation into behavior cloning pipelines. In contrast to real-only methods, our framework allows policies to seamlessly switch between running on real hardware and running in parallelized virtual environment.",
+      "organization_hint": "Robotics and AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Judo: A User-Friendly Open-Source Package forSampling-Based Model Predictive Control | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/judo-a-user-friendly-open-source-package-forsampling-based-model-predictive-control/",
+      "date": "2026-05-02",
+      "summary": "We introduce judo, a software package designed to help develop shared tools for prototyping, benchmarking, and deploying sampling-based controllers.",
+      "organization_hint": "Boston Dynamics AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Accelerating Residual Reinforcement Learning with Uncertainty Estimation | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/",
+      "date": "2026-05-02",
+      "summary": "We propose two improvements to Residual RL that further enhance its sample efficiency and make it suitable for stochastic base policies. First, we leverage uncertainty estimates of the base policy to focus exploration on regions in which the base policy is not confident. Second, we propose a simple modification to off-policy residual learning that allows it to observe base actions and better handle stochastic base policies.",
+      "organization_hint": "Boston Dynamics AI Institute",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -5846,6 +5978,18 @@
       "summary": "WALL-B is a general embodied foundation model based on a unified world-model architecture and intended for robot operation in real homes.",
       "title": "WALL-B World-Unified Embodied Foundation Model",
       "url": "https://x2robot.com/en/about",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GPT-5.5",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "date": "2026-04-23",
+      "summary": "OpenAI released GPT-5.5 and GPT-5.5 Pro, frontier language models designed for agentic coding, computer use, research, data analysis and long-running tool-based work.",
+      "organization_hint": "OpenAI",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6479,18 +6623,6 @@
       ]
     },
     {
-      "title": "Planning-Guided Diffusion Policy Learning for Contact-Rich Bimanual Object Reorientation",
-      "url": "https://rai-inst.com/resources/papers/planning-guided-diffusion-policy-learning-for-contact-rich-bimanual-object-reorientation/",
-      "date": "2026-04-06",
-      "summary": "A planning-guided diffusion policy framework that generates synthetic demonstrations with model-based motion planning and trains task-conditioned policies for contact-rich bimanual object reorientation.",
-      "organization_hint": "Boston Dynamics AI Institute",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models",
       "summary": "Vision-language-action (VLA) models are emerging as embodied foundation models for robotic manipulation, but their deployment introduces a new unlearning challenge: removing unsafe, spurious, or privacy-sensitive behaviors without degrading perception, language grounding, and action control. In OpenVLA-style policies, behavior is produced through a fused visual encoder, a cross-modal projector, and a language backbone that predicts tokenized robot actions, so undesirable knowledge can be distributed across perception, alignment, and reasoning/action layers rather than confined to a single module. Consequently, partial unlearning applied only to the vision stack or only to the language backbone is often insufficient, while conventional unlearning baselines designed for standalone vision or language models may leave residual forgetting or incur unnecessary utility loss in embodied settings. We propose VLA-Forget, a hybrid unlearning framework that combines ratio-aware selective editing for perception and cross-modal specificity with layer-selective reasoning/action unlearning for utility-preserving forgetting. VLA-Forget jointly optimizes three objectives: targeted forgetting, perceptual preservation, and reasoning retention, through staged updates over the visual encoder, projector, and upper action-generating transformer blocks. Across forget-set behavior probes and retain-task evaluations, VLA-Forget improves forgetting efficacy by 10%, preserves perceptual specificity by 22%, retains reasoning and task success by 9%, and reduces post-quantization recovery by 55% relative to strong unlearning baselines.",
       "date": "2026-04-05",
@@ -6606,18 +6738,6 @@
       ]
     },
     {
-      "title": "Judo: A User-Friendly Open-Source Package for Sampling-Based Model Predictive Control",
-      "url": "https://rai-inst.com/resources/papers/judo-a-user-friendly-open-source-package-forsampling-based-model-predictive-control/",
-      "date": "2026-03-30",
-      "summary": "An open-source Python package for prototyping, benchmarking and deploying sampling-based model predictive controllers, with MuJoCo-based tasks, asynchronous execution and an interactive tuning interface.",
-      "organization_hint": "Boston Dynamics AI Institute",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Humanoid Lab",
       "url": "https://github.com/roboterax/humanoid-lab",
       "date": "2026-03-27",
@@ -6682,30 +6802,6 @@
       "score": 18,
       "reasons": [
         "keywords: world model"
-      ]
-    },
-    {
-      "title": "GroundedPlanBench and V2GP",
-      "url": "https://www.microsoft.com/en-us/research/blog/groundedplanbench-spatially-grounded-long-horizon-task-planning-for-robot-manipulation/",
-      "date": "2026-03-26",
-      "summary": "GroundedPlanBench evaluates spatially grounded, long-horizon robot manipulation planning, while its V2GP framework converts robot demonstration videos into grounded planning training data.",
-      "organization_hint": "Microsoft Research Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "AsgardBench",
-      "url": "https://www.microsoft.com/en-us/research/blog/asgardbench-a-benchmark-for-visually-grounded-interactive-planning/",
-      "date": "2026-03-26",
-      "summary": "AsgardBench is an embodied-AI benchmark with 108 controlled household-task instances for evaluating whether agents revise action plans using visual feedback from an interactive simulated environment.",
-      "organization_hint": "Microsoft Research Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
       ]
     },
     {
@@ -6822,6 +6918,18 @@
       "score": 38,
       "reasons": [
         "report/model title"
+      ]
+    },
+    {
+      "title": "GPT-5.4 mini and nano",
+      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "date": "2026-03-17",
+      "summary": "OpenAI released GPT-5.4 mini and GPT-5.4 nano, smaller language models optimized for coding, subagents, multimodal understanding, tool use and high-volume workloads.",
+      "organization_hint": "OpenAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7067,6 +7175,18 @@
       ]
     },
     {
+      "title": "GPT-5.4",
+      "url": "https://openai.com/index/introducing-gpt-5-4/",
+      "date": "2026-03-05",
+      "summary": "OpenAI released GPT-5.4 and GPT-5.4 Pro for ChatGPT, Codex and the API, adding native computer-use capabilities, long-context reasoning and improved operation across tools and software environments.",
+      "organization_hint": "OpenAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "RoboCasa365: A Large-Scale Simulation Framework for Training and Benchmarking Generalist Robots",
       "summary": "Recent advances in robot learning have accelerated progress toward generalist robots that can perform everyday tasks in human environments. Yet it remains difficult to gauge how close we are to this vision. The field lacks a reproducible, large-scale benchmark for systematic evaluation. To fill this gap, we present RoboCasa365, a comprehensive simulation benchmark for household mobile manipulation. Built on the RoboCasa platform, RoboCasa365 introduces 365 everyday tasks across 2,500 diverse kitchen environments, with over 600 hours of human demonstration data and over 1600 hours of synthetically generated demonstration data -- making it one of the most diverse and large-scale resources for studying generalist policies. RoboCasa365 is designed to support systematic evaluations for different problem settings, including multi-task learning, robot foundation model training, and lifelong learning. We conduct extensive experiments on this benchmark with state-of-the-art methods and analyze the impacts of task diversity, dataset scale, and environment variation on generalization. Our results provide new insights into what factors most strongly affect the performance of generalist robots and inform strategies for future progress in the field.",
       "date": "2026-03-04",
@@ -7095,11 +7215,47 @@
       ]
     },
     {
+      "title": "Planning-Guided Diffusion Policy Learning for Contact-Rich Bimanual Object Reorientation | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/planning-guided-diffusion-policy-learning-for-contact-rich-bimanual-object-reorientation/",
+      "date": "2026-03-03",
+      "summary": "We introduce Planning-Guided Diffusion Policy Learning (LIDE), an approach that effectively learns to solve contact-rich bimanual manipulation tasks by leveraging model-based motion planners to generate demonstration data in high-fidelity physics simulation.",
+      "organization_hint": "Boston Dynamics AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Introducing Foresight | Dexterity",
       "url": "https://dexterity.ai/blog/foresight",
       "date": "2026-03-03",
       "summary": "Foresight is Dexterity’s world model for Physical AI: interpretable, safe, and fast. Trained with experience from over 100 million autonomous actions in production, it powers safety-rated Physical AI in Fortune 50 enterprises. Today, we are letting you try one piece of it yourself.",
       "organization_hint": "Dexterity AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Generalizing from References using a Multi-Task Reference and Goal-Driven RL Framework | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
+      "date": "2026-03-03",
+      "summary": "We introduce a multi-task RL training paradigm that treats reference motion as a prior for behavioral shaping rather than a deployment-time constraint.",
+      "organization_hint": "Robotics and AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GPT-5.3 Instant",
+      "url": "https://openai.com/index/gpt-5-3-instant/",
+      "date": "2026-03-03",
+      "summary": "OpenAI released GPT-5.3 Instant, an updated general-purpose language model with improved factual accuracy, web-result synthesis, writing and conversational behavior.",
+      "organization_hint": "OpenAI",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7124,6 +7280,30 @@
       "date": "2026-03-02",
       "summary": "近日，国际期刊《Science Robotics》刊登了 北京通用人工智能研究院（简称通研院） 联合深圳市人工",
       "organization_hint": "北京通用人工智能研究院 / BIGAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GroundedPlanBench: Spatially grounded long-horizon task planning for robot manipulation - Microsoft Research Your Privacy Choices Opt-Out Icon Your Privacy Choices Opt-Out Icon",
+      "url": "https://www.microsoft.com/en-us/research/blog/groundedplanbench-spatially-grounded-long-horizon-task-planning-for-robot-manipulation/",
+      "date": "2026-03-02",
+      "summary": "Vision-language models (VLMs) use images and text to plan robot actions, but they still struggle to decide what actions to take and where to take them. Most systems split these decisions into two steps: a VLM generates a plan in natural language, and a separate model translates it into executable actions. This approach often breaks […]",
+      "organization_hint": "Microsoft Research Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "AsgardBench: A benchmark for visually grounded interactive planning - Microsoft Research Your Privacy Choices Opt-Out Icon Your Privacy Choices Opt-Out Icon",
+      "url": "https://www.microsoft.com/en-us/research/blog/asgardbench-a-benchmark-for-visually-grounded-interactive-planning/",
+      "date": "2026-03-02",
+      "summary": "AsgardBench evaluates whether embodied agents can revise their plans based on visual observations as tasks unfold. By focusing on perception-driven planning, it exposes key limitations and guides improvements in agent reliability.",
+      "organization_hint": "Microsoft Research Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7385,6 +7565,18 @@
       "reasons": [
         "keywords: robot foundation, world model",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "GPT-5.3-Codex-Spark",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark/",
+      "date": "2026-02-12",
+      "summary": "OpenAI released GPT-5.3-Codex-Spark as a research-preview language model optimized for low-latency, real-time agentic coding and targeted software edits.",
+      "organization_hint": "OpenAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7907,6 +8099,18 @@
       ]
     },
     {
+      "title": "Learning Equivariant Neural-Augmented Object Dynamics from Few Interactions | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/learning-equivariant-neural-augmented-object-dynamics-from-few-interactions/",
+      "date": "2026-01-01",
+      "summary": "We introduce PIEGraph, a neural-augmented dynamics model capable of learning physically-grounded object dynamics for rigid and deformable bodies from few interactions.",
+      "organization_hint": "Robotics and AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "ERNIE-5.0 Tops LMArena Text Leaderboard as No.1 Chinese Model! | ERNIE Blog",
       "url": "https://ernie.baidu.com/blog/posts/ernie-5.0-0110-release-on-lmarena/",
       "date": "2026-01-01",
@@ -8021,6 +8225,30 @@
         "keywords: vision-language-action, vla, robot foundation",
         "physical-robot evidence",
         "release signal"
+      ]
+    },
+    {
+      "title": "Lumo-1: A Generalist Embodied Foundation Model That Reasons and Acts in Physical Space",
+      "url": "https://www.astribot.com/en/research/Lumo1/",
+      "date": "2025-12-11",
+      "summary": "Lumo-1 is a generalist vision-language-action foundation model for embodied reasoning and robotic control. It combines continued vision-language pretraining, cross-embodiment robot-data training, action training on Astribot S1 trajectories, and reinforcement learning for reasoning-action alignment.",
+      "organization_hint": "星尘智能 / Astribot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GPT-5.2",
+      "url": "https://openai.com/index/introducing-gpt-5-2/",
+      "date": "2025-12-11",
+      "summary": "OpenAI released the GPT-5.2 model series for professional knowledge work and long-running agents, with improvements in coding, long-context understanding, vision and tool calling.",
+      "organization_hint": "OpenAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8381,7 +8609,7 @@
     {
       "date": "2025-11-19",
       "organization_hint": "Sunday Robotics",
-      "summary": "Robot foundation model trained without robot-collected training data, using human activity data and an action representation intended to transfer human behaviors to robots.",
+      "summary": "ACT-1 is a robot foundation model trained without robot teleoperation trajectories. It uses transformed human movement data for long-horizon mobile manipulation, map-conditioned navigation in unseen homes, and dexterous household tasks.",
       "title": "ACT-1: A Robot Foundation Model Trained on Zero Robot Data",
       "url": "https://www.sunday.ai/blog/no-robot-data",
       "authors": [],
@@ -8408,6 +8636,18 @@
       "summary": "These electronics-free fluidic soft robots use air pressure and mechanical coupling through the ground to produce complex rhythmic motion and synchronize with one another.",
       "title": "Self-Synchronizing Fluidic Robots",
       "url": "https://www.ox.ac.uk/news/2025-11-14-researchers-develop-air-powered-robots-move-sync-without-electronics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GPT-5.1 for developers",
+      "url": "https://openai.com/index/gpt-5-1-for-developers/",
+      "date": "2025-11-13",
+      "summary": "OpenAI released GPT-5.1 in its API platform with adaptive reasoning, improved agentic coding, extended prompt caching and tools for applying code patches and running shell commands.",
+      "organization_hint": "OpenAI",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8648,18 +8888,6 @@
       ]
     },
     {
-      "title": "Project Eluna",
-      "url": "https://www.aboutamazon.com/news/operations/new-robots-amazon-fulfillment-agentic-ai",
-      "date": "2025-10-22",
-      "summary": "Project Eluna is an agentic AI system that analyzes real-time and historical fulfillment-center data, anticipates operational bottlenecks, and recommends actions to operators.",
-      "organization_hint": "Amazon Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "date": "2025-10-20",
       "organization_hint": "Unitree Robotics",
       "summary": "Unitree H2 is a 180-centimeter bionic humanoid with 31 degrees of freedom, high-torque joints and support for embodied models and secondary development.",
@@ -8756,6 +8984,18 @@
       ]
     },
     {
+      "title": "Amazon’s new robot Blue Jay capable of moving thousands of packages at high speeds",
+      "url": "https://www.aboutamazon.com/news/operations/new-robots-amazon-fulfillment-agentic-ai",
+      "date": "2025-10-02",
+      "summary": "Designed with Amazon’s front-line employees in mind, these innovations reduce repetitive tasks, improve safety, and boost productivity—while speeding up delivery.",
+      "organization_hint": "Amazon Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-10-01",
       "organization_hint": "Beijing Noetix Robotics Technology Group Co., Ltd.",
       "summary": "Mobile bionic humanoid platform combining an expressive head, robotic arms, dexterous hands and a wheeled base for interactive service applications.",
@@ -8837,18 +9077,6 @@
       "date": "2025-09-29",
       "summary": "DeepSeek-V3.2-Exp is an experimental LLM introducing DeepSeek Sparse Attention for more efficient long-context training and inference.",
       "organization_hint": "深度求索 / DeepSeek",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "PIEGraph: Learning Equivariant Neural-Augmented Object Dynamics from Few Interactions",
-      "url": "https://rai-inst.com/resources/papers/learning-equivariant-neural-augmented-object-dynamics-from-few-interactions/",
-      "date": "2025-09-27",
-      "summary": "PIEGraph is a neural-augmented object-dynamics model that combines a physically informed spring-mass prior with an action-conditioned equivariant graph neural network for planning with rigid and deformable objects from limited interaction data.",
-      "organization_hint": "Robotics and AI Institute",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9141,6 +9369,18 @@
       ]
     },
     {
+      "title": "rl_training",
+      "url": "https://github.com/DeepRoboticsLab/rl_training",
+      "date": "2025-09-05",
+      "summary": "An Isaac Lab-based reinforcement-learning library for training locomotion policies for DEEP Robotics robots, with environments for Lite3 and M20 and support for policy playback and deployment workflows.",
+      "organization_hint": "云深处科技 / DEEP Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "RL's Razor: Why Online Reinforcement Learning Forgets Less",
       "summary": "Comparison of fine-tuning models with reinforcement learning (RL) and supervised fine-tuning (SFT) reveals that, despite similar performance at a new task, RL preserves prior knowledge and capabilities significantly better. We find that the degree of forgetting is determined by the distributional shift, measured as the KL-divergence between the fine-tuned and base policy evaluated on the new task. Our analysis reveals that on-policy RL is implicitly biased towards KL-minimal solutions among the many that solve the new task, whereas SFT can converge to distributions arbitrarily far from the base model. We validate these findings through experiments with large language models and robotic foundation models and further provide theoretical justification for why on-policy RL updates lead to a smaller KL change. We term this principle $\\textit{RL's Razor}$: among all ways to solve a new task, RL prefers those closest in KL to the original model.",
       "date": "2025-09-04",
@@ -9311,18 +9551,6 @@
       ]
     },
     {
-      "title": "Sensor Workbench",
-      "url": "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation",
-      "date": "2025-08-26",
-      "summary": "Sensor Workbench is an Isaac Sim-based sensor simulation platform with parallel processing, physics-based sensor models, high-fidelity 3D environments, and a CAD-to-OpenUSD pipeline for warehouse automation development.",
-      "organization_hint": "Amazon Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "XR-1 cross-embodiment VLA model",
       "url": "https://github.com/Open-X-Humanoid/XR-1",
       "date": "2025-08-22",
@@ -9377,18 +9605,6 @@
       "date": "2025-08-21",
       "summary": "DeepSeek-V3.1 is a hybrid LLM combining thinking and non-thinking inference modes with improved tool use and multi-step agent capabilities.",
       "organization_hint": "深度求索 / DeepSeek",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "MindJourney",
-      "url": "https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/",
-      "date": "2025-08-20",
-      "summary": "MindJourney is an embodied-agent research framework that combines a video world model, a vision-language model, and spatial beam search to explore simulated 3D viewpoints and improve spatial reasoning.",
-      "organization_hint": "Microsoft Research Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9572,6 +9788,30 @@
       ]
     },
     {
+      "title": "Revolutionizing warehouse automation with scientific simulation - Amazon Science Close Close",
+      "url": "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation",
+      "date": "2025-08-02",
+      "summary": "With a novel parallel-computing architecture, a CAD-to-USD pipeline, and the use of OpenUSD as ground truth, a new simulator can explore hundreds of sensor configurations in the time it takes to test just a few physical setups.",
+      "organization_hint": "Amazon Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "MindJourney enables AI to explore simulated 3D worlds to improve spatial interpretation - Microsoft Research Your Privacy Choices Opt-Out Icon Your Privacy Choices Opt-Out Icon",
+      "url": "https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/",
+      "date": "2025-08-02",
+      "summary": "MindJourney can enable AI to navigate and interpret 3D environments from limited visual input, potentially improving performance in navigation, planning, and safety-critical tasks:",
+      "organization_hint": "Microsoft Research Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Qwen-Image-Edit: Image Editing with Higher Quality and Efficiency | Qwen",
       "url": "https://qwenlm.github.io/blog/qwen-image-edit/",
       "date": "2025-08-01",
@@ -9717,6 +9957,18 @@
       "summary": "This handheld robot-training interface supports teleoperation, kinesthetic teaching, and natural human demonstration through one reconfigurable device.",
       "title": "Universal Robot-Training Interface",
       "url": "https://news.mit.edu/2025/new-tool-gives-anyone-ability-to-train-robot-0717",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "FiS-VLA Pretrained Checkpoint",
+      "url": "https://github.com/CHEN-H01/Fast-in-Slow",
+      "date": "2025-07-08",
+      "summary": "The FiS-VLA project released a pretrained checkpoint trained on a large-scale robotics dataset for subsequent evaluation, adaptation, and robot-policy development.",
+      "organization_hint": "智平方 / AI² Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9939,11 +10191,11 @@
       ]
     },
     {
-      "title": "ERNIE 4.5 Open-source",
-      "url": "https://github.com/PaddlePaddle/ERNIE/releases/tag/ernie-4.5",
-      "date": "2025-06-30",
-      "summary": "Baidu open-sourced the ERNIE 4.5 family of large language and vision-language foundation models together with ERNIEKit for training, alignment, compression and model development.",
-      "organization_hint": "百度 Research",
+      "title": "Amazon deploys over 1 million robots and launches new AI foundation model",
+      "url": "https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model",
+      "date": "2025-07-01",
+      "summary": "New AI technology will make the world's largest fleet of industrial mobile robots smarter and more efficient.",
+      "organization_hint": "Amazon Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9951,11 +10203,11 @@
       ]
     },
     {
-      "title": "DeepFleet",
-      "url": "https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model",
+      "title": "ERNIE 4.5 Open-source",
+      "url": "https://github.com/PaddlePaddle/ERNIE/releases/tag/ernie-4.5",
       "date": "2025-06-30",
-      "summary": "DeepFleet is a generative AI foundation model trained on Amazon robot-fleet data to predict traffic interactions, improve task assignment and routing, and reduce congestion among mobile robots.",
-      "organization_hint": "Amazon Robotics",
+      "summary": "Baidu open-sourced the ERNIE 4.5 family of large language and vision-language foundation models together with ERNIEKit for training, alignment, compression and model development.",
+      "organization_hint": "百度 Research",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -10307,7 +10559,7 @@
       "url": "https://github.com/resources/articles/what-are-generative-ai-models",
       "date": "2025-06-02",
       "summary": "Generative AI models are algorithms that learn from existing data to produce new content like text, images, or code.",
-      "organization_hint": "Tesla AI / Optimus",
+      "organization_hint": "智平方 / AI² Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -10843,6 +11095,18 @@
       ]
     },
     {
+      "title": "Alpha Brain and GOVLA",
+      "url": "https://ai2robotics.com/%E6%99%BA%E5%B9%B3%E6%96%B9%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0%E4%B8%80%E4%BB%A3%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BAalphabot-2%E5%BC%80%E5%90%AFagi%E7%BB%88%E7%AB%AF%E6%96%B0/?p=2613",
+      "date": "2025-04-18",
+      "summary": "AI² Robotics introduced Alpha Brain and its Global and Omni-body Vision-Language-Action model, GOVLA. The embodied foundation model combines spatial interaction modeling with slow reasoning and fast action systems for long-horizon planning, whole-body control, and mobile manipulation.",
+      "organization_hint": "智平方 / AI² Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Meta Perception Language Model",
       "url": "https://github.com/facebookresearch/perception_models",
       "date": "2025-04-17",
@@ -10949,10 +11213,10 @@
       ]
     },
     {
-      "title": "Sanctuary AI Leads the Industry in Controlling Advanced Hydraulic Hands Using Reinforcement Learning",
+      "title": "Sanctuary AI Leads the Industry in Controlling Advanced Hydraulic Hands Using Reinforcement Learning | Robotics News & Insights | Sanctuary AI",
       "url": "https://sanctuary.ai/news/sanctuary-ai-controlling-advanced-hydraulic-hands/",
       "date": "2025-04-01",
-      "summary": "Sanctuary AI demonstrated a reinforcement-learning manipulation policy trained in simulation and transferred to a physical hydraulic hand for cylinder grasping and reorientation under an untrained 500-gram load.",
+      "summary": "Sanctuary AI has demonstrated advanced manipulation skills that showcase our industry-leading ability to train dexterous policies for our unique, high-performance hydraulic hands…",
       "organization_hint": "Sanctuary AI",
       "authors": [],
       "score": 100,
@@ -11120,18 +11384,6 @@
       "date": "2025-03-25",
       "summary": "DeepSeek-V3-0324 is an updated general-purpose LLM with improved reasoning, coding, function calling, writing and search capabilities.",
       "organization_hint": "深度求索 / DeepSeek",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Sanctuary AI Leverages NVIDIA Isaac Lab to Accelerate Dexterous Learning",
-      "url": "https://sanctuary.ai/news/sanctuary-ai-leverages-isaac-lab/",
-      "date": "2025-03-18",
-      "summary": "Sanctuary AI described its use of NVIDIA Isaac Lab and Isaac Sim to build parallel simulation environments and train reinforcement-learning policies for dexterous manipulation before transferring them to physical robotic hands.",
-      "organization_hint": "Sanctuary AI",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11435,6 +11687,18 @@
       ]
     },
     {
+      "title": "Sanctuary AI Leverages NVIDIA Isaac Lab to Accelerate Dexterous Learning | Robotics News & Insights | Sanctuary AI",
+      "url": "https://sanctuary.ai/news/sanctuary-ai-leverages-isaac-lab/",
+      "date": "2025-03-01",
+      "summary": "Sanctuary AI has demonstrated industry-leading sim-to-real transfer of learned dexterous manipulation policies for our unique, high degree-of-freedom, high strength, and high speed hydraulic hands…",
+      "organization_hint": "Sanctuary AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-03-01",
       "organization_hint": "Stanford Vision and Learning Lab",
       "summary": "RoboCasa365 is a large-scale simulation and data-generation project providing thousands of household manipulation tasks, demonstrations, and assets for training generalist robot policies.",
@@ -11536,6 +11800,18 @@
       "date": "2025-02-25",
       "summary": "Magma is an open-source multimodal vision-language-action foundation model that generates action proposals for both digital interfaces and physical robot-manipulation environments.",
       "organization_hint": "Microsoft Research Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Data Navigator",
+      "url": "https://www.anybotics.com/news/anybotics-launches-data-navigator/",
+      "date": "2025-02-25",
+      "summary": "ANYbotics launched Data Navigator, a software platform that centralizes visual, thermal, acoustic and gas data collected by ANYmal inspection robots. It provides historical trend analysis, asset-health insights and integrations with enterprise systems, with cloud, on-premises and air-gapped deployment options.",
+      "organization_hint": "ANYbotics",
       "authors": [],
       "score": 100,
       "reasons": [

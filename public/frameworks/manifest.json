@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=hYoltOzLdeByuIyi5ndQdA&_nc_ss=7b20f&oh=00_AQGn_6SLoHf3ZILREZksGsGcopfSg8cmEIbaG7sheuJNTQ&oe=6A952EB3",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=vFEZMJAYfgfUwZw02A_LYQ&_nc_ss=7b20f&oh=00_AQHLguQNBozPNByQ9gmrdFT64WAddpJYUtNS5X7FgW8kKQ&oe=6A9566F3",
       "width": 1920,
       "height": 1080
     },
@@ -188,6 +188,18 @@
       "height": 630
     },
     {
+      "id": "rerun-0-36-0-f4ca37d",
+      "asset": "frameworks/rerun-0-36-0-f4ca37d.jpg",
+      "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.36.0",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/843e93cf98ab29e3dc1cfb3ee0bd20dfea6b812a5f633c44de9b5837be0e0502/rerun-io/rerun/releases/tag/0.36.0",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "lerobot-v0-6-1-8bbdfe1",
       "asset": "frameworks/lerobot-v0-6-1-8bbdfe1.jpg",
       "source_url": "https://github.com/huggingface/lerobot/releases/tag/v0.6.1",
@@ -196,6 +208,18 @@
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
       "image_url": "https://opengraph.githubassets.com/dd172062e8623123e125cd816a4cfae1404521912a2fb9deb21e9a19624b9c2a/huggingface/lerobot/releases/tag/v0.6.1",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "intrinsic-sdk-v1-35-20260720-a55e5ba",
+      "asset": "frameworks/intrinsic-sdk-v1-35-20260720-a55e5ba.jpg",
+      "source_url": "https://github.com/intrinsic-ai/sdk/releases/tag/v1.35.20260720",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/c28218516ec682d8753d555f8f957b341d2f3d25d60f7d35ca972168b1d35ef8/intrinsic-ai/sdk/releases/tag/v1.35.20260720",
       "width": 1200,
       "height": 600
     },
@@ -210,6 +234,18 @@
       "image_url": "https://github.com/mit-han-lab/vlash/raw/main/assets/demo-first-frame.png",
       "width": 2624,
       "height": 1468
+    },
+    {
+      "id": "rerun-0-35-0-2462fa6",
+      "asset": "frameworks/rerun-0-35-0-2462fa6.jpg",
+      "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.35.0",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODY0NjE0NDksIm5iZiI6MTc4NjQ2MTE0OSwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgxMSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MTFUMTUxMjI5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MDAxYmU4YzczZjg5NTI0YjQ5MjlmMTkwOWZmNWRhMWE4ZmRkOWUxZmUzNmI2MjZjMzIzNzhhODNlZGI2ZDM5NCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.d7v8l1v9W1LP6FAwi0Y3iGqP4Lgl8s6UgXIYXtQgzHo",
+      "width": 453,
+      "height": 166
     },
     {
       "id": "xiaomi-robotics-1-db45b5f",
@@ -248,6 +284,42 @@
       "height": 675
     },
     {
+      "id": "vbot-embodied-ai-agent-capability-360aa2a",
+      "asset": "frameworks/vbot-embodied-ai-agent-capability-360aa2a.jpg",
+      "source_url": "https://forum.vbot.cn/t/ai-agent-%E8%83%BD%E5%8A%9B%E5%85%A8%E9%87%8F%E4%B8%8A%E7%BA%BF%EF%BD%9Cvbot-%E4%BB%8E%E8%BD%AF%E4%BB%B6%E5%8A%A9%E7%90%86%E8%BF%88%E5%85%A5%E5%85%B7%E8%BA%AB%E5%BD%A2%E6%80%81/15",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://vita-discourse-prod.oss-cn-beijing.aliyuncs.com/original/1X/43f4e3d9b4e3f9c2410b74c81c0e7edf8cbc9fc8.png",
+      "width": 934,
+      "height": 933
+    },
+    {
+      "id": "rerun-0-34-1-d5f013c",
+      "asset": "frameworks/rerun-0-34-1-d5f013c.jpg",
+      "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.34.1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/31427d0bb330d667b69322154ba41c3d450286aac7bf749c5620aae6c977874c/rerun-io/rerun/releases/tag/0.34.1",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "ai-agent-vbot-vbot-4c4e76c",
+      "asset": "frameworks/ai-agent-vbot-vbot-4c4e76c.jpg",
+      "source_url": "https://forum.vbot.cn/t/ai-agent-vbot/15",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://vita-discourse-prod.oss-cn-beijing.aliyuncs.com/original/1X/43f4e3d9b4e3f9c2410b74c81c0e7edf8cbc9fc8.png",
+      "width": 934,
+      "height": 933
+    },
+    {
       "id": "lerobot-v0-6-0-4785044",
       "asset": "frameworks/lerobot-v0-6-0-4785044.jpg",
       "source_url": "https://huggingface.co/blog/lerobot-release-v060",
@@ -270,6 +342,18 @@
       "image_url": "https://github.com/OpenGalaxea/GalaxeaVLA/raw/main/assets/r1_mascot.jpeg",
       "width": 586,
       "height": 556
+    },
+    {
+      "id": "rerun-0-33-1-1f93b29",
+      "asset": "frameworks/rerun-0-33-1-1f93b29.jpg",
+      "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.33.1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/e90d4e6362b29c7f7b8e9cc452d57a14f52f254832fd5e9bc8ffc187a2a82da4/rerun-io/rerun/releases/tag/0.33.1",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "object-centric-residual-rl-for-zero-shot-sim-to--f1def0f",
@@ -330,6 +414,18 @@
       "image_url": "https://x2robot.com/pages/wm/assets/images/fig_teaser.jpg",
       "width": 4258,
       "height": 2379
+    },
+    {
+      "id": "rerun-0-33-0-3f08749",
+      "asset": "frameworks/rerun-0-33-0-3f08749.jpg",
+      "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.33.0",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://camo.githubusercontent.com/adebe4a89c5d001237179b323007a5224d2796b32ffc3deb43e1389a9ec9b450/68747470733a2f2f7374617469632e726572756e2e696f2f77696e646f77732d7469746c656261722d6f6c64322f343163386235393665323735393565303065373538626634623063303737333565646531363461392f66756c6c2e706e67",
+      "width": 824,
+      "height": 143
     },
     {
       "id": "era-navigation-messages-66c450d",
@@ -414,6 +510,42 @@
       "image_url": "https://rai-inst.com/wp-content/uploads/2026/05/Sim-relationship-pipeline-1024x592.jpg.webp",
       "width": 1024,
       "height": 592
+    },
+    {
+      "id": "rerun-0-32-1-07bec50",
+      "asset": "frameworks/rerun-0-32-1-07bec50.jpg",
+      "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.32.1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/ffea34d059de87f215e177116c3dfcf24cff981f5f3d08c0ac48d24692221442/rerun-io/rerun/releases/tag/0.32.1",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "show-don-t-tell-detecting-novel-objects-by-watch-1066da3",
+      "asset": "frameworks/show-don-t-tell-detecting-novel-objects-by-watch-1066da3.jpg",
+      "source_url": "https://rai-inst.com/resources/blog/show-dont-tell-detecting-novel-objects-by-watching-human-demonstrations/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://rai-inst.com/wp-content/uploads/2026/06/DSC01877-scaled.jpg.webp",
+      "width": 2560,
+      "height": 1707
+    },
+    {
+      "id": "accelerating-residual-reinforcement-learning-wit-c11093f",
+      "asset": "frameworks/accelerating-residual-reinforcement-learning-wit-c11093f.jpg",
+      "source_url": "https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://rai-inst.com/wp-content/uploads/2026/05/Real-is-Sim-768x445.png",
+      "width": 768,
+      "height": 445
     },
     {
       "id": "xiaomi-robotics-0-post-training-code-e36847f",
@@ -644,6 +776,18 @@
       "height": 1080
     },
     {
+      "id": "generalizing-from-references-using-a-multi-task--29adf2e",
+      "asset": "frameworks/generalizing-from-references-using-a-multi-task--29adf2e.jpg",
+      "source_url": "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://rai-inst.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-3.36.38-PM-768x471.png",
+      "width": 768,
+      "height": 471
+    },
+    {
       "id": "foresight-b307e9b",
       "asset": "frameworks/foresight-b307e9b.jpg",
       "source_url": "https://dexterity.ai/blog/foresight",
@@ -678,6 +822,18 @@
       "image_url": "https://rai-inst.com/wp-content/uploads/2026/03/Hi-Roadrunner-768x480.png",
       "width": 768,
       "height": 480
+    },
+    {
+      "id": "lerobot-v0-4-4-3beadbb",
+      "asset": "frameworks/lerobot-v0-4-4-3beadbb.jpg",
+      "source_url": "https://github.com/huggingface/lerobot/releases/tag/v0.4.4",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/934bb7265a92260952edcbcc6f60ffd92a9f8f16fff1c85bd9eaa5598536ce2b/huggingface/lerobot/releases/tag/v0.4.4",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "the-real-world-learning-loop-c472922",
@@ -1146,126 +1302,6 @@
       "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
       "width": 1200,
       "height": 630
-    },
-    {
-      "id": "atlas-and-large-behavior-models-advancing-genera-364007f",
-      "asset": "frameworks/atlas-and-large-behavior-models-advancing-genera-364007f.jpg",
-      "source_url": "https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://bostondynamics.com/wp-content/uploads/2025/08/Atlas-TRI-Blog-Post-Policy-Architecture-Diagram-v2e-1024x372.png",
-      "width": 1024,
-      "height": 372
-    },
-    {
-      "id": "genie-3-9565aa9",
-      "asset": "frameworks/genie-3-9565aa9.jpg",
-      "source_url": "https://deepmind.google/models/genie/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://lh3.googleusercontent.com/-WcSBDACmwrvxJVLEke6761Z3x0UN_wT8CmaPT6C9ViwRve5-_Fv6lxB-AuZ2BcuZO--Erkv07TcbeTg2ZcA4QDwK0gzDzUBRNRjs20ek3N0FSrqHw=w393-h221-n-nu-rw-lo",
-      "width": 393,
-      "height": 221
-    },
-    {
-      "id": "nvidia-isaac-lab-2-2-38fa3a4",
-      "asset": "frameworks/nvidia-isaac-lab-2-2-38fa3a4.jpg",
-      "source_url": "https://github.com/isaac-sim/IsaacLab/releases/tag/v2.2.0",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/96f0028c69910d84f7be4ad3456381e42485f84ea9eec03c1db527c679a83e5b/isaac-sim/IsaacLab/releases/tag/v2.2.0",
-      "width": 1200,
-      "height": 600
-    },
-    {
-      "id": "skild-brain-general-purpose-robotic-intelligence-b4c16d2",
-      "asset": "frameworks/skild-brain-general-purpose-robotic-intelligence-b4c16d2.jpg",
-      "source_url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.skild.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fomni-body.3981c022.jpg&w=3840&q=75",
-      "width": 2062,
-      "height": 1405
-    },
-    {
-      "id": "building-the-general-purpose-robotic-brain-1f3be22",
-      "asset": "frameworks/building-the-general-purpose-robotic-brain-1f3be22.jpg",
-      "source_url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.skild.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fomni-body.3981c022.jpg&w=3840&q=75",
-      "width": 2062,
-      "height": 1405
-    },
-    {
-      "id": "neural-jacobian-fields-c795ce5",
-      "asset": "frameworks/neural-jacobian-fields-c795ce5.jpg",
-      "source_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://sizhe-li.github.io/publication/neural_jacobian_field/static/images/data.png",
-      "width": 2624,
-      "height": 878
-    },
-    {
-      "id": "seed-gr-3-22989c8",
-      "asset": "frameworks/seed-gr-3-22989c8.jpg",
-      "source_url": "https://seed.bytedance.com/en/public_papers/gr-3-technical-report",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/banner/footerv3.png",
-      "width": 3840,
-      "height": 1200
-    },
-    {
-      "id": "steerable-scene-generation-3d840a5",
-      "asset": "frameworks/steerable-scene-generation-3d840a5.jpg",
-      "source_url": "https://steerable-scene-generation.github.io/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://steerable-scene-generation.github.io/static/images/teaser.webp",
-      "width": 5097,
-      "height": 2464
-    },
-    {
-      "id": "deepfleet-684c98b",
-      "asset": "frameworks/deepfleet-684c98b.jpg",
-      "source_url": "https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://assets.aboutamazon.com/dims4/default/4727b82/2147483647/strip/true/crop/2000x1125+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Fassets.aboutamazon.com%2F7b%2F09%2F86000e8845678a0ae1e063a7c1ca%2Fabout-amazon-hero-hero001-1millionrobots-deepfleet-screenshot-8.jpg",
-      "width": 1320,
-      "height": 743
-    },
-    {
-      "id": "genie-sim-v2-1-c1d89f3",
-      "asset": "frameworks/genie-sim-v2-1-c1d89f3.jpg",
-      "source_url": "https://github.com/AgibotTech/genie_sim",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://github.com/AgibotTech/genie_sim/raw/main/docs/image.png",
-      "width": 2400,
-      "height": 1960
     }
   ]
 }

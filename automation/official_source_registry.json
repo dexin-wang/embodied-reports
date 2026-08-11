@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-11T09:41:06.366783+00:00",
+  "updated_at": "2026-08-11T14:52:31.118188+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -819,6 +819,177 @@
         "https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/"
       ],
       "last_bootstrapped_at": "2026-08-11T09:40:24.267403+00:00",
+      "last_error": null
+    },
+    "anybotics-e344608f": {
+      "name": "ANYbotics",
+      "official_urls": [
+        "https://github.com/ANYbotics",
+        "https://www.anybotics.com/",
+        "https://www.anybotics.com/news/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.anybotics.com/news/anybotics-launches-data-navigator/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:39:57.496031+00:00",
+      "last_error": null
+    },
+    "openai-a19ee5a9": {
+      "name": "OpenAI",
+      "official_urls": [
+        "https://developers.openai.com/",
+        "https://github.com/openai",
+        "https://openai.com/",
+        "https://openai.com/news/",
+        "https://openai.com/research/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://openai.com/index/gpt-5-1-for-developers/",
+        "https://openai.com/index/gpt-5-3-instant/",
+        "https://openai.com/index/gpt-5-6/",
+        "https://openai.com/index/introducing-gpt-5-2/",
+        "https://openai.com/index/introducing-gpt-5-3-codex-spark/",
+        "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+        "https://openai.com/index/introducing-gpt-5-4/",
+        "https://openai.com/index/introducing-gpt-5-5/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:42:23.702297+00:00",
+      "last_error": null
+    },
+    "星尘智能-astribot-0a43063c": {
+      "name": "星尘智能 / Astribot",
+      "official_urls": [
+        "https://www.astribot.com/en",
+        "https://www.astribot.com/en/news"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.astribot.com/en/research/Lumo1/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:42:57.723260+00:00",
+      "last_error": null
+    },
+    "智平方-ai-robotics-4866b785": {
+      "name": "智平方 / AI² Robotics",
+      "official_urls": [
+        "https://ai2robotics.com/",
+        "https://ai2robotics.com/en/news/",
+        "https://docs.ai2robotics.com/",
+        "https://fast-in-slow.github.io/",
+        "https://github.com/CHEN-H01/Fast-in-Slow"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://ai2robotics.com/%E6%99%BA%E5%B9%B3%E6%96%B9%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0%E4%B8%80%E4%BB%A3%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BAalphabot-2%E5%BC%80%E5%90%AFagi%E7%BB%88%E7%AB%AF%E6%96%B0/?p=2613",
+        "https://github.com/CHEN-H01/Fast-in-Slow"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:43:58.603975+00:00",
+      "last_error": null
+    },
+    "云深处科技-deep-robotics-dd7d75c1": {
+      "name": "云深处科技 / DEEP Robotics",
+      "official_urls": [
+        "https://github.com/DeepRoboticsLab",
+        "https://www.deeprobotics.cn/",
+        "https://www.deeprobotics.us/",
+        "https://www.deeprobotics.us/industry/research-education/",
+        "https://www.deeprobotics.us/news/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/DeepRoboticsLab/rl_training"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:45:33.393443+00:00",
+      "last_error": null
+    },
+    "维他动力-vbot-8692075d": {
+      "name": "维他动力 / Vbot",
+      "official_urls": [
+        "https://en.vita.cn/",
+        "https://forum.vbot.cn/",
+        "https://www.vbot.cn/",
+        "https://www.vita.cn/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://forum.vbot.cn/t/ai-agent-%E8%83%BD%E5%8A%9B%E5%85%A8%E9%87%8F%E4%B8%8A%E7%BA%BF%EF%BD%9Cvbot-%E4%BB%8E%E8%BD%AF%E4%BB%B6%E5%8A%A9%E7%90%86%E8%BF%88%E5%85%A5%E5%85%B7%E8%BA%AB%E5%BD%A2%E6%80%81/15"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:46:40.422437+00:00",
+      "last_error": null
+    },
+    "genelist-a43ce928": {
+      "name": "Genelist",
+      "official_urls": [
+        "https://gene-list.com/"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T14:47:11.279672+00:00",
+      "last_error": null
+    },
+    "sunday-robotics-52bbfa7b": {
+      "name": "Sunday Robotics",
+      "official_urls": [
+        "https://www.sunday.ai/",
+        "https://www.sunday.ai/blog",
+        "https://www.sunday.ai/technology"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.sunday.ai/blog/act-2-preview",
+        "https://www.sunday.ai/blog/no-robot-data"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:47:42.289583+00:00",
+      "last_error": null
+    },
+    "foundation-robotics-5bf09bb6": {
+      "name": "Foundation Robotics",
+      "official_urls": [
+        "https://foundation.bot/",
+        "https://foundation.bot/cortex"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T14:48:21.407251+00:00",
+      "last_error": null
+    },
+    "mentee-robotics-c88f5969": {
+      "name": "Mentee Robotics",
+      "official_urls": [
+        "https://www.menteebot.com/",
+        "https://www.menteebot.com/blog/",
+        "https://www.menteebot.com/news/",
+        "https://www.mobileye.com/products/mentee/"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T14:49:18.105203+00:00",
+      "last_error": null
+    },
+    "rerun-afd8524d": {
+      "name": "Rerun",
+      "official_urls": [
+        "https://github.com/rerun-io",
+        "https://github.com/rerun-io/rerun",
+        "https://rerun.io/",
+        "https://rerun.io/docs/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/rerun-io/rerun/releases/tag/0.32.1",
+        "https://github.com/rerun-io/rerun/releases/tag/0.32.2",
+        "https://github.com/rerun-io/rerun/releases/tag/0.33.0",
+        "https://github.com/rerun-io/rerun/releases/tag/0.33.1",
+        "https://github.com/rerun-io/rerun/releases/tag/0.34.0",
+        "https://github.com/rerun-io/rerun/releases/tag/0.34.1",
+        "https://github.com/rerun-io/rerun/releases/tag/0.35.0",
+        "https://github.com/rerun-io/rerun/releases/tag/0.36.0"
+      ],
+      "last_bootstrapped_at": "2026-08-11T14:50:50.059983+00:00",
+      "last_error": null
+    },
+    "mujin-50fa403a": {
+      "name": "Mujin",
+      "official_urls": [
+        "https://github.com/mujin",
+        "https://mujin-corp.com/",
+        "https://mujin-corp.com/resources/news/",
+        "https://mujin-europe.com/",
+        "https://www.mujin.co.jp/"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T14:51:58.759601+00:00",
       "last_error": null
     }
   }
