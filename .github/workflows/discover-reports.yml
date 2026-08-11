@@ -33,10 +33,14 @@ jobs:
           if git cat-file -e origin/catalog-data:automation/organization_coverage.json 2>/dev/null; then
             git show origin/catalog-data:automation/organization_coverage.json > automation/organization_coverage.json
           fi
+          if git cat-file -e origin/catalog-data:automation/official_source_registry.json 2>/dev/null; then
+            git show origin/catalog-data:automation/official_source_registry.json > automation/official_source_registry.json
+          fi
       - name: Validate organization coverage registry (no API)
         run: |
           python automation/organization_coverage.py --initialize --check --summary
           python automation/test_organization_coverage.py
+          python automation/test_official_discovery.py
       - name: Discover candidate leads
         run: python automation/discover.py
       - name: Discover influential releases from independent WeChat media
@@ -49,8 +53,13 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_VERIFIER_MODEL: gpt-5.6
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $(( $(date -u +%s) / 86400 % 3 )) -eq 0 ]; then
-            python automation/discover_official_projects.py --mode official
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # A manual run intentionally completes the initial source registry.
+            python automation/discover_official_projects.py --mode official --bootstrap-limit 115
+          elif [ $(( $(date -u +%s) / 86400 % 3 )) -eq 0 ]; then
+            # Normal runs crawl known official sources and gradually bootstrap
+            # any remaining organizations without a source yet.
+            python automation/discover_official_projects.py --mode official --bootstrap-limit 12
           else
             echo "Skipping official-company scan today; scheduled scans run every three days."
           fi
@@ -76,6 +85,7 @@ jobs:
         run: |
           python -m py_compile automation/organization_coverage.py automation/test_organization_coverage.py automation/discover_official_projects.py automation/verify_reports.py automation/extract_frameworks.py
           python automation/test_organization_coverage.py
+          python automation/test_official_discovery.py
           python automation/organization_coverage.py --check --summary
           python automation/validate_catalog.py
       - name: Publish generated catalog branch
@@ -92,8 +102,8 @@ jobs:
           git worktree add --detach "$CATALOG_OUTPUT" origin/catalog-data
           cp -a data "$CATALOG_OUTPUT/"
           cp -a public/frameworks "$CATALOG_OUTPUT/public/"
-          cp -a automation/candidates.json automation/verification_audit.json automation/organization_coverage.json "$CATALOG_OUTPUT/automation/"
-          git -C "$CATALOG_OUTPUT" add data public/frameworks automation/candidates.json automation/verification_audit.json automation/organization_coverage.json
+          cp -a automation/candidates.json automation/verification_audit.json automation/organization_coverage.json automation/official_source_registry.json "$CATALOG_OUTPUT/automation/"
+          git -C "$CATALOG_OUTPUT" add data public/frameworks automation/candidates.json automation/verification_audit.json automation/organization_coverage.json automation/official_source_registry.json
           if git -C "$CATALOG_OUTPUT" diff --cached --quiet; then exit 0; fi
           git -C "$CATALOG_OUTPUT" commit -m "data: refresh verified embodied reports"
           git -C "$CATALOG_OUTPUT" push origin HEAD:catalog-data
