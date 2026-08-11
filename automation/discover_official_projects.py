@@ -453,7 +453,7 @@ def crawl_organization(
         visited.add(current)
         try:
             document = fetch_document(current)
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, ValueError) as exc:
+        except FETCH_ERRORS as exc:
             errors.append(f"{current}: {type(exc).__name__}")
             continue
         scanned.append(document["url"])
@@ -478,7 +478,7 @@ def crawl_organization(
                 visited.add(link)
                 try:
                     document = fetch_document(link)
-                except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, ValueError) as exc:
+                except FETCH_ERRORS as exc:
                     errors.append(f"{link}: {type(exc).__name__}")
                     continue
                 scanned.append(document["url"])
