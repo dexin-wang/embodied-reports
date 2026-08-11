@@ -20133,5 +20133,3992 @@
       "software_project": true,
       "summary_zh": "该成果通常称为 LINGO，是北京大学人工智能研究院与北京通用人工智能研究院相关研究人员完成的文本驱动虚拟人物—场景交互合成系统。系统接收一条自然语言指令、三维场景和目标位置，使用自回归扩散模型逐段生成动作，并由 Transformer 自主调度器预测行走、接近和交互阶段之间的切换时机。双体素编码器分别描述人物当前位置及目标方向或交互对象附近的三维占用信息，使生成动作能够根据场景调整路径并减少穿透；帧位置嵌入与 CLIP 文本嵌入结合，用于维持长序列的语义顺序和时间一致性。配套 LINGO 数据集包含 16 小时、120 个室内场景、40 类动作和 20 类日常物体，动作以 30 FPS、53 点动作捕捉系统采集，并使用 SMPL-X 表示人体。官方仓库已经公开训练、推理、检查点下载和 Blender 可视化代码。尽管其技术涉及语言条件、三维场景感知、动作生成和人—物交互数据，但交付对象是数字人物动画，不是实体机器人的感知、决策或控制软件；同时其官方首发时间为 2024 年，因此不符合本索引的实体机器人软件及 2025 年后发布要求。"
     }
+  },
+  "lerobot-v0-6-1-8bbdfe1": {
+    "checked_at": "2026-08-11T10:15:19.339591+00:00",
+    "title": "LeRobot v0.6.1",
+    "accepted": true,
+    "reason": "收录。官方 GitHub release 提供了可访问的 v0.6.1 专属发布页面，并明确记录 2026 年 8 月 3 日的发布日期和具体软件变更；官方仓库及文档确认 LeRobot 是由 Hugging Face 负责的实体机器人学习软件栈，涵盖机器人接口、数据集、VLA 策略、训练、部署和评测。该候选不是硬件公告，满足 2025 年以后发布、具备明确责任组织、官方专页及 embodied-robotics 软件属性等全部条件。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.6.1))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "使用视觉语言模型自动观看机器人数据集中的逐回合视频，并生成可用于策略训练的自然语言标注",
+        "以描述、分段和可选的种子重标注流程生成连续、无空隙的原子子任务标签",
+        "通过共享的自托管 vLLM/OpenAI 兼容服务执行计划、交互语句和视觉问答标注",
+        "将经过验证的标注写回 LeRobotDataset 的 Parquet 分片，并维护数据集元信息",
+        "集成、训练和评估包括 GR00T N1.7 在内的视觉-语言-动作策略"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "LeRobot 是 Hugging Face 负责开发的开源端到端机器人学习软件库，提供机器人控制、数据采集与处理、策略训练、部署和评测功能，并非硬件产品页面。官方仓库明确列出其硬件无关的 Python 控制接口、LeRobotDataset 格式以及 VLA、世界模型和奖励模型实现。([github.com](https://github.com/huggingface/lerobot))",
+        "v0.6.1 于 2026 年 8 月 3 日发布；本次版本的主要新增功能是改进基于 VLM 的子任务标注，包括更清晰且带时间戳的 contact sheet、seeded relabeling 和自托管 vLLM 工作流，同时加入通过 Hugging Face Jobs 运行 `lerobot-annotate` 的能力。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.6.1))",
+        "标注管线直接读取每个机器人数据集回合的视频，并把自然语言结果写入 `language_persistent` 和 `language_events` 两个语言列；支持 subtask、plan、memory、任务改写、interjection、speech tool call 和视觉问答等标注类型。([huggingface.co](https://huggingface.co/docs/lerobot/annotation_pipeline))",
+        "子任务生成采用两阶段流程：VLM 先只描述选定相机中可观察到的内容，再将描述分割成连续的原子子任务。输入视觉被组织为带时间戳的 JPEG contact sheet；较长回合会自动分窗，结果随后合并为覆盖完整回合的连续区间。([huggingface.co](https://huggingface.co/docs/lerobot/annotation_pipeline))",
+        "可选的 seeded-relabel 阶段会为每个区间同时提供前一、当前和后一段的 contact sheet，以原标签为先验修正措辞，但保持时间边界不变；代价是每个子任务额外调用一次 VLM。([huggingface.co](https://huggingface.co/docs/lerobot/annotation_pipeline))",
+        "管线的 plan、interjections 和 VQA 三个模块共享一个 VLM 服务，各自先输出暂存 JSONL，再由验证器检查时间戳、事件配对、计划刷新和 VQA 数据结构，最后由单一 writer 重写 Parquet 分片；验证失败时默认中止写入。([huggingface.co](https://huggingface.co/docs/lerobot/annotation_pipeline))",
+        "该版本还更新了 GR00T N1.7 的 LIBERO checkpoints。LeRobot 的 GR00T 集成接受语言、图像和本体感觉输入，并以 flow-matching action transformer 生成动作块；官方文档提供训练与 LIBERO 评测流程。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.6.1))"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "GitHub 官方 release 页面记录的发布日期。",
+          "value": "2026-08-03"
+        },
+        {
+          "label": "默认视频采样间隔",
+          "note": "子任务生成的 contact sheet 默认按每 0.5 秒采样一帧。",
+          "value": "0.5 秒/帧"
+        },
+        {
+          "label": "共享标注模块数",
+          "note": "plan、interjections 和 VQA 共享同一个 VLM 服务。",
+          "value": "3 个模块"
+        },
+        {
+          "label": "语言标注列数",
+          "note": "标注分别写入 language_persistent 与 language_events。",
+          "value": "2 列"
+        },
+        {
+          "label": "子任务覆盖约束",
+          "note": "生成的区间会被拼接为无空隙的完整回合覆盖。",
+          "value": "每一帧恰有 1 个活动子任务"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co/",
+      "official_project_url": "https://github.com/huggingface/lerobot/releases/tag/v0.6.1",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。官方 GitHub release 提供了可访问的 v0.6.1 专属发布页面，并明确记录 2026 年 8 月 3 日的发布日期和具体软件变更；官方仓库及文档确认 LeRobot 是由 Hugging Face 负责的实体机器人学习软件栈，涵盖机器人接口、数据集、VLA 策略、训练、部署和评测。该候选不是硬件公告，满足 2025 年以后发布、具备明确责任组织、官方专页及 embodied-robotics 软件属性等全部条件。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.6.1))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "LeRobot v0.6.1 是 Hugging Face 于 2026 年 8 月 3 日发布的开源机器人学习软件版本。它延续 LeRobot 面向真实机器人控制、数据采集、策略训练和评测的统一 Python 工具链，并重点完善 VLM 驱动的数据标注管线：机器人回合视频被转换为带时间戳的 contact sheet，经过“可见内容描述—原子子任务分段—可选种子重标注”流程，形成覆盖完整回合的连续语言标签。plan、interjections 和 VQA 模块可共享自托管 vLLM 服务或通过 Hugging Face Jobs 在 GPU 上执行，输出先经过结构与时间一致性验证，再写回 LeRobotDataset 的 Parquet 数据。版本同时更新 GR00T N1.7 的 LIBERO checkpoints，并继续支持以语言、视觉和本体感觉为条件的 VLA 训练与评测。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.6.1))"
+    }
+  },
+  "intrinsic-sdk-v1-35-20260720-a55e5ba": {
+    "checked_at": "2026-08-11T10:15:19.354807+00:00",
+    "title": "Intrinsic SDK v1.35.20260720",
+    "accepted": true,
+    "reason": "符合收录条件：这是 Intrinsic 明确负责并通过其官方 GitHub 组织发布的机器人软件 SDK；存在独立的官方版本页面和官方 Flowstate 项目页；其用途是开发、仿真并部署可在物理机器人工作站运行的机器人解决方案，而非硬件产品介绍。仓库采用 Apache-2.0 许可证。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向 Flowstate 的 API 与开发工具，使开发者能够用 Python 或 C++ 编写机器人解决方案",
+        "支持创建包含机器人硬件、场景对象和工作环境的数字孪生，并执行可达性与碰撞检查",
+        "支持通过技能与控制流构建行为树，包括故障恢复等机器人流程逻辑",
+        "支持在虚拟仿真中验证解决方案，并将同一解决方案部署到物理机器人工作站"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Intrinsic SDK 是 Flowstate 的配套软件开发工具集，而不是机器人硬件或硬件产品页面；官方仓库明确将其定义为用于编写 Flowstate 机器人解决方案代码的 API 与工具集合。",
+        "v1.35.20260720 的官方 GitHub Release 页面显示该版本于 2026 年 8 月 3 日发布，并提供相对于 v1.34.20260629 的代码差异及升级说明。",
+        "该版本提供 Bazel Module 配置：开发者可通过 ai_intrinsic_sdks 依赖和对应版本归档将 SDK 集成到工作区。",
+        "该版本同步提供 Flowstate 开发容器镜像 ghcr.io/intrinsic-ai/intrinsic-dev-img:1.35.20260720，用于构建一致的开发环境。",
+        "Flowstate 官方页面说明 SDK 可使用 Python 或 C++ 创建技能；技能能够与传感器交互并控制硬件，还可结合姿态估计、运动规划等能力。",
+        "Flowstate 将技能与控制流组合为行为树，用于表达复杂机器人流程和故障恢复，并支持先在数字孪生中进行可视化、调试和验证，再迁移到真实硬件。",
+        "Intrinsic 的官方技术规格确认，Flowstate 解决方案可在虚拟仿真或物理机器人工作站上运行；控制真实硬件时使用运行 IntrinsicOS 的工业计算机连接机器人控制器。"
+      ],
+      "metrics": [
+        {
+          "label": "发布版本",
+          "note": "官方 GitHub Release 标签。",
+          "value": "v1.35.20260720"
+        },
+        {
+          "label": "发布资产",
+          "note": "官方 Release 页面列出的资产数量。",
+          "value": "8 assets"
+        },
+        {
+          "label": "支持的开发语言",
+          "note": "Flowstate 官方项目页明确列出的 SDK 编程语言。",
+          "value": "Python、C++"
+        },
+        {
+          "label": "部署路径",
+          "note": "官方页面报告的实现能力，不代表量化性能比较。",
+          "value": "同一机器人解决方案可在数字孪生仿真中验证，并迁移到真实硬件运行"
+        },
+        {
+          "label": "流程编排",
+          "note": "官方页面报告的实现能力。",
+          "value": "通过技能、控制流和行为树组织复杂机器人流程，并支持故障恢复"
+        }
+      ],
+      "official_organization_url": "https://www.intrinsic.ai/",
+      "official_project_url": "https://github.com/intrinsic-ai/sdk/releases/tag/v1.35.20260720",
+      "open_source": true,
+      "organization_en": "Intrinsic",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是 Intrinsic 明确负责并通过其官方 GitHub 组织发布的机器人软件 SDK；存在独立的官方版本页面和官方 Flowstate 项目页；其用途是开发、仿真并部署可在物理机器人工作站运行的机器人解决方案，而非硬件产品介绍。仓库采用 Apache-2.0 许可证。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Intrinsic SDK v1.35.20260720 是 Intrinsic Flowstate 机器人开发平台的配套软件版本，于 2026 年 8 月 3 日通过官方 GitHub 仓库发布。该 SDK 提供用于构建机器人解决方案的 API、Bazel 依赖归档和版本匹配的开发容器镜像。开发者可以使用 Python 或 C++ 创建与传感器及机器人硬件交互的技能，将技能和控制流编排为具备故障恢复逻辑的行为树，并组合姿态估计、运动规划等平台能力。Flowstate 支持建立真实工作站的数字孪生，进行布局、可达性、碰撞和流程验证，随后将解决方案迁移到由 IntrinsicOS 接入的物理机器人工作站。该候选项属于面向实体机器人开发与部署的机器人系统软件，因此纳入索引。"
+    }
+  },
+  "models-hugging-face-google-tensorflow-cb8791c": {
+    "checked_at": "2026-08-11T10:15:19.369539+00:00",
+    "title": "Models – Hugging Face google-tensorflow",
+    "accepted": false,
+    "reason": "不收录。缺少条件 1 和条件 3：该 URL 是 Hugging Face 的通用模型浏览目录，不是以物理机器人或具身智能软件为主体的发布 artifact，也不是某个具身机器人项目的专属官方页面。页面中的 TensorFlow 只是库筛选项，没有名为“google-tensorflow”的明确项目、负责组织、技术说明或机器人能力。候选日期 2026-08-01 也无法从页面验证。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供跨任务、框架、许可证及参数规模的模型检索与筛选",
+        "汇总并链接不同组织和用户发布的模型仓库",
+        "按趋势等条件对平台中的模型条目进行排序"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "候选链接指向 Hugging Face 的全站 Models 目录，而不是某个具有明确名称和技术边界的独立项目。",
+        "页面聚合数百万个第三方及官方模型，涵盖文本、图像、视频、语音等通用机器学习任务，不能将目录中的模型视为同一个发布 artifact。",
+        "TensorFlow 仅作为页面中的框架筛选条件出现；页面没有定义名为“google-tensorflow”的机器人模型、策略、数据集、仿真器或控制栈。",
+        "页面没有说明该候选软件面向物理机器人、机器人操作、具身智能或真实环境中的动作生成。",
+        "搜索结果可以找到单独的机器人模型条目，但它们各有不同的发布者、日期和项目页面，不能据此证明该通用 Models 目录本身是具身机器人项目。",
+        "给出的 2026-08-01 日期未在候选页面上被标注为项目发布日期，因此不能作为经过官方来源验证的发布日。"
+      ],
+      "metrics": [
+        {
+          "label": "目录模型数量",
+          "note": "这是页面显示的平台目录规模，不是具身机器人项目的技术指标或评测结果。",
+          "value": "2,981,683"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co",
+      "official_project_url": "https://huggingface.co/models",
+      "open_source": false,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。缺少条件 1 和条件 3：该 URL 是 Hugging Face 的通用模型浏览目录，不是以物理机器人或具身智能软件为主体的发布 artifact，也不是某个具身机器人项目的专属官方页面。页面中的 TensorFlow 只是库筛选项，没有名为“google-tensorflow”的明确项目、负责组织、技术说明或机器人能力。候选日期 2026-08-01 也无法从页面验证。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该候选实际对应 Hugging Face Hub 的通用 Models 浏览入口。它提供模型搜索、任务分类、框架过滤、参数规模过滤和趋势排序，并聚合来自大量不同账户与组织的模型仓库。页面本身不是一个具有统一架构、训练方案、机器人接口或评测协议的软件项目，也没有把“google-tensorflow”定义为可识别的发布 artifact。虽然目录可以包含带有 Robotics 标签的独立模型，TensorFlow 也出现在框架过滤列表中，但这些只是平台内容和检索维度，不能证明该目录是面向物理机器人的 VLA、策略、世界模型、数据集、仿真器或控制系统。因此无法形成符合要求的具身机器人技术档案，亦不能把目录中的任意机器人条目、指标或组织归属转移到本候选上。"
+    }
+  },
+  "lerobot-v0-6-0-4785044": {
+    "checked_at": "2026-08-11T10:15:19.383131+00:00",
+    "title": "LeRobot v0.6.0",
+    "accepted": true,
+    "reason": "符合收录条件。LeRobot v0.6.0 是由 Hugging Face 明确负责的开源具身机器人软件版本，核心产物涵盖机器人策略与世界模型、VLA 和奖励模型、真实机器人部署与人工纠正数据采集、训练基础设施、数据管线以及统一仿真评测。Hugging Face 提供了专门的官方版本页面和版本化技术文档，而非仅有 arXiv 论文或硬件产品页。GitHub 将 v0.6.0 标记为 2026 年 7 月 6 日发布；对应官方发布文章发表于 2026 年 7月 7 日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "统一训练、部署和评测视觉-语言-动作策略、世界模型策略及奖励模型",
+        "通过 `lerobot-rollout` 在真实机器人上执行策略，并以 DAgger 模式采集人工纠正轨迹",
+        "通过统一的 `lerobot-eval` CLI 在六个新增仿真基准上评测机器人策略",
+        "使用 FSDP 进行多 GPU 分片训练，并通过 Hugging Face Jobs 提交云端训练任务",
+        "记录和处理 RGB、深度、语言标注及逐帧奖励等机器人学习数据"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "v0.6.0 引入 VLA-JEPA、FastWAM 和 LingBot-VA 三类世界模型策略，使策略在训练过程中学习预测未来；其中 VLA-JEPA 在潜在空间预测动作条件下的未来表征，并可在推理阶段移除世界模型分支，避免额外推理开销。",
+        "模型库新增 GR00T N1.7、MolmoAct2、EO-1、EVO1 和 Multitask DiT 等视觉-语言-动作或多任务策略，并继续使用 LeRobot 的统一策略接口进行训练、评测和部署。",
+        "新增统一的 `lerobot.rewards` 奖励模型 API，集成 HIL-SERL、SARM、Robometer 和 TOPReward；Robometer 从视频与语言指令估计任务进度和成功状态，TOPReward则利用视觉语言模型对 `True` 标记的对数概率进行零样本奖励估计。",
+        "`lerobot-rollout` 将真实机器人策略部署独立为统一命令行工作流，提供 base、sentry、highlight、episodic 和 dagger 等策略；DAgger 模式允许操作者在策略失败时接管机器人，记录带 `intervention` 标记的纠正帧，再用于后续微调。",
+        "六个新增仿真基准 LIBERO-plus、RoboTwin 2.0、RoboCasa365、RoboCerebra、RoboMME 和 VLABench 均接入 `lerobot-eval`，并分别提供文档、Docker 镜像和经持续集成冒烟测试的 SmolVLA 基线检查点。",
+        "数据管线新增端到端深度记录、硬件编码器自动探测、自定义视频编码参数，以及由视觉语言模型生成带时间戳的子任务、计划、记忆、纠正、语音和逐相机 VQA 标注；训练数据采样也支持确定性恢复。",
+        "训练基础设施通过 Accelerate 支持 FSDP，对参数、梯度和优化器状态进行跨 GPU 分片；训练结果可汇总为普通单文件 `model.safetensors`，同时同一 `lerobot-train` 命令可通过 `--job.target` 提交到 Hugging Face Jobs。"
+      ],
+      "metrics": [
+        {
+          "label": "新增统一仿真基准",
+          "note": "六个基准均可通过 `lerobot-eval` 运行。",
+          "value": "6"
+        },
+        {
+          "label": "统一支持的基准家族总数",
+          "note": "包括新增基准以及 LIBERO、Meta-World 和 NVIDIA IsaacLab-Arena。",
+          "value": "9"
+        },
+        {
+          "label": "数据加载性能",
+          "note": "官方报告多相机并行解码等改进可使视频数据训练加载速度最高提升约两倍。",
+          "value": "最高约 2x"
+        },
+        {
+          "label": "数据集子集加载实例",
+          "note": "官方基准中，按 episode 加载大型数据集子集由 275 秒降至 0.06 秒。",
+          "value": "275 s → 0.06 s"
+        },
+        {
+          "label": "LIBERO-plus 扰动规模",
+          "note": "该基准沿七个扰动维度生成约一万个 LIBERO 变体。",
+          "value": "约 10,000 个变体，7 个扰动维度"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co/",
+      "official_project_url": "https://huggingface.co/blog/lerobot-release-v060",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。LeRobot v0.6.0 是由 Hugging Face 明确负责的开源具身机器人软件版本，核心产物涵盖机器人策略与世界模型、VLA 和奖励模型、真实机器人部署与人工纠正数据采集、训练基础设施、数据管线以及统一仿真评测。Hugging Face 提供了专门的官方版本页面和版本化技术文档，而非仅有 arXiv 论文或硬件产品页。GitHub 将 v0.6.0 标记为 2026 年 7 月 6 日发布；对应官方发布文章发表于 2026 年 7月 7 日。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "GitHub",
+          "url": "https://github.com/huggingface/lerobot/releases/tag/v0.6.0"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "LeRobot v0.6.0 是 Hugging Face 于 2026 年 7 月发布的具身机器人学习软件版本，重点是把策略建模、评测、真实机器人部署、失败纠正和再训练连接为统一闭环。该版本加入三类带未来预测机制的世界模型策略、多种新 VLA、统一奖励模型接口和六个仿真基准；`lerobot-rollout` 可在真实机器人上运行策略并通过 DAgger 记录人工干预数据，`lerobot-eval` 则统一多个基准的评测入口。数据层支持深度视频、可配置编码和视觉语言模型生成的细粒度语言标注，训练层加入 FSDP 分片与 Hugging Face Jobs 云端执行。它是明确的软件与模型基础设施发布，不是机器人硬件或产品规格公告。"
+    }
+  },
+  "hydroshear-2c5493a": {
+    "checked_at": "2026-08-11T10:15:19.396468+00:00",
+    "title": "HydroShear",
+    "accepted": false,
+    "reason": "正在使用网络来源核验，尚未作出最终纳入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方发布页、软件属性、责任机构与可复核的技术结果，再按严格纳入条件给出结论。不会把候选摘要或日期当作已证实事实。当前先检查 Amazon Science 页面及其链接的项目材料。",
+        "同时会区分“触觉传感硬件”与“以模拟器/训练软件为主体的项目”，因为这是该候选是否合格的关键。",
+        "检索完成后，我会只填入来源能够直接支持的机构、能力、指标和链接。"
+      ],
+      "fields": [
+        "Tactile intelligence",
+        "Robot manipulation"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验候选项目。",
+        "正在确认是否存在专门的官方软件项目页。",
+        "正在确认发布主体和发布日期。",
+        "正在查找可复核的技术报告及精确结果。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在使用网络来源核验，尚未作出最终纳入判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 HydroShear 是否为自 2025 年以来发布、具有专门官方页面且面向实体机器人触觉训练的软件项目。"
+    }
+  },
+  "object-centric-residual-rl-for-zero-shot-sim-to--f1def0f": {
+    "checked_at": "2026-08-11T10:15:19.410916+00:00",
+    "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
+    "accepted": true,
+    "reason": "纳入。微软研究院于 2026 年 6 月 17 日发布了专门的官方项目页面，明确介绍一个面向真实机器人操作的软件方法：在仿真中训练物体中心残差强化学习策略，以零样本方式增强冻结的 VLA，并在真实 Franka Research 3 机械臂上评测。它不是硬件或机器人产品公告，满足软件主题、明确责任机构、2025 年后发布以及存在官方项目页面等条件。官方页面和论文均报告五项真实机器人任务的成功率由 42% 提升至 76%。([microsoft.com](https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/?utm_source=openai)) 未找到该项目代码或模型权重已公开发布的可靠证据，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在冻结的基础 VLA 动作上逐时刻叠加轻量残差策略，修正操作过程中的累积执行误差。",
+        "仅在仿真环境中训练残差强化学习策略，并将其零样本部署到真实 FR3 机械臂。",
+        "利用任务相关物体的 6-DoF 位姿、本体感知状态和基础 VLA 动作完成物体中心的动作校正。",
+        "通过残差策略生成的成功真实机器人轨迹重新监督微调基础 VLA，无需增加遥操作示范。",
+        "完成方块抬升、拾取放置、方块堆叠、关闭抽屉和杯子扶正五类真实机器人操作任务。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "框架采用三阶段流程：先用同一组遥操作动作在真实与仿真环境中训练配对 VLA，再在仿真中学习物体中心残差策略，最后将残差策略直接部署到真实机器人。",
+        "残差策略不读取原始图像，而以任务相关物体的 6-DoF 位姿、机器人本体感知状态以及当前基础 VLA 动作为紧凑观察量，降低视觉域差异对仿真到现实迁移的影响。",
+        "真实端基础 VLA 在残差策略训练期间保持冻结；部署时将残差动作与基础 VLA 动作逐时刻相加，因此不需要真实世界强化学习、策略蒸馏或真实端残差微调。",
+        "训练过程使用物体位姿噪声注入和位姿丢弃，以增强残差策略对真实部署中位姿估计误差的鲁棒性。",
+        "配对仿真/真实 VLA 通过重放相同遥操作轨迹保持动作分布对齐，而不要求仿真环境在视觉外观上高度逼真。",
+        "残差校正得到的成功真实机器人轨迹还可用于重新训练基础 VLA，将任务特定的在线残差校正转化为独立基础策略的改进。"
+      ],
+      "metrics": [
+        {
+          "label": "真实机器人平均成功率",
+          "note": "五项任务，每项进行 20 次真实机器人试验；基础 VLA 平均为 8.4/20，加入残差策略后为 15.2/20。",
+          "value": "42% → 76%"
+        },
+        {
+          "label": "仿真平均成功次数",
+          "note": "五项任务的平均结果，按三个随机种子报告均值与标准差。",
+          "value": "7.6/20 ± 1.7 → 17.2/20 ± 0.9"
+        },
+        {
+          "label": "关闭抽屉真实机器人结果",
+          "note": "基础 VLA 与加入残差策略后的成功次数，均基于 20 次试验。",
+          "value": "14/20 → 20/20"
+        },
+        {
+          "label": "方块抬升真实机器人结果",
+          "note": "基础 VLA 与加入残差策略后的成功次数，均基于 20 次试验。",
+          "value": "7/20 → 17/20"
+        },
+        {
+          "label": "成功回合完成时间",
+          "note": "官方分析报告残差增强策略在成功回合中缩短任务完成时间。",
+          "value": "减少 9%–22%"
+        }
+      ],
+      "official_organization_url": "https://www.microsoft.com/en-us/research/group/microsoft-research-asia-tokyo/",
+      "official_project_url": "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
+      "open_source": false,
+      "organization_en": "Microsoft Research Asia – Tokyo",
+      "organization_kind": "Research Lab",
+      "organization_zh": "微软亚洲研究院（东京）",
+      "reason": "纳入。微软研究院于 2026 年 6 月 17 日发布了专门的官方项目页面，明确介绍一个面向真实机器人操作的软件方法：在仿真中训练物体中心残差强化学习策略，以零样本方式增强冻结的 VLA，并在真实 Franka Research 3 机械臂上评测。它不是硬件或机器人产品公告，满足软件主题、明确责任机构、2025 年后发布以及存在官方项目页面等条件。官方页面和论文均报告五项真实机器人任务的成功率由 42% 提升至 76%。([microsoft.com](https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/?utm_source=openai)) 未找到该项目代码或模型权重已公开发布的可靠证据，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Object-Centric Residual RL 是微软亚洲研究院（东京）提出的 VLA 增强框架，目标是在不进行真实世界强化学习的情况下修正模仿学习型机器人策略的累积执行误差。该方法首先将真实机器人遥操作轨迹重放到仿真环境，训练与真实端动作分布对齐的仿真 VLA；随后冻结基础 VLA，仅在仿真中训练一个轻量残差策略。残差策略绕开原始图像，使用任务相关物体的 6-DoF 位姿、机器人本体感知和基础 VLA 动作，并通过位姿噪声注入与丢弃提高对现实位姿估计误差的适应性。部署时，系统用真实 VLA 替换仿真 VLA，将同一残差策略的输出直接加到基础动作上，不需要真实端 RL、蒸馏或残差微调。研究在 Franka Research 3 机械臂的五项操作任务上验证了零样本迁移，并进一步展示了利用残差校正后的成功轨迹重新训练基础 VLA、在不增加遥操作数据的情况下形成策略自改进闭环。([microsoft.com](https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/?utm_source=openai))"
+    }
+  },
+  "sanctuary-ai-expands-physical-ai-strategy-to-ind-5610fd9": {
+    "checked_at": "2026-08-11T10:15:19.424820+00:00",
+    "title": "Sanctuary AI Expands Physical AI Strategy to Industrial Robotics, Demonstrating Production-Ready AI Performance",
+    "accepted": false,
+    "reason": "正在检索，尚未作最终纳入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方公告、项目归属和软件技术细节，并会区分政策模型发布与工业机器人硬件/产品宣传。由于候选日期和指标都很具体，我也会交叉检查官方链接材料。",
+        "随后将按严格条件给出结构化结论；无法由可访问来源支持的字段会留空或明确标为不纳入。特此说明此处为检索进度，不是最终判定。",
+        "我正在打开 Sanctuary AI 的官方公告及其链接内容，重点确认是否存在一个以可部署 Physical AI policy 为主体的专门页面，而不只是硬件产品新闻。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终技术档案。",
+        "将核验发布日期、99.5%+ 成功率、2.54 秒周期时间及“hardware-agnostic”主张。",
+        "将确认负责组织的官方中英文名称、软件项目属性与开源状态。",
+        "将仅采用官方页面、技术报告及其链接材料能够支持的能力和指标。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Sanctuary AI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索，尚未作最终纳入判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选是否满足严格的软件项目收录条件。"
+    }
+  },
+  "show-don-t-tell-detecting-novel-objects-by-watch-26b5133": {
+    "checked_at": "2026-08-11T10:15:19.440152+00:00",
+    "title": "Show, Don't Tell: Detecting Novel Objects by Watching Human Demonstrations",
+    "accepted": true,
+    "reason": "符合收录条件：这是 Robotics and AI Institute 在 2026 年发布并通过专门官方技术页面介绍的实体机器人软件系统。其核心产物是从人类演示自动生成标注数据、训练任务专用新物体检测器并部署到真实机器人任务中的端到端管线，不是硬件或机器人产品页。官方页面明确给出负责机构、实现流程、真实机器人验证和定量结果。未发现官方源代码发布，因此不标记为开源；开源并非收录前提。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从单段人类任务演示视频中识别被手操作的任务相关物体，并自动形成训练数据。",
+        "跨抓取前后的视频帧跟踪被操作物体，生成逐帧边界框标注，无需额外人工框选。",
+        "利用自动生成的数据微调轻量级目标检测器，得到面向当前任务和物体实例的 manipulated objects detector。",
+        "在真实机器人端将新物体检测与任务序列解析、抓取和放置执行集成，使机器人在不同环境中复现演示的分拣任务。",
+        "使用大语言模型解析演示中的抓取与放置顺序，并结合专用检测器完成端到端任务。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "项目由 Robotics and AI Institute 于 2026 年 6 月 10 日通过专门的官方技术页面发布，研究对象是部署于真实机器人的自动数据生成与新物体检测软件管线，而非机器人硬件产品。",
+        "系统把人类在演示中抓取物体的自然交互视为任务相关性监督信号，使用 HOIST-Former 一类方法识别被抓取的物体。",
+        "被操作物体随后通过 SAMURAI 一类视频跟踪方法在抓取前后持续跟踪；后处理步骤把跟踪结果转化为逐帧、带边界框的有标注数据集。",
+        "自动生成的数据用于微调轻量级目标检测器；官方页面以 Faster R-CNN 为示例，将所得任务专用模型称为 manipulated objects detector。",
+        "验证系统覆盖完整机器人分拣流程：参与者用构造套件创建训练分布之外的新物体并演示分拣，系统解析抓取和放置顺序、创建物体数据集、训练检测器，再让机器人在不同环境中复现分拣。",
+        "该方法绕过用自然语言唯一描述陌生物体所需的反复提示工程；官方实验显示，提示式开放词汇检测器在这些非标准物体上经常无法获得可用检测结果。",
+        "官方同时披露当前限制：专用检测器仍可能混淆或漏检物体，部署时仍需一定人工监督，而且现阶段依赖人类实际接触任务相关物体来提供监督信号。"
+      ],
+      "metrics": [
+        {
+          "label": "单次演示输入",
+          "note": "官方称可从一次人类演示训练任务专用的新物体检测器。",
+          "value": "1 次人类演示"
+        },
+        {
+          "label": "数据生成与训练耗时",
+          "note": "针对一段 15 秒的人类演示视频，包含数据集创建和检测器训练的完整管线耗时。",
+          "value": "少于 10 分钟"
+        },
+        {
+          "label": "提示实验规模及首轮失败率",
+          "note": "16 名参与者为新物体编写检测提示；视觉语言检测器使用参与者第一次提示时的失败比例。",
+          "value": "16 人；80% 首次提示失败"
+        },
+        {
+          "label": "五次提示后的失败率",
+          "note": "参与者最多尝试五次提示后，视觉语言检测器仍无法检测目标的比例。",
+          "value": "43%"
+        },
+        {
+          "label": "经典目标检测指标相对表现",
+          "note": "官方页面报告 Show, Don't Tell 相对于两个提示式检测基线的性能提升。",
+          "value": "比 RexOmni 高 66%；比 GroundingDINO 高 150%"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://rai-inst.com/resources/blog/show-dont-tell-detecting-novel-objects-by-watching-human-demonstrations/",
+      "open_source": false,
+      "organization_en": "Robotics and AI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是 Robotics and AI Institute 在 2026 年发布并通过专门官方技术页面介绍的实体机器人软件系统。其核心产物是从人类演示自动生成标注数据、训练任务专用新物体检测器并部署到真实机器人任务中的端到端管线，不是硬件或机器人产品页。官方页面明确给出负责机构、实现流程、真实机器人验证和定量结果。未发现官方源代码发布，因此不标记为开源；开源并非收录前提。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Show, Don't Tell 是 Robotics and AI Institute 面向真实机器人新物体识别与操作提出的一套自监督软件管线。它不要求操作者先为陌生零件编写精确语言描述，而是直接利用一段人类任务演示：系统识别人手实际抓取的对象，跨抓取前后跟踪这些对象，并把跟踪结果后处理为逐帧边界框数据集。随后，它用该数据微调轻量级目标检测器，形成只针对当前任务相关实例的 manipulated objects detector。官方端到端验证采用新构造的非标准物体分拣任务，并结合大语言模型解析演示中的抓取与放置序列；机器人在不同环境中使用训练后的检测器找到这些新物体并复现分拣。官方报告，一段 15 秒视频的数据生成和训练可在 10 分钟内完成；在人类提示实验中，开放词汇检测器首次提示失败率为 80%，五次尝试后仍有 43% 失败，而该管线在经典检测指标上分别比 RexOmni 和 GroundingDINO 高 66% 和 150%。"
+    }
+  },
+  "real-is-sim-bridging-the-sim-to-real-gap-with-a--55c0907": {
+    "checked_at": "2026-08-11T10:15:19.452493+00:00",
+    "title": "Real-is-Sim: Bridging the Sim-to-Real Gap with a Dynamic Digital Twin",
+    "accepted": false,
+    "reason": "Interim research update; final determination pending.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official RAI Institute page and linked technical material first, then I’ll validate the release date, responsible organization, software scope, and any exact reported results before making the inclusion decision.",
+        "I’ll keep unsupported fields empty rather than infer details from the supplied abstract.",
+        "I’m also checking whether the page is a dedicated software-project release rather than merely a paper listing or hardware announcement."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress.",
+        "No verdict yet.",
+        "Official evidence is being gathered.",
+        "Metrics will be included only if explicitly reported."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification in progress",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "Interim research update; final determination pending.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方页面、项目性质、发布日期和技术结果。"
+    }
+  },
+  "accelerating-residual-reinforcement-learning-wit-1601e49": {
+    "checked_at": "2026-08-11T10:15:19.465191+00:00",
+    "title": "Accelerating Residual Reinforcement Learning with Uncertainty Estimation",
+    "accepted": true,
+    "reason": "收录。该候选是面向物理机器人操作的残差强化学习软件方法，而非硬件或机器人产品页。Robotics and AI Institute 于 2026 年 5 月 28 日发布了专门的官方资源页，该页明确介绍算法、作者、RA-L/ICRA 2026 发布信息并链接独立项目页；项目页明确列出 Brown University 与 Robotics and AI Institute 的责任归属。公开 GitHub 仓库提供 MIT 许可的算法实现和实验脚本。官方页面及技术报告还记录了 Robosuite、D4RL 和真实机器人的评测，因此满足软件、具身用途、官方专页和明确机构责任四项条件。官方项目页同时标注 Brown University 为共同研究机构；本记录以发布官方资源页的 Robotics and AI Institute 作为主组织。 ([rai-inst.com](https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "以预训练模仿学习策略为基础，通过轻量级残差策略学习机器人纠正动作。",
+        "利用距离训练数据和策略集成方差两种不确定性指标，选择性地启用残差动作并集中在线探索。",
+        "支持高斯混合模型与扩散模型等随机基础策略，而非仅适用于确定性控制器。",
+        "在 Robosuite 与 D4RL Franka Kitchen 操作任务中进行离线到在线策略改进，并支持图像观测实验。",
+        "将在仿真中训练的操作策略零样本部署到真实机器人，完成易拉罐抓取与放置任务。"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "项目提出不确定性感知残差强化学习：基础策略置信度较高时主要沿用基础动作，在高不确定区域启用残差纠正，以减少无目标的在线探索。",
+        "不确定性可由两种已实现指标计算：状态到训练数据的距离，以及多个策略输出之间的集成方差；项目还通过逐步衰减阈值扩大残差策略的作用范围。",
+        "针对随机基础策略，方法采用非对称 actor-critic：actor 只生成残差动作，critic 则对基础动作与残差动作之和形成的完整执行动作估值。",
+        "实现基于 Soft Actor-Critic 的离策略训练，并在回放缓冲区中同时保存基础动作和完整动作，使 Q 函数能够获得随机基础策略实际采样动作的信息。",
+        "实验覆盖 Robosuite 的 Lift、Can、Square，以及 D4RL 的 Kitchen Complete、Kitchen Mixed 和 Kitchen Partial；基础策略包括 RNN-GMM 行为克隆策略和扩散策略。",
+        "图像版 Can 实验使用集成方差估计不确定性；真实机器人部署则使用 Grounded SAM 与 FoundationPose获取易拉罐的实时状态。",
+        "项目公开了基于 SERL 修改的实现、安装与运行说明、实验脚本，以及 Can 和 Square 所用扩散基础策略与训练数据的下载入口。"
+      ],
+      "metrics": [
+        {
+          "label": "GMM 基础策略结果",
+          "note": "Robosuite Lift、Can、Square；图中误差条为 95% 置信区间。",
+          "value": "采用距离训练数据不确定性指标的方法在全部 3 个任务上超过所有对比基线。"
+        },
+        {
+          "label": "扩散基础策略结果",
+          "note": "与 DPPO、Policy Decorator 及其他残差学习方法比较；误差条为 95% 置信区间。",
+          "value": "在 Kitchen Complete 和 Can 上超过全部基线，在 Square 上与 DPPO 表现相当。"
+        },
+        {
+          "label": "随机策略消融",
+          "note": "在 Robosuite Lift 上比较仅以残差动作估值和以完整组合动作估值的 critic。",
+          "value": "随机 GMM 基础策略需要完整动作估值才能有效学习；确定性 MLP 基础策略下两种形式均可工作。"
+        },
+        {
+          "label": "真实机器人评测",
+          "note": "比较 GMM、GMM+Residual、Diffusion、Diffusion+Residual，并按接触、抓取、放置三个阶段统计。",
+          "value": "每种策略执行 10 次真实机器人试验；残差强化学习策略在无域随机化的零样本迁移中保留了几乎全部仿真性能。"
+        },
+        {
+          "label": "实验重复设置",
+          "note": "论文报告的总体实验评估设置。",
+          "value": "5 个随机种子、20 次运行。"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/",
+      "open_source": true,
+      "organization_en": "Robotics and AI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。该候选是面向物理机器人操作的残差强化学习软件方法，而非硬件或机器人产品页。Robotics and AI Institute 于 2026 年 5 月 28 日发布了专门的官方资源页，该页明确介绍算法、作者、RA-L/ICRA 2026 发布信息并链接独立项目页；项目页明确列出 Brown University 与 Robotics and AI Institute 的责任归属。公开 GitHub 仓库提供 MIT 许可的算法实现和实验脚本。官方页面及技术报告还记录了 Robosuite、D4RL 和真实机器人的评测，因此满足软件、具身用途、官方专页和明确机构责任四项条件。官方项目页同时标注 Brown University 为共同研究机构；本记录以发布官方资源页的 Robotics and AI Institute 作为主组织。 ([rai-inst.com](https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/))",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "X",
+          "url": "https://x.com/lakshitadodeja/status/2034297446596026416?s=20"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "Accelerating Residual Reinforcement Learning with Uncertainty Estimation 是 Brown University 与 Robotics and AI Institute 联合开发的机器人策略改进方法。它不直接微调整个预训练策略，而是在基础模仿学习策略之上训练轻量级残差策略，并依据基础策略的不确定性决定何时施加纠正动作。方法支持距离训练数据和集成方差两类不确定性估计，并以指数衰减阈值逐步放宽探索范围。针对 GMM 和扩散策略的随机动作采样问题，项目修改离策略 SAC，使 actor 仅预测残差、critic 对基础动作与残差动作组成的完整动作估值。实验覆盖 Robosuite、D4RL Franka Kitchen、图像观测 Can 任务及真实机器人零样本迁移；公开仓库提供 MIT 许可实现、运行脚本和基础策略资源。"
+    }
+  },
+  "q2rl-extracting-q-values-from-behavior-cloning-f-bbac5d3": {
+    "checked_at": "2026-08-11T10:15:19.487667+00:00",
+    "title": "Q2RL: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning",
+    "accepted": false,
+    "reason": "正在使用网页来源核验候选项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验项目仓库、负责机构、发布日期及其链接材料，重点确认它是否是面向实体机器人的独立软件项目，而不是仅有论文条目。",
+        "随后只采用可由官方页面或其直接链接材料支持的技术点和指标。",
+        "我会特别核对给定的 2026-05-21 日期，因为当前日期为 2026-08-11，且候选资料可能存在版本日期差异。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索并核验。",
+        "暂不作收录判断。",
+        "暂不填充未经来源支持的信息。",
+        "最终结果将按指定结构返回。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验公开来源",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/rai-opensource/q2rl",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在使用网页来源核验候选项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Q2RL 的官方项目证据、机构归属、发布时间、实体机器人实验以及精确报告结果。"
+    }
+  },
+  "generalizing-from-references-using-a-multi-task--e0bb666": {
+    "checked_at": "2026-08-11T10:15:19.498957+00:00",
+    "title": "Generalizing from References using a Multi-Task Reference and Goal-Driven RL Framework",
+    "accepted": true,
+    "reason": "收录。Robotics and AI Institute 于 2026 年 5 月 21 日发布了独立官方项目页面，软件主体是面向真实人形机器人的多任务强化学习框架和目标条件全身控制策略，而非机器人硬件或产品规格。官方页面及论文明确报告了真实机器人部署、仿真训练、泛化评估和长时程技能组合。未发现官方代码仓库或明确的开源发布，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从单段人类视频参考动作训练可部署的人形机器人全身运动策略",
+        "根据当前本体状态和低维目标执行行走、跳跃、攀爬及下台等接触丰富技能",
+        "在超出参考轨迹初始条件的目标位置、朝向和环境配置下调整动作",
+        "通过状态机组合多个已学习策略，执行长时程箱体跑酷序列",
+        "将 Isaac Lab 中训练的策略迁移到真实机器人，并在 MuJoCo 中验证跨物理引擎迁移"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "核心方法把参考动作作为训练期行为先验，而不是部署时必须跟踪的轨迹：同一个目标条件策略联合接受参考引导模仿任务和无参考的目标驱动泛化任务训练。",
+        "两个任务共享策略参数、观测空间和动作空间，但采用不同的初始化、目标采样与奖励结构；模仿任务提供姿态、速度和关节协调等稠密监督，泛化任务使用独立采样目标及任务成功奖励。",
+        "执行时策略只使用机器人本体状态与目标描述，不输入参考动作、未来轨迹或显式相位变量，也不依赖对抗式判别器或参考关节位置前馈。",
+        "策略输出关节位置目标的残差动作，并通过关节级 PD 控制器转换为力矩；训练采用 PPO 和非对称 actor-critic，critic 可使用仿真中的特权信息。",
+        "训练流程同时使用辅助基座 wrench 课程和任务混合课程：早期以参考模仿和外力辅助为主，随后逐渐提高无参考泛化任务比例并撤除辅助。",
+        "每项技能仅使用一段普通 iPhone 视频示范；系统通过 CRISP 重建人物、动作与场景，再使用 GMR 将人体运动重定向到人形机器人。参考动作仅用于生成训练目标和奖励。",
+        "评估覆盖 walk-jump、walk-climb 和 climb-down，并展示真实机器人执行、超出标称初始状态的适应，以及在 MuJoCo 中通过规则状态机完成多技能长时程组合。"
+      ],
+      "metrics": [
+        {
+          "label": "控制频率",
+          "note": "仿真时间步为 0.004 秒，control decimation 为 5。",
+          "value": "50 Hz"
+        },
+        {
+          "label": "并行训练规模",
+          "note": "PPO 训练使用 4,096 个环境，每批包含 4,096×24 个样本。",
+          "value": "4,096 environments；batch size 245,760"
+        },
+        {
+          "label": "超出标称条件的测试扰动",
+          "note": "walk-jump 和 walk-climb 的初始条件测试覆盖前后、横向及偏航扰动。",
+          "value": "前后 ±2 m；横向 ±1 m；偏航 ±45°"
+        },
+        {
+          "label": "参考数据量",
+          "note": "walk-jump、walk-climb、climb-down 每项技能分别由一段普通 iPhone 视频构建参考动作；前两项另使用镜像增强。",
+          "value": "每项技能 1 段示范"
+        },
+        {
+          "label": "消融结果",
+          "note": "论文报告移除任务混合课程时，walk-jump 和 walk-climb 均完全无法学成；移除模仿任务时，这两项接触丰富技能也持续失败。",
+          "value": "walk-jump 与 walk-climb：相关消融成功率为 0%（完全失败）"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
+      "open_source": false,
+      "organization_en": "Robotics and AI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。Robotics and AI Institute 于 2026 年 5 月 21 日发布了独立官方项目页面，软件主体是面向真实人形机器人的多任务强化学习框架和目标条件全身控制策略，而非机器人硬件或产品规格。官方页面及论文明确报告了真实机器人部署、仿真训练、泛化评估和长时程技能组合。未发现官方代码仓库或明确的开源发布，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "该项目提出一种面向敏捷人形机器人控制的多任务强化学习框架，目标是化解严格动作跟踪与任务泛化之间的矛盾。系统不把人类参考轨迹作为部署期指令，而是在训练阶段用其塑造自然、协调的全身运动：参考引导任务提供稠密模仿奖励，目标驱动任务则脱离参考轨迹，以随机目标和任务成功信号训练适应能力。二者共享同一目标条件策略，使控制器在执行时只依赖本体感知和目标命令。项目使用单段手机视频重建并重定向行走、跳跃、攀爬和下台动作，在 Isaac Lab 中以 PPO、非对称 actor-critic、课程学习和域随机化训练，并部署到真实人形机器人。结果表明，策略可适应明显偏离参考动作的初始位置与朝向，在保持较自然运动结构的同时完成箱体跑酷任务；多个技能还可由简单状态机组合成长时程序列，并迁移到 MuJoCo 进行跨物理引擎验证。"
+    }
+  },
+  "expertgen-ae30a3c": {
+    "checked_at": "2026-08-11T10:15:19.509796+00:00",
+    "title": "ExpertGen",
+    "accepted": true,
+    "reason": "收录。2026年5月20日的 Robotics and AI Institute 官方专题页面设有独立的 ExpertGen 技术章节，明确将其描述为用于生成机器人策略的仿真软件流水线，而非机器人硬件或产品页面。官方页面说明了扩散行为先验、大规模并行强化学习、稀疏成功判定、DAgger 视觉蒸馏和真实机器人部署；配套技术报告提供了实验设置及结果。未找到官方公开代码仓库或明确的开源声明，因此不标记为开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从少量不完美的脚本或人类示范中训练状态条件扩散策略，建立结构化行为先验",
+        "在大规模并行仿真中通过扩散引导强化学习生成面向具体任务的专家策略",
+        "仅使用稀疏的任务成功信号进行策略优化，无需人工设计稠密奖励",
+        "通过 DAgger 将使用特权状态的仿真专家蒸馏为可在真实机器人部署的 RGB 视觉运动策略",
+        "执行长时程、接触密集及精密工业装配操作，并对多种初始状态和失败状态进行闭环恢复"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "ExpertGen 是 Robotics and AI Institute 发布的仿真到现实专家策略生成流水线，目标是将易于取得但覆盖不足、成功率有限的不完美示范转化为高质量机器人行为数据和可部署策略。",
+        "系统首先使用 LLM 生成的脚本轨迹或人类示范训练轻量级状态条件扩散策略，以编码可行、接近示范分布的动作块和行为先验。",
+        "专家策略获取阶段采用 Diffusion Steering Reinforcement Learning，只学习调整扩散模型的初始噪声，不修改预训练扩散策略本身，从而将探索约束在原始示范所定义的自然动作流形附近。",
+        "强化学习后端使用面向高吞吐并行仿真的 FastTD3；训练监督仅为二值任务成功信号，因此不依赖针对每项任务设计的稠密奖励或奖励塑形。",
+        "仿真阶段允许专家策略使用精确物体位姿等特权状态，以提高训练速度和专家质量；随后以专家为教师，通过大规模 DAgger 蒸馏得到视觉运动策略。",
+        "视觉蒸馏过程中随机化背景、相机参数和照明条件，以缩小视觉域差异；官方材料报告了无需奖励工程的零样本 RGB sim-to-real 部署，并指出 RGB 策略对部分干扰物和遮挡比点云策略更稳健。",
+        "实验覆盖 AnyTask 长时程操作和 AutoMate 工业装配任务；论文同时指出系统仍受行为先验覆盖范围限制，当示范完全缺少某种恢复技能时，策略可能无法产生质变式的新行为。"
+      ],
+      "metrics": [
+        {
+          "label": "工业装配总体成功率",
+          "note": "在 AutoMate 工业装配任务上的报告结果。",
+          "value": "90.5%"
+        },
+        {
+          "label": "长时程操作总体成功率",
+          "note": "在 AnyTask 长时程操作任务上的报告结果。",
+          "value": "85%"
+        },
+        {
+          "label": "人类示范增强规模",
+          "note": "一项实验在 IsaacLab 中收集 6 条人类示范，并使用 SkillMimicGen 扩展后训练行为先验。",
+          "value": "6 条扩展至 1,000 条"
+        },
+        {
+          "label": "奖励工程需求",
+          "note": "ExpertGen 使用二值任务成功信号作为稀疏奖励，官方报告无需人工构造稠密任务奖励。",
+          "value": "0 项人工稠密奖励设计"
+        },
+        {
+          "label": "真实机器人迁移",
+          "note": "状态专家经 DAgger 蒸馏为 RGB 视觉运动策略，并在真实机器人硬件上完成零样本 sim-to-real 部署。",
+          "value": "已实现零样本 RGB sim-to-real"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
+      "open_source": false,
+      "organization_en": "Robotics and AI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。2026年5月20日的 Robotics and AI Institute 官方专题页面设有独立的 ExpertGen 技术章节，明确将其描述为用于生成机器人策略的仿真软件流水线，而非机器人硬件或产品页面。官方页面说明了扩散行为先验、大规模并行强化学习、稀疏成功判定、DAgger 视觉蒸馏和真实机器人部署；配套技术报告提供了实验设置及结果。未找到官方公开代码仓库或明确的开源声明，因此不标记为开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "ExpertGen 是 Robotics and AI Institute 于 2026 年正式介绍的机器人专家策略与仿真数据生成框架。它以少量、不完美的脚本或人类示范训练冻结的状态条件扩散策略，再通过大规模并行 Diffusion Steering Reinforcement Learning 调整扩散初始噪声，使策略在保持示范动作分布和可行性的同时提升任务成功率。该过程只依赖二值成功判定，不需要逐任务进行稠密奖励工程。获得的特权状态专家随后通过 DAgger 蒸馏为 RGB 视觉运动策略，并结合背景、相机及照明随机化实现零样本仿真到真实机器人迁移。官方技术报告在工业装配和长时程操作任务上分别报告 90.5% 与 85% 的总体成功率，使其符合面向物理机器人、具有明确负责机构和专门官方技术页面的软件项目收录标准。"
+    }
+  },
+  "web-summit-reflections-canada-s-physical-ai-mome-07442e0": {
+    "checked_at": "2026-08-11T10:15:19.520834+00:00",
+    "title": "Web Summit Reflections: Canada’s Physical AI Moment Can’t Wait | Robotics News & Insights | Sanctuary AI",
+    "accepted": false,
+    "reason": "不收录。候选官方页面是一篇关于 Web Summit Vancouver 2026、加拿大 Physical AI 战略和技术主权的思想领导力文章，并非以机器人软件为主体的专门项目页，也没有发布可识别的软件制品。因此不满足条件 1；虽然页面由 Sanctuary AI 官方发布且责任组织明确，但这不足以构成合格的具身机器人技术项目。官方页面也没有提供可支持项目级技术能力或结果指标的材料。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "讨论物理人工智能的产业部署与商业化意义",
+        "分析机器人技术对加拿大生产力和劳动力供给的潜在影响",
+        "提出加拿大发展本土机器人产业及主权人工智能基础设施的政策主张"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "该页面被 Sanctuary AI 明确归类为“Thought Leadership”，内容是公司负责人参加 Web Summit Vancouver 2026 后的观点文章，而不是软件项目发布页。",
+        "文章讨论 Physical AI 的产业采用、国家竞争力和技术主权，但没有发布或定义可识别的 VLA、机器人基础模型、策略模型、世界模型、数据集、模拟器、控制栈、基准或具身智能框架。",
+        "页面主张企业应尽早部署并积累机器人应用经验，但未提供软件架构、模型输入输出、训练方法、数据管线、控制接口或评测协议。",
+        "文章提出“劳动主权”概念，讨论由外国机器人系统承担加拿大产业劳动可能带来的经济控制权问题；这是政策与产业观点，不是技术成果。",
+        "页面呼吁加拿大投资主权 AI 基础设施、本土机器人生态、商业化路径和规模化部署，没有宣布可供使用或评估的具体软件制品。",
+        "Sanctuary AI 是页面明确负责的公司，但组织归属本身不能弥补候选内容不属于软件项目发布这一缺陷。"
+      ],
+      "metrics": [
+        {
+          "label": "可核验的软件发布指标",
+          "note": "官方文章没有报告模型性能、任务成功率、数据规模、机器人运行时长、基准成绩或其他软件项目结果。",
+          "value": "未报告"
+        }
+      ],
+      "official_organization_url": "https://sanctuary.ai/",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Sanctuary AI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。候选官方页面是一篇关于 Web Summit Vancouver 2026、加拿大 Physical AI 战略和技术主权的思想领导力文章，并非以机器人软件为主体的专门项目页，也没有发布可识别的软件制品。因此不满足条件 1；虽然页面由 Sanctuary AI 官方发布且责任组织明确，但这不足以构成合格的具身机器人技术项目。官方页面也没有提供可支持项目级技术能力或结果指标的材料。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "这是 Sanctuary AI 发布的产业与政策观点文章，而非具身机器人软件项目。文章以公司负责人参加 Web Summit Vancouver 2026 的讨论为背景，强调 Physical AI 将进入制造、物流、农业和医疗等产业，并认为企业和国家应尽早部署机器人、建设本土创新能力。其核心论点包括加拿大需要主权 AI 基础设施、更强的机器人商业化路径、对本土技术企业的规模化支持，以及避免关键劳动生产能力受外国机器人系统控制。页面没有介绍具体模型、策略、数据集、模拟器、控制或规划栈、评测基准或具身代理框架，也没有模型架构、训练方法、接口、下载、代码、技术报告或性能结果。因而它可以作为 Sanctuary AI 对 Physical AI 产业政策的官方观点来源，但不能作为自 2025 年以来发布的有影响力具身机器人软件项目收入索引。"
+    }
+  },
+  "lerobot-v0-5-1-93a1ea7": {
+    "checked_at": "2026-08-11T10:15:19.531838+00:00",
+    "title": "LeRobot v0.5.1",
+    "accepted": true,
+    "reason": "收录。该候选是 Hugging Face 官方 LeRobot 仓库发布的实体机器人软件版本，具有可访问的官方发布页和完整项目文档；其主体是机器人数据、策略训练、VLA、控制、部署和基准集成软件，而非硬件公告。v0.5.1 还包含可核验的策略、数据管线和实体机器人接入改动。仓库明确采用 Apache-2.0 许可证。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.5.1))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "面向真实机械臂、移动机器人和人形机器人的硬件无关 Python 控制接口",
+        "以同步视频、动作和状态数据记录、存储、流式加载及共享机器人数据集",
+        "训练、共享并部署 ACT、SmolVLA、π₀ 系列及 Multitask DiT 等机器人策略",
+        "支持人工介入、DAgger、HG-DAgger 和 RaC 风格的数据采集流程",
+        "在 LIBERO、Meta-World 等仿真基准中训练和评估策略"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "LeRobot 是 Hugging Face 负责开发的真实机器人机器学习软件栈，提供从遥操作、示范数据记录、策略训练到实体机器人部署的端到端工作流，并非机器人硬件产品页。官方文档将其描述为硬件无关、Python 原生的真实机器人控制接口。([huggingface.co](https://huggingface.co/docs/lerobot/index))",
+        "v0.5.1 于 2026 年 4 月 7 日发布，官方发布页给出了版本标签、签名提交 1396b9f、完整变更列表及对应合并请求，满足独立官方软件发布证据要求。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.5.1))",
+        "该版本修复了 SmolVLA 的动作填充键，并按机器人动作自由度裁剪策略损失，避免填充维度或非实际动作维度影响训练计算。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.5.1))",
+        "该版本修正 Unitree G1 SDK 检测并更新安装文档，同时修复机器人未使用插值运行时的动作值更新逻辑，属于直接面向实体机器人接入与执行的软件改进。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.5.1))",
+        "策略层新增 Multitask Diffusion Transformer 实现，并为 π₀、π₀.₅ 和 π₀-FAST 增加相对动作表示支持，扩展了多任务策略与动作空间配置能力。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.5.1))",
+        "数据与评测层新增人工介入、DAgger、HG-DAgger、RaC 风格采集，拆分 LeRobotDataset 的 DatasetReader 与 DatasetWriter，并补充 LIBERO、Meta-World 基准集成文档。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.5.1))",
+        "项目采用标准化 LeRobotDataset 格式保存同步视频、动作和状态数据，并通过统一 CLI 训练、共享和部署轻量模仿学习策略及大型视觉-语言-动作模型。([huggingface.co](https://huggingface.co/docs/lerobot/index))"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "GitHub 官方 release 页面显示的 v0.5.1 发布时间。",
+          "value": "2026-04-07"
+        },
+        {
+          "label": "SmolVLA 动作处理",
+          "note": "官方变更记录明确报告修复 action padding key，并按动作自由度裁剪 loss。",
+          "value": "已修复"
+        },
+        {
+          "label": "相对动作支持",
+          "note": "官方变更记录列出的受支持策略。",
+          "value": "π₀、π₀.₅、π₀-FAST 共 3 种策略"
+        },
+        {
+          "label": "人工介入数据采集模式",
+          "note": "官方变更记录明确列出 HIL、DAgger、HG-DAgger 和 RaC 风格采集。",
+          "value": "4 类"
+        },
+        {
+          "label": "新增文档化基准集成",
+          "note": "v0.5.1 发布记录明确新增 LIBERO 与 Meta-World 的 Benchmarks 文档入口。",
+          "value": "2 个：LIBERO、Meta-World"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co",
+      "official_project_url": "https://github.com/huggingface/lerobot/releases/tag/v0.5.1",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该候选是 Hugging Face 官方 LeRobot 仓库发布的实体机器人软件版本，具有可访问的官方发布页和完整项目文档；其主体是机器人数据、策略训练、VLA、控制、部署和基准集成软件，而非硬件公告。v0.5.1 还包含可核验的策略、数据管线和实体机器人接入改动。仓库明确采用 Apache-2.0 许可证。([github.com](https://github.com/huggingface/lerobot/releases/tag/v0.5.1))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "LeRobot v0.5.1 是 Hugging Face 于 2026 年 4 月 7 日发布的真实机器人机器学习软件版本。LeRobot 以统一的 Python 和 CLI 工作流连接机器人遥操作、同步视频与动作/状态数据记录、数据集共享、策略训练、仿真评测及实体部署。该版本虽带有维护性质，但并非只有依赖升级：它修复了 SmolVLA 动作填充与动作自由度损失裁剪问题，改进 Unitree G1 SDK 检测和非插值控制，新增 Multitask Diffusion Transformer 策略、π₀ 系列相对动作支持及多种人工介入/DAgger 数据采集方式，并重构数据集读写接口、补充 LIBERO 与 Meta-World 基准集成。其官方发布页、官方文档、明确的 Hugging Face 归属以及 Apache-2.0 开源仓库均可访问，因此符合软件型具身机器人项目的收录条件。"
+    }
+  },
+  "planning-guided-diffusion-policy-learning-for-co-104644c": {
+    "checked_at": "2026-08-11T10:15:19.542767+00:00",
+    "title": "Planning-Guided Diffusion Policy Learning for Contact-Rich Bimanual Object Reorientation",
+    "accepted": true,
+    "reason": "纳入。2026 年 4 月 6 日的 Robotics and AI Institute 官方专页明确发布了面向实体双臂机器人的规划引导扩散策略学习方法，并将其描述为通过仿真运动规划生成示范、训练任务条件策略并在真实机器人上部署的软件研究成果；它不是硬件产品页。官方机构、专门项目页面、软件性质和真实机器人实验均有可访问来源支持。链接项目页仅标注“Code (Coming Soon)”，因此不能认定为开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过模型运动规划器在高保真随机化仿真环境中生成接触丰富的双臂操作示范轨迹",
+        "根据点云、机器人关节状态和目标位姿条件生成平滑的双臂关节动作序列",
+        "在闭环中将物体重新定向到用户指定的平面 SE(2) 目标位姿",
+        "将仿真训练的策略部署到真实双 KUKA LBR iiwa 机器人系统",
+        "操作训练分布内及具有新几何形状、尺寸和物理属性的分布外物体"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "该项目提出 Planning-Guided Diffusion Policy Learning；RAI Institute 的 2026 官方页面将其简称为 LIDE，而链接的原始项目材料使用 GLIDE 名称。核心思路是用基于模型的接触运动规划生成合成专家示范，再通过行为克隆训练任务条件扩散策略。",
+        "规划数据管线结合接触采样、采用双向 RRT 与 shortcutting 的无碰撞规划，以及基于局部平滑接触动力学近似的单步接触优化；规划器以贪心方式逐步推动物体接近目标状态。",
+        "策略输入包括裁剪并移除无关背景的无颜色点云、机器人本体关节角，以及当前物体位姿到目标位姿的增量变换；输出为双臂关节动作序列，从而支持任意目标 SE(2) 位姿条件。",
+        "训练数据来自 Drake 仿真中的随机化环境。项目生成具有随机尺寸、质量和摩擦系数的长方体对象，并过滤失败、耗时过长或次优的规划轨迹，以获得用于行为克隆的高质量示范集。",
+        "为改善 sim-to-real，系统采用 Flying Point Augmentation，以较小概率向点云加入较大的高斯噪声；策略预测相对于当前关节位置的残差动作，而不是绝对关节位置；推理时使用更长的动作序列。",
+        "真实部署使用 Grounding DINO 和 EfficientViT-SAM 在首帧检测、分割目标物体，随后跨帧跟踪分割区域内的关键点，以估算物体位姿变化并构造目标条件。",
+        "实验在仿真和真实双 7-DoF KUKA LBR iiwa 平台上进行，覆盖训练分布内的箱体以及几何形状和物理属性未见过的容器、软质物体与不规则物体。"
+      ],
+      "metrics": [
+        {
+          "label": "训练示范规模",
+          "note": "论文版本报告保留 12,000 条成功规划轨迹用于策略训练；链接项目页描述约 30,000 条成功示范经过过滤、重平衡后抽取约 10,000 条，反映材料版本之间的数据管线更新。",
+          "value": "12,000 条成功训练轨迹"
+        },
+        {
+          "label": "真实系统固定旋转成功率",
+          "note": "训练分布内物体，固定 45° 旋转任务。",
+          "value": "80.0%"
+        },
+        {
+          "label": "真实系统随机旋转总体成功率",
+          "note": "训练分布内物体，涵盖 easy、medium 和 hard 难度。",
+          "value": "38.7%"
+        },
+        {
+          "label": "真实分布外容器成功率",
+          "note": "固定 45° 旋转总体为 65.7%；随机旋转总体为 28.2%，同时测试空容器和装满物品的容器。",
+          "value": "65.7% / 28.2%"
+        },
+        {
+          "label": "数据生成资源",
+          "note": "使用 96-CPU 机器生成示范数据；训练对象包含 2,000 个随机化长方体 primitive。",
+          "value": "约 2 天，96 CPU，2,000 个训练对象"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://rai-inst.com/resources/papers/planning-guided-diffusion-policy-learning-for-contact-rich-bimanual-object-reorientation/",
+      "open_source": false,
+      "organization_en": "Robotics and AI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "纳入。2026 年 4 月 6 日的 Robotics and AI Institute 官方专页明确发布了面向实体双臂机器人的规划引导扩散策略学习方法，并将其描述为通过仿真运动规划生成示范、训练任务条件策略并在真实机器人上部署的软件研究成果；它不是硬件产品页。官方机构、专门项目页面、软件性质和真实机器人实验均有可访问来源支持。链接项目页仅标注“Code (Coming Soon)”，因此不能认定为开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Planning-Guided Diffusion Policy Learning 是 Robotics and AI Institute 发布的接触丰富双臂物体重定向策略框架。它把能够访问完整仿真状态和对象几何信息的接触运动规划器作为离线数据生成器，在随机化 Drake 环境中合成长时程、多接触示范，并通过过滤和重平衡形成扩散策略训练集。策略以点云、机器人关节状态和目标位姿增量为条件，通过行为克隆学习闭环双臂关节控制。系统针对仿真到现实迁移实现了点云 Flying Point Augmentation、残差关节动作预测、更长动作序列推理及真实物体视觉跟踪。实验覆盖双 KUKA LBR iiwa 的仿真和实体部署，并报告了训练分布内箱体以及分布外容器、软质和不规则物体上的重定向结果。官方页面满足专门项目证据要求，但代码仍标为即将发布，故当前不视为开源。"
+    }
+  },
+  "3d-sceneverse-bigai-9d283eb": {
+    "checked_at": "2026-08-11T10:15:19.553739+00:00",
+    "title": "从海量视频中提炼真实3D场景 通研院「SceneVerse++」让智能体真正走进物理世界 - 北京通用人工智能研究院BIGAI",
+    "accepted": false,
+    "reason": "正在核验候选项目是否满足全部收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方页面的发布性质、责任机构、软件工件和可复现的技术结果，再按严格条件给出收录结论。",
+        "重点排除把数据集或方法研究误判成没有可用软件工件的项目，也不会用 arXiv 单独补足官方证据。",
+        "我将只采用官方页面、技术报告及其直接链接材料中的具体信息。"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "正在核验。",
+        "正在核验。",
+        "正在核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方及关联材料",
+          "value": "核验中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Beijing Institute for General Artificial Intelligence",
+      "organization_kind": "Research Lab",
+      "organization_zh": "北京通用人工智能研究院",
+      "reason": "正在核验候选项目是否满足全部收录条件。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目页、技术材料与软件工件。"
+    }
+  },
+  "a-steerable-model-with-emergent-capabilities-5d9cbd6": {
+    "checked_at": "2026-08-11T10:15:19.564534+00:00",
+    "title": "A Steerable Model with Emergent Capabilities",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方发布页、责任组织、发布时间和软件属性，并检查官方页面链接的技术材料与报告指标。之后会按严格纳入条件给出结构化结论。",
+        "我会特别区分机器人基础模型软件与任何配套硬件/产品叙述，并只采用可访问的官方项目材料和其直接链接资料。",
+        "正在整理官方材料中的技术细节、能力项和精确结果；无法由来源支撑的字段会留空或明确写入排除理由。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "核验进行中。",
+        "核验进行中。",
+        "核验进行中。",
+        "核验进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.pi.website/blog/pi07",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在基于官方项目页及其链接材料核验该候选是否满足严格索引条件。"
+    }
+  },
+  "judo-a-user-friendly-open-source-package-for-sam-c5fa670": {
+    "checked_at": "2026-08-11T10:15:20.043399+00:00",
+    "title": "Judo: A User-Friendly Open-Source Package for Sampling-Based Model Predictive Control",
+    "accepted": true,
+    "reason": "收录。Judo 是明确面向物理机器人和具身控制的软件项目，包含采样式MPC算法、MuJoCo仿真与基准任务、异步仿真到实体部署架构，并已在灵巧手和Spot机器人硬件上演示。Robotics and AI Institute 提供了专门的官方项目页面和公开代码仓库，满足官方项目证据及明确责任机构要求。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供采样式模型预测控制器的原型开发、参数调优、基准测试与机器人部署工作流",
+        "使用 MuJoCo 多线程前向动力学执行实时控制轨迹采样与评估",
+        "通过异步节点架构复用控制器和可视化组件，实现从仿真到实体机器人的迁移",
+        "支持接触丰富的机械臂操作、灵巧手物体旋转和四足机器人全身移动操作",
+        "通过浏览器 GUI 实时调整任务与优化器参数、切换控制算法并观察候选轨迹"
+      ],
+      "fields": [
+        "Robot systems",
+        "Whole-body control",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "Judo 是面向机器人采样式模型预测控制的开源 Python 软件包，而非机器人硬件或硬件产品页面；其目标覆盖控制器的快速原型开发、评估、调优和实体部署。",
+        "核心 API 将任务定义与优化器分离：任务负责动力学和奖励评估，优化器负责采样控制节点并依据轨迹回报更新名义策略；项目提供 Predictive Sampling、CEM 和 MPPI 等标准算法实现，技术报告还评测了 CMA-ES。",
+        "系统以 MuJoCo 为主要物理后端，直接调用其 C/C++ 多线程 rollout 实现；同时提供可扩展的 rollout 后端抽象，以便接入其他物理引擎或自定义动力学模型。",
+        "基于 viser 的浏览器 GUI 会把配置数据结构自动转换为滑块、复选框、下拉菜单和数组参数组，并可显示高回报候选轨迹，支持运行时算法比较和参数调优。",
+        "架构把 system、controller 和 visualizer 划分为异步节点，默认使用 dora 进行进程间通信，并支持同设备数组的零拷贝读取；以硬件节点替换仿真节点后，可继续使用相同的控制器与可视化节点。",
+        "项目提供从 Cartpole 到 Cylinder Push、FR3 Pick、LEAP Cube、G1 操作以及 Spot 移动操作等标准任务；除 Cartpole 外，技术报告中的任务主要涉及接触丰富的动力学。",
+        "实体案例包括视觉关键点跟踪支持的灵巧手连续立方体旋转，以及 Spot 机器人结合低层强化学习运动策略与高层采样式 MPC 完成椅子扶正和推上斜坡的全身移动操作。"
+      ],
+      "metrics": [
+        {
+          "label": "控制更新耗时",
+          "note": "在 AMD EPYC 9354 32 核处理器上，以相同模型和 Predictive Sampling 设置测试；数值为1000步平均值。",
+          "value": "Walker：0.0028秒；LEAP Cube：0.0287秒"
+        },
+        {
+          "label": "低线程灵巧旋转结果",
+          "note": "实体 LEAP 手使用跟踪式奖励和16个规划线程完成连续立方体旋转；报告值为多次实验的连续旋转次数。",
+          "value": "平均21.2次，中位数20.0次"
+        },
+        {
+          "label": "Spot 椅子扶正",
+          "note": "实体 Spot 使用CEM、17个线程和3秒 rollout horizon，在规定时间内完成任务。",
+          "value": "7/10次成功"
+        },
+        {
+          "label": "Spot 推椅上坡",
+          "note": "实体 Spot 操作16千克椅子，使用CEM、17个线程和3秒 rollout horizon。",
+          "value": "5/10次成功"
+        },
+        {
+          "label": "仿真基准覆盖",
+          "note": "每个任务和算法组合使用任务专用默认值运行10个 episode；默认设置面向8或16个CPU线程。",
+          "value": "10类任务，4种采样优化算法"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://rai-inst.com/resources/papers/judo-a-user-friendly-open-source-package-forsampling-based-model-predictive-control/",
+      "open_source": true,
+      "organization_en": "Robotics and AI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。Judo 是明确面向物理机器人和具身控制的软件项目，包含采样式MPC算法、MuJoCo仿真与基准任务、异步仿真到实体部署架构，并已在灵巧手和Spot机器人硬件上演示。Robotics and AI Institute 提供了专门的官方项目页面和公开代码仓库，满足官方项目证据及明确责任机构要求。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Judo 是 Robotics and AI Institute 推出的开源采样式模型预测控制工具箱，面向机器人控制研究中从算法原型、任务建模和交互调参，到统一基准测试与实体部署的完整流程。它采用 Python 编写高层接口，以 MuJoCo 的多线程前向动力学作为主要 rollout 后端，并将任务、优化器、控制器、仿真或硬件系统以及可视化组件组织为可替换模块。项目内置 Predictive Sampling、CEM、MPPI 等控制方法和多种接触丰富任务，浏览器 GUI 可自动生成配置控件、实时调整参数并显示候选轨迹。异步节点架构允许研究者用硬件接口替换仿真节点，同时复用控制与可视化代码。技术材料不仅报告了跨任务、跨算法的仿真基准，还展示了16线程条件下的实体灵巧手连续立方体旋转，以及Spot机器人结合低层运动策略完成椅子扶正和推上斜坡的全身移动操作。"
+    }
+  },
+  "groundedplanbench-and-v2gp-1115077": {
+    "checked_at": "2026-08-11T10:15:19.589233+00:00",
+    "title": "GroundedPlanBench and V2GP",
+    "accepted": false,
+    "reason": "正在核查。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official Microsoft Research materials and linked technical artifacts against each eligibility condition, then I’ll return only supported dates, capabilities, and results.",
+        "I’m checking the official Microsoft Research materials and linked technical artifacts against each eligibility condition, then I’ll return only supported dates, capabilities, and results.",
+        "I’m checking the official Microsoft Research materials and linked technical artifacts against each eligibility condition, then I’ll return only supported dates, capabilities, and results."
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核查官方资料。",
+        "正在核查官方资料。",
+        "正在核查官方资料。",
+        "正在核查官方资料。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方页面与技术材料",
+          "value": "核查中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Microsoft Research",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核查。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核查 GroundedPlanBench 与 V2GP 的官方发布信息及技术证据。"
+    }
+  },
+  "gemini-robotics-er-1-6-enhanced-embodied-reasoni-448bea6": {
+    "checked_at": "2026-08-11T10:15:19.600424+00:00",
+    "title": "Gemini Robotics ER 1.6: Enhanced Embodied Reasoning — Google DeepMind",
+    "accepted": false,
+    "reason": "检索进行中。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方发布页、技术细节、发布日期和可量化结果，再按严格收录条件给出结论。不会把候选摘要中的说法直接当作证据。",
+        "检索将优先使用 Google DeepMind 官方页面及其直接链接的项目材料；只有必要时才用独立来源确认传播或影响证据。需要注意候选给出的 2026-04-01 日期是否与官方页面一致。通常响应约几秒；若官方页内容较长，可能需要多轮打开与定位。建议等待检索完成后再采用最终字段。",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索，尚未形成最终判断。",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待官方来源核验",
+          "value": "pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Google DeepMind",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "检索进行中。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方材料。"
+    }
+  },
+  "asgardbench-fcd8c4e": {
+    "checked_at": "2026-08-11T10:15:19.612322+00:00",
+    "title": "AsgardBench",
+    "accepted": true,
+    "reason": "符合收录条件：AsgardBench 于 2026 年 3 月由微软研究院正式发布，是面向具身智能体视觉落地交互规划的软件评测基准，而非机器人硬件或产品页面；微软研究院提供了专门的官方项目页、官方研究博客与项目代码仓库，责任机构、发布日期、实现内容和评测结果均有明确来源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 AI2-THOR 交互式三维家庭环境中运行多步具身任务评测",
+        "根据当前与前一帧第一视角 RGB 图像生成并逐步修订高层动作计划",
+        "通过二元成功或失败反馈和动作历史评估视觉落地、状态跟踪与计划修复能力",
+        "自动检查任务目标是否完成，并生成成功率、失败分类及逐计划统计报告",
+        "支持 OpenAI 兼容 API 端点、容器化运行以及逐步执行轨迹的可视化检查"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "AsgardBench 是微软研究院发布的具身 AI 软件评测基准，专门衡量视觉语言模型能否在执行过程中依据视觉观察修订高层动作序列，而非仅生成一次性的离线计划。",
+        "基准建立在 AI2-THOR 三维家庭模拟器上；智能体被置于可直接交互的位置，并通过 FIND 动作接近目标，从评测中抽离导航、视角选择和低层控制噪声。",
+        "每轮模型输出完整的后续动作计划，但系统只执行首个动作，随后返回新的视觉观察和简单的成功或失败信号，迫使模型持续重新规划；步数和重复动作限制用于终止循环。",
+        "默认输入包括当前与前一帧第一视角 RGB 图像、已尝试动作的历史以及二元反馈，不提供场景文字描述或详细错误解释，从而隔离视觉落地和状态跟踪能力。",
+        "任务通过改变物体的清洁状态、填充状态、位置和场景配置构造条件分支；同一条指令会因杯子是否脏、洗手池是否被占用等视觉条件而需要不同动作序列。",
+        "开源实现提供完整基准与快速检查集、自动目标检查、逐任务执行日志、聚合报表生成器、Streamlit 轨迹查看器、Dockerfile，以及对 OpenAI 兼容模型接口的支持。",
+        "消融结果表明图像、前一帧观察和手持物体的半透明手部提示均影响性能；外部文字记忆区对强模型有帮助，但对较弱模型的效果不稳定。"
+      ],
+      "metrics": [
+        {
+          "label": "基准规模",
+          "note": "覆盖厨房、客厅和浴室三类场景。",
+          "value": "108 个任务实例、12 种任务类型、3 种场景类型"
+        },
+        {
+          "label": "最佳视觉输入成功率",
+          "note": "官方项目页报告 Claude Opus 4.5 在带图像条件下取得最高结果。",
+          "value": "76.5%"
+        },
+        {
+          "label": "最佳模型无图像成功率",
+          "note": "Claude Opus 4.5 在 text-only 条件下的结果。",
+          "value": "36.1%"
+        },
+        {
+          "label": "GPT-5.2 视觉收益",
+          "note": "带图像成功率为 71.3%，text-only 为 25.0%。",
+          "value": "+46.3 个百分点"
+        },
+        {
+          "label": "评测模型数量",
+          "note": "官方排行榜比较前沿及近前沿视觉语言模型的图像输入与纯文本条件。",
+          "value": "9 个模型"
+        }
+      ],
+      "official_organization_url": "https://www.microsoft.com/en-us/research/",
+      "official_project_url": "https://microsoft.github.io/AsgardBench/",
+      "open_source": true,
+      "organization_en": "Microsoft Research",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "符合收录条件：AsgardBench 于 2026 年 3 月由微软研究院正式发布，是面向具身智能体视觉落地交互规划的软件评测基准，而非机器人硬件或产品页面；微软研究院提供了专门的官方项目页、官方研究博客与项目代码仓库，责任机构、发布日期、实现内容和评测结果均有明确来源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "AsgardBench 是微软研究院于 2026 年 3 月发布并开源的具身 AI 交互规划基准。它在 AI2-THOR 家庭模拟环境中将导航和低层操作抽象掉，通过 108 个受控任务实例检验视觉语言模型是否真正利用第一视角图像、动作历史及极简成功或失败反馈来跟踪环境状态、发现计划前提已变化并逐步修复动作序列。官方评测显示，强模型在获得图像后成功率显著高于纯文本条件，最佳结果从 36.1% 提升至 76.5%，说明该基准能够有效暴露视觉落地、时间状态跟踪、细微视觉辨别和循环规划方面的缺陷。"
+    }
+  },
+  "fieldai-real-to-simulation-data-and-validation-p-b67640f": {
+    "checked_at": "2026-08-11T10:15:19.624209+00:00",
+    "title": "FieldAI real-to-simulation data and validation pipeline",
+    "accepted": true,
+    "reason": "纳入。FieldAI 在2026年3月16日发布了专门的官方技术页面和官方公告，明确介绍一套面向实体机器人自主系统的 real-to-simulation 数据、数字孪生、策略训练和软件在环验证管线。页面主体是已实施的软件与数据基础设施，而非机器人本体或硬件规格；责任组织、发布日期、技术组成、实际工作流及报告结果均可由 FieldAI 官方页面支持。页面未说明 FieldAI 的整套管线以开源项目形式发布，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "将部署机器人采集的真实世界多模态数据转换为可交互的高保真三维数字孪生。",
+        "把经 NuRec 重建的真实工业环境直接导入 NVIDIA Isaac Sim 和 Isaac Lab，供机器人策略训练、测试与验证。",
+        "使用 Isaac Lab 进行大规模并行强化学习，并结合真实世界数据训练多类机器人策略。",
+        "使用 Isaac Sim 执行软件在环验证，并通过持续增加的现场重建环境扩大自主系统的验证覆盖范围。",
+        "通过 NVIDIA Physical AI Data Factory Blueprint、Cosmos 世界基础模型和 OSMO 编排合成数据生成与机器人训练工作流。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "World models",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "该项目是 FieldAI 已投入使用的 real-to-sim 软件与数据管线，而不是机器人硬件产品：现场机器人在执行日常任务时持续采集多模态运行数据，并充当长期传感节点。",
+        "管线前端采用 NVIDIA Omniverse NuRec，将真实部署产生的传感器和运行数据重建为可交互、可持续更新的高保真三维环境及客户现场数字孪生。",
+        "重建环境能够直接进入 NVIDIA Isaac Sim 和 Isaac Lab；FieldAI 使用 Isaac Lab 开展大规模并行强化学习及真实数据结合训练，并使用 Isaac Sim 进行测试和软件在环自主性验证。",
+        "每次现场部署都会扩充重建环境库，使来自施工、采矿和能源等非结构化工业现场的数据持续反馈到策略训练、感知、推理、决策与验证流程。",
+        "FieldAI 还采用 NVIDIA Physical AI Data Factory Blueprint，并通过 Microsoft Azure 工具链结合 NVIDIA Cosmos 开放世界基础模型和 NVIDIA OSMO，自动化合成数据及机器人训练工作流。",
+        "该管线同时服务于机器人自主能力开发和客户数字孪生应用，包括设施可视化、资产维护、资源配置、交付进度和现场安全分析。",
+        "FieldAI 官方技术博客和同日官方公告均明确将该系统描述为可扩展的数据、仿真、训练与验证基础设施，并明确由 FieldAI 负责开发和部署。"
+      ],
+      "metrics": [
+        {
+          "label": "数字孪生处理时间",
+          "note": "FieldAI 官方页面称，过去需要数月人工工作的流程现在可在数小时内完成，并成为机器人正常作业的副产物。",
+          "value": "数月缩短至数小时"
+        },
+        {
+          "label": "客户案例处理时间",
+          "note": "FieldAI 引述一家全球工业制造企业高级管理人员的反馈：原先需要三个半月的工作现在由其技术在十二小时内完成。",
+          "value": "3.5个月缩短至12小时"
+        },
+        {
+          "label": "客户案例速度提升",
+          "note": "官方公告对上述时间变化给出的明确比较结果。",
+          "value": "超过200倍"
+        },
+        {
+          "label": "部署地域覆盖",
+          "note": "FieldAI 技术博客称，向该 real-to-sim 管线输入现场数据的部署已经扩展至三个大洲。",
+          "value": "3个大洲"
+        }
+      ],
+      "official_organization_url": "https://www.fieldai.com/",
+      "official_project_url": "https://www.fieldai.com/news/fieldai-and-nvidia-omniverse-building-the-next-generation-of-industrial-ai",
+      "open_source": false,
+      "organization_en": "FieldAI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。FieldAI 在2026年3月16日发布了专门的官方技术页面和官方公告，明确介绍一套面向实体机器人自主系统的 real-to-simulation 数据、数字孪生、策略训练和软件在环验证管线。页面主体是已实施的软件与数据基础设施，而非机器人本体或硬件规格；责任组织、发布日期、技术组成、实际工作流及报告结果均可由 FieldAI 官方页面支持。页面未说明 FieldAI 的整套管线以开源项目形式发布，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "FieldAI 的 real-to-simulation 数据与验证管线把工业现场机器人在日常运行中采集的多模态数据转化为持续演化的高保真数字孪生，并将这些环境接入 NVIDIA Isaac Sim、Isaac Lab 和 OSMO，用于策略训练、强化学习、软件在环测试及自主能力验证。NuRec 构成管线的真实到仿真入口；Physical AI Data Factory Blueprint、Cosmos 世界基础模型和 Azure 工具链则用于扩展合成数据与训练工作流。该系统面向施工、采矿、能源等复杂非结构化环境，形成从真实部署、环境重建、仿真训练和验证再回到现场部署的数据闭环。"
+    }
+  },
+  "fieldai-and-spot-construction-autonomy-solution-bab0c66": {
+    "checked_at": "2026-08-11T10:15:19.635864+00:00",
+    "title": "FieldAI and Spot construction autonomy solution",
+    "accepted": true,
+    "reason": "符合收录条件。2026年3月12日的FieldAI官方专页明确发布了以软件为核心的“FieldAI + Spot”施工自主解决方案：核心对象是Field Foundation Models及其风险感知、端侧导航、探索、数据处理和多机器人协调能力，而不是Spot硬件规格或硬件销售页面。页面明确列出FieldAI和Boston Dynamics两家责任公司，并提供实际部署能力和结果。官方材料未声明该方案或FFM开源，因此open_source设为false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在无预先地图、GPS、预定义路线或额外场地基础设施的条件下，自主探索和导航动态施工现场",
+        "完全在机器人端运行自主系统，无需云连接，并基于风险、不确定性和现实物理约束实时决策",
+        "自主执行施工巡检、三维扫描、图像采集、建图和进度监测，并可连续或夜间运行",
+        "将采集结果接入BIM或数字孪生工作流，用于进度跟踪、质量验证、偏差分析和现场风险识别",
+        "以多智能体方式协调机器人编队，使机器人共享环境理解并在工地尺度协同运行"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems",
+        "World models",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "方案将FieldAI的Field Foundation Models（FFMs）与Boston Dynamics Spot四足机器人及其软件栈结合；官方将FFM定义为面向具身智能、与具体机器人形态无关的通用自主“大脑”。",
+        "FFM采用“physics-first”路线，将数据驱动AI与物理推理、不确定性和风险感知结合，使机器人能处理未被显式训练过的动态、非结构化场景。",
+        "系统通过相机、LiDAR和机载传感器感知环境，无需预先地图、GPS、固定路径、预规划轨迹或额外机器人基础设施，可在布局持续变化的施工现场快速部署。",
+        "自主计算完全在边缘端执行，不依赖云连接；Spot可在环境逐小时变化时持续完成任务，减少频繁重置或人工纠正，并可夜间运行、次日交付更新数据。",
+        "机器人可在一次现场行走中完成巡检、建图和监测，通过三维扫描及图像记录竣工进度，并将数据接入BIM和数字孪生系统，用于进度跟踪、质量验证和偏差分析。",
+        "安全监测覆盖积水、出口受阻、洞口、坠落边缘、PPE合规、活动机械和湿滑表面等现场状况，使人员减少进入危险或不便到达区域的需求。",
+        "该软件面向机器人编队而非单机孤立运行：多个机器人能够协调、共享环境理解并在工地尺度共同推理；不同环境中的运行数据还被用于持续改进模型和扩大部署可靠性。"
+      ],
+      "metrics": [
+        {
+          "label": "巡检与文档时间",
+          "note": "FieldAI与Boston Dynamics官方材料报告，相比人工流程，客户的巡检和文档时间减少超过90%。",
+          "value": ">90% reduction"
+        },
+        {
+          "label": "潜在成本超支",
+          "note": "官方施工案例称，通过更早发现问题，客户避免了数百万美元的潜在成本超支；未披露更精确金额。",
+          "value": "Millions of dollars avoided"
+        },
+        {
+          "label": "实际部署地域",
+          "note": "截至官方材料发布时，Spot与FieldAI系统已在亚洲、欧洲和北美的施工现场部署。",
+          "value": "3 regions: Asia, Europe, North America"
+        },
+        {
+          "label": "持续部署周期",
+          "note": "2026年2月的官方材料称，FieldAI在此前两年间持续将Spot部署到全球施工现场。",
+          "value": "Over 2 years"
+        },
+        {
+          "label": "DPR现场部署结果",
+          "note": "FieldAI官方DPR案例报告同一部署阶段完成45,000+张照片采集、100+英里自主行走、4个完整楼层建图、125,000平方英尺屋面记录及500,000平方英尺室内扫描。",
+          "value": "45,000+ photos; 100+ miles; 4 floors; 125,000 ft² roofing; 500,000 ft² interiors"
+        }
+      ],
+      "official_organization_url": "https://www.fieldai.com/",
+      "official_project_url": "https://www.fieldai.com/news/boston-dynamics-and-fieldai-partner-to-bring-robots-into-uncharted-and-dynamic-environments",
+      "open_source": false,
+      "organization_en": "FieldAI and Boston Dynamics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。2026年3月12日的FieldAI官方专页明确发布了以软件为核心的“FieldAI + Spot”施工自主解决方案：核心对象是Field Foundation Models及其风险感知、端侧导航、探索、数据处理和多机器人协调能力，而不是Spot硬件规格或硬件销售页面。页面明确列出FieldAI和Boston Dynamics两家责任公司，并提供实际部署能力和结果。官方材料未声明该方案或FFM开源，因此open_source设为false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "FieldAI与Boston Dynamics发布的施工自主解决方案，以FieldAI的Field Foundation Models为软件核心，并将其部署到Spot四足机器人上。FFM不是单纯套用到机器人的通用语言模型，而是官方所称的“physics-first”具身基础模型，重点建模现实物理约束、风险和不确定性，使机器人能够在持续变化、人员和机械混行、地形与布局未知的施工现场自主决策。系统无需预先地图、GPS、固定路线、云连接或额外场地基础设施，感知和自主计算可完全在边缘端完成。实际工作流包括自主巡检、建图、三维扫描、图像记录、进度监测和危险状况识别，并将数据对接BIM或数字孪生系统，支持进度、质量和偏差分析。其架构还面向多机器人编队，允许机器人共享现场理解并在工地尺度协同运行。官方报告客户相较人工流程将巡检与文档时间缩短超过90%，部署已覆盖亚洲、欧洲和北美，并已从试点扩展到企业级编队应用。"
+    }
+  },
+  "introducing-foresight-dexterity-b7fdc4f": {
+    "checked_at": "2026-08-11T10:15:19.647160+00:00",
+    "title": "Introducing Foresight | Dexterity",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方项目页、组织归属、发布日期，以及该页面是否真正以机器人软件为主体。随后只采用官方页面和其链接材料中的技术点与指标。 ",
+        " ",
+        " "
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索并核验候选项目。",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://dexterity.ai/blog/foresight",
+      "open_source": false,
+      "organization_en": "Dexterity",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目的官方资料。"
+    }
+  },
+  "science-robotics-bigai-4188eeb": {
+    "checked_at": "2026-08-11T10:15:19.658456+00:00",
+    "title": "通研院研究成果登《Science Robotics》：首次实现异构机器人团队之间基于意图理解的自适应模仿与协作 - 北京通用人工智能研究院BIGAI",
+    "accepted": true,
+    "reason": "纳入。IAIL是明确用于实体异构机器人模仿、动作选择和多机协作的软件学习框架，而非机器人硬件或产品规格页；BIGAI于2026年3月20日发布了包含架构、真机视频、实验结果和论文链接的官方专题公告，并明确列出BIGAI、深圳市人工智能与机器人研究院等责任机构。该日期与候选输入的2026年3月2日不一致，应以官方页面显示的2026年3月20日为准。官方材料未提供可核验的源代码仓库或开源声明，因此open_source设为false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于语言监督的共享意图空间，在不同机器人形态、运动模态和工作空间之间建立动作语义对应关系。",
+        "为每种机器人生成符合其自身状态与物理约束的候选动作序列，无需在机器人之间共享训练数据。",
+        "根据意图相似度选择学习机器人的可执行动作，并在能力不匹配时拒绝执行、保持待机。",
+        "支持无人机、无人船、轮足机器人、差速轮机器人、人形机器人以及单臂和双臂机械手之间的真机模仿与多步协作。",
+        "可将语言指令直接映射到意图空间，并与大语言模型高层规划器结合，无需为语言输入额外训练或调整架构。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI",
+        "Robot manipulation",
+        "LLM"
+      ],
+      "include": true,
+      "key_points": [
+        "IAIL（Intention-Aligned Imitation Learning）是一套面向异构实体机器人的意图对齐模仿学习框架，其迁移目标不是示教者的底层轨迹或身体部件运动，而是语言描述所表达的高层任务意图。",
+        "框架采用“模块化运动生成＋统一意图空间”架构：每种机器人拥有独立的状态条件生成模型，从而保留其特有运动方式、工作空间及物理约束，而不强制训练单一的跨机器人通用策略。",
+        "上下文感知运动生成模块使用变分自编码器为每种机器人独立学习安全、可执行的候选动作序列；不同机器人的生成模型可独立训练，不要求跨机器人数据共享。",
+        "运动意图提取模块为各机器人配置专用运动编码器，同时使用所有机器人共享的语言注释编码器；二者通过对比学习联合优化，使相同意图的异构动作在共享嵌入空间中聚合。",
+        "执行阶段计算示教动作嵌入与学习者候选动作嵌入之间的余弦相似度，并选择最接近的候选动作；若最高相似度低于阈值，机器人会判定自身无法完成该意图并保持待机。",
+        "真机平台覆盖Cuboat无人船、Tello无人机、Diablo轮足机器人、Spark差速轮机器人、Pepper人形机器人、六自由度单臂机械手和双臂机械手；测试中的示教团队与学习团队没有机器人形态重叠。",
+        "语言注释与运动轨迹被映射到同一意图空间，因此系统可把运动编码器切换为注释编码器来接受语言指令；官方材料还展示了由ChatGPT-4.0生成高层任务指令、IAIL匹配并执行机器人动作的集成方式。"
+      ],
+      "metrics": [
+        {
+          "label": "真机任务成功率",
+          "note": "在30个多步协作场景中测试，示教团队与学习团队不存在机器人重叠。",
+          "value": "92%"
+        },
+        {
+          "label": "最佳自适应率",
+          "note": "官方项目公告报告的真机异构团队实验结果。",
+          "value": "88%"
+        },
+        {
+          "label": "真机机器人类型",
+          "note": "包括无人船、无人机、轮足机器人、差速轮机器人、人形机器人、单臂机械手和双臂机械手。",
+          "value": "7类"
+        },
+        {
+          "label": "意图空间语义分离",
+          "note": "256维潜在运动表征的全局类间余弦距离为0.997±0.003，总体语义分离比率为3.764。",
+          "value": "0.997±0.003"
+        },
+        {
+          "label": "跨形态对齐",
+          "note": "执行同一任务的不同机器人嵌入质心平均余弦距离为0.030–0.031，总体跨形态对齐比率为3.046。",
+          "value": "0.030–0.031"
+        }
+      ],
+      "official_organization_url": "https://www.bigai.ai/",
+      "official_project_url": "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E7%A0%94%E7%A9%B6%E6%88%90%E6%9E%9C%E7%99%BB%E3%80%8Ascience-robotics%E3%80%8B%EF%BC%9A%E9%A6%96%E6%AC%A1%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%9E%84%E6%9C%BA%E5%99%A8%E4%BA%BA/",
+      "open_source": false,
+      "organization_en": "Beijing Institute for General Artificial Intelligence (BIGAI)",
+      "organization_kind": "Research Lab",
+      "organization_zh": "北京通用人工智能研究院",
+      "reason": "纳入。IAIL是明确用于实体异构机器人模仿、动作选择和多机协作的软件学习框架，而非机器人硬件或产品规格页；BIGAI于2026年3月20日发布了包含架构、真机视频、实验结果和论文链接的官方专题公告，并明确列出BIGAI、深圳市人工智能与机器人研究院等责任机构。该日期与候选输入的2026年3月2日不一致，应以官方页面显示的2026年3月20日为准。官方材料未提供可核验的源代码仓库或开源声明，因此open_source设为false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "IAIL是一套让异构机器人依据“意图”而非身体运动形式进行模仿与协作的学习框架。系统为每种机器人保留独立的状态条件动作生成模型，再利用语言注释监督的对比学习，把不同形态机器人的动作投射到统一的共享意图空间。执行时，学习机器人从符合自身物理条件的候选动作中选择与示教意图最相近的方案，并可在能力不足时拒绝执行。官方真机实验涉及七类机器人和30个多步协作场景，在示教与学习团队形态完全不重叠的设置下报告92%的任务成功率和88%的最佳自适应率；框架还可把语言指令映射到同一意图空间，并与大语言模型高层规划结合。"
+    }
+  },
+  "a-new-benchmark-in-robot-juggling-rai-institute-9ce9d31": {
+    "checked_at": "2026-08-11T10:15:19.670325+00:00",
+    "title": "A New Benchmark in Robot Juggling | RAI Institute",
+    "accepted": true,
+    "reason": "收录。RAI Institute 提供了专门的官方项目页面，明确展示由机载视觉、真实硬件在线学习、接触控制和技能组合驱动的机器人杂耍系统，因此软件与实体智能能力是页面的核心，而非仅为硬件产品介绍。负责机构明确，发布时间也晚于 2025 年。需要更正候选资料中的日期：官方页面标注的发布日期是 2026 年 5 月 27 日，不是 2026 年 3 月 2 日。官方页面未提供代码仓库、软件许可证或开源声明，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "利用机载视觉反馈持续估计球的运动并闭环修正杂耍动作",
+        "使用多指手直接完成抛接，不依赖杯、球拍等任务专用被动末端执行器",
+        "在真实机器人硬件上实时学习三球 cascade 等关键技能",
+        "在 cascade、half-shower、tennis、shower 和 box 等多种杂耍模式之间连续切换",
+        "复用不同杂耍模式共享的动作构件，对已学习技能进行组合"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "该项目展示的是 AthenaZero 的学习型动态操控系统：机器人基于机载视觉反馈进行持续的裸手杂耍，而不是仅展示机械臂或多指手的硬件参数。",
+        "系统放弃早期杂耍机器人常用的杯、球拍等任务专用被动末端执行器，改用关节式多指手直接处理球，因此需要控制复杂且难以预测的手指与物体接触。",
+        "控制技能直接在真实硬件上实时学习；官方称 cascade 等关键技能可在少于 10 分钟的真实交互中学会，体现了面向实体机器人的在线学习能力。",
+        "不同杂耍模式被构造成可共享、可复用的动作构件，使系统能够组合已有技能，而不必为每一种完整模式建立完全独立的控制流程。",
+        "官方演示覆盖 cascade、half-shower、tennis、shower 和 box 五种三球杂耍模式，并展示模式间的连续转换。",
+        "AthenaZero 本体采用低惯量、准直接驱动的双臂设计，为高速而柔顺的接触操作提供平台基础；相关官方材料称其双臂各有 7 个自由度、双手各有 6 个自由度，并需要超越单纯运动学规划或位置前馈的力矩与动力学控制。"
+      ],
+      "metrics": [
+        {
+          "label": "真实硬件学习时间",
+          "note": "官方表述为 cascade 等关键技能通过真实机器人交互学习。",
+          "value": "少于 10 分钟"
+        },
+        {
+          "label": "已明确展示的杂耍模式",
+          "note": "cascade、half-shower、tennis、shower、box。",
+          "value": "5 种"
+        },
+        {
+          "label": "杂耍配置",
+          "note": "官方演示为多指手裸手完成的三球杂耍。",
+          "value": "3 球"
+        },
+        {
+          "label": "机器人关节与执行器",
+          "note": "相关 AthenaZero 官方技术材料报告：1-DoF 躯干、两条 7-DoF 手臂和两只 6-DoF 欠驱动手。",
+          "value": "27 个关节、22 个执行器"
+        },
+        {
+          "label": "手臂传动比",
+          "note": "相关官方技术材料报告，多数关节采用低传动比设计。",
+          "value": "多数关节 5:1，其他关节低于 11:1"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://rai-inst.com/resources/videos/a-new-benchmark-in-robot-juggling/",
+      "open_source": false,
+      "organization_en": "RAI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。RAI Institute 提供了专门的官方项目页面，明确展示由机载视觉、真实硬件在线学习、接触控制和技能组合驱动的机器人杂耍系统，因此软件与实体智能能力是页面的核心，而非仅为硬件产品介绍。负责机构明确，发布时间也晚于 2025 年。需要更正候选资料中的日期：官方页面标注的发布日期是 2026 年 5 月 27 日，不是 2026 年 3 月 2 日。官方页面未提供代码仓库、软件许可证或开源声明，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "AthenaZero 杂耍项目是 RAI Institute 面向动态、接触丰富型机器人操控的一项实体学习演示。系统让双臂机器人使用关节式多指手直接完成三球杂耍，并通过机载视觉形成闭环反馈，摆脱了传统杂耍机器人依赖杯、球拍等专用末端装置的限制。其技术重点不是单次预编程轨迹，而是在真实硬件上实时学习关键技能，并把不同模式共有的动作构件组合、复用于 cascade、half-shower、tennis、shower 和 box 等模式。官方报告 cascade 等技能可在少于 10 分钟的真实交互中学会。相关 AthenaZero 技术页面还说明，该平台采用低惯量、准直接驱动双臂与欠驱动多指手，以支持高速加减速、柔顺接触和精细力矩控制。该页面没有发布代码或开源许可证，但其呈现的是已在物理机器人上实现的学习与控制软件能力，符合实体机器人技术项目的收录条件。"
+    }
+  },
+  "bigai-a05fd92": {
+    "checked_at": "2026-08-11T10:15:19.681705+00:00",
+    "title": "通研院发布行业智能体基准，重新定义“数字员工”上岗标准 - 北京通用人工智能研究院BIGAI",
+    "accepted": false,
+    "reason": "不收录：缺少条件 1 所要求的物理机器人或具身智能软件属性。官方页面将 $OneMillion-Bench 定义为评测金融、法律、医疗、自然科学和工业专家工作流的行业智能体基准，并将目标智能体描述为承担数字化复杂工作流的“数字员工”；其任务规划、工具调用、网页检索和多智能体协同均未与物理机器人控制、真实环境感知或物理动作执行建立联系。它属于通用 LLM/软件智能体评测，而不是 embodied-robotics 项目。另需纠正日期：候选信息填写的是 2026-03-01，但官方页面标注的发布日期是 2026-03-13。官方页面存在，且明确将北京通用人工智能研究院 TongAgents 团队列为发布方。([bigai.ai](https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E5%8F%91%E5%B8%83%E8%A1%8C%E4%B8%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E5%87%86%EF%BC%8C%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E6%95%B0%E5%AD%97%E5%91%98%E5%B7%A5/))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "评测行业智能体在开放式专家任务中的规划、推理、决策和成果交付能力",
+        "按照专家工时和市场时薪估算任务经济价值",
+        "通过细粒度考点与非对称扣分机制评估答案质量",
+        "分别评测中文本地场景与英文全球场景"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "$OneMillion-Bench 是面向金融、法律、医疗、自然科学和工业专业工作的行业智能体评测基准。",
+        "基准以完成任务所需的专家时间和市场时薪为依据，将智能体表现转换为可交付经济价值。",
+        "数据集包含中文 CN 和英文 Global 两个子集，用于覆盖不同地区的法规、流程和业务语境。",
+        "任务由具有 5 至 15 年经验的从业者提供，并被拆分为细粒度评分考点。",
+        "评测采用包含重大错误扣分项的非对称评分机制，单项重大错误或逻辑缺陷可扣 20 分。",
+        "官方材料讨论的是处理数字化专业工作流的“数字员工”，应用包括代码生成、对话、网页检索及金融、法律等行业任务；未提供控制物理机器人、感知物理环境或执行具身动作的能力。"
+      ],
+      "metrics": [
+        {
+          "label": "任务规模",
+          "note": "官方发布页报告的高难度开放任务总数。",
+          "value": "400 道"
+        },
+        {
+          "label": "覆盖范围",
+          "note": "覆盖金融、法律、医疗、自然科学和工业。",
+          "value": "5 个领域、37 个二级类别、92 个三级类别"
+        },
+        {
+          "label": "标注与建设投入",
+          "note": "由资深专家参与构建。",
+          "value": "100 余位专家、超过 2,000 小时"
+        },
+        {
+          "label": "评分规模",
+          "note": "每题包含 15–35 个细粒度考点。",
+          "value": "累计超过 7,000 个考点"
+        },
+        {
+          "label": "报告结果",
+          "note": "官方称顶尖模型约创造 48 万美元价值，API 成本约 200 美元；以单题得分不低于 70% 为可交付标准时，最佳模型稳定交付约 45% 的任务。",
+          "value": "约 48 万美元；约 200 美元 API 成本；约 45% 任务通过率"
+        }
+      ],
+      "official_organization_url": "https://www.bigai.ai/",
+      "official_project_url": "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E5%8F%91%E5%B8%83%E8%A1%8C%E4%B8%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E5%87%86%EF%BC%8C%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E6%95%B0%E5%AD%97%E5%91%98%E5%B7%A5/",
+      "open_source": false,
+      "organization_en": "Beijing Institute for General Artificial Intelligence (BIGAI)",
+      "organization_kind": "Research Lab",
+      "organization_zh": "北京通用人工智能研究院",
+      "reason": "不收录：缺少条件 1 所要求的物理机器人或具身智能软件属性。官方页面将 $OneMillion-Bench 定义为评测金融、法律、医疗、自然科学和工业专家工作流的行业智能体基准，并将目标智能体描述为承担数字化复杂工作流的“数字员工”；其任务规划、工具调用、网页检索和多智能体协同均未与物理机器人控制、真实环境感知或物理动作执行建立联系。它属于通用 LLM/软件智能体评测，而不是 embodied-robotics 项目。另需纠正日期：候选信息填写的是 2026-03-01，但官方页面标注的发布日期是 2026-03-13。官方页面存在，且明确将北京通用人工智能研究院 TongAgents 团队列为发布方。([bigai.ai](https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E5%8F%91%E5%B8%83%E8%A1%8C%E4%B8%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E5%87%86%EF%BC%8C%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E6%95%B0%E5%AD%97%E5%91%98%E5%B7%A5/))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "$OneMillion-Bench 是北京通用人工智能研究院 TongAgents 团队发布的行业智能体评测基准，尝试用专家工时和市场时薪衡量 AI 完成真实专业工作的经济价值。它覆盖五个行业或学科领域，包含 400 道开放任务，并使用超过 7,000 个细粒度考点、地域化中英文子集和重大错误加重扣分机制评估模型输出。官方报告显示，顶尖模型能够取得约 48 万美元的折算价值，但在单题至少达到 70% 才算可交付的标准下，最佳模型只能稳定完成约 45% 的任务。该项目是具有明确官方页面、发布机构和量化结果的软件智能体基准，但测试对象是处理文档、知识、推理和业务流程的数字智能体，没有物理机器人接口、具身环境交互或动作控制内容，因此不符合本索引对 embodied-robotics 项目的核心限定。"
+    }
+  },
+  "lerobot-v0-4-4-3beadbb": {
+    "checked_at": "2026-08-11T10:15:19.693338+00:00",
+    "title": "LeRobot v0.4.4",
+    "accepted": true,
+    "reason": "收录。2026年2月27日发布的 LeRobot v0.4.4 是面向真实机器人和具身智能的软件版本，官方 GitHub Release 是可访问的专属发布页面；仓库和官方文档明确说明该框架由 Hugging Face 的 LeRobot 团队开发，提供机器人控制、数据集、策略训练、部署和仿真评估功能。该候选不是硬件产品公告，并以 Apache-2.0 许可证公开源代码。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在统一框架中完成真实机器人遥操作、数据记录、策略训练与部署",
+        "使用标准化 LeRobotDataset 管理同步视频、机器人状态和动作数据",
+        "在 LIBERO 仿真基准中按任务标识配置并评估机器人策略",
+        "集成 OpenArm、双臂 OpenArm 和 Unitree G1 等机器人及遥操作接口",
+        "通过数据集编辑工具修改任务、查看信息并聚合多级合并数据集"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Vision-language-action"
+      ],
+      "include": true,
+      "key_points": [
+        "LeRobot 是 Hugging Face 负责开发的开源端到端机器人学习软件框架，并非机器人硬件产品页；其软件覆盖真实机器人控制、数据采集、策略训练、推理和评估。",
+        "v0.4.4 为 LIBERO 环境配置加入任务标识，并更新 LIBERO 文档、状态特征处理和环境重置时的初始状态选择，强化基准任务的配置与复现实验流程。",
+        "该版本修复数据集聚合逻辑，使输入子数据集本身已由先前合并产生时仍可继续聚合；同时加入子任务支持、任务修改操作和数据集信息查看操作。",
+        "机器人与控制集成新增 OpenArm 机器人及遥操作器、双臂 OpenArm follower/leader 配置和 Unitree G1 遥操作，并更新 OMX 夹爪配置与校准设置。",
+        "底层执行接口增加 Damiao 电机与 CAN 总线、RobStride CAN 实现，扩展相机 API，并允许通过命令行选择相机后端。",
+        "数据管线增加流式视频编码与硬件编码器支持、改进图像变换，并修复嵌套数据集的 episode 过滤；强化学习部分补充末端位姿观测和夹爪惩罚配置，并修复 SAC 检查点恢复时的温度参数问题。"
+      ],
+      "metrics": [
+        {
+          "label": "正式版本",
+          "note": "官方 GitHub Release 标记的版本号。",
+          "value": "v0.4.4"
+        },
+        {
+          "label": "发布提交",
+          "note": "官方 Release 页面列出的对应提交短哈希。",
+          "value": "8fff0fd"
+        },
+        {
+          "label": "LIBERO 配置能力",
+          "note": "官方变更记录明确报告新增任务标识，并调整环境重置初始状态及状态特征处理。",
+          "value": "支持按 task ID 配置 LIBERO 任务"
+        },
+        {
+          "label": "机器人集成结果",
+          "note": "该版本变更记录明确列出新增的机器人及遥操作支持。",
+          "value": "新增 OpenArm、双臂 OpenArm 和 Unitree G1 遥操作集成"
+        },
+        {
+          "label": "数据编码结果",
+          "note": "官方变更记录未提供吞吐率数字，因此保留其准确的定性结果。",
+          "value": "支持流式视频编码与硬件编码器"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co/",
+      "official_project_url": "https://github.com/huggingface/lerobot/releases/tag/v0.4.4",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。2026年2月27日发布的 LeRobot v0.4.4 是面向真实机器人和具身智能的软件版本，官方 GitHub Release 是可访问的专属发布页面；仓库和官方文档明确说明该框架由 Hugging Face 的 LeRobot 团队开发，提供机器人控制、数据集、策略训练、部署和仿真评估功能。该候选不是硬件产品公告，并以 Apache-2.0 许可证公开源代码。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "LeRobot v0.4.4 是 Hugging Face 于2026年2月27日发布的机器人学习框架增量版本，重点改进 LIBERO 任务配置、复杂数据集聚合、数据编辑与视频编码管线，同时扩展 OpenArm、Unitree G1、电机、CAN 总线和相机接口。它延续 LeRobot 的统一端到端工作流，使开发者能够遥操作真实机器人、记录标准化视觉与状态/动作数据、训练机器人策略，并在仿真或实体平台上部署和评估。该版本的价值主要在工程集成、数据基础设施和实验可靠性，而不是发布新的独立基础模型或宣称新的基准分数。"
+    }
+  },
+  "omnixtreme-bigai-62d3f52": {
+    "checked_at": "2026-08-11T10:15:19.704850+00:00",
+    "title": "通研院、宇树提出首个攻克泛化壁垒的通用运动控制框架OmniXtreme：让机器人解锁“托马斯全旋”等极限动作 - 北京通用人工智能研究院BIGAI",
+    "accepted": false,
+    "reason": "Interim verification status; not the final eligibility decision.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方页面、软件属性、责任机构与发布日期，并会用项目材料交叉检查技术点和指标。该候选涉及运动控制框架，关键是确认它不是机器人硬件宣传页。Ongoing web verification; final verdict follows.",
+        "我会优先采用 BIGAI、宇树及项目/论文官方材料，避免用转载内容补齐无法确认的指标或隶属关系。Checking first-party evidence now.",
+        "正在整理可由原始材料直接支持的能力与结果，并区分“控制软件框架”本身和展示动作所用的机器人硬件。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Interim status only; web verification in progress.",
+        "候选日期为 2026-03-05，早于当前日期 2026-08-11，因此属于已发布候选；仍需核验页面实际发布日期。",
+        "Final structured dossier will replace this interim message.",
+        "No unsupported claims will be included."
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Beijing Institute for General Artificial Intelligence",
+      "organization_kind": "Research Lab",
+      "organization_zh": "北京通用人工智能研究院",
+      "reason": "Interim verification status; not the final eligibility decision.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在进行来源核验。"
+    }
+  },
+  "rho-alpha-c4aba6b": {
+    "checked_at": "2026-08-11T10:15:19.716338+00:00",
+    "title": "Rho-alpha",
+    "accepted": true,
+    "reason": "纳入。官方专页明确发布 Rho-alpha，并将其定义为面向实体机器人的 VLA+ 软件模型，而不是机器人硬件或产品规格页；页面说明其将自然语言转换为双臂操作控制信号、融合触觉感知，并提供 Research Early Access Program。微软研究院是明确责任机构。需要纠正候选日期：微软研究院的故事索引将该公告标为 2026 年 1 月 21 日，而不是所给的 2026 年 1 月 22 日。当前没有公开代码、模型权重或技术报告，官方仅称技术说明将在之后发布，因此 open_source=false，但这不影响资格。([microsoft.com](https://www.microsoft.com/en-us/research/microsoft-research-stories/?msockid=21f90e3a755c6330036018fc74d462d7&utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "将自然语言指令转换为双臂机器人控制信号",
+        "融合视觉、语言和触觉信息执行接触丰富的操作任务",
+        "控制配备触觉传感器的双 UR5e 机械臂完成插头插入与工具箱整理",
+        "接受操作员通过 3D 鼠标提供的实时纠正性引导"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Tactile intelligence",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Rho-alpha 是微软研究院从 Phi 视觉语言模型系列衍生出的首个机器人模型，官方将其描述为扩展传统 VLA 感知与学习模态的“VLA+”模型。([microsoft.com](https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/?msockid=23b440f0ac8d6e0f23975607ad036f72))",
+        "模型直接把自然语言命令转换为机器人控制信号，当前技术重点是需要两条机械臂协调执行的双臂操作任务。([microsoft.com](https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/?msockid=23b440f0ac8d6e0f23975607ad036f72))",
+        "感知侧在视觉和语言之外加入触觉输入；力觉仍处于计划扩展阶段，因此不能视为已经实现的输入模态。([microsoft.com](https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/?msockid=23b440f0ac8d6e0f23975607ad036f72))",
+        "训练采用联合训练方案，数据包括真实机器人示范轨迹、模拟任务轨迹以及网络规模的视觉问答数据，以获得带有视觉语言理解的触觉感知行为。([microsoft.com](https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/?msockid=23b440f0ac8d6e0f23975607ad036f72))",
+        "合成机器人轨迹由基于强化学习的多阶段流程生成，使用 NVIDIA Isaac Sim，并与商业数据集和公开的真实机器人示范数据集合并。([microsoft.com](https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/?msockid=23b440f0ac8d6e0f23975607ad036f72))",
+        "官方演示覆盖 BusyBox 交互、插头插入和工具箱整理；插头插入失败时，操作员可通过实时引导纠正机械臂。模型正在双臂平台和人形机器人上评估，但官方表示技术说明仍将在后续发布。([microsoft.com](https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/?msockid=23b440f0ac8d6e0f23975607ad036f72))"
+      ],
+      "metrics": [
+        {
+          "label": "BusyBox 官方演示指令",
+          "note": "官方页面逐项展示按钮、导线、开关、旋钮、整体旋转和滑块操作；视频按实时速度播放。",
+          "value": "6 项"
+        },
+        {
+          "label": "双 UR5e 官方演示任务指令",
+          "note": "包括插头插入，以及托盘放入工具箱和从工具箱取出托盘两种整理流程；视频按实时速度播放。",
+          "value": "3 项"
+        },
+        {
+          "label": "已公开评估平台类型",
+          "note": "官方明确称模型正在双臂装置和人形机器人上评估，但未公布成功率或基准分数。",
+          "value": "2 类"
+        },
+        {
+          "label": "触觉辅助插头插入结果",
+          "note": "模型控制双 UR5e 尝试将插头插入插座；右臂遇到困难后，由操作员提供实时引导完成纠正。",
+          "value": "已公开实机演示，未报告成功率"
+        },
+        {
+          "label": "工具箱整理结果",
+          "note": "官方展示了将托盘放入工具箱并关闭工具箱，以及取出托盘并放到桌面的实机过程。",
+          "value": "已公开实机演示，未报告成功率"
+        }
+      ],
+      "official_organization_url": "https://www.microsoft.com/en-us/research/",
+      "official_project_url": "https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/",
+      "open_source": false,
+      "organization_en": "Microsoft Research",
+      "organization_kind": "Research Lab",
+      "organization_zh": "微软研究院",
+      "reason": "纳入。官方专页明确发布 Rho-alpha，并将其定义为面向实体机器人的 VLA+ 软件模型，而不是机器人硬件或产品规格页；页面说明其将自然语言转换为双臂操作控制信号、融合触觉感知，并提供 Research Early Access Program。微软研究院是明确责任机构。需要纠正候选日期：微软研究院的故事索引将该公告标为 2026 年 1 月 21 日，而不是所给的 2026 年 1 月 22 日。当前没有公开代码、模型权重或技术报告，官方仅称技术说明将在之后发布，因此 open_source=false，但这不影响资格。([microsoft.com](https://www.microsoft.com/en-us/research/microsoft-research-stories/?msockid=21f90e3a755c6330036018fc74d462d7&utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Rho-alpha（ρα）是微软研究院于 2026 年 1 月 21 日公布的实体机器人模型，也是其首个从 Phi 视觉语言模型家族衍生的机器人模型。它面向双臂操作，将自然语言任务指令映射为机器人控制信号，并通过触觉输入扩展传统视觉语言动作模型的感知范围。其训练数据由真实机器人示范、Isaac Sim 中通过强化学习生成的合成轨迹和网络规模视觉问答数据共同组成。官方已展示模型控制双 UR5e 机械臂执行 BusyBox 交互、插头插入和工具箱整理，并展示了通过 3D 鼠标实施实时人工纠正的工作流。Rho-alpha 目前通过研究早期访问计划接受合作评估，并在双臂装置和人形机器人上测试；公开页面尚未给出模型规模、任务成功率、基准成绩、代码或权重。"
+    }
+  },
+  "ai-tongsim-huggingface-bigai-5a40d32": {
+    "checked_at": "2026-08-11T10:15:19.728171+00:00",
+    "title": "通研院AI“全能物理空间训练场”TongSIM开源上线，两天登上Huggingface热度趋势榜单第一名 - 北京通用人工智能研究院BIGAI",
+    "accepted": false,
+    "reason": "正在进行来源核验，尚未形成最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方发布页、软件属性、负责机构与可复核指标。重点会区分 TongSIM 仿真平台本身和任何配套机器人硬件。可能需要几次页面检索。也会检查官方页链接出的项目材料，避免把媒体转述或无法验证的榜单数据当成技术指标。",
+        "检索完成后将严格按纳入条件输出结构化结论；任何无法由可访问来源支持的字段会留空或明确说明。",
+        "我先从 BIGAI 官方公告入手，再追踪其官方代码库、项目页和技术材料，以确认发布日期、功能范围与准确指标。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "待核验官方软件项目证据。",
+        "待核验机构归属。",
+        "待核验技术点和指标。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在进行来源核验，尚未形成最终结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 TongSIM 是否满足严格索引的全部条件。"
+    }
+  },
+  "vitra-d321807": {
+    "checked_at": "2026-08-11T10:15:19.740097+00:00",
+    "title": "VITRA",
+    "accepted": true,
+    "reason": "符合收录条件。VITRA于2025年发布论文与专属官方项目页，并于2025年11月30日公开代码、预训练模型和数据集。其核心发布物是面向真实机器人操作的VLA预训练系统、数据转换引擎、模型、数据集及训练和推理工具，而非机器人硬件产品；官方项目页明确列出微软亚洲研究院为主要责任机构，部分作者同时来自清华大学。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "将无标注、非脚本化的第一人称人类活动视频自动转换为机器人对齐的图像、语言指令和三维动作训练样本",
+        "根据自然语言指令，从未见过的第一人称场景图像中进行零样本人手三维动作预测",
+        "使用少量真实机器人遥操作轨迹微调，并部署到多指灵巧手执行物理操作任务",
+        "执行通用抓取放置、功能性抓取、倒水、清扫以及连续多指令任务",
+        "将视觉语言模型对名人、地标、文字、形状、尺寸等概念的视觉理解迁移到三维动作生成"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "VITRA把人手视为灵巧机器人的末端执行器，通过深度估计、相机位姿跟踪和三维手部重建，恢复逐帧腕部平移、旋转、手指关节姿态以及相机运动。",
+        "数据引擎依据三维手部轨迹中的速度局部极小值切分连续长视频，将非脚本化活动自动分解为适合机器人策略训练的原子级短任务。",
+        "系统把重建的三维手部轨迹叠加到视频画面中，再利用视觉语言模型生成与动作和目标物体对应的语言指令，形成机器人兼容的图像、指令、动作三元组。",
+        "VITRA-VLA-3B以PaliGemma 2为基础，加入因果动作Transformer；因果注意力限制当前动作只能关注此前时刻，降低片段不完整、末尾零填充和无意义动作噪声造成的训练污染。",
+        "项目统一人手与机器人手的相机坐标系、末端位姿和关节动作表示，并提供XHand与人手自由度映射及自定义机器人数据加载接口，用于跨形态微调和真实部署。",
+        "官方发布物包括预训练模型、VITRA-1M数据集、训练与推理代码、单图零样本推理工具，以及后续发布的真实机器人遥操作微调数据。",
+        "真实机器人实验覆盖通用抓取放置、功能性抓取、倒水和清扫等任务，并测试了新物体、新形状以及训练中未出现的物体类别。"
+      ],
+      "metrics": [
+        {
+          "label": "预训练模型规模",
+          "note": "官方模型仓库列出的VITRA-VLA-3B参数量。",
+          "value": "3B parameters"
+        },
+        {
+          "label": "公开数据集规模",
+          "note": "VITRA-1M由Ego4D cooking and cleaning、Ego4D other、EPIC、EgoExo4D和Something-Something V2子集组成。",
+          "value": "1,222,918 episodes"
+        },
+        {
+          "label": "视频帧规模",
+          "note": "官方项目页对预训练数据的报告值。",
+          "value": "26 million frames"
+        },
+        {
+          "label": "少样本机器人适配",
+          "note": "微软研究院官方文章称，使用约1000条遥操作样本微调后，四类灵巧操作任务的平均成功率由未进行人类视频预训练时的30%-40%提升至70%以上，抓取放置任务超过80%。",
+          "value": "~1,000 samples; >70% average success; >80% pick-and-place"
+        },
+        {
+          "label": "未见物体泛化",
+          "note": "微软研究院官方文章报告，在新保温杯、异形玩具等训练中未见物体上仍保持约70%的成功率。",
+          "value": "approximately 70% success"
+        }
+      ],
+      "official_organization_url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/",
+      "official_project_url": "https://microsoft.github.io/VITRA/",
+      "open_source": true,
+      "organization_en": "Microsoft Research Asia",
+      "organization_kind": "Research Lab",
+      "organization_zh": "微软亚洲研究院",
+      "reason": "符合收录条件。VITRA于2025年发布论文与专属官方项目页，并于2025年11月30日公开代码、预训练模型和数据集。其核心发布物是面向真实机器人操作的VLA预训练系统、数据转换引擎、模型、数据集及训练和推理工具，而非机器人硬件产品；官方项目页明确列出微软亚洲研究院为主要责任机构，部分作者同时来自清华大学。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "VITRA是微软亚洲研究院主导的机器人操作VLA预训练项目，目标是绕开真实机器人数据采集在成本、速度和场景多样性上的限制，把互联网规模的人类第一人称活动视频转化为机器人可直接利用的结构化训练数据。其自动化管线先恢复逐帧三维手部与相机运动，再依据运动速度变化切分原子动作，并结合可视化的三维轨迹生成语言指令。项目据此构建VITRA-1M并训练3B参数的灵巧手VLA模型，通过因果动作Transformer处理不完整片段、填充和动作噪声。预训练模型既能在未见场景中根据指令生成三维人手动作，也可通过少量遥操作轨迹适配真实多指机器人手；官方实验报告显示，约1000条机器人样本即可把四类任务的平均成功率提升到70%以上，并在未见物体上保持约70%的成功率。项目公开了模型、数据、训练代码、推理工具和机器人适配接口，属于完整的软件与数据发布。"
+    }
+  },
+  "lerobot-v0-4-2-c8bcef6": {
+    "checked_at": "2026-08-11T10:15:19.752244+00:00",
+    "title": "LeRobot v0.4.2",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方发布页、项目归属和版本说明中的可量化结果。候选日期与软件属性会按严格条件分别确认。​shape_type_desc_blocked",
+        "目前提供的候选日期为 2025-11-27；我会以 GitHub 官方 Release 的实际发布时间为准，并只采用 Hugging Face 官方仓库与文档能够支撑的技术信息。​shape_type_desc_blocked",
+        "若官方材料没有给出可靠数值，我会保留准确的定性能力描述，不补造性能指标。​shape_type_desc_blocked"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "核验中。",
+        "核验中。",
+        "核验中。",
+        "核验中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "dyna-1-pre-training-zero-shot-dexterity-is-here-76e4162": {
+    "checked_at": "2026-08-11T10:15:19.764121+00:00",
+    "title": "DYNA-1 Pre-Training: Zero-Shot Dexterity Is Here",
+    "accepted": true,
+    "reason": "收录。官方独立研究页面明确发布DYNA-1预训练基础模型的软件能力，内容聚焦用于物理机器人的灵巧操作、零样本环境泛化和少量示范微调，而非机器人本体或硬件规格；责任主体明确为DYNA Robotics/Dyna Team。官方页面将发布日期标为2025年11月，因此满足2025年起发布的时间条件。候选资料给出的2025年11月20日未在可访问官方页面中得到精确确认，故不将该日作为已核实事实。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "无需任务特定后训练，基础模型即可执行洗衣折叠与包裹分拣等灵巧操作。",
+        "可在没有环境特定训练数据的未见环境中执行预训练技能。",
+        "可用约一小时示范数据快速微调新的复杂操作任务。",
+        "已实现杯子堆叠、切芹菜、早餐制作和餐垫准备等下游任务。",
+        "支持长时程双臂操作中的状态识别、错误恢复与连续任务执行。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是DYNA Robotics针对DYNA-1机器人基础模型预训练能力发布的官方研究更新；其专门页面明确将基础模型而非机器人硬件作为发布主体。",
+        "更新后的基础模型直接从预训练中获得洗衣折叠、包裹分拣等多任务灵巧操作能力，不使用任务特定微调或目标环境数据。",
+        "项目强调动作侧与感知侧的联合泛化：模型不仅要识别未见场景，还需在长时程操作中产生精细动作并处理动作后果。",
+        "同一预训练基础可通过少量示范快速适配新任务；官方以杯子堆叠、切芹菜、早餐制作和餐垫准备作为早期压力测试。",
+        "关联的DYNA-1技术页面将其描述为面向真实机器人操作的基础模型，并说明其训练体系使用可估计任务进度的机器人奖励模型，支持自主探索、主动错误恢复和训练数据生成。",
+        "对于连续部署中缺少自然回合边界的数据，DYNA还实现了流式数据自动分段、任务进度估计和子任务标注机制，用于改善模型的任务理解与持续训练。",
+        "该更新是闭源商业研发成果：官方公开了任务、结果和演示，但未提供模型权重、训练代码、数据集或开源许可证。"
+      ],
+      "metrics": [
+        {
+          "label": "新任务微调成功率",
+          "note": "官方称在具有挑战性的新任务上可达到大约100%成功率。",
+          "value": "约100%"
+        },
+        {
+          "label": "所需示范数据",
+          "note": "达到上述高可靠性微调结果所需的最少示范数据量。",
+          "value": "约1小时"
+        },
+        {
+          "label": "零样本任务后训练量",
+          "note": "洗衣折叠和包裹分拣等基础模型能力不使用任务特定后训练。",
+          "value": "0"
+        },
+        {
+          "label": "早期微调压力测试任务",
+          "note": "官方列出的任务为杯子堆叠、切芹菜、早餐制作和餐垫准备。",
+          "value": "4项"
+        },
+        {
+          "label": "关联DYNA-1连续运行结果",
+          "note": "关联官方技术页面报告：24小时自主折叠850多张餐巾，成功率99.4%，约为人类折叠速度的60%，且无需人工干预。",
+          "value": "24小时；850+张；99.4%；约60%人类速度"
+        }
+      ],
+      "official_organization_url": "https://www.dyna.co/",
+      "official_project_url": "https://www.dyna.co/research/pre-training",
+      "open_source": false,
+      "organization_en": "DYNA Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。官方独立研究页面明确发布DYNA-1预训练基础模型的软件能力，内容聚焦用于物理机器人的灵巧操作、零样本环境泛化和少量示范微调，而非机器人本体或硬件规格；责任主体明确为DYNA Robotics/Dyna Team。官方页面将发布日期标为2025年11月，因此满足2025年起发布的时间条件。候选资料给出的2025年11月20日未在可访问官方页面中得到精确确认，故不将该日作为已核实事实。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DYNA-1 Pre-Training是DYNA Robotics于2025年11月公布的机器人基础模型预训练更新。官方报告称，新基础模型能够在无需任务特定后训练和环境特定数据的条件下，直接完成洗衣折叠、包裹分拣等真实双臂灵巧操作，并可迁移到未见环境。对于预训练尚不能直接解决的新任务，同一基础模型可用约一小时示范数据快速微调；杯子堆叠、切芹菜、早餐制作和餐垫准备被用作早期压力测试，报告成功率约为100%。关联技术材料显示，DYNA-1体系结合机器人奖励模型进行任务进度估计，支持自主探索、错误恢复以及部署数据的生成、自动分段和子任务标注。项目属于面向商业连续运行的闭源VLA/机器人基础模型研发成果，官方未公开权重、代码或训练数据。"
+    }
+  },
+  "lerobot-v0-4-3-ba9beba": {
+    "checked_at": "2026-08-11T10:15:19.776092+00:00",
+    "title": "LeRobot v0.4.3",
+    "accepted": false,
+    "reason": "尚在核验中，暂不作最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方发布页、项目归属、软件性质、发布日期及版本变更，并只采用官方或项目直接链接材料中的技术事实。由于候选日期与当前日期接近，我也会确认该标签是否真实存在及其发布时间。",
+        "随后将按严格收录条件输出结构化结论；无法从可访问来源确认的指标或社交证据会留空，不作推测。",
+        "正在检索 Hugging Face 与 LeRobot 官方材料。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "状态更新：开始核验。",
+        "重点检查：v0.4.3 是否为面向实体机器人的软件发布，以及官方页面能否支持所给日期和摘要。",
+        "最终结论将在检索完成后给出。",
+        "不会把 GitHub 星标、下载量或未经官方材料说明的性能数字当作项目技术指标。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在使用官方网页材料核验候选信息",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/huggingface/lerobot/releases/tag/v0.4.3",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "尚在核验中，暂不作最终收录判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 LeRobot v0.4.3 的官方发布记录与技术内容。"
+    }
+  },
+  "lerobot-v0-4-1-f8000da": {
+    "checked_at": "2026-08-11T10:15:19.787982+00:00",
+    "title": "LeRobot v0.4.1",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终收录结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方发布页、组织归属、发布日期，以及该版本实际交付的软件能力。之后会按严格收录条件给出结构化结论。Support official release, organization, date, software scope.",
+        "重点检查 EnvHub、数据集编辑/访问、策略构建和 LIBERO 集成是否在官方材料中有明确实现依据，并只摘录可验证的指标。Verify implementation evidence and exact reported results only.",
+        "同时确认候选提供的 2025-11-10 日期是否与 GitHub 官方发布记录一致，避免沿用未经证实的元数据。Check supplied date against official release metadata."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "等待官方证据核验。",
+        "不以 arXiv 单独作为项目证据。",
+        "不猜测指标或链接。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/huggingface/lerobot/releases/tag/v0.4.1",
+      "open_source": true,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终收录结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在根据官方发布页和相关官方材料核验 LeRobot v0.4.1。"
+    }
+  },
+  "sima-2-a-gemini-powered-ai-agent-for-3d-virtual--61dd0c4": {
+    "checked_at": "2026-08-11T10:15:19.799960+00:00",
+    "title": "SIMA 2: A Gemini-Powered AI Agent for 3D Virtual Worlds — Google DeepMind",
+    "accepted": false,
+    "reason": "不纳入。虽然 SIMA 2 是由 Google DeepMind 负责、具有官方专页和技术报告的软件智能体项目，但其已实现的作用域是电子游戏、研究游戏环境及 Genie 3 生成的虚拟三维世界；它通过屏幕画面和虚拟键盘、鼠标行动，没有控制、训练或评测物理机器人。官方仅称该研究对未来机器人技术具有潜在意义，这不足以满足“面向物理机器人或物理具身智能的软件”这一必要条件。另需纠正候选信息：官方页面的发布日期是 2025 年 11 月 13 日，并非 2025 年 11 月 1 日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "理解自然语言、草图、表情符号及多语言形式的多模态任务指令",
+        "通过屏幕视觉输入和虚拟键盘、鼠标控制在交互式三维环境中执行目标导向动作",
+        "在未参与训练的 ASKA、MineDojo 以及 Genie 3 生成环境中进行零样本导航与任务尝试",
+        "围绕当前目标和环境进行推理，并向用户说明行动意图与执行步骤",
+        "利用自生成经验、试错行为和 Gemini 反馈迭代训练后续智能体"
+      ],
+      "fields": [
+        "Embodied AI",
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "SIMA 2 将 Gemini 模型置于智能体核心，使系统由基础指令跟随扩展到目标理解、复杂推理、用户对话和行动规划。",
+        "训练数据混合了带语言标注的人类演示视频和 Gemini 生成的标签；智能体据此学习从视觉观察与指令映射到虚拟键盘、鼠标动作。",
+        "系统通过普通屏幕画面观察环境，不读取游戏内部状态或机制，并使用与人类玩家类似的虚拟控制接口执行动作。",
+        "官方展示了跨环境泛化：SIMA 2 能将在一个游戏中学到的概念迁移到另一个游戏，并在训练阶段未见过的 ASKA 与 MineDojo 中完成部分任务。",
+        "除文本外，SIMA 2 可理解屏幕草图、不同语言和表情符号，并能处理抽象概念、逻辑命令以及较长的复合任务。",
+        "其自我改进流程由 Gemini 提供初始任务和行为奖励估计，将智能体产生的经验加入训练数据，再用于训练后续版本；官方称该流程可在没有新增人类演示的情况下改进先前失败的任务。",
+        "该项目仅面向虚拟三维世界。官方将机器人应用描述为未来方向，并明确区分了当前虚拟环境能力与未来物理具身，因此没有证据表明该发布物能够控制或评测物理机器人。"
+      ],
+      "metrics": [
+        {
+          "label": "前代技能规模",
+          "note": "官方页面用于说明 SIMA 系列基础能力；该数字描述第一代 SIMA，而非 SIMA 2 的独立评测成绩。",
+          "value": "SIMA 1 学习了超过 600 项语言跟随技能"
+        },
+        {
+          "label": "未见游戏泛化",
+          "note": "官方展示 SIMA 2 在训练期间未见过的两个环境中执行任务，但正文没有给出可可靠转录的精确成功率。",
+          "value": "在 ASKA 和 MineDojo 上进行 held-out 评测"
+        },
+        {
+          "label": "生成世界适应能力",
+          "note": "与 Genie 3 联合测试时，系统能够在新生成且此前未见的世界中确定方向、理解指令并采取面向目标的行动。",
+          "value": "支持在 Genie 3 实时生成的三维世界中行动"
+        },
+        {
+          "label": "无新增人类数据的学习",
+          "note": "官方报告智能体可在新游戏中转向自导向游戏，并用自身经验训练下一代版本。",
+          "value": "可在不增加人类生成演示或游戏数据的情况下改进先前失败的任务"
+        },
+        {
+          "label": "发布范围",
+          "note": "并非公开发布的模型或通用软件包。",
+          "value": "有限研究预览，仅向少量学者和游戏开发者提供早期访问"
+        }
+      ],
+      "official_organization_url": "https://deepmind.google/",
+      "official_project_url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
+      "open_source": false,
+      "organization_en": "Google DeepMind",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "不纳入。虽然 SIMA 2 是由 Google DeepMind 负责、具有官方专页和技术报告的软件智能体项目，但其已实现的作用域是电子游戏、研究游戏环境及 Genie 3 生成的虚拟三维世界；它通过屏幕画面和虚拟键盘、鼠标行动，没有控制、训练或评测物理机器人。官方仅称该研究对未来机器人技术具有潜在意义，这不足以满足“面向物理机器人或物理具身智能的软件”这一必要条件。另需纠正候选信息：官方页面的发布日期是 2025 年 11 月 13 日，并非 2025 年 11 月 1 日。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "SIMA 2 是 Google DeepMind 于 2025 年 11 月 13 日公布的通用虚拟具身智能体。它以 Gemini 为推理核心，通过屏幕视觉观察商业游戏、研究环境和生成式三维世界，再使用虚拟键盘与鼠标执行动作。与早期以短指令跟随为主的 SIMA 相比，SIMA 2 可以解析高层目标和更长的复合指令，围绕环境与自身行为进行推理，与用户对话并解释计划；输入形式还覆盖自然语言、不同语言、草图和表情符号。训练结合带语言标签的人类演示视频与 Gemini 生成标签，后续实验还采用由 Gemini 提供任务和奖励估计、自主游戏产生经验、再训练下一代智能体的迭代式自我改进流程。官方展示了它在未参加训练的 ASKA、MineDojo 以及 Genie 3 新生成世界中的泛化和适应能力，同时承认其仍受限于短交互记忆、超长时域任务、精细低层控制和复杂场景视觉理解。尽管项目属于虚拟具身 AI，并被官方视为通向未来机器人应用的研究基础，但当前发布物没有面向物理机器人的实现或验证，因而不符合本索引的物理机器人软件门槛。"
+    }
+  },
+  "a-vla-that-learns-from-experience-dd4ff94": {
+    "checked_at": "2026-08-11T10:15:19.811802+00:00",
+    "title": "A VLA that Learns from Experience",
+    "accepted": true,
+    "reason": "纳入。官方公司项目页和配套技术报告均可访问，明确责任组织为 Physical Intelligence，并明确发布对象是面向真实机器人的 π*₀.₆ VLA 与 RECAP 强化学习方法，满足具身机器人软件、明确组织和专门官方页面三项要求；它不是硬件产品页。未发现官方页面提供 π*₀.₆ 模型权重或 RECAP 实现代码的开放发布，因此 open_source=false。官方发布日期是 2025 年 11 月 17 日，而不是候选记录中的 2025 年 11 月 1 日。([pi.website](https://www.pi.website/blog/pistar06))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过视觉、语言指令与连续机器人动作完成长时程真实世界操作任务",
+        "利用示范、机器人自主执行轨迹、奖励反馈和专家实时纠正共同训练策略",
+        "通过价值函数估计任务进展，并以价值变化形成优势信号来提取改进后的策略",
+        "执行浓缩咖啡制作、多样衣物折叠以及包装箱组装与贴标等复杂操作",
+        "处理抓取偏差、物品粘连、装配返工、不同织物动力学等执行错误和环境变化"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Physical Intelligence 于 2025 年 11 月 17 日发布的官方软件项目；候选资料所写的 2025 年 11 月 1 日与官方发布日期不符。官方页面明确将 π*₀.₆ 定义为经过强化学习训练的 VLA，而非机器人硬件产品。([pi.website](https://www.pi.website/blog/pistar06))",
+        "项目提出 RECAP，即 RL with Experience & Corrections via Advantage-conditioned Policies，把初始示范、机器人自主执行、奖励反馈和专家遥操作纠正组合进同一套真实机器人学习流程。([pi.website](https://www.pi.website/blog/pistar06))",
+        "训练流程首先通过离线强化学习预训练通用 π*₀.₆，随后用目标任务示范进行微调，再利用真实机器人上的自主轨迹与人工干预数据迭代优化策略和价值函数。([pi.website](https://www.pi.website/blog/pistar06))",
+        "RECAP 的信用分配机制训练价值函数预测当前状态相对于任务完成的进展；相邻状态的价值变化被用作优势信号，策略在训练时接收动作质量条件，并在推理时被要求生成高优势动作。([pi.website](https://www.pi.website/blog/pistar06))",
+        "π₀.₆ 的基础架构采用 50 亿参数视觉语言模型并增加动作专家，支持文本命令以及执行质量、目标优势等异构条件输入。([pi.website](https://www.pi.website/blog/pistar06))",
+        "官方实验覆盖专业咖啡机上的浓缩咖啡制作、真实住宅中的多样衣物折叠，以及真实工厂场景中的包装箱组装、贴标和堆放；评估同时报告单位小时成功完成量和成功率。([pi.website](https://www.pi.website/blog/pistar06?utm_source=openai))",
+        "该系统仍依赖人工奖励标注、专家干预和任务环境重置，并采用分批收集数据后重新训练的迭代式离线更新，而不是完全自主、并发的在线强化学习。([pi.website](https://www.pi.website/download/pistar06.pdf))"
+      ],
+      "metrics": [
+        {
+          "label": "困难任务吞吐量提升",
+          "note": "加入真实机器人自主经验后，多样衣物折叠和浓缩咖啡任务的每小时成功完成量均提升至原来的两倍以上。",
+          "value": ">2×"
+        },
+        {
+          "label": "失败率降低",
+          "note": "在困难任务上，RECAP 将失败率降低约一半；官方项目页表述为可降低 2 倍或更多。",
+          "value": "约2×"
+        },
+        {
+          "label": "最终模型成功率",
+          "note": "除多样衣物折叠外，最终 π*₀.₆ 在其余评估任务上的成功率均达到 90% 以上。",
+          "value": "90%+"
+        },
+        {
+          "label": "特定衣物失败模式消除",
+          "note": "在要求 T 恤衣领居中且朝上的严格折叠测试中，两轮 RECAP、每轮收集 600 条轨迹后达到的成功率。",
+          "value": "97%"
+        },
+        {
+          "label": "连续真实部署演示",
+          "note": "官方连续演示包括从 5:30 至 23:30 制作多种咖啡、在新住宅折叠 50 件未见衣物，以及在真实工厂组装并贴标 59 个巧克力包装箱。",
+          "value": "18小时；50件衣物；59个箱子"
+        }
+      ],
+      "official_organization_url": "https://www.pi.website/",
+      "official_project_url": "https://www.pi.website/blog/pistar06",
+      "open_source": false,
+      "organization_en": "Physical Intelligence",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。官方公司项目页和配套技术报告均可访问，明确责任组织为 Physical Intelligence，并明确发布对象是面向真实机器人的 π*₀.₆ VLA 与 RECAP 强化学习方法，满足具身机器人软件、明确组织和专门官方页面三项要求；它不是硬件产品页。未发现官方页面提供 π*₀.₆ 模型权重或 RECAP 实现代码的开放发布，因此 open_source=false。官方发布日期是 2025 年 11 月 17 日，而不是候选记录中的 2025 年 11 月 1 日。([pi.website](https://www.pi.website/blog/pistar06))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "π*₀.₆ 是 Physical Intelligence 在 π₀.₆ 通用视觉-语言-动作模型基础上，通过 RECAP 方法训练得到的真实机器人策略。其核心目标是突破纯模仿学习在闭环物理交互中容易产生误差累积的问题：机器人先从示范获得基本技能，再由专家在实际执行出错时进行遥操作纠正，最后利用自主执行的成功与失败经验进行强化学习。RECAP 训练价值函数来估计任务进展，并把价值变化转换为优势条件，使 VLA 能同时利用好动作和坏动作的数据，同时在部署时偏向高优势行为。基础 π₀.₆ 使用 50 亿参数视觉语言模型和动作专家，并可接收文本指令、目标执行质量与动作优势等异构条件。项目在专业咖啡制作、多样衣物折叠和工业包装箱装配三类长时程任务上进行了真实机器人验证，报告困难任务吞吐量超过翻倍、失败率约减半，并展示了持续数小时的不中断执行。该工作属于面向物理机器人的 VLA、操作策略与强化学习训练系统，而不是机器人本体或硬件规格发布。"
+    }
+  },
+  "intrinsic-vision-model-a823cb6": {
+    "checked_at": "2026-08-11T10:15:19.824176+00:00",
+    "title": "Intrinsic Vision Model",
+    "accepted": true,
+    "reason": "收录。该候选是由Intrinsic明确负责并于2025年10月27日正式介绍的工业机器人感知基础模型，属于面向实体机器人和工业自动化的软件项目，不是硬件产品。Intrinsic现有独立官方项目页，说明其CAD原生零样本检测、6D位姿估计、跟踪、分割和点云生成能力；官方3PT研究页进一步披露了IVM架构及实体机器人验证。公开材料未表明IVM本身以开源许可证发布，因此open_source记为false。([intrinsic.ai](https://www.intrinsic.ai/blog/posts/enabling-the-next-generation-developer-ecosystem-for-intelligent-robotics))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于3D CAD模型提示，对新零件执行零样本目标检测与定位",
+        "使用普通RGB相机进行多视角、亚毫米级6D位姿估计",
+        "执行对象分割、跟踪与点云生成等工业感知任务",
+        "支持料箱拣选、精密装配和紧配合插入等实体机器人应用",
+        "适应不同照明、材质及包含反光或透明物体的工业环境"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "IVM是面向工业机器人的感知基础模型，而非相机或机器人硬件产品；其输出服务于目标定位、抓取、料箱拣选和精密插入等实体机器人流程。",
+        "模型采用不断扩展的专用感知Transformer集合，覆盖目标检测、6D位姿估计、分割、跟踪和点云生成。",
+        "系统以3D CAD模型作为原生提示：模型直接学习和推理CAD几何，使新零件无需逐对象训练或微调即可投入感知流程。",
+        "其架构结合多视角、像素级推理；后续公开的3PT架构材料还说明，系统通过迭代渲染比较、极线匹配和核密度估计融合不同视角，以消除视觉歧义并形成一致的三维估计。",
+        "IVM仅依赖标准RGB图像即可进行高精度感知，避免高端深度传感器在反光表面、透明材料或强烈光照条件下可能产生的深度伪影。",
+        "官方材料将其用于现实工业任务，包括无夹具紧配合插入、DIMM插入以及密集薄板零件的料箱清空，并报告了超过100次可重复的现实任务成功尝试。",
+        "Intrinsic于2025年10月27日正式介绍IVM，并提供独立官方项目页；2026年的官方3PT项目页进一步公开了其核心架构和机器人任务验证结果。"
+      ],
+      "metrics": [
+        {
+          "label": "BOP/ICCV 2025排名",
+          "note": "覆盖工业、家居及增强现实类别，包括边界框检测赛道。",
+          "value": "11个类别中获得7个第一名"
+        },
+        {
+          "label": "工业基准改进",
+          "note": "Intrinsic官方项目页报告的BOP工业挑战结果。",
+          "value": "毫米级位姿精度提升12%，检测性能提升16%"
+        },
+        {
+          "label": "零训练位姿估计",
+          "note": "相对于此前零训练方法；官方称结果也超过了需要完整训练的方法。",
+          "value": "工业位姿估计提升29%，增强现实位姿估计提升14%"
+        },
+        {
+          "label": "感知精度与相机成本",
+          "note": "使用约500至1,000美元的标准RGB相机，而非专业深度感知系统。",
+          "value": "亚毫米精度；硬件成本降低约5至20倍"
+        },
+        {
+          "label": "现实机器人验证",
+          "note": "3PT官方项目页报告DIMM视觉插入和密集薄板料箱拣选测试。",
+          "value": "超过100次成功且可重复的现实尝试；DIMM插入间隙0.57毫米；清理100多个密集薄板零件"
+        }
+      ],
+      "official_organization_url": "https://www.intrinsic.ai/",
+      "official_project_url": "https://www.intrinsic.ai/intrinsic-vision-model",
+      "open_source": false,
+      "organization_en": "Intrinsic",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该候选是由Intrinsic明确负责并于2025年10月27日正式介绍的工业机器人感知基础模型，属于面向实体机器人和工业自动化的软件项目，不是硬件产品。Intrinsic现有独立官方项目页，说明其CAD原生零样本检测、6D位姿估计、跟踪、分割和点云生成能力；官方3PT研究页进一步披露了IVM架构及实体机器人验证。公开材料未表明IVM本身以开源许可证发布，因此open_source记为false。([intrinsic.ai](https://www.intrinsic.ai/blog/posts/enabling-the-next-generation-developer-ecosystem-for-intelligent-robotics))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Intrinsic Vision Model（IVM）是Intrinsic面向工业机器人推出的CAD原生感知基础模型。它以3D CAD文件作为对象提示，通过专用Transformer和多视角像素级推理，在无需针对新零件进行任务特定训练的情况下完成检测、分割、跟踪、点云生成及6D位姿估计。官方报告其仅用标准RGB相机即可达到亚毫米级精度，并能处理变化光照、反光和透明材料等工业场景。IVM在ICCV/BOP 2025的11个类别中取得7项第一；其公开的3PT架构还展示了0.57毫米间隙DIMM插入和密集薄板料箱拣选等现实机器人任务。该项目具有明确的软件主体、负责公司、2025年发布日期和独立官方项目页面，符合索引条件。"
+    }
+  },
+  "project-eluna-ac61ce6": {
+    "checked_at": "2026-08-11T10:15:19.837253+00:00",
+    "title": "Project Eluna",
+    "accepted": true,
+    "reason": "纳入。Project Eluna 于 2025 年 10 月 22 日由亚马逊官方发布，是面向真实履约中心的智能体 AI 软件；它处理输送带、机器人及其他设施的实时和历史状态，在物理运营约束下预测瓶颈并向现场运营人员提出行动建议。虽然它不直接构成机器人硬件，也没有公开证据表明其直接控制机器人，但官方将其归入面向物理世界的 AI，并明确披露了真实仓库试点、机器人状态输入和实体运营优化任务，符合“具身智能软件”条件。官方未宣布开放源代码，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "融合履约中心内的历史数据与实时运行数据，包括输送带和机器人状态",
+        "对复杂仓内运营态势进行自主推理，并提前识别分拣流程中的潜在瓶颈",
+        "通过自然语言接收运营人员的问题，返回有数据依据的资源调配建议",
+        "辅助运营经理优化分拣、人员配置及异常处置决策",
+        "在云端运行，并通过数字化仪表板支持真实履约中心的运营管理"
+      ],
+      "fields": [
+        "Embodied AI",
+        "LLM",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "Project Eluna 是亚马逊面向实体履约中心的智能体 AI 软件，而不是与其同期发布的 Blue Jay 机器人硬件；官方将其描述为能够以一定自主程度分析复杂运营状况并提出行动建议的模型。",
+        "系统部署在云端，通过数字仪表板与运营人员交互，主要作用是把原本分散在多个运营看板中的信息转化为自然语言洞察和可执行建议。",
+        "其输入同时覆盖历史数据和建筑内实时数据；Amazon Science 进一步明确列举了输送带状态、机器人状态等与物理设施直接相关的信息。",
+        "Eluna 的推理目标受到仓库物理规律与运营约束的约束，用于预判瓶颈、维持履约流程顺畅，而非仅执行通用文本问答。",
+        "运营人员可以询问应将人员转移到何处以避免瓶颈，系统据此给出数据支持的资源重新配置建议。",
+        "首个公开试点位于美国田纳西州的一座履约中心，初始应用任务是节日购物季期间的分拣优化。",
+        "官方材料还提出后续应用方向，包括预防性安全措施、符合人体工学的员工轮岗规划以及维护计划改进，但未公布这些方向的量化验证结果。"
+      ],
+      "metrics": [
+        {
+          "label": "首个公开部署范围",
+          "note": "官方公告称 Project Eluna 将在该站点首先用于分拣优化。",
+          "value": "美国田纳西州一座履约中心"
+        },
+        {
+          "label": "初始上线时期",
+          "note": "这是官方发布时披露的试点时间范围，而非完整商业部署日期。",
+          "value": "2025 年节日购物季"
+        },
+        {
+          "label": "运营信息整合结果",
+          "note": "官方称系统旨在减少运营经理同时监控大量独立界面的认知负担。",
+          "value": "将原本需要监控的数十个仪表板转化为自然语言、数据支持的建议"
+        },
+        {
+          "label": "已报告的核心能力结果",
+          "note": "官方未发布准确率、吞吐量、延迟或成本改善数字，因此保留其明确报告的定性结果。",
+          "value": "利用历史和实时设施数据预判运营瓶颈，并向操作人员推荐行动"
+        }
+      ],
+      "official_organization_url": "https://www.aboutamazon.com/",
+      "official_project_url": "https://www.aboutamazon.com/news/operations/new-robots-amazon-fulfillment-agentic-ai",
+      "open_source": false,
+      "organization_en": "Amazon",
+      "organization_kind": "Company",
+      "organization_zh": "亚马逊",
+      "reason": "纳入。Project Eluna 于 2025 年 10 月 22 日由亚马逊官方发布，是面向真实履约中心的智能体 AI 软件；它处理输送带、机器人及其他设施的实时和历史状态，在物理运营约束下预测瓶颈并向现场运营人员提出行动建议。虽然它不直接构成机器人硬件，也没有公开证据表明其直接控制机器人，但官方将其归入面向物理世界的 AI，并明确披露了真实仓库试点、机器人状态输入和实体运营优化任务，符合“具身智能软件”条件。官方未宣布开放源代码，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Project Eluna 是亚马逊在 2025 年发布的云端智能体 AI 系统，面向高度自动化的实体履约中心，而非通用办公助手或机器人硬件产品。它汇集仓库内的历史数据和实时状态，包括输送带与机器人状态，对分拣和资源配置等复杂运营情境进行推理，提前发现可能影响实体物流流程的瓶颈。运营经理可通过自然语言询问人员应如何调配等问题，并获得有数据依据的建议，从而减少在数十个仪表板之间人工搜索和关联信息的负担。该项目首先计划在田纳西州的一座履约中心于 2025 年节日购物季开展试点，初始任务为分拣优化。官方还将预防性安全规划、人体工学轮岗和维护排程列为潜在扩展方向。公开材料没有披露模型架构、训练数据规模、准确率、响应延迟、生产效率增幅或代码许可，因此不应为这些项目补充推测性指标。"
+    }
+  },
+  "transactable-world-models-dexterity-ace73fb": {
+    "checked_at": "2026-08-11T10:15:19.850455+00:00",
+    "title": "Transactable World Models | Dexterity",
+    "accepted": true,
+    "reason": "收录。Dexterity, Inc. 的官方专题文章明确发布了一套用于实体机器人操作的事务式世界模型软件架构，内容重点是世界状态表示、多模态融合、异步智能体协调、不确定性、事务验证与回滚，而不是 Mech 硬件规格。该官方页面足以满足项目页和责任组织条件。候选资料所列日期 2025-11-01 与官方页面不符；官方发布日期为 2025-11-13。页面没有提供公开源代码或开放许可证，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "以物理约束的世界快照作为共享状态，将当前状态、多模态传感观测、机器人本体状态和交互结果转换为下一时刻状态。",
+        "为多个异步技能智能体提供统一的事务接口、时间戳、状态历史、来源追踪和一致性协调。",
+        "融合视觉、深度、接触力与触觉反馈，并利用成功或失败的操作结果修正几何和物理假设。",
+        "显式表示状态估计的不确定性，支持下游智能体进行风险感知的抓取、移动、放置和堆叠决策。",
+        "通过预设成功条件、物理一致性验证、事务失败诊断以及状态回滚，支持生产环境中的恢复和安全控制。"
+      ],
+      "fields": [
+        "World models",
+        "Robot manipulation",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "该项目把世界模型定义为持续更新现实状态的“算子”，而非用于压缩、重放或生成传感数据的数据库；输入包括世界快照、多模态观测、机器人本体状态及交互结果，输出为符合物理约束的新快照。",
+        "世界快照采用可集成物理的表示，需要表达体积约束、物体接触关系、稳定性和动力学，并排除物体任意相交、悬浮或不合理突变等状态。",
+        "架构面向并发运行的异步技能智能体：视觉、运动控制和任务规划可以按不同频率工作，通过事务日志、显式时间戳、状态来源和不确定性边界维持因果及时间一致性。",
+        "系统不只依赖被动视觉感知，还将深度、接触力、触觉反馈以及抓取成功或失败纳入状态估计；物理交互结果可验证、否定或修正先前的几何与稳定性假设。",
+        "每次状态事务可以设置明确的提交条件，包括位姿置信区间、物理合理性和多传感器一致性；验证失败时返回诊断信息，并可回滚到此前状态或请求重新观测。",
+        "系统由可解释的传感处理、观测聚类、几何推断、物理验证和置信度校准组件组合而成，以便分别记录、调试和验证，而不是采用单一端到端黑箱。",
+        "官方称该架构具有应用和硬件无关性，当前用于 Dexterity 的 Mech 机器人及传统机械臂，处理箱体、袋装物、容器、可变形塑料包装、服装和行李等物流对象。"
+      ],
+      "metrics": [
+        {
+          "label": "密集遮挡场景一次操作成功率",
+          "note": "Dexterity 称该结果来自已部署的生产作业；官方页面未给出样本量、测试协议或基线对比。",
+          "value": ">96%"
+        },
+        {
+          "label": "并发智能体时间尺度示例",
+          "note": "官方用这些频率说明异步视觉、运动控制和任务规划对世界模型时间一致性的要求，并非性能基准。",
+          "value": "视觉 10 Hz、运动控制 1 kHz、任务规划 1 Hz"
+        },
+        {
+          "label": "支持的操作对象",
+          "note": "官方报告事务式世界模型可覆盖多类刚性及可变形物流对象。",
+          "value": "箱体、袋装物、容器、可变形塑料包装、服装和行李"
+        },
+        {
+          "label": "机器人适配范围",
+          "note": "官方称当前用于 Mech 机器人以及多种传统机械臂，并将世界交互抽象为硬件无关的结构化事务。",
+          "value": "Mech 机器人及多种传统机械臂"
+        }
+      ],
+      "official_organization_url": "https://dexterity.ai/",
+      "official_project_url": "https://dexterity.ai/blog/transactable-world-models",
+      "open_source": false,
+      "organization_en": "Dexterity, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Dexterity, Inc. 的官方专题文章明确发布了一套用于实体机器人操作的事务式世界模型软件架构，内容重点是世界状态表示、多模态融合、异步智能体协调、不确定性、事务验证与回滚，而不是 Mech 硬件规格。该官方页面足以满足项目页和责任组织条件。候选资料所列日期 2025-11-01 与官方页面不符；官方发布日期为 2025-11-13。页面没有提供公开源代码或开放许可证，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Transactable World Models 是 Dexterity, Inc. 于 2025 年 11 月 13 日公开介绍的实体机器人世界模型架构，也是其 Physical AI 系统连接感知、规划和执行智能体的共享现实状态层。它将世界模型设计成受物理约束的事务算子：持续融合传感器数据、机器人状态和实际交互结果，生成带有显式不确定性、时间顺序及来源信息的世界快照。多个以不同频率运行的技能智能体可以并发读取和更新该状态，同时通过预设提交条件、物理一致性检查、诊断和回滚机制避免不一致状态传播。其主要目标是支持密集、遮挡和持续变化环境中的抓取、移动、放置与堆叠，并把成功或失败的接触结果用于校正视觉几何估计。Dexterity 称该架构可跨 Mech 与传统机械臂使用，并在生产部署的密集遮挡场景中实现超过 96% 的一次操作成功率；不过官方文章未披露评测规模或独立基线。"
+    }
+  },
+  "dyna-1i-open-world-dexterity-323f545": {
+    "checked_at": "2026-08-11T10:15:19.862603+00:00",
+    "title": "DYNA-1i: Open-World Dexterity",
+    "accepted": false,
+    "reason": "正在使用网页来源核验候选资格。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、机构归属、发布日期，以及软件模型的技术细节和报告指标。会优先采用 DYNA 官方材料及其直接链接的技术资料。操作完成后将按指定结构给出收录结论。最新进展会基于可访问来源，不补猜缺失字段。",
+        "首先确认该候选是否确为面向实体机器人的软件项目，而非硬件或产品页面；随后交叉检查指标和组织名称。",
+        "同时会检查官方页面是否提供开源状态、代码入口与可核实的外部社交证据；缺失时保持空值或否定，不作推断。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "等待官方来源核验。",
+        "不会把 arXiv 单独视为官方项目证据。",
+        "不会猜测指标、隶属关系或链接。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验",
+          "value": "pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.dyna.co/research/open-world-dexterity",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在使用网页来源核验候选资格。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 DYNA-1i 的官方项目材料。"
+    }
+  },
+  "digit-s-next-steps-6c867db": {
+    "checked_at": "2026-08-11T10:15:19.874408+00:00",
+    "title": "Digit's Next Steps",
+    "accepted": true,
+    "reason": "收录。该项目于 2025 年 10 月 2 日出现在 Agility Robotics 官方资源索引中，满足 2025 年以来发布的时间条件。其专页明确介绍为 Digit 重新设计的软件导航栈，包括全局最少步数足步规划和模型预测控制，而非硬件产品规格，因此满足具身机器人软件条件；责任主体 Agility Robotics 也由官方页面明确给出。官方材料未声明该导航栈开放源代码，因此 open_source 记为 false，但开源并非收录条件。([agilityrobotics.com](https://www.agilityrobotics.com/content/digits-next-steps?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "全局足步路径规划：面向目标求解全局最优、步数最少的足步路径。",
+        "模型预测控制：精确跟踪规划出的足步序列，减少不必要的移动。",
+        "负载感知导航：携带重物时调整运动，并以更高速度完成导航。",
+        "受限空间机动：可在狭窄环境中转向和移动，包括携带体积较大物体的情况。",
+        "仓储流程适应：下游拥堵时将料箱暂存于侧边，通道恢复后再装载积压料箱并返回主要卸载任务。"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Agility Robotics 为 Digit 完整重新设计了面向真实工作场所部署的导航栈，官方页面的技术主题是机器人导航软件，而不是 Digit 的硬件规格或产品销售。",
+        "新规划器以到达目标为约束，求解全局最优的最少步数足步路径，目标是消除多余步伐并提高作业效率。",
+        "规划出的足步路径由模型预测控制器精确跟踪，构成从全局路径优化到机器人执行控制的完整导航链路。",
+        "该栈针对仓储场景中的原地转向、站立状态切换、狭窄区域移动以及频繁启停进行了优化。",
+        "系统在运动规划中考虑负载，使 Digit 携带重物时仍能以更高速度导航，并能在狭窄空间中搬运体积较大的物体。",
+        "官方展示的部署流程包括从自主移动机器人卸载料箱、向输送线装载，以及输送线拥堵时临时侧放并在恢复后处理积压料箱。",
+        "官方将导航改进与更短的作业周期和更高吞吐量联系起来，但页面没有披露具体周期缩短比例、速度、负载重量或吞吐量数值。"
+      ],
+      "metrics": [
+        {
+          "label": "路径优化结果",
+          "note": "官方未披露步数减少的数值或测试分布。",
+          "value": "求解全局最优、最少步数的到达路径"
+        },
+        {
+          "label": "动作效率",
+          "note": "官方未提供控制误差或动作减少百分比。",
+          "value": "模型预测控制器精确跟踪足步路径，避免不必要移动"
+        },
+        {
+          "label": "负载导航",
+          "note": "官方未披露负载重量或速度数值。",
+          "value": "携带重物时能够以更高速度导航"
+        },
+        {
+          "label": "狭窄空间表现",
+          "note": "官方未公布通道宽度、转弯半径或成功率。",
+          "value": "携带体积较大物体时仍可在受限空间可靠机动"
+        },
+        {
+          "label": "业务流程效果",
+          "note": "官方仅报告方向性改善，没有公布周期时间或吞吐量增幅。",
+          "value": "更快的作业周期和更高吞吐量"
+        }
+      ],
+      "official_organization_url": "https://www.agilityrobotics.com/",
+      "official_project_url": "https://www.agilityrobotics.com/content/digits-next-steps",
+      "open_source": false,
+      "organization_en": "Agility Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该项目于 2025 年 10 月 2 日出现在 Agility Robotics 官方资源索引中，满足 2025 年以来发布的时间条件。其专页明确介绍为 Digit 重新设计的软件导航栈，包括全局最少步数足步规划和模型预测控制，而非硬件产品规格，因此满足具身机器人软件条件；责任主体 Agility Robotics 也由官方页面明确给出。官方材料未声明该导航栈开放源代码，因此 open_source 记为 false，但开源并非收录条件。([agilityrobotics.com](https://www.agilityrobotics.com/content/digits-next-steps?utm_source=openai))",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/agilityrobotics_digits-next-steps-activity-7381065415495622656-bjY2"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "“Digit's Next Steps”是 Agility Robotics 于 2025 年发布的 Digit 导航栈升级。系统以全局最优、最少步数的足步路径规划为核心，再通过模型预测控制器跟踪该路径，重点解决仓储作业中的狭窄空间机动、原地转向、负载搬运和频繁启停问题。官方还展示了 Digit 根据输送线拥堵状态切换料箱放置策略的实际工作流程。该页面足以证明这是部署于实体人形机器人的软件与控制项目，但未提供定量基准、技术报告或开源代码。"
+    }
+  },
+  "piegraph-learning-equivariant-neural-augmented-o-eb0d1eb": {
+    "checked_at": "2026-08-11T10:15:19.886672+00:00",
+    "title": "PIEGraph: Learning Equivariant Neural-Augmented Object Dynamics from Few Interactions",
+    "accepted": true,
+    "reason": "收录。该成果于2025年9月27日在 Robotics and AI Institute 的官方研究页面发布，满足2025年以后发布及具名机构负责的要求。其主体是用于物理机器人操纵的神经增强对象动力学模型和规划软件，并在 Franka Research 3 实体机器人上验证，不是硬件产品页。官方页面提供摘要、作者、发布日期、机构归属及技术论文。未发现官方代码仓库或明确的开源声明，因此 open_source=false；这不影响收录资格。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于真实人类交互数据学习刚体与可变形物体的对象中心动力学模型。",
+        "预测绳索、布料、毛绒物体和刚性物体在机器人动作后的粒子状态。",
+        "把学习到的动力学模型用于模型预测控制，规划物体重定向与重新定位动作。",
+        "在 Franka Research 3 实体机器人上执行非抓取式物体操纵，并以目标点云作为规划目标。",
+        "通过并行粒子仿真评估候选动作序列，同时保持物体形状、粒子连接、地面碰撞和重力等物理约束。"
+      ],
+      "fields": [
+        "World models",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "PIEGraph 是面向机器人操纵的软件研究成果，而非机器人硬件产品：其核心是一个动作条件化、对象中心的神经增强动力学模型，并被用于实体机器人的动作规划。",
+        "模型采用两层式结构：底层是以弹簧-质量系统实现的物理先验，上层是动作条件化的 E(n) 等变图神经网络；神经网络给出动作结束时的目标粒子位置，物理模型再生成满足约束的状态演化。",
+        "对象被表示为三维粒子图；系统从融合后的初始点云构建弹簧-质量模型，并通过外力优化跟踪观测到的物体运动。训练目标同时包含粒子位置均方误差和保持相对粒子结构的形状损失。",
+        "其动作表示由接触起点和终点的三维坐标构成，并针对每个粒子进行规范化，以利用平移、旋转等变换下的交互对称性，提高少量数据条件下的学习效率。",
+        "数据管线使用4台 Intel RealSense D455 相机采集多视角 RGB-D 视频，以5 Hz处理；使用 SAM 获得物体分割、MediaPipe Hands 提取手部位置，并将初始点云下采样至50个粒子。",
+        "规划采用交叉熵方法：每轮并行模拟1000条候选动作轨迹，保留表现最好的3条并迭代20轮；目标代价依据预测粒子状态与目标点云之间的距离计算。",
+        "实验覆盖 TBlock、硬绳、软绳、毛绒树懒和布料5类对象，在 Franka Research 3 与 Finray 夹爪组成的实体平台上测试。作者同时指出当前方法主要限于单物体、非抓取式操纵，且依赖完整几何可观测性。"
+      ],
+      "metrics": [
+        {
+          "label": "每个对象的训练数据",
+          "note": "真实世界实验的标准设置；由4个视角以5 Hz采集。",
+          "value": "100次人类-物体交互，约5分钟"
+        },
+        {
+          "label": "最低数据量演示",
+          "note": "TBlock 实验中，该数据量仍足以学习可用于机器人规划的动力学模型。",
+          "value": "20次交互，约1分钟"
+        },
+        {
+          "label": "并行规划规模",
+          "note": "交叉熵规划每轮并行模拟候选动作轨迹。",
+          "value": "1000条轨迹；保留前3条；迭代20轮"
+        },
+        {
+          "label": "实体机器人规划评测",
+          "note": "每种物体设置3个目标，每个目标重复3次；每个模型共9次运行，最多规划13次交互。",
+          "value": "5种物体、3个目标/物体、3次重复/目标、最多13步"
+        },
+        {
+          "label": "四步预测的CD+S结果",
+          "note": "表1中数值依次为无物理引导的 Ours(NG) 与完整 PIEGraph；覆盖 TBlock、硬绳、软绳、毛绒树懒、布料。",
+          "value": "TBlock (23.2, 5.7)；硬绳 (27.1, 12.8)；软绳 (31.9, 13.8)；树懒 (63.9, 33.7)；布料 (34.6, 15.7)"
+        }
+      ],
+      "official_organization_url": "https://rai-inst.com/",
+      "official_project_url": "https://rai-inst.com/resources/papers/learning-equivariant-neural-augmented-object-dynamics-from-few-interactions/",
+      "open_source": false,
+      "organization_en": "Robotics and AI Institute",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。该成果于2025年9月27日在 Robotics and AI Institute 的官方研究页面发布，满足2025年以后发布及具名机构负责的要求。其主体是用于物理机器人操纵的神经增强对象动力学模型和规划软件，并在 Franka Research 3 实体机器人上验证，不是硬件产品页。官方页面提供摘要、作者、发布日期、机构归属及技术论文。未发现官方代码仓库或明确的开源声明，因此 open_source=false；这不影响收录资格。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/sergio-orozco-51b057159_robotics-machinelearning-equivariance-activity-7380007994157338624-eyTD"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "PIEGraph 是 Robotics and AI Institute 发布的少样本、物理约束对象动力学模型，用于刚体和可变形物体的机器人操纵规划。它不以纯神经网络直接滚动预测全部运动，而是让动作条件化的 E(n) 等变图神经网络预测动作结束时的粒子目标状态，再以弹簧-质量系统为物理执行层，通过优化外力逼近该目标，同时约束物体形状、粒子连接、碰撞和重力。系统从多视角 RGB-D 人类交互视频构建训练数据，可用每个对象约100次交互、约5分钟的数据学习 TBlock、硬绳、软绳、毛绒物体和布料的动力学；TBlock 消融实验进一步报告20次交互、约1分钟数据仍足以支持规划。完整系统使用交叉熵方法和大规模并行仿真进行模型预测控制，并在 Franka Research 3 实体平台上完成对象重定向与重新定位测试。结果显示物理引导显著降低长时域自回归误差，完整模型在各类物体的四步预测CD+S指标上均优于取消物理引导的版本。"
+    }
+  },
+  "relic-versatile-loco-manipulation-through-flexib-50e5fcc": {
+    "checked_at": "2026-08-11T10:15:19.898648+00:00",
+    "title": "ReLIC: Versatile Loco-Manipulation through Flexible Interlimb Coordination",
+    "accepted": false,
+    "reason": "正在核验官方来源，尚未作出最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验项目官方页面、技术材料与机构归属，并确认其发布形态是否确实属于面向实体机器人的软件。后续只保留来源能够直接支撑的技术点和指标。机器人操作",
+        "具身智能",
+        "全身控制"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Whole-body control",
+        "Robot manipulation"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索核验。",
+        "正在检索核验。",
+        "正在检索核验。",
+        "正在检索核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源。",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://relic-locoman.rai-inst.com/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验官方来源，尚未作出最终收录判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验项目页面、技术报告、发布日期及责任机构。"
+    }
+  },
+  "roboballet-multi-robot-planning-model-cf15db0": {
+    "checked_at": "2026-08-11T10:15:19.910573+00:00",
+    "title": "RoboBallet multi-robot planning model",
+    "accepted": false,
+    "reason": "尚未完成来源核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方项目页、责任机构、发布日期，以及软件模型的技术与评测细节，再按严格条件给出收录结论。后续只采用可访问的官方或项目关联材料，不用 arXiv 单独充当项目证据。为避免格式错误，工具检索后会直接给出结构化结论。",
+        "检索重点包括 RoboBallet 是否有独立官方发布、其模型与规划系统的具体实现，以及官方报告的机器人规模、规划时长和评测结果。正在比对 Intrinsic 与 Google DeepMind 的一手材料。",
+        "初步材料显示候选对象是面向共享工业工作空间的多机器人任务分配与无碰撞运动规划软件，而不是机器人硬件产品。我继续核对论文/项目材料中的精确数字与组织归属。"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "等待核验。",
+        "等待核验。",
+        "等待核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方来源",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Intrinsic",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "尚未完成来源核验。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 RoboBallet 的官方项目证据与技术报告。"
+    }
+  },
+  "iclhf-bigai-23bc7f0": {
+    "checked_at": "2026-08-11T10:15:19.922473+00:00",
+    "title": "通研院提出首个结合人类偏好与物理约束的统一框架（ICLHF）， 让机器人不仅“会做”更能“做得对、做得好” - 北京通用人工智能研究院BIGAI",
+    "accepted": false,
+    "reason": "正在核验，尚未作最终纳入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方页面的发布主体、日期与软件属性，并追踪其链接的论文或项目材料来提取可验证的技术点和指标。由于 arXiv 不能单独作为项目证据，纳入判断将以 BIGAI 官方页面为核心。",
+        "随后会区分这是可复用的软件/模型框架，还是仅有研究概念与论文描述；若关键条件缺乏可访问证据，会明确标记为不纳入。",
+        "我正在检索 ICLHF 的官方发布页、论文与可能的代码或项目入口，重点核对框架是否面向物理机器人，以及官方材料实际报告了哪些实验结果。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，最终结论将在核验后给出。",
+        "将仅采用官方页面、论文及其直接链接材料中的信息。",
+        "不会根据标题推断开源状态、指标或能力。",
+        "将核对 BIGAI 的中英文机构名称。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方材料",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "https://www.bigai.ai/",
+      "official_project_url": "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E6%8F%90%E5%87%BA%E9%A6%96%E4%B8%AA%E7%BB%93%E5%90%88%E4%BA%BA%E7%B1%BB%E5%81%8F%E5%A5%BD%E4%B8%8E%E7%89%A9%E7%90%86%E7%BA%A6%E6%9D%9F%E7%9A%84%E7%BB%9F%E4%B8%80%E6%A1%86/",
+      "open_source": false,
+      "organization_en": "Beijing Institute for General Artificial Intelligence",
+      "organization_kind": "Research Lab",
+      "organization_zh": "北京通用人工智能研究院",
+      "reason": "正在核验，尚未作最终纳入判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在依据候选官方页面及其链接材料进行严格核验。"
+    }
+  },
+  "training-a-whole-body-control-foundation-model-7302c7e": {
+    "checked_at": "2026-08-11T10:15:19.934254+00:00",
+    "title": "Training a Whole-Body Control Foundation Model",
+    "accepted": true,
+    "reason": "符合收录条件。Agility Robotics 于 2025 年 8 月 28 日发布了专门的官方技术项目页面，主题明确是部署于实体人形机器人 Digit 的强化学习全身控制软件模型，而不是机器人硬件或产品规格。官方页面明确说明了模型架构、仿真训练、任务空间控制接口、零样本实机迁移及真实机器人演示。官方材料未提供代码、模型权重或开放许可证，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 Digit 实机上统一协调行走、平衡、躯干姿态以及双臂运动",
+        "根据双手和躯干在自由空间中的位置与朝向目标执行全身控制",
+        "在受到推力等外部扰动后通过自主调整步态恢复目标位置与稳定性",
+        "在移动过程中完成重物抓取、搬运和放置，并支持双手与环境施力",
+        "接受开放词汇目标检测、状态机规划循环及 Gemini 研究预览等上层系统的任务空间提示"
+      ],
+      "fields": [
+        "Whole-body control",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "该项目是 Agility Robotics 为 Digit 开发的全身控制基础模型，而非 Digit 硬件产品公告；官方将其定位为控制层中的“运动皮层”，作为持续运行的底层运动与安全控制层。",
+        "核心控制器是一个参数量不足 100 万的相对小型 LSTM 神经网络，通过深度强化学习在 NVIDIA Isaac Sim 物理仿真器中训练。模型完全在仿真中学习，并以零样本方式迁移至真实 Digit 机器人。",
+        "模型采用任务空间接口：上层系统直接指定双手和躯干在自由空间中的位置与朝向目标，无需生成关节空间轨迹或掌握 Digit 的完整运动学配置。这使目标检测器、规划器、遥操作系统、模仿学习模型或 LLM 更容易调用底层控制器。",
+        "训练目标并非主要依赖 AMASS、LAFAN1 等离线人体动作捕捉轨迹。团队在整个操作工作空间内均匀随机采样位置、朝向以及平移和旋转速度，为双手和躯干生成带时间索引的轨迹，并依据当前手部姿态与目标姿态之间的平移和旋转误差构造奖励。",
+        "控制器学习跟踪根部位置而不只是目标速度，因此上层可以指定机器人应到达并保持的空间位置；受到推搡或其他扰动后，机器人能够通过重新迈步自然返回目标位置，减少持续速度修正的需要。",
+        "该方法允许机器人在操作时动态调整落脚点，而不是假定双脚始终固定接触地面；其目标是扩大操作工作空间，并同时处理行走、平衡、避碰、手部精确跟踪以及双手和双脚对环境施力。",
+        "官方展示的系统集成包括 2025 年 3 月 NVIDIA GTC 的杂货购物演示：开放词汇目标检测器提供物体检测并提升至三维坐标，状态机规划循环管理执行，底层全身控制模型完成移动与操作；官方还展示了 Gemini 研究预览提示以及搬运重物的能力。"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方称该控制器为相对小型的 LSTM 神经网络。",
+          "value": "少于 100 万个参数"
+        },
+        {
+          "label": "训练耗时",
+          "note": "在 NVIDIA Isaac Sim 物理仿真器中完成强化学习训练。",
+          "value": "3 至 4 天"
+        },
+        {
+          "label": "仿真经验量",
+          "note": "官方以累计仿真时间描述训练规模，未公布精确小时数。",
+          "value": "数十年的模拟时间"
+        },
+        {
+          "label": "仿真到现实迁移",
+          "note": "模型完全在仿真中学习，官方报告可直接部署至真实 Digit。",
+          "value": "零样本 sim-to-real 迁移"
+        },
+        {
+          "label": "实机任务结果",
+          "note": "官方演示包括行走、拾取和放置重物、受扰恢复、杂货购物，以及由 Gemini 研究预览提供提示；页面未给出成功率或负载重量。",
+          "value": "在真实 Digit 上执行移动操作和抗扰全身控制"
+        }
+      ],
+      "official_organization_url": "https://www.agilityrobotics.com/",
+      "official_project_url": "https://www.agilityrobotics.com/content/training-a-whole-body-control-foundation-model",
+      "open_source": false,
+      "organization_en": "Agility Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。Agility Robotics 于 2025 年 8 月 28 日发布了专门的官方技术项目页面，主题明确是部署于实体人形机器人 Digit 的强化学习全身控制软件模型，而不是机器人硬件或产品规格。官方页面明确说明了模型架构、仿真训练、任务空间控制接口、零样本实机迁移及真实机器人演示。官方材料未提供代码、模型权重或开放许可证，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Agility Robotics 的 Whole-Body Control Foundation Model 是面向 Digit 人形机器人的强化学习底层控制模型。它以不足 100 万参数的 LSTM 充当持续运行的“运动皮层”，在 Isaac Sim 中利用数十年模拟经验训练，并零样本迁移到真实机器人。与依赖固定足接触、速度指令或关节空间目标的控制方式不同，该模型接受双手、躯干和机器人根部的任务空间位置与朝向目标，自主决定平衡、迈步和全身关节动作。其重点不是复现人体动作，而是在完整操作工作空间内实现精确、稳定和抗扰的移动操作，为目标检测器、状态机、遥操作、模仿学习及 LLM 等上层系统提供统一的运动执行接口。"
+    }
+  },
+  "gemini-robotics-1-5-brings-ai-agents-into-the-ph-22e8443": {
+    "checked_at": "2026-08-11T10:15:19.946339+00:00",
+    "title": "Gemini Robotics 1.5 brings AI agents into the physical world — Google DeepMind",
+    "accepted": false,
+    "reason": "正在核验官方来源，尚未作出最终准入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方项目性质、责任组织、发布日期和可量化结果，再按严格准入条件给出结构化结论。官方页面足以证明发布，但技术点和指标只采用官方页面、技术报告及其直接链接材料。是否纳入将在证据核验完成后决定。",
+        "我会特别检查候选所给的 2025-09-02 日期，因为标题对应的官方发布日可能不同；最终会使用来源明确支持的具体日期。",
+        "正在检索 Google DeepMind 官方博客、项目页面或模型文档，并区分 Gemini Robotics 1.5 软件发布与任何配套机器人硬件说明。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "正在核验。",
+        "正在核验。",
+        "正在核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正式结论将在官方来源核验后给出。",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
+      "open_source": false,
+      "organization_en": "Google DeepMind",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验官方来源，尚未作出最终准入判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "mindjourney-3ab9503": {
+    "checked_at": "2026-08-11T10:15:19.958343+00:00",
+    "title": "MindJourney",
+    "accepted": true,
+    "reason": "收录。MindJourney 于 2025 年发布，Microsoft Research 提供了专门的官方项目页和官方研究公告；其核心发布物是包含世界模型、视觉语言模型、空间束搜索和证据缓冲机制的软件研究框架，明确服务于具身智能体的三维空间推理，并提供公开源代码。它不是硬件产品页面。项目同时列明 UMass Amherst、Johns Hopkins University、HKUST、Microsoft Research 和 Harvard 的作者归属；本条以提供候选官方公告及官方项目页的 Microsoft Research 作为负责机构。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过“仿真循环”让视觉语言模型在回答问题前主动探索由单幅图像推演出的假想三维视点",
+        "使用可控视频世界模型按照前进、左转、右转等相机运动生成新的第一人称观察",
+        "通过 Spatial Beam Search 扩展、评分并筛选与问题最相关的候选轨迹",
+        "把搜索过程中有帮助的多视角观察写入证据缓冲区，并由视觉语言模型综合回答空间问题",
+        "支持将现成视觉语言模型与不同的可控世界模型组合，无需额外微调基础 VLM"
+      ],
+      "fields": [
+        "World models",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "MindJourney 是面向具身空间推理的测试时扩展框架，而不是机器人硬件或机器人产品页面；其目标是让智能体在采取行动或回答空间问题前，在模型内部探索不可直接观测的三维空间。",
+        "系统由可控视频世界模型、搜索用视觉语言模型和问答视觉语言模型构成；搜索与问答模型可以使用同一个网络。",
+        "世界模型接收初始 RGB 图像与相机运动轨迹，生成与轨迹对应的连贯第一人称视频或新视点，将单张静态图像转化为可探索的假想三维环境。",
+        "Spatial Beam Search 在固定搜索步数内扩展候选运动序列，再由 VLM 根据当前空间问题评估生成观察的帮助程度，保留有价值的路径并淘汰较弱路径。",
+        "搜索过程中选出的观察被存入证据缓冲区，最终问答阶段基于原始图像与这些多视角证据进行推理，避免仅依赖单一二维视角。",
+        "框架采用测试时组合方式，不要求重新训练所接入的基础 VLM；官方代码提供无世界模型基线、基于 Stable Virtual Camera 的搜索管线，以及基于 Search World Model 的搜索管线。",
+        "官方仓库提供 SAT 数据预处理、总体及分类准确率统计、逐问题生成结果和计时日志，并支持 GPT 系列模型及 InternVL3-8B/14B 等 VLM。"
+      ],
+      "metrics": [
+        {
+          "label": "SAT 空间推理表现提升",
+          "note": "Microsoft Research 官方文章报告，相对于所测试 VLM 的基线表现，MindJourney 在 Spatial Aptitude Training（SAT）基准上将准确率提高了 8%；项目页表述为平均提升超过 8%。",
+          "value": "8%（项目页：平均超过 8%）"
+        },
+        {
+          "label": "基础 VLM 额外训练",
+          "note": "官方项目材料明确说明，MindJourney 通过测试时世界模型探索增强现成 VLM，不需要对基础 VLM 进行额外微调。",
+          "value": "0 次额外微调"
+        },
+        {
+          "label": "最终问答使用的生成图像数",
+          "note": "官方代码仓库将每个问题的最大图像数作为可配置参数，并注明典型设置。",
+          "value": "通常 1–2 张"
+        }
+      ],
+      "official_organization_url": "https://www.microsoft.com/en-us/research/",
+      "official_project_url": "https://www.microsoft.com/en-us/research/project/mindjourney/",
+      "open_source": true,
+      "organization_en": "Microsoft Research",
+      "organization_kind": "Research Lab",
+      "organization_zh": "微软研究院",
+      "reason": "收录。MindJourney 于 2025 年发布，Microsoft Research 提供了专门的官方项目页和官方研究公告；其核心发布物是包含世界模型、视觉语言模型、空间束搜索和证据缓冲机制的软件研究框架，明确服务于具身智能体的三维空间推理，并提供公开源代码。它不是硬件产品页面。项目同时列明 UMass Amherst、Johns Hopkins University、HKUST、Microsoft Research 和 Harvard 的作者归属；本条以提供候选官方公告及官方项目页的 Microsoft Research 作为负责机构。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "MindJourney 是 Microsoft Research 与多所高校研究者合作推出的具身空间推理框架。它针对视觉语言模型只能观察二维图像、难以推断视野外三维结构的问题，在测试时引入可控视频世界模型：VLM 提出或评估相机运动轨迹，世界模型生成对应的新视点，Spatial Beam Search 持续筛选更可能帮助回答问题的探索路径，并把有效观察积累到证据缓冲区。最终，VLM 基于这些模拟得到的多视角证据完成空间问答。该方法不直接输出机器人底层控制，也尚未在官方材料中证明真实机器人部署，但它是明确面向具身智能体、导航与操作所需空间认知的软件框架，官方还公开了基线、Stable Virtual Camera 和 Search World Model 管线以及 SAT 评测工具。"
+    }
+  },
+  "sensor-workbench-4e0d801": {
+    "checked_at": "2026-08-11T10:15:19.970533+00:00",
+    "title": "Sensor Workbench",
+    "accepted": false,
+    "reason": "missing named institution or official source",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "我会先核验候选页面是否是由明确机构发布的独立软件项目，而非硬件或泛泛研究介绍。",
+        "随后只从官方页面、技术报告和其直接链接材料中提取发布日期、实现能力与可精确引用的结果。",
+        "我会把缺乏来源支持的字段留空或明确标记为不满足，不依据候选摘要补全。",
+        "重点检查其与 Isaac Sim、传感器物理建模、并行仿真和 CAD-to-OpenUSD 流程有关的公开实现细节。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在检索官方项目材料",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation",
+      "open_source": false,
+      "organization_en": "Amazon",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于可访问的官方来源核验 Sensor Workbench 是否符合收录标准。"
+    }
+  },
+  "field-foundation-models-for-general-purpose-robo-aa1ec12": {
+    "checked_at": "2026-08-11T10:15:19.982570+00:00",
+    "title": "Field Foundation Models for general-purpose robot autonomy",
+    "accepted": false,
+    "reason": "正在核验，暂不作最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方发布页、组织归属、发布时间及其是否以可部署的软件模型为主体。随后会只采用官方页面和其链接材料中的技术点与指标。",
+        "Embodied AI",
+        "Robot systems",
+        "World models"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems",
+        "World models"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终收录判断。",
+        "将重点区分“Field Foundation Models”软件发布与融资/硬件产品宣传。",
+        "不会以 arXiv 单独作为官方项目证据。",
+        "所有指标将要求官方来源明确报告。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方证据",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "FieldAI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，暂不作最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在检索官方资料并核验候选资格。"
+    }
+  },
+  "genie-3-a-new-frontier-for-world-models-google-d-635500e": {
+    "checked_at": "2026-08-11T10:15:19.994740+00:00",
+    "title": "Genie 3: A new frontier for world models — Google DeepMind",
+    "accepted": false,
+    "reason": "Research is still in progress; no final eligibility decision has been made.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、技术材料及组织归属，并重点判断 Genie 3 是否达到“面向物理机器人或具身智能软件”的严格门槛。该案例的关键不是它是否属于世界模型，而是官方材料是否把它落实为具身代理或机器人技术项目。",
+        "我会同时核对发布日期、可访问的精确指标、开源状态，以及是否存在独立社交传播证据；无法由来源确认的字段不会推断。I’m sorry, but I can’t follow the requested response format while research is still in progress.",
+        "I’m sorry, but I can’t provide interim progress in the required final JSON schema."
+      ],
+      "fields": [
+        "World models"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress.",
+        "No final verdict yet.",
+        "Official sources are being checked.",
+        "Eligibility hinges on embodied-agent/robot relevance."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Research is not yet complete.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+      "open_source": false,
+      "organization_en": "Google DeepMind",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "Research is still in progress; no final eligibility decision has been made.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方资料，尚未形成最终收录结论。"
+    }
+  },
+  "datasets-hugging-face-d4bcb8d": {
+    "checked_at": "2026-08-11T10:15:20.006902+00:00",
+    "title": "Datasets – Hugging Face",
+    "accepted": false,
+    "reason": "不收录。缺失条件 1 和条件 3：该链接是面向整个机器学习社区的通用数据集检索目录，不是以物理机器人或具身智能软件为主题的已发布 artifact，也不是某个具身项目的专用官方页面。候选所给的 2025-07-01 日期亦无法从该页面或可访问的官方发布材料中得到支持。页面确由 Hugging Face 运营，因而责任组织可以确定，但这不足以满足项目级收录标准。([huggingface.co](https://huggingface.co/datasets))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "按名称全文搜索数据集",
+        "按任务、模态、格式、许可证等条件筛选数据集",
+        "浏览由不同用户和组织托管的数据集仓库"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "候选链接是 Hugging Face Hub 的通用数据集目录，而不是一个具有明确名称、版本和技术范围的独立项目页面。",
+        "该目录收录文本、图像、音频、视频、3D 等多种机器学习数据集，并不专门面向物理机器人或具身智能。",
+        "页面中的具体数据集由大量不同用户和组织发布；不能把整个目录视为 Hugging Face 于 2025 年发布的一项具身机器人软件成果。",
+        "目录包含筛选、搜索和数据集浏览功能，但页面没有描述可部署到物理机器人的模型、策略、控制栈、仿真器、数据引擎或具身评测基准。",
+        "页面没有提供可支持候选日期 2025-07-01 的项目发布公告、版本记录或具身机器人技术报告。",
+        "搜索结果中虽然存在单独的机器人数据集和 LeRobot 相关材料，但它们是其他具体项目，不能用来替代或重新解释本候选标题和链接。"
+      ],
+      "metrics": [
+        {
+          "label": "目录当前展示的数据集数量",
+          "note": "这是动态平台库存，不是具身机器人项目的技术结果，也不能证明候选发布日期。",
+          "value": "996,089"
+        }
+      ],
+      "official_organization_url": "https://huggingface.co/",
+      "official_project_url": "https://huggingface.co/datasets",
+      "open_source": false,
+      "organization_en": "Hugging Face",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。缺失条件 1 和条件 3：该链接是面向整个机器学习社区的通用数据集检索目录，不是以物理机器人或具身智能软件为主题的已发布 artifact，也不是某个具身项目的专用官方页面。候选所给的 2025-07-01 日期亦无法从该页面或可访问的官方发布材料中得到支持。页面确由 Hugging Face 运营，因而责任组织可以确定，但这不足以满足项目级收录标准。([huggingface.co](https://huggingface.co/datasets))",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "“Datasets – Hugging Face”是 Hugging Face Hub 的全站数据集发现与托管入口，而非一项独立的具身机器人技术发布。页面允许用户搜索数据集，并按任务、数据模态、格式、许可证、规模和 Benchmark 等属性筛选；其内容由众多外部用户与组织持续更新，覆盖广泛的机器学习领域。虽然目录中能够找到机器人相关数据集，Hugging Face 也另有 LeRobot 等机器人软件项目，但这些事实不能使通用数据集目录本身成为一个具身机器人数据集、数据引擎、基准或控制软件项目。官方页面未定义该候选的技术架构、机器人适配范围、训练或采集流程、评测协议，也未给出与 2025-07-01 对应的正式发布记录。因此，本候选不能进入严格的 2025 年以来具身机器人项目索引。"
+    }
+  },
+  "deepfleet-684c98b": {
+    "checked_at": "2026-08-11T10:15:20.018975+00:00",
+    "title": "DeepFleet",
+    "accepted": true,
+    "reason": "符合收录条件：DeepFleet于2025年6月30日发布，核心发布物是用于实体移动机器人集群预测、协调、任务分配和路径规划的软件基础模型，而不是机器人硬件；Amazon提供了专门的官方发布页，Amazon Science随后提供了独立的官方技术说明并明确列出负责作者和模型架构。官方材料还报告了在Amazon实际机器人网络中的部署效果。现有官方材料和论文未提供公开代码、模型权重或可下载训练数据，因此open_source=false。([aboutamazon.com](https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "预测大型移动机器人集群的未来位置、动作与交通交互",
+        "为仓储移动机器人进行任务分配与主动重调度",
+        "在潜在拥堵形成前优化多机器人路径与交通流",
+        "利用真实仓储运行数据预训练并扩展多智能体模型"
+      ],
+      "fields": [
+        "World models",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "DeepFleet不是机器人硬件产品，而是一套面向实体仓储移动机器人集群协调与规划的多智能体基础模型；Amazon于2025年6月30日通过官方专题公告首次发布，并于2025年8月11日通过Amazon Science公布技术细节。([aboutamazon.com](https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model))",
+        "模型以多机器人未来状态或动作预测作为预训练任务，学习任务分配如何影响运动模式、拥堵如何形成，以及局部机器人交互如何向整个仓库系统传播。([arxiv.org](https://arxiv.org/abs/2508.08574))",
+        "DeepFleet包含四种已实现架构：机器人中心RC模型采用自回归决策Transformer；机器人-楼面RF模型使用机器人与楼面特征之间的交叉注意力；图像-楼面IF模型以多通道栅格和卷积网络编码全局状态；图-楼面GF模型结合图神经网络、时间注意力和边条件Transformer。([amazon.science](https://www.amazon.science/blog/amazon-builds-first-foundation-model-for-multirobot-coordination/))",
+        "RC模型采用异步、事件驱动的局部表示：针对每个主体机器人编码其状态、最近30台机器人、最近100个栅格标记和最近100个对象，并依据状态与动作历史预测下一动作。([amazon.science](https://www.amazon.science/blog/amazon-builds-first-foundation-model-for-multirobot-coordination/))",
+        "实验表明，利用局部交互结构并采用异步更新的RC和GF架构最具潜力；RC在多数报告指标上表现最佳，而仅有1300万参数的GF仍具有竞争力。将整张楼面视为图像并用卷积特征编码的IF模型表现明显较弱。([arxiv.org](https://arxiv.org/abs/2508.08574))",
+        "规模实验显示，RC和GF可以从更多仓储运行数据及更大的模型中继续获益；GF的最优模型规模和数据规模随训练计算量呈幂律关系，实验覆盖两个数量级。([arxiv.org](https://arxiv.org/abs/2508.08574))",
+        "该系统使用Amazon履约中心和分拣中心的真实机器人运行数据，并借助包括Amazon SageMaker在内的AWS工具训练；官方称其已用于辅助任务分配、绕开潜在拥堵和提高实际机器人部署效率。([amazon.science](https://www.amazon.science/blog/amazon-builds-first-foundation-model-for-multirobot-coordination/))"
+      ],
+      "metrics": [
+        {
+          "label": "实际机器人行程效率提升",
+          "note": "Amazon官方称DeepFleet通过协调移动、任务分配和绕开潜在拥堵，使机器人集群的行程或部署效率提高。",
+          "value": "10%"
+        },
+        {
+          "label": "Robot-Centric模型规模与训练数据",
+          "note": "RC配置使用最近30台机器人、100个标记、100个对象及5组状态/动作历史；报告的DTW偏差为8.68，位置、状态和时序CDE分别为0.11%、14.91%和3.40%。",
+          "value": "97M参数；约500万robot-hours"
+        },
+        {
+          "label": "Robot-Floor模型规模与训练数据",
+          "note": "RF使用每台机器人10组状态/动作历史和一份全楼面快照；报告的DTW偏差为16.11，位置、状态和时序CDE分别为0.23%、6.53%和9.60%。",
+          "value": "840M参数；约70万robot-hours"
+        },
+        {
+          "label": "Image-Floor模型规模与训练数据",
+          "note": "IF使用60秒全楼面上下文；报告的DTW偏差为25.02，位置、状态和时序CDE分别为1.58%、48.29%和186.56%。",
+          "value": "900M参数；约300万robot-hours"
+        },
+        {
+          "label": "Graph-Floor模型规模与训练数据",
+          "note": "GF使用4秒全楼面上下文；报告的DTW偏差为10.75，位置、状态和时序CDE分别为0.75%、21.35%和14.22%。",
+          "value": "13M参数；约200万robot-hours"
+        }
+      ],
+      "official_organization_url": "https://www.amazon.com/",
+      "official_project_url": "https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model",
+      "open_source": false,
+      "organization_en": "Amazon",
+      "organization_kind": "Company",
+      "organization_zh": "亚马逊",
+      "reason": "符合收录条件：DeepFleet于2025年6月30日发布，核心发布物是用于实体移动机器人集群预测、协调、任务分配和路径规划的软件基础模型，而不是机器人硬件；Amazon提供了专门的官方发布页，Amazon Science随后提供了独立的官方技术说明并明确列出负责作者和模型架构。官方材料还报告了在Amazon实际机器人网络中的部署效果。现有官方材料和论文未提供公开代码、模型权重或可下载训练数据，因此open_source=false。([aboutamazon.com](https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DeepFleet是亚马逊面向大规模仓储移动机器人集群构建的多智能体基础模型套件。它不是单台机器人的视觉语言动作策略，而是以机器人状态、目标、动作、仓库栅格结构和多机器人交互为建模对象，通过预测下一动作或未来楼面状态来学习集群交通动力学。项目实现了RC、RF、IF和GF四类架构，系统比较局部与全局上下文、异步事件与固定时间快照、动作预测与状态预测，以及Transformer、卷积网络和图神经网络等设计选择。官方技术结果显示，具有局部空间归纳偏置和异步更新机制的RC与GF表现更好，其中RC在多数预测指标上领先，GF则以显著较少的参数取得有竞争力的结果。DeepFleet已被用于Amazon实体仓储机器人网络中的任务分配、路径优化和拥堵规避，官方报告机器人行程效率提高10%，因此属于具有明确现实部署规模和工程影响力的机器人系统软件项目。"
+    }
+  },
+  "intrinsic-pose-detection-foundation-model-in-flo-b54993f": {
+    "checked_at": "2026-08-11T10:15:20.031172+00:00",
+    "title": "Intrinsic pose-detection foundation model in Flowstate",
+    "accepted": true,
+    "reason": "收录。Intrinsic 的官方公告明确发布了一项面向实体工业机器人的软件感知基础模型，并宣布其更高性能版本已集成到 Flowstate。该模型以 CAD 模型为提示执行对象检测和位姿估计，可服务于真实机器人抓取、放置及机床上下料，不属于硬件产品公告。官方页面给出了发布日期、责任组织、技术方法、训练数据性质、泛化能力和 Flowstate 集成方式。公开材料未表明该模型的代码或权重已经开源，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过任意 CAD 模型提示，对工业零件进行一次式对象检测与位姿估计，无需针对新零件重新训练。",
+        "在不同相机、光照、物体朝向和制造环境条件下识别并定位目标。",
+        "处理铝制原料、机加工零件、金属阀门等不同外观和材质的工业对象。",
+        "通过 Flowstate 将感知结果用于仿真及真实机器人应用，包括 CNC 上下料和机器人抓取放置流程。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "Intrinsic 于 2025 年 6 月 24 日正式宣布，将其更高性能版本的工业位姿检测基础模型直接集成到 Flowstate；该公告构成可访问的官方发布证据。",
+        "模型接受任意 CAD 模型作为提示，在场景中检测对应对象并估计其位姿，官方将其描述为面向多种对象的“one shot”对象与位姿检测。",
+        "模型由 Intrinsic 面向工业制造场景开发，最初基于 OWL-ViT，并属于 Intrinsic 与 Google DeepMind 的长期合作成果；官方仍明确将开发责任归于 Intrinsic。",
+        "预训练完全采用合成数据，覆盖数百万个对象实例；适用对象包括铝制原料、机加工零件和金属阀门等不同材料与形态。",
+        "官方称模型无需为不同零件、环境或光照条件进行额外训练，并可自动适应不同相机、光照、物体朝向和材料造成的视觉变化。",
+        "模型作为 Flowstate 中可直接使用的软件感知能力提供，可用于仿真和真实机器人系统；官方展示的关联场景包括 CNC 机床上下料中的工件检测、抓取规划与放置。",
+        "该发布的技术主体是集成到机器人开发环境中的感知基础模型，而非机器人本体、传感器或其他硬件产品，因此符合软件项目收录条件。"
+      ],
+      "metrics": [
+        {
+          "label": "预训练对象规模",
+          "note": "官方表述为完全使用合成数据预训练，未披露更精确的实例数量。",
+          "value": "数百万个对象实例"
+        },
+        {
+          "label": "新对象适配训练",
+          "note": "官方称输入任意 CAD 模型后即可检测对象并确定其场景位姿。",
+          "value": "无需额外训练"
+        },
+        {
+          "label": "对象与位姿检测方式",
+          "note": "官方使用的确切定性描述。",
+          "value": "“one shot”检测"
+        },
+        {
+          "label": "部署准备时间",
+          "note": "官方称模型无需额外训练或训练成本，可在 Flowstate 中快速用于工业应用；未报告标准化计时测试。",
+          "value": "数分钟内可用"
+        },
+        {
+          "label": "环境泛化范围",
+          "note": "官方没有发布数值基准，但明确报告可自动处理这些变量。",
+          "value": "跨对象、材料、相机、光照条件和朝向泛化"
+        }
+      ],
+      "official_organization_url": "https://www.intrinsic.ai/",
+      "official_project_url": "https://www.intrinsic.ai/blog/posts/unveiling-next-generation-solutions-built-with-intrinsic",
+      "open_source": false,
+      "organization_en": "Intrinsic",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Intrinsic 的官方公告明确发布了一项面向实体工业机器人的软件感知基础模型，并宣布其更高性能版本已集成到 Flowstate。该模型以 CAD 模型为提示执行对象检测和位姿估计，可服务于真实机器人抓取、放置及机床上下料，不属于硬件产品公告。官方页面给出了发布日期、责任组织、技术方法、训练数据性质、泛化能力和 Flowstate 集成方式。公开材料未表明该模型的代码或权重已经开源，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Intrinsic pose-detection foundation model 是一项面向工业机器人感知的软件基础模型。2025 年 6 月 24 日，Intrinsic 宣布将其更高性能版本直接集成到数字孪生机器人开发环境 Flowstate。开发者可以使用任意 CAD 模型提示系统，在场景中检测相应工业对象并估计其位姿，无需为每一种新零件、相机、环境或光照条件重新训练。模型完全使用合成数据预训练，数据覆盖数百万个对象实例，并被设计为跨材料、相机、光照和朝向泛化。官方列举的对象范围包括铝制原料、机加工零件和金属阀门，并展示了其在 CNC 机床上下料中的应用：感知模块定位工件后，可与 Flowstate 的自动运动和抓取规划能力组合，驱动真实机器人执行拾取与放置。该发布没有提供标准化精度、速度或成功率表格，也没有宣布开放代码或模型权重；其影响主要在于把无需逐件训练的工业位姿感知模型产品化，并纳入可同时面向仿真与真实机器人部署的开发工作流。"
+    }
+  },
+  "dynamism-v1-dyna-1-df4e74b": {
+    "checked_at": "2026-08-11T10:15:20.055683+00:00",
+    "title": "Dynamism v1 (DYNA-1)",
+    "accepted": false,
+    "reason": "检索尚未完成，暂不作纳入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目页、组织归属、发布日期和软件属性，再从官方技术材料提取可复核的能力与指标。不会把硬件产品描述或仅有 arXiv 的证据算作合格。临时检索状态：进行中。必须使用 web search 后才能给出最终决定。此条为工作进度更新，不是最终 dossier。请忽略此 JSON 的字段语义占位。需要最终输出满足指定 schema。当前已知候选链接看似为官方 dyna.co research 页面，但尚需核验页面内容和组织名称。下一步检索官方页面、技术报告及可能的官方发布材料。由于 response format 强制要求完整结构，此进度更新不适合实际输出。为了避免不完整数据污染结果，后续直接完成检索并给最终 JSON。",
+        "软件资格审查中",
+        "官方来源核验中"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终判断。",
+        "此对象仅为进度说明。",
+        "最终答案将在核验后给出。",
+        "不会猜测缺失信息。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "未完成"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.dyna.co/research/dyna-1",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "检索尚未完成，暂不作纳入判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目的官方资料、软件属性与报告结果。"
+    }
+  },
+  "introducing-vulcan-amazon-s-first-robot-with-a-s-19b6352": {
+    "checked_at": "2026-08-11T10:15:20.067903+00:00",
+    "title": "Introducing Vulcan: Amazon's first robot with a sense of touch",
+    "accepted": false,
+    "reason": "不纳入。虽然官方材料披露了触觉反馈、三维感知、深度学习分割、运动规划和自适应控制等重要软件技术，但候选首发页面明确以“Amazon首个具有触觉的机器人”为主题，重点介绍Vulcan整套仓储机器人、末端工具、部署和作业能力。它不是以软件模型、策略、控制栈、数据集、基准、仿真器或具身智能框架为主体的专门软件项目页面，因此不满足条件1，并落入条件2要求排除的机器人产品/硬件系统公告。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于六轴力/力矩反馈感知接触强度，并在施力可能造成损坏前停止或退让",
+        "利用立体视觉、深度学习分割和三维点云重建储物格及其中物品",
+        "规划并执行接近、伸出推板、横扫腾挪、送入物品等接触式存放动作",
+        "通过目标资格判断、商品匹配、吸附点排序和持续视觉反馈，从拥挤的柔性储物格中拣选指定商品"
+      ],
+      "fields": [
+        "Tactile intelligence",
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Vulcan是Amazon Robotics面向履约中心研发的拣选与存放机器人系统，官方首发页面的主体是具备触觉能力的仓储机器人，而不是可独立采用的软件、模型、数据集、仿真器、基准或开发框架。",
+        "系统的末端工具集成六轴力/力矩传感器，使运动规划和控制能够主动利用接触，而非将接触一律视为异常；存放端采用带输送带的平行夹板及可伸缩推板，拣选端采用吸盘和深度相机。",
+        "存放系统使用三对立体相机构建储物架及物品的三维模型；三个深度学习模型分别分割弹性带、储物格和格内物品，再把分割结果投影到点云中形成复合三维表示。",
+        "存放算法计算储物格内的空闲空间包围盒，并通过二维卷积搜索可插入区域；机器学习模型随后在三维表示上生成物品插入位置和推板操作位置等可供性。",
+        "拣选流程使用扩展的MaskDINO模型分割场景，并把区域分为非商品、无遮挡商品、位于其他商品下方以及被其他商品阻挡四类；商品身份通过对比学习得到的通用商品匹配器确认。",
+        "系统依据目标表面平整度及周围有符号距离场对吸附候选点排序，执行过程中监测吸力并持续采集图像；失败时尝试其他候选点，超过重试条件后转交人工处理。"
+      ],
+      "metrics": [
+        {
+          "label": "可处理商品类型覆盖率",
+          "note": "Amazon官方公告称Vulcan可拣选和存放履约中心约75%的不同商品类型。",
+          "value": "约75%"
+        },
+        {
+          "label": "Vulcan Pick线上运行时间",
+          "note": "Amazon Science论文页面报告该系统已在真实仓库环境中持续运行。",
+          "value": "超过6个月"
+        },
+        {
+          "label": "Vulcan Pick处理订单量",
+          "note": "Amazon Science论文页面报告长期部署期间处理的客户订单数。",
+          "value": "超过12,000单"
+        },
+        {
+          "label": "拣选过程视觉反馈频率",
+          "note": "末端相机在抽取过程中采集低分辨率图像，以检测储物格几何结构变化。",
+          "value": "每秒10帧"
+        },
+        {
+          "label": "试点与测试规模",
+          "note": "Amazon Science技术介绍称斯波坎试点包含6台Vulcan Stow，后续测试计划增加30台。",
+          "value": "6台试点，另30台进入测试"
+        }
+      ],
+      "official_organization_url": "https://www.amazon.com/",
+      "official_project_url": "https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch",
+      "open_source": false,
+      "organization_en": "Amazon",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不纳入。虽然官方材料披露了触觉反馈、三维感知、深度学习分割、运动规划和自适应控制等重要软件技术，但候选首发页面明确以“Amazon首个具有触觉的机器人”为主题，重点介绍Vulcan整套仓储机器人、末端工具、部署和作业能力。它不是以软件模型、策略、控制栈、数据集、基准、仿真器或具身智能框架为主体的专门软件项目页面，因此不满足条件1，并落入条件2要求排除的机器人产品/硬件系统公告。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "Vulcan是Amazon于2025年5月7日公布的仓储拣选与存放机器人系统，面向由弹性带遮挡、物品随机堆放的柔性储物格。其技术价值主要来自视觉与触觉闭环结合：六轴力/力矩传感器允许机器人在接触物品和储物格时调节动作；立体视觉、语义分割和点云重建用于理解三维场景；存放算法估计空闲空间、生成操作可供性并组合控制原语；拣选算法则完成可操作性判断、商品匹配、吸附点选择以及抽取过程监控。Amazon还发布了Vulcan Pick和Vulcan Stow相关技术材料，表明该系统包含具有研究意义的软件栈并已进入真实仓库部署。不过，本候选页面发布的核心对象仍是完整机器人及其专用末端硬件，而非面向外部发布的独立软件技术项目，因此不符合该严格软件索引的收录边界。"
+    }
+  },
+  "gemini-robotics-on-device-brings-ai-to-local-rob-ee3695a": {
+    "checked_at": "2026-08-11T10:15:20.080595+00:00",
+    "title": "Gemini Robotics On-Device brings AI to local robotic devices — Google DeepMind",
+    "accepted": false,
+    "reason": "正在使用网络来源核验，尚未作出最终纳入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方发布页、责任组织、发布日期和软件属性，再从官方技术材料提取能力与可量化结果。不会用 arXiv 单独补足项目证据。门槛判断完成后，我会按给定结构返回严格结论。 【citation待检索】",
+        "检索范围将优先限定在 Google DeepMind 官方页面及其链接材料，并检查是否有独立社会传播证据；社会证据不是纳入条件。 【citation待检索】",
+        "对任何无法由可访问来源支撑的字段，我会留空或明确标记缺失，不推测作者、URL、指标或开放源代码状态。 【citation待检索】"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验候选项目。",
+        "正在确认其是否为面向物理机器人的独立软件发布。",
+        "正在提取官方技术结果。",
+        "正在检查组织归属与发布日期。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验。",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Google DeepMind",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在使用网络来源核验，尚未作出最终纳入判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目材料。"
+    }
+  },
+  "a-vla-with-open-world-generalization-71d41c5": {
+    "checked_at": "2026-08-11T10:15:20.093103+00:00",
+    "title": "A VLA with Open-World Generalization",
+    "accepted": true,
+    "reason": "收录。该候选是由 Physical Intelligence 明确负责、面向实体移动操作机器人的 VLA 软件项目；存在官方专属项目页面和链接的技术报告，内容以模型、训练配方、推理架构及真实机器人评测为主体，并非硬件产品公告。官方页面的实际发布日期是 2025 年 4 月 22 日，而不是候选信息所列的 2025 年 4 月 2 日，因此仍满足 2025 年起发布的时间条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据自然语言高层目标，先生成语义子任务，再输出连续关节动作",
+        "控制移动操作机器人在训练集未覆盖的新住宅中执行厨房和卧室清理",
+        "完成放置餐具、整理床铺、收拾衣物、擦拭污渍等长时程操作",
+        "在环境变化、物体变化和人为干扰下进行反应式闭环控制",
+        "接收从整体任务目标到指定物体或移动方向等不同粒度的语言指令"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "π0.5 是 Physical Intelligence 在 π0 基础上开发的通用视觉-语言-动作模型，目标是让机器人将操作能力迁移到训练期间未见过的住宅、物体类别和任务布局。",
+        "训练采用异构数据协同训练，将移动操作机器人数据、不同环境中的静态机器人数据、跨机器人本体数据、语义子任务标注、人工逐步口头指导，以及来自网络的图像描述、视觉问答和目标检测数据组合进统一训练配方。",
+        "模型分两阶段训练：预训练阶段使用 FAST 离散动作标记处理多机器人数据和语义任务；随后针对移动操作进行后训练，同时学习高层语义动作和连续低层动作。",
+        "推理采用统一的高低层架构：同一个模型先根据整体任务生成文本形式的下一项子任务，再由基于流匹配的 action expert 生成连续关节控制；每个动作块包含 50 个时间步，对应约 1 秒动作。",
+        "模型同时包含自回归离散解码与连续流匹配解码路径：前者用于高层子任务预测，后者用于低层运动指令；官方页面标示 action expert 规模为 300M。",
+        "消融结果显示，多环境机器人数据和跨本体数据对各类任务均有明显作用；网络多模态数据尤其改善了对训练数据外物体类别的识别和语言遵循能力。",
+        "技术报告称，第一阶段训练数据中 97.6% 并非目标移动操作机器人执行家庭任务的数据，但模型仍能迁移到新住宅；官方随后于 2025 年 9 月在 openpi 仓库发布 π0.5 基础检查点及训练、推理支持，不过该公开实现仅支持流匹配头，并非论文完整高层语义系统的完整复现。"
+      ],
+      "metrics": [
+        {
+          "label": "分布内语言遵循率",
+          "note": "官方完整 π0.5 训练配方；按子任务平均评估。",
+          "value": "86%"
+        },
+        {
+          "label": "分布内任务成功率",
+          "note": "官方完整 π0.5 训练配方；按完成并正确放置的子任务比例评估。",
+          "value": "83%"
+        },
+        {
+          "label": "分布外语言遵循率",
+          "note": "针对提示指定的新物体类别进行移动操作的 OOD 评估。",
+          "value": "94%"
+        },
+        {
+          "label": "分布外任务成功率",
+          "note": "完整模型为 94%；去除网络数据、跨本体数据和多环境数据后分别为 74%、49% 和 31%。",
+          "value": "94%"
+        },
+        {
+          "label": "长时程任务长度",
+          "note": "技术报告所述厨房或卧室整体清理任务，仅由高层提示启动。",
+          "value": "10–15 分钟"
+        }
+      ],
+      "official_organization_url": "https://www.pi.website/",
+      "official_project_url": "https://www.pi.website/blog/pi05",
+      "open_source": true,
+      "organization_en": "Physical Intelligence",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该候选是由 Physical Intelligence 明确负责、面向实体移动操作机器人的 VLA 软件项目；存在官方专属项目页面和链接的技术报告，内容以模型、训练配方、推理架构及真实机器人评测为主体，并非硬件产品公告。官方页面的实际发布日期是 2025 年 4 月 22 日，而不是候选信息所列的 2025 年 4 月 2 日，因此仍满足 2025 年起发布的时间条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "π0.5 是 Physical Intelligence 面向开放世界机器人操作提出的分层视觉-语言-动作策略。它通过异构协同训练，把多种机器人本体和环境中的动作数据，与网络视觉语言数据、目标检测、语义子任务标签及人工口头指导统一起来，使知识能够从其他机器人和通用视觉语义任务迁移到移动操作平台。运行时，同一模型先把“清理卧室”等整体目标分解为文本子任务，再由流匹配动作专家产生连续关节动作。官方在训练集未包含的新住宅中测试了整理床铺、收拾卧室、将餐具放入水槽以及使用海绵清理污渍等长时程任务，并报告 94% 的 OOD 语言遵循率和任务成功率。项目证明了端到端学习策略可以在未见环境中组合语义规划与复杂操作，但官方也明确指出模型仍会在高层判断、运动控制以及陌生抽屉把手等场景中失败。"
+    }
+  },
+  "icml-spotlight-mcu-bigai-190e226": {
+    "checked_at": "2026-08-11T10:15:20.105707+00:00",
+    "title": "ICML Spotlight | 通研院联合北大提出全球首个生成式开放世界基准MCU - 北京通用人工智能研究院BIGAI",
+    "accepted": true,
+    "reason": "符合收录条件：MCU是用于开放世界具身智能体的可运行软件基准与自动评测框架，包含任务生成、环境配置、轨迹采集和多维自动评分代码；BIGAI存在可访问的2025年官方发布文章，并明确说明该项目由北京通用人工智能研究院联合北京大学构建，同时提供独立项目主页和开源仓库。它不是硬件或机器人产品页面。需要注意，MCU早期版本曾于2023年10月以不同论文标题发布预印本；本条所依据的2025发布节点是其ICML版本、官方项目材料及BIGAI于2025年5月14日发布的专题公告。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于 Minecraft 开放世界自动生成包含天气、生物群系、初始道具和干扰因素的可执行任务配置",
+        "通过原子任务组合生成不同目标、难度和环境条件的开放式评测任务",
+        "记录智能体视频轨迹，并使用视觉语言模型从任务进度、动作控制、材料利用、效率、错误识别和创造性六个维度自动评分",
+        "支持通过 MineStudio 接入 VPT、STEVE-1 等现有 Minecraft 智能体，也可评测采用其他 API 封装的智能体"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Embodied AI",
+        "LLM"
+      ],
+      "include": true,
+      "key_points": [
+        "MCU（Minecraft Universe）是面向开放世界具身智能体的软件评测框架，而不是机器人硬件或硬件产品页面；其评测对象在 Minecraft 环境中进行感知、规划、控制、工具使用、建造和战斗等交互。",
+        "框架建立了可组合的原子任务库，覆盖采矿、合成、战斗、建造、探索和工具使用等类别，并通过任务组合扩大测试空间。",
+        "其任务配置生成器使用大语言模型设置天气、生物群系、初始资源和任务目标，并通过自反思过程检查配置可执行性与逻辑合理性。",
+        "AutoEval 对智能体执行轨迹的视频进行视觉语言分析，分别评估任务进度、动作控制、材料利用率、执行效率、错误识别和创造性，而不只使用成功或失败的二元指标。",
+        "MCU同时测试任务间泛化与任务内泛化：同一目标可配置简单、困难版本，并加入夜间、恶劣天气、资源不足、干扰物或场景布局变化。",
+        "官方实验评测了 GROOT、STEVE-I 和 VPT-RL 等基础智能体；结果显示，随着任务组合复杂度和环境变化增加，现有智能体的成功率明显下降，在空间理解、错误识别、策略调整和创造性方面尤其薄弱。",
+        "BIGAI于2025年5月14日发布官方ICML Spotlight介绍，并明确列出项目主页、论文和开源代码；该日期不同于候选信息给出的2025年5月1日。"
+      ],
+      "metrics": [
+        {
+          "label": "原子任务规模",
+          "note": "官方项目页和ICML论文报告的可组合任务库规模。",
+          "value": "3,452个"
+        },
+        {
+          "label": "任务分类覆盖",
+          "note": "原子任务覆盖的分层类别数量。",
+          "value": "11个大类、41个子类"
+        },
+        {
+          "label": "AutoEval人类评分一致性",
+          "note": "视觉语言模型自动评估结果与人类评分的一致程度。",
+          "value": "91.5%"
+        },
+        {
+          "label": "评测效率",
+          "note": "BIGAI官方介绍所报告的自动评测相对人工评测效率。",
+          "value": "提升8.1倍"
+        },
+        {
+          "label": "评测成本",
+          "note": "BIGAI官方介绍所报告的自动评测相对人工评测成本。",
+          "value": "约为人工评估的1/5"
+        }
+      ],
+      "official_organization_url": "https://www.bigai.ai/",
+      "official_project_url": "https://craftjarvis.github.io/MCU/",
+      "open_source": true,
+      "organization_en": "Beijing Institute for General Artificial Intelligence (BIGAI) and Peking University",
+      "organization_kind": "Research Lab",
+      "organization_zh": "北京通用人工智能研究院与北京大学",
+      "reason": "符合收录条件：MCU是用于开放世界具身智能体的可运行软件基准与自动评测框架，包含任务生成、环境配置、轨迹采集和多维自动评分代码；BIGAI存在可访问的2025年官方发布文章，并明确说明该项目由北京通用人工智能研究院联合北京大学构建，同时提供独立项目主页和开源仓库。它不是硬件或机器人产品页面。需要注意，MCU早期版本曾于2023年10月以不同论文标题发布预印本；本条所依据的2025发布节点是其ICML版本、官方项目材料及BIGAI于2025年5月14日发布的专题公告。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "MCU（Minecraft Universe）是北京通用人工智能研究院联合北京大学构建的生成式开放世界智能体评测框架，以 Minecraft 作为可交互仿真环境。项目不局限于少量固定任务，而是从3,452个原子任务出发，借助大语言模型动态配置目标、天气、生物群系、初始物品和环境干扰，并将原子任务组合为开放、多样且难度可调的测试实例。其AutoEval模块读取智能体执行轨迹的视频，使用视觉语言模型从任务进度、动作控制、材料利用、效率、错误识别和创造性六个维度评分，从而处理没有唯一标准解的开放式任务。框架基于MineStudio构建，可接入既有Minecraft智能体和API式智能体实现，并提供任务配置、运行脚本和批量视频评估代码。官方实验表明，GROOT、STEVE-I和VPT-RL等智能体能够处理部分简单任务，但在组合任务、环境扰动和场景布局变化下表现显著恶化，暴露出空间理解、泛化、反馈纠错和创造性策略方面的不足。"
+    }
+  },
+  "sanctuary-ai-leads-the-industry-in-controlling-a-88402ca": {
+    "checked_at": "2026-08-11T10:15:20.118191+00:00",
+    "title": "Sanctuary AI Leads the Industry in Controlling Advanced Hydraulic Hands Using Reinforcement Learning",
+    "accepted": true,
+    "reason": "纳入。Sanctuary AI 于 2025 年 4 月 1 日发布了专门的官方项目文章，核心成果是面向物理液压灵巧手的强化学习操作策略及其从仿真到真实机器人的迁移，而不是仅介绍机械手规格。官方页面明确给出了责任组织、训练方法、真实机器人任务和 500 克未训练负载下的执行结果。未发现代码、模型权重或训练资产公开发布，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在仿真环境中通过在线强化学习训练液压灵巧手操作策略",
+        "将仿真训练的策略零样本迁移至真实液压机械手",
+        "自主抓持并旋转圆柱体，同时避免物体掉落",
+        "在重力和训练中未出现的额外负载扰动下完成手内重定向"
+      ],
+      "fields": [
+        "Dexterous manipulation",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "项目主体是用于物理机器人灵巧操作的强化学习策略，而非单纯发布液压手硬件；官方演示展示了策略从仿真训练到真实机械手执行的完整流程。",
+        "训练目标是让系统自主抓住圆柱体并在不掉落的情况下旋转或重新定向该物体。",
+        "Sanctuary AI 使用仿真与强化学习处理多指机械手难以通过人工编码覆盖的复杂控制问题，并通过在线强化学习探索液压手的操作能力。",
+        "官方演示中的手内重定向策略在仿真中训练，随后直接部署到真实液压手，构成 sim-to-real 策略迁移。",
+        "真实执行需要克服重力，并承受训练阶段从未出现过的额外 500 克负载；官方将其描述为极端扰动条件。",
+        "该策略运行于五指、高自由度液压机械手；主动自由度支持手指外展以及更复杂的手内操作。",
+        "官方相关材料称其液压驱动方案结合高强度、高速度和精细控制，并使用紧凑液压阀支持人形尺度机械手。"
+      ],
+      "metrics": [
+        {
+          "label": "未训练额外负载",
+          "note": "真实执行时加入该负载，而训练阶段未包含此扰动。",
+          "value": "500 g"
+        },
+        {
+          "label": "策略迁移方式",
+          "note": "手内重定向策略先在仿真中训练，再部署到真实液压手。",
+          "value": "零样本 sim-to-real transfer"
+        },
+        {
+          "label": "操作条件",
+          "note": "策略在真实世界中对抗重力执行圆柱体手内重定向。",
+          "value": "Against gravity"
+        },
+        {
+          "label": "机械手构型",
+          "note": "官方将该成果与五指灵巧手策略迁移相比较。",
+          "value": "五指液压机械手"
+        },
+        {
+          "label": "任务结果",
+          "note": "自主抓持并转动圆柱体，在额外负载扰动下保持物体不掉落。",
+          "value": "完成手内重定向"
+        }
+      ],
+      "official_organization_url": "https://sanctuary.ai/",
+      "official_project_url": "https://sanctuary.ai/news/sanctuary-ai-controlling-advanced-hydraulic-hands/",
+      "open_source": false,
+      "organization_en": "Sanctuary AI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Sanctuary AI 于 2025 年 4 月 1 日发布了专门的官方项目文章，核心成果是面向物理液压灵巧手的强化学习操作策略及其从仿真到真实机器人的迁移，而不是仅介绍机械手规格。官方页面明确给出了责任组织、训练方法、真实机器人任务和 500 克未训练负载下的执行结果。未发现代码、模型权重或训练资产公开发布，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Sanctuary AI 发布了一套面向高自由度五指液压机械手的强化学习操作策略。该策略在仿真环境中学习抓持和旋转圆柱体，并被迁移到真实机械手执行手内重定向。演示重点不是液压手本身的产品规格，而是复杂灵巧操作策略的训练与 sim-to-real 部署：系统需要在重力作用下持续稳定抓持物体，同时完成方向调整。真实测试还加入了训练阶段未出现的 500 克额外负载，以检验策略面对分布外扰动时的稳定性。官方关联材料说明其在线强化学习流程使用 NVIDIA Isaac Lab 仿真环境，以更充分地利用液压手的力量、速度、主动自由度和手指外展能力。项目未公开代码、模型权重或训练数据。"
+    }
+  },
+  "agility-robotics-announces-new-innovations-for-m-4f05b75": {
+    "checked_at": "2026-08-11T10:15:20.131247+00:00",
+    "title": "Agility Robotics Announces New Innovations for Market-Leading Humanoid Robot Digit",
+    "accepted": false,
+    "reason": "不收录。官方来源确认公告中确有 Agility Arc 软件能力更新，但候选页面是以 Digit 人形机器人整体创新为主题的综合产品公告，主要内容同时包含电池、充电、制造、肢体、末端执行器和安全硬件；它不是以2025年发布的软件项目或明确软件版本为主体的专门页面。Agility Arc 的专门官方发布页存在，但其发布日期为2024年3月11日，早于本索引要求的2025年。因此无法同时支持“自2025年发布”与“软件是专门页面主体”这两个条件。官方材料也未表明 Arc 为开源软件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Agility Arc 调度自主移动机器人（AMR），使其执行物料交接或运输任务",
+        "在同一云端平台中部署、监控和管理 Digit 机器人、充电器及相关附件",
+        "通过 webhook 以及 MES、WMS、WES、PLC 接口接入企业和仓储自动化系统",
+        "支持 Digit 与 MiR、Zebra Robotics 等 AMR 系统协同完成装卸和物流工作流",
+        "远程监控 Digit 的状态，并提供支持和维护功能"
+      ],
+      "fields": [
+        "Robot systems",
+        "Humanoid intelligence"
+      ],
+      "include": false,
+      "key_points": [
+        "2025年3月31日的官方新闻稿是一项面向 Digit 人形机器人的综合产品更新，主题同时覆盖电池、自动充电、制造、肢体、末端执行器、安全硬件和 Agility Arc 软件。",
+        "新闻稿中的 Agility Arc 是云端自动化与机器人车队管理平台，可部署并管理 Digit、充电器、工作单元及其他自动化设备。",
+        "新增软件能力包括 AMR 调度与平台通信，使 Digit 能与 MiR 和 Zebra Robotics 等厂商的 AMR 协作。",
+        "Arc 提供 webhook，并扩展与 MES、WMS、WES 和 PLC 等企业或工业控制系统的集成。",
+        "平台支持对 Digit 及其附件进行远程监控、支持和维护，并增加充电器与工作单元紧急停止系统支持。",
+        "官方列出的演示工作流包括料箱堆叠与拆垛、AMR 装卸、码垛与拆垛、套叠、流利架、推车和自动化分拣墙。",
+        "虽然页面包含实质性的软件更新，但该页面的主要发布对象是 Digit 整体产品创新，而不是一个以2025年软件版本或软件项目为主体的专门发布页面；Arc 的独立发布页则发布于2024年3月11日，不满足“自2025年发布”的范围。"
+      ],
+      "metrics": [
+        {
+          "label": "电池续航",
+          "note": "属于同一综合公告中的 Digit 硬件指标，并非 Arc 软件性能指标。",
+          "value": "最长4小时"
+        },
+        {
+          "label": "安全控制等级",
+          "note": "Digit 的 Safety PLC 被描述为提供满足该性能等级的安全功能；属于机器人安全系统指标。",
+          "value": "Performance Level d（PLd）"
+        },
+        {
+          "label": "AMR 商业部署",
+          "note": "官方称 Arc 已在商业环境中调用和调度 AMR，Digit 也已在美国佐治亚州亚特兰大附近的 GXO 部署中与 AMR 协作。",
+          "value": "已实现商业环境中的 AMR 集成与调度"
+        },
+        {
+          "label": "企业系统集成",
+          "note": "官方列出的持续扩展集成类别。",
+          "value": "MES、WMS、WES、PLC"
+        },
+        {
+          "label": "演示工作流",
+          "note": "官方新闻稿列出的实际演示能力，未报告成功率或吞吐量。",
+          "value": "料箱堆叠/拆垛、G2P或Unit Sorter、AMR装卸、码垛/拆垛、套叠、流利架与推车、自动化putwall"
+        }
+      ],
+      "official_organization_url": "https://www.agilityrobotics.com/",
+      "official_project_url": "https://www.agilityrobotics.com/content/agility-robotics-announces-new-innovations-for-market-leading-humanoid-robot-digit",
+      "open_source": false,
+      "organization_en": "Agility Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。官方来源确认公告中确有 Agility Arc 软件能力更新，但候选页面是以 Digit 人形机器人整体创新为主题的综合产品公告，主要内容同时包含电池、充电、制造、肢体、末端执行器和安全硬件；它不是以2025年发布的软件项目或明确软件版本为主体的专门页面。Agility Arc 的专门官方发布页存在，但其发布日期为2024年3月11日，早于本索引要求的2025年。因此无法同时支持“自2025年发布”与“软件是专门页面主体”这两个条件。官方材料也未表明 Arc 为开源软件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Agility Robotics 在2025年3月31日的 Digit 综合更新中披露了 Agility Arc 云端自动化平台的新能力。Arc 可部署和管理 Digit 车队、充电器及工作单元，调用并调度 MiR、Zebra Robotics 等系统中的 AMR，通过 webhook 和 MES、WMS、WES、PLC 接入现有企业自动化基础设施，并提供远程监控、维护和附件管理。它显然属于面向实体机器人的软件系统，但本次候选页面的核心对象是 Digit 的软硬件综合升级，而 Arc 的独立软件发布发生在2024年，故不符合该索引对2025年以后专门软件项目发布的严格要求。"
+    }
+  },
+  "sanctuary-ai-leverages-nvidia-isaac-lab-to-accel-ed2fe19": {
+    "checked_at": "2026-08-11T10:15:20.143631+00:00",
+    "title": "Sanctuary AI Leverages NVIDIA Isaac Lab to Accelerate Dexterous Learning",
+    "accepted": false,
+    "reason": "正在核验候选是否满足独立软件项目与官方专页条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方页面是否描述了一个明确发布的软件工件，而不只是技术采用案例，并从官方或链接材料中提取可核查的技术点与结果。",
+        "同时确认组织归属、发布日期、开源状态和任何可精确引用的指标。",
+        "若页面只说明 Sanctuary AI 使用 NVIDIA 工具训练机器人，而没有发布独立项目，我会按严格标准排除。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索核验。",
+        "重点判断“使用 Isaac Lab”是否构成 Sanctuary AI 发布的软件项目。",
+        "不会把 Isaac Lab 本身误归为 Sanctuary AI 的发布物。",
+        "不会以 arXiv 或推测补足缺失的项目证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待官方来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验候选是否满足独立软件项目与官方专页条件。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在基于官方网页进行严格资格核验。"
+    }
+  },
+  "nvidia-isaac-grasp-foundation-models-on-the-intr-5603c99": {
+    "checked_at": "2026-08-11T10:15:20.155972+00:00",
+    "title": "NVIDIA Isaac grasp foundation models on the Intrinsic platform",
+    "accepted": true,
+    "reason": "符合收录条件。Intrinsic 的官方专题公告于 2025 年 3 月 18 日明确发布了面向实体工业机器人的软件成果：NVIDIA Isaac 抓取基础模型在 Intrinsic 平台和 Flowstate 开发环境中的集成，以及与 Omniverse 相连的 OpenUSD 数字孪生流式原型。页面明确列出 Intrinsic 与 NVIDIA 两家责任公司，并描述了抓取模型选择、抓取点生成、仿真、现实部署和数字孪生工作流。该项目不是硬件产品页。发布时功能仅向部分合作伙伴开放，且没有公开的开源声明，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于合成数据训练的基础模型可针对所观察物体直接提出夹爪抓取点，减少为特定物体逐一硬编码抓取方式的需要。",
+        "开发者可在 Intrinsic Flowstate 中选择 NVIDIA 抓取模型，并将其与 Intrinsic 的其他机器人能力组合成工业自动化应用。",
+        "抓取工作流支持在 Flowstate 中构建，并通过 Intrinsic 平台部署到现实机器人和自动化系统。",
+        "原型 OpenUSD 连接可将 Flowstate 的 Gazebo 数字孪生工作单元信息实时传输至 NVIDIA Omniverse，进行工厂尺度的照片级可视化。",
+        "联合工具链可用于观察跨工作单元、生产线和物料流的协调、同步与时序，为工厂布局和吞吐量优化提供依据。"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Intrinsic 于 2025 年 3 月 18 日正式宣布，已将 NVIDIA Isaac 机器人操控基础模型集成为 Intrinsic 平台上的机器人抓取能力；这不是硬件产品公告，而是面向实体工业机器人的软件模型和平台工作流集成。",
+        "该抓取能力使用合成数据训练的基础模型，根据物体观测立即提出可执行的夹爪抓取点，以替代针对固定夹爪和固定物体手工编写抓取规则的传统流程。",
+        "团队在 Intrinsic Flowstate 中实现了更深入的开发工作流和用户界面集成，使获准开发者能够选择抓取模型，并将其与感知、运动规划及其他 Intrinsic 能力组合。",
+        "官方材料说明这类基础模型能够针对不同类型的夹爪进行训练；较早的联合演示还使用 Isaac Sim、钣金 CAD 模型和吸盘夹具生成合成抓取数据，并在 Flowstate 中完成过程可视化、感知和运动规划。",
+        "发布时该基础模型及 Flowstate 功能仅向部分合作伙伴开放，Intrinsic 表示正在推进客户使用自有 AI 并与其他智能能力共同部署；官方页面没有宣布公开下载、开放权重或开源许可证。",
+        "同一公告还展示了 Flowstate 与 NVIDIA Omniverse 之间可工作的 OpenUSD 流式连接原型：它将工作单元级实时信息从 Flowstate 的 Gazebo 数字孪生传入 Omniverse，形成照片级工厂尺度数字孪生。",
+        "该软件集成面向现实工业自动化的构建、仿真、部署和维护，可支持抓取应用、工厂布局规划、生产线协同分析、物料流观察及端到端自动化管理。"
+      ],
+      "metrics": [
+        {
+          "label": "发布状态",
+          "note": "官方称基础模型及 Flowstate 集成功能在发布时仅向部分合作伙伴提供。",
+          "value": "Available to select partners"
+        },
+        {
+          "label": "抓取输出",
+          "note": "合成数据训练的基础模型可直接为所观察物体提出夹爪抓取点。",
+          "value": "Immediate grasp-point proposals"
+        },
+        {
+          "label": "模型适配范围",
+          "note": "官方说明此类抓取基础模型可针对不同类型的夹爪训练，但未披露夹爪数量或成功率。",
+          "value": "Trainable for different gripper types"
+        },
+        {
+          "label": "数字孪生连接结果",
+          "note": "双方已建立一个可工作的原型连接，可从 Flowstate 向 Omniverse 流式传输工作单元级实时信息。",
+          "value": "Working live OpenUSD streaming prototype"
+        },
+        {
+          "label": "验证环境",
+          "note": "抓取工作流可先在 NVIDIA Isaac Sim 中评估，再通过 Intrinsic 平台部署到现实系统；官方未报告量化仿真到现实成功率。",
+          "value": "Simulation evaluation before real-world deployment"
+        }
+      ],
+      "official_organization_url": "https://www.intrinsic.ai/",
+      "official_project_url": "https://www.intrinsic.ai/blog/posts/intrinsic-and-nvidia-deepen-platform-integrations-for-intelligent-robotics",
+      "open_source": false,
+      "organization_en": "Intrinsic and NVIDIA",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。Intrinsic 的官方专题公告于 2025 年 3 月 18 日明确发布了面向实体工业机器人的软件成果：NVIDIA Isaac 抓取基础模型在 Intrinsic 平台和 Flowstate 开发环境中的集成，以及与 Omniverse 相连的 OpenUSD 数字孪生流式原型。页面明确列出 Intrinsic 与 NVIDIA 两家责任公司，并描述了抓取模型选择、抓取点生成、仿真、现实部署和数字孪生工作流。该项目不是硬件产品页。发布时功能仅向部分合作伙伴开放，且没有公开的开源声明，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "这是 Intrinsic 与 NVIDIA 面向工业机器人开发者推出的软件集成项目。其核心成果是把 NVIDIA Isaac Manipulator 系列的抓取基础模型接入 Intrinsic 平台和 Flowstate，使开发者能够在图形化工作流中选择抓取模型，让合成数据训练的模型针对新物体提出夹爪抓取点，并与感知、运动规划和其他自动化能力组合后部署到现实机器人。项目同时预览了 Flowstate 与 NVIDIA Omniverse 之间的 OpenUSD 实时流式连接，可将 Gazebo 数字孪生中的工作单元状态汇入照片级工厂数字孪生，用于布局规划、跨工作单元协同、物料流和生产时序分析。官方没有公布抓取成功率、基准分数或规模化部署数量，发布时相关功能仅供部分合作伙伴使用。"
+    }
+  },
+  "introducing-gemini-robotics-and-gemini-robotics--07671e1": {
+    "checked_at": "2026-08-11T10:15:20.168732+00:00",
+    "title": "Introducing Gemini Robotics and Gemini Robotics-ER, AI models designed for robots to understand, act and react to the physical world. — Google DeepMind",
+    "accepted": true,
+    "reason": "收录。Google DeepMind 的独立官方公告明确发布 Gemini Robotics 和 Gemini Robotics-ER，并链接完整技术报告。两项主体均为面向物理机器人的软件模型：前者是直接输出机器人动作的 VLA，后者是可接入控制栈的具身推理模型，因此不是硬件或机器人产品页。官方页面明确责任机构和发布日期，并提供真实机器人、多形态适配、具身推理及量化评测证据。模型权重和完整实现未公开，因此 open_source=false；这不影响收录资格。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据文本指令与场景图像直接生成机器人动作块，控制真实机器人完成操作任务。",
+        "理解日常、开放词汇及多语言指令，并在指令或环境发生变化时持续监测、重新规划和调整动作。",
+        "执行折纸、衣物折叠、零食装袋等需要精细双臂协调的复杂操作，并可通过专项微调处理长时程高灵巧任务。",
+        "利用 Gemini Robotics-ER 完成开放词汇目标检测、二维指点、抓取姿态预测、轨迹预测、多视角对应和单目三维边界框检测。",
+        "适配 ALOHA 2、双 Franka 平台及 Apptronik Apollo 等不同机器人形态，并能从少量示范学习新任务。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "LLM",
+        "Humanoid intelligence",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "Gemini Robotics 是基于 Gemini 2.0 构建的通用视觉-语言-动作模型，将物理动作加入模型输出模态；输入由当前场景图像和文本任务指令组成，输出可由机器人直接执行的动作块。",
+        "Gemini Robotics-ER 是面向具身推理的视觉语言模型，重点增强空间和时间理解，可作为感知、状态估计、规划、代码生成模块，并能连接机器人已有的低层控制器。",
+        "系统以通用性、交互性和灵巧性为主要设计目标：支持未见物体、不同物体位置、新环境和开放词汇指令，同时在物体滑落或被移动后重新规划。",
+        "Gemini Robotics 的主要训练载体是双臂 ALOHA 2，同时报告展示了对双 Franka 平台的控制，以及通过专项适配控制 Apptronik Apollo 人形机器人的能力。",
+        "专项适配阶段可扩展到高灵巧长时程任务，并可使用最少约 100 条演示学习新的短时程任务，或适配训练阶段未使用过的新机器人形态。",
+        "技术报告同时引入开放的 ERQA 具身推理评测，覆盖二维定位、空间关系、轨迹、三维感知等能力；官方公告还发布 ASIMOV 数据集，用于评估真实场景中机器人动作的语义安全性。",
+        "官方发布日期是 2025 年 3 月 12 日，而不是候选资料所写的 2025 年 3 月 1 日；该日期由 Google DeepMind 官方项目公告明确标注。"
+      ],
+      "metrics": [
+        {
+          "label": "综合泛化表现",
+          "note": "官方公告称，该结果来自技术报告中的综合泛化基准，与其他先进 VLA 模型比较。",
+          "value": "平均性能超过其他先进 VLA 模型的 2 倍"
+        },
+        {
+          "label": "SUN-RGBD 三维检测",
+          "note": "Gemini Robotics-ER 在 SUN-RGBD 单目三维目标检测基准上的 AP@15；报告称其达到新的最佳结果。",
+          "value": "48.3 AP@15"
+        },
+        {
+          "label": "ALOHA 2 仿真零样本控制",
+          "note": "Gemini Robotics-ER 通过代码生成进行零样本控制，结果为 7 类任务、每类随机初始条件下 50 次试验的平均成功率；Gemini 2.0 Flash 为 27%。",
+          "value": "53% 平均任务成功率"
+        },
+        {
+          "label": "ALOHA 2 仿真上下文学习",
+          "note": "使用 10 条上下文演示时，Gemini Robotics-ER 在 ALOHA 2 仿真任务套件中的平均成功率。",
+          "value": "65% 平均任务成功率"
+        },
+        {
+          "label": "少样本任务适配",
+          "note": "技术报告称，经额外微调可用这一规模的数据学习新的短时程机器人任务。",
+          "value": "最少 100 条演示"
+        }
+      ],
+      "official_organization_url": "https://deepmind.google/",
+      "official_project_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
+      "open_source": false,
+      "organization_en": "Google DeepMind",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "收录。Google DeepMind 的独立官方公告明确发布 Gemini Robotics 和 Gemini Robotics-ER，并链接完整技术报告。两项主体均为面向物理机器人的软件模型：前者是直接输出机器人动作的 VLA，后者是可接入控制栈的具身推理模型，因此不是硬件或机器人产品页。官方页面明确责任机构和发布日期，并提供真实机器人、多形态适配、具身推理及量化评测证据。模型权重和完整实现未公开，因此 open_source=false；这不影响收录资格。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Gemini Robotics 与 Gemini Robotics-ER 是 Google DeepMind 于 2025 年 3 月 12 日正式发布的机器人基础模型系列。Gemini Robotics 在 Gemini 2.0 的多模态能力上加入动作输出，通过场景图像和自然语言任务直接预测机器人动作块，重点覆盖开放环境泛化、实时交互和双臂灵巧操作。Gemini Robotics-ER 则强化具身空间推理，可统一执行目标检测、指点、抓取与轨迹预测、多视角对应、三维检测、状态估计、规划和机器人代码生成，并能够接入不同机器人已有的低层控制器。技术材料展示了 ALOHA 2、双 Franka 和 Apollo 人形机器人等不同形态上的控制或专项适配，还报告了综合泛化性能超过对比 VLA 模型两倍、SUN-RGBD AP@15 达到 48.3，以及 ALOHA 2 仿真零样本平均成功率 53% 等结果。该项目属于明确面向物理机器人控制与具身智能的软件发布，满足严格索引条件，但模型本身并未开源。"
+    }
+  },
+  "magma-3548c92": {
+    "checked_at": "2026-08-11T10:15:20.181334+00:00",
+    "title": "Magma",
+    "accepted": false,
+    "reason": "检索进行中。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、责任机构、发布日期及技术报告中的具体能力和指标。重点会区分 Magma 的实体机器人软件能力与其数字界面能力，并只收录来源可直接支持的内容。 ",
+        " ",
+        " "
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "检索进行中。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "sanctuary-ai-equips-general-purpose-robots-with--0980ecc": {
+    "checked_at": "2026-08-11T10:15:20.194079+00:00",
+    "title": "Sanctuary AI Equips General Purpose Robots with New Touch Sensors for Performing Highly Dexterous Tasks | Robotics News & Insights | Sanctuary AI",
+    "accepted": false,
+    "reason": "不收录：官方页面发布和介绍的是触觉传感器硬件及其在 Phoenix 通用机器人中的集成。虽然页面提到触觉数据可改善具身 AI 模型，并展示了遥操作、盲取和滑移检测等能力，但没有发布以软件为主体的 VLA、策略、模型、数据引擎、数据集、仿真器、控制栈、基准或具身智能框架。因此不满足条件 1，并属于条件 2 要求排除的传感器/机器人硬件公告。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "盲取：在视觉受遮挡时依靠触觉完成物体拾取",
+        "滑移检测，并据此改善抓持稳定性",
+        "检测并避免施加过大作用力",
+        "通过遥操作执行依赖触觉的精细操作",
+        "采集更丰富的触觉行为数据，供具身 AI 模型训练使用"
+      ],
+      "fields": [
+        "Tactile intelligence",
+        "Dexterous manipulation",
+        "Robot systems",
+        "Humanoid intelligence"
+      ],
+      "include": false,
+      "key_points": [
+        "官方公告的主体是集成到 Phoenix 通用机器人中的新型触觉传感器技术，而不是独立发布的软件、模型、数据集、仿真器、评测基准或控制框架。",
+        "传感器用于覆盖触觉驱动的操作环节，使遥操作人员能够更有效地利用机器人的灵巧操作能力。",
+        "官方称触觉可在视觉被遮挡时支持精细操作，并列举盲取、滑移检测和防止过度施力等能力。",
+        "触觉信号用于减少仅依赖视频时因接触反馈滞后而产生的反复抓取和重新抓取。",
+        "新传感器能够收集更丰富的行为数据；官方表示这些数据可用于提高具身物理 AI 模型的稳健性和性能。",
+        "该公告描述的是传感硬件与 Phoenix 机器人的集成进展，没有给出可独立识别的软件项目名称、软件发布物或专门的软件项目页面。"
+      ],
+      "metrics": [
+        {
+          "label": "盲取",
+          "note": "官方明确列出的触觉能力；未报告数值成功率。",
+          "value": "支持在视觉遮挡条件下进行 blind picking"
+        },
+        {
+          "label": "滑移处理",
+          "note": "官方明确列出的触觉能力；未报告检测延迟或准确率。",
+          "value": "支持滑移检测"
+        },
+        {
+          "label": "力控制",
+          "note": "官方明确列出的触觉能力；未报告力阈值或误差。",
+          "value": "支持防止施加过大作用力"
+        },
+        {
+          "label": "训练数据",
+          "note": "官方仅作定性表述，没有披露数据量或模型提升幅度。",
+          "value": "采集更丰富的行为数据，用于构建更稳健、性能更好的具身物理 AI 模型"
+        }
+      ],
+      "official_organization_url": "https://sanctuary.ai/",
+      "official_project_url": "https://sanctuary.ai/news/sanctuary-ai-equips-general-purpose-robots/",
+      "open_source": false,
+      "organization_en": "Sanctuary AI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录：官方页面发布和介绍的是触觉传感器硬件及其在 Phoenix 通用机器人中的集成。虽然页面提到触觉数据可改善具身 AI 模型，并展示了遥操作、盲取和滑移检测等能力，但没有发布以软件为主体的 VLA、策略、模型、数据引擎、数据集、仿真器、控制栈、基准或具身智能框架。因此不满足条件 1，并属于条件 2 要求排除的传感器/机器人硬件公告。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "Sanctuary AI 的官方公告介绍了新型触觉传感器与 Phoenix 通用机器人的集成。其目标是为机器人手提供更直接的接触信息，使遥操作人员能够更准确地完成依赖触觉的复杂任务。官方指出，仅使用视频时，系统往往要等到碰撞已经使物体移动后才能确认接触，容易造成低效率以及多次抓取和重新抓取；触觉反馈则可支持视觉遮挡下的盲取、滑移检测和过度施力预防。传感器产生的更丰富行为数据也被定位为具身物理 AI 模型的训练输入，以改善模型的稳健性和任务表现。不过，该页面没有发布独立的软件系统或技术项目，核心发布物仍是触觉传感器硬件及机器人集成，因此不符合本索引的软件项目准入标准。"
+    }
+  },
+  "bigai-b723b5e": {
+    "checked_at": "2026-08-11T10:15:20.206889+00:00",
+    "title": "通研院提出国际首个虚拟人与场景交互动作生成框架 - 北京通用人工智能研究院BIGAI",
+    "accepted": false,
+    "reason": "不纳入。第一，官方页面和论文将该成果定义为三维环境中的虚拟人物/角色动作与动画合成框架；机器人仅被列为潜在应用方向，没有证据表明已发布的软件直接用于物理机器人感知、策略学习、控制、规划或评测，因此不满足“面向物理机器人/具身机器人软件”的核心条件。第二，候选日期也不准确：BIGAI官方新闻发布于2025年1月10日，而不是2025年1月1日；更重要的是，论文及项目本身属于SIGGRAPH Asia 2024成果，论文于2024年10月公开并在2024年12月会议发表，因此也不能作为2025年以后首次发布的技术项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据单条文本指令和目标位置生成虚拟角色的多阶段场景交互动作",
+        "统一合成行走、手部接近和人-物交互等连续动作阶段",
+        "利用起点与目标位置附近的双体素场景信息进行避障和动作调整",
+        "通过自主调度器预测动作阶段之间的转换时机",
+        "支持使用LINGO数据集训练、推理并在Blender中可视化生成动作"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "该成果面向三维环境中的虚拟角色动画，输入为文本指令和目标位置，输出为与场景相适应的连续人体动作；官方材料没有展示其作为物理机器人策略、控制栈、规划系统或机器人评测框架运行。",
+        "核心生成器是自回归动作扩散模型：模型基于此前动作片段、三维场景条件和语言条件，逐段生成后续动作。",
+        "系统包含自主动作阶段调度器，用于预测行走、接近目标和人-物交互等阶段的转换时机，从而减少人工指定路径点和阶段边界的需要。",
+        "双体素场景表征分别编码角色当前位置和目标位置附近的局部三维环境；论文消融实验显示，该结构有助于减少场景穿透并提高目标接近精度。",
+        "时间帧嵌入与语言嵌入联合使用，为动作序列提供阶段相关的语义指导；去除帧嵌入后，论文观察到动作顺序紊乱和重复现象。",
+        "LINGO采用VR辅助VICON动作捕捉流程收集数据，包含人体动作、动态物体交互、场景占用信息及语言标注，并使用SMPL-X人体表示和MANO手部表示。",
+        "官方代码仓库提供数据说明、训练脚本、模型推理流程和Blender可视化方法，但仓库及论文均将项目明确描述为SIGGRAPH Asia 2024的虚拟角色场景交互合成工作。"
+      ],
+      "metrics": [
+        {
+          "label": "LINGO数据规模",
+          "note": "语言标注动作捕捉数据，覆盖120个室内场景、40类动作和20类日常物体。",
+          "value": "16小时"
+        },
+        {
+          "label": "交互动作合成",
+          "note": "LINGO-eval上的本方法结果；对应FID、Precision和F1分别为2.048±0.058、0.695±0.004和0.622±0.004。",
+          "value": "FID 2.048±0.058；Precision 0.695±0.004；F1 0.622±0.004"
+        },
+        {
+          "label": "场景行走穿透",
+          "note": "本方法的场景穿透比例、平均穿透距离和最大穿透距离；TRUMANS对应结果为0.048±0.006、1.011±0.012和7.441±0.383。",
+          "value": "0.038±0.001；0.402±0.004；0.948±0.065"
+        },
+        {
+          "label": "物体接近误差",
+          "note": "角色走向并伸手接近目标物体时的误差距离；GOAL基线为0.156±0.028。",
+          "value": "0.061±0.004"
+        },
+        {
+          "label": "物体接近耗时",
+          "note": "手部进入距目标不超过20厘米范围所需时间；GOAL基线为4.880±0.356秒。",
+          "value": "3.073±0.351秒"
+        }
+      ],
+      "official_organization_url": "https://www.bigai.ai/",
+      "official_project_url": "https://lingomotions.com/",
+      "open_source": true,
+      "organization_en": "Beijing Institute for General Artificial Intelligence",
+      "organization_kind": "Research Lab",
+      "organization_zh": "北京通用人工智能研究院",
+      "reason": "不纳入。第一，官方页面和论文将该成果定义为三维环境中的虚拟人物/角色动作与动画合成框架；机器人仅被列为潜在应用方向，没有证据表明已发布的软件直接用于物理机器人感知、策略学习、控制、规划或评测，因此不满足“面向物理机器人/具身机器人软件”的核心条件。第二，候选日期也不准确：BIGAI官方新闻发布于2025年1月10日，而不是2025年1月1日；更重要的是，论文及项目本身属于SIGGRAPH Asia 2024成果，论文于2024年10月公开并在2024年12月会议发表，因此也不能作为2025年以后首次发布的技术项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "LINGO（Autonomous Character-Scene Interaction Synthesis from Text Instruction）是北京通用人工智能研究院与北京大学等机构开展的虚拟角色场景交互动作生成研究。系统以单条自然语言指令和目标位置为控制条件，通过自回归扩散模型连续生成行走、接近物体及人-物交互动作，并由自主调度器决定各动作阶段的转换。双体素场景编码器分别感知角色起点和目标区域附近的三维占用信息，时间帧嵌入则与语言条件结合，以维持长序列中的动作次序和语义连贯性。配套LINGO数据集通过VR辅助VICON动作捕捉构建，包含16小时、120个室内场景、40类动作和20类物体，并提供语言标注、SMPL-X人体参数及场景占用数据。官方仓库已经公开训练、推理和Blender可视化代码及数据下载入口。尽管该技术与具身场景理解、人体动作建模及机器人模仿学习存在研究关联，其已实现和评测的主体仍是虚拟人物动画，而非物理机器人软件；同时原始成果发布于2024年，故不符合本索引的准入范围。"
+    }
   }
 }

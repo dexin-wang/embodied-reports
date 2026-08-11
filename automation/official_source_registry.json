@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-11T06:56:49.009215+00:00",
+  "updated_at": "2026-08-11T09:41:06.366783+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -607,6 +607,218 @@
         "https://dexterity.ai/blog/transactable-world-models"
       ],
       "last_bootstrapped_at": "2026-08-11T06:56:33.441179+00:00",
+      "last_error": null
+    },
+    "dyna-robotics-96e12d93": {
+      "name": "Dyna Robotics",
+      "official_urls": [
+        "https://www.dyna.co/",
+        "https://www.dyna.co/company",
+        "https://www.dyna.co/news",
+        "https://www.dyna.co/research"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.dyna.co/research/dyna-1",
+        "https://www.dyna.co/research/open-world-dexterity",
+        "https://www.dyna.co/research/pre-training"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:27:21.996597+00:00",
+      "last_error": null
+    },
+    "field-ai-17328e07": {
+      "name": "Field AI",
+      "official_urls": [
+        "https://www.fieldai.com/",
+        "https://www.fieldai.com/fairi",
+        "https://www.fieldai.com/news",
+        "https://www.fieldai.com/solutions",
+        "https://www.fieldaifederal.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.fieldai.com/news/boston-dynamics-and-fieldai-partner-to-bring-robots-into-uncharted-and-dynamic-environments",
+        "https://www.fieldai.com/news/fieldai-accelerates-industrial-customers-adoption-of-ai-in-collaboration-with-nvidia",
+        "https://www.fieldai.com/news/fieldai-announces-over-400m-in-funds-raised-to-advance-embodied-ai-at-scale"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:28:06.474573+00:00",
+      "last_error": null
+    },
+    "intrinsic-06d5cd3a": {
+      "name": "Intrinsic",
+      "official_urls": [
+        "https://developers.intrinsic.ai/",
+        "https://github.com/intrinsic-ai",
+        "https://github.com/intrinsic-dev",
+        "https://www.intrinsic.ai/",
+        "https://www.intrinsic.ai/blog"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/intrinsic-ai/sdk/releases/tag/v1.35.20260720",
+        "https://www.intrinsic.ai/blog/posts/enabling-the-next-generation-developer-ecosystem-for-intelligent-robotics",
+        "https://www.intrinsic.ai/blog/posts/intrinsic-and-nvidia-deepen-platform-integrations-for-intelligent-robotics",
+        "https://www.intrinsic.ai/blog/posts/specialized-ai-for-scalable-and-adaptive-multi-robot-orchestration",
+        "https://www.intrinsic.ai/blog/posts/unveiling-next-generation-solutions-built-with-intrinsic"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:29:10.740211+00:00",
+      "last_error": null
+    },
+    "hugging-face-lerobot-bed8f8e0": {
+      "name": "Hugging Face LeRobot",
+      "official_urls": [
+        "https://github.com/huggingface/lerobot",
+        "https://huggingface.co/docs/lerobot",
+        "https://huggingface.co/lerobot"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/huggingface/lerobot/releases/tag/v0.4.1",
+        "https://github.com/huggingface/lerobot/releases/tag/v0.4.2",
+        "https://github.com/huggingface/lerobot/releases/tag/v0.4.3",
+        "https://github.com/huggingface/lerobot/releases/tag/v0.4.4",
+        "https://github.com/huggingface/lerobot/releases/tag/v0.5.0",
+        "https://github.com/huggingface/lerobot/releases/tag/v0.5.1",
+        "https://github.com/huggingface/lerobot/releases/tag/v0.6.0",
+        "https://github.com/huggingface/lerobot/releases/tag/v0.6.1"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:30:18.534658+00:00",
+      "last_error": null
+    },
+    "boston-dynamics-ai-institute-9b7af36f": {
+      "name": "Boston Dynamics AI Institute",
+      "official_urls": [
+        "https://github.com/rai-inst",
+        "https://q2rl.rai-inst.com/",
+        "https://rai-inst.com/",
+        "https://rai-inst.com/research/",
+        "https://rai-inst.com/resources/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://q2rl.rai-inst.com/",
+        "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
+        "https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/",
+        "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
+        "https://rai-inst.com/resources/papers/judo-a-user-friendly-open-source-package-forsampling-based-model-predictive-control/",
+        "https://rai-inst.com/resources/papers/planning-guided-diffusion-policy-learning-for-contact-rich-bimanual-object-reorientation/",
+        "https://rai-inst.com/resources/papers/real-is-sim-bridging-the-sim-to-real-gap-with-a-dynamic-digital-twin/",
+        "https://relic-locoman.rai-inst.com/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:31:43.091053+00:00",
+      "last_error": null
+    },
+    "robotics-and-ai-institute-b157b979": {
+      "name": "Robotics and AI Institute",
+      "official_urls": [
+        "https://github.com/bdaiinstitute",
+        "https://github.com/rai-opensource",
+        "https://rai-inst.com/",
+        "https://rai-inst.com/research/",
+        "https://rai-inst.com/resources/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/rai-opensource/judo",
+        "https://github.com/rai-opensource/q2rl",
+        "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
+        "https://rai-inst.com/resources/blog/show-dont-tell-detecting-novel-objects-by-watching-human-demonstrations/",
+        "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
+        "https://rai-inst.com/resources/papers/learning-equivariant-neural-augmented-object-dynamics-from-few-interactions/",
+        "https://rai-inst.com/resources/papers/real-is-sim-bridging-the-sim-to-real-gap-with-a-dynamic-digital-twin/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:33:45.487569+00:00",
+      "last_error": null
+    },
+    "agility-robotics-9bedbd14": {
+      "name": "Agility Robotics",
+      "official_urls": [
+        "https://www.agilityrobotics.com/",
+        "https://www.agilityrobotics.com/company",
+        "https://www.agilityrobotics.com/latest-press",
+        "https://www.agilityrobotics.com/resources",
+        "https://www.agilityrobotics.com/solutions"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.agilityrobotics.com/content/agility-robotics-announces-new-innovations-for-market-leading-humanoid-robot-digit",
+        "https://www.agilityrobotics.com/content/digits-next-steps",
+        "https://www.agilityrobotics.com/content/training-a-whole-body-control-foundation-model"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:35:10.363548+00:00",
+      "last_error": null
+    },
+    "sanctuary-ai-15500ff7": {
+      "name": "Sanctuary AI",
+      "official_urls": [
+        "https://sanctuary.ai/",
+        "https://sanctuary.ai/about-us/",
+        "https://sanctuary.ai/milestones/",
+        "https://sanctuary.ai/news/",
+        "https://sanctuary.ai/solutions/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://sanctuary.ai/news/sanctuary-ai-controlling-advanced-hydraulic-hands/",
+        "https://sanctuary.ai/news/sanctuary-ai-expands-physical-ai-strategy-to-industrial-robotics-demonstrating-production-ready-ai-performance/",
+        "https://sanctuary.ai/news/sanctuary-ai-leverages-isaac-lab/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:36:01.087450+00:00",
+      "last_error": null
+    },
+    "apptronik-4732b8de": {
+      "name": "Apptronik",
+      "official_urls": [
+        "https://apptronik.com/",
+        "https://apptronik.com/apollo/apollo-2",
+        "https://apptronik.com/company/in-the-news",
+        "https://apptronik.com/company/our-work",
+        "https://apptronik.com/company/press-releases"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T09:36:38.721554+00:00",
+      "last_error": null
+    },
+    "tesla-ai-optimus-80f33fc5": {
+      "name": "Tesla AI / Optimus",
+      "official_urls": [
+        "https://github.com/teslamotors",
+        "https://www.tesla.com/",
+        "https://www.tesla.com/AI",
+        "https://www.tesla.com/blog"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T09:37:04.782215+00:00",
+      "last_error": null
+    },
+    "amazon-robotics-a84b4477": {
+      "name": "Amazon Robotics",
+      "official_urls": [
+        "https://www.aboutamazon.com/news/tag/robotics",
+        "https://www.amazon.jobs/amazon-robotics",
+        "https://www.amazon.science/research-areas/robotics",
+        "https://www.amazon.science/tag/robotics"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model",
+        "https://www.aboutamazon.com/news/operations/new-robots-amazon-fulfillment-agentic-ai",
+        "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
+        "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:38:11.876116+00:00",
+      "last_error": null
+    },
+    "microsoft-research-robotics-ac5d58b3": {
+      "name": "Microsoft Research Robotics",
+      "official_urls": [
+        "https://github.com/microsoft",
+        "https://www.microsoft.com/en-us/research/",
+        "https://www.microsoft.com/en-us/research/collaboration/physical-ai-research/",
+        "https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/",
+        "https://www.microsoft.com/en-us/research/research-area/embodied-ai/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/microsoft/Magma",
+        "https://github.com/microsoft/VITRA",
+        "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
+        "https://www.microsoft.com/en-us/research/blog/asgardbench-a-benchmark-for-visually-grounded-interactive-planning/",
+        "https://www.microsoft.com/en-us/research/blog/groundedplanbench-spatially-grounded-long-horizon-task-planning-for-robot-manipulation/",
+        "https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/",
+        "https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T09:40:24.267403+00:00",
       "last_error": null
     }
   }
