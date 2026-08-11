@@ -15,7 +15,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 ROSTER = ROOT / "automation" / "company_roster.json"
 COVERAGE = ROOT / "automation" / "organization_coverage.json"
-SCAN_STATUSES = {"pending", "completed", "failed"}
+SCHEMA_VERSION = 2
+SCAN_STATUSES = {"pending", "found", "no_qualifying_release", "failed"}
+DIRECT_STRATEGY = "per-organization-direct-v1"
 
 
 def utc_now() -> str:
@@ -62,13 +64,24 @@ def roster_entries(roster_path: Path = ROSTER) -> list[dict[str, str]]:
 def default_scan() -> dict[str, Any]:
     return {
         "status": "pending",
+        "strategy": DIRECT_STRATEGY,
         "attempt_count": 0,
         "last_attempt_at": None,
         "last_batch": None,
         "candidate_count": 0,
         "candidate_urls": [],
+        "source_urls": [],
+        "scanned_urls": [],
         "last_error": None,
     }
+
+
+def _preserved_scan(old: dict[str, Any], previous_schema: int) -> dict[str, Any]:
+    """Do not carry forward the old batched 'completed with zero candidates' state."""
+    scan = old.get("official_scan") if isinstance(old.get("official_scan"), dict) else {}
+    if previous_schema != SCHEMA_VERSION or scan.get("strategy") != DIRECT_STRATEGY:
+        return default_scan()
+    return {**default_scan(), **scan}
 
 
 def ensure_coverage(
@@ -78,6 +91,7 @@ def ensure_coverage(
 ) -> dict[str, Any]:
     entries = roster_entries(roster_path)
     existing = read_json(coverage_path, {})
+    previous_schema = existing.get("schema_version") if isinstance(existing, dict) else None
     previous = {
         item.get("id"): item
         for item in existing.get("organizations", [])
@@ -87,14 +101,13 @@ def ensure_coverage(
     organizations = []
     for entry in entries:
         old = previous.get(entry["id"], {})
-        scan = old.get("official_scan") if isinstance(old.get("official_scan"), dict) else {}
         organizations.append({
             **entry,
-            "official_scan": {**default_scan(), **scan},
+            "official_scan": _preserved_scan(old, previous_schema),
         })
 
     coverage = {
-        "schema_version": 1,
+        "schema_version": SCHEMA_VERSION,
         "generated_at": timestamp or utc_now(),
         "organizations": organizations,
     }
@@ -102,51 +115,60 @@ def ensure_coverage(
     return coverage
 
 
-def aliases(name: str) -> list[str]:
-    values = [part.strip().lower() for part in name.split("/")]
-    values.append(name.lower())
-    return [value for value in values if len(value) >= 3]
+def _valid_urls(values: list[str]) -> list[str]:
+    return sorted({value for value in values if isinstance(value, str) and value.startswith("https://")})[:40]
 
 
-def candidate_matches(name: str, candidate: dict[str, Any]) -> bool:
-    haystack = " ".join(
-        str(candidate.get(key, ""))
-        for key in ("organization_hint", "title", "summary")
-    ).lower()
-    return any(alias in haystack for alias in aliases(name))
-
-
-def record_official_batch(
-    names: list[str],
+def record_official_result(
+    name: str,
     candidates: list[dict[str, Any]],
     *,
     status: str,
     batch: str,
+    source_urls: list[str],
+    scanned_urls: list[str],
     error: str | None = None,
     roster_path: Path = ROSTER,
     coverage_path: Path = COVERAGE,
     timestamp: str | None = None,
 ) -> dict[str, Any]:
-    if status not in {"completed", "failed"}:
-        raise ValueError(f"invalid scan status: {status}")
+    """Record one real website crawl, never a multi-organization model batch."""
+    if status not in SCAN_STATUSES - {"pending"}:
+        raise ValueError(f"invalid completed scan status: {status}")
+    candidate_urls = _valid_urls([
+        item.get("url", "") for item in candidates if isinstance(item, dict)
+    ])
+    source_urls, scanned_urls = _valid_urls(source_urls), _valid_urls(scanned_urls)
+    if status == "found" and not candidate_urls:
+        raise ValueError("found status requires at least one candidate URL")
+    if status == "no_qualifying_release" and not scanned_urls:
+        raise ValueError("no_qualifying_release requires an accessible scanned URL")
+    if status == "failed" and not error:
+        raise ValueError("failed status requires an error message")
+
     coverage = ensure_coverage(roster_path, coverage_path, timestamp)
-    requested = set(names)
     attempted_at = timestamp or utc_now()
+    matched = False
     for organization in coverage["organizations"]:
-        if organization["name"] not in requested:
+        if organization["name"] != name:
             continue
-        matched = [item for item in candidates if candidate_matches(organization["name"], item)]
-        urls = [item.get("url") for item in matched if isinstance(item.get("url"), str) and item["url"].startswith("https://")]
+        matched = True
         scan = organization["official_scan"]
         scan.update({
             "status": status,
+            "strategy": DIRECT_STRATEGY,
             "attempt_count": int(scan.get("attempt_count", 0)) + 1,
             "last_attempt_at": attempted_at,
             "last_batch": batch,
-            "candidate_count": len(urls),
-            "candidate_urls": sorted(set(urls))[:8],
+            "candidate_count": len(candidate_urls),
+            "candidate_urls": candidate_urls[:8],
+            "source_urls": source_urls[:12],
+            "scanned_urls": scanned_urls[:40],
             "last_error": error,
         })
+        break
+    if not matched:
+        raise ValueError(f"organization is not in canonical roster: {name}")
     coverage["generated_at"] = attempted_at
     write_json(coverage_path, coverage)
     return coverage
@@ -158,7 +180,8 @@ def coverage_summary(coverage: dict[str, Any]) -> dict[str, int]:
     return {
         "organizations": len(organizations),
         "pending": sum(scan.get("status") == "pending" for scan in scans),
-        "completed": sum(scan.get("status") == "completed" for scan in scans),
+        "found": sum(scan.get("status") == "found" for scan in scans),
+        "no_qualifying_release": sum(scan.get("status") == "no_qualifying_release" for scan in scans),
         "failed": sum(scan.get("status") == "failed" for scan in scans),
         "with_candidates": sum(int(scan.get("candidate_count", 0)) > 0 for scan in scans),
     }
@@ -167,7 +190,7 @@ def coverage_summary(coverage: dict[str, Any]) -> dict[str, int]:
 def validate_coverage(
     coverage: dict[str, Any], roster_path: Path = ROSTER,
 ) -> None:
-    if coverage.get("schema_version") != 1:
+    if coverage.get("schema_version") != SCHEMA_VERSION:
         raise ValueError("unsupported coverage schema")
     organizations = coverage.get("organizations")
     if not isinstance(organizations, list):
@@ -180,8 +203,18 @@ def validate_coverage(
         scan = item.get("official_scan")
         if not isinstance(scan, dict) or scan.get("status") not in SCAN_STATUSES:
             raise ValueError(f"invalid scan record for {item.get('name')}")
-        if not isinstance(scan.get("candidate_urls"), list) or any(not isinstance(url, str) or not url.startswith("https://") for url in scan["candidate_urls"]):
-            raise ValueError(f"invalid candidate URLs for {item.get('name')}")
+        if scan.get("strategy") != DIRECT_STRATEGY:
+            raise ValueError(f"non-direct scan record for {item.get('name')}")
+        for key in ("candidate_urls", "source_urls", "scanned_urls"):
+            if not isinstance(scan.get(key), list) or any(
+                not isinstance(url, str) or not url.startswith("https://")
+                for url in scan[key]
+            ):
+                raise ValueError(f"invalid {key} for {item.get('name')}")
+        if scan["status"] == "found" and not scan["candidate_urls"]:
+            raise ValueError(f"found without candidates for {item.get('name')}")
+        if scan["status"] == "no_qualifying_release" and not scan["scanned_urls"]:
+            raise ValueError(f"empty completed crawl for {item.get('name')}")
 
 
 def main() -> None:

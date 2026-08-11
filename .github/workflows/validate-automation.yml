@@ -30,4 +30,5 @@ jobs:
         run: |
           python automation/test_organization_coverage.py
           python automation/test_official_discovery.py
+          python -c "import json; value=json.load(open('automation/official_source_registry.json')); assert value['schema_version'] == 1 and isinstance(value['organizations'], dict)"
           python automation/organization_coverage.py --initialize --check --summary
