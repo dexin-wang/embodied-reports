@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-11T04:36:47.701599+00:00",
+  "updated_at": "2026-08-11T05:36:22.689297+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -41,9 +41,18 @@
     },
     "银河通用-galbot-cdbd3898": {
       "name": "银河通用 / Galbot",
-      "official_urls": [],
-      "bootstrap_candidate_urls": [],
-      "last_bootstrapped_at": "2026-08-11T04:25:45.190907+00:00",
+      "official_urls": [
+        "https://developer.galbot.com/platform/",
+        "https://github.com/GalaxyGeneralRobotics",
+        "https://www.galbot.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/GalaxyGeneralRobotics/Click-and-Traverse",
+        "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+        "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+        "https://github.com/GalaxyGeneralRobotics/OpenWBT"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:19:16.381154+00:00",
       "last_error": null
     },
     "逐际动力-limx-dynamics-3b8606bb": {
@@ -192,6 +201,199 @@
         "https://github.com/Noetix-Robotics/noetix_sdk_n2"
       ],
       "last_bootstrapped_at": "2026-08-11T04:36:30.950137+00:00",
+      "last_error": null
+    },
+    "魔法原子-magiclab-6858b8ab": {
+      "name": "魔法原子 / MagicLab",
+      "official_urls": [
+        "https://support.magiclab.top/en",
+        "https://www.magiclab.top/en",
+        "https://www.magiclab.top/en/news",
+        "https://www.magiclab.top/en/opensource"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.magiclab.top/en/documentcenter"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:22:51.945452+00:00",
+      "last_error": null
+    },
+    "加速进化-booster-robotics-3be093ff": {
+      "name": "加速进化 / Booster Robotics",
+      "official_urls": [
+        "https://docs.booster.tech/",
+        "https://github.com/BoosterRobotics",
+        "https://www.booster.tech/",
+        "https://www.booster.tech/news/",
+        "https://www.booster.tech/open-source/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/BoosterRobotics/booster_assets",
+        "https://github.com/BoosterRobotics/booster_robotics_sdk",
+        "https://github.com/BoosterRobotics/booster_train"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:24:08.808726+00:00",
+      "last_error": null
+    },
+    "众擎机器人-engineai-595f3e8f": {
+      "name": "众擎机器人 / EngineAI",
+      "official_urls": [
+        "https://en.engineai.com.cn/",
+        "https://github.com/engineai-robotics",
+        "https://www.engineai.com.cn/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/engineai-robotics/engineai_amp"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:25:32.853313+00:00",
+      "last_error": null
+    },
+    "乐聚机器人-leju-robotics-9474f42b": {
+      "name": "乐聚机器人 / Leju Robotics",
+      "official_urls": [
+        "https://doc.lejurobot.com/",
+        "https://github.com/LejuRobotics",
+        "https://www.lejurobot.cn/zh",
+        "https://www.letools.lejurobot.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/LejuRobotics/LeTools-Learning"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:27:08.780650+00:00",
+      "last_error": null
+    },
+    "深度求索-deepseek-e3a07c8f": {
+      "name": "深度求索 / DeepSeek",
+      "official_urls": [
+        "https://api-docs.deepseek.com/",
+        "https://github.com/deepseek-ai",
+        "https://www.deepseek.com/",
+        "https://www.deepseek.com/en/transparency/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://api-docs.deepseek.com/news/news250325/",
+        "https://api-docs.deepseek.com/news/news250528/",
+        "https://api-docs.deepseek.com/news/news250821/",
+        "https://api-docs.deepseek.com/news/news250922/",
+        "https://api-docs.deepseek.com/news/news250929/",
+        "https://api-docs.deepseek.com/news/news251201/",
+        "https://api-docs.deepseek.com/news/news260424/",
+        "https://api-docs.deepseek.com/updates/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:28:13.394117+00:00",
+      "last_error": null
+    },
+    "阿里云通义-qwen-80eac9b3": {
+      "name": "阿里云通义 / Qwen",
+      "official_urls": [
+        "https://github.com/QwenLM",
+        "https://qwen.ai/",
+        "https://qwenlm.github.io/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/QwenLM/Qwen3-Next",
+        "https://qwen.ai/blog?id=65f766fc2dcba7905c1cb69cc4cab90e94126bf4",
+        "https://qwen.ai/blog?id=99f0335c4ad9ff6153e517418d48535ab6d8afef",
+        "https://qwen.ai/blog?id=qwen-robotmanip",
+        "https://qwen.ai/blog?id=qwen-robotworld",
+        "https://qwen.ai/blog?id=qwen3-coder",
+        "https://qwen.ai/blog?id=qwen3.5",
+        "https://qwen.ai/blog?id=qwenvla"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:29:13.598330+00:00",
+      "last_error": null
+    },
+    "腾讯-robotics-x-3e9d9ec0": {
+      "name": "腾讯 Robotics X",
+      "official_urls": [
+        "https://github.com/Tencent-Hunyuan",
+        "https://tairos.tencent.com/",
+        "https://www.tencent.com/zh-cn/business/robotics.html",
+        "https://www.tencent.net.cn/products/robotics-x/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/Tencent-Hunyuan/HY-Embodied",
+        "https://github.com/Tencent-Hunyuan/HY-Embodied-0.5-X",
+        "https://github.com/Tencent-Hunyuan/Hy-Embodied-0.5-VLA"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:30:29.718533+00:00",
+      "last_error": null
+    },
+    "字节跳动-seed-96dcb92c": {
+      "name": "字节跳动 Seed",
+      "official_urls": [
+        "https://github.com/ByteDance-Seed",
+        "https://seed.bytedance.com/",
+        "https://seed.bytedance.com/blog",
+        "https://seed.bytedance.com/direction/robotics"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/ByteDance-Seed/BAGEL",
+        "https://seed.bytedance.com/blog/first-release-of-seed-vlm-tech-report-comprehensive-solutions-for-image-video-gui-and-game",
+        "https://seed.bytedance.com/blog/official-release-of-seed1-8-a-generalized-agentic-model",
+        "https://seed.bytedance.com/en/blog/seed-research-gr-rl-released-a-breakthrough-in-high-precision-manipulation-for-vla-models-applying-real-world-reinforcement-learning-to-shoe-lacing-for-the-first-time",
+        "https://seed.bytedance.com/en/blog/seed2-0-%25E6%25AD%25A3%25E5%25BC%258F%25E5%258F%2591%25E5%25B8%2583",
+        "https://seed.bytedance.com/en/public_papers/seed-thinking-v1-5-advancing-superb-reasoning-models-with-reinforcement-learning",
+        "https://seed.bytedance.com/public_papers/gr-3-technical-report",
+        "https://seed.bytedance.com/zh/blog/seed3d-1-0-released-generate-high-fidelity-3d-models-from-single-images-featuring-sota-texturing"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:31:48.963512+00:00",
+      "last_error": null
+    },
+    "百度-research-44ec43f8": {
+      "name": "百度 Research",
+      "official_urls": [
+        "https://ernie.baidu.com/",
+        "https://github.com/PaddlePaddle",
+        "https://research.baidu.com/",
+        "https://www.paddlepaddle.org.cn/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/PaddlePaddle/ERNIE/releases/tag/ernie-4.5",
+        "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.1.0",
+        "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.2.0",
+        "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.3.0",
+        "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.4.0"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:32:59.845905+00:00",
+      "last_error": null
+    },
+    "华为诺亚方舟实验室-huawei-noah-s-ark-lab-c776db87": {
+      "name": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab",
+      "official_urls": [
+        "https://github.com/huawei-noah",
+        "https://github.com/huawei-noah/noah-research",
+        "https://www.noahlab.com.hk/en",
+        "https://www.noahlab.com.hk/en/news",
+        "https://www.noahlab.com.hk/en/research"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/huawei-noah/noah-research/tree/master/MindMemOS",
+        "https://github.com/huawei-noah/noah-research/tree/master/PocketLLM",
+        "https://github.com/huawei-noah/noah-research/tree/master/QuantWM",
+        "https://www.noahlab.com.hk/en/news"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:34:27.601142+00:00",
+      "last_error": null
+    },
+    "美团机器人研究院-meituan-robotics-d8ad242c": {
+      "name": "美团机器人研究院 / Meituan Robotics",
+      "official_urls": [
+        "https://github.com/meituan-longcat",
+        "https://longcat.ai/",
+        "https://tech.meituan.com/",
+        "https://www.meituan.com/technology"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/meituan-longcat/LongCat-2.0",
+        "https://github.com/meituan-longcat/LongCat-Flash-Omni",
+        "https://github.com/meituan-longcat/LongCat-Flash-Thinking-2601",
+        "https://github.com/meituan-longcat/LongCat-Next",
+        "https://github.com/meituan-longcat/LongCat-Video",
+        "https://github.com/meituan-longcat/WBench",
+        "https://github.com/meituan-longcat/vitabench-2.0",
+        "https://tech.meituan.com/2026/07/28/CatPaw-LongCat.html"
+      ],
+      "last_bootstrapped_at": "2026-08-11T05:35:51.569397+00:00",
       "last_error": null
     }
   }

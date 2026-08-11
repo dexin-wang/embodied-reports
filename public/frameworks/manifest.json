@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=QofCMqiICs2UaK9OpvVWxQ&_nc_ss=7b20f&oh=00_AQGUA6jw6joBxLxl1G6OqCwBs6csQvq4rKWlA3mM4XUtog&oe=6A94F673",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=s8YmX4SuuCbg4wTsA2Q7-A&_nc_ss=7b20f&oh=00_AQGjnmNHjUIi-MU4MUS6vLllM1KtIISevEkfHFVONBo7RQ&oe=6A94F673",
       "width": 1920,
       "height": 1080
     },
@@ -236,6 +236,18 @@
       "height": 556
     },
     {
+      "id": "humanoid-gpt-72a5854",
+      "asset": "frameworks/humanoid-gpt-72a5854.jpg",
+      "source_url": "https://qizekun.github.io/Humanoid-GPT/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://qizekun.github.io/Humanoid-GPT/images/pipeline.png",
+      "width": 4017,
+      "height": 2246
+    },
+    {
       "id": "wall-wm-world-action-model-9de8900",
       "asset": "frameworks/wall-wm-world-action-model-9de8900.jpg",
       "source_url": "https://x2robot.com/pages/wm",
@@ -296,6 +308,18 @@
       "height": 1277
     },
     {
+      "id": "hy-embodied-0-5-x-2615a96",
+      "asset": "frameworks/hy-embodied-0-5-x-2615a96.jpg",
+      "source_url": "https://tairos.tencent.com/openSourceModels/hy-embodied",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://video.tairos.tencent-cloud.com/activity-outer-assets/videos/open-models/hy-embodied-video-img-6.jpg",
+      "width": 1844,
+      "height": 1032
+    },
+    {
       "id": "deepseek-v4-preview",
       "asset": "frameworks/deepseek-v4-preview.jpg",
       "source_url": "https://api-docs.deepseek.com/zh-cn/news/news260424/",
@@ -320,6 +344,18 @@
       "height": 168
     },
     {
+      "id": "engineai-lab-engineai-amp-ad76451",
+      "asset": "frameworks/engineai-lab-engineai-amp-ad76451.jpg",
+      "source_url": "https://github.com/engineai-robotics/engineai_amp",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://github.com/engineai-robotics/engineai_amp/raw/main/docs/training.gif",
+      "width": 320,
+      "height": 192
+    },
+    {
       "id": "agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc",
       "asset": "frameworks/agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc.jpg",
       "source_url": "https://agibot.com/article/231/detail/63.html",
@@ -330,6 +366,18 @@
       "image_url": "https://agibot.com/public/uploads/images/20241230/a71076b43f1846bdaae754407a9009ac.jpg",
       "width": 451,
       "height": 654
+    },
+    {
+      "id": "hy-embodied-0-5-34cd06a",
+      "asset": "frameworks/hy-embodied-0-5-34cd06a.jpg",
+      "source_url": "https://github.com/Tencent-Hunyuan/HY-Embodied",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://github.com/Tencent-Hunyuan/HY-Embodied/raw/master/Hy-Embodied-VLM-1.0/figures/1-teaser.png",
+      "width": 8516,
+      "height": 3491
     },
     {
       "id": "humanoid-lab-f5cc41c",
@@ -404,6 +452,18 @@
       "height": 1536
     },
     {
+      "id": "quantwm-eba36bd",
+      "asset": "frameworks/quantwm-eba36bd.jpg",
+      "source_url": "https://github.com/huawei-noah/noah-research/tree/master/QuantWM",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/39d584c6c15182f2363161c5a4f8ebb57cbc3aa8bf897ae02584d2c608950d3c/huawei-noah/noah-research",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "viam-platform-roundup-january-2026-9cf1b2c",
       "asset": "frameworks/viam-platform-roundup-january-2026-9cf1b2c.jpg",
       "source_url": "https://www.viam.com/post/january-2026-platform-roundup",
@@ -414,6 +474,18 @@
       "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/6968f4eb3666d4655bb7d101_model%20selection%20UI.png",
       "width": 1317,
       "height": 663
+    },
+    {
+      "id": "seed-gr-rl-866989b",
+      "asset": "frameworks/seed-gr-rl-866989b.jpg",
+      "source_url": "https://seed.bytedance.com/en/blog/seed-research-gr-rl-released-a-breakthrough-in-high-precision-manipulation-for-vla-models-applying-real-world-reinforcement-learning-to-shoe-lacing-for-the-first-time",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/47w9omio5aorw.jpeg",
+      "width": 2690,
+      "height": 1965
     },
     {
       "id": "noetix-n2-gym-2174663",
@@ -498,6 +570,18 @@
       "image_url": "https://agibot.com.cn/public/uploads/images/20260331/df2e4f59a81fd14809124705e482d3f1.png",
       "width": 320,
       "height": 426
+    },
+    {
+      "id": "opentrack-1f26182",
+      "asset": "frameworks/opentrack-1f26182.jpg",
+      "source_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack/raw/main/storage/assets/demo/original.gif",
+      "width": 1080,
+      "height": 608
     },
     {
       "id": "viam-apps-for-robot-fleet-dashboards-fee2211",
@@ -668,6 +752,18 @@
       "height": 878
     },
     {
+      "id": "seed-gr-3-22989c8",
+      "asset": "frameworks/seed-gr-3-22989c8.jpg",
+      "source_url": "https://seed.bytedance.com/en/public_papers/gr-3-technical-report",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/banner/footerv3.png",
+      "width": 3840,
+      "height": 1200
+    },
+    {
       "id": "steerable-scene-generation-3d840a5",
       "asset": "frameworks/steerable-scene-generation-3d840a5.jpg",
       "source_url": "https://steerable-scene-generation.github.io/",
@@ -735,7 +831,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=v0kwxINHbPgQ7kNvwGWMSeV&_nc_oc=AdrXdKOxeUlC6BlhSNmG1BH4azH2kXt6Hl24eWaJYUGDhR8ThPnKEFmCv6CRuje_mHQ&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=zHWUXACcd7RvPdyI4KCUHQ&_nc_ss=7b20f&oh=00_AQGIncdI-hGDZp0JFc85yc6pNfmJ3uLBzvgGA5wHJyvVIQ&oe=6A80671C",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=v0kwxINHbPgQ7kNvwGWMSeV&_nc_oc=AdrXdKOxeUlC6BlhSNmG1BH4azH2kXt6Hl24eWaJYUGDhR8ThPnKEFmCv6CRuje_mHQ&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=KlTqS62swBaBmww4tzZH_A&_nc_ss=7b20f&oh=00_AQE0KD4SjLBlfe5EJwDUJ1CBfjMguvj_blfFxUOQiLBJrg&oe=6A809F5C",
       "width": 1440,
       "height": 630
     },
@@ -990,6 +1086,18 @@
       "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/67acc0a62ee42b572b130c3e_viam-blog-feb-nested-fragments-main-image.png",
       "width": 1563,
       "height": 1042
+    },
+    {
+      "id": "magicdog-sdk-9bd42a9",
+      "asset": "frameworks/magicdog-sdk-9bd42a9.jpg",
+      "source_url": "https://support.magiclab.top/en/docs/dog/about",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://support.magiclab.top/_nuxt/navbar.Czyg7QSe.jpg",
+      "width": 1920,
+      "height": 200
     },
     {
       "id": "nvidia-cosmos-world-foundation-model-platform-080cd9a",

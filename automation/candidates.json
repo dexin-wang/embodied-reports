@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T04:36:47.701942+00:00",
+  "generated_at": "2026-08-11T05:36:22.689664+00:00",
   "candidates": [
     {
       "title": "World Tokens: Enhancing Embodied Policies with Training-Time World Modeling",
@@ -1475,6 +1475,18 @@
       ]
     },
     {
+      "title": "DeepSeek-V4-Flash-0731",
+      "url": "https://api-docs.deepseek.com/updates/",
+      "date": "2026-07-31",
+      "summary": "DeepSeek-V4-Flash-0731 is a re-post-trained LLM release with enhanced agent capabilities, native Responses API support and Codex-specific adaptation.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "CLIFT: Turning Gemini Robotics On-Device into Humanoid Specialists via Non-Invasive Closed-Loop Iterative Fine-Tuning",
       "summary": "While robot foundation models are growing increasingly capable, the strongest models are typically trained on proprietary data and remain closed-source, limiting downstream users' ability to adapt them to new tasks, embodiments, and deployment settings. Following the LLM community, an emerging access paradigm for closed-weight robot foundation models is the managed supervised fine-tuning (SFT) API, where users submit training data and receive a tuned policy without access to model weights, gradients, or training internals. While such APIs let downstream users leverage powerful proprietary foundation models, they restrict policy improvement to pure imitation, ruling out reinforcement learning and other closed-loop methods that rely on internal training signals. This limitation is particularly acute for agile, contact-rich humanoid manipulation, where the gap between policy outputs and deployed behavior is large due to novel states, action tracking dynamics, latency, and controller-specific failure modes. We study how effective this managed-API regime is for humanoid adaptation, and how closed-loop improvement can be realized within it to push policies toward task mastery. We conduct one of the first empirical studies of managed-API adaptation on a real humanoid, instantiated on Gemini Robotics On-Device (GROD). We find that direct SFT through the API substantially outperforms a leading open-weight VLA trained on the same demonstrations, yet still falls short of deployment-level mastery on agile, contact-rich tasks. To close this gap, we introduce CLIFT: Closed-Loop Iterative Fine-Tuning, which turns deployment-time reward feedback into API-compatible supervised data and enables closed-loop policy improvement without accessing weights, gradients, likelihoods, or losses-pushing GROD to near-perfect success after two flywheel cycles, all without \"opening the model box.\"",
       "date": "2026-07-31",
@@ -1942,6 +1954,18 @@
       ]
     },
     {
+      "title": "CatPaw",
+      "url": "https://tech.meituan.com/2026/07/28/CatPaw-LongCat.html",
+      "date": "2026-07-28",
+      "summary": "Meituan released CatPaw, an AI-agent platform providing a personal workbench and enterprise facilities for developing, deploying, and managing agents powered by LongCat 2.0.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "A Causality-aware Infer-diagnose-refine Framework for Test-time Modality Adaptation in VLA Models",
       "summary": "Vision-language-action (VLA) models predict sequential actions to execute tasks specified by language instructions, conditioned on visual observations and proprioceptive states. However, how to fuse modalities in VLA models remains an open problem, since robot manipulation involves dynamic phases, such as long-distance movements and close-range interactions, in which the importance of visual observations may vary over time. In this paper, we propose an infer-diagnose-refine (IDR) framework, a model-agnostic framework that can be integrated with diverse VLA architectures for refining action predictions at test time. IDR first infers actions under factual and counterfactual scenarios of visual observations, and then diagnoses the causal effects of visual observations as the estimated dynamic importance, which is finally used to refine the action predictions in a training-free manner. We further design a causality-aware action refiner to realize the IDR framework, including zero-padding interventions for inferring counterfactual actions, norm-based quantification for diagnosing causal effects, and gated residual fusion for refining actions. Extensive experiments on both simulation benchmarks and real-world tasks show improvements in overall performance across multiple VLA backbones, demonstrating the efficacy of dynamically adjusting visual importance at test time.",
       "date": "2026-07-28",
@@ -2152,6 +2176,18 @@
       "reasons": [
         "keywords: vision-language-action, vla, humanoid",
         "report/model title"
+      ]
+    },
+    {
+      "title": "MindMemOS",
+      "url": "https://github.com/huawei-noah/noah-research/tree/master/MindMemOS",
+      "date": "2026-07-24",
+      "summary": "MindMemOS is an open-source long-term memory system that turns conversations, files, tool traces, feedback and offline reflection into searchable, updateable and project-isolated memory for AI agents.",
+      "organization_hint": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -2710,6 +2746,18 @@
       "summary": "SceneSmith coordinates AI agents to generate simulation-ready indoor environments with realistic layouts, objects, and physical properties for robot training and evaluation.",
       "title": "SceneSmith",
       "url": "https://news.mit.edu/2026/ai-agents-create-virtual-playgrounds-to-help-robots-get-crucial-training-data-0713",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "LongCat 2.0",
+      "url": "https://github.com/meituan-longcat/LongCat-2.0",
+      "date": "2026-07-12",
+      "summary": "Meituan open-sourced LongCat 2.0, a 1.6-trillion-parameter mixture-of-experts language model designed for long-context coding and agentic tasks, together with GPU and NPU inference support.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -3276,6 +3324,18 @@
       "date": "2026-06-30",
       "summary": "A multimodal action tokenizer that provides a semantic interface between vision-language reasoning and continuous robot control for VLA pretraining.",
       "organization_hint": "自变量机器人 / X² Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "VitaBench 2.0",
+      "url": "https://github.com/meituan-longcat/vitabench-2.0",
+      "date": "2026-06-29",
+      "summary": "Meituan open-sourced VitaBench 2.0, a benchmark for evaluating language-model agents on personalization and proactive behavior during long-term, dynamic interactions with users.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -3873,6 +3933,30 @@
       ]
     },
     {
+      "title": "Qwen-RobotWorld",
+      "url": "https://qwen.ai/blog?id=qwen-robotworld",
+      "date": "2026-06-15",
+      "summary": "Qwen-RobotWorld is an embodied world model that uses natural-language actions to model environments across manipulation, autonomous-driving and indoor-navigation scenarios.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Qwen-RobotManip",
+      "url": "https://qwen.ai/blog?id=qwen-robotmanip",
+      "date": "2026-06-15",
+      "summary": "Qwen-RobotManip is a vision-language-action foundation model for robotic manipulation, trained with aligned multi-source data spanning multiple robot embodiments and human demonstrations.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI",
       "summary": "We introduce \\textbf{Kairos}, a regret-aware native world-action model stack for Physical AI. Kairos is motivated by the view that a physical world model should not aim to fully simulate all future pixels, but should learn and maintain the information most relevant to embodiment control: object state, spatial relations, contact conditions, task progress, action consequences, failure boundaries, and deployment uncertainty. Kairos establishes three model-side prerequisites toward this goal. First, it \\textbf{learns} control-relevant information through a \\textbf{Cross-Embodiment Data Curriculum}, which organizes open-world videos, human behavioral data, and robot interactions into an intervention-strength progression from passive physical observation to intentional behavior and embodied action grounding. Second, it \\textbf{maintains} control-sufficient states through a unified \\textbf{understanding, generation, and prediction architecture} equipped with \\textbf{Hybrid Linear Temporal Attention}, where local, mid-range, and global temporal pathways support multi-timescale state maintenance under efficient inference. Third, it \\textbf{deploys} these states through a \\textbf{Deployment-Aware System Co-Design}, treating latency, memory footprint, and hardware compatibility as first-order constraints for future observation, action, and feedback loops. Experiments on embodied world-model benchmarks, world-action benchmarks, long-horizon generation, and inference-efficiency evaluation show that Kairos achieves superior performance while offering a favorable efficiency to capability trade-off.",
       "date": "2026-06-15",
@@ -3906,6 +3990,18 @@
       "score": 26,
       "reasons": [
         "keywords: world model, cross-embodiment"
+      ]
+    },
+    {
+      "title": "Hy-Embodied-0.5-VLA",
+      "url": "https://github.com/Tencent-Hunyuan/Hy-Embodied-0.5-VLA",
+      "date": "2026-06-15",
+      "summary": "An end-to-end vision-language-action robot learning stack covering data loading, pre-training, supervised fine-tuning, evaluation and deployment. The release includes UMI- and RoboTwin-trained models plus more than 2,000 hours of public egocentric manipulation data.",
+      "organization_hint": "腾讯 Robotics X",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -3966,6 +4062,18 @@
       "reasons": [
         "keywords: dexterous manipulation, cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "WBench",
+      "url": "https://github.com/meituan-longcat/WBench",
+      "date": "2026-06-12",
+      "summary": "Meituan released WBench, a multi-turn benchmark for evaluating interactive video world models across navigation, subject actions, event editing, viewpoint control, consistency, and physical realism.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -4317,6 +4425,18 @@
       ]
     },
     {
+      "title": "Humanoid-GPT",
+      "url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+      "date": "2026-06-02",
+      "summary": "Humanoid-GPT is a GPT-style causal Transformer for zero-shot whole-body humanoid motion tracking, pretrained on a two-billion-frame motion corpus.",
+      "organization_hint": "银河通用 / Galbot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations",
       "summary": "Dexterous manipulation learning has long been hindered by the high costs of data and training, as pure reinforcement learning typically requires large-scale interactive exploration and imitation learning depends on high-quality demonstrations that are expensive to collect. To address this problem, we propose EaDex, a multi-embodiment dexterous manipulation learning framework under low-cost demonstration conditions, which enables rapid generation of demonstration data and consequently reduces training time for efficient dexterous manipulation. At the data level, EaDex captures human hand motions using only a single RGB-D camera and constructs structured demonstration data through MANO-based hand modeling, data normalization, and motion retargeting. At the learning level, we introduce a contact-reward-based dynamic demonstration annealing mechanism, which guides early-stage exploration under demonstration and gradually transitions to autonomous optimization with accumulating contact rewards. Using our custom dataset, we evaluate EaDex on three dexterous hands and three articulated object-opening tasks, covering nine cross-embodiment manipulation settings, achieving a 55.3% relative improvement over the baseline without demonstration annealing. These results validate the effectiveness of the proposed low-cost demonstration pipeline and the dynamic demonstration annealing strategy for dexterous manipulation learning.",
       "date": "2026-06-02",
@@ -4410,6 +4530,18 @@
       ]
     },
     {
+      "title": "LeTools-Learning: LeRobot 0.5.2 Model Support",
+      "url": "https://github.com/LejuRobotics/LeTools-Learning",
+      "date": "2026-05-30",
+      "summary": "LeTools-Learning added support for ten models built into LeRobot 0.5.2 and external models including LingbotVLA, PI0, PI0-FAST, PI0.5 and GR00T N1.7.",
+      "organization_hint": "乐聚机器人 / Leju Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-05-29",
       "organization_hint": "X Square Robot",
       "summary": "WALL-WM is an open-source world-action model that represents robot interaction as semantically meaningful events rather than fixed action chunks.",
@@ -4427,6 +4559,18 @@
       "date": "2026-05-29",
       "summary": "A world-action model that couples future-video prediction with robot-action prediction at semantic event boundaries.",
       "organization_hint": "自变量机器人 / X² Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Qwen-VLA",
+      "url": "https://qwen.ai/blog?id=qwenvla",
+      "date": "2026-05-29",
+      "summary": "Qwen-VLA is a general-purpose vision-language-action model that unifies robotic manipulation, vision-language navigation, continuous action generation and cross-embodiment control.",
+      "organization_hint": "阿里云通义 / Qwen",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -5119,6 +5263,18 @@
       ]
     },
     {
+      "title": "ERNIE 5.1 Officially Released! Topping Multiple Leaderboards — A Model That Writes Better and Understands You More | ERNIE Blog",
+      "url": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/",
+      "date": "2026-05-09",
+      "summary": "ERNIE 5.1 is officially released, achieving leading performance at only 6% of the pre-training cost of comparable models. Powered by disaggregated fully-asynchronous reinforcement learning and scaled agentic post-training, ERNIE 5.1 delivers comprehensive upgrades across Agent, reasoning, and creative capabilities, ranking 1st in China on the Arena Search Arena.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Reconstruction or Semantics? What Makes a Latent Space Useful for Robotic World Models",
       "summary": "World model-based policy evaluation is a practical proxy for testing real-world robot control by rolling out candidate actions in action-conditioned video diffusion models. As these models increasingly adopt latent diffusion modeling (LDM), choosing the right latent space becomes critical. While the status quo uses autoencoding latent spaces like VAEs that are primarily trained for pixel reconstruction, recent work suggests benefits from pretrained encoders with representation-aligned semantic latent spaces. We systematically evaluate these latent spaces for action-conditioned LDM by comparing six reconstruction and semantic encoders to train world model variants under a fixed protocol on BridgeV2 dataset, and show effective world model training in high-dimensional representation spaces with and without dimension compression. We then propose three axes to assess robotic world model performance: visual fidelity, planning and downstream policy performance, and latent representation quality. Our results show visual fidelity alone is insufficient for world model selection. While reconstruction encoders like VAE and Cosmos achieve strong pixel-level scores, semantic encoders such as V-JEPA 2.1 (strongest overall on policy), Web-DINO, and SigLIP 2 generally excel across the other two axes at all model scales. Our study advocates semantic latent space as stronger foundation for policy-relevant robotics diffusion world models.",
       "date": "2026-05-07",
@@ -5365,6 +5521,18 @@
       ]
     },
     {
+      "title": "HY-Embodied-0.5-X",
+      "url": "https://github.com/Tencent-Hunyuan/HY-Embodied-0.5-X",
+      "date": "2026-04-24",
+      "summary": "An open-source embodied multimodal foundation model optimized for manipulation understanding, spatial reasoning, action prediction, risk assessment and long-horizon planning. The repository provides inference and supervised fine-tuning code.",
+      "organization_hint": "腾讯 Robotics X",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "GazeVLA: Learning Human Intention for Robotic Manipulation",
       "summary": "Embodied foundation models have achieved significant breakthroughs in robotic manipulation, yet they still depend heavily on large-scale robot demonstrations. Although recent works have explored leveraging human data to alleviate this dependency, effectively extracting transferable knowledge remains a significant challenge due to the inherent embodiment gap between human and robot. We argue that the intention underlying human actions can serve as a powerful intermediate representation for bridging this gap. In this paper, we introduce a novel framework that explicitly learns and transfers human intention to facilitate robotic manipulation. Specifically, we model intention through gaze, as it naturally precedes physical actions and serves as an observable proxy for human intent. Our model is first pretrained on a large-scale egocentric human dataset to capture human intention and its synergy with action, followed by finetuning on a small set of robot and human data. During inference, the model adopts a Chain-of-Thought reasoning paradigm, sequentially predicting intention before executing the action. Extensive evaluations in simulation and real-world settings, across long-horizon and fine-grained tasks, and under few-shot and robustness benchmarks, show that our method consistently outperforms strong baselines, generalizes better, and achieves state-of-the-art performance. Project page: https://gazevla.github.io .",
       "date": "2026-04-24",
@@ -5394,6 +5562,18 @@
       "reasons": [
         "official web-project discovery",
         "maintained official seed"
+      ]
+    },
+    {
+      "title": "DeepSeek-V4",
+      "url": "https://api-docs.deepseek.com/news/news260424/",
+      "date": "2026-04-24",
+      "summary": "DeepSeek-V4 introduced the V4-Pro and V4-Flash mixture-of-experts LLMs with one-million-token context, thinking and non-thinking modes, and agentic-task optimization.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -5522,6 +5702,18 @@
       "reasons": [
         "keywords: vla, humanoid, world model, cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "EngineAI-Lab (engineai_amp)",
+      "url": "https://github.com/engineai-robotics/engineai_amp",
+      "date": "2026-04-21",
+      "summary": "An Isaac Lab and Isaac Sim framework for training, evaluating, converting and deploying locomotion and adversarial motion-prior policies on EngineAI robots.",
+      "organization_hint": "众擎机器人 / EngineAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -5850,6 +6042,18 @@
       ]
     },
     {
+      "title": "HY-Embodied-0.5",
+      "url": "https://github.com/Tencent-Hunyuan/HY-Embodied",
+      "date": "2026-04-09",
+      "summary": "An embodied multimodal foundation model for physical-world perception, reasoning and task planning. The release provides HY-Embodied-0.5 MoT-2B model weights and official inference code.",
+      "organization_hint": "腾讯 Robotics X",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation",
       "summary": "Humans achieve complex manipulation through coordinated whole-body control, whereas most Vision-Language-Action (VLA) models treat robot body parts largely independently, making high-DoF humanoid control challenging and often unstable. We present HEX, a state-centric framework for coordinated manipulation on full-sized bipedal humanoid robots. HEX introduces a humanoid-aligned universal state representation for scalable learning across heterogeneous embodiments, and incorporates a Mixture-of-Experts Unified Proprioceptive Predictor to model whole-body coordination and temporal motion dynamics from large-scale multi-embodiment trajectory data. To efficiently capture temporal visual context, HEX uses lightweight history tokens to summarize past observations, avoiding repeated encoding of historical images during inference. It further employs a residual-gated fusion mechanism with a flow-matching action head to adaptively integrate visual-language cues with proprioceptive dynamics for action generation. Experiments on real-world humanoid manipulation tasks show that HEX achieves state-of-the-art performance in task success rate and generalization, particularly in fast-reaction and long-horizon scenarios.",
       "date": "2026-04-09",
@@ -6004,6 +6208,30 @@
       "reasons": [
         "keywords: cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "ERNIE-5.1-Preview Tops LMArena Text Leaderboard as No.1 Chinese Model! | ERNIE Blog",
+      "url": "https://ernie.baidu.com/blog/posts/ernie-5.1-preview-0430-release-on-lmarena/",
+      "date": "2026-04-03",
+      "summary": "On April 30, LMArena released its latest rankings. ERNIE-5.1-Preview ranked No. 1 among Chinese models and No. 13 globally on the LMArena Text Arena, placing in the global top 10 across multiple category leaderboards.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "LongCat-Next",
+      "url": "https://github.com/meituan-longcat/LongCat-Next",
+      "date": "2026-04-02",
+      "summary": "Meituan open-sourced LongCat-Next, a native multimodal foundation model and discrete tokenizer that jointly model text, visual, and speech signals.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6442,6 +6670,30 @@
       ]
     },
     {
+      "title": "Qwen3.5",
+      "url": "https://qwen.ai/blog?id=qwen3.5",
+      "date": "2026-02-15",
+      "summary": "Qwen3.5 is a native multimodal large language model series designed for reasoning, coding, tool use, visual understanding and agent workflows.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Seed2.0",
+      "url": "https://seed.bytedance.com/en/blog/seed2-0-%25E6%25AD%25A3%25E5%25BC%258F%25E5%258F%2591%25E5%25B8%2583",
+      "date": "2026-02-14",
+      "summary": "Seed2.0 is a series of general-purpose agentic large language models offered in Pro, Lite, and Mini variants for complex reasoning, research, software development, multimodal understanding, and other real-world tasks.",
+      "organization_hint": "字节跳动 Seed",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-02-13",
       "organization_hint": "Unitree Robotics",
       "summary": "Embodied-intelligence model deployed for testing in Unitree's robot factory, where humanoid robots perform assembly and robot-manufacturing tasks.",
@@ -6596,11 +6848,35 @@
       ]
     },
     {
+      "title": "Diffusion Language Model Agent",
+      "url": "https://www.noahlab.com.hk/en/news",
+      "date": "2026-02-10",
+      "summary": "Huawei Noah's Ark Lab released a diffusion-language-model agent for multistep planning and tool use, reporting accuracy comparable to autoregressive agents with faster execution and fewer interaction and tool-call steps.",
+      "organization_hint": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-02-10",
       "organization_hint": "Sereact",
       "summary": "Cortex 1.6 introduces the Process-Reward Operator, a learned reward model that extracts dense training signals from continuous multimodal records of real robot execution.",
       "title": "Cortex 1.6: Learning From the Way Things Unfold",
       "url": "https://sereact.ai/posts/cortex-1-6",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "ERNIE 5.0: A 2.4 Trillion-Parameter Unified Multimodal Foundation Model | ERNIE Blog",
+      "url": "https://ernie.baidu.com/blog/posts/ernie5.0/",
+      "date": "2026-02-06",
+      "summary": "We introduce ERNIE 5.0: a 2.4 trillion-parameter Unified Multimodal Model trained from scratch. Integrating text, image, video, and audio into a single autoregressive framework, it overcomes the limitations of late-fusion architectures to achieve seamless cross-modal understanding and generation.",
+      "organization_hint": "百度 Research",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6706,6 +6982,18 @@
       ]
     },
     {
+      "title": "QuantWM",
+      "url": "https://github.com/huawei-noah/noah-research/tree/master/QuantWM",
+      "date": "2026-02-02",
+      "summary": "QuantWM provides code for evaluating post-training quantization of world models across visual planning tasks, bit widths, quantization granularities and planning horizons.",
+      "organization_hint": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Language Movement Primitives: Grounding Language Models in Robot Motion",
       "summary": "Enabling robots to perform novel manipulation tasks from natural language instructions remains a fundamental challenge in robotics, despite significant progress in generalized problem solving with foundational models. Large vision and language models (VLMs) are capable of processing high-dimensional input data for visual scene and language understanding, as well as decomposing tasks into a sequence of logical steps; however, they struggle to ground those steps in embodied robot motion. On the other hand, robotics foundation models output action commands, but require in-domain fine-tuning or experience before they are able to perform novel tasks successfully. At its core, there still remains the fundamental challenge of connecting abstract task reasoning with low-level motion control. To address this disconnect, we propose Language Movement Primitives (LMPs), a framework that grounds VLM reasoning in Dynamic Movement Primitive (DMP) parameterization. Our key insight is that DMPs provide a small number of interpretable parameters, and VLMs can set these parameters to specify diverse, continuous, and stable trajectories. Put another way: VLMs can reason over free-form natural language task descriptions, and semantically ground their desired motions into DMPs -- bridging the gap between high-level task reasoning and low-level position and velocity control. Building on this combination of VLMs and DMPs, we formulate our LMP pipeline for zero-shot robot manipulation that effectively completes tabletop manipulation problems by generating a sequence of DMP motions. Across 31 real-world manipulation tasks, we show that LMP achieves 65% task success as compared to 35% for the best performing baseline. See videos at our website: https://collab.me.vt.edu/lmp",
       "date": "2026-02-02",
@@ -6728,6 +7016,30 @@
       "date": "2026-01-29",
       "summary": "Training and inference code, model weights, checkpoints, data preparation tools, and deployment code for a vision-language-action model designed for general-purpose humanoid manipulation.",
       "organization_hint": "宇树科技 / Unitree Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PaddleOCR-VL 1.5 in PaddleOCR 3.4.0",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.4.0",
+      "date": "2026-01-29",
+      "summary": "PaddleOCR 3.4.0 released PaddleOCR-VL 1.5, an updated vision-language model and document-parsing stack with irregular document-element localization, seal recognition and cross-page structure processing.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Click-and-Traverse",
+      "url": "https://github.com/GalaxyGeneralRobotics/Click-and-Traverse",
+      "date": "2026-01-28",
+      "summary": "Click-and-Traverse provides a planning and control implementation for collision-free humanoid traversal through cluttered indoor environments.",
+      "organization_hint": "银河通用 / Galbot",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6776,6 +7088,30 @@
       "reasons": [
         "keywords: robot foundation",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "PocketLLM",
+      "url": "https://github.com/huawei-noah/noah-research/tree/master/PocketLLM",
+      "date": "2026-01-22",
+      "summary": "PocketLLM provides an LLM compression implementation based on meta-network weight reconstruction in a discrete latent space, targeting approximately lossless deployment at compression ratios of 10 to 16 times.",
+      "organization_hint": "华为诺亚方舟实验室 / Huawei Noah's Ark Lab",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "LongCat-Flash-Thinking-2601",
+      "url": "https://github.com/meituan-longcat/LongCat-Flash-Thinking-2601",
+      "date": "2026-01-20",
+      "summary": "Meituan released LongCat-Flash-Thinking-2601, an open reasoning language model optimized for agentic search, tool use, and tool-integrated reasoning.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6848,6 +7184,18 @@
       ]
     },
     {
+      "title": "ERNIE-5.0-Preview-1220 Becomes the Sole Chinese Model in LMArena Vision Top 10! | ERNIE Blog",
+      "url": "https://ernie.baidu.com/blog/posts/ernie-5.0-preview-1220-release-on-lmarena/",
+      "date": "2026-01-08",
+      "summary": "On January 8, LMArena released its latest rankings. ERNIE-5.0-Preview-1220 achieved a score of 1226, ranking No. 1 in China and No. 8 globally on the LMArena Vision Arena.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Analysis of Various Manipulator Configurations Based on Multi-Objective Black-Box Optimization",
       "summary": "Various 6-degree-of-freedom (DOF) and 7-DOF manipulators have been developed to date. Over a long history, their joint configurations and link length ratios have been determined empirically. In recent years, the development of robotic foundation models has become increasingly active, leading to the continuous proposal of various manipulators to support these models. However, none of these manipulators share exactly the same structure, as the order of joints and the ratio of link lengths differ among robots. Therefore, in order to discuss the optimal structure of a manipulator, we performed multi-objective optimization from the perspectives of end-effector reachability and joint torque. We analyze where existing manipulator structures stand within the sampling results of the optimization and provide insights for future manipulator design.",
       "date": "2026-01-06",
@@ -6863,11 +7211,35 @@
       "reasons": []
     },
     {
+      "title": "PaddleOCR-VL-1.5: Towards a Multi-Task 0.9B VLM for Robust In-the-Wild Document Parsing | ERNIE Blog",
+      "url": "https://ernie.baidu.com/blog/posts/paddleocr-vl-1.5/",
+      "date": "2026-01-02",
+      "summary": "🚀 We release PaddleOCR-VL-1.5, an upgraded model achieving a new state-of-the-art (SOTA)accuracy of 94.5% on OmniDocBench v1.5.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-01-01",
       "organization_hint": "Mentee Robotics",
       "summary": "Robot-learning system combining human mentoring, Real2Sim2Real training, few-shot task generalization, and natural-language instruction following.",
       "title": "Mentoring and Instruction Following",
       "url": "https://menteebot.com/blog/mentoring-instruction-following/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "ERNIE-5.0 Tops LMArena Text Leaderboard as No.1 Chinese Model! | ERNIE Blog",
+      "url": "https://ernie.baidu.com/blog/posts/ernie-5.0-0110-release-on-lmarena/",
+      "date": "2026-01-01",
+      "summary": "On January 15, LMArena released its latest rankings. ERNIE-5.0-0110 achieved a score of 1,460, ranking No. 1 among Chinese models and No. 8 globally on the LMArena Text Arena.",
+      "organization_hint": "百度 Research",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6913,6 +7285,18 @@
       "score": 38,
       "reasons": [
         "report/model title"
+      ]
+    },
+    {
+      "title": "Seed1.8",
+      "url": "https://seed.bytedance.com/blog/official-release-of-seed1-8-a-generalized-agentic-model",
+      "date": "2025-12-18",
+      "summary": "Seed1.8 is a multimodal generalized agentic model supporting text and image inputs, with integrated search, coding, GUI interaction, and complex workflow capabilities.",
+      "organization_hint": "字节跳动 Seed",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7000,11 +7384,71 @@
       ]
     },
     {
+      "title": "Booster Robotics SDK v1.4",
+      "url": "https://github.com/BoosterRobotics/booster_robotics_sdk",
+      "date": "2025-12-08",
+      "summary": "Version 1.4 of the Booster Robotics SDK provides software interfaces and examples for controlling Booster robots.",
+      "organization_hint": "加速进化 / Booster Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Booster Train",
+      "url": "https://github.com/BoosterRobotics/booster_train",
+      "date": "2025-12-05",
+      "summary": "Booster Train is an Isaac Lab-based reinforcement-learning training framework with motion-tracking tasks adapted for Booster humanoid robots.",
+      "organization_hint": "加速进化 / Booster Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Booster Assets",
+      "url": "https://github.com/BoosterRobotics/booster_assets",
+      "date": "2025-12-05",
+      "summary": "Booster Assets provides official robot descriptions and example motion data for training, simulation and deployment workflows.",
+      "organization_hint": "加速进化 / Booster Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Seed GR-RL",
+      "url": "https://seed.bytedance.com/en/blog/seed-research-gr-rl-released-a-breakthrough-in-high-precision-manipulation-for-vla-models-applying-real-world-reinforcement-learning-to-shoe-lacing-for-the-first-time",
+      "date": "2025-12-02",
+      "summary": "GR-RL is a multi-stage reinforcement-learning framework for adapting vision-language-action models to long-horizon, high-precision dexterous manipulation through offline data filtering and online real-robot fine-tuning.",
+      "organization_hint": "字节跳动 Seed",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Best Text model from China in LMArena is now ERNIE-5.0-Preview-1203! | ERNIE Blog",
+      "url": "https://ernie.baidu.com/blog/posts/ernie-5.0-preview-1203-release-on-lmarena/",
+      "date": "2025-12-02",
+      "summary": "Just now, LMArena released its latest rankings. Baidu’s ERNIE-5.0-Preview-1203 scored an impressive 1,451 points.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "What is prompt engineering? · GitHub Facebook X (formerly Twitter) LinkedIn",
       "url": "https://github.com/resources/articles/what-is-prompt-engineering",
       "date": "2025-12-01",
       "summary": "Discover what prompt engineering is, how AI prompt engineering improves model performance, and why mastering prompt design is essential for building effective AI applications.",
-      "organization_hint": "傅利叶智能 / Fourier Intelligence",
+      "organization_hint": "众擎机器人 / EngineAI",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7043,6 +7487,18 @@
       "reasons": [
         "keywords: vision-language-action, vla, robot foundation, dexterous manipulation",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "DeepSeek-V3.2",
+      "url": "https://api-docs.deepseek.com/news/news251201/",
+      "date": "2025-12-01",
+      "summary": "DeepSeek-V3.2 is an LLM supporting thinking and non-thinking modes, tool use, and agent-oriented reasoning through DeepSeek's web, application and API services.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7283,6 +7739,18 @@
       ]
     },
     {
+      "title": "LongCat-Flash-Omni",
+      "url": "https://github.com/meituan-longcat/LongCat-Flash-Omni",
+      "date": "2025-11-03",
+      "summary": "Meituan open-sourced LongCat-Flash-Omni, an end-to-end multimodal language model supporting text, image, video, and audio understanding with real-time speech interaction.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-01",
       "organization_hint": "Physical Intelligence",
       "summary": "π0.6 is a vision-language-action model release focused on improved dexterity, robustness, and long-horizon manipulation across multiple robot embodiments.",
@@ -7299,7 +7767,19 @@
       "url": "https://github.com/resources/articles/what-is-generative-ai-genai",
       "date": "2025-11-01",
       "summary": "Generative AI creates text, images, and code using deep learning. Explore GenAI tools, models, and how it’s shaping artificial intelligence today.",
-      "organization_hint": "傅利叶智能 / Fourier Intelligence",
+      "organization_hint": "众擎机器人 / EngineAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "LongCat-Video",
+      "url": "https://github.com/meituan-longcat/LongCat-Video",
+      "date": "2025-10-27",
+      "summary": "Meituan released LongCat-Video, a foundational video-generation model supporting text-to-video, image-to-video, and video continuation, presented as a step toward interactive world models and embodied-intelligence applications.",
+      "organization_hint": "美团机器人研究院 / Meituan Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7312,6 +7792,18 @@
       "summary": "Major LeRobot release adding Datasets 3.0, VLA integrations including pi-zero-point-five and GR00T N1.5, simulation support, multi-GPU training, and a hardware plugin system.",
       "title": "LeRobot v0.4.0",
       "url": "https://huggingface.co/blog/lerobot-release-v040",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Seed3D 1.0",
+      "url": "https://seed.bytedance.com/zh/blog/seed3d-1-0-released-generate-high-fidelity-3d-models-from-single-images-featuring-sota-texturing",
+      "date": "2025-10-23",
+      "summary": "Seed3D 1.0 is a foundation model that generates high-fidelity, simulation-ready 3D assets from single images for physics engines, robotic manipulation, and scalable embodied-agent training environments.",
+      "organization_hint": "字节跳动 Seed",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7369,6 +7861,18 @@
       "summary": "Full-size humanoid standing about 1.8 meters tall, with 31 degrees of freedom, high-torque joints, bionic visual sensing and support for embodied models.",
       "title": "Unitree H2",
       "url": "https://www.unitree.com/mobile/H2/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PaddleOCR-VL 0.9B in PaddleOCR 3.3.0",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.3.0",
+      "date": "2025-10-16",
+      "summary": "PaddleOCR 3.3.0 released PaddleOCR-VL, centered on a compact 0.9-billion-parameter vision-language model built with ERNIE 4.5 for multilingual document parsing and complex-element recognition.",
+      "organization_hint": "百度 Research",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7476,6 +7980,18 @@
       ]
     },
     {
+      "title": "DeepSeek-V3.2-Exp",
+      "url": "https://api-docs.deepseek.com/news/news250929/",
+      "date": "2025-09-29",
+      "summary": "DeepSeek-V3.2-Exp is an experimental LLM introducing DeepSeek Sparse Attention for more efficient long-context training and inference.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "KeyWorld: Key Frame Reasoning Enables Effective and Efficient World Models",
       "summary": "Robotic world models are a promising paradigm for forecasting future environment states, yet their inference speed and the physical plausibility of generated trajectories remain critical bottlenecks, limiting their real-world applications. This stems from the redundancy of the prevailing frame-to-frame generation approach, where the model conducts costly computation on similar frames, as well as neglecting the semantic importance of key transitions. To address this inefficiency, we propose KeyWorld, a framework that improves text-conditioned robotic world models by concentrating transformers computation on a few semantic key frames while employing a lightweight convolutional model to fill the intermediate frames. Specifically, KeyWorld first identifies significant transitions by iteratively simplifying the robot's motion trajectories, obtaining the ground truth key frames. Then, a DiT model is trained to reason and generate these physically meaningful key frames from textual task descriptions. Finally, a lightweight interpolator efficiently reconstructs the full video by inpainting all intermediate frames. Evaluations on the LIBERO benchmark demonstrate that KeyWorld achieves a 5.68$\\times$ acceleration compared to the frame-to-frame generation baseline, and focusing on the motion-aware key frames further contributes to the physical validity of the generated videos, especially on complex tasks. Our approach highlights a practical path toward deploying world models in real-time robotic control and other domains requiring both efficient and effective world models. Code is released at https://anonymous.4open.science/r/Keyworld-E43D.",
       "date": "2025-09-25",
@@ -7542,6 +8058,54 @@
       "date": "2025-09-23",
       "summary": "AgiBot open-sourced GO-1, a general-purpose embodied foundation model using a vision-language-latent-action architecture for robotic manipulation.",
       "organization_hint": "智元机器人 / AgiBot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Qwen3-VL",
+      "url": "https://qwen.ai/blog?id=99f0335c4ad9ff6153e517418d48535ab6d8afef",
+      "date": "2025-09-22",
+      "summary": "Qwen3-VL is a multimodal large language model series with visual reasoning, spatial and video understanding, tool use and computer-interface agent capabilities.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DeepSeek-V3.1-Terminus",
+      "url": "https://api-docs.deepseek.com/news/news250922/",
+      "date": "2025-09-22",
+      "summary": "DeepSeek-V3.1-Terminus is an updated V3.1 LLM with improved language consistency, output stability, and Code Agent and Search Agent performance.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Qwen3-Omni",
+      "url": "https://qwen.ai/blog?id=65f766fc2dcba7905c1cb69cc4cab90e94126bf4",
+      "date": "2025-09-21",
+      "summary": "Qwen3-Omni is an end-to-end multimodal foundation model that processes text, images, audio and video and generates streaming text and speech responses.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "OpenTrack",
+      "url": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+      "date": "2025-09-19",
+      "summary": "OpenTrack released an open-source humanoid motion-tracking stack with MuJoCo JAX simulation and multi-GPU parallel training support.",
+      "organization_hint": "银河通用 / Galbot",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7653,6 +8217,18 @@
       ]
     },
     {
+      "title": "Qwen3-Next",
+      "url": "https://github.com/QwenLM/Qwen3-Next",
+      "date": "2025-09-11",
+      "summary": "Qwen3-Next is a large language model architecture combining hybrid attention, highly sparse mixture-of-experts layers and multi-token prediction for efficient long-context training and inference.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "WALL-OSS",
       "url": "https://github.com/X-Square-Robot/wall-x",
       "date": "2025-09-08",
@@ -7688,6 +8264,18 @@
       ],
       "score": 10,
       "reasons": []
+    },
+    {
+      "title": "Qwen3Guard: Real-time Safety for Your Token Stream | Qwen",
+      "url": "https://qwenlm.github.io/blog/qwen3guard/",
+      "date": "2025-09-02",
+      "summary": "Tech Report GitHub Hugging Face ModelScope DISCORD\nIntroduction We are excited to introduce Qwen3Guard, the first safety guardrail model in the Qwen family. Built upon the powerful Qwen3 foundation models and fine-tuned specifically for safety classificatoin, Qwen3Guard ensures responsible AI interactions by delivering precise safety detection for both prompts and responses, complete with risk levels and categorized classifications for accurate moderation.\nQwen3Guard achieves state-of-the-art performance on major safety benchmarks, demonstrating strong capabilities in both prompt and response classification tasks across English, Chinese, and multilingual environments.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
     },
     {
       "title": "LimX DreamActor",
@@ -7811,6 +8399,18 @@
       ]
     },
     {
+      "title": "PaddleOCR 3.2.0",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.2.0",
+      "date": "2025-08-21",
+      "summary": "PaddleOCR 3.2.0 expanded Baidu's document-processing software for AI and LLM workflows, including model and pipeline updates for converting images and PDFs into structured data.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "DeepSeek-V3.1",
       "url": "https://api-docs.deepseek.com/zh-cn/news/news250821",
       "date": "2025-08-21",
@@ -7821,6 +8421,18 @@
       "reasons": [
         "official web-project discovery",
         "maintained official seed"
+      ]
+    },
+    {
+      "title": "DeepSeek-V3.1",
+      "url": "https://api-docs.deepseek.com/news/news250821/",
+      "date": "2025-08-21",
+      "summary": "DeepSeek-V3.1 is a hybrid LLM combining thinking and non-thinking inference modes with improved tool use and multi-step agent capabilities.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7952,6 +8564,30 @@
       ]
     },
     {
+      "title": "Qwen-Image: Crafting with Native Text Rendering | Qwen",
+      "url": "https://qwenlm.github.io/blog/qwen-image/",
+      "date": "2025-08-04",
+      "summary": "GITHUB HUGGING FACE MODELSCOPE DEMO DISCORD\nWe are thrilled to release Qwen-Image, a 20B MMDiT image foundation model that achieves significant advances in complex text rendering and precise image editing. To try the latest model, feel free to visit Qwen Chat and choose “Image Generation”.\nThe key features include:\nSuperior Text Rendering: Qwen-Image excels at complex text rendering, including multi-line layouts, paragraph-level semantics, and fine-grained details. It supports both alphabetic languages (e.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Qwen-Image-Edit: Image Editing with Higher Quality and Efficiency | Qwen",
+      "url": "https://qwenlm.github.io/blog/qwen-image-edit/",
+      "date": "2025-08-01",
+      "summary": "QWEN CHAT GITHUB HUGGING FACE MODELSCOPE DISCORD\nWe are excited to introduce Qwen-Image-Edit, the image editing version of Qwen-Image. Built upon our 20B Qwen-Image model, Qwen-Image-Edit successfully extends Qwen-Image’s unique text rendering capabilities to image editing tasks, enabling precise text editing. Furthermore, Qwen-Image-Edit simultaneously feeds the input image into Qwen2.5-VL (for visual semantic control) and the VAE Encoder (for visual appearance control), achieving capabilities in both semantic and appearance editing.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-08-01",
       "organization_hint": "X Square Robot",
       "summary": "Next-generation wheeled humanoid robot released alongside the ArtiXon five-finger dexterous hand, which provides 20 degrees of freedom per hand.",
@@ -8049,6 +8685,30 @@
       "summary": "Neural Jacobian Fields learns a robot's three-dimensional geometry and response to control commands from camera observations and self-generated random motion.",
       "title": "Neural Jacobian Fields",
       "url": "https://news.mit.edu/2025/vision-based-system-teaches-machines-understand-their-bodies-0724",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Qwen3-Coder",
+      "url": "https://qwen.ai/blog?id=qwen3-coder",
+      "date": "2025-07-22",
+      "summary": "Qwen3-Coder is an agentic coding large language model supporting long contexts, software-engineering tasks, browser and tool use, and execution-driven reinforcement learning.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Seed GR-3",
+      "url": "https://seed.bytedance.com/public_papers/gr-3-technical-report",
+      "date": "2025-07-21",
+      "summary": "GR-3 is a large-scale vision-language-action model for general-purpose robot manipulation, supporting generalization to new objects, environments, and instructions as well as long-horizon, bimanual, and dexterous tasks.",
+      "organization_hint": "字节跳动 Seed",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8175,6 +8835,30 @@
       ]
     },
     {
+      "title": "Qwen-MT: Where Speed Meets Smart Translation | Qwen",
+      "url": "https://qwenlm.github.io/blog/qwen-mt/",
+      "date": "2025-07-02",
+      "summary": "DEMO API DISCORD\nIntroduction Here we introduce the latest update of Qwen-MT (qwen-mt-turbo) via Qwen API. This update builds upon the powerful Qwen3, leveraging trillions multilingual and translation tokens to comprehensively enhance the model’s multilingual understanding and translation capabilities. By integrating reinforcement learning techniques, the model achieves significant improvements in translation accuracy and linguistic fluency.\nKey Features:\nMultilingual Support for 92 Languages: Qwen-MT enables high-quality translation across 92 major official languages and prominent dialects, covering over 95% of the global population to meet diverse cross-lingual communication needs.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GSPO: Towards Scalable Reinforcement Learning for Language Models | Qwen",
+      "url": "https://qwenlm.github.io/blog/gspo/",
+      "date": "2025-07-02",
+      "summary": "PAPER DISCORD\nIntroduction Reinforcement Learning (RL) has emerged as a pivotal paradigm for scaling language models and enhancing their deep reasoning and problem-solving capabilities. To scale RL, the foremost prerequisite is maintaining stable and robust training dynamics. However, we observe that existing RL algorithms (such as GRPO) exhibit severe instability issues during long training and lead to irreversible model collapse, hindering further performance improvements with increased compute.\nTo enable successful RL scaling, we propose the Group Sequence Policy Optimization (GSPO) algorithm.",
+      "organization_hint": "阿里云通义 / Qwen",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-07-01",
       "organization_hint": "Massachusetts Institute of Technology",
       "summary": "Steerable Scene Generation is a generative simulation system for creating controllable, physically grounded 3D scenes and task variations for embodied-agent and robot learning.",
@@ -8216,6 +8900,30 @@
       "summary": "GR-3 is a vision-language-action model that combines web-scale vision-language pretraining, robot trajectory data, and human trajectory data for generalizable manipulation and instruction following.",
       "title": "GR-3",
       "url": "https://seed.bytedance.com/en/blog/gr-3-a-generalist-robot-policy-with-scaling-up-and-enhanced-generalization",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "ERNIE 4.5 Open-source",
+      "url": "https://github.com/PaddlePaddle/ERNIE/releases/tag/ernie-4.5",
+      "date": "2025-06-30",
+      "summary": "Baidu open-sourced the ERNIE 4.5 family of large language and vision-language foundation models together with ERNIEKit for training, alignment, compression and model development.",
+      "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PaddleOCR 3.1.0",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR/releases/tag/v3.1.0",
+      "date": "2025-06-29",
+      "summary": "PaddleOCR 3.1.0 introduced PP-DocTranslation, an LLM-powered pipeline based on PP-StructureV3 and ERNIE 4.5 Turbo for translating Markdown files, complex-layout PDFs and document images.",
+      "organization_hint": "百度 Research",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8342,6 +9050,18 @@
       ]
     },
     {
+      "title": "OpenWBT",
+      "url": "https://github.com/GalaxyGeneralRobotics/OpenWBT",
+      "date": "2025-06-12",
+      "summary": "OpenWBT is an open-source whole-body humanoid teleoperation and data-collection stack supporting physical robots and MuJoCo and Isaac Sim environments.",
+      "organization_hint": "银河通用 / Galbot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-06-11",
       "organization_hint": "Meta FAIR",
       "summary": "Self-supervised video world model and action-conditioned predictor supporting physical-world prediction, zero-shot robot planning, and robot control, accompanied by three physical-reasoning benchmarks.",
@@ -8411,7 +9131,7 @@
       "url": "https://github.com/resources/articles/what-are-generative-ai-models",
       "date": "2025-06-02",
       "summary": "Generative AI models are algorithms that learn from existing data to produce new content like text, images, or code.",
-      "organization_hint": "傅利叶智能 / Fourier Intelligence",
+      "organization_hint": "众擎机器人 / EngineAI",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8480,6 +9200,18 @@
       ]
     },
     {
+      "title": "DeepSeek-R1-0528",
+      "url": "https://api-docs.deepseek.com/news/news250528/",
+      "date": "2025-05-28",
+      "summary": "DeepSeek-R1-0528 is an updated reasoning LLM with improved benchmark performance, reduced hallucinations, JSON output and function calling.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "ChatVLA-2: Vision-Language-Action Model with Open-World Embodied Reasoning from Pretrained Knowledge",
       "summary": "Vision-language-action (VLA) models have emerged as the next generation of models in robotics. However, despite leveraging powerful pre-trained Vision-Language Models (VLMs), existing end-to-end VLA systems often lose key capabilities during fine-tuning as the model adapts to specific robotic tasks. We argue that a generalizable VLA model should retain and expand upon the VLM's core competencies: 1) Open-world embodied reasoning - the VLA should inherit the knowledge from VLM, i.e., recognize anything that the VLM can recognize, be capable of solving math problems, and possess visual-spatial intelligence, 2) Reasoning following - effectively translating the open-world reasoning into actionable steps for the robot. In this work, we introduce ChatVLA-2, a novel mixture-of-expert VLA model coupled with a specialized two-stage training pipeline designed to preserve the VLM's original strengths while enabling actionable reasoning. To validate our approach, we design a math-matching task wherein a robot interprets math problems written on a whiteboard and picks corresponding number cards from a table to solve equations. Remarkably, our method exhibits exceptional mathematical reasoning and OCR capabilities, despite these abilities not being explicitly trained within the VLA. Furthermore, we demonstrate that the VLA possesses strong spatial reasoning skills, enabling it to interpret novel directional instructions involving previously unseen objects. Overall, our method showcases reasoning and comprehension abilities that significantly surpass state-of-the-art imitation learning methods such as OpenVLA, DexVLA, and pi-zero. This work represents a substantial advancement toward developing truly generalizable robotic foundation models endowed with robust reasoning capacities.",
       "date": "2025-05-28",
@@ -8539,6 +9271,18 @@
       "summary": "PARTNR is a benchmark and large-scale dataset for training and evaluating planning and reasoning in embodied human-robot collaboration using the Habitat simulator.",
       "title": "PARTNR",
       "url": "https://ai.meta.com/blog/partnr-benchmark-dataset-human-robot-collaboration/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "BAGEL",
+      "url": "https://github.com/ByteDance-Seed/BAGEL",
+      "date": "2025-05-20",
+      "summary": "BAGEL is an open-source multimodal foundation model for unified text, image, and video understanding and generation, including visual manipulation, multiview synthesis, and world-navigation tasks.",
+      "organization_hint": "字节跳动 Seed",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8624,6 +9368,18 @@
         "keywords: robot foundation",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Seed1.5-VL",
+      "url": "https://seed.bytedance.com/blog/first-release-of-seed-vlm-tech-report-comprehensive-solutions-for-image-video-gui-and-game",
+      "date": "2025-05-13",
+      "summary": "Seed1.5-VL is a vision-language foundation model for multimodal understanding and reasoning across images, video, GUI control, gameplay, visual grounding, and spatial reasoning.",
+      "organization_hint": "字节跳动 Seed",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8866,6 +9622,18 @@
       ]
     },
     {
+      "title": "Seed-Thinking-v1.5",
+      "url": "https://seed.bytedance.com/en/public_papers/seed-thinking-v1-5-advancing-superb-reasoning-models-with-reinforcement-learning",
+      "date": "2025-04-10",
+      "summary": "Seed-Thinking-v1.5 is a mixture-of-experts reasoning language model trained with reinforcement learning for mathematical, scientific, coding, and general reasoning tasks.",
+      "organization_hint": "字节跳动 Seed",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets",
       "summary": "Imitation learning has emerged as a promising approach towards building generalist robots. However, scaling imitation learning for large robot foundation models remains challenging due to its reliance on high-quality expert demonstrations. Meanwhile, large amounts of video data depicting a wide range of environments and diverse behaviors are readily available. This data provides a rich source of information about real-world dynamics and agent-environment interactions. Leveraging this data directly for imitation learning, however, has proven difficult due to the lack of action annotation. In this work, we present Unified World Models (UWM), a framework that allows for leveraging both video and action data for policy learning. Specifically, a UWM integrates an action diffusion process and a video diffusion process within a unified transformer architecture, where independent diffusion timesteps govern each modality. By controlling each diffusion timestep, UWM can flexibly represent a policy, a forward dynamics, an inverse dynamics, and a video generator. Through simulated and real-world experiments, we show that: (1) UWM enables effective pretraining on large-scale multitask robot datasets with both dynamics and action predictions, resulting in more generalizable and robust policies than imitation learning, (2) UWM naturally facilitates learning from action-free video data through independent control of modality-specific diffusion timesteps, further improving the performance of finetuned policies. Our results suggest that UWM offers a promising step toward harnessing large, heterogeneous datasets for scalable robot learning, and provides a simple unification between the often disparate paradigms of imitation learning and world modeling. Videos and code are available at https://weirdlabuw.github.io/uwm/.",
       "date": "2025-04-03",
@@ -9036,6 +9804,18 @@
       "score": 26,
       "reasons": [
         "keywords: vision-language-action, vla"
+      ]
+    },
+    {
+      "title": "DeepSeek-V3-0324",
+      "url": "https://api-docs.deepseek.com/news/news250325/",
+      "date": "2025-03-25",
+      "summary": "DeepSeek-V3-0324 is an updated general-purpose LLM with improved reasoning, coding, function calling, writing and search capabilities.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -9572,6 +10352,18 @@
       "summary": "Research release of Computer-Using Agent (CUA), a vision-and-reasoning action model trained through reinforcement learning to operate graphical user interfaces using screenshots, mouse actions, and keyboard input.",
       "title": "Computer-Using Agent",
       "url": "https://openai.com/index/computer-using-agent/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "MagicDog SDK",
+      "url": "https://www.magiclab.top/en/documentcenter",
+      "date": "2025-01-20",
+      "summary": "MagicDog SDK provides low-level joint control, high-level motion-controller access, sensor and robot-state data, and voice interfaces for the MagicDog quadruped robot.",
+      "organization_hint": "魔法原子 / MagicLab",
       "authors": [],
       "score": 100,
       "reasons": [
