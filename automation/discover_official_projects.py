@@ -10,6 +10,7 @@ one crawl result for exactly one canonical organization.
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import os
 import re
@@ -21,7 +22,7 @@ from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urljoin, urlparse, urlunparse
+from urllib.parse import quote, urljoin, urlparse, urlunparse
 
 from organization_coverage import (
     ensure_coverage,
@@ -44,6 +45,10 @@ HTTP_TIMEOUT_SECONDS = 12
 MAX_DOCUMENT_BYTES = 1_500_000
 MAX_CRAWL_PAGES = 28
 DEFAULT_BOOTSTRAP_LIMIT = 12
+FETCH_ERRORS = (
+    urllib.error.URLError, urllib.error.HTTPError, http.client.HTTPException,
+    TimeoutError, OSError, ValueError, UnicodeError,
+)
 
 SOFTWARE_TERMS = (
     "vision-language", "vision language", "vla", "foundation model",
@@ -120,14 +125,26 @@ def write_json(path: Path, value: Any) -> None:
 
 
 def normalize_url(value: object) -> str:
+    """Return a request-safe HTTPS URL or an empty string.
+
+    Official sites often contain human-readable links such as
+    "/news/company news/". Spaces are legal page-path text but not legal in an
+    HTTP request, so they must be encoded before urlopen sees them. Embedded
+    control characters are discarded because no public URL may contain them.
+    """
     if not isinstance(value, str):
         return ""
-    value = value.strip()
-    parsed = urlparse(value)
-    if parsed.scheme != "https" or not parsed.netloc:
+    value = re.sub(r"[\x00-\x1f\x7f]+", "", value).strip()
+    try:
+        parsed = urlparse(value)
+    except ValueError:
         return ""
+    if parsed.scheme != "https" or not parsed.netloc or any(char.isspace() for char in parsed.netloc):
+        return ""
+    path = quote(parsed.path or "/", safe="/%:@!$&'()*+,;=-._~")
+    query = quote(parsed.query, safe="=%&/:?@!$'()*+,;.-_~")
     return urlunparse((
-        "https", parsed.netloc.lower(), parsed.path or "/", parsed.params, parsed.query, "",
+        "https", parsed.netloc.lower(), path, parsed.params, query, "",
     ))
 
 
@@ -276,14 +293,22 @@ class PageParser(HTMLParser):
 
 
 def fetch_text(url: str, *, timeout: int = HTTP_TIMEOUT_SECONDS) -> tuple[str, str]:
-    request = urllib.request.Request(url, headers={
+    normalized = normalize_url(url)
+    if not normalized:
+        raise ValueError(f"invalid official-source URL: {url!r}")
+    request = urllib.request.Request(normalized, headers={
         "User-Agent": "embodied-reports-bot/1.0 (+https://github.com/dexin-wang/embodied-reports)",
         "Accept": "text/html,application/xhtml+xml,application/xml,text/xml,text/plain;q=0.8,*/*;q=0.2",
     })
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        final_url = normalize_url(response.geturl()) or normalize_url(url)
-        raw = response.read(MAX_DOCUMENT_BYTES)
-        charset = response.headers.get_content_charset() or "utf-8"
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            final_url = normalize_url(response.geturl()) or normalized
+            raw = response.read(MAX_DOCUMENT_BYTES)
+            charset = response.headers.get_content_charset() or "utf-8"
+    except http.client.HTTPException as exc:
+        # urllib raises InvalidURL before it can become a URLError. Convert it
+        # to a normal per-site fetch failure.
+        raise ValueError(f"invalid official-source URL: {normalized!r}: {exc}") from exc
     return final_url, raw.decode(charset, errors="replace")
 
 
@@ -362,13 +387,13 @@ def sitemap_links(root: str) -> list[str]:
     try:
         _, robots = fetch_text(f"{origin}/robots.txt")
         sitemap_urls.extend(re.findall(r"(?im)^sitemap:\\s*(https?://\\S+)", robots))
-    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, ValueError):
+    except FETCH_ERRORS:
         pass
     links: list[str] = []
     for sitemap in https_urls(sitemap_urls, limit=5):
         try:
             _, xml = fetch_text(sitemap)
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, ValueError):
+        except FETCH_ERRORS:
             continue
         links.extend(re.findall(r"<loc>\\s*([^<\\s]+)\\s*</loc>", xml, flags=re.I))
     return https_urls(links, limit=160)
@@ -428,7 +453,7 @@ def crawl_organization(
         visited.add(current)
         try:
             document = fetch_document(current)
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, ValueError) as exc:
+        except FETCH_ERRORS as exc:
             errors.append(f"{current}: {type(exc).__name__}")
             continue
         scanned.append(document["url"])
@@ -453,7 +478,7 @@ def crawl_organization(
                 visited.add(link)
                 try:
                     document = fetch_document(link)
-                except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError, ValueError) as exc:
+                except FETCH_ERRORS as exc:
                     errors.append(f"{link}: {type(exc).__name__}")
                     continue
                 scanned.append(document["url"])
@@ -524,6 +549,15 @@ def merge_candidates(existing: dict[str, dict[str, Any]], items: list[dict[str, 
     return added
 
 
+def write_candidates(by_url: dict[str, dict[str, Any]]) -> None:
+    merged = sorted(
+        by_url.values(),
+        key=lambda item: (item.get("date", ""), item.get("title", "")),
+        reverse=True,
+    )
+    write_json(CANDIDATES, {"generated_at": utc_now(), "candidates": merged})
+
+
 def call_media() -> tuple[list[dict[str, str]], str | None]:
     watchlist = load_json(MEDIA_WATCHLIST, [])
     accounts = [item.get("name", "") for item in watchlist if isinstance(item, dict) and item.get("name")]
@@ -583,6 +617,9 @@ def run_official_discovery(bootstrap_limit: int) -> tuple[int, dict[str, int]]:
             bootstrapped += 1
             roots, bootstrap_candidates, error = bootstrap_sources(organization)
             store_sources(registry, organization, roots, bootstrap_candidates, error)
+            # Checkpoint source discovery immediately. A later unrelated site
+            # failure must not force the next run to pay for this bootstrap again.
+            save_registry(registry)
             if error:
                 record_official_result(
                     organization["name"], [], status="failed",
@@ -606,10 +643,12 @@ def run_official_discovery(bootstrap_limit: int) -> tuple[int, dict[str, int]]:
             source_urls=source_urls, scanned_urls=scanned_urls, error=error,
         )
         added += merge_candidates(by_url, candidates, "official web-project discovery")
+        # Candidate data is checkpointed per organization. A subsequent retry
+        # resumes instead of rediscovering pages that already completed.
+        write_candidates(by_url)
 
     save_registry(registry)
-    merged = sorted(by_url.values(), key=lambda item: (item.get("date", ""), item.get("title", "")), reverse=True)
-    write_json(CANDIDATES, {"generated_at": utc_now(), "candidates": merged})
+    write_candidates(by_url)
     coverage = ensure_coverage()
     summary = {
         "organizations": len(coverage["organizations"]),

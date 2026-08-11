@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """No-network tests for direct per-organization official-source discovery."""
 
+import http.client
 import unittest
 from unittest.mock import patch
 
@@ -14,6 +15,10 @@ class OfficialDiscoveryTests(unittest.TestCase):
             "https://example.com/news",
         )
         self.assertEqual(discovery.normalize_url("http://example.com"), "")
+        self.assertEqual(
+            discovery.normalize_url("https://example.com/news/company news/"),
+            "https://example.com/news/company%20news/",
+        )
         self.assertEqual(discovery.normalize_url("not a url"), "")
 
     def test_crawl_expands_only_the_organization_official_host(self) -> None:
@@ -45,6 +50,21 @@ class OfficialDiscoveryTests(unittest.TestCase):
         self.assertEqual(len(candidates), 1)
         self.assertEqual(candidates[0]["url"], project)
         self.assertEqual(candidates[0]["organization_hint"], "Alpha Robotics")
+
+    def test_malformed_external_link_cannot_abort_an_organization_crawl(self) -> None:
+        root = "https://alpha.example.com/"
+        with patch.object(
+            discovery, "fetch_document",
+            side_effect=http.client.InvalidURL("URL can't contain control characters"),
+        ), patch.object(discovery, "sitemap_links", return_value=[]):
+            candidates, source_urls, scanned_urls, error = discovery.crawl_organization(
+                {"id": "alpha", "name": "Alpha Robotics", "region": "International"},
+                [root], [],
+            )
+        self.assertEqual(candidates, [])
+        self.assertEqual(source_urls, [root])
+        self.assertEqual(scanned_urls, [])
+        self.assertIn("InvalidURL", error)
 
     def test_hardware_only_page_cannot_become_candidate(self) -> None:
         document = {
