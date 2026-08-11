@@ -4,6 +4,18 @@ on:
   schedule:
     - cron: "17 2 * * *"
   workflow_dispatch:
+    inputs:
+      bootstrap_limit:
+        description: "Missing official sources to bootstrap in this run (small batches protect API quota)"
+        required: false
+        default: "12"
+        type: choice
+        options:
+          - "4"
+          - "8"
+          - "12"
+          - "16"
+          - "20"
 
 permissions:
   contents: write
@@ -54,8 +66,9 @@ jobs:
           OPENAI_VERIFIER_MODEL: gpt-5.6
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            # A manual run intentionally completes the initial source registry.
-            python automation/discover_official_projects.py --mode official --bootstrap-limit 115
+            # Manual runs use an explicit small batch. This prevents a single
+            # bad website from consuming the quota for all 115 organizations.
+            python automation/discover_official_projects.py --mode official --bootstrap-limit "${{ inputs.bootstrap_limit }}"
           elif [ $(( $(date -u +%s) / 86400 % 3 )) -eq 0 ]; then
             # Normal runs crawl known official sources and gradually bootstrap
             # any remaining organizations without a source yet.
@@ -89,6 +102,9 @@ jobs:
           python automation/organization_coverage.py --check --summary
           python automation/validate_catalog.py
       - name: Publish generated catalog branch
+        # Persist safe per-organization checkpoints even when a later website
+        # rejects a request, so a retry never restarts the same expensive batch.
+        if: ${{ always() }}
         run: |
           git config user.name "embodied-reports-bot"
           git config user.email "embodied-reports-bot@users.noreply.github.com"
