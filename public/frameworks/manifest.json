@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=VeqnZYRLZR0Rz9nHxEVvyw&_nc_ss=7b20f&oh=00_AQFc5HVkSUU60R1MG18O-aWkD7jCKJCB4Po8TuicyS73qg&oe=6A941573",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=QofCMqiICs2UaK9OpvVWxQ&_nc_ss=7b20f&oh=00_AQGUA6jw6joBxLxl1G6OqCwBs6csQvq4rKWlA3mM4XUtog&oe=6A94F673",
       "width": 1920,
       "height": 1080
     },
@@ -200,6 +200,18 @@
       "height": 1468
     },
     {
+      "id": "dmuon-d95d446",
+      "asset": "frameworks/dmuon-d95d446.jpg",
+      "source_url": "https://github.com/X-Square-Robot/dmuon",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://github.com/X-Square-Robot/dmuon/raw/main/assets/dmuon-banner.png",
+      "width": 2120,
+      "height": 742
+    },
+    {
       "id": "cortex-2-5-ea0ac17",
       "asset": "frameworks/cortex-2-5-ea0ac17.jpg",
       "source_url": "https://sereact.ai/posts/cortex-2-5",
@@ -210,6 +222,18 @@
       "image_url": "https://sereact.ai/_next/image?url=%2Fassets%2Fcortex-2-5%2Fthumbnail.webp%3Fv%3D3&w=3840&q=75",
       "width": 1200,
       "height": 675
+    },
+    {
+      "id": "g0-5-robotwin-2-0-evaluation-release-f38d2d0",
+      "asset": "frameworks/g0-5-robotwin-2-0-evaluation-release-f38d2d0.jpg",
+      "source_url": "https://github.com/OpenGalaxea/GalaxeaVLA",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://github.com/OpenGalaxea/GalaxeaVLA/raw/main/assets/r1_mascot.jpeg",
+      "width": 586,
+      "height": 556
     },
     {
       "id": "wall-wm-world-action-model-9de8900",
@@ -224,6 +248,18 @@
       "height": 2379
     },
     {
+      "id": "era-navigation-messages-66c450d",
+      "asset": "frameworks/era-navigation-messages-66c450d.jpg",
+      "source_url": "https://github.com/roboterax/era_nav_msgs",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/91526b6bbbbac7ed9488d949eb8562ea38d73eab96cbe19a445313cfcde0d69b/roboterax/era_nav_msgs",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "subtask-prediction-for-cortex-2-0-066341c",
       "asset": "frameworks/subtask-prediction-for-cortex-2-0-066341c.jpg",
       "source_url": "https://sereact.ai/posts/subtask-prediction",
@@ -234,6 +270,18 @@
       "image_url": "https://sereact.ai/_next/image?url=%2Fassets%2Fsubtask-prediction%2Fthumbnail.png&w=3840&q=75",
       "width": 1776,
       "height": 996
+    },
+    {
+      "id": "noetix-e1-sdk-9965153",
+      "asset": "frameworks/noetix-e1-sdk-9965153.jpg",
+      "source_url": "https://github.com/Noetix-Robotics/noetix_sdk_e1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/389e46dfef6d454cdeec147b2c4695832e784a7c888bc3e031768a299c9b69a9/Noetix-Robotics/noetix_sdk_e1",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "cortex-2-0-00c4a80",
@@ -284,6 +332,30 @@
       "height": 654
     },
     {
+      "id": "humanoid-lab-f5cc41c",
+      "asset": "frameworks/humanoid-lab-f5cc41c.jpg",
+      "source_url": "https://github.com/roboterax/humanoid-lab",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/1021dfe1e2ce9d2884674388b45804a3aeeaed5b50869f7379519fca2b8fdef6/roboterax/humanoid-lab",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "teleoperation-client-99acd5a",
+      "asset": "frameworks/teleoperation-client-99acd5a.jpg",
+      "source_url": "https://github.com/roboterax/teleop_client",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/e1c55a76dd91face2269a9fd670677299525cb74a8a2feb89197c1cba4f1bb6b/roboterax/teleop_client",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "lerobot-v0-5-0-123525a",
       "asset": "frameworks/lerobot-v0-5-0-123525a.jpg",
       "source_url": "https://huggingface.co/blog/lerobot-release-v050",
@@ -308,6 +380,18 @@
       "height": 1080
     },
     {
+      "id": "fourier-lerobot-parquet-data-converter-9310d10",
+      "asset": "frameworks/fourier-lerobot-parquet-data-converter-9310d10.jpg",
+      "source_url": "https://github.com/FFTAI/fourier-lerobot",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://github.com/FFTAI/fourier-lerobot/raw/main/media/so100/leader_follower.webp?raw=true",
+      "width": 4032,
+      "height": 3024
+    },
+    {
       "id": "cortex-1-6-learning-from-the-way-things-unfold-05f9aa7",
       "asset": "frameworks/cortex-1-6-learning-from-the-way-things-unfold-05f9aa7.jpg",
       "source_url": "https://sereact.ai/posts/cortex-1-6",
@@ -330,6 +414,18 @@
       "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/6968f4eb3666d4655bb7d101_model%20selection%20UI.png",
       "width": 1317,
       "height": 663
+    },
+    {
+      "id": "noetix-n2-gym-2174663",
+      "asset": "frameworks/noetix-n2-gym-2174663.jpg",
+      "source_url": "https://github.com/Noetix-Robotics/noetix_n2_gym",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/2a011df7b631edceae3ee91b0e3913185425e0becbfbbf02002f5fabe0e7ea4c/Noetix-Robotics/noetix_n2_gym",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2",
@@ -392,6 +488,18 @@
       "height": 809
     },
     {
+      "id": "go-1-embodied-foundation-model-7598ed3",
+      "asset": "frameworks/go-1-embodied-foundation-model-7598ed3.jpg",
+      "source_url": "https://agibot.com.cn/article/188/detail/79.html",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://agibot.com.cn/public/uploads/images/20260331/df2e4f59a81fd14809124705e482d3f1.png",
+      "width": 320,
+      "height": 426
+    },
+    {
       "id": "viam-apps-for-robot-fleet-dashboards-fee2211",
       "asset": "frameworks/viam-apps-for-robot-fleet-dashboards-fee2211.jpg",
       "source_url": "https://www.viam.com/post/build-a-custom-dashboard-for-your-fleet-operators-minus-the-complex-infrastructure",
@@ -428,6 +536,30 @@
       "height": 600
     },
     {
+      "id": "xr-1-cross-embodiment-vla-model-2cbb033",
+      "asset": "frameworks/xr-1-cross-embodiment-vla-model-2cbb033.jpg",
+      "source_url": "https://xr-1-vla.github.io/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://xr-1-vla.github.io/static/images/xr1_overview.png",
+      "width": 2234,
+      "height": 1117
+    },
+    {
+      "id": "humanoid-whole-body-control-and-autonomous-navig-f3d61a9",
+      "asset": "frameworks/humanoid-whole-body-control-and-autonomous-navig-f3d61a9.jpg",
+      "source_url": "https://www.x-humanoid.com/yk.html",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.x-humanoid.com/oss/static/img/project/hskw.png",
+      "width": 784,
+      "height": 588
+    },
+    {
       "id": "deepseek-v31",
       "asset": "frameworks/deepseek-v31.jpg",
       "source_url": "https://api-docs.deepseek.com/zh-cn/news/news250821",
@@ -448,6 +580,18 @@
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
       "image_url": "https://opengraph.githubassets.com/b9a6ca79330b23dc48ba1bc0d00e788b21e09f4b64d90ac737101dbe6442e2d2/kscalelabs/ksim/releases/tag/0.2.10",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "unitree-ros2-v0-3-0-6259924",
+      "asset": "frameworks/unitree-ros2-v0-3-0-6259924.jpg",
+      "source_url": "https://github.com/unitreerobotics/unitree_ros2/releases/tag/v0.3.0",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/7eb6c035d84e077f7f0eb995205ffad9069bd0abd39313e25252a49f1db082bd/unitreerobotics/unitree_ros2/releases/tag/v0.3.0",
       "width": 1200,
       "height": 600
     },
@@ -536,6 +680,18 @@
       "height": 2464
     },
     {
+      "id": "genie-sim-v2-1-c1d89f3",
+      "asset": "frameworks/genie-sim-v2-1-c1d89f3.jpg",
+      "source_url": "https://github.com/AgibotTech/genie_sim",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://github.com/AgibotTech/genie_sim/raw/main/docs/image.png",
+      "width": 2400,
+      "height": 1960
+    },
+    {
       "id": "gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4",
       "asset": "frameworks/gemini-robotics-on-device-brings-ai-to-local-rob-7ca2eb4.jpg",
       "source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
@@ -579,7 +735,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=v0kwxINHbPgQ7kNvwGWMSeV&_nc_oc=AdrXdKOxeUlC6BlhSNmG1BH4azH2kXt6Hl24eWaJYUGDhR8ThPnKEFmCv6CRuje_mHQ&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=EAu2KGU0_9hAII90rWxLOA&_nc_ss=7b20f&oh=00_AQEIV-RITHSgZ8Yxg1MdZEvngtz6yFQyBctrgWx8HQPaWg&oe=6A7FBE5C",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=v0kwxINHbPgQ7kNvwGWMSeV&_nc_oc=AdrXdKOxeUlC6BlhSNmG1BH4azH2kXt6Hl24eWaJYUGDhR8ThPnKEFmCv6CRuje_mHQ&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=zHWUXACcd7RvPdyI4KCUHQ&_nc_ss=7b20f&oh=00_AQGIncdI-hGDZp0JFc85yc6pNfmJ3uLBzvgGA5wHJyvVIQ&oe=6A80671C",
       "width": 1440,
       "height": 630
     },
@@ -632,6 +788,18 @@
       "height": 6848
     },
     {
+      "id": "x-humanoid-training-toolchain-76b39cf",
+      "asset": "frameworks/x-humanoid-training-toolchain-76b39cf.jpg",
+      "source_url": "https://x-humanoid.com/m/news-view-198.html",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://x-humanoid.com/storage/website/2025/05-19/682b49cbf34d4-1-90932.png",
+      "width": 1080,
+      "height": 671
+    },
+    {
       "id": "openpi-9ed54eb",
       "asset": "frameworks/openpi-9ed54eb.jpg",
       "source_url": "https://github.com/Physical-Intelligence/openpi",
@@ -639,7 +807,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/335b3608ae69df6481635cab323b7c738652fcb4f270375d83533bbb5bc9c7a9/Physical-Intelligence/openpi",
+      "image_url": "https://opengraph.githubassets.com/4aed2258a84c29669b21ab41ce21ff65d9f97b5bde2b156849fd4c89300a3b2b/Physical-Intelligence/openpi",
       "width": 1200,
       "height": 600
     },
@@ -726,6 +894,18 @@
       "image_url": "https://developer.download.nvidia.com/images/products/gr00t-1920-1080.jpg",
       "width": 1920,
       "height": 1080
+    },
+    {
+      "id": "fourier-actionnet-dataset-a863470",
+      "asset": "frameworks/fourier-actionnet-dataset-a863470.jpg",
+      "source_url": "https://action-net.org/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://action-net.org/static/images/all.svg",
+      "width": 1440,
+      "height": 810
     },
     {
       "id": "hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01",

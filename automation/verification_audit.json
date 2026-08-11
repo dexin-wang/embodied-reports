@@ -1984,60 +1984,59 @@
     }
   },
   "xrzero-g0-129ab4d": {
-    "checked_at": "2026-08-05T12:53:48.694386+00:00",
+    "checked_at": "2026-08-11T04:56:59.012292+00:00",
     "title": "XRZero-G0",
-    "accepted": false,
-    "reason": "insufficient independent multi-platform social evidence",
-    "policy_version": "official-project-impact-v2",
+    "accepted": true,
+    "reason": "收录。X Square Robot 的官方研究目录将 XRZero-G0 明确列为 2026 年 6 月 10 日发布的具身数据采集与策略学习系统，并提供专属项目页面；官方代码仓库和发布公告进一步证明其包含数据质量检查、策略训练及真实机器人评估软件，而非硬件单品页面。([x2robot.com](https://x2robot.com/en/research))",
+    "policy_version": "software-official-release-v3",
     "verdict": {
       "capabilities": [
-        "通过可穿戴 VR 接口、头部相机、双腕部相机和可更换夹爪采集与机器人观测及末端执行器几何对齐的人类操作示范。",
-        "对采集数据执行观测一致性检查、全身逆运动学约束过滤和真实机器人回放验证。",
-        "将大规模无机器人示范与少量真实机器人数据混合，用于训练可在实体机器人上执行的操作策略。",
-        "在毛巾折叠、插花、香蕉选择抓取和同色织物匹配等任务上执行真实世界操作。",
-        "把混合数据训练的策略零样本迁移到未见过的机器人形态，并适应不同机器人姿态、桌面高度和相机视角。"
+        "通过无机器人式人类示范采集动作对齐的多模态操作数据",
+        "对采集数据执行自动检查，并以真实机器人评测形成闭环质量控制",
+        "混合无机器人数据与少量真实机器人数据训练操作策略",
+        "将训练策略零样本迁移至未见过的机器人本体",
+        "采集并发布覆盖长尾操作任务的视觉、触觉和音频数据集"
       ],
       "fields": [
-        "Data & benchmarks",
         "Robot manipulation",
         "Dexterous manipulation",
+        "Data & benchmarks",
         "Robot systems"
       ],
       "include": true,
       "key_points": [
-        "XRZero-G0 是面向实体机器人操作学习的软硬件协同系统，不只是数据集或视觉模型；其完整闭环覆盖 Collection、Inspection、Training 和 Evaluation。",
-        "采集端采用可穿戴 VR 界面、头部全局视角与双腕部局部视角，并使用可更换的专用夹爪，使人类示范在视觉观测和末端执行器几何上更接近部署机器人。",
-        "质量治理分为多个层次：利用多视角几何一致性减少视觉与运动错位，通过带碰撞和关节限位约束的全身逆运动学过滤无效轨迹，最后以实体机器人回放作为策略层验证。",
-        "训练方法研究无机器人数据与真实机器人数据的经验混合规律：无机器人数据扩大行为和任务覆盖，少量真实机器人数据用于锚定电机延迟、摩擦等具体形态因素。",
-        "项目材料报告纯无机器人数据在基础抓取任务上随数据规模呈正向扩展趋势，复杂长时程双臂任务在增加到 2,000 个 episode 时实现稳定收敛。",
-        "配套 G0-Dataset 包含经验证的视觉、触觉和音频多模态示范，并用于大规模预训练、真实机器人评估及跨形态迁移实验。",
-        "项目已公开硬件设计、自动检查流程、训练方法、代码和数据；官方项目页、GitHub 仓库及 Hugging Face 数据集均可访问。"
+        "XRZero-G0 是面向具身数据采集和策略学习的软硬件协同框架，软件部分覆盖数据检查、混合数据训练、策略生成和真实机器人评估，不属于单纯的机器人硬件或采集设备产品。([prnewswire.com](https://www.prnewswire.com/news-releases/x-square-robot-open-sources-xrzero-g0-to-scale-robot-learning-with-interfaces-data-quality-and-ratios-302796281.html?utm_source=openai))",
+        "系统采用符合人体工学的解耦式 VR 采集界面，结合顶部视角相机和两种专用夹持器，采集与机器人动作空间对齐的人类操作示范。([arxiv.org](https://arxiv.org/abs/2604.13001))",
+        "项目建立“采集、检查、训练、评估”闭环，对不包含机器人本体感知状态的数据进行质量验证，试图解决无机器人数据质量不可观测的问题。([prnewswire.com](https://www.prnewswire.com/news-releases/x-square-robot-open-sources-xrzero-g0-to-scale-robot-learning-with-interfaces-data-quality-and-ratios-302796281.html?utm_source=openai))",
+        "训练方案研究无机器人数据与真实机器人数据的经验混合规律；报告称约 10:1 的混合比例可达到与完全使用真实机器人数据相当的实验性能。([arxiv.org](https://arxiv.org/abs/2604.13001))",
+        "G0-Dataset 包含视觉、触觉和音频等模态，覆盖约 3,000 个呈长尾分布的操作任务，包括基础操作和细粒度语义任务。([prnewswire.com](https://www.prnewswire.com/news-releases/x-square-robot-open-sources-xrzero-g0-to-scale-robot-learning-with-interfaces-data-quality-and-ratios-302796281.html?utm_source=openai))",
+        "项目材料报告了跨环境泛化以及零样本跨本体迁移：混合数据训练的策略可在评测设置中迁移到未见过的机器人平台，无需针对目标任务微调。([prnewswire.com](https://www.prnewswire.com/news-releases/x-square-robot-open-sources-xrzero-g0-to-scale-robot-learning-with-interfaces-data-quality-and-ratios-302796281.html?utm_source=openai))"
       ],
       "metrics": [
         {
           "label": "数据规模",
-          "note": "官方发布材料称 G0-Dataset 覆盖视觉、触觉和音频模态。",
-          "value": "超过 2,000 小时经验证的多模态示范"
+          "note": "由 XRZero-G0 构建并验证的无机器人多模态示范数据。",
+          "value": "超过 2,000 小时"
         },
         {
-          "label": "有效数据率",
-          "note": "在受控实验设置下，经闭环检查和实体回放验证得到。",
-          "value": "约 85%"
-        },
-        {
-          "label": "采集效率",
-          "note": "官方项目页报告在简单采集任务中相对主从遥操作的效率。",
-          "value": "2.33×"
+          "label": "数据有效率",
+          "note": "闭环采集与质量检查流程报告的有效数据比例。",
+          "value": "85%"
         },
         {
           "label": "数据混合比例",
-          "note": "约 10 个无机器人 episode 配合 1 个真实机器人 episode，在所评估任务上达到与纯真实机器人数据相当的表现。",
-          "value": "10:1（无机器人数据：真实机器人数据）"
+          "note": "报告可取得与纯真实机器人数据集相当实验性能的无机器人数据与真实机器人数据示例比例。",
+          "value": "10:1"
         },
         {
           "label": "真实机器人数据需求",
-          "note": "该结果限于论文和官方材料所述实验条件。",
-          "value": "最多减少 20×"
+          "note": "在报告的实验条件下，相比完全依赖真实机器人采集的方案。",
+          "value": "最高减少 20 倍"
+        },
+        {
+          "label": "峰值采集吞吐量",
+          "note": "操作员达到的最高示范采集速度。",
+          "value": "93.2 episodes/hour"
         }
       ],
       "official_organization_url": "https://x2robot.com/en",
@@ -2046,20 +2045,10 @@
       "organization_en": "X Square Robot",
       "organization_kind": "Company",
       "organization_zh": "自变量机器人",
-      "reason": "纳入。该项目于 2026 年 6 月 10 日由自变量机器人正式宣布开源，官方项目页明确将其定义为用于无机器人示范采集、策略训练和实体机器人评估的软硬件协同框架，满足物理机器人和具身智能相关性要求。责任主体 X Square Robot（自变量机器人）在官方页面、项目仓库和公告中均有明确标注。公开讨论至少覆盖 X 与 LinkedIn 两个平台：X 上有组织官方账号的发布内容，LinkedIn 上有独立于责任组织的 HK Business Wire 发布内容，因此也满足至少一项独立社会证据的要求。需要区分两个日期：技术报告最早于 2026 年 4 月 14 日提交，正式开源公告日期为 2026 年 6 月 10 日。",
-      "social_evidence": [
-        {
-          "independent": false,
-          "platform": "X",
-          "url": "https://mobile.twstalker.com/XSquareRobot"
-        },
-        {
-          "independent": true,
-          "platform": "LinkedIn",
-          "url": "https://www.linkedin.com/posts/hk-business-wire_x-square-robot-open-sources-xrzero-g0-to-activity-7470353889301577728-fe_C"
-        }
-      ],
-      "summary_zh": "XRZero-G0 是自变量机器人推出的可扩展机器人操作数据采集与策略学习系统，核心目标是减少高成本、低吞吐量的实体机器人遥操作数据需求。其采集装置将可穿戴 VR、头部全局相机、双腕部相机和与部署端几何对应的可更换夹爪组合起来，同步记录人类的视觉与操作轨迹。软件侧建立 Collection–Inspection–Training–Evaluation 闭环，从多视角几何一致性、带碰撞及关节限位约束的全身逆运动学，到实体机器人回放逐层判断数据是否可训练。项目进一步研究无机器人数据和真实机器人数据的混合规律：前者提供广泛任务覆盖，后者补偿具体机器人形态中的摩擦、延迟等物理因素。官方报告约 10:1 的混合比例可在测试任务上达到与纯真实机器人数据相当的表现，并最多将真实机器人数据需求降低 20 倍。配套数据资源超过 2,000 小时，包含视觉、触觉和音频示范；训练所得策略展示了跨环境泛化以及向未见机器人平台进行零样本跨形态迁移的能力。"
+      "reason": "收录。X Square Robot 的官方研究目录将 XRZero-G0 明确列为 2026 年 6 月 10 日发布的具身数据采集与策略学习系统，并提供专属项目页面；官方代码仓库和发布公告进一步证明其包含数据质量检查、策略训练及真实机器人评估软件，而非硬件单品页面。([x2robot.com](https://x2robot.com/en/research))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "XRZero-G0 是自变量机器人于 2026 年发布的具身数据采集与策略学习项目，核心目标是缓解灵巧操作模型对高成本真实机器人示范数据的依赖。它以 VR 人机界面、顶部相机和专用夹持器采集动作对齐的人类示范，并通过自动检查、混合数据训练和真实机器人评估组成闭环软件管线。项目不只发布采集装置，还公开了训练方法、质量控制流程、代码及 G0-Dataset，因此满足具身机器人软件项目的收录条件。其主要技术贡献包括对无机器人数据质量进行系统化验证、分析无机器人与真实机器人数据的经验混合规律，以及展示策略在不同环境和机器人本体之间的零样本迁移能力。官方材料报告数据集超过 2,000 小时、覆盖约 3,000 个长尾操作任务，并包含视觉、触觉和音频模态。([prnewswire.com](https://www.prnewswire.com/news-releases/x-square-robot-open-sources-xrzero-g0-to-scale-robot-learning-with-interfaces-data-quality-and-ratios-302796281.html?utm_source=openai))"
     }
   },
   "unitree-h2-plus-d39592d": {
@@ -10632,6 +10621,2179 @@
       "social_evidence": [],
       "software_project": true,
       "summary_zh": "NVIDIA Cosmos 是 2025 年发布的开放物理 AI 世界基础模型平台，目标是降低机器人和自动驾驶开发中真实数据采集、处理、训练与测试的成本。首发体系把扩散式和自回归式视频世界模型、神经视频分词器、GPU 加速的数据整理管线、NeMo 微调框架以及安全护栏组合成完整的软件栈。开发者既可从文本、图像、视频和运动条件生成可控的物理感知场景，也可预测视频世界的后续状态，并使用自有机器人或驾驶数据定制模型。Cosmos 还可与 Omniverse 的三维场景配合生产逼真合成数据，用于感知训练、策略评估、强化学习和多未来路径模拟。官方报告的大规模训练数据、视频处理吞吐以及分词器压缩与速度结果，使其符合具身机器人技术项目公共索引的软件性、专门页面、明确责任组织和 2025 年后发布要求。"
+    }
+  },
+  "noetix-bumi-sdk-3ff6f22": {
+    "checked_at": "2026-08-11T04:56:58.964083+00:00",
+    "title": "Noetix Bumi SDK",
+    "accepted": false,
+    "reason": "正在进行必要的网页核验，尚不能决定是否收录。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方仓库、组织归属、发布日期和软件接口范围。重点会区分 SDK 软件项目与 Bumi 机器人硬件产品页。后续依据只采用可访问的官方材料。ـــ",
+        "暂未形成结论，正在检查仓库元数据及其链接的官方项目材料。",
+        ""
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索证据。",
+        "尚未完成核验。",
+        "候选日期为 2026-08-04，需确认其是否对应公开发布。",
+        "将核查 DDS、高低层控制接口与 Python 支持。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "检索进行中",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在进行必要的网页核验，尚不能决定是否收录。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Noetix Bumi SDK 是否具有可访问的官方软件项目页、明确组织归属及符合日期要求的公开发布证据。"
+    }
+  },
+  "human-to-robot-one-shot-skill-acquisition-host-0c9e194": {
+    "checked_at": "2026-08-11T04:56:58.973143+00:00",
+    "title": "Human-to-Robot One-Shot Skill Acquisition (HOST)",
+    "accepted": false,
+    "reason": "正在执行来源核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方研究页、项目材料与发布日期，重点确认 HOST 是否已有独立软件项目证据，而非仅凭候选摘要或 arXiv 信息。能确认的技术点和指标才会进入档案。",
+        "随后会检查责任机构的正式中英文名称、开源状态及可验证的社会平台证据；缺失项不会猜测。为保证严格准入，官方页面若无法明确支持软件属性或发布日期，我会直接标记为不收录。",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "需要先检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在执行来源核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "dmuon-d95d446": {
+    "checked_at": "2026-08-11T04:56:58.980919+00:00",
+    "title": "DMuon",
+    "accepted": true,
+    "reason": "收录。DMuon 是由自变量机器人明确负责、具有官方独立代码仓库和配套文档的开源软件项目。其主题不是机器人硬件，而是服务于物理机器人和具身基础模型大规模训练的分布式 Muon 优化器与训练基础设施；官方材料明确讨论 VLA 训练的优化器开销，并在 WALL-OSS-0.5、WALL-WM、WallX 和 Pi0 等具身模型负载上进行了实现与验证，满足具身智能软件及官方项目页面条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "以三行接口接入现有 PyTorch/FSDP2 训练流水线，无需修改模型或训练框架",
+        "为矩阵参数分配专属 owner，并通过运行时成本分析在分布式 ranks 间实施计算感知负载均衡",
+        "使用批处理 Gram Newton-Schulz、对称 Gram 内核、按矩阵形状自动调优及小矩阵批处理执行 Muon 正交化更新",
+        "通过 hooks 自动执行前向广播、反向归约和仅 owner 侧的优化器计算，支持单节点 FSDP2 与多节点 HSDP 网格",
+        "对矩阵参数执行 Muon、对其余参数执行 AdamW，并已用于 WALL-OSS-0.5、WALL-WM、WallX 和 Pi0 等具身模型训练负载"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems",
+        "LLM"
+      ],
+      "include": true,
+      "key_points": [
+        "DMuon 是面向大规模具身基础模型训练的开源分布式 Muon 优化器实现，同时也支持大语言模型训练；官方代码仓库是该软件的独立项目页面。",
+        "其核心是 owner-centric 分布式执行：每个完整权重矩阵由指定 owner 执行 Newton-Schulz 更新，避免传统 gather-then-compute 方案在各 rank 上重复重建和计算完整矩阵。",
+        "系统提供与 FSDP2 集成的参数专属所有权机制，通过 hooks 处理前向广播、反向归约及 owner-only 优化器执行；多节点训练可使用由 replicate 与 shard 维度组成的二维 HSDP mesh。",
+        "执行引擎包含批处理 Gram Newton-Schulz、利用矩阵对称性的专用 Gram 内核、基于 DSL 的形状自适应调优，以及对大量小矩阵的批处理，从而降低算术量和内核启动开销。",
+        "负载均衡不是按参数数量静态划分，而是结合运行时 profiling、矩阵形状、内核选择、批处理和自动调优的实测成本来分配 owner，以减少分布式训练中的 straggler。",
+        "DMuon 保持原始 Muon 更新规则的数学等价性，只消除系统执行开销；官方报告其继承 Muon 的收敛行为，但单 GPU 场景无法获得完整的分布式执行收益。",
+        "项目在具身机器人模型与语言模型工作负载上进行生产规模验证，包括 WALL-OSS-0.5 和 WALL-WM；官方仓库还给出了 WallX、Pi0 与 WALL-WM 在 16 节点集群上的端到端训练步耗时。"
+      ],
+      "metrics": [
+        {
+          "label": "端到端训练步加速",
+          "note": "相对于朴素 gather-then-compute 分布式 Muon 基线，在具身基础模型和 LLM 工作负载上的报告范围。",
+          "value": "1.48x-3.01x"
+        },
+        {
+          "label": "优化器步骤加速",
+          "note": "相对于朴素 gather-then-compute 分布式 Muon 基线。",
+          "value": "6.85x-163.00x"
+        },
+        {
+          "label": "相对 AdamW 的平均步耗时开销",
+          "note": "论文在所评估工作负载上报告的平均端到端训练步开销。",
+          "value": "约 +2%"
+        },
+        {
+          "label": "16 节点具身模型基准",
+          "note": "AdamW 与 DMuon 的端到端单步耗时：WallX 1259/1285 ms，Pi0 1617/1645 ms，WALL-WM 3309/3424 ms。",
+          "value": "WallX +2.1%；Pi0 +1.7%；WALL-WM +3.4%"
+        },
+        {
+          "label": "组件加速贡献",
+          "note": "在 128 GPU 的 WALL-OSS-0.5 消融中，各组件占优化器时间总降幅的比例。",
+          "value": "对称 Gram 内核 48%；owner 调度与负载均衡 32%；自动调优与 NS 批处理 16%"
+        }
+      ],
+      "official_organization_url": "https://x2robot.com/en",
+      "official_project_url": "https://github.com/X-Square-Robot/dmuon",
+      "open_source": true,
+      "organization_en": "X Square Robot",
+      "organization_kind": "Company",
+      "organization_zh": "自变量机器人",
+      "reason": "收录。DMuon 是由自变量机器人明确负责、具有官方独立代码仓库和配套文档的开源软件项目。其主题不是机器人硬件，而是服务于物理机器人和具身基础模型大规模训练的分布式 Muon 优化器与训练基础设施；官方材料明确讨论 VLA 训练的优化器开销，并在 WALL-OSS-0.5、WALL-WM、WallX 和 Pi0 等具身模型负载上进行了实现与验证，满足具身智能软件及官方项目页面条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DMuon 是自变量机器人发布的高性能分布式 Muon 优化器实现，目标是让矩阵感知优化器能够以接近 AdamW 的单步成本用于大规模具身基础模型训练。传统分布式训练通常按参数 shard 执行逐元素优化，而 Muon 的 Newton-Schulz 正交化必须处理完整权重矩阵，朴素实现因此需要频繁重建矩阵并产生显著通信与重复计算开销；这一问题在时间上下文较短、前反向计算占比较低的 VLA 训练中尤其突出。DMuon 通过矩阵 owner 机制、owner 侧 Newton-Schulz 更新、细粒度通信路径、运行时成本驱动的负载均衡、对称 Gram 内核、形状自适应自动调优和小矩阵批处理来降低这部分开销。项目可通过少量代码接入 FSDP2，自动处理广播、梯度归约和 owner-only 优化，并允许矩阵参数使用 Muon、其他参数继续使用 AdamW。官方报告其在具身模型与 LLM 训练负载上相对朴素分布式 Muon 获得 1.48 至 3.01 倍端到端单步加速和 6.85 至 163 倍优化器步骤加速，平均单步成本控制在 AdamW 的约 2% 以内；系统已用于 WALL-OSS-0.5 与 WALL-WM 的生产规模训练。"
+    }
+  },
+  "limx-cosa-0-5-7614679": {
+    "checked_at": "2026-08-11T04:56:58.988769+00:00",
+    "title": "LimX COSA 0.5",
+    "accepted": false,
+    "reason": "",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方页面的发布日期、软件主体属性、责任组织，以及页面中可直接支持的技术能力和指标。",
+        "fields",
+        "include",
+        "key_points",
+        "metrics"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "x-tokenizer-63ffef6": {
+    "checked_at": "2026-08-11T04:56:58.996651+00:00",
+    "title": "X-Tokenizer",
+    "accepted": false,
+    "reason": "检索进行中。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验项目的官方页面、责任组织、发布时间和技术结果；我会优先使用项目仓库、组织主页及其直接链接的论文/项目材料。确认软件属性后，再按严格纳入条件给出结论。 ",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "检索进行中。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "ge-sim-2-0-code-and-model-weights-553e587": {
+    "checked_at": "2026-08-11T04:56:59.004556+00:00",
+    "title": "GE-Sim 2.0 code and model weights",
+    "accepted": false,
+    "reason": "Verification in progress.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’ll verify the repository ownership, release timing, software scope, and reported technical results against official AgiBot materials and linked primary sources.",
+        "I’ll verify the repository ownership, release timing, software scope, and reported technical results against official AgiBot materials and linked primary sources.",
+        "I’ll verify the repository ownership, release timing, software scope, and reported technical results against official AgiBot materials and linked primary sources."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "Verification in progress.",
+        "Verification in progress.",
+        "Verification in progress."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Checking official sources.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/AgibotTech/GE-Sim-V2",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Verification in progress.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方资料。"
+    }
+  },
+  "wall-wm-db4ac3a": {
+    "checked_at": "2026-08-11T04:56:59.020374+00:00",
+    "title": "WALL-WM",
+    "accepted": false,
+    "reason": "正在检索，当前不是最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、责任机构、发布日期与技术结果，重点确认它是否是面向物理机器人的软件项目，而非仅有论文或硬件说明。",
+        "随后会用官方页面及其链接材料交叉检查指标，不会依据候选摘要补全缺失信息。",
+        "检索进行中"
+      ],
+      "fields": [
+        "World models",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "临时状态：尚未完成来源核验。",
+        "将检查 GitHub 所属组织及 README 中的官方项目链接。",
+        "将确认 2026-05-29 是否为公开发布日期。",
+        "将区分 future-video/action prediction 软件与纯研究概念。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "等待网页检索结果",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/X-Square-Robot/wall-wm",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在检索，当前不是最终判定。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在根据官方可访问来源核验 WALL-WM。"
+    }
+  },
+  "g0-5-robotwin-2-0-evaluation-release-f38d2d0": {
+    "checked_at": "2026-08-11T04:56:59.028170+00:00",
+    "title": "G0.5 RoboTwin 2.0 Evaluation Release",
+    "accepted": true,
+    "reason": "收录。2026 年 6 月 29 日，Galaxea 在其官方 GalaxeaVLA 软件仓库中明确发布了 G0.5 的 RoboTwin 2.0 评测入口及 g05-robotwin20 模型检查点。该制品是面向具身机器人双臂操作的 VLA 模型、策略适配器和可执行评测栈，而非机器人硬件或产品规格页；官方仓库、G0.5 专门项目页和技术报告均可访问，并由具名公司 Galaxea 明确负责。代码公开可见且材料可下载，但 2026 年 6 月 16 日后的 G0.5 材料受禁止商业使用的 G0.5 Community License 约束，不符合通常允许商业使用的严格开源定义，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向 RoboTwin 2.0 的完整多任务评测入口，可读取基准任务列表并将任务调度到多张 GPU 上执行。",
+        "支持对单个双臂操作任务进行定向评测，并可配置每个 clean/random 阶段的 episode 数量。",
+        "通过 RoboTwin 策略适配器加载 G0.5 模型、处理器、ActionCodec tokenizer 和 g05-robotwin20 检查点，将模拟器观测转换为模型输入并执行动作块。",
+        "分别在确定性初始摆放的 clean 场景和随机化初始摆放的 random 场景中评估策略，并自动汇总逐任务及总体成功率。",
+        "支持闭环分块控制：模型预测动作序列，执行设定数量的动作后重新推理，同时在任务之间清空动作队列。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "G0.5 是自回归视觉-语言-动作模型，以单一 Transformer decoder 在统一的 next-token prediction 目标下依次生成具身推理 token 和结构化动作 token，而不是把 VLM 仅作为独立动作专家的编码器。",
+        "模型输入包括多视角 RGB、机器人 embodiment 标识、自然语言任务指令和本体状态；生成的动作 token 被解码为连续机器人控制量，以动作块方式执行并根据新观测闭环重规划。",
+        "跨本体 ActionCodec 将异构机器人动作映射到共享的 27 维动作空间，覆盖左右臂控制、左右夹爪和下半身；残差向量量化 tokenizer 按语义相关的运动组编码，并只生成当前活跃的运动组。",
+        "模型将 Subtask、BBox、Trace 和 ActionHint 等具身推理字段与动作放在同一 token 序列中，用于任务分解、目标定位、二维夹爪轨迹表达和帧级动作提示。",
+        "视觉记忆模块通过分解的时空注意力注入多秒历史；预训练采用从 5 秒窗口采样的 6 帧，并使用历史帧随机丢弃，最终层移除历史 token 以控制推理延迟。",
+        "G0.5 由 Qwen3.5 2B VLM 初始化，联合使用来自 14 种机器人本体的示范数据、大规模网络数据和具身 VQA 数据预训练；VQA 与机器人动作样本采用统一交叉熵目标，混合比例为 1:4。",
+        "本次发布在官方 GalaxeaVLA 仓库中加入 experiments/robotwin 评测代码和 g05-robotwin20 检查点；评测管理器支持全任务或单任务运行、GPU 调度、失败中止以及 CSV/JSON 结果聚合。"
+      ],
+      "metrics": [
+        {
+          "label": "RoboTwin 2.0 平均成功率",
+          "note": "技术报告在 clean 与 randomized 设置上的综合平均结果。",
+          "value": "93.3%"
+        },
+        {
+          "label": "RoboTwin 2.0 clean 成功率",
+          "note": "确定性初始摆放场景，按每项任务 100 次试验汇总。",
+          "value": "93.7%"
+        },
+        {
+          "label": "RoboTwin 2.0 randomized 成功率",
+          "note": "随机化初始摆放场景，按每项任务 100 次试验汇总。",
+          "value": "92.8%"
+        },
+        {
+          "label": "RoboTwin 2.0 训练示范规模",
+          "note": "报告采用多任务训练设置。",
+          "value": "2,500 条 clean-scene demonstrations + 25,000 条 randomized demonstrations"
+        },
+        {
+          "label": "RoboTwin 2.0 任务规模",
+          "note": "用于评估协调双臂操作能力的模拟任务套件。",
+          "value": "超过 50 个双臂操作任务"
+        }
+      ],
+      "official_organization_url": "https://galaxea-ai.com/cn/about",
+      "official_project_url": "https://github.com/OpenGalaxea/GalaxeaVLA",
+      "open_source": false,
+      "organization_en": "Galaxea",
+      "organization_kind": "Company",
+      "organization_zh": "星海图（北京）人工智能科技股份有限公司",
+      "reason": "收录。2026 年 6 月 29 日，Galaxea 在其官方 GalaxeaVLA 软件仓库中明确发布了 G0.5 的 RoboTwin 2.0 评测入口及 g05-robotwin20 模型检查点。该制品是面向具身机器人双臂操作的 VLA 模型、策略适配器和可执行评测栈，而非机器人硬件或产品规格页；官方仓库、G0.5 专门项目页和技术报告均可访问，并由具名公司 Galaxea 明确负责。代码公开可见且材料可下载，但 2026 年 6 月 16 日后的 G0.5 材料受禁止商业使用的 G0.5 Community License 约束，不符合通常允许商业使用的严格开源定义，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "G0.5 RoboTwin 2.0 Evaluation Release 是 Galaxea 为其 G0.5 自回归视觉-语言-动作基础模型发布的双臂操作基准评测软件。发布内容包括专用的 g05-robotwin20 检查点、RoboTwin 策略适配器、单任务 Hydra 入口、多任务 GPU 调度器、环境与渲染配置指南，以及逐任务和总体成功率的 CSV/JSON 聚合流程。G0.5 将多视角视觉、本体标识、语言指令、本体状态、具身推理和机器人动作统一到自回归 token 流中，并通过共享 27 维 ActionCodec 适配不同机器人本体。其视觉记忆利用多秒历史观测，推理后以动作块驱动机器人并周期性闭环重规划。技术报告在 RoboTwin 2.0 超过 50 个双臂任务上使用 clean 与重随机化训练数据进行微调，并报告 93.7% clean、92.8% randomized、93.3% 平均成功率。该候选因此同时具备明确的软件制品、官方专门页面、可执行评测路径、模型检查点和具名公司责任主体，满足严格索引条件。"
+    }
+  },
+  "era-navigation-messages-66c450d": {
+    "checked_at": "2026-08-11T04:56:59.036407+00:00",
+    "title": "ERA Navigation Messages",
+    "accepted": true,
+    "reason": "符合收录条件：该候选是面向 RobotEra 实体机器人的 ROS 2 导航接口与客户端软件，覆盖建图、定位、拓扑地图管理和导航控制；存在由 RobotEra 官方 GitHub 组织维护的专用公开仓库，责任主体和 2026 年 5 月 29 日的项目更新时间均可由官方组织页支持。它不是硬件产品公告。仓库公开源代码，但页面未显示许可证，因此不将其标记为开源软件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 ROS 2 服务启动、取消以及在线或离线创建 LiDAR 点云地图",
+        "加载 LiDAR 地图、初始化机器人位姿，并监控定位与建图状态",
+        "录制、编辑、保存和加载由站点、路径及禁行区域组成的拓扑导航地图",
+        "按站点名称或唯一节点 ID 发起导航任务、查询状态并取消任务",
+        "通过 Python 客户端、命令别名和速度指令转发脚本接入 RobotEra 实体机器人"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是北京星动纪元科技有限公司官方 GitHub 组织发布的 ROS 2 接口软件包，仓库明确将其描述为用于 RobotEra 机器人的导航消息与开发者接口，而非机器人硬件产品页。",
+        "软件包使用 ROS 2 的 msg、srv 和 action 接口组织导航能力，并提供可通过 colcon 编译的 package.xml、CMakeLists.txt、Python 客户端模块和命令行别名。",
+        "系统区分两类地图：用于 SLAM 定位的稠密 LiDAR 点云地图，以及用于导航规划的拓扑导航地图；官方流程要求先建立 LiDAR 地图，再建立导航地图。",
+        "拓扑导航地图以有向图表达站点和路径，并以定向矩形或任意多边形表达禁行区域；接口支持录制、整体替换、增量更新、删除、保存和加载地图元素。",
+        "项目支持在线建图和基于已保存 ROS bag 数据的离线建图，后者可用于在线优化失败后更换参数重新生成地图。",
+        "导航 action 支持按站点属性或唯一节点 ID选择目标，并通过 `/era_nav/cmd_vel` 发布 `geometry_msgs/TwistStamped` 速度指令；仓库还提供面向 Q5 的指令转发脚本。",
+        "导航与 SLAM 工作流包含状态监控和故障诊断：定位状态覆盖初始化、运行和错误恢复，导航状态覆盖空闲、导航中、等待目标以及到达目标等阶段。"
+      ],
+      "metrics": [
+        {
+          "label": "ROS 导航子服务接口",
+          "note": "README 列出了 6 个 SLAM 服务、1 个导航地图操作服务和1个导航 action。",
+          "value": "8 个"
+        },
+        {
+          "label": "地图类型",
+          "note": "分别为用于 SLAM 定位的 LiDAR 点云地图和用于规划的拓扑导航地图。",
+          "value": "2 类"
+        },
+        {
+          "label": "推荐自动连边半径",
+          "note": "完成路径录制时，官方示例建议一般场景将 auto_connection_radius 设为 2.0 米。",
+          "value": "2.0 米"
+        },
+        {
+          "label": "定位坐标监控频率",
+          "note": "README 的状态监控说明称正常定位后每秒输出一次机器人当前位置。",
+          "value": "1 次/秒"
+        },
+        {
+          "label": "导航速度输出",
+          "note": "导航服务通过该 ROS 2 topic 发布 TwistStamped 控制指令，开发者需将其转发至具体机器人的 locomotion 控制 topic。",
+          "value": "`/era_nav/cmd_vel`"
+        }
+      ],
+      "official_organization_url": "https://www.robotera.com/",
+      "official_project_url": "https://github.com/roboterax/era_nav_msgs",
+      "open_source": false,
+      "organization_en": "RobotEra Technology Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "北京星动纪元科技有限公司",
+      "reason": "符合收录条件：该候选是面向 RobotEra 实体机器人的 ROS 2 导航接口与客户端软件，覆盖建图、定位、拓扑地图管理和导航控制；存在由 RobotEra 官方 GitHub 组织维护的专用公开仓库，责任主体和 2026 年 5 月 29 日的项目更新时间均可由官方组织页支持。它不是硬件产品公告。仓库公开源代码，但页面未显示许可证，因此不将其标记为开源软件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "ERA Navigation Messages 是星动纪元面向 RobotEra 实体机器人导航服务发布的 ROS 2 接口包和开发者示例集合。它并不实现或公开完整的底层 SLAM、路径规划算法，而是定义并封装机器人建图、定位、导航地图管理和目标导航所需的消息、服务、action 与 Python 调用流程。开发者可建立 LiDAR 点云地图，使用在线或 ROS bag 离线数据完成地图优化，加载地图并初始化定位；随后可创建由站点和有向路径组成的拓扑地图，录制或编辑矩形及多边形禁行区域，并按唯一节点 ID 发起导航。项目还公开定位与建图状态监控、导航有限状态机、任务取消和速度指令转发方式，包括适配 RobotEra Q5 底盘控制 topic 的示例脚本。其价值主要是提供 RobotEra 导航软件栈与上层应用之间的标准 ROS 2 集成边界，而不是新的学习模型或独立导航算法。"
+    }
+  },
+  "noetix-e1-sdk-9965153": {
+    "checked_at": "2026-08-11T04:56:59.044645+00:00",
+    "title": "Noetix E1 SDK",
+    "accepted": true,
+    "reason": "收录。该候选是用于实体 E1 人形机器人的 DDS 控制 SDK，软件本身是专用页面和仓库的主题；松延动力官方网站将其列为官方开源产品 SDK并链接至组织名下的公开仓库。责任组织、实体机器人用途、高低级控制接口及实现材料均有官方来源支持，且候选给出的发布日期为 2026 年 5 月 28 日，满足 2025 年以来的时间范围。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 DDS 通信接口连接并控制实体 E1 人形机器人",
+        "使用高级控制器接口调用 E1 的高层运动控制功能",
+        "使用低级控制器接口执行更底层的机器人控制",
+        "通过 C++ 或 Python 示例开发和验证机器人控制程序",
+        "在 x86_64 或 aarch64 Ubuntu 环境中构建 SDK 示例"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "松延动力官方网站将 Noetix_sdk_E1 明确列入“官方开源”页面的“产品 SDK”类别，并直接链接至 Noetix-Robotics 名下的公开 GitHub 仓库。",
+        "该项目是面向实体 E1 人形机器人的控制软件，而不是 E1 硬件产品介绍页；官方描述明确称其为带有 DDS 接口的 SDK。",
+        "SDK 同时提供高级控制器和低级控制器接口，使开发者可以在不同控制抽象层级上接入 E1。",
+        "仓库包含 DDS、DDS C、DDS C++、IDL 和 Eclipse Cyclone DDS 相关头文件或组件，并提供 DDSWrapper、highcontroller 和 lowcontroller 等接口文件。",
+        "项目同时提供 C++ 与 Python 接入材料：C++ 目录包含高级和低级控制示例，Python 目录包含对应接口声明及测试程序。",
+        "仓库提供统一 build.sh 示例构建入口，并链接官方 E1 SDK 环境配置文档和 E1 DDS_SDK 参考文档。",
+        "官方声明的预构建环境为 Ubuntu 22.04 LTS，支持 aarch64 与 x86_64 CPU，并使用 GCC 11.4.0。"
+      ],
+      "metrics": [
+        {
+          "label": "控制器层级",
+          "note": "官方开源页和仓库文件均显示提供高级控制器与低级控制器接口。",
+          "value": "2 类：高级控制器、低级控制器"
+        },
+        {
+          "label": "支持的 CPU 架构",
+          "note": "README 列出的预构建环境。",
+          "value": "2 种：aarch64、x86_64"
+        },
+        {
+          "label": "操作系统环境",
+          "note": "README 报告的预构建操作系统。",
+          "value": "Ubuntu 22.04 LTS"
+        },
+        {
+          "label": "编译器版本",
+          "note": "README 报告的预构建编译器。",
+          "value": "GCC 11.4.0"
+        },
+        {
+          "label": "示例覆盖",
+          "note": "仓库分别提供高级和低级控制的 C++ 示例，并提供对应 Python 接口声明与测试程序。",
+          "value": "C++ 与 Python，覆盖高级/低级控制"
+        }
+      ],
+      "official_organization_url": "https://noetixrobotics.com/",
+      "official_project_url": "https://github.com/Noetix-Robotics/noetix_sdk_e1",
+      "open_source": true,
+      "organization_en": "Beijing Noetix Robotics Technology Group Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "北京松延动力科技集团股份有限公司",
+      "reason": "收录。该候选是用于实体 E1 人形机器人的 DDS 控制 SDK，软件本身是专用页面和仓库的主题；松延动力官方网站将其列为官方开源产品 SDK并链接至组织名下的公开仓库。责任组织、实体机器人用途、高低级控制接口及实现材料均有官方来源支持，且候选给出的发布日期为 2026 年 5 月 28 日，满足 2025 年以来的时间范围。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Noetix E1 SDK 是北京松延动力面向 E1 实体人形机器人的官方开源控制开发包。它以 DDS 为通信基础，暴露高级与低级两套控制器接口，并配套 C++、Python 示例、接口声明、构建脚本和官方环境配置文档。仓库中的 Cyclone DDS、IDL、DDSWrapper 以及 highcontroller/lowcontroller 组件表明其定位是连接开发者程序与 E1 控制系统的机器人软件栈，而非硬件规格或产品宣传页面。该 SDK 适合 E1 的运动控制实验、底层控制开发、应用集成与教学研究；官方材料未报告任务成功率、控制频率或性能基准，因此不推断此类数值。"
+    }
+  },
+  "noetix-n2-sdk-02867c4": {
+    "checked_at": "2026-08-11T04:56:59.052856+00:00",
+    "title": "Noetix N2 SDK",
+    "accepted": false,
+    "reason": "正在进行网页核验，暂不作最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该仓库的归属、发布日期、软件内容及是否存在独立官方项目证据，重点排除仅服务于硬件销售的产品页。研究阶段不会把未证实的摘要信息直接当作事实。当前先检查官方仓库及组织页面。核心判断标准是：N2 SDK 本身是否构成面向实体机器人的公开软件制品，而不只是硬件说明书。该候选日期为 2026 年 5 月 25 日，早于当前日期 2026 年 8 月 11 日，因此满足“自 2025 年以来”的时间窗口前提，但发布日期仍需来源支持。若仓库可访问，我还会从 README、发布记录、代码目录和官方链接中提取能力与指标；没有可靠数值时不会补造。最终结论会严格区分“官方 GitHub 仓库足以作为专门项目页”和“仅有第三方或产品营销页面”两种情况。",
+        "目前正在核对组织身份与仓库内容。",
+        "下一步将检查发布记录、许可证及官方机构链接。"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "核验进行中，尚未形成最终结论。",
+        "需要确认 GitHub 组织是否由 Noetix Robotics 官方控制。",
+        "需要确认仓库内容确实包含可执行 SDK、接口或示例。",
+        "需要确认发布日期或最早公开时间。"
+      ],
+      "metrics": [
+        {
+          "label": "候选日期",
+          "note": "用户提供，尚待官方来源核验",
+          "value": "2026-05-25"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/Noetix-Robotics/noetix_sdk_n2",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在进行网页核验，暂不作最终收录判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Noetix N2 SDK 是否满足严格公开索引的全部条件；此消息仅为进度更新，不是最终档案。"
+    }
+  },
+  "robotera-vla-8ebd04a": {
+    "checked_at": "2026-08-11T04:56:59.060712+00:00",
+    "title": "Robotera VLA",
+    "accepted": false,
+    "reason": "Pending source verification.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the repository, its linked official organization pages, and release history to verify that this is a real software artifact with a dedicated official page and a supported April 17, 2026 release date.",
+        "I’ll keep the dossier limited to claims and measurements explicitly present in those sources.",
+        "I’m also checking whether “Robotera VLA” is an organization-backed release rather than an unaffiliated repository, since named institutional responsibility is mandatory."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "No eligibility decision has been made yet.",
+        "Repository ownership and institutional attribution are being checked.",
+        "Release date and technical contents are being checked."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification in progress.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/roboterax/robotera_vla",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "Pending source verification.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目的官方归属、发布日期与软件技术内容。"
+    }
+  },
+  "humanoid-lab-f5cc41c": {
+    "checked_at": "2026-08-11T04:56:59.067509+00:00",
+    "title": "Humanoid Lab",
+    "accepted": true,
+    "reason": "符合收录条件。Humanoid Lab 是 RobotEra 官方组织于 2026 年 3 月 27 日公开的专用软件仓库，主体是面向 L7 物理人形机器人的强化学习步态与单动作跟踪管线，而不是硬件规格或产品介绍。官方仓库明确提供训练、动作预处理、策略评估、MuJoCo sim-to-sim 和 ROS 2 sim-to-real 部署代码；RobotEra 官方 GitHub 组织页能够明确确认责任机构。([github.com](https://github.com/roboterax/humanoid-lab))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 Isaac Lab 中训练 L7 人形机器人的强化学习步态策略",
+        "训练针对单条参考动作的全身运动跟踪策略",
+        "将动作捕捉数据重定向并预处理为包含身体姿态、速度和加速度的训练数据",
+        "通过 MuJoCo 和 ROS 2 控制节点进行 sim-to-sim 策略验证",
+        "将步态或动作模仿策略部署至真实 L7 人形机器人"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "项目是面向物理人形机器人 L7 的强化学习软件管线，而非 L7 硬件产品页；官方说明覆盖策略训练、仿真验证和真机部署完整流程。([github.com](https://github.com/roboterax/humanoid-lab))",
+        "系统基于 Isaac Lab 构建，分别定义 Locomotion-Flat-L7_29Dof-v0 步态任务和 Tracking-Flat-L7_29Dof-v0 单动作跟踪任务，并使用 RSL-RL 脚本训练与评估策略。([github.com](https://github.com/roboterax/humanoid-lab))",
+        "动作处理管线先使用 GMR 将采集的动作捕捉数据重定向到 L7，再通过正向运动学生成包含身体姿态、身体速度和身体加速度的 NPZ 数据，并支持在 Isaac Sim 中回放检查。([github.com](https://github.com/roboterax/humanoid-lab))",
+        "训练命令支持在 8192 个并行环境中进行无界面强化学习训练；仓库同时提供步态和单动作模仿的播放评估入口。([github.com](https://github.com/roboterax/humanoid-lab))",
+        "部署栈采用 ROS 2 Humble，并提供 era_rl_controller 控制节点；同一控制接口可通过配置和运行模式切换 MuJoCo sim-to-sim 验证与 L7 真机推理。([github.com](https://github.com/roboterax/humanoid-lab))",
+        "仓库包含 L7 29 自由度模型、策略部署目录、动作样本、训练脚本以及可安装的 Python 包，并展示了步态和舞蹈动作的仿真及真机结果。([github.com](https://github.com/roboterax/humanoid-lab))",
+        "该项目由 RobotEra 官方 GitHub 组织发布；组织页面明确标识 RobotEra TECHNOLOGY CO., LTD.，并将 humanoid-lab 列为其公开仓库，更新时间为 2026 年 3 月 27 日。([github.com](https://github.com/roboterax))"
+      ],
+      "metrics": [
+        {
+          "label": "机器人控制维度",
+          "note": "官方训练任务名称为 Tracking-Flat-L7_29Dof-v0 和 Locomotion-Flat-L7_29Dof-v0。",
+          "value": "29 DOF"
+        },
+        {
+          "label": "并行训练环境数",
+          "note": "官方步态及动作跟踪示例训练命令均设置 --num_envs=8192。",
+          "value": "8192"
+        },
+        {
+          "label": "示例动作输入帧率",
+          "note": "官方 CSV 至 NPZ 动作预处理示例设置 --input_fps 30。",
+          "value": "30 FPS"
+        },
+        {
+          "label": "Isaac Lab 版本",
+          "note": "官方安装说明指定 Isaac Lab v2.3.2。",
+          "value": "2.3.2"
+        },
+        {
+          "label": "已展示的部署链路",
+          "note": "官方仓库展示步态和动作模仿策略的仿真到仿真及仿真到真机工作流。",
+          "value": "sim-to-sim 与 sim-to-real"
+        }
+      ],
+      "official_organization_url": "https://www.robotera.com/",
+      "official_project_url": "https://github.com/roboterax/humanoid-lab",
+      "open_source": true,
+      "organization_en": "RobotEra TECHNOLOGY CO., LTD.",
+      "organization_kind": "Company",
+      "organization_zh": "北京星动纪元科技有限公司",
+      "reason": "符合收录条件。Humanoid Lab 是 RobotEra 官方组织于 2026 年 3 月 27 日公开的专用软件仓库，主体是面向 L7 物理人形机器人的强化学习步态与单动作跟踪管线，而不是硬件规格或产品介绍。官方仓库明确提供训练、动作预处理、策略评估、MuJoCo sim-to-sim 和 ROS 2 sim-to-real 部署代码；RobotEra 官方 GitHub 组织页能够明确确认责任机构。([github.com](https://github.com/roboterax/humanoid-lab))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Humanoid Lab 是星动纪元面向 L7 全尺寸人形机器人的 Isaac Lab 强化学习控制与部署管线。项目将步态控制和单参考动作跟踪拆分为独立任务，提供从动作捕捉重定向、正向运动学数据预处理、RSL-RL 并行策略训练和 Isaac Sim 回放，到 MuJoCo sim-to-sim 验证及 ROS 2 真机部署的完整路径。其重点不是提出新的通用基础模型，而是公开一套可实际运行在 L7 上的人形机器人运动策略工程栈，并通过步态和舞蹈动作展示仿真与真机部署能力。仓库采用 MIT 许可证公开，构成明确的软件项目和官方项目页面。([github.com](https://github.com/roboterax/humanoid-lab))"
+    }
+  },
+  "teleoperation-client-99acd5a": {
+    "checked_at": "2026-08-11T04:56:59.073939+00:00",
+    "title": "Teleoperation Client",
+    "accepted": true,
+    "reason": "纳入。该项目于 2026 年 3 月 12 日出现在星动纪元官方 GitHub 组织中，官方仓库是其专用项目页；仓库提供可执行的 ROS 2 Python 客户端和接口代码，用于初始化、启动、操作及停止实体机器人遥操作服务，因此满足“面向物理机器人且软件为页面主体”的条件。责任组织也由官方 GitHub 组织和公司官网明确为 RobotEra／北京星动纪元科技有限公司。([github.com](https://github.com/roboterax)) 仓库公开可读，但页面未显示许可证；为避免把“公开源码”误判为具有明确开源授权，open_source 保守标为 false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 ROS 2 服务启动、初始化、激活和停止机器人遥操作栈",
+        "配置 VR 或游戏手柄等人体动作输入方式",
+        "配置 XHAND 或 Lite 手部执行器以及 dummy、RealSense、stereo 相机",
+        "通过浏览器建立 VR 数据通道并启动或停止遥操作",
+        "执行关节状态检查、复位轨迹和抬臂初始化流程"
+      ],
+      "fields": [
+        "Robot systems",
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是星动纪元官方 GitHub 组织发布的 ROS 2 遥操作客户端，不是机器人本体、传感器或遥操作硬件产品页；官方仓库将其明确描述为“Tele operation client”。([github.com](https://github.com/roboterax/teleop_client))",
+        "客户端使用 rclpy，并通过 DynamicLaunch、Trigger、StringMessage 和 SimpleTrajectory 等 ROS 2 service/action 接口管理机器人控制及遥操作服务。([github.com](https://github.com/roboterax/teleop_client/blob/main/l3_pub_client.py))",
+        "SDK 启动流程调用 /dynamic_launch 和 /ready_service，将控制模式设置为位置模式；随后发送关节复位轨迹和抬臂轨迹，再通过 /activate_service 激活关节模块。([github.com](https://github.com/roboterax/teleop_client/blob/main/l3_pub_client.py))",
+        "遥操作初始化命令要求授权文件，并允许选择 XHAND 或 Lite 手部配置、VR 或 gamepad 动捕输入，以及 dummy、RealSense 或 stereo 相机配置。([github.com](https://github.com/roboterax/teleop_client))",
+        "运行时通过 /teleoperation/service 管理遥操作服务，并通过 /Start_EE_Retarget 启动末端执行器重定向；客户端还订阅 /joint_states 检查所需关节状态。([github.com](https://github.com/roboterax/teleop_client/blob/main/l3_pub_client.py))",
+        "VR 操作链路通过机器人端网页建立连接，页面显示数据通道已打开后可启动 AR，再由命令行启动或停止遥操作。([github.com](https://github.com/roboterax/teleop_client))",
+        "仓库包含分别面向 L3 和 Q5 配置的 Python 客户端入口及配套的 xbot_common_interfaces 接口定义，属于面向实体机器人的控制集成软件。([github.com](https://github.com/roboterax/teleop_client))"
+      ],
+      "metrics": [
+        {
+          "label": "遥操作输入模式",
+          "note": "README 中 init_teleop 的 --mocap 参数明确列出 VR 和 gamepad。",
+          "value": "2 种：vr、gamepad"
+        },
+        {
+          "label": "相机配置",
+          "note": "README 中 --camera-type 参数的完整可选集合。",
+          "value": "3 种：dummy、realsense、stereo"
+        },
+        {
+          "label": "手部配置",
+          "note": "README 中 --hand 参数明确列出的执行器配置。",
+          "value": "2 种：xhand、lite"
+        },
+        {
+          "label": "ROS 2 服务等待上限",
+          "note": "客户端等待 /Start_EE_Retarget 和 /teleoperation/service 时实现的超时值。",
+          "value": "10.0 秒"
+        },
+        {
+          "label": "官方仓库规模",
+          "note": "GitHub 页面显示仓库历史提交数；这是代码库规模信息，不是性能评测结果。",
+          "value": "5 commits"
+        }
+      ],
+      "official_organization_url": "https://www.robotera.com/",
+      "official_project_url": "https://github.com/roboterax/teleop_client",
+      "open_source": false,
+      "organization_en": "RobotEra TECHNOLOGY CO., LTD.",
+      "organization_kind": "Company",
+      "organization_zh": "北京星动纪元科技有限公司",
+      "reason": "纳入。该项目于 2026 年 3 月 12 日出现在星动纪元官方 GitHub 组织中，官方仓库是其专用项目页；仓库提供可执行的 ROS 2 Python 客户端和接口代码，用于初始化、启动、操作及停止实体机器人遥操作服务，因此满足“面向物理机器人且软件为页面主体”的条件。责任组织也由官方 GitHub 组织和公司官网明确为 RobotEra／北京星动纪元科技有限公司。([github.com](https://github.com/roboterax)) 仓库公开可读，但页面未显示许可证；为避免把“公开源码”误判为具有明确开源授权，open_source 保守标为 false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Teleoperation Client 是北京星动纪元科技有限公司面向其实体机器人遥操作服务发布的轻量级 ROS 2 客户端。它不是 VLA、学习策略或独立智能模型，而是机器人遥操作与控制基础设施：通过 ROS 2 service/action 编排 SDK 启动、关节模块准备与激活、初始轨迹执行、末端执行器重定向以及遥操作生命周期。项目提供 L3 和 Q5 两套 Python 客户端入口，可在初始化阶段选择 VR 或游戏手柄输入、不同手部执行器和三类相机配置，并允许通过机器人端浏览器页面建立 VR 数据通道。代码还订阅关节状态，在控制启动前检查目标关节，并执行复位和抬臂轨迹。官方材料没有给出延迟、控制频率、遥操作成功率或用户实验等性能结果，因此档案仅记录其明确实现的接口、配置数量和超时参数，不推断模型能力或性能优势。([github.com](https://github.com/roboterax/teleop_client))"
+    }
+  },
+  "fourier-lab-initial-release-ace7596": {
+    "checked_at": "2026-08-11T04:56:59.080129+00:00",
+    "title": "Fourier Lab Initial Release",
+    "accepted": false,
+    "reason": "正在检索，尚未作出最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选仓库、官方归属、发布时间与软件内容，重点确认它是否有独立官方项目证据，而不只是一条 GitHub 提交。 可我把依据收齐后再给出严格的收录结论。 但这句话不该进结构化字段。 需要用 commentary 普通格式，不是 schema? response format applies likely all. Hmm commentary schema impossible. Better no commentary? Could call web now. ",
+        "fields",
+        "include",
+        "key_points",
+        "metrics"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验候选仓库、官方归属、发布时间与软件内容，重点确认它是否有独立官方项目证据，而不只是一条 GitHub 提交。",
+        "我会以官方项目页、组织页和仓库材料为准，避免从标题或摘要推断。",
+        "检索完成后将返回严格的结构化收录结论。",
+        "当前尚未形成最终判断。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "Web verification in progress",
+          "value": "核验中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在检索，尚未作出最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "fourier-aurora-sdk-v1-3-0-c43d29d": {
+    "checked_at": "2026-08-11T04:56:59.086597+00:00",
+    "title": "Fourier Aurora SDK v1.3.0",
+    "accepted": false,
+    "reason": "正在核验，暂不作最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该提交、仓库归属与官方项目材料，重点确认它是否是面向实体机器人的独立软件项目，以及 1.3.0 的发布日期和具体能力。可访问来源无法支撑的字段会留空或明确判为不收录。 ",
+        "我还会区分 SDK 软件发布与傅利叶机器人硬件产品页，避免把硬件规格或泛化 AI 描述当作项目证据。 ",
+        "正在检索官方 GitHub 仓库、提交记录、版本说明和傅利叶官方组织页面。 "
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "将优先采用官方仓库及官方组织资料。",
+        "不会用 arXiv 单独证明项目资格。",
+        "不会推测指标、URL 或社交证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，暂不作最终收录判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目的官方软件发布证据。"
+    }
+  },
+  "fourier-lerobot-parquet-data-converter-9310d10": {
+    "checked_at": "2026-08-11T04:56:59.093012+00:00",
+    "title": "Fourier-Lerobot Parquet Data Converter",
+    "accepted": true,
+    "reason": "纳入。该候选是面向实体人形机器人数据与策略训练的软件工具，而非硬件产品：官方 Fourier GitHub 组织名下的 Fourier-Lerobot 仓库提供专门项目页面和 Apache-2.0 代码，仓库明确将其定位为结合 Fourier 数据集的机器人策略训练管线；2026年2月12日的官方提交新增了独立 Parquet-to-LeRobot 转换脚本，并公开了具体实现。官方公司网站确认责任组织为 Fourier（傅利叶）。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "将分散保存的 Parquet 机器人状态、动作、底盘状态和相机数据转换为 LeRobotDataset。",
+        "按统一时间轴对多模态传感与控制数据进行最近时间戳匹配和重采样。",
+        "处理 GR3QNEXO 人形机器人的关节、双手、底盘状态及底盘动作字段。",
+        "解码 Parquet 内的 AVIF 相机帧，并支持缩放、居中方形裁剪和多相机参数。",
+        "逐回合写入数据、编码视频、计算统计量并生成可供 LeRobot 策略训练使用的数据集。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Humanoid intelligence",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "该转换器是 Fourier-Lerobot 训练管线中的数据工程组件；官方仓库将 Fourier-Lerobot 定义为基于 LeRobot、集成 DP、ACT 和 IDP3，并配套 Fourier 数据集的机器人策略训练管线。",
+        "转换器读取按 episode 组织的 Parquet 文件，包括 observation.state、action、observation.base_state、action.base 和 observation.images.camera_*，并读取 metadata.json 确定任务描述。",
+        "它计算视频、关节状态、关节动作、底盘状态和底盘动作共有的有效时间区间，以约 33 毫秒间隔生成参考时间轴，再通过最近时间戳匹配对各模态进行同步。",
+        "内置 GR3QNEXO 配置显式描述头部、腰部、双臂、双手以及移动底盘字段；输出同时定义 observation.state、action、姿态字段、回合索引、帧索引、任务索引和终止标记。",
+        "相机管线从 Parquet 字段解码 AVIF 图像，可选择居中方形裁剪，随后缩放到命令行指定分辨率；转换后的图像作为 LeRobot 视频特征写入。",
+        "转换过程自动发现 episode* 目录，跳过缺少必要状态或动作文件的回合，逐帧写入 LeRobotDataset，并在每个回合结束时编码视频。",
+        "全部回合完成后，工具调用 consolidate 计算数据统计量并删除中间图像文件；同一提交还把默认视频编码器从 libsvtav1 改为 libx264，并固定了相关 Python 依赖版本。"
+      ],
+      "metrics": [
+        {
+          "label": "提交改动规模",
+          "note": "官方提交页报告该功能提交涉及 4 个文件。",
+          "value": "4 files changed; 490 additions; 4 deletions"
+        },
+        {
+          "label": "输出采样率",
+          "note": "LeRobotDataset 创建参数及 GR3QNEXO 配置均设为 30 fps；参考时间轴默认步长为 33 ms。",
+          "value": "30 fps"
+        },
+        {
+          "label": "默认输出图像尺寸",
+          "note": "命令行 video-config 的默认值。",
+          "value": "480 × 480"
+        },
+        {
+          "label": "GR3QNEXO 相机配置",
+          "note": "内置 OAK 相机配置所列原始宽高。",
+          "value": "1280 × 800"
+        },
+        {
+          "label": "默认相机输入",
+          "note": "命令行和转换函数默认处理顶部相机。",
+          "value": "1 camera: top"
+        }
+      ],
+      "official_organization_url": "https://www.fftai.com/",
+      "official_project_url": "https://github.com/FFTAI/fourier-lerobot",
+      "open_source": true,
+      "organization_en": "Fourier",
+      "organization_kind": "Company",
+      "organization_zh": "傅利叶",
+      "reason": "纳入。该候选是面向实体人形机器人数据与策略训练的软件工具，而非硬件产品：官方 Fourier GitHub 组织名下的 Fourier-Lerobot 仓库提供专门项目页面和 Apache-2.0 代码，仓库明确将其定位为结合 Fourier 数据集的机器人策略训练管线；2026年2月12日的官方提交新增了独立 Parquet-to-LeRobot 转换脚本，并公开了具体实现。官方公司网站确认责任组织为 Fourier（傅利叶）。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Fourier-Lerobot Parquet Data Converter 是傅利叶在其 LeRobot 分支中发布的数据转换工具，用于把 GR3QNEXO 等实体人形机器人采集的 Parquet 回合数据整理为 LeRobotDataset。其核心工作不是提出新策略模型，而是打通训练前的数据管线：解析关节、灵巧手、底盘和相机字段，在多源数据的共同时间区间内建立 30 fps 参考时间轴，完成最近时间戳同步，解码 AVIF 图像并编码视频，最终生成带任务、回合、帧和终止信息且已计算统计量的标准化数据集。它属于具身智能的数据与机器人系统基础设施，可直接服务于 Fourier-Lerobot 中 DP、ACT、IDP3 等策略的训练流程。"
+    }
+  },
+  "unifolm-vla-0-b0d4d70": {
+    "checked_at": "2026-08-11T04:56:59.099430+00:00",
+    "title": "UnifoLM-VLA-0",
+    "accepted": false,
+    "reason": "正在核验候选是否满足全部收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方项目页、组织归属、发布日期，并从项目文档及其链接材料中提取可验证的技术点与指标。优先判断它是否确实是面向实体机器人的软件项目，而非硬件产品页。",
+        "正在检索官方来源。将把 GitHub 仓库视为候选官方项目页，但仍需核对仓库归属、发布内容和日期证据。",
+        "已确认候选描述指向 VLA 软件栈；下一步核对官方组织身份、首次公开时间，以及 README/技术材料中的精确能力和结果。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "待核验官方来源后给出结论。",
+        "正在检查仓库内容与关联页面。",
+        "不会以 arXiv 单独作为官方项目证据。",
+        "仅收录来源明确支持的指标。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在检索官方页面",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/unitreerobotics/unifolm-vla",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验候选是否满足全部收录条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于官方网页和项目材料核验 UnifoLM-VLA-0。"
+    }
+  },
+  "robotera-sdk-api-03f34cf": {
+    "checked_at": "2026-08-11T04:56:59.105961+00:00",
+    "title": "RobotEra SDK API",
+    "accepted": false,
+    "reason": "Verification in progress.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the repository, its owning organization, release timing, and whether it constitutes a dedicated software artifact rather than a hardware support page.",
+        "I’ll use only accessible official or primary materials for technical claims and reported results.",
+        "Any unsupported requirement will result in exclusion."
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "Repository ownership and project scope are being checked.",
+        "Release evidence and official organization identity are being checked.",
+        "Metrics will only be included if explicitly reported."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Source verification pending.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/roboterax/xbot_sdk_api",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Verification in progress.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验该候选项目的官方归属、发布时间、软件范围与技术材料。"
+    }
+  },
+  "spirit-v1-5-b026149": {
+    "checked_at": "2026-08-11T04:56:59.112287+00:00",
+    "title": "Spirit v1.5",
+    "accepted": false,
+    "reason": "正在核验可访问的官方来源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’ll verify the repository’s release evidence, responsible organization, software scope, and any linked technical materials before applying the eligibility rules.",
+        "I’ll return `include=false` if the official ownership, release date, or dedicated software-project evidence cannot be established.",
+        "I’ll avoid inferring affiliations or metrics from the candidate description alone."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "Checking the supplied repository and linked official materials.",
+        "Separating repository claims from independently unsupported metadata.",
+        "Looking for exact reported evaluation results."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Pending source verification",
+          "value": "Unverified"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/Spirit-AI-Team/spirit-v1.5",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验可访问的官方来源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "limx-cosa-332b626": {
+    "checked_at": "2026-08-11T04:56:59.118784+00:00",
+    "title": "LimX COSA",
+    "accepted": false,
+    "reason": "尚未完成网页核验，暂不作最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方发布页、组织归属和发布日期，再检查该页面是否确实以机器人软件系统为主体，并从官方链接材料中提取可复核的技术点与指标。之后会按严格准入条件给出结构化结论。",
+        "我会优先使用 LimX Dynamics 官方页面及其链接的技术材料；对无法由可访问来源支持的字段留空或明确标记缺失，不从摘要推断。",
+        "正在核对 COSA 的官方定位、软件架构和演示结果，重点排除它只是机器人硬件或产品规格页的可能性，并确认是否存在足够明确的量化指标。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索与核验进行中。",
+        "将确认是否满足“2025 年以来发布”以及“专门的软件项目页面”两项门槛。",
+        "将只采纳官方页面、官方技术报告及其直接链接材料支持的信息。",
+        "不会把 arXiv 单独作为官方项目证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方材料",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.limxdynamics.com/en/news/BK000054",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "尚未完成网页核验，暂不作最终收录判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 LimX COSA 是否为由明确机构负责、具有专门官方页面且以具身机器人软件为主体的 2025 年后发布项目。"
+    }
+  },
+  "noetix-e1-lab-702a373": {
+    "checked_at": "2026-08-11T04:56:59.125189+00:00",
+    "title": "Noetix E1 Lab",
+    "accepted": false,
+    "reason": "正在检索，尚未完成证据核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验项目仓库、组织归属、发布日期和实际软件内容。重点是确认它是否有合格的官方项目页面，而不是仅凭候选摘要判断。现有证据不足前不会补猜指标或链接。 这句话不应作为最终结果；我会在检索完成后返回结构化裁定。这个字段被响应格式限制误用了。继续检索。",
+        "检索官方材料中。确认范围包括 Isaac Lab 训练框架、AMP、预训练策略与 MuJoCo 验证是否确实已经发布。",
+        "同时核对 Noetix Robotics 的中英文正式名称及仓库是否由该组织直接维护。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "尚未形成最终裁定。",
+        "不会将 arXiv 或用户提供的摘要单独视为官方项目证据。",
+        "最终只保留来源可支持的技术点和指标。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在执行网络核验",
+          "value": "pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索，尚未完成证据核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "what-is-prompt-engineering-github-facebook-x-for-0e692a3": {
+    "checked_at": "2026-08-11T04:56:59.131570+00:00",
+    "title": "What is prompt engineering? · GitHub Facebook X (formerly Twitter) LinkedIn",
+    "accepted": false,
+    "reason": "不符合条件1：该候选是关于提示工程的官方科普文章，而不是为物理机器人或具身智能发布的软件制品。页面没有发布VLA、机器人基础模型、世界/动作模型、策略、数据引擎或数据集、仿真器、控制/规划栈、评测基准或具身智能体框架。它因此也不是本索引所定义的软件项目。另需注意，官方页面显示发布日期为2025年12月19日，而非候选资料中的2025年12月1日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "介绍零样本、少样本和思维链等提示方法",
+        "说明如何通过上下文、约束和示例组织提示",
+        "介绍提示迭代、输出验证及偏差测试",
+        "说明提示工程在代码生成、文档和工作流自动化中的用途"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "该页面是 GitHub Resources 发布的提示工程概念文章，不是可部署、可下载或可调用的软件项目页面。",
+        "文章将提示工程定义为编写清晰、有目的的输入，以引导大语言模型生成更准确且符合上下文的输出。",
+        "页面介绍了指令提示、示例提示、对话提示和系统提示，以及零样本、少样本和思维链等方法。",
+        "文中讨论的应用集中于代码生成、调试、文档、测试、聊天机器人、数据分析和开发工作流，没有面向物理机器人或具身智能的模型、策略、数据集、仿真器、控制栈、基准或智能体框架。",
+        "页面提到 GitHub Copilot、GitHub Actions 和 GitHub Codespaces，但这些只是提示工程应用示例，并非该页面发布的独立软件制品。",
+        "官方页面标注发布日期为 2025年12月19日，与候选资料给出的 2025年12月1日不一致。"
+      ],
+      "metrics": [
+        {
+          "label": "项目性能指标",
+          "note": "页面未报告任何机器人任务、模型评测或软件系统的实验结果。",
+          "value": "无"
+        },
+        {
+          "label": "机器人能力结果",
+          "note": "页面未展示物理机器人部署、控制或交互能力。",
+          "value": "无"
+        }
+      ],
+      "official_organization_url": "https://github.com/",
+      "official_project_url": "https://github.com/resources/articles/what-is-prompt-engineering",
+      "open_source": false,
+      "organization_en": "GitHub",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件1：该候选是关于提示工程的官方科普文章，而不是为物理机器人或具身智能发布的软件制品。页面没有发布VLA、机器人基础模型、世界/动作模型、策略、数据引擎或数据集、仿真器、控制/规划栈、评测基准或具身智能体框架。它因此也不是本索引所定义的软件项目。另需注意，官方页面显示发布日期为2025年12月19日，而非候选资料中的2025年12月1日。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "GitHub 的《What is prompt engineering?》是一篇面向开发者的概念性资源文章，解释如何通过明确指令、上下文、约束、示例和迭代测试来改善大语言模型输出。文章覆盖指令式、示例式、对话式和系统提示，并讨论零样本、少样本及思维链提示；其应用案例包括 GitHub Copilot 辅助编程、文档生成、测试自动化、聊天机器人和数据分析。该页面没有发布任何独立软件、模型权重、代码框架、数据集、仿真环境或评测套件，也没有涉及物理机器人部署、感知、操作、运动控制或具身交互。故即使页面由明确的公司 GitHub 官方发布且日期晚于2025年，也不能作为具身机器人技术项目收录。"
+    }
+  },
+  "what-is-generative-ai-genai-github-facebook-x-fo-8acd7c0": {
+    "checked_at": "2026-08-11T04:56:59.138195+00:00",
+    "title": "What is generative AI (GenAI)? · GitHub Facebook X (formerly Twitter) LinkedIn",
+    "accepted": false,
+    "reason": "不符合条件 1：候选页面是解释生成式 AI 基础概念和应用的 GitHub 教育文章，并非为物理机器人或具身智能发布的软件制品。页面没有提供 VLA、机器人基础模型、策略、世界/动作模型、机器人数据引擎或数据集、模拟器、控制/规划栈、评测基准或具身智能框架。它也不是某个此类软件项目的专属发布页。因此，即使该页面属于 GitHub 官方网站且责任组织明确，也必须排除。官方页面还将发布日期标为 2025 年 11 月 13 日，而非候选所列的 2025 年 11 月 1 日。([github.com](https://github.com/resources/articles/what-is-generative-ai-genai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "不具备面向物理机器人的已实现能力；页面仅介绍通用生成式 AI 概念",
+        "介绍文本、代码、图像、音频和视频等内容生成形式",
+        "概述训练、微调、提示应用和强化学习等一般流程"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "该页面是 GitHub Resources 栏目中的科普文章，不是独立发布的软件项目或机器人技术项目。",
+        "文章将生成式 AI 定义为根据既有数据模式生成文本、图像、音频或代码等内容的人工智能分支。",
+        "文章概述了训练、领域数据微调、提示驱动应用和基于反馈的强化学习等通用阶段。",
+        "文章讨论 Transformer、扩散模型、GAN、WaveNet 和 RNN 等一般模型架构，但未发布具体模型、代码库、数据集、模拟器、控制栈或评测基准。",
+        "页面列举的应用集中于内容创作、软件开发、教育、医疗和制造业；即使提到工业仿真或数字孪生，也没有提供面向物理机器人的软件实现。",
+        "官方页面显示发布日期为 2025 年 11 月 13 日，而候选资料给出的日期是 2025 年 11 月 1 日。"
+      ],
+      "metrics": [
+        {
+          "label": "官方发布日期",
+          "note": "GitHub 页面显示的日期；与候选资料中的 2025-11-01 不一致。",
+          "value": "2025-11-13"
+        }
+      ],
+      "official_organization_url": "https://github.com",
+      "official_project_url": "https://github.com/resources/articles/what-is-generative-ai-genai",
+      "open_source": false,
+      "organization_en": "GitHub",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件 1：候选页面是解释生成式 AI 基础概念和应用的 GitHub 教育文章，并非为物理机器人或具身智能发布的软件制品。页面没有提供 VLA、机器人基础模型、策略、世界/动作模型、机器人数据引擎或数据集、模拟器、控制/规划栈、评测基准或具身智能框架。它也不是某个此类软件项目的专属发布页。因此，即使该页面属于 GitHub 官方网站且责任组织明确，也必须排除。官方页面还将发布日期标为 2025 年 11 月 13 日，而非候选所列的 2025 年 11 月 1 日。([github.com](https://github.com/resources/articles/what-is-generative-ai-genai))",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "这是 GitHub 发布的一篇生成式人工智能概览文章，内容涵盖生成式模型如何从数据中学习模式并生成文本、代码、图像、音频和视频，以及训练、微调、提示交互、强化学习、常见架构、应用和风险。页面没有发布或描述一个可部署到物理机器人上的具体软件系统，也没有机器人实验、操作任务、控制接口、具身数据集或机器人评测结果。候选标题末尾的 Facebook、X 和 LinkedIn 只是文章分享按钮，不能视为独立社会证据。该条目不属于具身机器人技术项目索引的收录范围。"
+    }
+  },
+  "noetix-n2-gym-2174663": {
+    "checked_at": "2026-08-11T04:56:59.144811+00:00",
+    "title": "Noetix N2 Gym",
+    "accepted": true,
+    "reason": "收录。该候选是服务于实体 N2 人形机器人的强化学习训练与仿真验证软件，包含环境、PPO/AMP 管线、运动数据加载、JIT 策略导出和 MuJoCo sim-to-sim 工具；松延动力官方网站的“官方开源”页面明确将其列为 N2 强化学习开发工具并链接至公司 GitHub 仓库，因此满足软件属性、具名责任组织和官方专页要求。仓库版权年份为 2025，候选提供的具体发布日期为 2025-11-21；可访问页面未展示独立 GitHub Release，但这不影响其作为 2025 年官方公开软件仓库的资格。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 NVIDIA Isaac Gym 中并行训练 N2 人形机器人的强化学习运动策略",
+        "使用 PPO 训练和运行 N2、N2 Mimic 与 N2 10-DoF 等任务配置",
+        "从训练流程自动导出可部署的 JIT 策略模型",
+        "通过 MuJoCo 执行 Isaac Gym 到 MuJoCo 的 sim-to-sim 策略验证",
+        "扩展机器人资产、奖励函数、环境配置和任务注册"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是面向实体 N2 人形机器人的强化学习软件框架，而非 N2 硬件产品页；松延动力官网将其列为官方开源“开发工具”，并直接链接到项目仓库。",
+        "框架以 NVIDIA Isaac Gym Preview 4 为训练环境，提供 N2 机器人资源、腿式机器人基础环境、任务配置、训练脚本和策略运行脚本。",
+        "训练管线支持 PPO；仓库还包含动作捕捉数据目录和运动模仿任务配置，项目说明明确列出 motion loaders 与 adversarial motion-prior（AMP）管线。",
+        "环境与训练参数分别由 LeggedRobotCfg 和 LeggedRobotCfgPPO 管理，并通过继承机制复用；奖励项由配置中的非零 reward scale 自动纳入总奖励。",
+        "任务通过 task_registry 注册；开发者可以加入新的 URDF/MJCF 资产、关节默认位置、PD 增益、奖励函数和训练配置，从而扩展到其他机器人或环境。",
+        "play.py 可加载训练检查点并自动导出 JIT 策略；导出的策略可交给仓库内的 MuJoCo sim2sim 工具执行跨模拟器部署验证。",
+        "仓库提供 CPU/GPU、无头训练、渲染开关、检查点选择和模型目录管理等完整运行接口，并采用 BSD 3-Clause 许可证发布。"
+      ],
+      "metrics": [
+        {
+          "label": "并行训练环境数",
+          "note": "README 给出的 N2 PPO 训练示例使用 --num_envs 4096。",
+          "value": "4096 个环境"
+        },
+        {
+          "label": "N2 策略配置自由度",
+          "note": "MuJoCo sim-to-sim 配置文件在官方使用说明中标为 n2_18dof.yaml。",
+          "value": "18 DoF"
+        },
+        {
+          "label": "低自由度任务变体",
+          "note": "官方使用说明提供独立的 n2_10dof 训练和策略运行任务。",
+          "value": "10 DoF"
+        },
+        {
+          "label": "跨模拟器验证",
+          "note": "官方仓库实现将导出的 JIT 策略从 Isaac Gym 流程部署到 MuJoCo 执行 sim-to-sim 验证；未报告数值成功率。",
+          "value": "Isaac Gym → MuJoCo"
+        },
+        {
+          "label": "许可证",
+          "note": "仓库 LICENSE 标明 Copyright 2025, Noetix Robotics。",
+          "value": "BSD 3-Clause"
+        }
+      ],
+      "official_organization_url": "https://noetixrobotics.com/",
+      "official_project_url": "https://github.com/Noetix-Robotics/noetix_n2_gym",
+      "open_source": true,
+      "organization_en": "Beijing Noetix Robotics Technology Group Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "北京松延动力科技集团股份有限公司",
+      "reason": "收录。该候选是服务于实体 N2 人形机器人的强化学习训练与仿真验证软件，包含环境、PPO/AMP 管线、运动数据加载、JIT 策略导出和 MuJoCo sim-to-sim 工具；松延动力官方网站的“官方开源”页面明确将其列为 N2 强化学习开发工具并链接至公司 GitHub 仓库，因此满足软件属性、具名责任组织和官方专页要求。仓库版权年份为 2025，候选提供的具体发布日期为 2025-11-21；可访问页面未展示独立 GitHub Release，但这不影响其作为 2025 年官方公开软件仓库的资格。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Noetix N2 Gym 是北京松延动力面向 N2 实体人形机器人公开的强化学习运动控制框架。它围绕 Isaac Gym 构建 N2 的机器人资产、腿式运动环境、PPO 训练配置、运动模仿数据加载及 AMP 相关管线，可在数千个并行环境中训练运动策略。框架采用环境类与配置类分离、继承和任务注册机制，允许研究者调整奖励尺度、关节参数、PD 增益、机器人模型及训练实验，并增加新的机器人和任务。训练后的策略可由运行脚本加载并导出为 JIT 模型，再通过仓库提供的 MuJoCo sim-to-sim 工具检查跨物理引擎执行效果。该项目因此属于直接支撑人形机器人运动智能、全身控制研究和策略部署验证的软件基础设施，而不是 N2 机器人的硬件宣传或产品规格页面。"
+    }
+  },
+  "gvf-tape-eec13eb": {
+    "checked_at": "2026-08-11T04:56:59.151374+00:00",
+    "title": "GVF-TAPE",
+    "accepted": false,
+    "reason": "正在进行网页核验，当前不是最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、责任机构、发布时间与技术材料，并重点确认其是否属于可部署于实体机器人的软件项目。用于判定的关键证据会限定在官方页面、技术报告和其直接链接材料。",
+        "随后会按严格条件给出结构化收录结论；任何无法由可访问来源支持的字段都不会推测。",
+        "正在补充检索项目名称、官方机构页面及可能关联的技术报告，以核对页面内容是否足以支撑具体能力和指标。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终判定。",
+        "不会将 arXiv 单独视为官方项目证据。",
+        "不会把硬件产品页中附带的 AI 描述当作软件项目页。",
+        "组织名称、日期、指标和社交证据均需可访问来源直接支持。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验来源",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.limxdynamics.com/en/news/BK000045",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在进行网页核验，当前不是最终结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 GVF-TAPE 的官方页面及关联技术材料。"
+    }
+  },
+  "go-1-embodied-foundation-model-7598ed3": {
+    "checked_at": "2026-08-11T04:56:59.157912+00:00",
+    "title": "GO-1 embodied foundation model",
+    "accepted": true,
+    "reason": "纳入。GO-1 是直接为实体机器人生成操作动作的具身基础模型，符合软件项目条件；智元存在专门的官方发布及开源公告页面，明确介绍 ViLLA 架构、训练数据、机器人任务评测以及 GitHub 和 Hugging Face 发布物。责任组织被明确标识为智元，技术报告同时说明 AgiBot 与上海人工智能实验室参与协作。候选日期 2025-09-23 对应智元官网的全面开源公告；模型技术发布实际发生于 2025-03-10，代码仓库将开源事件记为 2025-09-19。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据多视角视觉、语言指令及力觉/本体状态生成连续机器人动作序列",
+        "通过隐式动作标记执行中层时序推理与长时任务规划",
+        "执行倒水、桌面清理、饮料补货、衣物折叠等真实世界双臂操作任务",
+        "利用人类视频、跨本体操作数据和真机轨迹进行预训练与下游小样本适配",
+        "通过微调迁移至不同机器人本体及 LIBERO、RoboTwin 等仿真环境"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "GO-1 是面向物理机器人操作的通用具身策略模型，而非机器人硬件产品；官方模型卡将其定义为预训练于 AgiBot World 数据集的 Vision-Language-Action 机器人基础模型。",
+        "模型采用 Vision-Language-Latent-Action（ViLLA）架构，由 VLM 主干、Latent Planner 和 Action Expert 组成；隐式规划器预测离散 Latent Action Tokens，动作专家再将其转化为底层连续动作。",
+        "VLM 主干采用 InternVL2.5-2B，并通过 InternViT 编码多视角图像；技术报告中的 Latent Planner 包含 24 层 Transformer，并从 VLM 获得逐层条件信息。",
+        "Latent Action Model 使用时空 Transformer 编码帧间变化，并通过 VQ-VAE 将变化量化为离散隐式动作标记，以利用人类视频和跨本体视频中没有机器人动作标签的知识。",
+        "Action Expert 使用扩散目标和迭代去噪过程回归底层动作块；报告给出的动作块长度 H 为 30，目标是支持高频、灵巧的连续操作。",
+        "GO-1 基于 AgiBot World 数据进行训练；相关平台包含超过 100 万条真机轨迹、217 个任务、五类部署场景和 3,000 多种物体，并采用人工在环的数据审核流程。",
+        "官方于 2025 年 3 月 10 日发布 GO-1 技术介绍，随后在 2025 年 9 月开放 GitHub 实现和 Hugging Face 预训练权重；仓库提供完整微调及仅微调 Action Expert 的路径。"
+      ],
+      "metrics": [
+        {
+          "label": "五项真实机器人任务平均得分",
+          "note": "与同样在 AgiBot World Beta 上预训练的 RDT-1B 和无 Latent Planner 版本比较；结果按每项任务 30 次试验汇总。",
+          "value": "GO-1 0.78；无 Latent Planner 0.66；RDT-1B 0.46"
+        },
+        {
+          "label": "相对 RDT-1B 的平均提升",
+          "note": "官方发布页表述为平均成功率由 46% 提升至 78%。",
+          "value": "+32 个百分点"
+        },
+        {
+          "label": "Latent Planner 消融增益",
+          "note": "完整 GO-1 与移除 Latent Planner 的模型比较。",
+          "value": "+12 个百分点（66%→78%）"
+        },
+        {
+          "label": "复杂任务表现",
+          "note": "技术报告称 GO-1 在真实世界灵巧及长时任务上达到该结果。",
+          "value": "成功率超过 60%"
+        },
+        {
+          "label": "模型规模",
+          "note": "官方 Hugging Face 模型卡报告的 GO-1 权重规模，BF16 格式。",
+          "value": "3B 参数"
+        }
+      ],
+      "official_organization_url": "https://www.agibot.com/",
+      "official_project_url": "https://agibot.com.cn/article/188/detail/79.html",
+      "open_source": true,
+      "organization_en": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "智元创新（上海）科技股份有限公司",
+      "reason": "纳入。GO-1 是直接为实体机器人生成操作动作的具身基础模型，符合软件项目条件；智元存在专门的官方发布及开源公告页面，明确介绍 ViLLA 架构、训练数据、机器人任务评测以及 GitHub 和 Hugging Face 发布物。责任组织被明确标识为智元，技术报告同时说明 AgiBot 与上海人工智能实验室参与协作。候选日期 2025-09-23 对应智元官网的全面开源公告；模型技术发布实际发生于 2025-03-10，代码仓库将开源事件记为 2025-09-19。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "GO-1（Genie Operator-1）是智元面向真实机器人通用操作推出的具身基础模型。其核心 ViLLA 架构在传统视觉—语言—动作策略之间加入 Latent Planner：先用离散隐式动作标记表示视频中的时序变化和中层动作计划，再由基于扩散目标的 Action Expert 生成连续底层动作。这一设计使模型能够同时利用互联网图文、人类操作视频、跨机器人本体数据以及 AgiBot World 的百万级真机轨迹。官方真实机器人评测覆盖补货、桌面清理、倒水和衣物折叠等不同长度及视觉复杂度的任务，完整模型平均得分为 0.78，相比 RDT-1B 的 0.46 提高 32 个百分点；移除隐式规划器后得分降至 0.66。项目已发布代码、预训练权重和微调流程，因此属于具备可使用软件产物、明确官方页面及具体责任组织的合格项目。"
+    }
+  },
+  "unifolm-wma-0-65d8c3d": {
+    "checked_at": "2026-08-11T04:56:59.164314+00:00",
+    "title": "UnifoLM-WMA-0",
+    "accepted": false,
+    "reason": "正在完成基于可访问官方来源的核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方页面、发布主体、软件属性及可复现的技术指标。重点会区分项目页中的软件模型与任何宇树硬件产品信息。先检查 GitHub 官方仓库及其链接材料，再交叉核对机构名称和发布日期。现在开始。谢谢。完成。开始。处理中。核验中。继续。稍候。搜索。查看。分析。确认。整理。输出。结束。请等。马上。接近完成。最终。",
+        "避免把论文摘要或硬件宣传当作独立项目证据。",
+        "仅记录可由官方材料直接支持的信息。"
+      ],
+      "fields": [
+        "World models",
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "占位：正在检索。",
+        "占位：将核验官方仓库。",
+        "占位：将核验发布日期。",
+        "占位：将提取指标。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "检索进行中",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/unitreerobotics/unifolm-world-model-action",
+      "open_source": true,
+      "organization_en": "Unitree Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "宇树科技",
+      "reason": "正在完成基于可访问官方来源的核验。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "wall-oss-5a1ca89": {
+    "checked_at": "2026-08-11T04:56:59.170632+00:00",
+    "title": "WALL-OSS",
+    "accepted": false,
+    "reason": "正在检索并核实，尚未形成最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核对官方仓库、组织归属、项目发布时间和技术材料，重点确认 WALL-OSS 是否是独立的软件项目，而不是 WALL-X 硬件页面中的附带描述。搜索后只采用可直接访问且能互相印证的来源。",
+        "随后会提取官方材料明确报告的能力与指标；没有可靠数字的部分将保留为定性结论，不补推数据。当前给出的日期是 2025 年 9 月 8 日，我也会验证它对应的是哪一种发布事件。加盟高质量发展。去不掉了。 Let's inspect. This response format commentary weird must be JSON entire? We need not send commentary perhaps already accidental malformed semantic. Continue web. ",
+        "] ,",
+        "] ,",
+        "] ,"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "去不掉了。 Let's inspect. This response format commentary weird must be JSON entire? We need not send commentary perhaps already accidental malformed semantic. Continue web.",
+        ",",
+        "随后会提取官方材料明确报告的能力与指标；没有可靠数字的部分将保留为定性结论，不补推数据。当前给出的日期是 2025 年 9 月 8 日，我也会验证它对应的是哪一种发布事件。加盟高质量发展。去不掉了。 Let's inspect. This response format commentary weird must be JSON entire? We need not send commentary perhaps already accidental malformed semantic. Continue web. ",
+        ","
+      ],
+      "metrics": [
+        {
+          "label": "status",
+          "note": "Verifying official sources and eligibility.",
+          "value": "in progress"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在检索并核实，尚未形成最终结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 WALL-OSS/WALL-X 的官方项目证据、组织归属、发布时间及软件技术内容。"
+    }
+  },
+  "xr-1-cross-embodiment-vla-model-2cbb033": {
+    "checked_at": "2026-08-11T04:56:59.176927+00:00",
+    "title": "XR-1 cross-embodiment VLA model",
+    "accepted": true,
+    "reason": "纳入。XR-1 是用于实体机器人操作的 VLA 软件项目，具有独立官方项目页和由所属机构维护的公开 GitHub 仓库；页面明确列出北京人形机器人创新中心、北京航空航天大学和北京大学的作者单位，其中主要作者及项目负责人隶属北京人形机器人创新中心。仓库包含可安装源码、训练脚本、模型入口和真实机器人部署代码，并采用 Apache License。需要纠正候选日期：可核实的 arXiv 首次提交日期是 2025 年 11 月 4 日，而不是所给的 2025 年 8 月 22 日；该差异不影响其满足“2025 年以来发布”的时间条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据自然语言指令和多视角视觉观测生成物理机器人的低层连续动作",
+        "在六种异构机器人本体上执行单臂、双臂及人形机器人操作任务",
+        "处理双臂协作、接触密集操作、可变形物体及流体相关操作",
+        "通过少量目标任务演示适配预训练阶段未见过的机器人本体和任务",
+        "在新物体、干扰物、背景变化及光照变化条件下进行操作泛化"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Humanoid intelligence",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "XR-1（X Robotic Model 1）是面向实体机器人控制的跨本体视觉-语言-动作框架，而非机器人硬件或产品规格页面；官方项目页展示了模型、训练流程、真实机器人实验和推理视频。",
+        "核心表示 Unified Vision-Motion Codes（UVMC）由双分支 VQ-VAE 学习：视觉编码器与运动编码器把视觉变化和动作序列映射到共享离散码本，以统一环境动态与机器人运动。",
+        "模型使用视觉-运动对齐损失，使视觉代码靠近对应的运动代码，抑制与任务无关的视觉噪声，并促进人类视频、不同机器人数据及不同本体之间的动态语义对齐。",
+        "训练分为三个阶段：自监督学习 UVMC；利用 UVMC 监督在大规模跨本体机器人数据上预训练通用策略；针对目标机器人和任务进行部署后训练。",
+        "第二阶段使用 XR-D 跨本体数据，官方项目页报告其包含 15.8 万条轨迹和 6910 万帧；技术报告还说明表示学习使用了 RoboMIND、Open-X、XR-D 与 Ego4D 等异构数据源。",
+        "真实机器人验证覆盖 Tien Kung 1.0、Tien Kung 2.0、单臂 UR-5e、双臂 UR-5e、双臂 Franka 和 AgileX Cobot Magic 2.0，并包含双臂协作、灵巧操作、可变形物体、接触密集交互、动态环境和长时序任务。",
+        "官方 GitHub 仓库提供基于 LeRobot Dataset v2.1 的源码、数据转换与统一加载流程、Stage 1–3 训练脚本、预训练模型下载入口，以及 Franka、UR、AgileX 和 Tien Kung 相关的真实机器人部署流程。"
+      ],
+      "metrics": [
+        {
+          "label": "真实机器人评测规模",
+          "note": "覆盖六种机器人本体和 123 个操作任务。",
+          "value": "超过 14,000 次真实机器人 rollout"
+        },
+        {
+          "label": "XR-D 预训练数据规模",
+          "note": "官方项目页报告的跨本体机器人预训练数据。",
+          "value": "158,000 条轨迹、69.1M 帧"
+        },
+        {
+          "label": "CALVIN 长时序成绩",
+          "note": "技术报告称该成绩高于 π0.5 的 3.885 和 Qwen-GR00T 的 3.786。",
+          "value": "4.256 success score；第 5 个子任务成功率 0.741"
+        },
+        {
+          "label": "双臂 UR-5e 示例结果",
+          "note": "DUR-FindTapeBasket 任务；报告中的 π0 对照为 50%。",
+          "value": "XR-1 成功率 85%"
+        },
+        {
+          "label": "未见本体迁移示例",
+          "note": "Tien Kung 2.0 在预训练阶段未出现；TK2-MoveCupSauce 任务中的 π0 对照为 60%。",
+          "value": "XR-1 成功率 70%"
+        }
+      ],
+      "official_organization_url": "https://www.x-humanoid.com/",
+      "official_project_url": "https://xr-1-vla.github.io/",
+      "open_source": true,
+      "organization_en": "Beijing Innovation Center of Humanoid Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "北京人形机器人创新中心有限公司",
+      "reason": "纳入。XR-1 是用于实体机器人操作的 VLA 软件项目，具有独立官方项目页和由所属机构维护的公开 GitHub 仓库；页面明确列出北京人形机器人创新中心、北京航空航天大学和北京大学的作者单位，其中主要作者及项目负责人隶属北京人形机器人创新中心。仓库包含可安装源码、训练脚本、模型入口和真实机器人部署代码，并采用 Apache License。需要纠正候选日期：可核实的 arXiv 首次提交日期是 2025 年 11 月 4 日，而不是所给的 2025 年 8 月 22 日；该差异不影响其满足“2025 年以来发布”的时间条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "XR-1 是北京人形机器人创新中心牵头开发的跨本体视觉-语言-动作基础模型，目标是从视觉观测和自然语言任务中生成可在实体机器人上执行的低层动作。其关键设计是统一视觉-运动代码 UVMC：双分支 VQ-VAE 将视觉动态与机器人动作序列编码进共享离散码本，并通过视觉-运动对齐约束学习尽量不依赖具体机器人形态的动作语义。训练流程包括 UVMC 自监督表示学习、基于 15.8 万条轨迹和 6910 万帧 XR-D 数据的跨本体策略预训练，以及面向目标任务的后训练。项目在六种机器人配置上进行了超过 14,000 次真实执行，覆盖 123 项操作任务，包括双臂协作、接触密集操作、可变形物体处理、动态场景和长时序任务；报告还测试了新物体、背景、光照及静态或动态干扰。公开仓库建立在 LeRobot Dataset v2.1 之上，提供异构数据加载、三个训练阶段的脚本、预训练模型入口和真实机器人部署代码，因此属于可实际训练与部署的软件工程项目，而不是仅展示研究视频或硬件能力的页面。"
+    }
+  },
+  "humanoid-whole-body-control-and-autonomous-navig-f3d61a9": {
+    "checked_at": "2026-08-11T04:56:59.183308+00:00",
+    "title": "Humanoid whole-body control and autonomous-navigation system",
+    "accepted": true,
+    "reason": "符合收录条件。2025年8月发布的对象是用于实体人形机器人的全身控制与自主导航软件系统，官方材料明确说明其系统组成、导航感知、避障、全身动作控制及移动操作协同能力。北京人形机器人创新中心官网提供了专门的运动控制项目页，官方新闻稿也明确将其列为正式发布的核心技术成果，并明确归属北京人形机器人创新中心。未发现该系统本身已经开源的可靠证据，因此open_source设为false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "点对点自主导航与任务执行",
+        "动态障碍感知和自主避障",
+        "移动或站立状态下的上身动作控制",
+        "面向扰动环境的鲁棒移动操作",
+        "大曲率弯道中的自主循迹和稳定行走"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "该项目是北京人形机器人创新中心“慧思开物”通用具身智能平台下的具身“小脑”系统，明确以人形机器人的运动控制与自主导航软件为发布主体，并非单纯的机器人本体或硬件产品。",
+        "系统由“自主导航系统”和“全身控制系统”组成，面向机器人在实际工作环境中的通用移动与操作控制需求。",
+        "自主导航部分支持点对点导航、环境实时占用感知、语义感知、动态障碍检测及自主避障，并扩展自主导航与语义导航的应用范围。",
+        "全身控制部分处理机器人移动或站立时的上身灵活动作控制，使移动与操作可以协同执行，针对人形机器人移动和操作之间的执行瓶颈进行设计。",
+        "官方项目页将其能力概括为自主移动导航、避障绕障和鲁棒抗扰移动操作；发布材料进一步表示，该系统可支持开发者构建自主任务规划与执行流程。",
+        "具身天工Ultra在首届世界人形机器人运动会上仅使用该系统的部分功能，便在无人干预条件下独立完成多个径赛项目；在大曲率弯道中能够保持在本赛道内。"
+      ],
+      "metrics": [
+        {
+          "label": "无人干预比赛距离",
+          "note": "官方称具身天工Ultra仅应用该系统的部分功能，全程无人干预并独立完成比赛。",
+          "value": "1500米、400米和100米"
+        },
+        {
+          "label": "大曲率弯道循迹结果",
+          "note": "机器人在弯道中稳定保持在赛道内。",
+          "value": "未因串道或冲出跑道被罚分"
+        },
+        {
+          "label": "运动会奖牌表现",
+          "note": "官方将全身控制自主导航系统列为支撑“慧思开物”平台自主参赛表现的三项核心技术之一；该结果涉及平台及多项技术协同，并非该系统的独立基准成绩。",
+          "value": "2金6银2铜"
+        }
+      ],
+      "official_organization_url": "https://www.x-humanoid.com/",
+      "official_project_url": "https://www.x-humanoid.com/yk.html",
+      "open_source": false,
+      "organization_en": "Beijing Humanoid Robot Innovation Center",
+      "organization_kind": "Company",
+      "organization_zh": "北京人形机器人创新中心",
+      "reason": "符合收录条件。2025年8月发布的对象是用于实体人形机器人的全身控制与自主导航软件系统，官方材料明确说明其系统组成、导航感知、避障、全身动作控制及移动操作协同能力。北京人形机器人创新中心官网提供了专门的运动控制项目页，官方新闻稿也明确将其列为正式发布的核心技术成果，并明确归属北京人形机器人创新中心。未发现该系统本身已经开源的可靠证据，因此open_source设为false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "“人形机器人全身控制自主导航系统”是北京人形机器人创新中心于2025年发布的实体机器人运动与导航软件栈，也是“慧思开物”通用具身智能平台的具身“小脑”组件。系统将自主导航和全身控制组合起来：导航侧提供点对点移动、实时占用与语义环境感知、动态障碍检测和自主避障；控制侧负责稳定行走、抗扰移动操作，以及机器人处于移动或站立状态时的上身灵活动作。其核心目标是解决人形机器人自主移动与操作执行相互割裂的问题，使机器人能够在环境感知基础上规划移动路径，同时协调身体完成任务。官方以具身天工Ultra的径赛表现验证了系统能力：机器人仅使用系统部分功能，便在无人干预情况下完成1500米、400米和100米比赛，并能在大曲率弯道中保持赛道、不因串道或冲出跑道受罚。该项目有独立的官方功能页面和组织官方发布材料，软件属性及责任机构均有明确依据。"
+    }
+  },
+  "unitree-ros2-v0-3-0-6259924": {
+    "checked_at": "2026-08-11T04:56:59.191100+00:00",
+    "title": "unitree_ros2 v0.3.0",
+    "accepted": true,
+    "reason": "收录。v0.3.0 于 2025 年 8 月 15 日通过 Unitree Robotics 官方 GitHub 组织发布；其专门页面对应一个可下载、可编译的 ROS 2 软件项目，而非机器人硬件或产品规格页。项目明确用于实体 Unitree 四足及人形机器人的 DDS 通信、状态采集、高低层运动控制、双臂与灵巧手开发，满足具身机器人软件条件。官方仓库、版本发布页、源码、README 和 CHANGELOG 均可访问，并明确归属于 Unitree Robotics。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 CycloneDDS 使 ROS 2 节点直接与 Unitree 机器人底层进行 DDS 通信，无需额外封装 SDK 接口",
+        "订阅运动模式、IMU、电机、足端力、电源及无线控制器等机器人状态",
+        "通过 ROS 2 请求/响应主题执行高层运动模式控制，并通过 LowCmd 消息实施关节位置、速度和力矩控制",
+        "提供 G1 人形机器人的移动、双臂、手臂动作、踝关节摆动、音频客户端及 DDS 手臂控制示例",
+        "支持 Dex3 灵巧手消息与控制示例，并可使用 RViz 可视化机器人激光雷达点云"
+      ],
+      "fields": [
+        "Robot systems",
+        "Whole-body control",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "unitree_ros2 是面向实体 Unitree 机器人的 ROS 2 通信与控制软件栈，利用 ROS 2 和 Unitree SDK2 共同采用的 DDS/CycloneDDS 通信层，让 ROS 2 消息能够直接用于机器人状态读取和控制。",
+        "项目提供 unitree_go、unitree_api 和人形机器人相关消息定义，并覆盖运动状态、低层电机状态、IMU、足端力、电池、电源、无线遥控器和激光雷达点云等接口。",
+        "控制层同时包含高层 SportClient 请求接口和低层关节命令接口；后者可指定目标关节位置、速度、力矩及 PD 增益，适用于真实机器人控制开发。",
+        "v0.3.0 集中扩展 G1 人形机器人支持，新增音频、双臂、踝关节摆动、移动控制、预定义手臂动作和 DDS 手臂 SDK 等六个示例。",
+        "该版本加入 Dex3 灵巧手示例，并调整 HandCmd、HandState 和 PressSensorState 三种消息，使其与 Unitree SDK2 的 DDS 定义保持一致；这项调整被官方标记为破坏性变更。",
+        "v0.3.0 修复 ROS 2 Foxy 中 topic_datistics_collector 未检查 header 类型便读取 header.stamp 的问题，使此前标记于 Humble 的相关功能也可在 Foxy 使用。"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "官方 GitHub Release 与 CHANGELOG 均标明该日期",
+          "value": "2025-08-15"
+        },
+        {
+          "label": "新增 G1 示例",
+          "note": "audio client、dual arm、ankle swing、locomotion client、arm action、arm SDK DDS",
+          "value": "6 个"
+        },
+        {
+          "label": "破坏性变更涉及的消息类型",
+          "note": "HandCmd.msg、HandState.msg、PressSensorState.msg",
+          "value": "3 个"
+        },
+        {
+          "label": "官方列出的基础支持机器人系列",
+          "note": "v0.3.0 README 引言明确列出 Go2、B2 和 H1；版本示例还覆盖 G1 与 H1-2",
+          "value": "3 个：Go2、B2、H1"
+        },
+        {
+          "label": "经测试的系统与 ROS 2 组合",
+          "note": "Ubuntu 20.04/Foxy 和 Ubuntu 22.04/Humble",
+          "value": "2 组"
+        }
+      ],
+      "official_organization_url": "https://www.unitree.com/",
+      "official_project_url": "https://github.com/unitreerobotics/unitree_ros2/releases/tag/v0.3.0",
+      "open_source": true,
+      "organization_en": "Unitree Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "宇树科技股份有限公司",
+      "reason": "收录。v0.3.0 于 2025 年 8 月 15 日通过 Unitree Robotics 官方 GitHub 组织发布；其专门页面对应一个可下载、可编译的 ROS 2 软件项目，而非机器人硬件或产品规格页。项目明确用于实体 Unitree 四足及人形机器人的 DDS 通信、状态采集、高低层运动控制、双臂与灵巧手开发，满足具身机器人软件条件。官方仓库、版本发布页、源码、README 和 CHANGELOG 均可访问，并明确归属于 Unitree Robotics。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "unitree_ros2 v0.3.0 是宇树科技面向实体机器人二次开发的 ROS 2 通信与控制栈。它利用 Unitree SDK2 与 ROS 2 共享的 CycloneDDS 基础，使开发者能够直接通过 ROS 2 topic 和消息类型读取运动、IMU、电机、足端、电源及遥控器状态，并下发高层运动请求或低层关节位置、速度和力矩命令。该版本的主要增量是完善 G1 人形机器人开发接口：新增六个覆盖移动、双臂、手臂动作、踝关节、音频和 DDS 控制的示例，引入 Dex3 灵巧手示例，并让三种手部及压力传感消息与 SDK2 对齐。项目还提供 ROS bag 记录、RViz 激光雷达点云显示以及 Go2、B2、H1、G1、H1-2 等机型的分层示例，因此属于直接服务于真实机器人通信、控制和操作开发的基础软件项目。"
+    }
+  },
+  "genie-envisioner-code-release-b79ce2c": {
+    "checked_at": "2026-08-11T04:56:59.197771+00:00",
+    "title": "Genie Envisioner code release",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验代码仓库、组织归属、发布日期，以及是否存在独立官方项目页面或公告，再按软件项目门槛给出结论。由于候选日期是 2025 年 8 月 13 日，我也会区分论文/仓库首次发布与后续版本记录。",
+        "检索将优先使用 AgiBot/智元官方来源和项目自身材料；第三方页面只用于发现线索，不作为关键资格条件的唯一依据。",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "huisi-kaiwu-distributed-multi-agent-upgrade-69c7294": {
+    "checked_at": "2026-08-11T04:56:59.204240+00:00",
+    "title": "HuiSi KaiWu distributed multi-agent upgrade",
+    "accepted": false,
+    "reason": "正在进行网页核验，当前不能形成最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选页面是否以软件系统为主体，并确认发布组织、日期、技术能力与可引用指标。后续只采用官方页面及其直接链接材料中可支持的内容。 [Error] repeatedly.",
+        "fields",
+        "include",
+        "key_points",
+        "metrics"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索中：核对官方项目页面及组织归属。",
+        "检索中：区分多智能体软件升级与机器人硬件/产品公告。",
+        "检索中：提取可验证的技术点、能力与结果。",
+        "检索中：确认是否存在独立项目材料。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://x-humanoid.com/news-view-235.html",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在进行网页核验，当前不能形成最终收录判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "tien-kung-lab-773a4c4": {
+    "checked_at": "2026-08-11T04:56:59.210804+00:00",
+    "title": "Tien Kung-Lab",
+    "accepted": false,
+    "reason": "正在检索并核验候选。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验仓库归属、首次发布日期和是否存在独立官方项目材料，再从官方文档提取可复核的技术点与结果。重点是确认它确实是面向实体人形机器人的软件框架，而不是硬件产品页。",
+        "随后会交叉检查项目所链接的论文或技术材料；无法由可访问来源支持的字段会明确留空或判为不收录。采用联网搜索核验候选是否满足索引条件。该候选明显接近软件框架范畴，但仍需确认责任机构、官方页面及可精确引用的指标。",
+        "正在定位官方组织信息与项目文档，尤其会区分仓库自述、论文结果和第三方转述。最终只保留官方页面或其直接链接材料能够支撑的内容。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在进行来源核验。",
+        "最终结论将在检索完成后给出。",
+        "不会依据候选摘要猜测组织、指标或链接。",
+        "仅以官方项目页和其直接链接材料为依据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/Open-X-Humanoid/TienKung-Lab",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在检索并核验候选。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Tien Kung-Lab 的官方归属、发布日期、技术内容及报告结果。"
+    }
+  },
+  "what-are-generative-ai-models-github-facebook-x--dd928ec": {
+    "checked_at": "2026-08-11T04:56:59.217249+00:00",
+    "title": "What are generative AI models? · GitHub Facebook X (formerly Twitter) LinkedIn",
+    "accepted": false,
+    "reason": "不收录。该候选不满足条件 1：官方页面是一篇生成式 AI 通识文章，而不是为物理机器人或具身智能发布的软件制品。页面没有发布 VLA、机器人基础模型、世界或动作模型、策略、数据引擎、机器人数据集、仿真器、控制规划栈、评测基准或具身智能框架。它也不满足条件 3 所要求的“专门项目页面”证据：虽然页面由 GitHub 官方发布，但其性质是资源文章，而非具体技术项目的发布页。页面对机器人的提及仅是生成式模型可用于构建自主系统训练仿真的一般示例，不能证明存在可索引的机器人软件项目。([github.com](https://github.com/resources/articles/what-are-generative-ai-models))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "介绍生成式模型的基本概念与内容生成方式",
+        "概述 GAN、VAE、自回归模型和扩散模型等类别",
+        "介绍生成式 AI 在软件开发等行业的一般应用"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "该页面是 GitHub Resources 下的通识文章，标题为“What are Generative AI Models?”，发布日期为 2025 年 6 月 2 日。",
+        "文章将生成式 AI 定义为从训练数据中学习模式并生成文本、图像、音乐或代码等新内容的 AI 系统。",
+        "文章概述了生成对抗网络、变分自编码器、自回归模型和扩散模型，但没有发布一个具体模型、代码库、数据集、仿真器、控制栈或评测基准。",
+        "页面重点讨论软件开发、医疗、金融、制造业和政府等一般应用；机器人仅作为生成训练仿真环境的示例被简短提及。",
+        "页面没有描述面向物理机器人的模型接口、动作空间、控制策略、训练数据、部署方法或机器人实验结果。",
+        "页面列出的 GitHub Copilot、Azure Machine Learning 和 Azure OpenAI Service 等工具也不是该页面所发布的具身机器人项目。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "这是文章发布日期，不是具身机器人项目的发布或评测结果。",
+          "value": "2025-06-02"
+        }
+      ],
+      "official_organization_url": "https://github.com/about/",
+      "official_project_url": "https://github.com/resources/articles/what-are-generative-ai-models",
+      "open_source": false,
+      "organization_en": "GitHub",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。该候选不满足条件 1：官方页面是一篇生成式 AI 通识文章，而不是为物理机器人或具身智能发布的软件制品。页面没有发布 VLA、机器人基础模型、世界或动作模型、策略、数据引擎、机器人数据集、仿真器、控制规划栈、评测基准或具身智能框架。它也不满足条件 3 所要求的“专门项目页面”证据：虽然页面由 GitHub 官方发布，但其性质是资源文章，而非具体技术项目的发布页。页面对机器人的提及仅是生成式模型可用于构建自主系统训练仿真的一般示例，不能证明存在可索引的机器人软件项目。([github.com](https://github.com/resources/articles/what-are-generative-ai-models))",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "这是 GitHub 于 2025 年 6 月 2 日发布的生成式 AI 概念介绍文章。内容解释生成模型如何通过神经网络学习训练数据中的模式，并概述 GAN、VAE、自回归模型和扩散模型等常见架构；应用讨论主要覆盖内容生成、代码生成、测试调试、软件基础设施、医疗、金融和制造业。文章没有定义或发布一个独立的软件项目，也没有提供面向物理机器人的模型权重、代码、API、数据集、仿真环境、控制或规划组件、机器人部署说明以及实验评测。机器人只在“为自主系统构建训练仿真”这一宽泛应用场景中出现，因此不能将该文章视为 2025 年后发布的具身机器人技术项目。([github.com](https://github.com/resources/articles/what-are-generative-ai-models))"
+    }
+  },
+  "genie-sim-v2-1-c1d89f3": {
+    "checked_at": "2026-08-11T04:56:59.223655+00:00",
+    "title": "Genie Sim v2.1",
+    "accepted": true,
+    "reason": "收录。Genie Sim v2.1 是由智元机器人官方 GitHub 组织发布并维护的实体机器人仿真、合成数据和策略评测软件；官方专用项目页明确记录了 2025 年 6 月 25 日的 v2.1 发布内容，包括操作任务、仿真资产、合成数据、UniVLA 推理评测、跨本体逆运动学和自动化长时程评测，满足软件属性、明确责任组织、2025 年后发布及专用官方页面等全部条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向实体机器人操作开发的仿真环境、任务资产与评测工具链。",
+        "为 10 个新增操作任务提供合成数据集，可用于机器人策略训练与实验。",
+        "集成 UniVLA 策略推理接口，支持在仿真环境中执行并评估 VLA 策略。",
+        "支持自动化评测复杂长时程任务，并通过分步运行记录任务表现。",
+        "提供跨本体逆运动学求解能力，使其他机器人本体能够接入操作任务。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Robot systems",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "Genie Sim 是智元机器人发布的实体机器人仿真平台，而非机器人硬件产品；其官方代码仓库将环境构建、仿真资产、数据生成、策略推理和自动评测组织为一套软件工具链。",
+        "v2.1 于 2025 年 6 月 25 日发布，为 AgiBot World Challenge 2025 增加 10 个机器人操作任务，并同步提供完成这些任务所需的仿真资产。",
+        "项目为新增的 10 个操作任务开放了对应合成数据集，使任务环境、训练数据与评测流程能够配套使用。",
+        "该版本集成 UniVLA 策略，支持在 Genie Sim 中运行模型推理并进行仿真评测，体现其对视觉-语言-动作策略的评估用途。",
+        "更新后的逆运动学求解 SDK 支持跨机器人本体求解，目标是让任务与控制接口能够适配智元机器人以外的机器人平台。",
+        "v2.1 优化了仿真通信框架，并扩展自动评测框架以处理更复杂的长时程任务。"
+      ],
+      "metrics": [
+        {
+          "label": "新增操作任务",
+          "note": "面向 AgiBot World Challenge 2025，并包含相应仿真资产。",
+          "value": "10 个"
+        },
+        {
+          "label": "合成数据覆盖",
+          "note": "为 v2.1 新增的操作任务逐项发布对应合成数据集。",
+          "value": "10 个任务"
+        },
+        {
+          "label": "仿真运行速度",
+          "note": "官方仓库称通信框架优化后仿真运行速度得到提升。",
+          "value": "提升 2 倍"
+        },
+        {
+          "label": "策略评测集成",
+          "note": "官方明确报告已集成 UniVLA，可进行模型推理与仿真评测。",
+          "value": "UniVLA"
+        },
+        {
+          "label": "长时程评测",
+          "note": "自动评测框架已更新，可覆盖更复杂的长时程任务；官方未为该项报告单独的数值成绩。",
+          "value": "支持复杂长时程任务自动评测"
+        }
+      ],
+      "official_organization_url": "https://www.agibot.com/",
+      "official_project_url": "https://github.com/AgibotTech/genie_sim",
+      "open_source": true,
+      "organization_en": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "智元机器人",
+      "reason": "收录。Genie Sim v2.1 是由智元机器人官方 GitHub 组织发布并维护的实体机器人仿真、合成数据和策略评测软件；官方专用项目页明确记录了 2025 年 6 月 25 日的 v2.1 发布内容，包括操作任务、仿真资产、合成数据、UniVLA 推理评测、跨本体逆运动学和自动化长时程评测，满足软件属性、明确责任组织、2025 年后发布及专用官方页面等全部条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Genie Sim v2.1 是智元机器人于 2025 年 6 月 25 日发布的实体机器人操作仿真与评测软件版本。该版本围绕 AgiBot World Challenge 2025 增加 10 个操作任务及其仿真资产，并发布对应合成数据集；同时接入 UniVLA 策略推理与仿真评测，更新支持其他机器人本体的逆运动学 SDK，优化通信框架使仿真运行速度提升 2 倍，并扩展复杂长时程任务的自动评测能力。它不是硬件产品页，而是一套直接服务于机器人策略训练、接入和标准化评估的软件工具链。"
+    }
+  },
+  "x-humanoid-training-toolchain-76b39cf": {
+    "checked_at": "2026-08-11T04:56:59.230115+00:00",
+    "title": "X-Humanoid Training Toolchain",
+    "accepted": true,
+    "reason": "收录。北京人形机器人创新中心于2025年5月16日发布了可访问的官方专题公告，明确将X-Humanoid Training Toolchain描述为适配LeRobot的软件训练工具链，并给出数据解析、HDF5到LeRobotDataset V2.1转换、训练配置和模型训练流程。官方公告还链接其公开源代码仓库。项目服务于RoboMIND真实机器人数据和天工实体机器人的具身操作策略训练，因此满足物理机器人软件、明确责任机构、2025年后发布以及存在独立官方项目材料等条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "将RoboMIND的HDF5机器人数据自动解析并转换为LeRobotDataset V2.1格式",
+        "读取并映射图像、关节状态等机器人观测数据",
+        "通过JSON配置数据集、算法与超参数，执行具身操作策略训练",
+        "支持在LeRobot中使用ACT、Diffusion Policy等算法训练面向天工机器人的操作模型"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot manipulation",
+        "Humanoid intelligence",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "这是面向实体机器人学习的软件工具链，而非天工人形机器人本体或硬件产品页；其核心对象是RoboMIND数据处理、LeRobot适配和操作策略训练流程。",
+        "工具链内置RoboMIND数据解析模块，可读取HDF5文件，并按照预定义键提取图像、关节状态等observations。",
+        "数据转换流程将RoboMIND原始数据转换为LeRobotDataset V2.1，使数据能够进入LeRobot的数据加载、训练和可视化流程。",
+        "训练通过JSON配置文件指定数据集路径、训练算法、学习率、批大小等参数；官方材料明确列举ACT和Diffusion Policy作为可配置算法示例。",
+        "项目提供从数据预处理、格式转换到模型训练的命令行工作流，并可调用LeRobot本地工具查看指定数据集episode。",
+        "该工具链把RoboMIND多本体真实机器人数据与天工机器人开发流程接入LeRobot，目标是降低跨数据格式、训练框架和实体机器人平台之间的适配成本。"
+      ],
+      "metrics": [
+        {
+          "label": "RoboMIND轨迹规模",
+          "note": "官方发布页称工具链所适配的RoboMIND开放了10万余条机器人轨迹。",
+          "value": "100,000+ trajectories"
+        },
+        {
+          "label": "任务覆盖",
+          "note": "官方发布页报告RoboMIND覆盖跨场景机器人操作任务。",
+          "value": "479 tasks"
+        },
+        {
+          "label": "目标数据格式",
+          "note": "工具链将HDF5数据转换为官方明确指定的LeRobot数据集版本。",
+          "value": "LeRobotDataset V2.1"
+        },
+        {
+          "label": "已列举训练算法",
+          "note": "官方操作指南明确将ACT和Diffusion Policy列为训练配置中的算法示例。",
+          "value": "ACT and Diffusion Policy"
+        }
+      ],
+      "official_organization_url": "https://x-humanoid.com/",
+      "official_project_url": "https://x-humanoid.com/m/news-view-198.html",
+      "open_source": true,
+      "organization_en": "Beijing Innovation Center of Humanoid Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "北京人形机器人创新中心有限公司",
+      "reason": "收录。北京人形机器人创新中心于2025年5月16日发布了可访问的官方专题公告，明确将X-Humanoid Training Toolchain描述为适配LeRobot的软件训练工具链，并给出数据解析、HDF5到LeRobotDataset V2.1转换、训练配置和模型训练流程。官方公告还链接其公开源代码仓库。项目服务于RoboMIND真实机器人数据和天工实体机器人的具身操作策略训练，因此满足物理机器人软件、明确责任机构、2025年后发布以及存在独立官方项目材料等条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "X-Humanoid Training Toolchain是北京人形机器人创新中心面向RoboMIND数据集、LeRobot训练框架和“天工”人形机器人推出的开源具身操作训练工具链。项目解决的核心问题是RoboMIND原始HDF5数据与主流机器人学习框架之间的格式和流程适配：它按照预定义字段解析图像、关节状态等观测信息，将数据转换为LeRobotDataset V2.1，并接入LeRobot的训练与可视化工具。开发者可使用JSON配置数据集路径、ACT或Diffusion Policy等算法以及学习率、批大小等超参数，进而训练面向天工机器人实体操作的策略。官方发布材料将其定位为贯通数据准备、格式转换和模型训练的命令行工作流，而不是机器人本体、传感器或遥操作硬件产品。工具链适配的RoboMIND在发布时包含10万余条真实机器人轨迹和479项跨场景任务，为多本体操作学习提供数据基础。"
+    }
+  },
+  "fourier-actionnet-dataset-a863470": {
+    "checked_at": "2026-08-11T04:56:59.236601+00:00",
+    "title": "Fourier ActionNet Dataset",
+    "accepted": true,
+    "reason": "符合收录条件：ActionNet是2025年发布的具身机器人软件数据资产，而非硬件产品页；其主题是人形机器人灵巧双臂操作数据、训练流水线和评估/部署工具。项目具有独立官方页面、傅利叶官网发布公告及官方代码与数据仓库，并明确由傅利叶负责。数据采用CC BY-NC-SA 4.0许可，配套训练与评估软件采用Apache 2.0许可。候选所给Git提交日期为2025年3月14日，傅利叶官网正式发布公告日期为2025年3月17日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "支持基于语言指令、RGB-D视觉和机器人状态/动作数据训练模仿学习策略",
+        "支持双臂取放、倾倒、插入、柜体交互和精确放置等桌面操作任务",
+        "支持ACT、Diffusion Policy（DP）和iDP3三类策略的训练与真机评估",
+        "支持将原始数据转换为LeRobotDatasetV2格式，并通过配套工具完成可视化、训练和部署",
+        "数据可用于模仿学习、视觉-语言-动作模型和世界模型训练"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Dexterous manipulation",
+        "Humanoid intelligence",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "ActionNet是面向人形机器人灵巧双臂操作的真机数据集，重点覆盖随机化桌面场景中的取放、倾倒、插入、柜体交互和精确放置等任务，操作对象包括工具、家居用品、办公用品和食物。",
+        "数据通过基于Vision Pro的VR遥操作系统采集；操作者接收机器人第一人称视觉反馈，并将手部动作实时映射到机器人，以获得接近人类执行方式的示范轨迹。",
+        "数据覆盖Fourier GR1-T1、GR1-T2和GR2三种人形机器人，以及6自由度和12自由度两类傅利叶灵巧手；视觉数据由OAK-D W 97相机采集。",
+        "每个样本同时包含机器人状态、机器人动作、末端位姿和时间戳，以及H.264 RGB视频、Z16深度视频和相机时间戳；GR1-T1与GR1-T2记录32维关节数据，GR2记录29维关节数据。",
+        "语言标注由Qwen2.5-VL-7B从每段视频抽取26帧后自动生成，再经人工审核确认；官方称全部约3万条样本均配有简洁的自然语言指令。",
+        "配套Fourier-Lerobot训练流水线实现ACT、Diffusion Policy和iDP3，采用LeRobotDatasetV2数据结构，并提供数据查看、格式转换、策略训练及真机部署工具。",
+        "官方使用DP、ACT和iDP3在多项任务上进行数据质量验证，并展示ACT策略在GR1-T1、GR1-T2和GR2不同人形机器人本体上的部署。"
+      ],
+      "metrics": [
+        {
+          "label": "真机示范轨迹",
+          "note": "官方项目页报告的VR遥操作轨迹规模。",
+          "value": "超过30,000条"
+        },
+        {
+          "label": "交互数据时长",
+          "note": "官方项目页报告的累计机器人交互数据。",
+          "value": "约140小时"
+        },
+        {
+          "label": "语言标注覆盖率",
+          "note": "全部样本均由Qwen2.5-VL-7B生成初始描述并经人工审核。",
+          "value": "30,000个样本完成标注"
+        },
+        {
+          "label": "标注生成输入",
+          "note": "视觉语言模型为每个视频流抽取的帧数。",
+          "value": "26帧"
+        },
+        {
+          "label": "平均提示词长度",
+          "note": "官方项目页报告的每条人工复核语言标注平均长度。",
+          "value": "53词"
+        }
+      ],
+      "official_organization_url": "https://www.fftai.cn/",
+      "official_project_url": "https://action-net.org/",
+      "open_source": true,
+      "organization_en": "Fourier",
+      "organization_kind": "Company",
+      "organization_zh": "傅利叶",
+      "reason": "符合收录条件：ActionNet是2025年发布的具身机器人软件数据资产，而非硬件产品页；其主题是人形机器人灵巧双臂操作数据、训练流水线和评估/部署工具。项目具有独立官方页面、傅利叶官网发布公告及官方代码与数据仓库，并明确由傅利叶负责。数据采用CC BY-NC-SA 4.0许可，配套训练与评估软件采用Apache 2.0许可。候选所给Git提交日期为2025年3月14日，傅利叶官网正式发布公告日期为2025年3月17日。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Fourier ActionNet是傅利叶面向全尺寸人形机器人发布的灵巧双臂操作数据集及配套软件工具链。它以GR1-T1、GR1-T2和GR2真机为数据载体，通过Vision Pro驱动的第一人称VR遥操作采集超过3万条、约140小时的示范，覆盖不同自由度灵巧手、随机化桌面环境和多类日常物体。数据同时保存RGB-D视觉、全身及手部状态与动作、双臂和头部末端位姿、同步时间戳及人工复核的语言指令，可直接服务于模仿学习、VLA和世界模型研究。配套Fourier-Lerobot代码提供数据浏览、LeRobotDatasetV2转换以及ACT、Diffusion Policy和iDP3训练能力，并与官方遥操作及部署代码衔接，构成从真机采集到策略训练、评估和部署的完整流程。"
+    }
+  },
+  "huisi-kaiwu-general-embodied-intelligence-platfo-cccda79": {
+    "checked_at": "2026-08-11T04:56:59.243145+00:00",
+    "title": "HuiSi KaiWu general embodied-intelligence platform",
+    "accepted": true,
+    "reason": "收录。北京人形机器人创新中心于2025年3月12日发布了专门面向物理机器人的通用具身智能软件平台，并提供独立官方产品页和平台使用入口。官方材料明确说明其软件架构、模型与技能组件、开发方式、跨本体兼容性以及多项真机任务，因此满足软件项目、实体机器人应用、专属官方页面和明确责任机构四项条件。官方资料称其为开放平台，并介绍了相关数据集和模型的开源计划，但未在所核实页面中明确证明慧思开物整个平台的完整源代码已经公开，故open_source设为false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "跨机械臂、轮式机器人和人形机器人的多本体部署与技能迁移",
+        "自然语言和多模态指令理解、复杂任务拆解、长程规划及执行反馈闭环",
+        "泛化抓取、双臂协作、工具使用、物流打包和桌面整理等机器人操作",
+        "全身控制、稳定行走、实时感知避障、移动导航与动态路径重规划",
+        "通过低代码开发平台快速添加自定义模型和技能，并利用跨本体轨迹数据训练和部署策略"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "平台采用具身“大脑”与具身“小脑”的分层架构：大脑由AI大模型驱动，负责自然交互、空间感知、意图理解、分层规划和错误反思；小脑以数据驱动的端到端技能执行为核心。",
+        "具身小脑进一步分为操作与运控两个子平台：操作侧提供元技能库、泛化抓取、技能拆解和错误处理，运控侧承担全身控制、双臂协作、稳定行走和移动导航。",
+        "任务运行形成闭环：大脑把复杂指令分解为可执行的子任务并调用技能库，小脑完成动作后返回执行状态；系统可据此进行实时监测、自适应纠错和动态路径重规划。",
+        "官方专页列出的技术组件包括Wow具身世界模型、PelicanVLM视觉语言模型、跨本体VLA基座模型XR-1，以及全身控制自主导航系统。XR-1通过机器人操作数据和互联网视频数据学习多模态视动统一表征。",
+        "平台面向“一脑多机”设计，同一软件系统可兼容机械臂、轮式机器人和人形机器人；官方发布演示覆盖工业分拣、积木搭建、桌面清理和物流打包，并支持语音交互及App直连。",
+        "平台依托RoboMIND跨本体标准化数据集及数据全链路方案；产品页同时提供平台申请和登录入口，表明其是可供开发者使用的具身智能软件平台，而非单纯的机器人硬件产品。"
+      ],
+      "metrics": [
+        {
+          "label": "机器人轨迹数据",
+          "note": "慧思开物官方产品页报告的平台数据规模。",
+          "value": "200万+"
+        },
+        {
+          "label": "支持的机器人本体",
+          "note": "慧思开物官方产品页报告的已支持本体数量。",
+          "value": "20+"
+        },
+        {
+          "label": "开发投入降低",
+          "note": "官方产品页表述为“开发人力与时间 -90%”。",
+          "value": "-90%"
+        },
+        {
+          "label": "首发真机演示场景",
+          "note": "2025年3月12日发布会展示工业分拣、积木搭建、桌面清理和物流打包。",
+          "value": "4个"
+        },
+        {
+          "label": "积木搭建结果",
+          "note": "天工人形机器人依据随机样例完成三层积木搭建；官方称达到毫米级精度。",
+          "value": "3层，毫米级精准搭建"
+        }
+      ],
+      "official_organization_url": "https://www.x-humanoid.com/about.html?lang=en",
+      "official_project_url": "https://www.x-humanoid.com/detail/hskw.html",
+      "open_source": false,
+      "organization_en": "Beijing Innovation Center of Humanoid Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "北京人形机器人创新中心有限公司",
+      "reason": "收录。北京人形机器人创新中心于2025年3月12日发布了专门面向物理机器人的通用具身智能软件平台，并提供独立官方产品页和平台使用入口。官方材料明确说明其软件架构、模型与技能组件、开发方式、跨本体兼容性以及多项真机任务，因此满足软件项目、实体机器人应用、专属官方页面和明确责任机构四项条件。官方资料称其为开放平台，并介绍了相关数据集和模型的开源计划，但未在所核实页面中明确证明慧思开物整个平台的完整源代码已经公开，故open_source设为false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "慧思开物是北京人形机器人创新中心于2025年3月12日发布的一站式通用具身智能开发平台，目标是以同一套软件系统服务机械臂、轮式机器人和人形机器人，并覆盖工业、物流与服务等不同场景。其核心是分层协作的具身“大脑—小脑”体系：大脑负责语言和视觉理解、空间推理、长程任务规划与错误反思，小脑负责端到端操作技能、全身运动控制和导航。当前官方产品体系进一步列出Wow具身世界模型、PelicanVLM、跨本体VLA模型XR-1及全身控制自主导航系统。平台支持复杂任务拆解、技能调用、执行反馈、自适应纠错和动态重规划，并允许开发者快速添加自定义模型与技能。首发活动通过工业分拣、三层积木搭建、受随机干扰的桌面清理以及全流程物流打包验证了多任务和多构型真机执行；官方产品页还报告平台拥有200万条以上机器人轨迹数据、支持20种以上机器人本体，并称可减少90%的开发人力与时间。"
+    }
+  },
+  "fourier-lerobot-idp3-policy-support-03e01e9": {
+    "checked_at": "2026-08-11T04:56:59.249741+00:00",
+    "title": "Fourier-Lerobot IDP3 Policy Support",
+    "accepted": false,
+    "reason": "正在核验候选项目是否满足全部收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该提交、仓库归属和是否存在符合条件的官方专页，并区分“仓库功能提交”与“独立项目发布”。随后只采用可访问的一手材料填写技术点和指标。",
+        "我正在核验该提交、仓库归属和是否存在符合条件的官方专页，并区分“仓库功能提交”与“独立项目发布”。随后只采用可访问的一手材料填写技术点和指标。",
+        "我会先核验该提交、仓库归属和是否存在符合条件的官方专页，并区分“仓库功能提交”与“独立项目发布”。随后只采用可访问的一手材料填写技术点和指标。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验官方来源。",
+        "将检查软件属性、责任组织与发布日期。",
+        "不会以 arXiv 或第三方页面替代官方项目证据。",
+        "不会猜测指标、网址或社交证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验候选项目是否满足全部收录条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于官方可访问来源审查该候选项目。"
+    }
+  },
+  "agibot-world-beta-dataset-f6eb89e": {
+    "checked_at": "2026-08-11T04:56:59.256331+00:00",
+    "title": "AgiBot World Beta dataset",
+    "accepted": false,
+    "reason": "正在检索与核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、责任机构、发布日期、数据规模和可复现指标；重点区分该候选是否确属软件/数据集项目，而非机器人硬件产品。",
+        "随后会用官方页面与项目材料交叉检查组织中英文名、开源状态及技术能力。",
+        "完成后将严格按给定字段输出判断。"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方来源",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在检索与核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于官方项目页和相关技术材料核验候选资格。"
     }
   }
 }

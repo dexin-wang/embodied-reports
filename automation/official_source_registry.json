@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-11T04:36:47.701599+00:00",
+  "organizations": {
+    "自变量机器人-x-robotics-d9608c5b": {
+      "name": "自变量机器人 / X² Robotics",
+      "official_urls": [
+        "https://github.com/X-Square-Robot",
+        "https://x2robot.com/",
+        "https://x2robot.com/en/research",
+        "https://x2robot.com/news"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/X-Square-Robot/X-Tokenizer",
+        "https://github.com/X-Square-Robot/XRZero-G0",
+        "https://github.com/X-Square-Robot/dmuon",
+        "https://github.com/X-Square-Robot/wall-wm",
+        "https://github.com/X-Square-Robot/wall-x",
+        "https://x2robot.com/en/research"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:23:10.825130+00:00",
+      "last_error": null
+    },
+    "智元机器人-agibot-f391a81b": {
+      "name": "智元机器人 / AgiBot",
+      "official_urls": [
+        "https://agibot.com.cn/",
+        "https://genie.agibot.com/",
+        "https://github.com/AgibotTech",
+        "https://www.agibot.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://agibot.com.cn/article/188/detail/79.html",
+        "https://github.com/AgibotTech/GE-Sim-V2",
+        "https://github.com/AgibotTech/Genie-Envisioner-V1",
+        "https://github.com/AgibotTech/genie_sim",
+        "https://github.com/OpenDriveLab/AgiBot-World"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:24:14.720068+00:00",
+      "last_error": null
+    },
+    "银河通用-galbot-cdbd3898": {
+      "name": "银河通用 / Galbot",
+      "official_urls": [],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T04:25:45.190907+00:00",
+      "last_error": null
+    },
+    "逐际动力-limx-dynamics-3b8606bb": {
+      "name": "逐际动力 / LimX Dynamics",
+      "official_urls": [
+        "https://github.com/FluxVLA/FluxVLA",
+        "https://github.com/limxdynamics",
+        "https://support.limxdynamics.com/en/docs-center",
+        "https://www.limxdynamics.com/en",
+        "https://www.limxdynamics.com/en/news"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.limxdynamics.com/en/news/BK000016",
+        "https://www.limxdynamics.com/en/news/BK000044",
+        "https://www.limxdynamics.com/en/news/BK000045",
+        "https://www.limxdynamics.com/en/news/BK000054",
+        "https://www.limxdynamics.com/en/news/BK000058",
+        "https://www.limxdynamics.com/en/news/BK000066"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:26:19.510676+00:00",
+      "last_error": null
+    },
+    "星海图-robot-era-c87e43c7": {
+      "name": "星海图 / Robot Era",
+      "official_urls": [
+        "https://docs.galaxea-dynamics.com/",
+        "https://galaxea-ai.com/",
+        "https://github.com/OpenGalaxea",
+        "https://github.com/userguide-galaxea"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/OpenGalaxea/GalaxeaVLA"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:27:28.879486+00:00",
+      "last_error": null
+    },
+    "星动纪元-robotera-24b87dcd": {
+      "name": "星动纪元 / ROBOTERA",
+      "official_urls": [
+        "https://atd.robotera.com/",
+        "https://github.com/roboterax",
+        "https://www.robotera.com/",
+        "https://www.robotera.com/news"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/roboterax/era_nav_msgs",
+        "https://github.com/roboterax/humanoid-lab",
+        "https://github.com/roboterax/robotera_vla",
+        "https://github.com/roboterax/teleop_client",
+        "https://github.com/roboterax/xbot_sdk_api"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:28:56.000126+00:00",
+      "last_error": null
+    },
+    "千寻智能-spirit-ai-b51f75bc": {
+      "name": "千寻智能 / Spirit AI",
+      "official_urls": [
+        "https://docs.spirit-ai.com/",
+        "https://github.com/Spirit-AI-Team",
+        "https://www.spirit-ai.com/",
+        "https://www.spirit-ai.com/news",
+        "https://www.spirit-ai.com/product"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/Spirit-AI-Team/spirit-v1.5"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:29:56.410490+00:00",
+      "last_error": null
+    },
+    "北京人形机器人创新中心-beijing-humanoid-robot-innovation-ce-385a74e1": {
+      "name": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center",
+      "official_urls": [
+        "https://github.com/Open-X-Humanoid",
+        "https://opensource.x-humanoid-cloud.com/",
+        "https://www.x-humanoid.com/",
+        "https://www.x-humanoid.com/news.html"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/Open-X-Humanoid/TienKung-Lab",
+        "https://github.com/Open-X-Humanoid/XR-1",
+        "https://www.x-humanoid.com/news-view-154.html",
+        "https://www.x-humanoid.com/news-view-238.html",
+        "https://x-humanoid.com/m/news-view-198.html",
+        "https://x-humanoid.com/news-view-235.html"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:31:18.167800+00:00",
+      "last_error": null
+    },
+    "宇树科技-unitree-robotics-f0b06567": {
+      "name": "宇树科技 / Unitree Robotics",
+      "official_urls": [
+        "https://github.com/unitreerobotics",
+        "https://support.unitree.com/home/",
+        "https://www.unitree-robot.com/cn/opensource/index.html",
+        "https://www.unitree.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/unitreerobotics/unifolm-vla",
+        "https://github.com/unitreerobotics/unifolm-world-model-action",
+        "https://github.com/unitreerobotics/unitree_ros2"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:32:24.266476+00:00",
+      "last_error": null
+    },
+    "傅利叶智能-fourier-intelligence-4d47097d": {
+      "name": "傅利叶智能 / Fourier Intelligence",
+      "official_urls": [
+        "https://fftai.com/",
+        "https://github.com/FFTAI",
+        "https://support.fftai.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/FFTAI/fourier-lerobot/commit/102fd3a6cecd869e68dee7146e52275653b16bdb",
+        "https://github.com/FFTAI/fourier-lerobot/commit/7fe026c75d6846ab157ffd7c939cf4dece70d391",
+        "https://github.com/FFTAI/fourier-lerobot/commit/f1f6cdd2e283c0225e91bcb7483f0360f973be59",
+        "https://github.com/FFTAI/fourier_aurora_sdk/commit/369e5f99edc85b3dbfba28672ecf834f8302826e",
+        "https://github.com/FFTAI/fourier_lab/commit/c55de7dd5e9751b2e1e31b5d3fffc00ab351e0bb"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:34:00.906915+00:00",
+      "last_error": null
+    },
+    "优必选-ubtech-robotics-070826f1": {
+      "name": "优必选 / UBTECH Robotics",
+      "official_urls": [
+        "https://open.ubtrobot.com/",
+        "https://research.ubtrobot.com/",
+        "https://www.ubtrobot.com/en/",
+        "https://www.ubtrobot.com/en/about/news"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T04:35:05.024614+00:00",
+      "last_error": null
+    },
+    "松延动力-noetix-robotics-d26d983a": {
+      "name": "松延动力 / Noetix Robotics",
+      "official_urls": [
+        "https://github.com/Noetix-Robotics",
+        "https://noetixrobotics.com/",
+        "https://noetixrobotics.com/opensource"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/Noetix-Robotics/noetix_e1_lab",
+        "https://github.com/Noetix-Robotics/noetix_n2_gym",
+        "https://github.com/Noetix-Robotics/noetix_sdk_bumi",
+        "https://github.com/Noetix-Robotics/noetix_sdk_e1",
+        "https://github.com/Noetix-Robotics/noetix_sdk_n2"
+      ],
+      "last_bootstrapped_at": "2026-08-11T04:36:30.950137+00:00",
+      "last_error": null
+    }
+  }
+}
