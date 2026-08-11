@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=s8YmX4SuuCbg4wTsA2Q7-A&_nc_ss=7b20f&oh=00_AQGjnmNHjUIi-MU4MUS6vLllM1KtIISevEkfHFVONBo7RQ&oe=6A94F673",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=020TVdkJOWticVuR_B7a5g&_nc_ss=7b20f&oh=00_AQFuYsaiMXlemHf8GEx5RUAmrZA0tniRf7p8iVOd4GablQ&oe=6A94F673",
       "width": 1920,
       "height": 1080
     },
@@ -200,6 +200,18 @@
       "height": 1468
     },
     {
+      "id": "xiaomi-robotics-1-db45b5f",
+      "asset": "frameworks/xiaomi-robotics-1-db45b5f.jpg",
+      "source_url": "https://robotics.xiaomi.com/xiaomi-robotics-1.html",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://robotics.xiaomi.com/robot-static-resource/xiaomi-robotics-1/pretrain_data.jpg",
+      "width": 3000,
+      "height": 1999
+    },
+    {
       "id": "dmuon-d95d446",
       "asset": "frameworks/dmuon-d95d446.jpg",
       "source_url": "https://github.com/X-Square-Robot/dmuon",
@@ -248,6 +260,18 @@
       "height": 2246
     },
     {
+      "id": "letools-learning-lerobot-0-5-2-model-support-4965169",
+      "asset": "frameworks/letools-learning-lerobot-0-5-2-model-support-4965169.jpg",
+      "source_url": "https://github.com/LejuRobotics/LeTools-Learning",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/5d84d614a3b57fbf0df3cb60cbcf05e59ff2029627f1624c917138caeb01df68/LejuRobotics/LeTools-Learning",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "wall-wm-world-action-model-9de8900",
       "asset": "frameworks/wall-wm-world-action-model-9de8900.jpg",
       "source_url": "https://x2robot.com/pages/wm",
@@ -294,6 +318,18 @@
       "image_url": "https://opengraph.githubassets.com/389e46dfef6d454cdeec147b2c4695832e784a7c888bc3e031768a299c9b69a9/Noetix-Robotics/noetix_sdk_e1",
       "width": 1200,
       "height": 600
+    },
+    {
+      "id": "xiaomi-robotics-0-post-training-code-e36847f",
+      "asset": "frameworks/xiaomi-robotics-0-post-training-code-e36847f.jpg",
+      "source_url": "https://robotics.xiaomi.com/xiaomi-robotics-0.html",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://robotics.xiaomi.com/robot-static-resource/xiaomi-robotics-0/pretrain_1.png",
+      "width": 1332,
+      "height": 562
     },
     {
       "id": "cortex-2-0-00c4a80",
@@ -356,6 +392,18 @@
       "height": 192
     },
     {
+      "id": "vla-foundry-1-0-0-c3f575e",
+      "asset": "frameworks/vla-foundry-1-0-0-c3f575e.jpg",
+      "source_url": "https://tri-ml.github.io/vla_foundry/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://tri-ml.github.io/vla_foundry/assets/hf_model_support.png",
+      "width": 1391,
+      "height": 700
+    },
+    {
       "id": "agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc",
       "asset": "frameworks/agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc.jpg",
       "source_url": "https://agibot.com/article/231/detail/63.html",
@@ -392,6 +440,18 @@
       "height": 600
     },
     {
+      "id": "precise-manipulation-with-efficient-online-rl-877fa7b",
+      "asset": "frameworks/precise-manipulation-with-efficient-online-rl-877fa7b.jpg",
+      "source_url": "https://www.pi.website/research/rlt",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://physicalintelligence.company/images/rlt/og.png",
+      "width": 1200,
+      "height": 630
+    },
+    {
       "id": "teleoperation-client-99acd5a",
       "asset": "frameworks/teleoperation-client-99acd5a.jpg",
       "source_url": "https://github.com/roboterax/teleop_client",
@@ -411,9 +471,33 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.5.0/unitree_bosswalk.JPG",
-      "width": 3024,
-      "height": 3024
+      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.5.0/sarm_community.gif",
+      "width": 1152,
+      "height": 648
+    },
+    {
+      "id": "vlas-with-long-and-short-term-memory-92511c3",
+      "asset": "frameworks/vlas-with-long-and-short-term-memory-92511c3.jpg",
+      "source_url": "https://www.pi.website/research/memory",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.pi.website/_next/static/media/frame_0001.1474a499.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "foresight-b307e9b",
+      "asset": "frameworks/foresight-b307e9b.jpg",
+      "source_url": "https://dexterity.ai/blog/foresight",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://dexterity.ai/images/DexterityLogo_FullName.svg",
+      "width": 1749,
+      "height": 152
     },
     {
       "id": "the-real-world-learning-loop-c472922",
@@ -512,6 +596,18 @@
       "height": 1080
     },
     {
+      "id": "sima-2-d5416a6",
+      "asset": "frameworks/sima-2-d5416a6.jpg",
+      "source_url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://lh3.googleusercontent.com/KwuGClFlsydWIS2azo2WjBWkMY-Hm3geOZAad00wP-CMtmWQa8DlpmqOMvXC6QKiPnEUBgtToVWnJ9rzz0O7dTcaVFhYOSggEugNVJBWVgc1hegDfg=w1440",
+      "width": 1440,
+      "height": 1130
+    },
+    {
       "id": "xpeng-vlt-large-model-94cea0a",
       "asset": "frameworks/xpeng-vlt-large-model-94cea0a.jpg",
       "source_url": "https://www.xpeng.com/pressroom/news/019a56f54fe99a2a0a8d8a0282e402b7",
@@ -560,6 +656,18 @@
       "height": 809
     },
     {
+      "id": "the-case-for-an-omni-bodied-robot-brain-2cf0385",
+      "asset": "frameworks/the-case-for-an-omni-bodied-robot-brain-2cf0385.jpg",
+      "source_url": "https://www.skild.ai/blogs/omni-bodied",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.skild.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flocoformer.fe908b66.png&w=3840&q=75",
+      "width": 2199,
+      "height": 1018
+    },
+    {
       "id": "go-1-embodied-foundation-model-7598ed3",
       "asset": "frameworks/go-1-embodied-foundation-model-7598ed3.jpg",
       "source_url": "https://agibot.com.cn/article/188/detail/79.html",
@@ -582,6 +690,18 @@
       "image_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack/raw/main/storage/assets/demo/original.gif",
       "width": 1080,
       "height": 608
+    },
+    {
+      "id": "project-go-big-internet-scale-humanoid-pretraini-7d3b87a",
+      "asset": "frameworks/project-go-big-internet-scale-humanoid-pretraini-7d3b87a.jpg",
+      "source_url": "https://www.figure.ai/news/project-go-big",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7p8BmuMQwpfQ0O9aHdhlzP/52f749276d2c74e9e7390962bad17253/Open_Graph_1.jpg",
+      "width": 1200,
+      "height": 630
     },
     {
       "id": "viam-apps-for-robot-fleet-dashboards-fee2211",
@@ -716,6 +836,18 @@
       "height": 372
     },
     {
+      "id": "genie-3-9565aa9",
+      "asset": "frameworks/genie-3-9565aa9.jpg",
+      "source_url": "https://deepmind.google/models/genie/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://lh3.googleusercontent.com/-WcSBDACmwrvxJVLEke6761Z3x0UN_wT8CmaPT6C9ViwRve5-_Fv6lxB-AuZ2BcuZO--Erkv07TcbeTg2ZcA4QDwK0gzDzUBRNRjs20ek3N0FSrqHw=w393-h221-n-nu-rw-lo",
+      "width": 393,
+      "height": 221
+    },
+    {
       "id": "nvidia-isaac-lab-2-2-38fa3a4",
       "asset": "frameworks/nvidia-isaac-lab-2-2-38fa3a4.jpg",
       "source_url": "https://github.com/isaac-sim/IsaacLab/releases/tag/v2.2.0",
@@ -730,6 +862,18 @@
     {
       "id": "skild-brain-general-purpose-robotic-intelligence-b4c16d2",
       "asset": "frameworks/skild-brain-general-purpose-robotic-intelligence-b4c16d2.jpg",
+      "source_url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.skild.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fomni-body.3981c022.jpg&w=3840&q=75",
+      "width": 2062,
+      "height": 1405
+    },
+    {
+      "id": "building-the-general-purpose-robotic-brain-1f3be22",
+      "asset": "frameworks/building-the-general-purpose-robotic-brain-1f3be22.jpg",
       "source_url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain",
       "page": null,
       "caption_detected": false,
@@ -831,9 +975,57 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=v0kwxINHbPgQ7kNvwGWMSeV&_nc_oc=AdrXdKOxeUlC6BlhSNmG1BH4azH2kXt6Hl24eWaJYUGDhR8ThPnKEFmCv6CRuje_mHQ&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=KlTqS62swBaBmww4tzZH_A&_nc_ss=7b20f&oh=00_AQE0KD4SjLBlfe5EJwDUJ1CBfjMguvj_blfFxUOQiLBJrg&oe=6A809F5C",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t15.5256-10/505878263_679808844971378_8778553373371001860_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=eedc80&_nc_ohc=v0kwxINHbPgQ7kNvwGWMSeV&_nc_oc=AdrXdKOxeUlC6BlhSNmG1BH4azH2kXt6Hl24eWaJYUGDhR8ThPnKEFmCv6CRuje_mHQ&_nc_zt=23&_nc_ht=scontent-sin2-1.xx&_nc_gid=YoZ1-IyIHOkHEB17cdDzjg&_nc_ss=7b20f&oh=00_AQHcMRihSVDfEQyeGhYcqOf3SS3u3A-lMMsFhBAlP6wuWQ&oe=6A809F5C",
       "width": 1440,
       "height": 630
+    },
+    {
+      "id": "redwood-ai-mobility-830d58e",
+      "asset": "frameworks/redwood-ai-mobility-830d58e.jpg",
+      "source_url": "https://www.1x.tech/discover/redwood-mobility",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://www.1x.tech/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fqka6yvsc%2Fproduction%2F496b128ab553df9ac09392f740c93dd05f07b956-3824x1492.png&w=3840&q=75",
+      "width": 3824,
+      "height": 1492
+    },
+    {
+      "id": "redwood-ai-d9d1cb0",
+      "asset": "frameworks/redwood-ai-d9d1cb0.jpg",
+      "source_url": "https://www.1x.tech/discover/redwood-ai",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://www.1x.tech/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fqka6yvsc%2Fproduction%2Fd1d5ee2fe88efca2f66a9d217621d9c6e837deab-3824x1492.webp&w=3840&q=75",
+      "width": 3824,
+      "height": 1492
+    },
+    {
+      "id": "real-time-action-chunking-with-large-models-e6f8151",
+      "asset": "frameworks/real-time-action-chunking-with-large-models-e6f8151.jpg",
+      "source_url": "https://www.pi.website/research/real_time_chunking",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.pi.website/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshirt-grid.1f718e2c.jpg&w=3840&q=75",
+      "width": 3792,
+      "height": 1710
+    },
+    {
+      "id": "scaling-helix-a-new-state-of-the-art-in-humanoid-875caa0",
+      "asset": "frameworks/scaling-helix-a-new-state-of-the-art-in-humanoid-875caa0.jpg",
+      "source_url": "https://www.figure.ai/news/scaling-helix-logistics",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3p6PSLhpzQFlo24Jtkbn6D/2a1ad97926832b24786d0f084d92841e/IMG_2539.jpg?fm=webp&w=3840&q=70",
+      "width": 3312,
+      "height": 1755
     },
     {
       "id": "smolvla-bd300e4",
@@ -903,7 +1095,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/4aed2258a84c29669b21ab41ce21ff65d9f97b5bde2b156849fd4c89300a3b2b/Physical-Intelligence/openpi",
+      "image_url": "https://opengraph.githubassets.com/eacb0f45555a55d4546381722627d0f7af6dc7dff8d796290d357c88ac6530b9/Physical-Intelligence/openpi",
       "width": 1200,
       "height": 600
     },
@@ -944,6 +1136,18 @@
       "height": 286
     },
     {
+      "id": "0-5-a-vla-with-open-world-generalization-c8c2c5a",
+      "asset": "frameworks/0-5-a-vla-with-open-world-generalization-c8c2c5a.jpg",
+      "source_url": "https://www.pi.website/blog/pi05",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://www.pi.website/_next/image?url=%2Fimages%2Fpi05%2Fmultimodal_web_data.jpg&w=828&q=75",
+      "width": 400,
+      "height": 286
+    },
+    {
       "id": "viam-tensorflow-model-training-support-454c487",
       "asset": "frameworks/viam-tensorflow-model-training-support-454c487.jpg",
       "source_url": "https://www.viam.com/post/platform-roundup-april-2025",
@@ -968,6 +1172,18 @@
       "height": 791
     },
     {
+      "id": "meta-locate-3d-b2cb510",
+      "asset": "frameworks/meta-locate-3d-b2cb510.jpg",
+      "source_url": "https://locate3d.atmeta.com/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://locate3d.atmeta.com/locate3d-OG.png",
+      "width": 2400,
+      "height": 1260
+    },
+    {
       "id": "large-behavior-models-9a3de3c",
       "asset": "frameworks/large-behavior-models-9a3de3c.jpg",
       "source_url": "https://toyotaresearchinstitute.github.io/lbm1/",
@@ -978,6 +1194,18 @@
       "image_url": "https://toyotaresearchinstitute.github.io/lbm1/images/arch4.png",
       "width": 2908,
       "height": 966
+    },
+    {
+      "id": "natural-humanoid-walk-using-reinforcement-learni-2a8c7bd",
+      "asset": "frameworks/natural-humanoid-walk-using-reinforcement-learni-2a8c7bd.jpg",
+      "source_url": "https://www.figure.ai/news/reinforcement-learning-walking",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/6FX51SIG7Q1vcW1LOniDWM/6f03c15c531e53478f7fc964c8ad2c74/Video_carousel_image.jpg",
+      "width": 736,
+      "height": 590
     },
     {
       "id": "nvidia-isaac-gr00t-n1-9042646",
@@ -1002,114 +1230,6 @@
       "image_url": "https://action-net.org/static/images/all.svg",
       "width": 1440,
       "height": 810
-    },
-    {
-      "id": "hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01",
-      "asset": "frameworks/hui-si-kai-wu-general-embodied-intelligence-plat-24f2d01.jpg",
-      "source_url": "https://www.x-humanoid.com/detail/hskw.html",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.x-humanoid.com/oss/static/img/project/hskw.png",
-      "width": 784,
-      "height": 588
-    },
-    {
-      "id": "gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde",
-      "asset": "frameworks/gemini-robotics-brings-ai-into-the-physical-worl-b9cbdde.jpg",
-      "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://lh3.googleusercontent.com/I7a1f6DPm4Qs4JuiieahA4ki0Dc5IQDU8PxfsMRy3UCf3HF7Td_zZfXg35_M-Td1EELJUY2dJLEkdyjt7IVah658uuqvwAQFtarOukXs44MHGMiSd64=w393-h221-n-nu-rw-lo",
-      "width": 393,
-      "height": 221
-    },
-    {
-      "id": "gemini-robotics-and-gemini-robotics-er-4196177",
-      "asset": "frameworks/gemini-robotics-and-gemini-robotics-er-4196177.jpg",
-      "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://lh3.googleusercontent.com/I7a1f6DPm4Qs4JuiieahA4ki0Dc5IQDU8PxfsMRy3UCf3HF7Td_zZfXg35_M-Td1EELJUY2dJLEkdyjt7IVah658uuqvwAQFtarOukXs44MHGMiSd64=w393-h221-n-nu-rw-lo",
-      "width": 393,
-      "height": 221
-    },
-    {
-      "id": "homie-humanoid-loco-manipulation-with-isomorphic-aefe995",
-      "asset": "frameworks/homie-humanoid-loco-manipulation-with-isomorphic-aefe995.jpg",
-      "source_url": "https://homietele.github.io/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://homietele.github.io/static/images/overview.png",
-      "width": 3822,
-      "height": 1407
-    },
-    {
-      "id": "stretch-software-drop-february-28-2025-f954b49",
-      "asset": "frameworks/stretch-software-drop-february-28-2025-f954b49.jpg",
-      "source_url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://canada1.discourse-cdn.com/flex030/uploads/hello_robot2/original/1X/7ec62e35e942d2188838e90eb58aa9a2c185e800.png",
-      "width": 512,
-      "height": 512
-    },
-    {
-      "id": "helix-096df70",
-      "asset": "frameworks/helix-096df70.jpg",
-      "source_url": "https://www.figure.ai/news/helix",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=3840&q=70",
-      "width": 3840,
-      "height": 2161
-    },
-    {
-      "id": "viam-nested-fragments-d5993e4",
-      "asset": "frameworks/viam-nested-fragments-d5993e4.jpg",
-      "source_url": "https://www.viam.com/post/nested-fragments",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/67acc0a62ee42b572b130c3e_viam-blog-feb-nested-fragments-main-image.png",
-      "width": 1563,
-      "height": 1042
-    },
-    {
-      "id": "magicdog-sdk-9bd42a9",
-      "asset": "frameworks/magicdog-sdk-9bd42a9.jpg",
-      "source_url": "https://support.magiclab.top/en/docs/dog/about",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://support.magiclab.top/_nuxt/navbar.Czyg7QSe.jpg",
-      "width": 1920,
-      "height": 200
-    },
-    {
-      "id": "nvidia-cosmos-world-foundation-model-platform-080cd9a",
-      "asset": "frameworks/nvidia-cosmos-world-foundation-model-platform-080cd9a.jpg",
-      "source_url": "https://www.nvidia.com/en-us/ai/cosmos/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://www.nvidia.com/content/nvidiaGDC/us/en_US/ai/cosmos/_jcr_content/root/responsivegrid/nv_container_9381701/nv_tabs/item_1724183178409/nv_image_copy.coreimg.jpeg/1784544089108/nvidia-cosmo-synthetics-data-generation-auto-ari.jpeg",
-      "width": 1280,
-      "height": 720
     }
   ]
 }

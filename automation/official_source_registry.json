@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-11T05:36:22.689297+00:00",
+  "updated_at": "2026-08-11T06:56:49.009215+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -394,6 +394,219 @@
         "https://tech.meituan.com/2026/07/28/CatPaw-LongCat.html"
       ],
       "last_bootstrapped_at": "2026-08-11T05:35:51.569397+00:00",
+      "last_error": null
+    },
+    "小米机器人-xiaomi-robotics-1410e41b": {
+      "name": "小米机器人 / Xiaomi Robotics",
+      "official_urls": [
+        "https://github.com/XiaomiRobotics",
+        "https://robotics.xiaomi.com/",
+        "https://robotics.xiaomi.com/xiaomi-robotics-1.html",
+        "https://robotics.xiaomi.com/xiaomi-robotics-u0.html",
+        "https://xiaomi-robotics-0.github.io/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0",
+        "https://github.com/XiaomiRobotics/Xiaomi-Robotics-1",
+        "https://robotics.xiaomi.com/xiaomi-robotics-1.html",
+        "https://robotics.xiaomi.com/xiaomi-robotics-u0.html",
+        "https://xiaomi-robotics-0.github.io/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:43:31.297900+00:00",
+      "last_error": null
+    },
+    "北京通用人工智能研究院-bigai-0ed28057": {
+      "name": "北京通用人工智能研究院 / BIGAI",
+      "official_urls": [
+        "https://eng.bigai.ai/",
+        "https://github.com/bigai-ai",
+        "https://www.bigai.ai/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.bigai.ai/blog/news/%E4%BB%8E%E6%B5%B7%E9%87%8F%E8%A7%86%E9%A2%91%E4%B8%AD%E6%8F%90%E7%82%BC%E7%9C%9F%E5%AE%9E3d%E5%9C%BA%E6%99%AF-%E9%80%9A%E7%A0%94%E9%99%A2%E3%80%8Csceneverse%E3%80%8D%E8%AE%A9%E6%99%BA%E8%83%BD/",
+        "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E3%80%81%E5%AE%87%E6%A0%91%E6%8F%90%E5%87%BA%E9%A6%96%E4%B8%AA%E6%94%BB%E5%85%8B%E6%B3%9B%E5%8C%96%E5%A3%81%E5%9E%92%E7%9A%84%E9%80%9A%E7%94%A8%E8%BF%90%E5%8A%A8%E6%8E%A7/",
+        "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E5%8F%91%E5%B8%83%E8%A1%8C%E4%B8%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%9F%BA%E5%87%86%EF%BC%8C%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E6%95%B0%E5%AD%97%E5%91%98%E5%B7%A5/",
+        "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E6%8F%90%E5%87%BA%E5%9B%BD%E9%99%85%E9%A6%96%E4%B8%AA%E8%99%9A%E6%8B%9F%E4%BA%BA%E4%B8%8E%E5%9C%BA%E6%99%AF%E4%BA%A4%E4%BA%92%E5%8A%A8%E4%BD%9C%E7%94%9F%E6%88%90%E6%A1%86/",
+        "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E6%8F%90%E5%87%BA%E9%A6%96%E4%B8%AA%E7%BB%93%E5%90%88%E4%BA%BA%E7%B1%BB%E5%81%8F%E5%A5%BD%E4%B8%8E%E7%89%A9%E7%90%86%E7%BA%A6%E6%9D%9F%E7%9A%84%E7%BB%9F%E4%B8%80%E6%A1%86/",
+        "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2%E7%A0%94%E7%A9%B6%E6%88%90%E6%9E%9C%E7%99%BB%E3%80%8Ascience-robotics%E3%80%8B%EF%BC%9A%E9%A6%96%E6%AC%A1%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%9E%84%E6%9C%BA%E5%99%A8%E4%BA%BA/",
+        "https://www.bigai.ai/blog/news/%E9%80%9A%E7%A0%94%E9%99%A2ai%E5%85%A8%E8%83%BD%E7%89%A9%E7%90%86%E7%A9%BA%E9%97%B4%E8%AE%AD%E7%BB%83%E5%9C%BAtongsim%E5%BC%80%E6%BA%90%E4%B8%8A%E7%BA%BF%EF%BC%8C%E4%B8%A4%E5%A4%A9/",
+        "https://www.bigai.ai/blog/news/icml-spotlight-%E9%80%9A%E7%A0%94%E9%99%A2%E8%81%94%E5%90%88%E5%8C%97%E5%A4%A7%E6%8F%90%E5%87%BA%E5%85%A8%E7%90%83%E9%A6%96%E4%B8%AA%E7%94%9F%E6%88%90%E5%BC%8F%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C/"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:45:13.791045+00:00",
+      "last_error": null
+    },
+    "physical-intelligence-898d6b18": {
+      "name": "Physical Intelligence",
+      "official_urls": [
+        "https://github.com/Physical-Intelligence",
+        "https://www.pi.website/",
+        "https://www.pi.website/research"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.pi.website/blog/openpi",
+        "https://www.pi.website/blog/pi05",
+        "https://www.pi.website/blog/pi07",
+        "https://www.pi.website/blog/pistar06",
+        "https://www.pi.website/research/knowledge_insulation",
+        "https://www.pi.website/research/memory",
+        "https://www.pi.website/research/real_time_chunking",
+        "https://www.pi.website/research/rlt"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:46:27.160027+00:00",
+      "last_error": null
+    },
+    "figure-ai-de2350a7": {
+      "name": "Figure AI",
+      "official_urls": [
+        "https://www.figure.ai/",
+        "https://www.figure.ai/helix",
+        "https://www.figure.ai/news"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.figure.ai/news/helix",
+        "https://www.figure.ai/news/helix-02",
+        "https://www.figure.ai/news/helix-logistics",
+        "https://www.figure.ai/news/project-go-big",
+        "https://www.figure.ai/news/reinforcement-learning-walking",
+        "https://www.figure.ai/news/scaling-helix-logistics"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:47:10.097652+00:00",
+      "last_error": null
+    },
+    "1x-technologies-8e44a4e2": {
+      "name": "1X Technologies",
+      "official_urls": [
+        "https://github.com/1x-technologies",
+        "https://www.1x.tech/",
+        "https://www.1x.tech/ai",
+        "https://www.1x.tech/discover",
+        "https://www.1x.tech/discover/category/research"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.1x.tech/discover/redwood-ai",
+        "https://www.1x.tech/discover/redwood-ai-world-model",
+        "https://www.1x.tech/discover/redwood-mobility",
+        "https://www.1x.tech/discover/world-model-self-learning"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:47:56.512535+00:00",
+      "last_error": null
+    },
+    "nvidia-robotics-research-3cc46e02": {
+      "name": "NVIDIA Robotics Research",
+      "official_urls": [
+        "https://developer.nvidia.com/isaac",
+        "https://github.com/NVIDIA/Isaac-GR00T",
+        "https://nvidianews.nvidia.com/",
+        "https://research.nvidia.com/labs/gear/",
+        "https://www.nvidia.com/en-us/industries/robotics/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/NVIDIA/Cosmos/releases/tag/Cosmos3",
+        "https://github.com/NVIDIA/Isaac-GR00T/releases/tag/n1.7-release",
+        "https://nvidianews.nvidia.com/news/japans-robotics-and-manufacturing-leaders-build-on-nvidia-cosmos-to-advance-physical-ai-frontier",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-open-physical-ai-data-factory-blueprint-to-accelerate-robotics-vision-ai-agents-and-autonomous-vehicle-development",
+        "https://nvidianews.nvidia.com/news/nvidia-releases-new-physical-ai-models-as-global-partners-unveil-next-generation-robots"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:49:05.571947+00:00",
+      "last_error": null
+    },
+    "google-deepmind-robotics-9b690af4": {
+      "name": "Google DeepMind Robotics",
+      "official_urls": [
+        "https://deepmind.google/",
+        "https://deepmind.google/blog/",
+        "https://deepmind.google/models/gemini-robotics/",
+        "https://deepmind.google/research/",
+        "https://github.com/google-deepmind"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
+        "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
+        "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+        "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
+        "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+        "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
+        "https://github.com/google-deepmind/mujoco_playground/releases/tag/v0.1.0",
+        "https://github.com/google-deepmind/mujoco_playground/releases/tag/v0.2.0"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:50:22.130533+00:00",
+      "last_error": null
+    },
+    "meta-fair-a8b34963": {
+      "name": "Meta FAIR",
+      "official_urls": [
+        "https://ai.meta.com/blog/",
+        "https://ai.meta.com/research/",
+        "https://github.com/facebookresearch"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/facebookresearch/CausalVQA",
+        "https://github.com/facebookresearch/IntPhys2",
+        "https://github.com/facebookresearch/collaborative-reasoner",
+        "https://github.com/facebookresearch/locate-3d",
+        "https://github.com/facebookresearch/minimal_video_pairs",
+        "https://github.com/facebookresearch/partnr-planner",
+        "https://github.com/facebookresearch/perception_models",
+        "https://github.com/facebookresearch/vjepa2"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:52:02.229975+00:00",
+      "last_error": null
+    },
+    "toyota-research-institute-f2bbd32a": {
+      "name": "Toyota Research Institute",
+      "official_urls": [
+        "https://github.com/TRI-ML",
+        "https://github.com/ToyotaResearchInstitute",
+        "https://tri-ml.github.io/vla_foundry/",
+        "https://www.tri.global/",
+        "https://www.tri.global/our-work/large-behavior-models"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/TRI-ML/vla_foundry",
+        "https://github.com/ToyotaResearchInstitute/lbm_eval/releases/tag/1.1.0"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:53:58.061826+00:00",
+      "last_error": null
+    },
+    "covariant-1757f883": {
+      "name": "Covariant",
+      "official_urls": [
+        "https://covariant.ai/"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-11T06:54:47.913442+00:00",
+      "last_error": null
+    },
+    "skild-ai-92215b37": {
+      "name": "Skild AI",
+      "official_urls": [
+        "https://www.skild.ai/",
+        "https://www.skild.ai/blogs"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain",
+        "https://www.skild.ai/blogs/learning-by-watching",
+        "https://www.skild.ai/blogs/omni-bodied",
+        "https://www.skild.ai/blogs/one-policy-all-scenarios"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:55:47.027078+00:00",
+      "last_error": null
+    },
+    "dexterity-ai-68351a04": {
+      "name": "Dexterity AI",
+      "official_urls": [
+        "https://dexterity.ai/",
+        "https://dexterity.ai/blog",
+        "https://dexterity.ai/physical-ai"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://dexterity.ai/blog/foresight",
+        "https://dexterity.ai/blog/foresight-evals",
+        "https://dexterity.ai/blog/instinct",
+        "https://dexterity.ai/blog/nvidia-acceleration",
+        "https://dexterity.ai/blog/transactable-world-models"
+      ],
+      "last_bootstrapped_at": "2026-08-11T06:56:33.441179+00:00",
       "last_error": null
     }
   }

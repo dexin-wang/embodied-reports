@@ -83,6 +83,89 @@
     ]
   },
   {
+    "id": "xiaomi-robotics-1-db45b5f",
+    "title": "Xiaomi-Robotics-1",
+    "organization": "小米机器人 / Xiaomi Robotics",
+    "organizationKind": "Company",
+    "date": "2026-07-16",
+    "year": 2026,
+    "summary": "Xiaomi-Robotics-1 是小米机器人面向通用物理操作推出的视觉-语言-动作基础模型，核心目标是验证机器人策略能否像语言和视觉基础模型一样，从数据量与模型规模扩展中持续获益。它先在超过 10 万小时、覆盖 1,700 多种场景的真实世界 UMI 轨迹上进行与机器人本体无关的预训练，并利用视觉语言模型自动生成场景状态变化描述；随后使用跨本体机器人数据和指令标注数据，将通用动作生成能力映射到真实机器人并转化为自然语言指令执行能力。后训练后的模型面向未见环境和未见物体实例执行移动操作，也能通过每项任务数小时至数十小时的示范适配复杂新任务。官方还发布了后训练、推理、部署及 RoboCasa、RoboCasa365、VLABench 等评测代码和检查点，使其不仅是一项研究声明，也构成可实际使用和复现的软件项目。([robotics.xiaomi.com](https://robotics.xiaomi.com/xiaomi-robotics-1.html))",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "项目采用类似大语言模型的两阶段训练范式：预训练阶段从大规模、与特定机器人本体无关的 UMI 轨迹学习通用动作生成表征，后训练阶段再完成机器人本体对齐和自然语言指令对齐。([robotics.xiaomi.com](https://robotics.xiaomi.com/xiaomi-robotics-1.html))",
+        "预训练数据超过 10 万小时，覆盖家庭、商业场所、工业现场和户外空间等 1,700 多种场景；这些轨迹不绑定特定机器人本体，用于扩大操作数据的环境与任务覆盖面。([robotics.xiaomi.com](https://robotics.xiaomi.com/xiaomi-robotics-1.html))",
+        "项目构建了由视觉语言模型驱动的自动标注流水线：将长轨迹切分为固定长度片段，再为夹爪及交互物体的状态变化生成自然语言描述，使大规模操作视频能够作为语言条件动作学习数据。([robotics.xiaomi.com](https://robotics.xiaomi.com/xiaomi-robotics-1.html))",
+        "后训练混合使用小米内部真实机器人数据、筛选后的开源机器人数据以及人工进行时间分段和指令标注的高质量 UMI 数据；其中内部数据包含在真实家庭采集的 7,200 多小时轨迹。([robotics.xiaomi.com](https://robotics.xiaomi.com/xiaomi-robotics-1.html))",
+        "模型结构将预训练视觉语言模型 Qwen3-VL 与 Diffusion Transformer 动作模块通过 Mixture-of-Transformers 结合；DiT 与 VLM 具有相同层数但采用更小的隐藏维度，并通过异步执行降低推理延迟。([github.com](https://github.com/XiaomiRobotics/Xiaomi-Robotics-1))",
+        "官方实验称，增加预训练数据量或模型规模都会持续降低验证动作误差，并使后训练后的真实机器人成功率稳定提升，测试范围包括未见环境与未见物体实例。([robotics.xiaomi.com](https://robotics.xiaomi.com/xiaomi-robotics-1.html))",
+        "代码仓库于 2026 年 8 月 3 日发布后训练、推理和基准评测代码及检查点，提供数据格式、训练、部署和多项基准评测指南，并采用 Apache-2.0 许可证。([github.com](https://github.com/XiaomiRobotics/Xiaomi-Robotics-1))"
+      ],
+      "capabilities": [
+        "依据自然语言指令在真实环境中执行移动操作任务",
+        "在未见环境和未见物体实例上进行开箱即用的机器人操作",
+        "使用少量真实机器人示范数据适配手机装箱、打印机补充耗材、洗衣装载和纸箱装箱等新任务",
+        "通过跨本体数据将通用动作生成能力对齐到实际机器人",
+        "在 RoboCasa、RoboCasa365、VLABench 和 RoboDojo 仿真基准上训练、部署并评估策略"
+      ],
+      "metrics": [
+        {
+          "label": "预训练数据规模",
+          "note": "与特定机器人本体无关的真实世界 UMI 操作轨迹，覆盖 1,700 多种场景。",
+          "value": "超过 100,000 小时"
+        },
+        {
+          "label": "内部真实机器人数据",
+          "note": "在真实家庭中采集，任务包括整理沙发、整理鞋柜和收纳厨具。",
+          "value": "超过 7,200 小时"
+        },
+        {
+          "label": "少样本新任务适配",
+          "note": "平均每项任务使用不足 10 小时示范时，XR-1 总成功率为 75%，π0.5 基线为 40%；不足 40 小时时分别为 85% 和 53%。",
+          "value": "75%（<10 小时/任务）；85%（<40 小时/任务）"
+        },
+        {
+          "label": "RoboCasa365",
+          "note": "官方项目页报告的平均成功率；第二名为 46.6%，相对提升 23.2%。",
+          "value": "57.4%"
+        },
+        {
+          "label": "四项仿真基准结果",
+          "note": "官方项目页报告的平均成功率依次为 RoboCasa、RoboCasa365、VLABench 和 RoboDojo。",
+          "value": "74.5%、57.4%、59.1%、13.93%"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://robotics.xiaomi.com/xiaomi-robotics-1.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://robotics.xiaomi.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://robotics.xiaomi.com/xiaomi-robotics-1.html"
+      }
+    ]
+  },
+  {
     "id": "dmuon-d95d446",
     "title": "DMuon",
     "organization": "自变量机器人 / X² Robotics",
@@ -1424,6 +1507,89 @@
     ]
   },
   {
+    "id": "xiaomi-robotics-0-post-training-code-e36847f",
+    "title": "Xiaomi-Robotics-0 Post-Training Code",
+    "organization": "小米机器人 / Xiaomi Robotics",
+    "organizationKind": "Company",
+    "date": "2026-04-27",
+    "year": 2026,
+    "summary": "Xiaomi-Robotics-0 Post-Training Code 是小米机器人于2026年4月27日补充开源的真机 VLA 适配管线，用于把47亿参数的 Xiaomi-Robotics-0 基础模型迁移到具体机器人实体和精细操作任务。其核心工程问题是动作块推理延迟：系统并行执行当前动作块与推理下一动作块，并通过动作前缀对齐相邻预测。为防止模型利用连续动作的时间相关性而忽略视觉反馈，训练实现 L1 误差驱动的损失重加权、Λ形注意力掩码和随机前缀遮蔽。官方以耳机精准入盒验证该流程，使用20小时数据后连续完成三套耳机入盒而未失败。仓库同时包含模型推理、数据处理、部署及三套仿真基准评测代码，因而属于可直接用于实体机器人训练和执行的软件项目。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "2026年4月27日发布的增量工件不是硬件产品，而是 Xiaomi-Robotics-0 的完整真机后训练软件管线及样例数据；代码位于官方 GitHub 仓库的 `xr0/` 目录，覆盖安装、数据准备、训练和部署。",
+        "基础模型采用 Qwen3-VL-4B-Instruct 与 Diffusion Transformer 组合：VLM编码多视角观测和语言指令并产生 KV cache，DiT结合该缓存及机器人本体状态，通过流匹配生成连续动作块，总参数量为47亿。",
+        "预训练分为两个阶段：先使用 Choice Policies 为 VLM 注入多模态动作轨迹建模能力，并按1:6混合视觉语言数据与机器人轨迹；随后冻结 VLM，从头训练以其多模态特征为条件的 DiT。",
+        "后训练采用动作前缀，使相邻推理产生的动作块在时间上衔接；部署时机器人执行当前动作块剩余部分的同时推理下一动作块，并要求已提交动作前缀覆盖推理延迟。",
+        "为避免策略仅复制相邻动作，管线实现三项机制：按在线预测动作与真值动作的 L1 误差自适应重加权流匹配损失、使用 Λ 形注意力掩码限制后段动作访问前缀，以及随机遮蔽前缀动作但保留末端若干动作。",
+        "官方耳机入盒案例使用20小时任务数据完成后训练，要求识别左右耳机与对应槽位，并执行高精度抓取和对准；演示中机器人连续完成三套耳机入盒且未失败。",
+        "官方仓库采用 Apache License 2.0，除后训练代码外还公开基础及基准微调权重、推理代码和 LIBERO、CALVIN、SimplerEnv 评测脚本，并兼容 Hugging Face Transformers 部署。"
+      ],
+      "capabilities": [
+        "可利用真实机器人示范数据，将预训练 VLA 后训练为面向特定实体机器人和操作任务的策略。",
+        "根据多视角图像、自然语言指令和机器人本体状态生成连续动作块。",
+        "通过异步推理与动作执行并行化，在推理下一动作块时继续执行当前动作块，实现连续真机控制。",
+        "支持耳机入盒、乐高拆解和毛巾折叠等高精度双臂操作，并能对抓取失败、遮挡及多取物体作出反应。",
+        "提供模型推理、真机后训练、数据准备、部署以及 LIBERO、CALVIN、SimplerEnv 评测代码。"
+      ],
+      "metrics": [
+        {
+          "label": "耳机入盒后训练",
+          "note": "官方项目页报告，使用20小时任务数据后，机器人连续插入三套耳机且未失败。",
+          "value": "20小时数据；连续3套无失败"
+        },
+        {
+          "label": "LIBERO",
+          "note": "四个 LIBERO 套件的平均成功率。",
+          "value": "98.7%"
+        },
+        {
+          "label": "SimplerEnv",
+          "note": "官方报告的 Visual Matching、Visual Aggregation 和 WidowX 结果。",
+          "value": "VM 85.5%；VA 74.7%；WidowX 79.2%"
+        },
+        {
+          "label": "CALVIN",
+          "note": "分别对应 ABC→D 与 ABCD→D 划分的平均完成序列长度。",
+          "value": "4.75；4.80"
+        },
+        {
+          "label": "预训练数据规模",
+          "note": "包括跨实体机器人轨迹和通用视觉语言样本；另报告乐高拆解338小时、毛巾折叠400小时的内部遥操作数据。",
+          "value": "约2亿机器人轨迹时间步；超过8000万视觉语言样本"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://robotics.xiaomi.com/xiaomi-robotics-0.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://robotics.xiaomi.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0"
+      }
+    ]
+  },
+  {
     "id": "cortex-2-0-00c4a80",
     "title": "Cortex 2.0",
     "organization": "Sereact",
@@ -1812,6 +1978,93 @@
     ]
   },
   {
+    "id": "vla-foundry-1-0-0-c3f575e",
+    "title": "VLA Foundry 1.0.0",
+    "organization": "Toyota Research Institute",
+    "organizationKind": "Company",
+    "date": "2026-04-20",
+    "year": 2026,
+    "summary": "VLA Foundry 1.0.0 是 Toyota Research Institute 发布的开源、模块化 PyTorch 机器人基础模型训练框架。它以共享的数据加载、配置和训练基础设施贯通 LLM、VLM 与 VLA 三个阶段，既能从零构建语言、视觉语言和动作模型，也能接入 Hugging Face 预训练骨干。框架包含机器人轨迹预处理、概率式数据混合、FSDP2 多节点训练、检查点管理、推理部署和 LBM Eval 闭环评估工具，并随项目发布从零训练及 Qwen3-VL 路线的多阶段模型检查点。",
+    "tags": [
+      "Vision-language-action",
+      "LLM",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "LLM",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "VLA Foundry 将语言预训练、视觉语言预训练和机器人动作学习统一到同一代码库、训练循环与配置接口中，允许研究者控制从骨干模型预训练到 action-expert 微调的完整流程。",
+        "数据层以 WebDataset 分片和 manifest 为基础，为文本、图像-描述、交错数据以及图像-动作等模态提供独立处理管线；机器人数据另有归一化、动作表示、时间窗口采样和本体感觉处理工具。",
+        "框架允许在加载阶段指定多个数据源及其概率权重，实现跨数据集、跨模态混合和批次平衡；训练预算按样本数而不是训练步数表达，以提高不同批量大小和 GPU 数量实验之间的可比性。",
+        "训练基础设施采用 FSDP2，支持本地 torchrun 多 GPU 训练以及 AWS SageMaker 多节点任务；梯度累积量根据每 GPU 批量和全局批量自动计算。",
+        "模型、数据处理器和批处理逻辑使用注册机制及嵌套配置组织；核心模块主要采用纯 PyTorch 实现，同时可以直接初始化 Hugging Face 上的 LLM、VLM、CLIP 等预训练权重。",
+        "项目同时发布从零完成 LLM→VLM→VLA 流程的 Foundry-VLA-1.7B，以及基于 Qwen3-VL 骨干的 Foundry-Qwen3VLA-2.1B-MT，并公开中间 LLM、VLM 检查点和多任务策略权重。",
+        "配套部署模块包含推理工具和 gRPC 策略服务器模板；技术报告使用开放的 LBM Eval 仿真器进行闭环桌面操作评估，并报告 Qwen3-VL 版本在总体任务成功表现上大幅超过多任务 LBM 基线。"
+      ],
+      "capabilities": [
+        "在同一套配置驱动的训练栈中依次完成 LLM 预训练、VLM 视觉语言训练与 VLA 动作策略微调。",
+        "处理文本、图像-描述和机器人轨迹等多模态数据，并按指定概率混合数据集、平衡批次。",
+        "通过 FSDP2、WebDataset、torchrun 和 AWS SageMaker 执行单机多卡及多节点分布式训练。",
+        "加载 Hugging Face 预训练骨干，或使用原生 PyTorch 模块从零训练模型，并提供检查点保存、恢复和权重迁移能力。",
+        "通过轻量评估工具和 gRPC 策略服务器模板部署机器人策略，并在 LBM Eval 中执行闭环操控评估。"
+      ],
+      "metrics": [
+        {
+          "label": "软件版本",
+          "note": "官方项目页和代码仓库引用信息标注的发布版本。",
+          "value": "1.0.0"
+        },
+        {
+          "label": "Foundry-VLA-1.7B 参数规模",
+          "note": "技术报告表 3：总参数量 1.85B；扣除嵌入相关参数后的规模为 1.65B。",
+          "value": "1.85B total / 1.65B non-embedding"
+        },
+        {
+          "label": "Foundry-Qwen3VLA-2.1B-MT 参数规模",
+          "note": "技术报告表 3：总参数量 2.75B；扣除嵌入相关参数后的规模为 2.13B。",
+          "value": "2.75B total / 2.13B non-embedding"
+        },
+        {
+          "label": "从零训练模型的模块规模",
+          "note": "技术报告所述完整流水线由 1.2B 语言模型、86M 视觉编码器和 325M Transformer 动作头组成。",
+          "value": "1.2B LLM + 86M ViT + 325M action head"
+        },
+        {
+          "label": "闭环操控结果",
+          "note": "技术报告未在可访问正文中给出可靠的单一汇总百分比；其明确结论是 Foundry-Qwen3VLA-2.1B-MT 在 LBM Eval 总体任务成功表现上大幅超过多任务 LBM，而 Foundry-VLA-1.7B-MT-sim 与 LBM 在统计上相当。",
+          "value": "Qwen3-VL 多任务策略显著优于 LBM 基线；从零训练多任务策略与 LBM 统计相当"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://tri-ml.github.io/vla_foundry/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://toyotaresearchinstitute.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/TRI-ML/vla_foundry"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/toyota-research-institute_we-are-excited-to-share-vla-foundry-our-activity-7452121138555469824-qSHG"
+      }
+    ]
+  },
+  {
     "id": "agibot-2026-embodied-ai-robots-and-foundation-mo-fe76dfc",
     "title": "AGIBOT 2026 Embodied AI Robots and Foundation Models",
     "organization": "智元创新（上海）科技股份有限公司 / AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
@@ -2060,6 +2313,88 @@
     ]
   },
   {
+    "id": "precise-manipulation-with-efficient-online-rl-877fa7b",
+    "title": "Precise Manipulation with Efficient Online RL",
+    "organization": "Physical Intelligence",
+    "organizationKind": "Company",
+    "date": "2026-03-19",
+    "year": 2026,
+    "summary": "RL Tokens（RLT）是 Physical Intelligence 面向精密机器人操作提出的在线强化学习方法。它从预训练视觉—语言—动作模型的内部嵌入中学习一个紧凑 RL Token，在部署适配阶段冻结完整 VLA，仅训练小型 actor 与 critic，使机器人能够使用数分钟至数小时的真实交互数据快速改进任务中最困难的接触与对准阶段。策略以 VLA 给出的动作块为基础进行编辑，并通过参考动作正则化、参考动作 dropout 及可选人工干预提高有限数据条件下的学习效率。官方在四项真实操作任务上报告了最高 3 倍的关键阶段加速；以太网线插入实验中，RLT 的回合长度中位数为 66 个时间步，低于人工遥操作的 146 和基础模型的 228 个时间步。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "RLT 在 VLA 中加入编码器—解码器 Transformer，通过重建模型内部嵌入的训练目标形成信息瓶颈；编码器最终输出即为紧凑的 RL Token。",
+        "RL Token 训练完成后，底层 VLA 被冻结，仅将该表征传给较小的 actor 和 critic，因此不需要用在线数据微调整个基础模型。",
+        "actor 与 critic 使用样本高效的离策略强化学习算法，可直接在机器人上每秒执行数百次参数更新，并在每次尝试后及时改善行为。",
+        "强化学习策略预测与 VLA 一致的动作块，而非逐个低层控制步骤；actor 接收 VLA 预测动作并学习对其进行修正，而不是从头生成全部动作。",
+        "训练通过参考动作正则化使探索保持在 VLA 已有行为附近，同时使用参考动作 dropout 防止 actor 在早期简单复制 VLA；机器人卡住或出错时还可选择将人工干预纳入更新。",
+        "该方法只适配长任务中最需要精度的关键阶段，并在螺丝刀安装 M3 螺钉、扎带紧固、以太网线插入和电源线插入四项真实机器人任务上进行了评估。"
+      ],
+      "capabilities": [
+        "基于预训练 VLA 的紧凑状态表征，把模型内部视觉与动作信息压缩为可供在线强化学习使用的 RL Token。",
+        "在冻结完整 VLA 的情况下，通过轻量级 actor 与 critic 网络直接在机器人端进行快速策略适配。",
+        "针对螺丝刀对准、扎带紧固、以太网线插入和电源线插入等接触丰富的精密操作阶段进行强化学习。",
+        "以 VLA 原始动作作为参考来编辑动作块，并支持通过正则约束、参考动作 dropout 和可选的人类干预控制探索过程。",
+        "利用少量真实机器人交互数据提升任务关键阶段的成功率、执行速度和单位时间吞吐量。"
+      ],
+      "metrics": [
+        {
+          "label": "关键阶段加速",
+          "note": "官方项目页报告，在四项精密操作任务中，RLT 对最精确阶段的执行速度最高提升至基础策略的 3 倍。",
+          "value": "最高 3×"
+        },
+        {
+          "label": "评估任务数",
+          "note": "任务包括使用电动螺丝刀安装 M3 螺钉、扎带紧固、以太网线插入和电源线插入。",
+          "value": "4 项真实机器人操作任务"
+        },
+        {
+          "label": "最少真实数据量",
+          "note": "官方报告称，部分任务最困难阶段使用最少 15 分钟真实机器人数据即可得到改善。",
+          "value": "15 分钟"
+        },
+        {
+          "label": "以太网插入训练成本",
+          "note": "以太网线插入实验总训练时间为 2 小时，其中真实机器人数据共 15 分钟，其余时间用于重置和其他开销。",
+          "value": "2 小时总训练时间；15 分钟机器人数据"
+        },
+        {
+          "label": "以太网插入回合长度中位数",
+          "note": "官方直方图报告 RLT、人工遥操作和基础模型的回合长度中位数分别为 66、146 和 228 个时间步；最终 RLT 策略有一半试验快于数据集中所有遥操作示范。",
+          "value": "RLT 66；遥操作 146；基础模型 228 timesteps"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pi.website/research/rlt"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pi.website/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.pi.website/research/rlt"
+      }
+    ]
+  },
+  {
     "id": "teleoperation-client-99acd5a",
     "title": "Teleoperation Client",
     "organization": "北京星动纪元科技有限公司 / RobotEra TECHNOLOGY CO., LTD.",
@@ -2222,6 +2557,171 @@
       {
         "label": "Report",
         "url": "https://huggingface.co/blog/lerobot-release-v050"
+      }
+    ]
+  },
+  {
+    "id": "vlas-with-long-and-short-term-memory-92511c3",
+    "title": "VLAs with Long and Short-Term Memory",
+    "organization": "Physical Intelligence",
+    "organizationKind": "Company",
+    "date": "2026-03-03",
+    "year": 2026,
+    "summary": "Multi-Scale Embodied Memory（MEM）是Physical Intelligence为视觉-语言-动作模型开发的多尺度机器人记忆架构，并在π0.6-MEM中完成验证。其核心是把近期、细粒度的视觉历史与长期、语义化的文本记忆分开表示：前者通过高效视频编码器支持遮挡恢复、动作计时和失败后的即时调整，后者通过低频高层推理持续概括任务进度、物体位置和已完成事件。该系统面向真实机器人长时程操作，可执行最长约15分钟的厨房整理、食谱准备和烹饪任务，并展示了基于自身失败历史改变抓取或开门策略的上下文内适应能力。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Multi-Scale Embodied Memory（MEM）为VLA配置两种时间尺度和表示形式不同的记忆：近期经历以视频形式保留，较久远的任务进度则压缩为自然语言描述。",
+        "短期记忆编码器将标准视觉Transformer扩展为交错的空间注意力与因果时间注意力；时间注意力周期性连接不同时间点的相同空间位置，以追踪运动和环境变化。",
+        "视频编码器会在视觉网络的较高层丢弃历史token，从而压缩过去观测，减少传给VLA主干的token数量并满足实时控制延迟要求。",
+        "长期记忆建立在π0.5式分层推理设计之上：低频高层过程选择语义子任务并更新文本记忆，高频动作过程依据当前子任务、观测和记忆产生机器人动作。",
+        "文本记忆不是简单累积全部历史指令；模型可概括多个相关事件、选择需要保留的语义信息并丢弃无关细节，以控制长期上下文规模并减少训练与推理之间的分布偏移。",
+        "实验系统π0.6-MEM由预训练Gemma 3 4B视觉语言模型初始化，结合离散FAST动作token预测和具有8.6亿参数的流匹配动作专家；训练数据混合机器人与非机器人数据、单帧与视频数据，使记忆能力在预训练阶段形成。"
+      ],
+      "capabilities": [
+        "执行需要最长约15分钟记忆的多阶段真实机器人任务，包括整理厨房、准备食谱材料和制作烤奶酪三明治。",
+        "利用近期视频历史处理机械臂自遮挡、物体暂时离开视野和动作持续时间判断。",
+        "以自然语言维护长期任务记忆，跟踪已完成步骤、物体位置以及仍需关闭的柜门或抽屉。",
+        "根据短期记忆中的失败尝试进行上下文内策略调整，例如改变筷子抓取方式或尝试冰箱门的另一开启方向。",
+        "在整理杂货、清洁窗户、舀取咖啡及交换杯子等操作任务中统一处理计数、部分可观测性和视觉记忆。"
+      ],
+      "metrics": [
+        {
+          "label": "最长记忆任务跨度",
+          "note": "官方项目页和技术报告称，MEM可在整理厨房、准备食谱和制作烤奶酪三明治等任务中维持短期与长期上下文。",
+          "value": "最长15分钟"
+        },
+        {
+          "label": "实时推理门槛",
+          "note": "技术报告的延迟实验以该阈值作为实时控制界限，并报告MEM视频编码器在增加历史帧时仍可保持在此界限内。",
+          "value": "300毫秒"
+        },
+        {
+          "label": "评估重复次数",
+          "note": "技术报告说明，每个策略在每项任务或每份食谱上均执行该数量的rollout，图中报告均值与标准误。",
+          "value": "10次rollout"
+        },
+        {
+          "label": "动作专家规模",
+          "note": "π0.6-MEM使用流匹配动作专家，并同时训练离散FAST动作token预测。",
+          "value": "8.6亿参数"
+        },
+        {
+          "label": "视觉输入配置",
+          "note": "技术报告中的π0.6-MEM以每路该分辨率训练，并可根据机器人形态接收最多四路摄像头。",
+          "value": "每路448×448像素，最多4路摄像头"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pi.website/research/memory"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pi.website/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.pi.website/research/memory"
+      }
+    ]
+  },
+  {
+    "id": "foresight-b307e9b",
+    "title": "Foresight",
+    "organization": "Dexterity",
+    "organizationKind": "Company",
+    "date": "2026-03-03",
+    "year": 2026,
+    "summary": "Foresight 是 Dexterity 为物流操作机器人构建的生产级物理世界模型。它在每个时间步融合视觉、深度、机器人本体状态、力反馈及动作结果，形成带有显式不确定性、物理约束和回滚能力的统一世界状态。该状态不仅用于描述现场，还可在动作执行前推演候选未来，支持放置优化、抓取与路径可行性判断、双臂协调以及预测流水线。官方称其经验来自超过 1 亿次真实生产自主动作；生产审计显示，65.5% 的放置决策能够针对预测中的未来状态提前规划，双臂并行仿真测试带来 33% 的吞吐提升，而预测失配后的净有效失败率为 0.18%。后续工程披露还表明，其视觉感知、几何重建和物理一致性管线经过 GPU 优化，可在复杂、包含百余对象的生产场景中实时运行。",
+    "tags": [
+      "World models",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "World models",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Foresight 是 Dexterity 面向实体机器人操作的生产级世界模型，而非机器人硬件产品；其专门官方页面于 2026 年 3 月 3 日发布。",
+        "系统将多相机图像、深度数据、机器人本体状态、力反馈和物理交互结果融合为统一世界状态，并在每次更新中保留显式不确定性边界、物理约束和回滚能力。",
+        "Foresight 被设计为可更新世界状态的算子，而非仅存储观测的数据库；机器人动作完成后，系统会用新传感数据校正此前预测并更新状态。",
+        "预测分支机制可在机器人实际移动前推演候选动作的后果，评估密度、稳定性、可达性和双臂并行性，并排除不可恢复或不满足物理约束的方案。",
+        "能力感知编排将世界模型提供的动作可行性用于协调感知、运动规划、抓取选择和力控制等专用代理，包括判断抓取是否可靠、路径是否畅通以及放置后是否稳定。",
+        "预测流水线允许一只机械臂尚在执行时，另一只机械臂根据预测的未来世界状态规划下一动作；执行前还会依据当前世界状态验证轨迹并在不匹配时重规划。",
+        "后续官方工程材料披露其视觉管线包含对象级场景分解、基于完整点云的几何重建和全场景物理一致性处理，并使用 TensorRT、GPU 并行计算及专用 CUDA 物理内核实现生产级实时运行。"
+      ],
+      "capabilities": [
+        "基于多模态传感器、机器人本体状态和物理交互结果，持续构建并更新统一的物理世界状态",
+        "在执行前对候选放置动作进行预测分支，模拟多种未来结果并按物理约束筛选方案",
+        "为抓取、路径、放置稳定性等动作提供可行性判断，并协调感知、运动规划、抓取选择和力控制等技能代理",
+        "通过预测流水线让双机械臂针对预计的未来状态并行规划和执行",
+        "在执行前重新验证轨迹；发现预测状态与现实不一致时自动重规划并恢复"
+      ],
+      "metrics": [
+        {
+          "label": "生产训练经验",
+          "note": "官方称训练经验来自真实企业物流生产环境，而非仅仿真或实验室数据。",
+          "value": "超过 1 亿次自主生产动作"
+        },
+        {
+          "label": "单次放置决策时间",
+          "note": "同时优化装载密度、物理稳定性、机器人可达性和双臂并行性。",
+          "value": "平均低于 400 ms"
+        },
+        {
+          "label": "预测流水线使用率",
+          "note": "来自最近 5,000 个生产箱件的执行审计日志；3,273 次决策依据预测中的未来状态进行规划。",
+          "value": "65.5%（3,273/5,000）"
+        },
+        {
+          "label": "双臂并行吞吐提升",
+          "note": "在相同约 1,500 箱仿真负载下比较启用与禁用并行机械臂运动，单箱周期时间差为 0%。",
+          "value": "+33% boxes/hour"
+        },
+        {
+          "label": "预测失配后的净有效失败率",
+          "note": "最近 5,000 次放置中有 45 次状态失配，其中 36 次自动恢复，最终 9 次需要重试。",
+          "value": "0.18%（9/5,000）"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://dexterity.ai/blog/foresight"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://dexterity.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://dexterity.ai/blog/foresight"
       }
     ]
   },
@@ -2939,6 +3439,172 @@
     ]
   },
   {
+    "id": "sima-2-d5416a6",
+    "title": "SIMA 2",
+    "organization": "Google DeepMind",
+    "organizationKind": "Research Lab",
+    "date": "2025-11-13",
+    "year": 2025,
+    "summary": "SIMA 2是Google DeepMind于2025年11月13日公布的Gemini驱动通用具身智能体，面向商业游戏、研究环境以及生成式三维世界。它以屏幕图像和用户提示为输入，通过虚拟键盘、鼠标动作直接与环境交互，不依赖游戏内部状态或专用API。相比以短语言指令执行为主的第一代系统，SIMA 2加入高层目标推理、自然语言对话、视觉提示理解、行为解释、跨环境技能迁移和基于自生成经验的迭代学习。技术报告在训练环境的人工评测中给出65%的平均成功率，高于SIMA 1的33%，接近限时人类的66%；自动评测中达到76%，而SIMA 1和限时人类分别为30%和78%。它还在未参与训练的ASKA、MineDojo、The Gunk及Genie 3生成世界中展示了零样本或低先验泛化。该项目对机器人研究的价值主要在于探索通用视觉—语言—动作智能体、持续学习和跨环境行为迁移，但官方明确将实体世界应用定位为未来方向，当前系统仍是虚拟环境研究预览。",
+    "tags": [
+      "Vision-language-action",
+      "LLM",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "LLM",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "SIMA 2是Google DeepMind面向交互式三维虚拟世界开发的通用具身智能体，而非机器人硬件或消费产品；其软件通过观察屏幕并输出虚拟键盘、鼠标动作来感知和作用于环境。",
+        "系统以Gemini模型为推理核心，将视觉场景、用户指令和动作控制结合起来，使智能体从第一代的短指令执行扩展到高层目标推理、复杂任务规划、对话和行为解释。",
+        "训练数据混合了带语言标签的人类演示视频与Gemini生成的标签；智能体可以描述计划、报告观察结果，并解释为完成目标而采取的步骤。",
+        "评测覆盖多个商业游戏和研究环境，任务涉及导航、环境交互、物体管理、资源收集、工具使用、建造、战斗及菜单操作；训练环境中的人工评测由每次试验5名独立评审者判断任务是否成功。",
+        "系统在完全留出的ASKA和MineDojo环境中测试跨环境泛化，并在The Gunk及由Genie 3实时生成的世界中进行定性测试；官方材料报告其能够在未见环境中定位、理解指令并采取与目标相关的动作。",
+        "自我改进流程由Gemini提出任务并估计行为奖励，将智能体生成的经验加入训练数据，再训练后续代际；官方演示称该流程可改善此前失败的任务，而无需新增人类游戏数据或反馈。",
+        "项目仍属于有限研究预览，仅向少量学术研究者和游戏开发者提供早期访问；官方同时指出其在超长时程任务、有限上下文记忆、精细低层控制和复杂场景视觉理解方面仍有明显限制。"
+      ],
+      "capabilities": [
+        "通过屏幕视觉输入理解复杂三维场景，并使用虚拟键盘和鼠标执行目标导向动作",
+        "理解自然语言、图像草图、多语言文本和表情符号形式的多模态指令",
+        "围绕高层目标进行推理、任务分解，并向用户说明当前观察、意图和执行步骤",
+        "将在一个环境中学到的导航、采集、工具使用、菜单操作和交互概念迁移到未参与训练的新环境",
+        "利用Gemini生成任务、估计奖励并积累自生成经验，在没有新增人类演示数据的情况下迭代改进策略"
+      ],
+      "metrics": [
+        {
+          "label": "训练环境人工评测平均成功率",
+          "note": "技术报告Figure 6；同一评测下SIMA 1为33%，限时人类为66%，不限时人类为86%。",
+          "value": "SIMA 2：65%"
+        },
+        {
+          "label": "训练环境自动评测平均成功率",
+          "note": "技术报告Figure 6；同一评测下SIMA 1为30%，限时人类为78%，不限时人类为86%。",
+          "value": "SIMA 2：76%"
+        },
+        {
+          "label": "未见环境的人类基线",
+          "note": "无相关游戏经验的参与者首次尝试；用于说明留出任务本身的难度，不应视为严格的人机等价比较。",
+          "value": "MineDojo约19%（16项任务）；ASKA约32%（25项任务）"
+        },
+        {
+          "label": "MineDojo程序化评测规模",
+          "note": "任务来自Combat、Harvest和Tech Tree类别，每项任务使用15个随机种子。",
+          "value": "50项任务 × 15个随机种子"
+        },
+        {
+          "label": "训练环境人工评分设置",
+          "note": "技术报告按环境报告任务成功率时，每次试验由独立人工评审者判断。",
+          "value": "每次试验5名独立评审者"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://deepmind.google/"
+      },
+      {
+        "label": "Report",
+        "url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/"
+      }
+    ]
+  },
+  {
+    "id": "lbm-eval-1-1-0-632b92a",
+    "title": "LBM Eval 1.1.0",
+    "organization": "Toyota Research Institute",
+    "organizationKind": "Company",
+    "date": "2025-11-06",
+    "year": 2025,
+    "summary": "LBM Eval 1.1.0 是 Toyota Research Institute 面向实体机器人操作策略开发的开源仿真基准发行版。它以 Drake 为仿真基础，提供 49 项操作任务、标准化的随机初始条件 rollout、并行评测、增量 JSON 结果记录以及基于 gRPC 的外部策略接入机制。该版本由四个 Python wheel 组成，并附带各技能的遥操作仿真训练数据。需要注意的是，1.1.0 对应 2025 年秋季快照，并非 TRI 论文数值所使用的 2025 年春季代码，因此官方不承诺直接复现论文结果。",
+    "tags": [
+      "Data & benchmarks",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Data & benchmarks",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "LBM Eval 是丰田研究院发布的机器人策略仿真评测软件，专门用于衡量 Large Behavior Model 策略在 49 项机器人操作任务上的表现，并建立在 Drake 工具箱之上。",
+        "1.1.0 是 2025 年秋季代码快照；官方明确说明，它比论文实验使用的 2025 年春季版本更新，因此不保证复现论文中的数值结果。",
+        "发行版拆分为 robot_gym、lbm_eval、lbm_eval_models 和 lbm_eval_scenarios 四个可安装 Python wheel，分别承载机器人接口、评测程序、模型资源和任务场景。",
+        "评测采用策略服务器与仿真执行器分离的结构：策略通过 gRPC 端点接收观测并返回动作，evaluate 程序负责运行任务、随机化初始条件和保存结果。",
+        "外部策略可通过实现 robot_gym.policy.Policy 接口接入；核心 reset 方法用于清除跨回合状态，step 方法负责根据观测执行策略推理并产生动作。",
+        "系统支持为每项技能配置 rollout 数量和并行进程数，结果会增量写入带时间戳的 JSON 文件；即使评测被中断，已完成的部分结果仍会保留。",
+        "项目还提供每种技能对应的遥操作仿真训练数据，每项技能包含数百条 episode 日志，可用于训练待评测策略。"
+      ],
+      "capabilities": [
+        "在 Drake 物理仿真环境中评测 Large Behavior Model 等机器人策略",
+        "覆盖双臂机器人操作任务，并通过随机化初始条件执行多次闭环 rollout",
+        "通过 gRPC 将策略推理服务与基准执行程序解耦，可接入用户自有策略",
+        "输出持续更新的 JSON 汇总结果以及每次 rollout 的详细记录",
+        "提供与各评测技能对应的遥操作仿真训练数据"
+      ],
+      "metrics": [
+        {
+          "label": "基准任务数",
+          "note": "官方仓库所述的机器人操作仿真任务总数。",
+          "value": "49 项"
+        },
+        {
+          "label": "发行版软件包",
+          "note": "运行 evaluate 需要安装 robot_gym、lbm_eval、lbm_eval_models 和 lbm_eval_scenarios。",
+          "value": "4 个 Python wheel"
+        },
+        {
+          "label": "建议评测次数",
+          "note": "官方为获得较好统计质量而建议的每项技能 rollout 数量。",
+          "value": "每项技能 200 次或更多"
+        },
+        {
+          "label": "自有策略适配规模",
+          "note": "官方估计，将策略推理代码适配到 robot_gym.policy.Policy 所需的包装程序规模。",
+          "value": "约 200 行 Python"
+        },
+        {
+          "label": "配套训练数据",
+          "note": "官方报告每种技能均提供遥操作仿真 episode 日志，但未给出统一精确总量。",
+          "value": "每项技能数百条 episode"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/ToyotaResearchInstitute/lbm_eval/releases/tag/1.1.0"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.tri.global/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/ToyotaResearchInstitute/lbm_eval/releases/tag/1.1.0"
+      }
+    ]
+  },
+  {
     "id": "xpeng-vlt-large-model-94cea0a",
     "title": "XPENG VLT Large Model",
     "organization": "小鹏汽车 / XPENG",
@@ -3438,6 +4104,89 @@
     ]
   },
   {
+    "id": "the-case-for-an-omni-bodied-robot-brain-2cf0385",
+    "title": "The case for an omni-bodied robot brain",
+    "organization": "Skild AI",
+    "organizationKind": "Company",
+    "date": "2025-09-24",
+    "year": 2025,
+    "summary": "Skild AI的omni-bodied robot brain是一种跨机器人形态训练的通用控制模型。其核心方法是在仿真中让同一个模型控制100,000种不同身体，使模型无法依赖某个固定平台的专用步态，而需要从交互历史中推断当前身体结构和动力学。官方在完全排除于训练集之外的机器人上展示了零样本控制，并测试了截短肢体、锁死关节、轮子卡死、额外负载和加装高跷等分布外变化。模型能够在数秒内调整关节摆幅、重心、步态和落足策略，也能把此前失败轨迹作为上下文，在后续试次中改善行为。该发布提供了具体的软件模型、训练设定和适应性实验，属于具备独立官方项目页面的具身智能控制项目。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Skild AI在仿真中构建了包含100,000种机器人身体的训练环境，以同一个控制模型覆盖大规模形态差异，迫使模型学习可跨身体迁移的控制策略，而不是记忆单一机器人的专用步态。",
+        "官方展示中的测试机器人均被排除在训练数据之外；所有演示使用同一个模型，并且没有针对具体机器人或故障场景进行微调，重点验证未见形态上的零样本控制与在线适应。",
+        "模型可把先前试次的轨迹作为上下文提示：在直立四足机器人实验中，模型最初错误地采用类似小型人形机器人的控制方式并跌倒，随后利用失败经历调整行为，在第三次试验中成功稳定身体。",
+        "面对小腿被缩短至大腿位置的极端形态变化，模型会先原地挣扎，随后发现需要增大大腿关节摆幅；官方还以仅为单一机器人训练的专用控制器作为定性对照，后者在该场景中翻倒。",
+        "当膝关节被软件锁定、四足机器人实际变为三足机器人时，模型会把重心后移并重新分配支撑；在带轮四足平台的一条或两条腿被锁定时，也会调整步态以保持平衡和移动能力。",
+        "当轮子在无预警情况下卡死时，模型通过动作命令未产生预期位移这一反馈识别变化，从滚动切换为双足行走；轮子解锁后又恢复效率更高的滚动方式。",
+        "加装高跷使腿身比例和重心超出训练分布后，模型经历短暂的不稳定步态，继而调整步伐时序和落足位置，实现稳定向前行走。"
+      ],
+      "capabilities": [
+        "使用同一控制模型对训练集之外的机器人形态进行零样本控制，无需针对测试场景微调",
+        "根据近期交互轨迹进行上下文学习，并利用先前失败试次改进后续控制行为",
+        "在肢体缩短、关节锁死等未见过的形态或动力学变化发生后在线调整步态",
+        "在轮子突然卡死或恢复时识别执行效果变化，并在行走与滚动策略之间切换",
+        "适应增高腿部、额外负载及重心变化，调整步时、落足点和载荷分配"
+      ],
+      "metrics": [
+        {
+          "label": "仿真训练身体数量",
+          "note": "官方称在由不同机器人身体构成的仿真环境中训练同一个控制模型。",
+          "value": "100,000种机器人身体"
+        },
+        {
+          "label": "累计仿真训练时间",
+          "note": "官方以量级描述训练过程中经历的模拟时间。",
+          "value": "一千年模拟时间（a millennia of simulated time）"
+        },
+        {
+          "label": "截短肢体后的适应时间",
+          "note": "截短小腿、减少4个自由度并改变腿长后，模型发现新的大腿关节摆动策略所需时间。",
+          "value": "7–8秒"
+        },
+        {
+          "label": "膝关节锁死后的适应时间",
+          "note": "四足机器人变为三足支撑后，模型调整重心并恢复行走所需时间。",
+          "value": "2–3秒"
+        },
+        {
+          "label": "失败上下文实验结果",
+          "note": "直立四足机器人先因身体类型判断错误而跌倒，后续试次以前一次失败轨迹作为提示。",
+          "value": "第3次试验成功"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.skild.ai/blogs/omni-bodied"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.skild.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.skild.ai/blogs/omni-bodied"
+      }
+    ]
+  },
+  {
     "id": "go-1-embodied-foundation-model-7598ed3",
     "title": "GO-1 embodied foundation model",
     "organization": "智元创新（上海）科技股份有限公司 / AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
@@ -3587,6 +4336,87 @@
       {
         "label": "Report",
         "url": "https://github.com/GalaxyGeneralRobotics/OpenTrack"
+      }
+    ]
+  },
+  {
+    "id": "project-go-big-internet-scale-humanoid-pretraini-7d3b87a",
+    "title": "Project Go-Big: Internet-Scale Humanoid Pretraining and Direct Human-to-Robot Transfer",
+    "organization": "Figure",
+    "organizationKind": "Company",
+    "date": "2025-09-18",
+    "year": 2025,
+    "summary": "Project Go-Big 是 Figure 于 2025 年 9 月 18 日公布的人形机器人互联网规模预训练计划，核心对象是 Helix 视觉-语言-动作模型及其训练数据体系。项目利用真实家庭中的第一视角人类行为视频，尝试绕过成本较高的机器人逐次遥操作示范，并将人类导航策略直接迁移到人形机器人。Figure 报告的首个结果是：Helix 在仅使用人类视频、完全不使用机器人示范的条件下，可根据自然语言和视觉输入，在杂乱家庭空间中生成低层 SE(2) 速度指令并进行闭环导航。此次更新还将导航与原有的上半身灵巧操作能力统一到一个 Helix 网络中。项目的数据扩展依托 Brookfield 所覆盖的超过 10 万个住宅单元及大规模办公、物流空间，但官方尚未公开数据集、模型权重、成功率或标准化基准成绩。",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Project Go-Big 是 Figure 面向人形机器人预训练的数据工程，目标是收集大规模、多样化的真实世界人类目标导向行为视频，为 Helix 视觉-语言-动作模型提供预训练数据。",
+        "其数据采集采用人类第一视角视频，而不是要求人形机器人逐项执行示范；Figure 认为人类与人形机器人在视角和运动结构上的相似性可以支持跨具身迁移。",
+        "Figure 报告，Helix 仅使用被动采集的第一视角人类视频完成训练，即可把人类导航策略直接转换为机器人的低层 SE(2) 速度控制，没有使用机器人示范数据。",
+        "更新后的 Helix 接收图像与语言输入，并以闭环方式执行家庭环境导航，可响应“走到厨房桌旁”或“去给植物浇水”等对话式目标指令。",
+        "同一个 Helix 神经网络同时输出导航和高频灵巧操作指令，不需要为不同任务或不同数据来源维护彼此独立的专用系统。",
+        "该项目通过 Figure 与 Brookfield 的合作扩展真实环境数据覆盖；官方页面称采集已在 Brookfield 环境中启动，并计划继续扩大规模。"
+      ],
+      "capabilities": [
+        "基于自然语言指令在杂乱家庭环境中执行自主导航",
+        "从第一视角人类视频直接学习机器人的低层导航控制",
+        "以同一个 Helix 网络统一生成导航与高频灵巧操作指令",
+        "根据视觉像素输入进行闭环路径调整与目标到达"
+      ],
+      "metrics": [
+        {
+          "label": "人类视频占训练数据比例",
+          "note": "官方称该导航结果完全由第一视角人类视频训练获得。",
+          "value": "100%"
+        },
+        {
+          "label": "机器人示范数量",
+          "note": "直接人类视频到机器人导航迁移未使用机器人专用示范或训练数据。",
+          "value": "0"
+        },
+        {
+          "label": "住宅环境规模",
+          "note": "Brookfield 合作所覆盖的全球住宅单元数量。",
+          "value": "超过 100,000 个住宅单元"
+        },
+        {
+          "label": "商业办公空间覆盖",
+          "note": "官方列出的 Brookfield 商业办公空间规模。",
+          "value": "5 亿平方英尺"
+        },
+        {
+          "label": "物流空间覆盖",
+          "note": "官方列出的 Brookfield 物流空间规模。",
+          "value": "1.6 亿平方英尺"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.figure.ai/news/project-go-big"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.figure.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.figure.ai/news/project-go-big"
       }
     ]
   },
@@ -4527,6 +5357,85 @@
     ]
   },
   {
+    "id": "genie-3-9565aa9",
+    "title": "Genie 3",
+    "organization": "Google DeepMind",
+    "organizationKind": "Research Lab",
+    "date": "2025-08-05",
+    "year": 2025,
+    "summary": "Genie 3 是 Google DeepMind 于 2025 年发布的通用交互式世界模型。它根据文本描述，以 720p、每秒 24 帧的速度自回归生成可实时导航的动态世界，并将用户或智能体动作纳入后续帧预测。相比只生成固定视频或静态三维表示的系统，Genie 3 的关键价值在于持续模拟环境演化、保持数分钟的场景一致性，并记忆较早交互造成的变化。官方还展示了 Genie 3 与 SIMA 智能体的组合，用生成环境承载复杂目标、长动作序列以及智能体能力和失败模式评估。可提示世界事件能够改变天气或加入物体与角色，为智能体创建意外情况。它目前仍是受限的研究模型，存在动作空间有限、多智能体交互不足、真实地点还原不精确和交互时长有限等问题，且官方未发布开源权重或代码。",
+    "tags": [
+      "World models",
+      "Embodied AI"
+    ],
+    "fields": [
+      "World models",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Genie 3 是 Google DeepMind 发布的通用世界模型，输入简单文本描述后，可生成具有实时可控性的动态视觉环境，而不是预先渲染的固定视频或静态三维场景。",
+        "模型采用自回归生成方式，根据世界描述、已经生成的轨迹以及持续到达的用户或智能体动作逐帧预测后续环境。",
+        "Genie 3 强调长时程环境一致性：生成世界可在数分钟内保持基本稳定，模型还能在用户重访地点时恢复约一分钟前相关交互造成的视觉变化。",
+        "系统支持“可提示世界事件”，可以在探索过程中通过文本改变天气条件，或引入新的物体和角色，为智能体构造突发情况和分布变化。",
+        "官方将 Genie 3 明确用于具身智能体研究，并展示了与 SIMA 智能体结合的实验：Genie 3 不直接获知任务目标，而是根据 SIMA 的动作模拟环境未来状态。",
+        "官方提出其可用于快速构建智能体训练环境、测试更复杂目标和更长动作序列、评估智能体表现并分析失败或能力弱点，也提到自动驾驶模拟等潜在应用。",
+        "当前系统仍有明确限制，包括智能体可执行动作范围有限、多独立智能体交互建模尚不成熟、真实地点无法被完全准确复现、文字生成不稳定，以及连续交互只能维持数分钟。"
+      ],
+      "capabilities": [
+        "通过文本描述生成可实时导航的动态交互环境",
+        "以自回归方式逐帧生成后续场景，并根据用户或智能体的动作持续更新世界状态",
+        "维持较长时间的环境一致性，并在重访场景时回忆先前交互造成的变化",
+        "通过可提示世界事件改变天气、物体、角色等环境条件",
+        "为具身智能体提供开放式训练、长程任务测试和弱点分析环境"
+      ],
+      "metrics": [
+        {
+          "label": "实时生成帧率",
+          "note": "官方发布页报告的交互环境生成速度。",
+          "value": "24 frames per second"
+        },
+        {
+          "label": "输出分辨率",
+          "note": "官方发布页报告的实时生成分辨率。",
+          "value": "720p"
+        },
+        {
+          "label": "连续一致性时长",
+          "note": "生成环境能够基本保持一致的时间范围。",
+          "value": "A few minutes"
+        },
+        {
+          "label": "交互变化记忆",
+          "note": "模型在重访场景时可回忆特定交互造成的变化。",
+          "value": "Up to one minute"
+        },
+        {
+          "label": "连续交互上限",
+          "note": "官方列出的当前限制是支持数分钟连续交互，而不是数小时。",
+          "value": "A few minutes rather than extended hours"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://deepmind.google/models/genie/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://deepmind.google/"
+      },
+      {
+        "label": "Report",
+        "url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/"
+      }
+    ]
+  },
+  {
     "id": "nvidia-isaac-lab-2-2-38fa3a4",
     "title": "NVIDIA Isaac Lab 2.2",
     "organization": "英伟达 / NVIDIA",
@@ -4673,6 +5582,88 @@
           "label": "部署硬件成本",
           "note": "NVIDIA 材料报告 Skild Brain 可适配低成本、带噪声的机器人硬件，并与传统定制系统作成本对照。",
           "value": "部署于 4,000–15,000 美元系统；传统定制系统为 250,000 美元以上"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.skild.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain"
+      }
+    ]
+  },
+  {
+    "id": "building-the-general-purpose-robotic-brain-1f3be22",
+    "title": "Building the general-purpose robotic brain",
+    "organization": "Skild AI",
+    "organizationKind": "Company",
+    "date": "2025-07-29",
+    "year": 2025,
+    "summary": "Skild Brain 是 Skild AI 发布的通用具身机器人基础模型，目标是以同一套“全本体”智能控制不同形态的物理机器人。其核心是分层控制架构：低频高层策略处理操作与导航，高频低层策略把抽象命令落实为关节角和电机力矩。模型并非主要依赖现成视觉语言模型，而是以大规模物理仿真和互联网人类视频扩展动作数据，再通过有针对性的真实机器人数据完成后训练，并针对部署进行微调和蒸馏。官方材料展示其覆盖四足、类人、桌面机械臂和移动操作机器人，并执行导航、抓取、交接、精细装配及包装等任务。后续项目材料进一步报告，同一模型在没有场景专用微调的条件下，能够零样本控制训练集之外的机器人，并在线适应肢体缺失、关节锁死、轮子卡住和身体比例变化。这些结果使其符合具身智能软件项目的收录标准；但官方没有提供开源代码或模型权重。",
+    "tags": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation",
+      "Whole-body control"
+    ],
+    "fields": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation",
+      "Whole-body control"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Skild Brain 是面向物理机器人的通用基础模型，而非机器人硬件产品；官方页面明确将软件模型作为发布主体，并展示其跨任务、跨本体控制能力。",
+        "模型采用分层架构：低频高层策略负责操作和导航决策，高频低层动作策略将高层命令转换为精确的关节角与电机力矩。",
+        "训练覆盖多种任务、数据来源和硬件形态，包括四足机器人、类人机器人、桌面机械臂、移动操作机器人及人类动作数据，以减少对单一机器人结构的过拟合。",
+        "数据路线以大规模仿真和互联网人类视频作为预训练来源，再使用面向客户任务的真实机器人数据进行后训练，并通过微调和蒸馏满足部署需求。",
+        "后续官方技术材料说明，同一模型在测试时不进行场景专用微调，并将测试机器人排除在训练集之外，用于验证跨本体零样本控制和形态变化适应能力。",
+        "官方演示报告了基于上下文的在线适应：模型可利用前一次失败轨迹改进后续尝试，并能针对肢体缺失、锁死关节、卡住的轮子、负载变化和加装高跷等扰动调整运动策略。"
+      ],
+      "capabilities": [
+        "跨机器人形态的统一策略控制，包括四足、类人机器人、桌面机械臂和移动操作机器人",
+        "通过高层操作与导航策略生成指令，并由低层策略转换为关节角和电机力矩",
+        "结合大规模仿真、互联网人类视频和有针对性的真实机器人数据进行预训练与后训练",
+        "在未参与训练的新机器人形态上进行零样本控制，并在线适应肢体、关节和轮式机构故障",
+        "执行导航、抓取、交接、精细装配和自主包装等真实机器人任务"
+      ],
+      "metrics": [
+        {
+          "label": "仿真机器人形态规模",
+          "note": "后续官方项目材料称模型在由不同机器人身体组成的仿真环境中训练。",
+          "value": "100,000 种机器人"
+        },
+        {
+          "label": "肢体缩短后的适应时间",
+          "note": "切除四足机器人小腿至大腿、减少 4 个自由度后，模型通过调整大腿关节摆幅恢复有效移动。",
+          "value": "7–8 秒"
+        },
+        {
+          "label": "膝关节锁死后的适应时间",
+          "note": "锁死膝关节形成训练中未见的三足结构后，机器人通过后移重心恢复行走。",
+          "value": "2–3 秒"
+        },
+        {
+          "label": "基于失败轨迹的适应结果",
+          "note": "将前一次失败试验作为上下文提示后，模型逐次改进稳定策略。",
+          "value": "第 3 次尝试成功"
+        },
+        {
+          "label": "测试设置",
+          "note": "官方称展示的机器人均未进入训练数据，且所有场景使用同一模型、没有场景专用微调。",
+          "value": "零样本、单一模型、无场景专用微调"
         }
       ]
     },
@@ -5441,6 +6432,89 @@
     ]
   },
   {
+    "id": "redwood-ai-mobility-830d58e",
+    "title": "Redwood AI: Mobility",
+    "organization": "1X Technologies",
+    "organizationKind": "Company",
+    "date": "2025-06-11",
+    "year": 2025,
+    "summary": "Redwood AI: Mobility 是 1X Technologies 为 NEO 双足人形机器人开发的统一强化学习移动控制系统，目标是用一个可由遥操作器或 Redwood AI 调用的动作接口覆盖家庭环境中的主要全身移动需求。其架构将高层运动学规划与低层强化学习控制分离：高层模型把操纵杆方向等低维命令转换为类似人体动作捕捉的丰富运动轨迹，并平滑行为切换；低层控制器负责跟踪身体姿态参考、维持平衡并解决真实接触动力学。系统在仿真中训练，通过摩擦、质量和传感器噪声等参数随机化实现仿真到真实迁移。楼梯模式使用双目 RGB 视觉估计地面高度，并融合本体感知历史来提前安排落脚，不依赖激光雷达或飞行时间深度传感器。官方展示的能力包括全向自然行走、侧步、坐立转换、跪下、躺倒与地面恢复、上下楼梯，以及与 Redwood 视觉策略结合的足球运球。该项目的技术意义在于把传统上分散的双足步行、低姿态转换、跌倒后恢复和视觉楼梯通行整合进同一个面向高层 AI 与遥操作的控制器。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Redwood AI: Mobility 的核心发布物是面向 1X NEO 双足人形机器人的统一强化学习移动控制器，而非机器人硬件或产品规格页面；1X 于 2025 年 6 月 11 日在官方研究栏目发布了专门项目页面。",
+        "控制系统采用两级架构：高层“运动学规划器”根据操纵杆方向等低维命令合成接近人类动作捕捉数据的身体轨迹；低层强化学习控制器在维持平衡的同时跟踪这些身体姿态参考轨迹。",
+        "高层运动生成模型通过监督学习训练，负责把粗粒度控制命令扩展成更丰富的运动学目标，并在行为切换时平滑不同动作之间的过渡。",
+        "训练使用由自然人体动作捕捉数据重定向到 NEO 关节和身体结构的参考轨迹；低层控制器不只回放轨迹，还需要自行学习稳定、节奏保持和接触动力学。",
+        "策略完全在仿真中训练，并通过对摩擦、质量、传感器噪声等物理参数进行域随机化，提高从近似仿真物理迁移到真实机器人的鲁棒性。",
+        "楼梯模式通过双目 RGB 图像直接预测周围地面深度，并将视觉深度与本体感知历史融合，以提前规划落脚高度；官方明确表示该模式不依赖激光雷达或飞行时间深度传感器。",
+        "控制器向遥操作系统和 Redwood AI 提供统一动作接口；足球运球演示中，Redwood 从视觉预测全身关节目标和骨盆行走速度，再由移动控制器转换为腿部施力。"
+      ],
+      "capabilities": [
+        "通过统一强化学习控制器执行自然的全向行走、转向与侧步移动",
+        "完成坐下、站起、跪下、躺倒以及从地面恢复站立等姿态转换",
+        "仅依靠双目 RGB 视觉与本体感知历史上下楼梯，并适应混合高度台阶",
+        "接受遥操作器或 Redwood AI 的高层移动意图，并转化为接触感知的腿部作用力",
+        "与视觉驱动的 Redwood 模型结合，执行需要步行和全身关节协调的足球运球演示"
+      ],
+      "metrics": [
+        {
+          "label": "统一移动技能覆盖",
+          "note": "官方项目页报告这些能力由同一个控制器提供。",
+          "value": "全向自然行走、坐下、站立、跪下、地面起身以及双向楼梯通行"
+        },
+        {
+          "label": "楼梯感知配置",
+          "note": "深度由双目 RGB 图像预测，并与本体感知历史融合；未使用激光雷达或飞行时间深度传感器。",
+          "value": "纯视觉双目 RGB 楼梯模式"
+        },
+        {
+          "label": "非规则楼梯适应结果",
+          "note": "官方称仿真域随机化使控制器能够处理非理想楼梯条件。",
+          "value": "支持楼梯侧步和混合高度台阶"
+        },
+        {
+          "label": "地面姿态恢复结果",
+          "note": "项目页报告控制器可安全进入这些低位姿态并从相应姿态恢复。",
+          "value": "可坐下、跪下、躺到地面，并重新起身"
+        },
+        {
+          "label": "高层模型集成演示",
+          "note": "Redwood 从视觉产生全身关节目标和骨盆速度，移动控制器执行具体腿部作用力。",
+          "value": "完成视觉驱动的足球运球演示"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.1x.tech/discover/redwood-mobility"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.1x.tech/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.1x.tech/discover/redwood-mobility"
+      }
+    ]
+  },
+  {
     "id": "stretch-mujoco-v0-5-ded15fc",
     "title": "Stretch MuJoCo v0.5",
     "organization": "Hello Robot",
@@ -5518,6 +6592,255 @@
       {
         "label": "Report",
         "url": "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344"
+      }
+    ]
+  },
+  {
+    "id": "redwood-ai-d9d1cb0",
+    "title": "Redwood AI",
+    "organization": "1X",
+    "organizationKind": "Company",
+    "date": "2025-06-10",
+    "year": 2025,
+    "summary": "Redwood是1X为家庭人形机器人开发的160M参数视觉-语言动作Transformer，目标是在较小的机载计算预算下统一感知、语言条件、移动和操作。它融合视觉token、语言嵌入以及关节位置和受力历史，并通过扩散策略输出适配EVE或NEO的动作。与把导航和机械臂控制拆成独立模块的系统不同，Redwood联合预测行走、骨盆、手臂和手部指令，可在跨房间移动时完成双手拾放，也可利用倚靠和支撑形成多点接触。其训练覆盖真实办公室与住宅中的遥操作、自主、成功和失败轨迹，并增加手部及物体图像位置等认知辅助目标，以改善未见物体和环境下的泛化。模型约以5 Hz完整运行于NEO机载GPU；语音意图解析依赖机外LLM和句子编码器。",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Redwood是1X面向人形机器人形态开发的视觉-语言动作模型，官方于2025年6月10日发布，软件模型而非NEO硬件是项目专页的主题。",
+        "模型采用跨本体架构，将预训练语言嵌入、预训练视觉Transformer产生的视觉token，以及由关节位置和关节受力历史构成的本体感知嵌入融合，经额外Transformer模块形成潜在表示，再由扩散策略解码为EVE或NEO的动作。",
+        "Redwood同时预测手臂、手部、行走和骨盆姿态命令，把传统上分离的移动与操作统一起来，从而支持弯身抓取、移动中操作、身体倚靠和多点接触等行为。",
+        "训练数据来自EVE与NEO的遥操作及自主运行片段，并覆盖1X办公室和员工住宅；项目还使用大量家庭环境中的目标导航与拾放示范，对导航和操作进行联合训练。",
+        "除动作预测外，训练目标还包括估计NEO双手及相关物体在图像空间中的位置等认知预测任务，用于增强视觉表示的落地性和未见环境泛化。",
+        "训练同时利用成功与失败轨迹：成功示范监督动作扩散头和认知预测，失败轨迹则为认知预测头提供监督，以减轻仅学习成功状态分布导致的过拟合。",
+        "模型完整运行在NEO的机载嵌入式GPU上；语音交互中的意图提取和句子编码在机外完成，生成的命令向量再输入Redwood。"
+      ],
+      "capabilities": [
+        "在 NEO Gamma 上端到端执行家庭移动操作，包括寻找并取回物体、开门以及跨房间导航。",
+        "联合生成行走、手臂、手部和骨盆姿态指令，在移动过程中完成双手操作。",
+        "利用身体与环境形成多点接触，例如开重门时用一只手支撑墙面，同时用另一只手操作门。",
+        "根据目标物体及后续移动需求，自主选择左手、右手或双手完成抓取，并能抓取训练中未见的瓶子。",
+        "通过语音对话接口接收任务目标：外部语音到语音 LLM 提取意图并编码为文本向量，Redwood据此执行机器人动作。"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方项目页报告的Transformer参数量。",
+          "value": "160M parameters"
+        },
+        {
+          "label": "机载运行频率",
+          "note": "在NEO机载GPU上的推理频率，官方表述为约值。",
+          "value": "around 5 Hz"
+        },
+        {
+          "label": "语言训练信号",
+          "note": "Redwood接受由语音意图转换而来的文本嵌入进行训练。",
+          "value": "thousands of text embeddings"
+        },
+        {
+          "label": "跨本体支持",
+          "note": "同一架构通过本体专用动作解码支持两种1X机器人平台。",
+          "value": "2 embodiments: EVE and NEO"
+        },
+        {
+          "label": "未见目标泛化演示",
+          "note": "官方展示连续镜头中从不同位置抓取训练时未见瓶子的能力；未公布数值成功率。",
+          "value": "Grasps unseen bottles from varied locations in a continuous take"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.1x.tech/discover/redwood-ai"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.1x.tech/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.1x.tech/discover/redwood-ai"
+      }
+    ]
+  },
+  {
+    "id": "real-time-action-chunking-with-large-models-e6f8151",
+    "title": "Real-Time Action Chunking with Large Models",
+    "organization": "Physical Intelligence",
+    "organizationKind": "Company",
+    "date": "2025-06-09",
+    "year": 2025,
+    "summary": "Real-Time Action Chunking with Large Models 是 Physical Intelligence 提出的实时动作分块推理系统，目标是解决大型 VLA 在物理机器人控制中的延迟问题。传统同步执行会让机器人在每个动作块结束后停下来等待推理；直接异步切换动作块又可能因新旧轨迹不一致而产生速度或加速度突变。RTC 让机器人在执行旧动作块时并行生成新动作块，并把动作块衔接转化为扩散或流匹配模型的修复问题：冻结推理完成前必然执行的动作，对其后的重叠动作施加逐渐减弱的软约束，再自由生成剩余动作。该方法完全工作在推理阶段，不要求重新训练现有 VLA。团队在 12 个 Kinetix 动态任务和 6 个真实双臂操作任务上进行评测，展示了点燃火柴、插接以太网线、整理衣物、收拾物品和铺床等能力。RTC 在额外注入 100 ms 和 200 ms 延迟时保持平均任务吞吐量不下降，并在超过 300 ms 推理延迟下完成精细动态操作。官方还发布了 MIT 许可的模拟实验代码、检查点与数据获取说明，以及完整的训练和大规模评测流程。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Real-Time Chunking（RTC）是面向动作分块策略的纯推理期算法：模型在机器人执行当前动作块的同时生成下一动作块，从系统层面消除同步推理造成的停顿。",
+        "RTC 将相邻动作块的一致性建模为修复问题：根据实际推理延迟冻结已经确定会被执行的动作，并对尚未执行的重叠区间施加软约束，再生成后续新动作。",
+        "该方法利用扩散与流匹配模型的条件生成能力，通过自动微分计算引导修正；实验采用引导权重裁剪以避免少步去噪时引导项发散。",
+        "算法可直接应用于扩散或流匹配 VLA，不要求修改训练数据、模型架构或训练流程；真实机器人实验以 π0.5 为基础策略，使用 50 步、约 1 秒的预测动作块。",
+        "评测覆盖 Kinetix 中 12 个包含投掷、接取和平衡等动态行为的任务，以及 6 个真实世界双臂操作任务，其中包括 2 个移动操作任务。",
+        "真实机器人实验比较了 RTC、同步推理和不同密度的时间集成方法，并注入 100 毫秒与 200 毫秒额外延迟；RTC 的平均任务吞吐量在所测延迟下没有下降，而时间集成在高延迟下会因剧烈振荡触发机器人保护停止。",
+        "官方以 MIT 许可证发布了 Kinetix 模拟实验代码，包含专家策略训练、百万级转换数据生成、流匹配模仿策略训练，以及按推理延迟和执行时域进行评测的脚本；该代码发布范围主要对应模拟实验。"
+      ],
+      "capabilities": [
+        "支持扩散或流匹配 VLA 在推理期间异步生成和执行重叠动作块",
+        "通过冻结必然执行的动作并对剩余动作进行修复式生成，实现连续、平滑的动作块切换",
+        "无需重新训练即可部署到现有扩散或流匹配机器人策略，包括 π0.5",
+        "在高推理延迟下执行点火柴、插接以太网线等动态精细双臂操作",
+        "提供基于 Kinetix 的动态任务实验代码、训练流程、数据生成流程和评测脚本"
+      ],
+      "metrics": [
+        {
+          "label": "真实动作执行速度",
+          "note": "论文报告同一段真实机器人动作相较同步推理执行更平滑，并消除动作块间推理停顿。",
+          "value": "比同步推理快 20%"
+        },
+        {
+          "label": "高延迟精细操作",
+          "note": "在点燃火柴等动态精细任务中仍能运行；该延迟超过模型预测时域的 30%。",
+          "value": "推理延迟超过 300 ms"
+        },
+        {
+          "label": "评测规模",
+          "note": "模拟任务采用 Kinetix 动态环境；真实任务为使用 π0.5 的双臂灵巧操作，其中包含 2 个移动操作任务。",
+          "value": "12 个模拟任务；6 个真实机器人任务"
+        },
+        {
+          "label": "RTC 模型推理延迟",
+          "note": "在 NVIDIA RTX 4090、bfloat16、5 个去噪步骤下测量，仅计 GPU 神经网络推理；同一设置下原始 π0.5 为 76 ms。",
+          "value": "97 ms"
+        },
+        {
+          "label": "端到端推理延迟",
+          "note": "包含模型、网络、图像缩放及其他开销；数据来自真实机器人单次任务中的 50 次推理调用。",
+          "value": "移动机器人 138.98 ± 6.71 ms；固定机器人 108.76 ± 2.34 ms"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pi.website/research/real_time_chunking"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pi.website/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.pi.website/research/real_time_chunking"
+      }
+    ]
+  },
+  {
+    "id": "scaling-helix-a-new-state-of-the-art-in-humanoid-875caa0",
+    "title": "Scaling Helix: a New State of the Art in Humanoid Logistics",
+    "organization": "Figure AI, Inc.",
+    "organizationKind": "Company",
+    "date": "2025-06-07",
+    "year": 2025,
+    "summary": "Scaling Helix 是 Figure 于 2025 年 6 月发布的 Helix 物流策略扩展项目，核心对象是部署在人形机器人上的 System 1 端到端视觉运动控制软件。该版本将示范数据从约 10 小时扩展至 60 小时，并在策略中加入短期视觉记忆、近期机器人状态历史和力反馈，使机器人能够在连续操作中记住已检查的包裹表面、保持动作片段之间的上下文，并依据接触力修正抓握和运动。系统可处理硬纸箱、可变形塑料袋、软垫信封和平面邮件，动态选择夹取、翻转、推送和压平等动作，还能执行双臂流水线操作及视觉条件化的人机递交。官方实验显示，数据扩展将平均处理时间从约 6.84 秒降至 4.31 秒，条码成功率从 88.2% 提升至 94.4%；进一步加入完整模块并扩大 Transformer 解码头后达到 4.05 秒/包裹。该页面提供了明确的软件架构改动、消融分析和实体机器人结果，属于符合索引范围的具身智能技术项目。",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "该项目是 Figure 对 Helix System 1 视觉运动策略的正式软件更新，面向 Figure 人形机器人上的真实物流包裹处理，并非机器人硬件或产品规格公告。",
+        "训练示范数据由约 10 小时扩展到 60 小时；官方对照实验保持网络架构和超参数一致，用于分析数据规模对处理速度和条码扫描成功率的影响。",
+        "新增视觉记忆模块，对近期视频帧的特征进行组合，使策略能够记住已经检查过的包裹表面、此前看到标签的位置以及流水线区域状态，支持跨时间的多步骤操作。",
+        "策略输入加入手部、躯干和头部位置等近期机器人状态历史，在更频繁地重新规划动作时保持动作连续性，并可在包裹移动或抓取偏差后及时修正。",
+        "Figure 02 的交互力被纳入策略观测，使模型能够识别接触、调节抓握和按压力，并减少接触传送带或周边环境时的不稳定行为；官方将其描述为触觉的代理，而非指尖触觉系统。",
+        "策略可针对硬箱、塑料袋、软垫信封和平面邮件调整抓取与翻转方式，并从示范中学会压平褶皱包装以改善条码读取、双臂并行推送和取件等上下文相关行为。",
+        "同一神经策略可通过少量额外示范形成视觉条件化的人机递交行为：看到人的伸手动作后将包裹交给对方，无需独立程序或模式切换。"
+      ],
+      "capabilities": [
+        "多形态包裹的端到端视觉运动操作",
+        "双臂动态抓取、翻转、推送与流水线分拣",
+        "基于视觉记忆的多步骤包裹检查和条码朝向调整",
+        "利用状态历史进行高频重规划和受扰后的运动修正",
+        "基于力反馈调节抓握、接触和环境作用力"
+      ],
+      "metrics": [
+        {
+          "label": "完整扩展模型平均处理时间",
+          "note": "增加全部记忆与反馈模块，并将 Transformer 解码头参数量提高 50% 后的结果。",
+          "value": "4.05 秒/包裹"
+        },
+        {
+          "label": "处理速度改善",
+          "note": "官方以此前约 5.0 秒/包裹为基线报告的总体改善。",
+          "value": "约 20% 更快"
+        },
+        {
+          "label": "数据扩展后的平均处理时间",
+          "note": "使用最新 Helix S1 架构时，训练示范从约 10 小时增加到 60 小时。",
+          "value": "约 6.84 秒降至 4.31 秒/包裹"
+        },
+        {
+          "label": "数据扩展后的吞吐量提升",
+          "note": "官方根据 10 小时与 60 小时训练数据实验报告。",
+          "value": "58%"
+        },
+        {
+          "label": "数据扩展后的条码成功率",
+          "note": "包裹被正确调整为可扫描朝向的比例。",
+          "value": "88.2% 提升至 94.4%"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.figure.ai/news/scaling-helix-logistics"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.figure.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.figure.ai/news/scaling-helix-logistics"
       }
     ]
   },
@@ -5680,6 +7003,89 @@
       {
         "label": "Report",
         "url": "https://openvla-oft.github.io/"
+      }
+    ]
+  },
+  {
+    "id": "vlas-that-train-fast-run-fast-and-generalize-bet-9354feb",
+    "title": "VLAs that Train Fast, Run Fast, and Generalize Better",
+    "organization": "Physical Intelligence",
+    "organizationKind": "Company",
+    "date": "2025-05-28",
+    "year": 2025,
+    "summary": "Physical Intelligence提出的Knowledge Insulation是一套面向连续动作VLA的模型架构和训练方法，并将所得模型称为π0.5 + KI。它针对动作专家接入预训练VLM时产生的梯度干扰：随机初始化的连续动作模块虽然能支持快速、精确控制，却可能破坏主干的语言理解和预训练语义知识。该方法阻断动作专家损失向VLM主干回传，同时以FAST离散动作token训练主干形成运动表示，并联合通用视觉语言数据、机器人规划数据和连续动作流匹配目标。部署时丢弃离散动作预测路径，由较小的动作专家生成连续动作。实验覆盖多种真实机器人本体、长时程精细操作、未见场景及DROID与LIBERO基准；报告显示该方法相较π0显著加快训练，并提升语言跟随、未见物体泛化和多项基准表现。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "该项目发布于2025年5月28日，由Physical Intelligence明确署名负责，并有独立的官方研究项目页；其核心产物是用于实体机器人控制的π0.5 + Knowledge Insulation视觉-语言-动作模型与训练方法，符合软件项目收录条件。",
+        "模型由约30亿参数的VLM主干和约3亿参数的动作专家组成。动作专家读取主干表示，并通过流匹配生成连续动作；推理时不需要自回归解码离散动作。",
+        "Knowledge Insulation在动作专家到预训练VLM主干之间实施停止梯度，防止随机初始化的机器人动作模块破坏主干已有的语言理解和网络规模视觉语言知识。",
+        "仅冻结VLM主干不足以得到有效机器人策略，因此训练时同时用FAST离散动作token监督主干，使其快速形成适合运动控制的表示；离散动作只用于训练，部署时由动作专家输出连续动作。",
+        "训练还混合通用视觉语言网络数据、高层机器人命令及机器人规划等下一token预测任务，以维持语义知识并增强对未见物体、未见环境和语言指令的泛化。",
+        "论文在真实世界的收拾餐桌、双臂叠衣、物品入抽屉、移动双臂操作及DROID任务上评估，并在仿真LIBERO基准上测试；部分真实机器人任务专门设置于训练数据未覆盖的场景。",
+        "消融实验显示，允许连续动作损失直接回传主干会削弱语言跟随并减慢收敛；Knowledge Insulation同时保留FAST式训练速度、连续动作专家的快速推理，以及从非机器人VLM数据向机器人动作的知识迁移。"
+      ],
+      "capabilities": [
+        "通过自然语言指令控制实体机器人完成精细、连续的操作任务",
+        "在单臂、双臂静态机器人和移动双臂机器人等多种本体上训练与执行策略",
+        "完成叠衣、收拾餐桌、开关抽屉、整理床铺和将餐具放入水槽等长时程操作",
+        "在未见环境和未见物体上进行语义泛化与语言条件操作",
+        "使用连续动作专家进行高频、精确且流畅的机器人控制"
+      ],
+      "metrics": [
+        {
+          "label": "训练步数",
+          "note": "在通用模型的table-bussing任务上，达到相近性能时，论文报告π0需要的训练步数是该方法的7.5倍。",
+          "value": "减少约7.5倍"
+        },
+        {
+          "label": "DROID真实机器人得分",
+          "note": "未见环境与物体的桌面操作评测；对照结果为π0 0.49±0.09、π0-FAST 0.45±0.09。",
+          "value": "0.55 ± 0.09"
+        },
+        {
+          "label": "LIBERO-Spatial成功率",
+          "note": "从通用模型微调的版本；论文报告其在该套件上达到当时最佳结果。",
+          "value": "98.0%"
+        },
+        {
+          "label": "LIBERO-90成功率",
+          "note": "从通用模型微调的版本；论文报告其在该套件上达到当时最佳结果。",
+          "value": "96.0%"
+        },
+        {
+          "label": "控制频率",
+          "note": "Knowledge Insulation沿用π0连续动作专家的快速推理路径；论文将该架构的控制频率与自回归VLA的1.3 Hz进行比较。",
+          "value": "10 Hz"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pi.website/research/knowledge_insulation"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pi.website/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.pi.website/research/knowledge_insulation"
       }
     ]
   },
@@ -6411,6 +7817,89 @@
     ]
   },
   {
+    "id": "0-5-a-vla-with-open-world-generalization-c8c2c5a",
+    "title": "π0.5: A VLA with Open-World Generalization",
+    "organization": "Physical Intelligence",
+    "organizationKind": "Company",
+    "date": "2025-04-22",
+    "year": 2025,
+    "summary": "π0.5 是 Physical Intelligence 面向开放世界泛化开发的通用视觉-语言-动作模型。其核心不是增加某一种单项操作技能，而是让机器人把来自不同本体、不同环境和不同模态的知识迁移到训练中从未出现的住宅。模型把图像、语言、目标框、高层语义子任务和机器人动作放入统一的协同训练体系，并采用先预测下一语义步骤、再生成低层连续动作块的分层执行方式。官方展示和技术报告覆盖厨房与卧室清理、餐具收纳、衣物整理、铺床、擦拭污渍等多阶段任务；真实住宅评测场景均未进入训练集。消融实验表明，其他机器人提供的跨本体与跨环境数据显著影响总体操作表现，而网络视觉语言数据对未见物体类别的语言理解和高层决策尤其重要。模型直接以 50 Hz 控制移动底盘及操作机构，不依赖额外轨迹规划器，体现了端到端 VLA 在真实移动操作系统中的应用。([physicalintelligence.company](https://www.physicalintelligence.company/download/pi05.pdf))",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "π0.5 是 Physical Intelligence 在 π0 基础上开发的通用视觉-语言-动作策略，官方于 2025 年 4 月 22 日发布了专门项目页和完整技术报告，明确面向真实物理机器人的开放世界泛化，而非机器人硬件产品。([pi.website](https://www.pi.website/blog/pi05?_bhlid=de2024f531975f92ceb24b0500c60b157ffc82fb&utm_source=openai))",
+        "训练采用异构协同训练，将移动操作机器人、不同环境中的静态机器人、实验室跨本体机器人数据，以及图像描述、视觉问答、目标定位、高层语义标签和人类口头指导统一到多模态序列建模框架中。([physicalintelligence.company](https://www.physicalintelligence.company/download/pi05.pdf))",
+        "系统采用分层推理：模型先根据场景和总任务预测下一条语义子任务，例如“拿起砧板”，再以该子任务为条件生成低层连续动作块，从而处理多阶段、长时程任务。([physicalintelligence.company](https://www.physicalintelligence.company/download/pi05.pdf))",
+        "模型以 PaliGemma 2B VLM 为视觉语言骨干，并配有约 3 亿参数的动作专家；连续动作通过 flow matching 生成，动作时域为 50，VLM 与动作专家通过受控的自注意力信息流交互。([physicalintelligence.company](https://www.physicalintelligence.company/download/pi05.pdf))",
+        "机器人以 50 Hz、结合动作分块，直接输出机械臂、夹爪、躯干升降机构的目标位姿及底盘目标速度；底层仅用简单 PD 控制器跟踪，没有额外轨迹规划或碰撞检测。([physicalintelligence.company](https://www.physicalintelligence.company/download/pi05.pdf))",
+        "实验覆盖训练中未出现的三套真实厨房和三套真实卧室，并使用可重复的模拟住宅进行对照和消融；结果显示跨本体、跨环境数据对总体表现关键，网络数据尤其改善未见物体类别的语言跟随与高层推理。([physicalintelligence.company](https://www.physicalintelligence.company/download/pi05.pdf))",
+        "官方随后在 openpi 公共仓库中发布了 π0.5 支持、基础检查点及训练和推理示例；仓库说明当前公开实现仅支持 π0.5 的 flow-matching 动作头。([github.com](https://github.com/Physical-Intelligence/openpi/blob/main/README.md?utm_source=openai))"
+      ],
+      "capabilities": [
+        "根据图像观测与自然语言任务指令，端到端生成移动底盘、机械臂、夹爪和躯干升降机构的控制目标。",
+        "将“清理卧室或厨房”等高层指令分解为连续的语义子任务，再依据子任务预测低层动作块。",
+        "在训练数据未覆盖的新住宅中执行收纳物品、将餐具放入水槽、整理衣物和铺床等长时程操作。",
+        "识别并操作训练期间未出现类别的日常物体，按照语言指定选择物体并放置到目标位置。",
+        "利用人类逐步提供的自然语言指导完成复杂任务，并从多机器人、跨本体和网络多模态数据中迁移知识。"
+      ],
+      "metrics": [
+        {
+          "label": "长时程任务持续时间",
+          "note": "技术报告称模型可仅依据高层提示清理完整厨房或卧室。",
+          "value": "10–15 分钟"
+        },
+        {
+          "label": "移动家庭操作数据量",
+          "note": "直接使用移动操作机器人在多种真实住宅中采集的数据。",
+          "value": "约 400 小时"
+        },
+        {
+          "label": "非目标平台训练样本占比",
+          "note": "第一训练阶段中，来自其他机器人或网络等来源、而非移动机器人家庭任务的数据比例。",
+          "value": "97.6%"
+        },
+        {
+          "label": "分布外物体语言跟随率",
+          "note": "完整 π0.5 在未见物体类别上的消融评测结果。",
+          "value": "94%"
+        },
+        {
+          "label": "分布外物体任务成功率",
+          "note": "完整 π0.5 将指定的未见类别物体成功放入抽屉或水槽的比例。",
+          "value": "94%"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pi.website/blog/pi05"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pi.website/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.pi.website/blog/pi05"
+      }
+    ]
+  },
+  {
     "id": "viam-tensorflow-model-training-support-454c487",
     "title": "Viam TensorFlow Model Training Support",
     "organization": "Viam, Inc.",
@@ -6573,6 +8062,87 @@
     ]
   },
   {
+    "id": "meta-locate-3d-b2cb510",
+    "title": "Meta Locate 3D",
+    "organization": "Meta",
+    "organizationKind": "Company",
+    "date": "2025-04-17",
+    "year": 2025,
+    "summary": "Meta Locate 3D 是 Meta FAIR 发布的实体环境三维语言定位软件项目。它把 RGB-D 观测转换为带二维基础模型语义特征的三维点云，再由自监督预训练的 3D-JEPA 编码器建立具有全场景上下文的表示，最后通过语言条件解码器联合生成目标物体的三维掩码和边界框。该系统解决的是机器人执行导航、抓取或协作任务前的语言指代落地问题，能够区分同类物体并利用“靠近电视柜”“位于沙发与灯之间”等空间关系确定具体实例。项目同时发布 600M 参数的 Locate 3D/Locate 3D+、300M 参数的 3D-JEPA、完整代码和涵盖 1,346 个场景的 Locate 3D Dataset。",
+    "tags": [
+      "Embodied AI",
+      "Robot systems",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Embodied AI",
+      "Robot systems",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Locate 3D 是 Meta FAIR 面向机器人和增强现实场景发布的端到端三维开放词汇定位模型；输入为自然语言查询和带位姿的 RGB-D 传感器观测，目标是在三维环境中找到查询所指的具体物体。",
+        "处理流程首先把 CLIP、DINO 等二维基础模型产生的视觉特征提升并融合到三维点云中，使每个三维区域同时包含几何信息和二维语义特征。",
+        "核心编码器 3D-JEPA 使用自监督的潜空间掩码预测任务：遮蔽点云中的随机区域，并根据其余场景预测被遮蔽区域的潜在表示，以学习具有全场景上下文的三维特征。",
+        "经过预训练的 3D-JEPA 编码器可针对三维指代表达任务微调；语言条件解码器在文本查询与三维特征之间执行交互，并联合预测目标掩码和边界框。",
+        "系统直接基于标准 RGB-D 传感器数据运行，不依赖真实三维实例提议、人工网格精修或真实实例分割，因此官方将其定位为可用于实体机器人和 AR 设备的感知组件。",
+        "Locate 3D Dataset 汇集 ARKitScenes、ScanNet 和 ScanNet++ 三种采集体系，用于训练并评估模型跨传感器设置和室内环境的泛化能力；加入该数据训练的增强版本称为 Locate 3D+。",
+        "官方代码库发布 Locate 3D、Locate 3D+ 和 3D-JEPA 的实现与权重，其中 Locate 3D 系列为 600M 参数，3D-JEPA 编码器为 300M 参数；代码和数据主要采用非商业性开放许可。"
+      ],
+      "capabilities": [
+        "根据自然语言指代表达，在真实室内场景的三维点云中定位具体物体实例",
+        "直接处理机器人或 AR 设备采集的带位姿 RGB-D 观测流，无需人工精修三维网格或真实实例分割",
+        "联合输出目标物体的三维掩码与三维边界框",
+        "通过 3D-JEPA 对带有 CLIP、DINO 等二维基础特征的传感器点云进行自监督表征学习",
+        "提供模型权重、推理代码、示例 notebook、数据处理工具及三维指代定位数据集"
+      ],
+      "metrics": [
+        {
+          "label": "Locate 3D Dataset 规模",
+          "note": "官方项目页报告数据覆盖 ARKitScenes、ScanNet 和 ScanNet++；精确标注总数为 131,641。",
+          "value": "1,346 个场景，131,641 条指代表达标注"
+        },
+        {
+          "label": "联合基准 Acc@25",
+          "note": "在 SR3D、NR3D 与 ScanRefer 联合评估中，Locate 3D 使用传感器点云取得 61.7；加入 L3DD 训练数据的 Locate 3D+ 提升至 63.7。",
+          "value": "Locate 3D 61.7%；Locate 3D+ 63.7%"
+        },
+        {
+          "label": "联合基准 Acc@50",
+          "note": "SR3D、NR3D 与 ScanRefer 联合评估的 top-1 定位准确率，IoU 阈值为 0.50。",
+          "value": "Locate 3D 49.4%；Locate 3D+ 51.3%"
+        },
+        {
+          "label": "跨采集设置泛化",
+          "note": "仅用 ScanNet 训练时，在 ScanNet++ 上，3D-JEPA 预训练相对随机初始化的上下文编码器提升 Acc@25。",
+          "value": "51.5% → 56.7%"
+        },
+        {
+          "label": "模型规模",
+          "note": "官方模型库列出的参数量。",
+          "value": "Locate 3D / Locate 3D+：600M；3D-JEPA：300M"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://locate3d.atmeta.com/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://ai.meta.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/facebookresearch/locate-3d"
+      }
+    ]
+  },
+  {
     "id": "large-behavior-models-9a3de3c",
     "title": "Large Behavior Models",
     "organization": "Toyota Research Institute",
@@ -6652,6 +8222,93 @@
       {
         "label": "Report",
         "url": "https://www.tri.global/research/large-behavior-models"
+      }
+    ]
+  },
+  {
+    "id": "natural-humanoid-walk-using-reinforcement-learni-2a8c7bd",
+    "title": "Natural Humanoid Walk Using Reinforcement Learning",
+    "organization": "Figure",
+    "organizationKind": "Company",
+    "date": "2025-03-25",
+    "year": 2025,
+    "summary": "Figure 的 Natural Humanoid Walk Using Reinforcement Learning 是一套面向 Figure 02 实体人形机器人的学习式步行控制系统。其核心是完全在 GPU 加速物理仿真中通过强化学习获得的单一端到端神经网络策略。训练时，数千台具有不同物理参数的虚拟机器人并行经历多类地形、执行器动力学变化以及绊倒、打滑和外力推搡等场景。为了形成自然的人类式步态，系统使用人类步行参考轨迹塑造脚跟着地、脚尖离地和手臂协同摆动，同时优化速度跟踪、能耗与抗扰能力。部署阶段结合域随机化和千赫兹级闭环力矩反馈，使策略无需在实体机器人上继续训练或调参即可完成零样本迁移。官方还展示了 10 台 Figure 02 运行完全相同的策略，说明该控制器能够容忍机器人个体差异和地面摩擦变化。",
+    "tags": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Whole-body control",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "该项目的主体是用于 Figure 02 实体人形机器人的端到端神经网络步行控制器，而不是机器人硬件或产品规格页面，符合具身机器人软件项目的收录范围。",
+        "控制策略完全通过强化学习在 GPU 加速的高保真物理仿真环境中训练；训练过程并行运行数千个具有不同物理参数的虚拟 Figure 02。",
+        "训练环境覆盖不同地形、执行器动力学变化，以及绊倒、打滑和外力推搡等情形，使单一策略学习跨条件的稳健运动行为。",
+        "为获得更接近人类的步态，训练奖励引入人类步行参考轨迹，并明确塑造脚跟着地、脚尖离地以及手臂与腿部同步摆动等步态特征。",
+        "除步态模仿外，奖励函数还优化速度跟踪、能耗、外部扰动鲁棒性和地形变化适应能力，避免策略只追求表面上的动作相似性。",
+        "系统通过仿真域随机化和实体机器人上的千赫兹级闭环力矩控制缩小 sim-to-real 差距，使仿真策略无需额外微调即可部署到真实 Figure 02。",
+        "官方展示了 10 台 Figure 02 使用完全相同、未经逐机调整的强化学习神经网络策略，并报告该策略可适应机器人个体差异、地面摩擦变化和外部推力。"
+      ],
+      "capabilities": [
+        "通过端到端强化学习策略控制 Figure 02 人形机器人的自然步行",
+        "在高保真 GPU 物理仿真器中并行训练大量虚拟人形机器人",
+        "利用域随机化实现从仿真到实体机器人的零样本迁移",
+        "通过千赫兹级闭环力矩反馈补偿执行器建模误差",
+        "应对地形变化、摩擦变化以及绊倒、打滑、推搡等扰动"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "Figure 官方项目文章标注的发布日期。",
+          "value": "2025-03-25"
+        },
+        {
+          "label": "仿真训练规模",
+          "note": "官方称在 GPU 加速物理仿真器中并行运行虚拟 Figure 02。",
+          "value": "数千台虚拟机器人并行训练"
+        },
+        {
+          "label": "数据生成效率",
+          "note": "官方称在数小时内收集相当于多年运行量的仿真示范数据，未披露更精确时长或数据量。",
+          "value": "数小时内生成数年规模的仿真数据"
+        },
+        {
+          "label": "实体控制频率",
+          "note": "用于补偿执行器模型误差的闭环力矩反馈频率。",
+          "value": "千赫兹级"
+        },
+        {
+          "label": "跨实体部署",
+          "note": "官方展示所有机器人运行同一个强化学习神经网络，未做逐机修改。",
+          "value": "10 台 Figure 02，共用同一策略且无调整"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.figure.ai/news/reinforcement-learning-walking"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.figure.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.figure.ai/news/reinforcement-learning-walking"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.linkedin.com/posts/figure-ai_figure-can-now-walk-naturally-like-a-human-activity-7310300795042742272-AVFL"
       }
     ]
   },
@@ -7332,6 +8989,89 @@
       {
         "label": "Report",
         "url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248"
+      }
+    ]
+  },
+  {
+    "id": "helix-accelerating-real-world-logistics-875182d",
+    "title": "Helix Accelerating Real-World Logistics",
+    "organization": "Figure AI",
+    "organizationKind": "Company",
+    "date": "2025-02-26",
+    "year": 2025,
+    "summary": "Helix Accelerating Real-World Logistics 是 Figure AI 于 2025 年 2 月 26 日发布的 Helix System 1 技术更新，目标是在真实物流传送带环境中实现快速、精确且可迁移的包裹操作。其核心改进包括融合左右相机特征的双目多尺度视觉网络、从机载图像估计末端执行器六自由度位姿的视觉本体感知模块，以及通过在线自校准降低不同机器人传感器与执行机构差异带来的策略分布偏移。系统还建立了以质量和一致性为重点的示教筛选流程，并通过对 200 Hz 动作块进行测试时线性重采样来提高执行速度。官方结果显示，8 小时精选示教即可训练物流策略；双目模型相对非双目基线提高 60% 吞吐量；高质量数据在减少三分之一数据的情况下仍提高 40% 吞吐量；策略在 50% 测试时加速下达到 T_eff > 1，并能泛化到训练中未出现的扁平信封。",
+    "tags": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "该项目是 Figure 针对 Helix Vision-Language-Action 系统的正式软件技术更新，重点是其低层视觉运动控制策略 System 1，而非 Figure 人形机器人硬件本身。",
+        "新版 System 1 将原有单目输入升级为双目视觉骨干网络，并在视觉特征令牌化之前通过多尺度双目网络融合左右相机特征；输入跨注意力 Transformer 的视觉令牌总数保持不变，以避免额外的令牌计算开销。",
+        "多尺度视觉表示同时保留精细物体特征和较大范围的场景信息，用于提升深度相关运动、包裹抓取和重新定向的准确性，并增强对不同包裹尺寸的鲁棒性。",
+        "为解决不同机器人之间传感器标定和关节响应差异造成的观测、动作分布偏移，系统训练视觉本体感知模块，仅使用机载视觉估计末端执行器的六自由度位姿，从而执行在线自校准并迁移同一策略。",
+        "数据流程会剔除缓慢、未命中或失败的人工示教，但保留由环境随机性触发、包含有效恢复动作的示教；项目还通过与遥操作员统一操作策略来提高数据质量和一致性。",
+        "System 1 以 200 Hz 输出动作块；Sport Mode 在测试时将长度为 T 的动作轨迹线性重采样为更短的轨迹，并继续按原控制频率执行，因此无需修改训练过程即可调整操作速度。",
+        "官方实验使用归一化有效吞吐量 T_eff 评估系统，该指标同时计入必要的系统复位时间；结果表明，高质量示教、双目多尺度视觉、在线视觉校准与测试时动作加速可以共同支持真实物流场景中的快速灵巧操作。"
+      ],
+      "capabilities": [
+        "在持续运动的传送带上识别、跟踪、抓取并转移不同尺寸、形状、重量和刚度的包裹。",
+        "通过双臂灵巧操作重新定向包裹，使运输标签朝向扫描位置，并能在环境扰动或抓取偏差后自我纠正。",
+        "利用隐式双目视觉和多尺度视觉特征同时感知精细局部结构、场景上下文与三维深度。",
+        "通过仅依赖机器人机载视觉的视觉本体感知模型估计末端执行器六自由度位姿，实现在线自校准和跨机器人策略迁移。",
+        "在推理阶段对动作块进行线性重采样，以高于示教者的速度执行策略，同时维持较高的操作成功率和灵巧性。"
+      ],
+      "metrics": [
+        {
+          "label": "示教数据量",
+          "note": "官方称经过筛选和整理的示教数据即可训练出灵巧、灵活的物流操作策略。",
+          "value": "8 小时"
+        },
+        {
+          "label": "双目视觉吞吐量提升",
+          "note": "多尺度双目模型相对于非双目基线的结果，并增强了对不同包裹尺寸的鲁棒性。",
+          "value": "60%"
+        },
+        {
+          "label": "高质量数据的吞吐量收益",
+          "note": "使用少三分之一数据的高质量示教模型，相比未按同等标准整理的数据取得的有效吞吐量提升。",
+          "value": "40%"
+        },
+        {
+          "label": "控制与测试时加速",
+          "note": "System 1 以 200 Hz 输出动作块；线性重采样在最高 50% 加速范围内仍有效，50% 加速时报告 T_eff > 1，即有效吞吐量超过训练示教。",
+          "value": "200 Hz；最高 50% 加速；T_eff > 1"
+        },
+        {
+          "label": "未见包裹类型泛化",
+          "note": "配备双目视觉的 System 1 能处理训练数据中未出现过的扁平信封。",
+          "value": "零样本泛化到扁平信封"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.figure.ai/news/helix-logistics"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.figure.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.figure.ai/news/helix-logistics"
       }
     ]
   },
