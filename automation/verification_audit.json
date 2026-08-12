@@ -29071,5 +29071,581 @@
       "software_project": true,
       "summary_zh": "Data Navigator 是 ANYbotics 为 ANYmal 自主巡检机器人构建的集中式资产数据与运维分析平台。它将机器人在工业设施中采集的热成像、声学、可见光和气体数据按设备资产统一组织，通过异常仪表板、历史状态对比和自动趋势线帮助维护团队发现退化迹象、确定维护优先级并提前处理潜在故障。平台还提供 ANYmal 巡检任务调度，将实体机器人的持续数据采集与设备健康分析连接为一套完整工作流。其工程部署覆盖云端、本地和完全隔离网络，并支持接入企业资产管理系统。官方发布时披露的三个工业试点在两周内处理了超过 2,500 次巡检；后续官方案例还报告了每月 130 次任务、超过 1,400 条月度洞察、少于八个月的投资回收期以及 1.5% 的工厂运行时间提升。"
     }
+  },
+  "gigaworld-0-ba54729": {
+    "checked_at": "2026-08-12T04:27:02.985507+00:00",
+    "title": "GigaWorld-0",
+    "accepted": false,
+    "reason": "尚在核验官方项目证据与负责机构。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核对候选仓库、负责组织及其官方项目材料，再确认它是否确实是面向实体机器人的软件项目，并验证发布日期与可引用指标。其余媒体报道只作为线索，不替代官方证据。",
+        "随后会按严格纳入条件给出结构化结论；无法由可访问来源确认的字段会留空或明确标为缺失。",
+        "检索重点包括 GigaAI/Open GigaAI 的官方身份、GigaWorld-0 的专属页面或公告、软件功能、发布日期，以及技术报告中的原始实验结果。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "World models",
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索核验。",
+        "暂不依据用户给出的摘要或日期作出纳入判断。",
+        "最终结论将只采用可访问的官方项目页、机构材料和链接技术资料。",
+        "不会用 arXiv 单独满足官方项目证据条件。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待官方来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/open-gigaai/giga-world-0",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "尚在核验官方项目证据与负责机构。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目，当前不是最终判定。"
+    }
+  },
+  "grant-parallel-task-execution-for-embodied-agent-b32e298": {
+    "checked_at": "2026-08-12T04:27:03.005796+00:00",
+    "title": "GRANT: Parallel Task Execution for Embodied Agents",
+    "accepted": true,
+    "reason": "符合收录条件。GRANT不是机器人硬件或产品规格页，而是面向具身智能体的3D多模态任务调度模型、ORS3D任务与ORS3D-60K评测数据集；其软件目标是让智能体在3D物理世界中理解复合指令、利用可并行子任务的等待时间优化执行顺序，并为动作步骤定位目标物体。项目具有独立官方页面和公开代码仓库，仓库于2025年11月24日明确宣布代码与数据发布；论文及仓库明确列出华中科技大学和小米MiLM Plus的责任归属。虽然论文说明尚未在实体机器人上验证、未来才会开展真机部署，但候选本身属于允许收录的具身模型、数据集与评测软件，而非硬件公告。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "将自然语言复合任务与完整3D场景点云联合编码，理解场景、对象描述及子任务时间约束",
+        "识别可并行与不可并行子任务，并利用等待区间生成更短的长程任务执行顺序",
+        "为每个计划步骤生成自然语言动作描述，同时输出目标物体的3D点级定位掩码",
+        "提供ORS3D-60K数据、预训练权重以及模型训练和评测代码"
+      ],
+      "fields": [
+        "LLM",
+        "Data & benchmarks",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "GRANT面向ORS3D（Operations Research Knowledge-based 3D Grounded Task Scheduling）任务，将自然语言理解、3D空间定位和执行时间优化统一到具身任务调度问题中。官方页面明确将其目标描述为生成可用于物理世界具身智能体的高效、逐步且具有3D定位信息的执行计划。",
+        "模型由3D场景编码器、Tiny-Vicuna大语言模型、调度令牌机制和3D定位头组成。场景编码器以包含XYZ与RGB信息的点云为输入，通过可学习场景查询和交叉注意力形成与LLM维度对齐的场景令牌。",
+        "调度令牌机制使用专门的<SCH>令牌连接LLM与外部优化求解器。LLM先判断子任务是否可并行并提取预计耗时，求解器再把等待区间利用问题表述为0-1背包问题，通过动态规划生成总完成时间更短的子任务顺序。",
+        "模型使用<GRU>令牌标记每个动作步骤对应的目标物体；定位头将该令牌映射至场景查询，通过余弦相似度选择匹配查询，并与点云特征计算点级目标掩码，使计划不只停留在文本层面。",
+        "ORS3D-60K包含60,825个复合任务和4,376个真实场景，覆盖ScanNet、ARKitScenes、HM3D、MultiScan及3RScan等场景来源；每个复合任务包含4至7个子任务，并附带最优调度及逐步骤3D目标定位标注。",
+        "训练实现以预训练CLASP初始化3D场景编码器，默认采用Tiny-Vicuna-1B并通过LoRA微调；官方仓库公开环境配置、数据准备、预训练权重、训练脚本和评测脚本。",
+        "该工作由华中科技大学软件学院、电子信息与通信学院和小米MiLM Plus合作完成；第一作者、共同第一作者及通讯作者均来自华中科技大学，因此索引责任机构记为华中科技大学。"
+      ],
+      "metrics": [
+        {
+          "label": "ORS3D-60K规模",
+          "note": "官方项目页和技术论文报告的数据集精确规模。",
+          "value": "60,825个复合任务，覆盖4,376个真实场景"
+        },
+        {
+          "label": "时间效率",
+          "note": "GRANT-1B在ORS3D-60K测试集上的Time Efficiency；0%表示完全串行，100%表示达到求解器最优调度。",
+          "value": "72.99%"
+        },
+        {
+          "label": "总体成绩",
+          "note": "METEOR、ROUGE、时间效率和3D定位准确率的平均值，不支持的指标按0计。",
+          "value": "53.49"
+        },
+        {
+          "label": "3D目标定位",
+          "note": "GRANT直接处理完整场景点云，不依赖额外3D物体检测器时的AP@0.25。",
+          "value": "35.38"
+        },
+        {
+          "label": "相对基线提升",
+          "note": "论文以Grounded 3D LLM为场景级基线，报告调度时间效率提升30.53个百分点，3D定位准确率提升1.38个百分点。",
+          "value": "调度时间效率+30.53个百分点；3D定位+1.38个百分点"
+        }
+      ],
+      "official_organization_url": "https://english.hust.edu.cn/",
+      "official_project_url": "https://h-embodvis.github.io/GRANT/",
+      "open_source": true,
+      "organization_en": "Huazhong University of Science and Technology",
+      "organization_kind": "University",
+      "organization_zh": "华中科技大学",
+      "reason": "符合收录条件。GRANT不是机器人硬件或产品规格页，而是面向具身智能体的3D多模态任务调度模型、ORS3D任务与ORS3D-60K评测数据集；其软件目标是让智能体在3D物理世界中理解复合指令、利用可并行子任务的等待时间优化执行顺序，并为动作步骤定位目标物体。项目具有独立官方页面和公开代码仓库，仓库于2025年11月24日明确宣布代码与数据发布；论文及仓库明确列出华中科技大学和小米MiLM Plus的责任归属。虽然论文说明尚未在实体机器人上验证、未来才会开展真机部署，但候选本身属于允许收录的具身模型、数据集与评测软件，而非硬件公告。",
+      "social_evidence": [
+        {
+          "independent": true,
+          "platform": "知乎（极市平台）",
+          "url": "https://zhuanlan.zhihu.com/p/1976950604057310046"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "GRANT是华中科技大学联合小米MiLM Plus发布的具身3D多模态任务调度项目，核心目标不是控制某一款特定机器人硬件，而是解决长程复合任务中“做什么、何时做、在哪里做”的联合规划问题。项目提出ORS3D任务和ORS3D-60K数据集，要求智能体从自然语言指令及真实室内场景点云中判断哪些子任务需要持续操作、哪些子任务启动后存在可利用的等待时间，并在最小化总完成时间的同时，为每一步行动定位对应的3D目标物体。GRANT使用场景编码器和LLM完成多模态理解，以<SCH>调度令牌调用动态规划优化求解器，再通过<GRU>定位令牌和3D定位头生成点级目标掩码。官方代码提供数据准备、预训练权重、LoRA训练和评测流程。在ORS3D-60K测试集上，默认1B模型取得72.99%的时间效率、35.38的AP@0.25定位成绩和53.49的总体成绩。需要注意的是，现有结果来自真实场景扫描数据构成的离线基准，论文明确把实体机器人动态环境验证列为后续工作，因此它应被定位为面向机器人下游执行的具身任务规划模型与基准，而不是已经完成真机闭环验证的机器人控制系统。"
+    }
+  },
+  "mimo-embodied-2cc85e2": {
+    "checked_at": "2026-08-12T04:27:03.024624+00:00",
+    "title": "MiMo-Embodied",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终收录结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方发布页、责任机构、软件属性、发布日期和可复现的技术指标。随后会用官方材料与项目仓库交叉检查，避免把媒体描述当作项目证据。",
+        "我会特别检查该页面是否确实以模型、评测套件或数据/软件为主体，而不是硬件产品页。官方页面足够满足项目证据条件，但技术点和指标仍需逐项有来源。",
+        "当前先查找小米 MiMo 团队的官方项目入口及其链接材料，确认组织名称和正式发布时间。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "待核验官方项目页。",
+        "待核验软件发布内容。",
+        "待核验指标。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在搜索官方来源",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终收录结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在依据严格收录条件核验 MiMo-Embodied。"
+    }
+  },
+  "autoseg3d-a630c64": {
+    "checked_at": "2026-08-12T04:27:03.042624+00:00",
+    "title": "AutoSeg3D",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方页面、责任机构、发布日期和技术产物性质。将以项目仓库及其链接材料为主，避免把媒体报道或 arXiv 单独当作官方项目证据。  ",
+        "正在核验候选项目的官方页面、责任机构、发布日期和技术产物性质。将以项目仓库及其链接材料为主，避免把媒体报道或 arXiv 单独当作官方项目证据。  ",
+        "正在核验候选项目的官方页面、责任机构、发布日期和技术产物性质。将以项目仓库及其链接材料为主，避免把媒体报道或 arXiv 单独当作官方项目证据。  "
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "核验中。",
+        "核验中。",
+        "核验中。",
+        "核验中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/AutoLab-SAI-SJTU/AutoSeg3D",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "rynnvla-001-7b-248c3d5": {
+    "checked_at": "2026-08-12T04:27:03.060353+00:00",
+    "title": "RynnVLA-001-7B",
+    "accepted": false,
+    "reason": "Research in progress.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方页面、责任机构、发布时间与技术材料，并区分项目自身声明和媒体二手描述。之后会按严格准入条件给出结构化结论。",
+        "我会优先使用阿里巴巴/达摩院官方仓库、项目页与论文链接；无法由可访问来源支持的字段将明确留空或判为不满足。",
+        "正在补充核对模型结构、训练数据、评测基准及精确结果，避免把量子位报道中的概括直接当成官方技术证据。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress.",
+        "Research in progress.",
+        "Research in progress.",
+        "Research in progress."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification underway.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/alibaba-damo-academy/RynnVLA-001",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "Research in progress.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在依据官方来源核验。"
+    }
+  },
+  "agibot-world-and-open-source-go-1-1eca4ca": {
+    "checked_at": "2026-08-12T04:27:03.078177+00:00",
+    "title": "AgiBot World and Open-Source GO-1",
+    "accepted": false,
+    "reason": "正在检索和核验，尚未作最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、发布主体、软件内容与可报告指标。重点会区分 AgiBot World 数据/工具链和 GO-1 模型是否构成一个有专门页面的软件项目。​​​",
+        "随后只采用官方页面、官方仓库及其链接的技术材料，不把 arXiv 单独视为项目证据。​​​",
+        "同时会检查发布日期、开源状态和机构中英文名称，无法可靠支持的字段将留空或明确判为不收录。​​​"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终判定。​​​",
+        "当前消息仅为进度更新。​​​",
+        "最终结果将按指定结构返回。​​​",
+        "不会根据用户提供的摘要直接补写未经来源验证的指标。​​​"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待网页核验完成",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在检索和核验，尚未作最终判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "rynnrcp-1d90981": {
+    "checked_at": "2026-08-12T04:27:03.095187+00:00",
+    "title": "RynnRCP",
+    "accepted": false,
+    "reason": "正在核验官方来源，当前不是最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方仓库、组织归属、发布日期与实际软件内容，并区分官方材料和媒体转述。随后只填入可由可访问来源支持的技术点、能力与指标。",
+        "正在检查该候选是否有独立的软件项目页面，以及仓库中列明的协议、运行时、适配模型和机器人支持范围。",
+        "我还会核对许可证与发布记录，避免把媒体发布日期或仓库更新时间误当成项目首发日期。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "核验中，尚未形成结论。",
+        "核验中，尚未形成结论。",
+        "核验中，尚未形成结论。",
+        "核验中，尚未形成结论。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "最终结果将在完成官方来源核验后给出。",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/alibaba-damo-academy/RynnRCP",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验官方来源，当前不是最终判定。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 RynnRCP 的官方项目材料、组织归属、软件性质与发布信息。"
+    }
+  },
+  "rynnec-2d506a3": {
+    "checked_at": "2026-08-12T04:27:03.113609+00:00",
+    "title": "RynnEC",
+    "accepted": true,
+    "reason": "收录。RynnEC 满足全部条件：它是阿里巴巴达摩院明确负责、面向机器人具身认知的软件模型项目；官方专用仓库发布了可安装代码、2B/7B 模型权重、训练与评测流程以及 RynnEC-Bench，并采用 Apache-2.0 许可证。其目标是从第一视角视频中产生细粒度物体、分割和空间认知信息，为机器人感知与高层决策提供认知能力，而非销售或介绍机器人硬件。官方仓库显示软件首批发布日为 2025 年 8 月 8 日；论文最初提交日期为 2025 年 8 月 19 日。([raw.githubusercontent.com](https://raw.githubusercontent.com/alibaba-damo-academy/RynnEC/main/README.md))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "处理视频、区域掩码与文本交织输入，并生成文本回答或目标掩码。",
+        "识别物体属性、数量、状态、表面细节、功能用途及其环境关系。",
+        "依据直接指代表达或情境化自然语言描述执行视频目标分割。",
+        "理解以机器人或相机为中心的方向、距离、可达性、运动轨迹和未来视角变化。",
+        "估计物体尺寸、高度、物体间距离以及绝对和相对空间位置。"
+      ],
+      "fields": [
+        "LLM",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "RynnEC 是面向具身认知的视频多模态大语言模型，而不是机器人硬件产品；官方仓库明确提供模型权重、训练代码、推理示例、评测脚本和在线演示，因此属于可部署的软件研究项目。官方首次公开发布 RynnEC-2B、RynnEC-Bench 与训练代码的日期是 2025 年 8 月 8 日，而候选所给的 2025 年 8 月 11 日并非仓库标注的发布日期；RynnEC-7B 随后于 2025 年 8 月 17 日发布。([raw.githubusercontent.com](https://raw.githubusercontent.com/alibaba-damo-academy/RynnEC/main/README.md))",
+        "模型以 VideoLLaMA3 的视频视觉编码器和基础参数为起点，增加区域编码器与掩码解码器，使视频、区域掩码和文本可以交织输入，并支持文本或掩码两类输出；这一设计用于实例级理解、视觉指代和目标定位。([arxiv.org](https://arxiv.org/abs/2508.14160))",
+        "项目把具身认知划分为物体认知和空间认知：前者覆盖属性、数量、功能、环境关系和指代分割，后者同时覆盖世界中心尺度与位置推理，以及机器人自身视角下的方向、距离、可达性和运动推理。([arxiv.org](https://arxiv.org/abs/2508.14160))",
+        "数据引擎从室内第一视角 RGB 视频开始，先进行实例分割与跟踪；物体认知分支采用人工参与的数据生成流程，空间认知分支通过 MASt3R-SLAM 单目稠密三维重建、相机外参和二维至三维投影生成空间问答数据。([arxiv.org](https://arxiv.org/abs/2508.14160))",
+        "模型采用四阶段渐进训练流程：掩码对齐、物体理解、空间理解和指代分割，逐步整合视觉区域对齐、细粒度物体知识、三维空间知识与目标分割能力。([arxiv.org](https://arxiv.org/abs/2508.14160))",
+        "RynnEC-Bench 是随项目发布的区域中心具身认知评测集，覆盖物体属性认知、指代视频目标分割和多类空间认知任务；官方仓库同时提供相应数据入口与三个类别的评测脚本。([raw.githubusercontent.com](https://raw.githubusercontent.com/alibaba-damo-academy/RynnEC/main/README.md))",
+        "官方材料将 RynnEC 定位为机器人感知和具身认知核心，而不是完整闭环控制策略；报告把与 VLA 模型集成、形成感知规划闭环系统列为未来方向，因此不应把它描述为已经实现机器人动作控制的 VLA。([arxiv.org](https://arxiv.org/abs/2508.14160))"
+      ],
+      "metrics": [
+        {
+          "label": "第一视角视频数据规模",
+          "note": "来自 200 多个住宅的室内移动视频，视频按约 40 秒切分。",
+          "value": "20,832 个视频"
+        },
+        {
+          "label": "RynnEC-Bench 能力覆盖",
+          "note": "覆盖物体认知和空间认知两个主要领域。",
+          "value": "22 项具身认知能力"
+        },
+        {
+          "label": "VSI-Bench",
+          "note": "技术报告列出的 RynnEC-7B 空间智能评测结果。",
+          "value": "45.8"
+        },
+        {
+          "label": "直接指代视频目标分割提升",
+          "note": "技术报告称，相对当时先进的分割 MLLM，RynnEC 在 direct referring 任务上的提升。",
+          "value": "30.9%"
+        },
+        {
+          "label": "情境指代视频目标分割提升",
+          "note": "技术报告称，相对当时先进的分割 MLLM，RynnEC 在 situational referring 任务上的提升。",
+          "value": "57.7%"
+        }
+      ],
+      "official_organization_url": "https://damo.alibaba.com",
+      "official_project_url": "https://github.com/alibaba-damo-academy/RynnEC",
+      "open_source": true,
+      "organization_en": "Alibaba DAMO Academy",
+      "organization_kind": "Research Lab",
+      "organization_zh": "阿里巴巴达摩院",
+      "reason": "收录。RynnEC 满足全部条件：它是阿里巴巴达摩院明确负责、面向机器人具身认知的软件模型项目；官方专用仓库发布了可安装代码、2B/7B 模型权重、训练与评测流程以及 RynnEC-Bench，并采用 Apache-2.0 许可证。其目标是从第一视角视频中产生细粒度物体、分割和空间认知信息，为机器人感知与高层决策提供认知能力，而非销售或介绍机器人硬件。官方仓库显示软件首批发布日为 2025 年 8 月 8 日；论文最初提交日期为 2025 年 8 月 19 日。([raw.githubusercontent.com](https://raw.githubusercontent.com/alibaba-damo-academy/RynnEC/main/README.md))",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=vsMxbzsmrQc"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "RynnEC 是阿里巴巴达摩院发布的具身认知视频多模态大语言模型，重点解决机器人在连续第一视角视频中的细粒度物体理解、实例定位与空间推理问题。它在 VideoLLaMA3 基础上引入区域编码器和掩码解码器，可接受视频、文本及区域掩码的交织输入，并输出自然语言或视频目标掩码。项目还构建了从第一视角 RGB 视频生成物体与空间问答数据的流水线，以及覆盖 22 项能力的 RynnEC-Bench。官方发布物包括 Apache-2.0 代码、2B/7B 权重、训练和评测脚本、推理 notebooks、基准数据与在线演示。需要严格限定的是，RynnEC 当前属于机器人感知和高层具身认知模型，并未在官方材料中被证明为能够直接输出机器人动作或完成闭环控制的 VLA。"
+    }
+  },
+  "genie-envisioner-1-0-74fece7": {
+    "checked_at": "2026-08-12T04:27:03.131805+00:00",
+    "title": "Genie Envisioner 1.0",
+    "accepted": false,
+    "reason": "",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目页、责任机构、发布时间和软件构成，再从技术报告与仓库中提取可复核的能力和指标。不会把媒体摘要或 arXiv 单独当作纳入依据。",
+        "检索重点包括 Genie Envisioner 是否确有独立的软件项目页面，以及“视频预测、神经仿真、动作策略、基准”各模块是否已实际发布。后续只采用官方或项目直接链接材料中的可核实表述。",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "worldvla-4fe2a8a": {
+    "checked_at": "2026-08-12T04:27:03.150644+00:00",
+    "title": "WorldVLA",
+    "accepted": true,
+    "reason": "收录。WorldVLA是明确面向物理机器人操作的VLA与动作世界模型软件，而非机器人硬件或产品规格页。阿里巴巴达摩院的官方Hugging Face项目页提供模型权重、Apache-2.0许可证、机器人动作生成与未来图像生成说明以及LIBERO结果；官方GitHub仓库记录其于2025年6月23日发布模型、训练代码和评估代码。论文明确列出责任机构为Alibaba DAMO Academy、Hupan Lab和Zhejiang University，并给出2025年6月26日的arXiv首发记录及2025年6月27日的报告日期。因此其满足2025年后软件项目、具备专门官方页面且责任机构明确的全部条件。用户给出的2025年6月30日不是来源中最早的官方发布日期。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据自然语言指令与图像观测生成离散机器人动作",
+        "根据当前图像和动作控制预测后续图像帧",
+        "在同一自回归框架内联合训练动作策略与世界模型",
+        "通过动作注意力掩码生成多步动作块并抑制误差累积",
+        "在LIBERO机器人操作基准上执行空间、物体、目标与长时程任务"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "WorldVLA是面向机器人操作的软件模型，由动作模型与世界模型组成：动作模型实现“文本+图像→动作”，世界模型实现“动作+图像→未来图像”。",
+        "模型以Chameleon多模态大模型为基础，分别使用文本、图像和动作分词器，将三种模态编码为共享词表中的离散序列，并由统一的自回归架构处理。",
+        "训练数据混合动作生成样本和未来图像生成样本，联合目标为L_action与加权L_world之和；论文实验将世界模型损失权重α设为0.04。",
+        "动作模型默认接收2帧历史图像；除LIBERO-Long采用10步动作块外，其余三个LIBERO任务采用5步动作块。世界模型根据历史图像与对应动作生成下一帧。",
+        "针对普通因果注意力下先前动作错误向后传播的问题，项目提出动作注意力掩码：当前动作仅访问文本和视觉输入，不访问此前生成的动作，从而支持动作块并行生成。",
+        "项目在LIBERO-Spatial、LIBERO-Object、LIBERO-Goal和LIBERO-Long上评估，每项任务使用50次不同初始状态的运行计算成功率；世界模型则使用FVD、PSNR、SSIM和LPIPS评估。",
+        "官方模型页发布了256×256及512×512分辨率的WorldVLA权重；原GitHub项目后来被官方升级并重定向为RynnVLA-002，但官方Hugging Face页面仍保留独立的WorldVLA模型与结果。"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO平均成功率",
+          "note": "512×512离散动作模型；四个LIBERO任务平均，且未使用大规模机器人数据预训练。",
+          "value": "81.8%"
+        },
+        {
+          "label": "LIBERO-Object成功率",
+          "note": "512×512 WorldVLA；官方模型页与论文表2报告。",
+          "value": "96.2%"
+        },
+        {
+          "label": "LIBERO-Spatial成功率",
+          "note": "512×512 WorldVLA；官方模型页与论文表2报告。",
+          "value": "87.6%"
+        },
+        {
+          "label": "世界模型辅助动作生成",
+          "note": "消融实验中，加入世界模型后、未使用动作分块时，平均成功率由62.8%提高至67.2%。",
+          "value": "+4.4个百分点"
+        },
+        {
+          "label": "50帧未来生成FVD",
+          "note": "论文表4中，联合动作世界模型为674.1，独立世界模型为718.6；FVD越低越好。",
+          "value": "674.1"
+        }
+      ],
+      "official_organization_url": "https://www.alibabagroup.com/en-US/research/damo-academy",
+      "official_project_url": "https://huggingface.co/Alibaba-DAMO-Academy/WorldVLA",
+      "open_source": true,
+      "organization_en": "Alibaba DAMO Academy",
+      "organization_kind": "Research Lab",
+      "organization_zh": "阿里巴巴达摩院",
+      "reason": "收录。WorldVLA是明确面向物理机器人操作的VLA与动作世界模型软件，而非机器人硬件或产品规格页。阿里巴巴达摩院的官方Hugging Face项目页提供模型权重、Apache-2.0许可证、机器人动作生成与未来图像生成说明以及LIBERO结果；官方GitHub仓库记录其于2025年6月23日发布模型、训练代码和评估代码。论文明确列出责任机构为Alibaba DAMO Academy、Hupan Lab和Zhejiang University，并给出2025年6月26日的arXiv首发记录及2025年6月27日的报告日期。因此其满足2025年后软件项目、具备专门官方页面且责任机构明确的全部条件。用户给出的2025年6月30日不是来源中最早的官方发布日期。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "WorldVLA是阿里巴巴达摩院牵头、与湖畔实验室及浙江大学合作推出的自回归动作世界模型。它将机器人VLA策略和世界模型统一到一个基于Chameleon的离散序列框架中：一方面根据语言指令和视觉观测输出机器人动作，另一方面根据图像与动作预测未来视觉状态。其核心价值不是单纯增加视频生成模块，而是让动作学习与环境动力学学习共享表示并相互增强。项目还提出专门的动作注意力掩码，使动作块中的每个动作直接依赖文本和视觉上下文，而不依赖此前生成的动作，以减少自回归误差传播。官方发布包含代码、训练与评估流程以及多组LIBERO模型权重；512×512版本在四个LIBERO任务上的平均成功率为81.8%，其中LIBERO-Object达到96.2%。"
+    }
+  },
+  "genie-operator-1-go-1-d4d8061": {
+    "checked_at": "2026-08-12T04:27:03.168692+00:00",
+    "title": "Genie Operator-1 (GO-1)",
+    "accepted": true,
+    "reason": "符合收录条件。GO-1 是于 2025 年 3 月10日正式发布、直接面向真实物理机器人操作的软件模型；AgiBot World 官方项目页、AGIBOT 官方研究页面、技术报告及官方模型仓库均明确说明其 ViLLA 架构、训练数据、机器人动作生成能力和实验结果。项目有独立官方页面，并明确由 AGIBOT 及 AgiBot-World 项目负责。模型、代码和权重随后于2025年9月正式开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据自然语言指令与多视角视觉观测理解场景、物体和操作目标",
+        "通过隐式动作表示进行长时序任务规划，并生成机器人连续动作",
+        "利用少样本示范适配新任务、未见物体和分布外场景",
+        "从人类视频、跨机器人数据与真机示范中进行统一预训练",
+        "执行双臂、灵巧手、接触丰富和需要工具使用的真实机器人操作"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "GO-1 是面向物理机器人操作的通用具身基础模型，而非机器人硬件产品；其输入包括视觉观测、语言指令与机器人状态，输出可执行的连续机器人动作。",
+        "模型采用 Vision-Language-Latent-Action（ViLLA）架构，将视觉语言模型、Latent Planner 与 Action Expert 组合起来，在语义理解和底层动作生成之间加入隐式动作表示。",
+        "视觉语言模块以 InternVL 2.5-2B 为基础，利用互联网规模的异构视觉语言数据获得场景、物体与指令理解能力；公开模型总规模约为 30 亿参数。",
+        "Latent Planner 从人类操作视频、跨本体机器人轨迹等异构数据中学习通用动作语义，使模型能够利用没有统一机器人动作标签的数据，并支持长时序规划和跨本体迁移。",
+        "Action Expert 使用 AgiBot World 的大规模真实机器人示范学习高频连续控制；预训练动作块长度和控制频率输入均设为 30，对应数据集的 30 Hz 采集频率。",
+        "训练数据覆盖超过 100 万条真实机器人轨迹、217 项任务、5 类部署场景和3000余种物体，并通过标准化采集流程、人工复核及 human-in-the-loop 质量控制构建。",
+        "官方代码、预训练权重、微调配置、本地及远程推理接口已经发布；实现支持在自定义 LeRobot 格式数据上完整微调或仅微调 Action Expert，并可部署到真实机器人或仿真基准。"
+      ],
+      "metrics": [
+        {
+          "label": "复杂真实任务成功率",
+          "note": "技术报告称 GO-1 在包含灵巧操作和长时序操作的复杂任务上成功率超过 60%。",
+          "value": ">60%"
+        },
+        {
+          "label": "相对 RDT 的性能提升",
+          "note": "在五项不同视觉复杂度和任务时长的真实机器人任务上，报告的总体性能相对 RDT 提升。",
+          "value": "32%"
+        },
+        {
+          "label": "AgiBot World 预训练收益",
+          "note": "使用 AgiBot World 预训练的策略在域内和分布外测试中，相比使用 Open X-Embodiment 预训练平均提升。",
+          "value": "30%"
+        },
+        {
+          "label": "训练数据规模",
+          "note": "AgiBot World Beta 官方仓库列出的完整数据规模为 1,003,672 条真实机器人轨迹，约 43.8 TB。",
+          "value": "1,003,672 trajectories (~43.8 TB)"
+        },
+        {
+          "label": "任务与场景覆盖",
+          "note": "技术报告列出 217 项任务，分布于 5 类部署场景，并涉及 3000 余种物体。",
+          "value": "217 tasks / 5 scenarios / 3,000+ objects"
+        }
+      ],
+      "official_organization_url": "https://www.agibot.com/",
+      "official_project_url": "https://agibot-world.com/",
+      "open_source": true,
+      "organization_en": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "智元创新（上海）科技股份有限公司",
+      "reason": "符合收录条件。GO-1 是于 2025 年 3 月10日正式发布、直接面向真实物理机器人操作的软件模型；AgiBot World 官方项目页、AGIBOT 官方研究页面、技术报告及官方模型仓库均明确说明其 ViLLA 架构、训练数据、机器人动作生成能力和实验结果。项目有独立官方页面，并明确由 AGIBOT 及 AgiBot-World 项目负责。模型、代码和权重随后于2025年9月正式开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Genie Operator-1（GO-1）是智元机器人围绕 AgiBot World 数据平台开发的通用机器人基础策略。其核心是 ViLLA 架构：视觉语言模型负责理解图像、物体和自然语言指令，Latent Planner 将人类视频、跨机器人轨迹等异构数据压缩为隐式动作语义，Action Expert 再把规划结果转换为高频连续机器人控制。该设计试图解决传统 VLA 模型只能直接对齐语言、图像与特定机器人动作，难以充分利用无动作标签视频及不同机器人本体数据的问题。GO-1 在超过百万条真机轨迹上预训练，覆盖双臂操作、灵巧手、视觉触觉、工具使用、移动操作和长时序任务。技术报告称其复杂任务成功率超过60%，相对 RDT 提升32%，并呈现随真机数据量增加而持续改善的性能扩展趋势。官方已发布模型权重、训练与微调代码、数据转换工具以及本地和远程推理接口，因此它不仅是研究演示，也是可以继续训练并接入真实机器人系统的软件项目。"
+    }
   }
 }
