@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T14:52:31.118849+00:00",
+  "generated_at": "2026-08-12T03:13:44.037298+00:00",
   "candidates": [
     {
       "title": "World Tokens: Enhancing Embodied Policies with Training-Time World Modeling",
@@ -364,6 +364,18 @@
         "keywords: vision-language-action, vla",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Capek 0.5",
+      "url": "https://xpeng-robotics.github.io/capek-0.5/",
+      "date": "2026-08-07",
+      "summary": "An execution-centric vision-language model for embodied intelligence, post-trained around spatial reasoning, temporal understanding, action guidance and execution-state verification. The release also introduces the Capek-StateBench evaluation suite.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -764,6 +776,18 @@
       "score": 26,
       "reasons": [
         "keywords: vision-language-action, vla"
+      ]
+    },
+    {
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets?other=LeRobot",
+      "date": "2026-08-05",
+      "summary": "Explore datasets powering machine learning.",
+      "organization_hint": "Hugging Face LeRobot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -2280,6 +2304,18 @@
       ]
     },
     {
+      "title": "GEN-1 Multi-End-Effector Expansion",
+      "url": "https://generalistai.com/blog/towards-machines-with-a-thousand-hands",
+      "date": "2026-07-23",
+      "summary": "Generalist announced an expansion of GEN-1 across a broad range of robot end effectors, enabling one base model to learn and transfer sensorimotor policies among different hands, grippers and specialized tools.",
+      "organization_hint": "Generalist AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Addressing the Orchestration Gap in Generalist Robots via Physical Agency",
       "summary": "General-purpose robots need to reason about their actions, combining perception, world knowledge, planning, success detection, recovery, and low-level control. Today's state-of-the-art models attempt to combine all these capabilities into the learned policy via large-scale pre-training. Instead, we show that these capabilities can be decomposed into a general language-conditioned policy/control agent and a high-level agent manager/orchestrator. Rather than training policies to reason via pre-training, we build a closed-loop physical agent orchestrator that can do high-level planning, decompose the goal into achievable subgoals, command low-level motor commands, track and verify the outcome from low-level observations, and recover from failures. Our Physical Agency orchestrator (Pigey) can control existing vision-language-action (VLA) policies as well as parametrized skills to solve complex reasoning tasks in the real world, without any additional data collection or post-training. We evaluate Pigey extensively across simulation benchmarks and challenging real-world robotic manipulation tasks, and demonstrate significant performance improvements over existing generalist policies. On LIBERO-PRO, Pigey advances the state-of-the-art by over 4x (12.8% -> 53.3%) with no task-specific fine-tuning. On a real robot, Pigey lifts the frozen policy from near-zero to over 90% on reasoning-limited tasks. We call the difference between what frozen motor skills achieve alone and inside the agentic loop the orchestration gap.",
       "date": "2026-07-23",
@@ -2944,18 +2980,6 @@
       ]
     },
     {
-      "title": "HydroShear",
-      "url": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
-      "date": "2026-07-10",
-      "summary": "HydroShear is a physics-based tactile simulator for training contact-rich robotic manipulation policies in simulation and transferring them to real robots.",
-      "organization_hint": "Amazon Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Write-Protected Discrete Bottlenecks for Language-Grounded World Models: A Structural Limitation and Sufficient Fix",
       "summary": "How should language interface with a world model's discrete symbol system? The dominant paradigm -- end-to-end injection of LLM/VLM features into robot world models (RT-2, Octo, PaLM-E) -- implicitly assumes that language gradients can directly shape physical symbol representations. We ask whether this assumption is safe, find that it is not, and characterize the minimal architectural constraint that prevents the failure. Any language gradient entering a Gumbel-softmax-based discrete symbol bottleneck forces a structural trade-off: the vanilla estimator collapses to 2.2/64 symbols (4/5 seeds), while five anti-collapse strategies maintain diversity but fail to learn semantic labels (all <= 9.2% accuracy). No tested GumbelBottleneck variant achieves both objectives simultaneously. Within this family of discrete bottlenecks, the failure is structural rather than a matter of optimization. We characterize a sufficient set of three constraints that prevent the failure: (1) cut the gradient chain (z.detach()), preventing language signals from reaching the symbol bottleneck; (2) provide a gradient-free semantic channel -- a non-parametric Memory Table (Dict[symbol -> Counter[label]], zero parameters, zero gradients) where co-occurrence counting replaces gradient-based binding; (3) handle symbol collisions via DP-Means streaming clustering for automatic sub-cluster splitting. All three layers together achieve 97.2% grounding accuracy vs. 22.2% without Layer 3. Across two experiments spanning 74 independent runs, we demonstrate zero symbol collapse in all 32 seeds, with the blackboard achieving 79-100% semantic binding across three encoder architectures (CNN, V-JEPA 300M, CLIP ViT-L), two environments, and three texture conditions. The fix trains fewer than 2M parameters and requires no LLM fine-tuning.",
       "date": "2026-07-09",
@@ -3523,11 +3547,35 @@
       ]
     },
     {
+      "title": "How HydroShear gives robots a realistic sense of touch, trained entirely in simulation - Amazon Science Close Close",
+      "url": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
+      "date": "2026-07-01",
+      "summary": "HydroShear, a new physics-based simulator, teaches robots how to use their sense of touch to perform complex manipulation tasks, in a way that transfers seamlessly to the real world.",
+      "organization_hint": "Amazon Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "X-Tokenizer",
       "url": "https://github.com/X-Square-Robot/X-Tokenizer",
       "date": "2026-06-30",
       "summary": "A multimodal action tokenizer that provides a semantic interface between vision-language reasoning and continuous robot control for VLA pretraining.",
       "organization_hint": "自变量机器人 / X² Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Si0",
+      "url": "https://xpeng-robotics.github.io/si0/",
+      "date": "2026-06-30",
+      "summary": "A multimodal foundation-model backbone designed to provide spatial and physical-world understanding for humanoid control, using general, human egocentric-exocentric and robot-domain training data.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -3962,6 +4010,18 @@
       ]
     },
     {
+      "title": "Telescope: Learnable Hyperbolic Foveation for Ultra-Long-Range Object Detection",
+      "url": "https://github.com/torc-ai/Telescope",
+      "date": "2026-06-17",
+      "summary": "Official open-source training and evaluation implementation of Telescope, a two-stage foveated object-detection model designed for ultra-long-range autonomous-driving perception.",
+      "organization_hint": "Torc Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
       "summary": "Evaluating generalist robot manipulation policies in the real world is expensive, slow, and difficult to scale. Action-conditioned video world models offer a scalable alternative by simulating policy rollouts. Autoregressive rollouts accumulate compounding errors, observations across multiple camera views must remain mutually consistent, and the evaluator must generalize to policies whose behaviors lie outside the training distribution. We address these challenges with SC3-Eval, a self-consistent video generation recipe that adapts a pre-trained video foundation model into an accurate policy evaluator by enforcing three complementary forms of consistency. First, forward-inverse dynamics consistency jointly trains the model to predict frames from actions and to recover actions from frames, anchoring generated rollouts to a physically plausible action manifold and counteracting the drift a forward-only model cannot penalize. Second, cross-view consistency trains the model to inpaint each camera view from the other, keeping the multi-camera observation coherent over long rollouts without any explicit memory mechanism. Third, test-time consistency reuses the inverse dynamics mode at inference as a per-action-chunk uncertainty signal that terminates rollouts whose generated frames drift away from the requested actions. We also demonstrate SC3-Eval rollouts reproduce the failure modes that policies exhibit in real-world rollouts, supporting fine-grained diagnostic comparison rather than aggregate ranking alone. Across seven real-world vision-language-action policies, SC3-Eval attains a closed-loop Pearson correlation of $0.929$ and MMRV of $0.119$, outperforming three strong prior video-model-based baselines, and generalizes to new tasks.",
       "date": "2026-06-17",
@@ -4255,6 +4315,18 @@
       ]
     },
     {
+      "title": "ROVE",
+      "url": "https://xpeng-robotics.github.io/rove/",
+      "date": "2026-06-14",
+      "summary": "A human-in-the-loop reinforcement-learning framework for post-training humanoid VLA policies from autonomous rollouts, imperfect operator interventions and cross-embodiment human-experience videos.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "A Bilateral Teleoperation Framework for Dexterous Manipulation",
       "summary": "Dexterous teleoperation requires precise arm-hand coordination, low-latency feedback, and robust interaction in real-world contact-rich environments. This paper presents a modular bilateral teleoperation framework that integrates operator-side input interfaces with a robot-side dexterous hand and compliant robotic arm in a unified control architecture. The system supports position-based hand retargeting, differential arm control, multi-scale haptic feedback, and shared control for stable manipulation. We validate the framework through a real-world dexterous manipulation task, highlighting coordinated arm-hand control and contact-aware interaction. Beyond feasibility, we identify key design insights related to cross-embodiment mismatch, haptic feedback granularity, and shared control. The proposed platform provides a practical teleoperation system and a foundation for collecting high-quality demonstrations for future learning-from-demonstration research.",
       "date": "2026-06-13",
@@ -4413,6 +4485,18 @@
       ]
     },
     {
+      "title": "AGRA",
+      "url": "https://xpeng-robotics.github.io/agra/",
+      "date": "2026-06-10",
+      "summary": "An action-grounded representation-alignment objective for world action models that aligns video-model features with spatially structured visual representations to improve manipulation policies and generalization.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "UniDexTok: A Unified Dexterous Hand Tokenizer from Real Data",
       "summary": "Dexterous hands are essential for fine-grained manipulation, but their hardware designs vary substantially across embodiments. Differences in kinematics, joint definitions, and degrees of freedom make it difficult to define a shared state representation compared with parallel grippers. As a result, dexterous-hand data remains fragmented and difficult to use for joint training. In this work, we propose the Unified Dexterous Hand Model (UDHM), which maps human and robot hand states into a shared 22-DoF semantic interface. Based on UDHM, we introduce UniDexTok, a retargeting-free state tokenizer that learns embodiment-conditioned discrete tokens from standardized real joint states. UniDexTok provides a unified representation for heterogeneous dexterous hands without relying on retargeting or simulation data. Compared with the recent baseline UniHM, UniDexTok reduces MPJAE from 15.63 degrees to 0.16 degrees and MPJPE from 18.51 mm to 0.18 mm, corresponding to error reductions of 98.98% and 99.03%, respectively. These results improve reconstruction from centimeter-scale to sub-millimeter accuracy. Experiments further show that data from other embodiments improves target-embodiment reconstruction accuracy, demonstrating the benefit of cross-embodiment tokenization. UniDexTok also shows strong zero-shot and few-shot reconstruction ability when new dexterous hands are introduced.",
       "date": "2026-06-09",
@@ -4558,6 +4642,18 @@
       ]
     },
     {
+      "title": "DriveGATr: Efficient Equivariant Transformer for Self-Driving Agent Modeling",
+      "url": "https://waabi.ai/research/drivegatr",
+      "date": "2026-06-07",
+      "summary": "DriveGATr is an efficient SE(2)-equivariant transformer architecture for scalable traffic-agent modeling in autonomous driving.",
+      "organization_hint": "Waabi",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation",
       "summary": "Humanoid foundation models are advancing faster than we can evaluate them. While real-world testing is expensive and difficult to reproduce, existing simulation benchmarks focus primarily on table-top or wheeled robots. A scalable and reproducible benchmark for whole-body humanoid loco-manipulation remains an open problem. To this end, we present SIMPLE, a unified simulation testbed for humanoid policy learning and evaluation. SIMPLE couples the accurate contact-rich dynamics of MuJoCo with the photorealistic rendering of IsaacSim. It provides a large-scale environment comprising 60 diverse whole-body tasks, 50 indoor scenes, and over 1,000 object assets. To facilitate scalable data collection, the framework integrates two data generation pipelines: automated trajectory generation via motion planning and a low-latency VR teleoperation interface. We further integrate and benchmark mainstream humanoid policies at scale in SIMPLE, including lightweight imitation networks, large vision-language-action (VLA) models, and recent world action models (WAMs). Our experiments reveal a strong correlation between policy performance in simulation and the real world. Furthermore, we demonstrate that policies trained on data collected in SIMPLE can be transferred zero-shot to physical humanoid robots under similar settings, providing a robust and reproducible foundation for humanoid robotics research.",
       "date": "2026-06-06",
@@ -4629,6 +4725,42 @@
       ]
     },
     {
+      "title": "Conditional Flow-VAE for Safety-Critical Traffic Scenario Generation",
+      "url": "https://waabi.ai/research/conditional-flow-vae-for-safety-critical-traffic-scenario-generation",
+      "date": "2026-06-04",
+      "summary": "Conditional Flow-VAE generates realistic, diverse and controllable safety-critical traffic scenarios for autonomous-vehicle training and benchmarking.",
+      "organization_hint": "Waabi",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "XPENG Showcases Physical AI & World Model at CVPR 2026",
+      "url": "https://www.xpeng.com/pressroom/news/019e95aed2899e8226228a028d650112",
+      "date": "2026-06-03",
+      "summary": "At CVPR 2026, XPENG showcases its World Model blueprint, a 4,360% surge in single-job training efficiency, and VLA 2.0 commercial deployment.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Traffic Scenario Orchestration from Language via Constraint Satisfaction",
+      "url": "https://waabi.ai/research/scenario-orchestration",
+      "date": "2026-06-03",
+      "summary": "This neurosymbolic framework translates natural-language scenario descriptions into constraints for controllable, closed-loop autonomous-vehicle simulation.",
+      "organization_hint": "Waabi",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-06-03",
       "organization_hint": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
       "summary": "AGIBOT WORLD 2026 Theme 2 is an open real-world dataset focused on contact-rich robot interactions, imperfect executions and varied physical properties.",
@@ -4641,11 +4773,59 @@
       ]
     },
     {
+      "title": "XPENG Unveils X-Mind: A Future-Foresight Brain for Autonomous Driving",
+      "url": "https://www.xpeng.com/pressroom/news/019f12539bff9f1220b48a028223000e",
+      "date": "2026-06-02",
+      "summary": "XPENG introduces X-Mind, a breakthrough World Model framework that combines proactive reasoning, Visual Chain-of-Thought, and predictive intelligence to enable safer, more transparent, and human-like autonomous driving.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Working with the Robot Model | Hello Robot Docs GitBook Assistant GitBook Assistant arrow-up-right-and-arrow-down-left-from-center GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant linkedin GitBook Assistant GitBook Assistant",
+      "url": "https://docs.hello-robot.com/stretch4_docs/working-with-stretch/common_tasks/working-with-stretch-robot-model",
+      "date": "2026-06-02",
+      "summary": "Official release page from Hello Robot.",
+      "organization_hint": "Hello Robot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "SaLF: Sparse Local Fields for Multi-Sensor Rendering in Real-Time",
+      "url": "https://waabi.ai/research/salf",
+      "date": "2026-06-02",
+      "summary": "SaLF is a sparse volumetric representation that supports real-time camera and LiDAR rendering for autonomous-driving sensor simulation.",
+      "organization_hint": "Waabi",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Humanoid-GPT",
       "url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
       "date": "2026-06-02",
       "summary": "Humanoid-GPT is a GPT-style causal Transformer for zero-shot whole-body humanoid motion tracking, pretrained on a two-billion-frame motion corpus.",
       "organization_hint": "银河通用 / Galbot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GenRe: Diffusion-guided Generalizable Enhancer for Urban Scene Reconstruction",
+      "url": "https://waabi.ai/research/genre",
+      "date": "2026-06-02",
+      "summary": "GenRe uses diffusion priors to enhance urban-scene reconstructions for robust, scalable sensor simulation from challenging novel viewpoints.",
+      "organization_hint": "Waabi",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -4799,6 +4979,18 @@
       "date": "2026-05-30",
       "summary": "LeTools-Learning added support for ten models built into LeRobot 0.5.2 and external models including LingbotVLA, PI0, PI0-FAST, PI0.5 and GR00T N1.7.",
       "organization_hint": "乐聚机器人 / Leju Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Fe0",
+      "url": "https://xpeng-robotics.github.io/fe0/",
+      "date": "2026-05-30",
+      "summary": "An embodied foundation model and controlled evaluation framework examining how heterogeneous human and robot data transfers visual, semantic, relational, planning and control capabilities to humanoid execution.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6113,6 +6305,18 @@
       ]
     },
     {
+      "title": "UniT",
+      "url": "https://github.com/xpeng-robotics/UniT",
+      "date": "2026-04-21",
+      "summary": "A unified physical-language tokenizer that maps heterogeneous human and robot motion into a shared latent action space for cross-embodiment VLA policy learning and world-model conditioning.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "EngineAI-Lab (engineai_amp)",
       "url": "https://github.com/engineai-robotics/engineai_amp",
       "date": "2026-04-21",
@@ -6474,6 +6678,18 @@
       ]
     },
     {
+      "title": "Q1 2026 Vention Platform Release",
+      "url": "https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094",
+      "date": "2026-04-09",
+      "summary": "Vention released robotics-control and simulation updates including conveyor motor support, contact-sensitive motion, improved I/O, vacuum-gripper simulation and expanded Universal Robots and FANUC integration.",
+      "organization_hint": "Vention",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "HY-Embodied-0.5",
       "url": "https://github.com/Tencent-Hunyuan/HY-Embodied",
       "date": "2026-04-09",
@@ -6608,6 +6824,18 @@
       ]
     },
     {
+      "title": "How do I add custom Mujoco environments to docker install of stretch_ros2/stretch_simulation - Ask - Stretch Forum",
+      "url": "https://forum.hello-robot.com/t/how-do-i-add-custom-mujoco-environments-to-docker-install-of-stretch-ros2-stretch-simulation/1479",
+      "date": "2026-04-07",
+      "summary": "Hi,  I am getting started in using the docker installation of the stretch mujoco simulation and am wondering if I can upload a custom mujoco scene or even just a plain scene where the robot starts at the origin on a a basic floor. I have looked through the stretch_mujoco_driver.launch file and it seems like choosing a robo casa scene is the default. Is there a step I am missing or is there a workaround to this, specifically in the docker installation version?  Thanks!",
+      "organization_hint": "Hello Robot",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing",
       "summary": "Building generalist embodied agents requires integrating perception, language understanding, and action, which are core capabilities addressed by Vision-Language-Action (VLA) approaches based on multimodal foundation models, including recent advances in vision-language models and world models. Despite rapid progress, VLA methods remain fragmented across incompatible architectures, codebases, and evaluation protocols, hindering principled comparison and reproducibility. We present StarVLA, an open-source codebase for VLA research. StarVLA addresses these challenges in three aspects. First, it provides a modular backbone--action-head architecture that supports both VLM backbones (e.g., Qwen-VL) and world-model backbones (e.g., Cosmos) alongside representative action-decoding paradigms, all under a shared abstraction in which backbone and action head can each be swapped independently. Second, it provides reusable training strategies, including cross-embodiment learning and multimodal co-training, that apply consistently across supported paradigms. Third, it integrates major benchmarks, including LIBERO, SimplerEnv, RoboTwin~2.0, RoboCasa-GR1, and BEHAVIOR-1K, through a unified evaluation interface that supports both simulation and real-robot deployment. StarVLA also ships simple, fully reproducible single-benchmark training recipes that, despite minimal data engineering, already match or surpass prior methods on multiple benchmarks with both VLM and world-model backbones. To our best knowledge, StarVLA is one of the most comprehensive open-source VLA frameworks available, and we expect it to lower the barrier for reproducing existing methods and prototyping new ones. StarVLA is being actively maintained and expanded; we will update this report as the project evolves. The code and documentation are available at https://github.com/starVLA/starVLA.",
       "date": "2026-04-06",
@@ -6691,6 +6919,18 @@
       ]
     },
     {
+      "title": "GEN-1: Scaling Embodied Foundation Models to Mastery",
+      "url": "https://generalistai.com/blog/gen-1",
+      "date": "2026-04-02",
+      "summary": "Generalist introduced GEN-1, a large multimodal embodied foundation model and action system designed for real-time robot control, rapid task adaptation, reliable execution and recovery from unexpected physical situations.",
+      "organization_hint": "Generalist AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-04-01",
       "organization_hint": "Google DeepMind Robotics",
       "summary": "Gemini Robotics ER 1.6 upgrades spatial reasoning and multi-view understanding, unlocking new capabilities like instrument reading for autonomous robots.",
@@ -6731,6 +6971,30 @@
       "date": "2026-04-01",
       "summary": "A steerable robotic foundation model that exhibits a step-change in generalization.",
       "organization_hint": "Physical Intelligence",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DIAL",
+      "url": "https://github.com/xpeng-robotics/DIAL",
+      "date": "2026-03-31",
+      "summary": "An end-to-end VLA framework that separates high-level latent world modeling from low-level inverse-dynamics control through a differentiable latent-intent bottleneck.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "BrainOS Clean 2.0 with SelfPath AI",
+      "url": "https://www.braincorp.com/resources/brain-corp-launches-brainos-r-clean-2-0-with-selfpath-tm-ai-advancing-adaptive-autonomy-for-tennant-company-floor-cleaning-robots",
+      "date": "2026-03-31",
+      "summary": "BrainOS Clean 2.0 is a major autonomy software update for Tennant robotic floor cleaners. It introduces SelfPath AI for autonomous route generation and refinement, enhanced visual perception, dynamic replanning and recovery, automatic charging, scheduled operation and point-of-interest workflows.",
+      "organization_hint": "Brain Corp",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6907,6 +7171,18 @@
       ]
     },
     {
+      "title": "Rapid Operator AI and GRIIP",
+      "url": "https://vention.com/blogs/AI-operator/nvidia_gtc2026-1088",
+      "date": "2026-03-19",
+      "summary": "Vention launched Rapid Operator AI and GRIIP, an end-to-end physical-AI pipeline that performs perception, grasp selection and collision-free motion planning for autonomous industrial picking.",
+      "organization_hint": "Vention",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Specification-Aware Distribution Shaping for Robotics Foundation Models",
       "summary": "Robotics foundation models have demonstrated strong capabilities in executing natural language instructions across diverse tasks and environments. However, they remain largely data-driven and lack formal guarantees on safety and satisfaction of time-dependent specifications during deployment. In practice, robots often need to comply with operational constraints involving rich spatio-temporal requirements such as time-bounded goal visits, sequential objectives, and persistent safety conditions. In this work, we propose a specification-aware action distribution optimization framework that enforces a broad class of Signal Temporal Logic (STL) constraints during execution of a pretrained robotics foundation model without modifying its parameters. At each decision step, the method computes a minimally modified action distribution that satisfies a hard STL feasibility constraint by reasoning over the remaining horizon using forward dynamics propagation. We validate the proposed framework in simulation using a state-of-the-art robotics foundation model across multiple environments and complex specifications.",
       "date": "2026-03-18",
@@ -7079,6 +7355,18 @@
         "report/model title",
         "physical-robot evidence",
         "release signal"
+      ]
+    },
+    {
+      "title": "One Model, All Roads: Zero-Shot Autonomy in Tokyo",
+      "url": "https://www.nuro.ai/blog/one-model-all-roads-zero-shot-autonomy-in-tokyo",
+      "date": "2026-03-11",
+      "summary": "Nuro deployed its end-to-end universal autonomy foundation model for zero-shot autonomous driving on public roads in Tokyo. The model operated without prior training on Japanese driving data and was evaluated through closed-course testing, simulation and shadow autonomy before deployment.",
+      "organization_hint": "Nuro",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7280,6 +7568,18 @@
       "date": "2026-03-02",
       "summary": "近日，国际期刊《Science Robotics》刊登了 北京通用人工智能研究院（简称通研院） 联合深圳市人工",
       "organization_hint": "北京通用人工智能研究院 / BIGAI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "TruckDrive: Long-Range Autonomous Highway Driving Dataset",
+      "url": "https://torc-ai.github.io/TruckDrive/",
+      "date": "2026-03-02",
+      "summary": "A multimodal highway-driving dataset and benchmark containing 475,000 synchronized samples, including 165,000 densely annotated frames, for long-range perception, tracking, prediction, planning and end-to-end driving research.",
+      "organization_hint": "Torc Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7788,6 +8088,18 @@
       "score": 28,
       "reasons": [
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Q4 2025 Vention Platform Release",
+      "url": "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
+      "date": "2026-01-30",
+      "summary": "Vention released updates across MachineBuilder, MachineLogic and its Developer Toolkit, including scene-aware code generation, relative-motion commands, software-defined robot configuration and a simulation debugger.",
+      "organization_hint": "Vention",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8344,6 +8656,18 @@
       ]
     },
     {
+      "title": "GAIA-3",
+      "url": "https://wayve.ai/press/wayve-launches-gaia3/",
+      "date": "2025-12-02",
+      "summary": "GAIA-3 is a 15-billion-parameter generative world model for producing controlled driving scenarios and evaluating autonomous-driving systems across vehicles, environments and safety-critical conditions.",
+      "organization_hint": "Wayve",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Best Text model from China in LMArena is now ERNIE-5.0-Preview-1203! | ERNIE Blog",
       "url": "https://ernie.baidu.com/blog/posts/ernie-5.0-preview-1203-release-on-lmarena/",
       "date": "2025-12-02",
@@ -8360,7 +8684,7 @@
       "url": "https://github.com/resources/articles/what-is-prompt-engineering",
       "date": "2025-12-01",
       "summary": "Discover what prompt engineering is, how AI prompt engineering improves model performance, and why mastering prompt design is essential for building effective AI applications.",
-      "organization_hint": "Tesla AI / Optimus",
+      "organization_hint": "灵心巧手",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8607,6 +8931,18 @@
       ]
     },
     {
+      "title": "Building Better Ears: Nuro's Unified Siren Perception Model",
+      "url": "https://www.nuro.ai/blog/building-better-ears-nuros-unified-siren-perception-model",
+      "date": "2025-11-20",
+      "summary": "Nuro introduced a unified real-time siren perception model for its autonomous-driving stack. The model combines siren detection, motion classification and angle-of-arrival estimation in one architecture, reducing GPU memory usage while improving localization stability and detection reliability.",
+      "organization_hint": "Nuro",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-19",
       "organization_hint": "Sunday Robotics",
       "summary": "ACT-1 is a robot foundation model trained without robot teleoperation trajectories. It uses transformed human movement data for long-horizon mobile manipulation, map-conditioned navigation in unseen homes, and dexterous household tasks.",
@@ -8679,6 +9015,18 @@
       ]
     },
     {
+      "title": "Vention Developer Toolkit",
+      "url": "https://vention.com/blogs/automation-programming-and-simulation/vention-developer-toolkit-1005",
+      "date": "2025-11-07",
+      "summary": "Vention released a developer toolkit for building industrial automation applications with Python logic, React operator interfaces, motion-control libraries, cloud integration and digital-twin validation.",
+      "organization_hint": "Vention",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "EveryDayVLA: A Vision-Language-Action Model for Affordable Robotic Manipulation",
       "summary": "While Vision-Language-Action (VLA) models map visual inputs and language instructions directly to robot actions, they often rely on costly hardware and struggle in novel or cluttered scenes. We introduce EverydayVLA, a 6-DOF manipulator that can be assembled for under $300, capable of modest payloads and workspace. A single unified model jointly outputs discrete and continuous actions, and our adaptive-horizon ensemble monitors motion uncertainty to trigger on-the-fly re-planning for safe, reliable operation. On LIBERO, EverydayVLA matches state-of-the-art success rates, and in real-world tests it outperforms prior methods by 49% in-distribution and 34.9% out-of-distribution. By combining a state-of-the-art VLA with cost-effective hardware, EverydayVLA democratizes access to a robotic foundation model and paves the way for economical use in homes and research labs alike. Experiment videos and details: https://everydayvla.github.io/",
       "date": "2025-11-07",
@@ -8723,6 +9071,18 @@
       ]
     },
     {
+      "title": "GEN-0: Embodied Foundation Models That Scale with Physical Interaction",
+      "url": "https://generalistai.com/blog/gen-0",
+      "date": "2025-11-04",
+      "summary": "Generalist introduced GEN-0, a class of embodied foundation models trained on large-scale, high-fidelity physical-interaction data, with Harmonic Reasoning, cross-embodiment support and scalable adaptation to new manipulation tasks.",
+      "organization_hint": "Generalist AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "LongCat-Flash-Omni",
       "url": "https://github.com/meituan-longcat/LongCat-Flash-Omni",
       "date": "2025-11-03",
@@ -8751,7 +9111,7 @@
       "url": "https://github.com/resources/articles/what-is-generative-ai-genai",
       "date": "2025-11-01",
       "summary": "Generative AI creates text, images, and code using deep learning. Explore GenAI tools, models, and how it’s shaping artificial intelligence today.",
-      "organization_hint": "Tesla AI / Optimus",
+      "organization_hint": "灵心巧手",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8924,6 +9284,18 @@
       ]
     },
     {
+      "title": "Rig3R",
+      "url": "https://wayve.ai/thinking/rig3r/",
+      "date": "2025-10-15",
+      "summary": "Rig3R is a geometric foundation model that estimates ego-motion and reconstructs three-dimensional scene structure from embodied multi-camera rigs.",
+      "organization_hint": "Wayve",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "DYNA-1i: Open-World Dexterity",
       "url": "https://www.dyna.co/research/open-world-dexterity",
       "date": "2025-10-15",
@@ -9077,6 +9449,18 @@
       "date": "2025-09-29",
       "summary": "DeepSeek-V3.2-Exp is an experimental LLM introducing DeepSeek Sparse Attention for more efficient long-context training and inference.",
       "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "FOMO-3D: Using Vision Foundation Models for Long-Tailed 3D Object Detection",
+      "url": "https://waabi.ai/research/fomo3d",
+      "date": "2025-09-27",
+      "summary": "FOMO-3D is a multimodal 3D detector that uses vision foundation-model priors to improve recognition of rare and long-tailed road objects.",
+      "organization_hint": "Waabi",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9636,6 +10020,66 @@
       ]
     },
     {
+      "title": "K-Sim 0.2.10",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.10",
+      "date": "2025-08-18",
+      "summary": "K-Sim 0.2.10 updated the humanoid policy-training framework with motionless-at-rest behavior, off-axis penalties, a deadzone, IMU randomization improvements, termination changes and an exponential reward kernel.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "K-Sim 0.2.9",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.9",
+      "date": "2025-08-17",
+      "summary": "K-Sim 0.2.9 revised the force penalty used when training embodied robot control policies.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "K-Sim 0.2.8",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.8",
+      "date": "2025-08-17",
+      "summary": "K-Sim 0.2.8 restored and improved the foot-height reward used in humanoid policy training.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "K-Sim 0.2.7",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.7",
+      "date": "2025-08-17",
+      "summary": "K-Sim 0.2.7 adjusted policy-training rewards and reduced foot-force targets.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "K-Sim 0.2.6",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.6",
+      "date": "2025-08-17",
+      "summary": "K-Sim 0.2.6 improved simulation resets, added randomized pitch and roll resets, logged command metrics and updated the rewards API.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "unitree_ros2 v0.3.0",
       "url": "https://github.com/unitreerobotics/unitree_ros2",
       "date": "2025-08-15",
@@ -9728,6 +10172,54 @@
       ]
     },
     {
+      "title": "K-Sim 0.2.5",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.5",
+      "date": "2025-08-09",
+      "summary": "K-Sim 0.2.5 updated rewards in the reinforcement-learning framework for humanoid locomotion and manipulation policies.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "K-Sim 0.2.4",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.4",
+      "date": "2025-08-08",
+      "summary": "K-Sim 0.2.4 corrected random-number-generator handling in the robot policy-training framework.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "K-Sim 0.2.3",
+      "url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.3",
+      "date": "2025-08-08",
+      "summary": "K-Sim 0.2.3 added actor phase information and a base-height tracking reward for embodied control-policy training.",
+      "organization_hint": "K-Scale Labs",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Vention AI Operator",
+      "url": "https://rails.vention.io/blogs/AI-operator/",
+      "date": "2025-08-07",
+      "summary": "Vention introduced AI Operator, a physical-AI robotics system combining perception, grasp planning and context-aware motion planning for unstructured industrial picking tasks.",
+      "organization_hint": "Vention",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "One Model, Any Scenario: End-to-end Locomotion from Vision",
       "url": "https://www.skild.ai/blogs/one-policy-all-scenarios",
       "date": "2025-08-06",
@@ -9752,6 +10244,18 @@
       ]
     },
     {
+      "title": "AV 3.0: Torc's AI Blueprint",
+      "url": "https://torc.ai/av-3-0-ai-artificial-intelligence/",
+      "date": "2025-08-06",
+      "summary": "Torc's autonomous-trucking software framework combines a modular reinforcement-learned virtual driver for perception, prediction and planning with an advanced data loop and generative-AI simulation infrastructure.",
+      "organization_hint": "Torc Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-08-05",
       "organization_hint": "Unitree Robotics",
       "summary": "Unitree A2 is an industrial quadruped designed for long-range operation, payload transport and work in demanding outdoor environments.",
@@ -9769,6 +10273,18 @@
       "date": "2025-08-05",
       "summary": "Today we are announcing Genie 3, a general purpose world model that can generate an unprecedented diversity of interactive environments. Given a text prompt, Genie 3 can generate dynamic worlds that you can navigate in real time at 24 frames per second, retaining consistency for a few minutes at a resolution of 720p.",
       "organization_hint": "Google DeepMind Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "BrainOS Release 1.18: Map-Centric Workflows",
+      "url": "https://www.braincorp.com/resources/brain-corp-unveils-new-map-centric-workflows-simplifying-robot-operations-and-boosting-visual-clarity",
+      "date": "2025-08-05",
+      "summary": "BrainOS Release 1.18 adds map-centric workflows for creating, managing, selecting and executing autonomous cleaning routes. Operators can view site coverage, routes and points of interest on a unified map and review completed cleaning activity.",
+      "organization_hint": "Brain Corp",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -10358,6 +10874,18 @@
       ]
     },
     {
+      "title": "Research Preview: Cross-Embodied Sensorimotor Policies",
+      "url": "https://generalistai.com/blog/research-preview",
+      "date": "2025-06-17",
+      "summary": "Generalist previewed cross-embodied, end-to-end neural sensorimotor policies that map visual and other sensor inputs to real-time 100 Hz robot actions for dexterous manipulation.",
+      "organization_hint": "Generalist AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-06-16",
       "organization_hint": "NVIDIA",
       "summary": "General-availability releases of the Isaac Sim robotics simulator and Isaac Lab robot-learning framework, adding updated simulation, training, and model-evaluation capabilities.",
@@ -10375,6 +10903,30 @@
       "date": "2025-06-16",
       "summary": "An action-conditioned generative world model and evaluation engine that predicts robot observations, physical outcomes and task success for comparing and refining NEO policies.",
       "organization_hint": "1X Technologies",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GenAssets: Generating In-the-Wild 3D Assets in Latent Space",
+      "url": "https://waabi.ai/research/genassets",
+      "date": "2025-06-15",
+      "summary": "GenAssets is a latent diffusion model that generates complete, controllable 3D traffic assets from in-the-wild camera and LiDAR data for scalable simulation.",
+      "organization_hint": "Waabi",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DIO: Decomposable Implicit 4D Occupancy-Flow World Model",
+      "url": "https://waabi.ai/research/dio",
+      "date": "2025-06-15",
+      "summary": "DIO is a world model that completes current 3D scene occupancy and forecasts decomposed occupancy-flow evolution from sparse LiDAR observations.",
+      "organization_hint": "Waabi",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -10485,7 +11037,7 @@
     {
       "date": "2025-06-10",
       "organization_hint": "Hello Robot",
-      "summary": "Version 0.5 of the open-source, MuJoCo-based Stretch simulator, adding real-time Stretch 3 simulation, ROS 2 control, calibrated cameras, lidar, navigation, procedural environments, and deformable-object support.",
+      "summary": "Stretch MuJoCo v0.5 is a high-fidelity Stretch 3 simulation stack with real-time sensor simulation, Python and ROS 2 control interfaces, headless execution, Nav2 integration, and generated RoboCasa kitchen environments.",
       "title": "Stretch MuJoCo v0.5",
       "url": "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344",
       "authors": [],
@@ -10559,7 +11111,7 @@
       "url": "https://github.com/resources/articles/what-are-generative-ai-models",
       "date": "2025-06-02",
       "summary": "Generative AI models are algorithms that learn from existing data to produce new content like text, images, or code.",
-      "organization_hint": "智平方 / AI² Robotics",
+      "organization_hint": "灵心巧手",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11085,21 +11637,9 @@
     {
       "date": "2025-04-18",
       "organization_hint": "Hello Robot",
-      "summary": "Stretch software release adding Firebase-based signaling for remote web operation alongside SDK, ROS, web-interface, and deployment updates.",
+      "summary": "This software drop added Firebase signaling and authenticated deployment features to Stretch Web Teleop, fixed ROS 2 trajectory control and action-server behavior, and updated manipulation-planning and robot-control packages.",
       "title": "Stretch Software Drop - April 18, 2025",
       "url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Alpha Brain and GOVLA",
-      "url": "https://ai2robotics.com/%E6%99%BA%E5%B9%B3%E6%96%B9%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0%E4%B8%80%E4%BB%A3%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BAalphabot-2%E5%BC%80%E5%90%AFagi%E7%BB%88%E7%AB%AF%E6%96%B0/?p=2613",
-      "date": "2025-04-18",
-      "summary": "AI² Robotics introduced Alpha Brain and its Global and Omni-body Vision-Language-Action model, GOVLA. The embodied foundation model combines spatial interaction modeling with slow reasoning and fast action systems for long-horizon planning, whole-body control, and mobile manipulation.",
-      "organization_hint": "智平方 / AI² Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11201,6 +11741,18 @@
       ]
     },
     {
+      "title": "智平方发布全新一代智能机器人AlphaBot 2，开启AGI终端新时代！ - 智平方科技",
+      "url": "https://ai2robotics.com/%E6%99%BA%E5%B9%B3%E6%96%B9%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0%E4%B8%80%E4%BB%A3%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BAalphabot-2%E5%BC%80%E5%90%AFagi%E7%BB%88%E7%AB%AF%E6%96%B0/?p=2613",
+      "date": "2025-04-01",
+      "summary": "2025年4月17日，全球领先的具身智能机器人企业智平方在深圳正式发布新一代通用智能机器人AlphaBot 2",
+      "organization_hint": "智平方 / AI² Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-04-01",
       "organization_hint": "Beijing Humanoid Robot Innovation Center",
       "summary": "The X-Humanoid open-source community released robot-development resources including the RoboMIND dataset and a Tiangong-compatible training toolchain.",
@@ -11242,6 +11794,18 @@
       "date": "2025-03-31",
       "summary": "Agility Robotics announced new Agility Arc software capabilities for controlling Digit deployments, including AMR dispatch and integration, charger and workcell emergency-stop support, webhooks, remote monitoring and enterprise-system integrations.",
       "organization_hint": "Agility Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "GAIA-2",
+      "url": "https://wayve.ai/press/wayve-unveils-gaia2/",
+      "date": "2025-03-26",
+      "summary": "GAIA-2 is a controllable multi-view video-generative world model that creates realistic synthetic driving scenarios for training, testing and validating assisted and automated driving systems.",
+      "organization_hint": "Wayve",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11675,6 +12239,18 @@
       ]
     },
     {
+      "title": "Robot Programming and Scene Assets in MachineLogic",
+      "url": "https://docs.vention.com/docs/robot-programming-and-scene-assets-in-machinelogic",
+      "date": "2025-03-03",
+      "summary": "MachineLogic added code-free and Python-based robot programming with scene assets that can be simulated in a browser and deployed to MachineMotion controllers.",
+      "organization_hint": "Vention",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Natural Humanoid Walk Using Reinforcement Learning",
       "url": "https://www.figure.ai/news/reinforcement-learning-walking",
       "date": "2025-03-02",
@@ -11785,7 +12361,7 @@
     {
       "date": "2025-02-28",
       "organization_hint": "Hello Robot",
-      "summary": "Stretch software release covering web-interface development, demonstration collection, Stretch AI installation, Nav2 mapping, web teleoperation, Python SDK, and ROS 2 updates.",
+      "summary": "This software drop improved Stretch AI and DynaMem installation, corrected fast-mode behavior in the Dex Teleop demonstration-collection system, and updated Nav2 mapping, ROS 2 control, and web teleoperation software.",
       "title": "Stretch Software Drop - February 28, 2025",
       "url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248",
       "authors": [],
@@ -11800,18 +12376,6 @@
       "date": "2025-02-25",
       "summary": "Magma is an open-source multimodal vision-language-action foundation model that generates action proposals for both digital interfaces and physical robot-manipulation environments.",
       "organization_hint": "Microsoft Research Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Data Navigator",
-      "url": "https://www.anybotics.com/news/anybotics-launches-data-navigator/",
-      "date": "2025-02-25",
-      "summary": "ANYbotics launched Data Navigator, a software platform that centralizes visual, thermal, acoustic and gas data collected by ANYmal inspection robots. It provides historical trend analysis, asset-health insights and integrations with enterprise systems, with cloud, on-premises and air-gapped deployment options.",
-      "organization_hint": "ANYbotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11942,6 +12506,18 @@
       ]
     },
     {
+      "title": "ANYbotics Unveils Data Navigator: Future of Asset Management - ANYbotics",
+      "url": "https://www.anybotics.com/news/anybotics-launches-data-navigator/",
+      "date": "2025-02-02",
+      "summary": "ANYbotics launches Data Navigator, turning robotic inspection data into insights for predictive maintenance. Optimize operations—learn more!",
+      "organization_hint": "ANYbotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-02-01",
       "organization_hint": "Google DeepMind",
       "summary": "MuJoCo Playground is an open-source framework for GPU-accelerated robot learning, simulation, training, and sim-to-real deployment built around MuJoCo and MJX.",
@@ -11956,7 +12532,7 @@
     {
       "date": "2025-01-31",
       "organization_hint": "Hello Robot",
-      "summary": "Stretch software release adding runtime URDF generation, reproducible virtual environments for FUNMAP, application startup tooling, and a mapping fix for lidar artifacts.",
+      "summary": "This software drop introduced on-demand URDF generation for inverse kinematics, motion planning, and perception; isolated FUNMAP in a reproducible Python environment; and fixed lidar artifacts that impaired Nav2 planning.",
       "title": "Stretch Software Drop - January 31, 2025",
       "url": "https://forum.hello-robot.com/t/software-drop-january-31-2025/1216",
       "authors": [],

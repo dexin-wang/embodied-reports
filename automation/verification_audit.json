@@ -26379,5 +26379,2697 @@
       "software_project": true,
       "summary_zh": "Data Navigator 是瑞士机器人公司 ANYbotics 为 ANYmal 工业巡检机器人推出的数据管理与资产健康分析平台。它把机器人在能源、金属、采矿、油气等设施中采集的视觉、热成像、声学和气体数据集中到以设备资产为中心的界面中，支持历史记录比较、趋势监控、异常识别和维护决策。平台覆盖从实体机器人重复巡检到后台数据可视化和企业维护流程接入的完整数据链路，并提供云端、本地及完全隔离的部署选项。官方报告的试点规模为三家工业企业、两周内超过 2,500 次 ANYmal 巡检，本地集成可在数小时内上线。公开材料主要描述产品能力和部署结果，没有披露模型架构、训练数据、算法评测精度或开源实现。"
     }
+  },
+  "capek-0-5-1ef3c08": {
+    "checked_at": "2026-08-12T03:43:03.073586+00:00",
+    "title": "Capek 0.5",
+    "accepted": false,
+    "reason": "正在核验，尚未作最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该项目是否有可访问的官方专页、明确责任机构，以及页面主体是否确为面向实体机器人的软件；随后只采用官方页面、技术报告和其链接材料中的可核实信息。当前给出的发布日期是 2026 年 8 月 7 日，早于今天 2026 年 8 月 12 日，因此日期条件本身成立，但仍需来源确认。",
+        "我也会区分 Capek 0.5 模型本体与 Capek-StateBench，避免把论文摘要中的概括当成已发布实现或报告指标。",
+        "最终记录将严格使用指定字段，并在任何关键条件无法从可访问来源支持时标记 include=false。"
+      ],
+      "fields": [
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索核验。",
+        "暂不采用用户提供摘要作为官方证据。",
+        "暂不猜测机构名称、网址或指标。",
+        "将优先核对给定项目域名及其链接的技术材料。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在进行网页检索",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验，尚未作最终收录判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 Capek 0.5 的官方项目证据、软件属性、责任机构和报告结果。"
+    }
+  },
+  "gen-1-multi-end-effector-expansion-08b0316": {
+    "checked_at": "2026-08-12T03:43:03.090869+00:00",
+    "title": "GEN-1 Multi-End-Effector Expansion",
+    "accepted": true,
+    "reason": "收录。Generalist AI 于 2026 年 7 月 23 日发布了可访问的官方专题页面，明确将该成果定义为 GEN-1 具身基础模型的软件能力扩展：同一个模型可跨不同机器人手、夹爪和专用工具学习、迁移并在线调整传感运动策略。页面主体是模型训练、跨执行器泛化、权重更新分析和运行时适配，而非末端执行器硬件销售或规格介绍；责任组织、发布日期和技术结果均由官方页面明确给出。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "跨多种末端执行器训练并复用同一个 GEN-1 基础模型",
+        "根据视觉中当前安装的手、夹爪或工具选择相应的传感运动策略",
+        "在任务执行过程中更换末端执行器后重新规划轨迹与接触方式",
+        "执行抓取、推、拉、旋拧、刮扫、切削、剥皮和搅拌等工具操作",
+        "通过任务向量和相对参数范数分析新末端执行器对模型各子系统的影响"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 GEN-1 具身基础模型的软件能力扩展，而不是末端执行器硬件产品页；官方项目页明确展示一个基础模型在五指仿生手、双指夹爪、改装夹爪及专用工具之间学习和迁移传感运动策略。",
+        "GEN-1 在覆盖多类末端执行器的真实物理交互数据上预训练。混合训练迫使模型依据视觉中实际安装的工具调节行为，从而区分工具特有的执行方式与跨工具共享的几何、接触、摩擦、力和动力学规律。",
+        "训练所覆盖的执行器既包括采用不同驱动方式和相机位置的新形态，也包括现成工具、打印部件以及标准双指夹爪的定制改装；官方演示包括电动螺丝刀、夹钳、打蛋器、刮刀、胶带切割器、裁纸刀和削皮器等。",
+        "项目使用任务更新 ΔW = W_ft − W_0 比较预训练模型与针对新工具微调后的模型，并按传感处理、Harmonic Reasoning 和动作执行模块分解权重变化，以量化一种执行器为基础模型带来的新信息。",
+        "官方观察到不同工具对模型组件产生不同影响，例如打蛋器对传感处理权重的改变高于削皮器，并据此提出针对细线状、视觉稀疏工具补充数据的定向数据引擎策略。",
+        "在任务进行中物理更换末端执行器后，同一模型能够识别新工具，并重新生成轨迹和接触策略以继续完成原目标；官方将此归因于模型学到的跨形态接触先验，而非记忆固定操作程序。",
+        "该扩展建立在 GEN-1 系统之上；GEN-1 还结合预训练、后训练、经验强化学习、多模态人类指导和推理期技术，但官方未公布模型权重、训练代码或该多执行器数据集。"
+      ],
+      "metrics": [
+        {
+          "label": "真实交互预训练数据规模",
+          "note": "官方称当前内部机器人数据集跨越多种末端执行器。",
+          "value": "超过 500,000 小时"
+        },
+        {
+          "label": "末端执行器变体数量",
+          "note": "包括现成工具、打印部件以及标准双指夹爪的定制修改。",
+          "value": "约 9,000 种"
+        },
+        {
+          "label": "新执行器微调后的模型权重变化",
+          "note": "以相对于预训练 GEN-1 的参数范数变化衡量；不同工具产生不同幅度的任务更新。",
+          "value": "2.5%–11.4%"
+        },
+        {
+          "label": "GEN-1 基础系统平均任务成功率",
+          "note": "GEN-1 官方主项目页报告，在所展示的简单物理任务上，平均成功率由 GEN-0 的 64% 提升至 99%；这是基础系统结果，不是多末端执行器扩展的独立汇总成绩。",
+          "value": "99%"
+        },
+        {
+          "label": "GEN-1 基础系统任务数据需求",
+          "note": "官方称所展示的每项适配结果仅使用约一小时机器人数据；这是基础 GEN-1 的报告结果。",
+          "value": "约 1 小时/任务"
+        }
+      ],
+      "official_organization_url": "https://generalistai.com/",
+      "official_project_url": "https://generalistai.com/blog/towards-machines-with-a-thousand-hands",
+      "open_source": false,
+      "organization_en": "Generalist AI, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Generalist AI 于 2026 年 7 月 23 日发布了可访问的官方专题页面，明确将该成果定义为 GEN-1 具身基础模型的软件能力扩展：同一个模型可跨不同机器人手、夹爪和专用工具学习、迁移并在线调整传感运动策略。页面主体是模型训练、跨执行器泛化、权重更新分析和运行时适配，而非末端执行器硬件销售或规格介绍；责任组织、发布日期和技术结果均由官方页面明确给出。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "GEN-1 Multi-End-Effector Expansion 是 Generalist AI 对其 GEN-1 具身基础模型进行的跨末端执行器扩展。项目以超过 50 万小时真实交互数据和约 9,000 种工具或夹爪变体进行混合训练，使一个基础模型能够依据当前可见的末端执行器调整传感运动策略，并在五指手、夹爪、改装部件及电动工具之间迁移对几何、接触、摩擦、力和动力学的共同表征。官方还通过微调前后的任务向量分析量化新工具对传感处理、推理和动作模块的影响，报告不同执行器带来 2.5% 至 11.4% 的相对参数范数变化。演示显示，在任务中途更换工具后，模型能够识别新执行器并改变轨迹及接触方式继续完成目标。项目具备明确的软件模型主题和官方专题页，但截至该页面发布时没有公开模型权重、代码或训练数据。"
+    }
+  },
+  "how-hydroshear-gives-robots-a-realistic-sense-of-d3b8467": {
+    "checked_at": "2026-08-12T03:43:03.109124+00:00",
+    "title": "How HydroShear gives robots a realistic sense of touch, trained entirely in simulation - Amazon Science Close Close",
+    "accepted": true,
+    "reason": "Interim status only; final eligibility decision follows source verification.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验 Amazon Science 官方页面、项目材料与相关论文，重点确认 HydroShear 是否为已发布的软件型具身机器人项目，以及发布日期、负责机构和可引用指标。过程中不会把 arXiv 单独当作官方项目证据。",
+        "我会把硬件触觉传感器本身与模拟器/训练软件区分开，并只纳入来源明确支持的能力和结果。若关键条件缺失，会直接标记为不收录。], ",
+        "fields",
+        "include",
+        "key_points"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Dexterous manipulation",
+        "Embodied AI",
+        "Humanoid intelligence"
+      ],
+      "include": true,
+      "key_points": [
+        "placeholder for final output after web verification — this update is intentionally concise and not the verdict.",
+        "Using official sources to confirm project status and exact results.",
+        "Separating software artifact from associated hardware.",
+        "Checking named organizations and release date."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification in progress",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "https://www.amazon.science/",
+      "official_project_url": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
+      "open_source": false,
+      "organization_en": "Amazon Science",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "Interim status only; final eligibility decision follows source verification.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方项目页及其链接材料；此条为工作进度，不是最终收录结论。"
+    }
+  },
+  "si0-dd244b6": {
+    "checked_at": "2026-08-12T03:43:03.125526+00:00",
+    "title": "Si0",
+    "accepted": true,
+    "reason": "符合收录条件：Si0于2026年6月30日发布，官方专页明确将其定义为服务于人形机器人空间与物理理解、可微调为下游VLA并在仿真及IRON-R1.11真机上验证的软件模型骨干；责任方明确为XPENG Robotics / Multimodal Team。官方页面未提供Si0代码、权重或明确的开放许可证，因此不标记为开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "精确定位并识别物体、部件及属性，覆盖区域描述、2D/3D检测、指代表达、属性识别与计数。",
+        "理解距离、深度、相对位置、尺寸等度量与拓扑空间关系，并支持以物体或相机为中心的空间推理。",
+        "从视频中跟踪物体和智能体运动，预测手部航点、相机运动、视角变化及第一/第三人称对应关系。",
+        "执行面向任务的具身推理，包括状态估计、动作预测、放置可供性判断、多步规划和子目标预测。",
+        "作为下游VLA的多模态骨干，将空间能力迁移到仿真操作以及IRON-R1.11人形机器人的真实传感器和动作控制。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Robot manipulation",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "Si0是小鹏机器人多模态团队面向人形机器人控制开发的空间智能多模态骨干，不是机器人硬件或产品规格页面；官方页面展示了它作为Fe0具身基础模型底层骨干并服务于VLA控制的用途。",
+        "预训练数据按“来源”和“原子能力”两个正交维度组织：来源包括通用多模态数据、真实人类第一/第三人称数据以及多种机器人本体与传感器产生的数据。",
+        "能力数据分为精细感知、空间关系、运动感知和具身推理四类；团队通过逐项加入和留一移除实验，分析不同空间能力对下游物理控制的实际贡献。",
+        "消融实验采用一致训练预算和超参数，将2B骨干在RoboCasa GR-1上以100-shot数据微调为VLA，并在24项任务、每项50个回合的仿真设置中评估平均成功率。",
+        "结果显示精细感知是对动作控制最敏感的能力，具身推理次之；空间关系和运动感知在完整能力组合中提供互补收益，而单纯增加通用MLLM数据没有带来相同的控制提升。",
+        "模型专门处理人形机器人视觉传感器与普通网络图像之间的分布差异，包括鱼眼畸变、头戴式第一人称视角和双目几何；其轻量传感器适配使用不足全部训练数据的5%。",
+        "团队在IRON-R1.11上进行了真实机器人验证：除传感器原生视觉问答外，还以五个动作维度的开环MSE比较适配前后模型，官方报告称传感器适配降低了动作误差。"
+      ],
+      "metrics": [
+        {
+          "label": "29项基准平均分，2B",
+          "note": "覆盖通用视觉、空间理解和具身推理基准；官方表中精确平均值为67.29，正文四舍五入为67.3。",
+          "value": "67.29"
+        },
+        {
+          "label": "29项基准平均分，4B",
+          "note": "覆盖同一组通用视觉、空间理解和具身推理基准；官方表中精确平均值为71.65，正文四舍五入为71.7。",
+          "value": "71.65"
+        },
+        {
+          "label": "RoboCasa 24任务成功率，2B Freeze-ViT",
+          "note": "100-shot训练；Si0为44.7，采用相同下游VLA方案的Qwen3-VL为37.8。",
+          "value": "44.7%"
+        },
+        {
+          "label": "RoboCasa 24任务成功率，4B Freeze-ViT",
+          "note": "100-shot训练；Si0为50.2，采用相同下游VLA方案的Qwen3-VL为42.1。",
+          "value": "50.2%"
+        },
+        {
+          "label": "传感器适配数据占比",
+          "note": "最终模型的轻量传感器适配训练仅使用全部数据中的一小部分。",
+          "value": "<5%"
+        }
+      ],
+      "official_organization_url": "https://xpeng-robotics.github.io/",
+      "official_project_url": "https://xpeng-robotics.github.io/si0/",
+      "open_source": false,
+      "organization_en": "XPENG Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "小鹏机器人",
+      "reason": "符合收录条件：Si0于2026年6月30日发布，官方专页明确将其定义为服务于人形机器人空间与物理理解、可微调为下游VLA并在仿真及IRON-R1.11真机上验证的软件模型骨干；责任方明确为XPENG Robotics / Multimodal Team。官方页面未提供Si0代码、权重或明确的开放许可证，因此不标记为开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Si0是小鹏机器人多模态团队发布的具身基础模型空间智能骨干，目标是让人形机器人的视觉系统不仅能够描述图像，还能理解三维布局、物体位置、运动、任务可供性及后续行动。模型联合使用通用多模态、人类第一/第三人称和机器人域数据，并将训练监督拆分为精细感知、空间关系、运动感知与具身推理四类能力。团队通过受控消融证明，这些能力能够迁移到下游VLA操作，其中精确视觉定位对控制最关键。Si0还针对IRON-R1.11的鱼眼、双目和头戴式视角进行了轻量传感器适配，以缓解通用视觉骨干与机器人原生图像之间的分布差异。其2B和4B版本在29项视觉、空间及具身基准上的平均分分别为67.29和71.65，并在RoboCasa 24任务100-shot控制评估的所有冻结设置中均优于对应Qwen3-VL骨干。"
+    }
+  },
+  "rove-ae72d65": {
+    "checked_at": "2026-08-12T03:43:03.141464+00:00",
+    "title": "ROVE",
+    "accepted": false,
+    "reason": "检索与核验尚未完成。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方页面、责任机构、发布日期和技术材料，重点确认其是否确实是面向实体机器人的软件项目，而非硬件或产品公告。之后会只采用可访问的一手来源填写技术点和指标。后续将检查项目页所链接的论文、代码或补充材料，并区分明确报告的结果与无法验证的信息。若日期、归属或任何资格条件缺少官方支持，会直接标记为不收录。",
+        "项目页已明确把 ROVE 描述为人类在环强化学习框架，软件属性和实体人形机器人应用方向基本成立。我正在继续核对 XPENG Robotics 的正式组织名称、发布日期以及项目材料中可精确引用的实验结果。",
+        "接下来会从官方项目页及其链接材料提取：训练数据来源、干预机制、奖励/优化方法、跨本体视频利用方式，以及真实机器人评测结果。任何没有明确数值或对照定义的内容不会转写成指标。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终收录结论。",
+        "将以官方项目页和其直接链接的一手技术材料为依据。",
+        "不会依据用户给出的未来日期或摘要直接补全缺失事实。",
+        "若官方材料不能支持发布日期或机构归属，将明确列为缺失条件。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验一手来源",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://xpeng-robotics.github.io/rove/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "检索与核验尚未完成。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在对 ROVE 的官方项目材料进行资格与技术核验，当前结果不是最终收录判断。"
+    }
+  },
+  "telescope-learnable-hyperbolic-foveation-for-ult-bf29c52": {
+    "checked_at": "2026-08-12T03:43:03.157472+00:00",
+    "title": "Telescope: Learnable Hyperbolic Foveation for Ultra-Long-Range Object Detection",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方项目页、责任组织、发布日期与技术材料，并重点判断它是否属于面向物理机器人/自动驾驶的可执行软件项目，而非仅有论文或硬件介绍。预计还会交叉检查仓库发布记录和论文中的精确指标。",
+        "随后我会按严格条件给出单一结构化结论；任何无法由可访问来源支持的字段都会留空或明确标为缺失。内容将聚焦软件构件、已实现能力和可核验结果。",
+        "检索中。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "暂未完成核验。",
+        "暂未完成核验。",
+        "暂未完成核验。",
+        "暂未完成核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/torc-ai/Telescope",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目的官方来源、组织归属、发布时间和技术结果。"
+    }
+  },
+  "agra-48128f2": {
+    "checked_at": "2026-08-12T03:43:03.173591+00:00",
+    "title": "AGRA",
+    "accepted": true,
+    "reason": "纳入。AGRA 于2026年6月10日发布，存在由 XPENG Robotics / Multimodal Team 维护的独立官方项目页；其主体是用于物理机器人控制的世界动作模型表征对齐方法，并在模拟任务及 IRON-R01-1.11 人形机器人上进行了动作策略部署和评估，不属于硬件或产品规格页面。官方材料未提供可验证的源代码仓库，因此不标记为开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于预测未来视频表征生成连续机器人控制动作",
+        "执行拾取放置以及橱柜、抽屉和微波炉等关节设施操作",
+        "在 IRON-R01-1.11 人形机器人上执行拾放和开蒸笼转移包子任务",
+        "按语言指令从干扰物中定位目标物体并选择指定容器",
+        "泛化到未见物体实例以及物体、容器和背景的视觉属性变化"
+      ],
+      "fields": [
+        "World models",
+        "Robot manipulation",
+        "Humanoid intelligence",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "AGRA 是面向世界动作模型的动作落地表征对齐目标，解决“生成合理未来画面但无法解码出可靠动作”的视觉预测与机器人控制脱节问题。",
+        "其将视频扩散模型选定层的隐藏状态，与冻结基础视觉编码器产生的空间结构化语义特征对齐，使语义或功能相近区域形成更一致的表征，并降低纹理、颜色及背景等外观因素的主导作用。",
+        "项目通过动作头交叉注意力分析和隐藏状态因果干预诊断基线 WAM，发现其容易忽略手与物体的关键交互区域，并受到任务无关背景扰动影响。",
+        "实验表明对齐位置很关键：第 8 层、约网络深度三分之一处的 DINOv2 对齐优于第 15 层；同时对齐第 4、8、12 层并未进一步改善表现。",
+        "DINOv2 的目标特征比 SigLIP 更具物体中心性和空间一致性，可形成更清晰的物体与背景边界；项目报告其抓取准确性和执行稳定性优于使用 SigLIP 对齐目标的变体。",
+        "仅依赖单层语义对齐不足以完成精确控制；AGRA-BridgeL8 在开蒸笼转移包子任务中降至 0% 成功率，说明策略仍需要多层预测特征提供空间、几何和动态细节。",
+        "AGRA 能更有效利用 EgoDex 人类数据：通过减少对具体具身外观线索的依赖，提取更稳定的物体中心和交互相关结构，从而改善跨具身及分布外泛化。"
+      ],
+      "metrics": [
+        {
+          "label": "RoboCasa GR1 Tabletop 总体成功率",
+          "note": "24 项任务，包含18项拾取放置和6项关节设施任务；每项使用1,000条训练轨迹。相对 GR00T 的绝对提升为18.8个百分点。",
+          "value": "66.4%"
+        },
+        {
+          "label": "真实机器人同分布成功率",
+          "note": "在 IRON-R01-1.11 上评估；基线 WAM 为34%。",
+          "value": "80%"
+        },
+        {
+          "label": "真实机器人分布外性能提升",
+          "note": "相对基线 WAM；语义泛化、实例级泛化、属性泛化依次提升。",
+          "value": "27%、32%、32%"
+        },
+        {
+          "label": "Attention in Mask Ratio",
+          "note": "动作头对任务关键掩码区域的注意力比例；基线 WAM 为0.238。",
+          "value": "0.267"
+        },
+        {
+          "label": "Centroid Error",
+          "note": "项目页面标注单位为 grid num；数值越低表示注意力中心定位越准确，基线 WAM 为3.57。",
+          "value": "3.26"
+        }
+      ],
+      "official_organization_url": "https://xpeng-robotics.github.io/",
+      "official_project_url": "https://xpeng-robotics.github.io/agra/",
+      "open_source": false,
+      "organization_en": "XPENG Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "小鹏机器人",
+      "reason": "纳入。AGRA 于2026年6月10日发布，存在由 XPENG Robotics / Multimodal Team 维护的独立官方项目页；其主体是用于物理机器人控制的世界动作模型表征对齐方法，并在模拟任务及 IRON-R01-1.11 人形机器人上进行了动作策略部署和评估，不属于硬件或产品规格页面。官方材料未提供可验证的源代码仓库，因此不标记为开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "AGRA 是 XPENG Robotics 与香港大学研究人员提出的世界动作模型训练目标，面向真实机器人操作中的“视觉未来合理、控制动作错误”问题。它不把视频生成质量直接等同于动作可用性，而是将视频扩散模型中间特征对齐到冻结视觉基础模型的空间语义表征，让动作解码器更集中于目标物体、接触区域和可供性几何。项目在 RoboCasa GR1 Tabletop 的24项模拟任务以及 IRON-R01-1.11 人形机器人的拾放、开蒸笼转移任务上验证，并覆盖同分布、语义、实例和属性泛化设置。结果显示，该方法同时改善任务成功率、关键区域注意力定位和对无关背景扰动的稳健性；消融实验还表明，对齐浅中层 DINOv2 特征有效，但单独使用静态语义层无法替代世界动作模型所需的多层几何与动态信息。"
+    }
+  },
+  "drivegatr-efficient-equivariant-transformer-for--545e9c2": {
+    "checked_at": "2026-08-12T03:43:03.190157+00:00",
+    "title": "DriveGATr: Efficient Equivariant Transformer for Self-Driving Agent Modeling",
+    "accepted": true,
+    "reason": "纳入。该项目由 Waabi 明确负责，并有 Waabi 官方专门项目页。其主体是用于自动驾驶这一实体机器人领域的交通智能体动作建模和闭环仿真的 Transformer 软件架构，而非车辆硬件或产品规格页。官方页面及其链接的论文、补充材料提供了实现结构、训练方式、评测协议和结果。未发现官方代码仓库或开放源代码声明，因此 open_source=false；这不影响资格。候选所给 2026-06-07 日期未在官方项目页得到明确支持，因此未将该日期作为事实采用；可核实的是官方页面标注 CVPR 2026，而论文预印本记录为 2026-04-01。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "面向自动驾驶场景生成多智能体闭环交通仿真轨迹",
+        "对车辆、骑行者和行人执行离散动作建模与下一动作预测",
+        "在旋转和平移坐标变换下保持严格的 SE(2) 等变性",
+        "扩展至场景中的全部交通参与者和地图 token，而不依赖显式成对相对位置编码",
+        "生成具有真实性和多样性的 8 秒闭环交通参与者 rollout"
+      ],
+      "fields": [
+        "World models",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "DriveGATr 是 Waabi 发布的自动驾驶交通智能体建模软件架构，官方独立项目页将其列为 CVPR 2026 项目，并提供论文、视频、海报和补充材料，满足具名机构与专门项目页面要求。",
+        "模型把交通参与者的二维位置、朝向和其他场景元素编码为二维射影几何代数中的 8 维多向量，并通过由等变 Transformer 模块组成的网络处理这些表示。",
+        "其线性层、几何双线性层、标量门控激活、归一化和注意力均按 SE(2) 等变约束构造；补充材料给出了各层等变性的数学证明。",
+        "模型使用多向量之间的标准点积注意力表达几何关系，避免为每对智能体显式构造相对位置编码；组合后的注意力项可以作为一次点积计算，从而兼容高效注意力内核。",
+        "架构采用因子化注意力处理智能体、地图和时间维度，并通过 invariant adapter 将全局等变多向量转换到各智能体局部坐标系，形成用于动作解码的不变特征。",
+        "训练采用车辆、骑行者和行人各自包含 2,048 个离散动作的词表，以交叉熵预测每个智能体的下一动作；实验模型使用 16 个多向量通道和 6 个因子化注意力模块。",
+        "Waymo Open Motion Dataset 实验按 WOSAC 协议使用 1 秒上下文，生成 32 组、每组 8 秒且频率为 10 Hz 的闭环 rollout；结果显示 DriveGATr 在真实性与计算成本之间形成优于所测基线的 Pareto 前沿。"
+      ],
+      "metrics": [
+        {
+          "label": "WOSAC 2024 RMM",
+          "note": "DriveGATr-30M 在验证集上的 Realism Meta-Metric；论文称其与 SMART-7M 的 0.7678 相当。",
+          "value": "0.7636"
+        },
+        {
+          "label": "WOSAC 2024 minADE",
+          "note": "DriveGATr-30M 在验证集上的最小平均位移误差。",
+          "value": "1.3682"
+        },
+        {
+          "label": "DriveGATr-3M RMM",
+          "note": "约 2.7M 参数版本在 WOSAC 2024 验证集上的结果；论文报告其相对同规模 BehaviorGPT 的 RMM 提升约 2%。",
+          "value": "0.7620"
+        },
+        {
+          "label": "推理延迟",
+          "note": "DriveGATr-3M，batch size 8，单张 NVIDIA A5000，按完整 8 秒 rollout 平均；同条件 Transformer + RPE 为 82.48 ms。",
+          "value": "58.01 ms"
+        },
+        {
+          "label": "训练峰值显存",
+          "note": "DriveGATr-3M，batch size 8，单张 NVIDIA A5000；同条件 Transformer + RPE 为 15.19 GB。",
+          "value": "6.35 GB"
+        }
+      ],
+      "official_organization_url": "https://waabi.ai/",
+      "official_project_url": "https://waabi.ai/research/drivegatr",
+      "open_source": false,
+      "organization_en": "Waabi",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。该项目由 Waabi 明确负责，并有 Waabi 官方专门项目页。其主体是用于自动驾驶这一实体机器人领域的交通智能体动作建模和闭环仿真的 Transformer 软件架构，而非车辆硬件或产品规格页。官方页面及其链接的论文、补充材料提供了实现结构、训练方式、评测协议和结果。未发现官方代码仓库或开放源代码声明，因此 open_source=false；这不影响资格。候选所给 2026-06-07 日期未在官方项目页得到明确支持，因此未将该日期作为事实采用；可核实的是官方页面标注 CVPR 2026，而论文预印本记录为 2026-04-01。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DriveGATr 是 Waabi 面向自动驾驶交通参与者建模提出的高效 SE(2) 等变 Transformer。它以二维射影几何代数的 8 维多向量统一表达位置、方向和几何关系，并通过受等变约束的线性层、几何运算、归一化、激活及点积注意力预测各交通智能体的离散动作。与依靠显式成对相对位置编码的方法相比，DriveGATr 可通过标准注意力推理智能体间的几何关系，避免额外的成对编码开销，并允许每个智能体访问更完整的场景上下文。模型在 Waymo Open Motion Dataset 上生成多智能体闭环交通仿真，30M 版本取得 0.7636 RMM，3M 版本取得 0.7620 RMM；补充实验还显示，3M 版本相较完整 SE(2) 等变的 Transformer + RPE 基线具有更低的推理延迟和峰值显存。项目属于自动驾驶机器人系统的软件研究成果，核心贡献是可证明的坐标变换鲁棒性以及更有利的性能与计算成本权衡。"
+    }
+  },
+  "xpeng-showcases-physical-ai-world-model-at-cvpr--a36d78f": {
+    "checked_at": "2026-08-12T03:43:03.206704+00:00",
+    "title": "XPENG Showcases Physical AI & World Model at CVPR 2026",
+    "accepted": true,
+    "reason": "收录。该候选具有 XPENG 于 2026 年 6 月 3 日发布的专门官方页面，且主体是已实现并部署于实体车辆的 VLA 2.0、生成式世界模型及其训练、仿真和验证体系，不是汽车或机器人硬件产品规格页。官方页面及其关联技术材料明确说明了负责机构、软件架构、训练方法、生产工作流和量产结果。未找到截至核查时已实际公开源代码或模型权重的可靠官方证据，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "面向自动驾驶的 VLA 2.0 已进入量产部署，直接从视觉输入生成驾驶决策与动作。",
+        "X-World 可根据七路摄像头历史视频及车辆动作，连续生成符合动作条件的未来多视角视频。",
+        "支持可交互的闭环仿真，并可评估碰撞率、目标完成进度和乘坐舒适度等安全与驾驶质量指标。",
+        "可作为在线强化学习环境，针对行人突然横穿、拥堵变道犹豫等困难场景优化驾驶策略。",
+        "可生成长尾及海外驾驶场景数据，用于 VLA 2.0 的训练、回归测试和全球化验证。"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "World models",
+        "Data & benchmarks",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "XPENG 在 2026 年 6 月 3 日的官方 CVPR 2026 公告中公开其 Physical-World Foundation Model 技术蓝图，核心方向包括主动推理、可控生成和长时域预测；公告明确关联已量产的 VLA 2.0、Robotaxi 与人形机器人应用。",
+        "该体系中的 X-World 是面向自动驾驶的可控多视角生成式世界模型，基于视频扩散技术，将视频 VAE 与定制 DiT 潜空间去噪器结合。",
+        "X-World 使用高压缩比 3D Causal Autoencoder 降低长序列建模的计算与显存开销，并通过 view-temporal self-attention 联合建模时间维度和视角维度，以保持七路环视画面的一致性。",
+        "模型提供车辆动作、动态交通参与者、车道线和道路边界等静态道路元素，以及相机内外参等条件接口，可对未来驾驶场景进行细粒度控制。",
+        "训练分为两个阶段：先将预训练视频生成模型转换为可控多摄像头世界模型，再通过 block-causal 架构、few-step self-forcing learning 和滚动 KV cache，将其转换为流式自回归模拟器。",
+        "X-World 已被用于 VLA 2.0 的环境模拟、模型评估、闭环回归测试、在线强化学习和数据合成；它能够生成缺失的长尾场景与海外场景，而不只是展示性视频。",
+        "配套的 X-Cache 利用物理世界的时间连续性复用相邻生成片段的中间特征，并在转弯、变道和交通灯切换等关键时刻恢复完整计算，以加速 X-World 的少步自回归推理。"
+      ],
+      "metrics": [
+        {
+          "label": "单任务训练效率",
+          "note": "XPENG 报告的截至 2026 年 3 月前十二个月提升幅度。",
+          "value": "+4,360%"
+        },
+        {
+          "label": "单 GPU 训练效率",
+          "note": "XPENG 报告的截至 2026 年 3 月前十二个月提升幅度。",
+          "value": "+1,010%"
+        },
+        {
+          "label": "GPU 硬件利用率",
+          "note": "训练集群报告的利用率变化。",
+          "value": "40% → 90%"
+        },
+        {
+          "label": "VLA 2.0 实际使用占比",
+          "note": "量产推送后首月，辅助驾驶里程占用户总驾驶里程的比例。",
+          "value": ">50%"
+        },
+        {
+          "label": "X-World 仿真规模",
+          "note": "官方技术材料报告仿真场景已超过 50 万个，每日仿真测试里程相当于 3,000 万公里实车测试。",
+          "value": ">500,000 个场景；30,000,000 公里/日等效里程"
+        }
+      ],
+      "official_organization_url": "https://www.xpeng.com/",
+      "official_project_url": "https://www.xpeng.com/pressroom/news/019e95aed2899e8226228a028d650112",
+      "open_source": false,
+      "organization_en": "XPENG",
+      "organization_kind": "Company",
+      "organization_zh": "小鹏汽车",
+      "reason": "收录。该候选具有 XPENG 于 2026 年 6 月 3 日发布的专门官方页面，且主体是已实现并部署于实体车辆的 VLA 2.0、生成式世界模型及其训练、仿真和验证体系，不是汽车或机器人硬件产品规格页。官方页面及其关联技术材料明确说明了负责机构、软件架构、训练方法、生产工作流和量产结果。未找到截至核查时已实际公开源代码或模型权重的可靠官方证据，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "XPENG 在 CVPR 2026 展示的项目是一套服务于实体智能驾驶系统的 Physical AI 软件体系，核心由量产 VLA 2.0 和世界模型技术栈构成。X-World 接收多摄像头历史视频及计划执行的驾驶动作，生成七路一致、动作可控且可连续延伸的未来视频，用于构建能够响应驾驶策略变化的交互式环境。其架构基于视频 VAE 与 DiT，并通过因果压缩、跨视角时序注意力、分阶段训练、块因果生成和滚动 KV 缓存支持长序列及流式闭环运行。该世界模型已经进入 VLA 2.0 的研发和验证流程，用于闭环仿真、安全指标评估、在线强化学习、长尾数据合成及海外场景扩充。配套 X-Cache 则通过跨生成片段的特征复用降低世界模型推理成本。官方还报告了显著的训练集群效率提升、超过 50 万个仿真场景、每日等效 3,000 万公里测试，以及 VLA 2.0 推送首月超过 50% 的辅助驾驶里程占比，说明该项目已超出研究原型阶段并进入规模化实体系统部署。"
+    }
+  },
+  "traffic-scenario-orchestration-from-language-via-c9cbde8": {
+    "checked_at": "2026-08-12T03:43:03.223988+00:00",
+    "title": "Traffic Scenario Orchestration from Language via Constraint Satisfaction",
+    "accepted": true,
+    "reason": "纳入。Waabi 提供了专门的官方研究项目页，明确将其作为由自然语言生成闭环自动驾驶仿真场景的软件框架，而非车辆或传感器等硬件产品。该系统使用 LLM、约束求解器和闭环重规划来控制仿真交通参与者，并提供基准测试和实验结果，符合面向具身系统的模拟、测试与评估软件条件。官方页面未提供代码仓库或开源声明，因此 open_source=false。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "将自然语言交通场景描述自动转换为可执行的结构化约束",
+        "求解交通参与者的初始状态、路线和沿路线运动曲线",
+        "在闭环仿真中根据被测自动驾驶策略的实时行为反复求解并重规划",
+        "生成满足指定路线、交互方式、触发条件和运动学约束的自动驾驶测试场景",
+        "对自然语言驱动的交通场景编排方法进行基准评估"
+      ],
+      "fields": [
+        "LLM",
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "该项目将交通场景编排建模为约束满足问题，目标是为自动驾驶系统生成可控、反应式且运动学合理的闭环测试场景。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))",
+        "系统首先结合自然语言场景描述与高精地图，使用大语言模型识别场景参与者及其路线，并定义各参与者的运动曲线、运动学约束、地图约束和参与者间交互约束。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))",
+        "约束求解器随后求解运动曲线中的自由变量，从而确定每个交通参与者的初始状态以及沿指定路线的运动方式。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))",
+        "为应对不受编排器控制的被测自动驾驶策略，系统在闭环执行期间加入参与者当前状态作为新约束，并迭代调用求解器重新规划其他参与者的运动。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))",
+        "评测场景覆盖交叉路口中的不同路线、期望交互和触发条件，例如主参与者是否应向自动驾驶车辆让行；主要指标为同时满足路线、交互和触发条件的场景编排成功率。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))",
+        "官方结果称该方法相较学习式基线 ProSim 获得显著更高的编排成功率，优势在包含走停交互及精确时空要求的困难场景中尤其明显。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))"
+      ],
+      "metrics": [
+        {
+          "label": "基准场景规模",
+          "note": "由官方项目页报告，包含不同路线、交互要求和触发条件的精心设计场景描述。",
+          "value": "80 个场景描述"
+        },
+        {
+          "label": "闭环执行增益",
+          "note": "在四个代表性场景上比较启用与禁用闭环重规划。",
+          "value": "闭环编排成功率比开环执行高 23%"
+        },
+        {
+          "label": "闭环消融场景数",
+          "note": "用于评估闭环重规划重要性的代表性场景数量。",
+          "value": "4 个场景"
+        },
+        {
+          "label": "参数化精确控制结果",
+          "note": "在固定场景的离散参数网格实验中，官方页面报告该方法在所有测试参数值上均成功；页面正文未给出网格点总数。",
+          "value": "所有测试参数值均成功"
+        },
+        {
+          "label": "会议归属",
+          "note": "官方 Waabi 项目页将该工作列为 ICRA 2026 项目。",
+          "value": "ICRA 2026"
+        }
+      ],
+      "official_organization_url": "https://waabi.ai/",
+      "official_project_url": "https://waabi.ai/research/scenario-orchestration",
+      "open_source": false,
+      "organization_en": "Waabi",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Waabi 提供了专门的官方研究项目页，明确将其作为由自然语言生成闭环自动驾驶仿真场景的软件框架，而非车辆或传感器等硬件产品。该系统使用 LLM、约束求解器和闭环重规划来控制仿真交通参与者，并提供基准测试和实验结果，符合面向具身系统的模拟、测试与评估软件条件。官方页面未提供代码仓库或开源声明，因此 open_source=false。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Traffic Scenario Orchestration from Language via Constraint Satisfaction 是 Waabi 面向自动驾驶闭环测试提出的神经符号交通场景编排框架。它以自然语言测试意图和高精地图为输入，利用大语言模型抽取参与者、路线、运动曲线以及运动学、地图和交互约束，再通过约束求解器计算参与者的初始状态与行为。执行过程中，系统持续根据被测自动驾驶策略产生的新行为更新当前状态约束并重新求解，使模拟参与者能够对自动驾驶车辆作出反应。该方法主要解决人工编写场景难以扩展，以及纯学习式生成模型难以精确控制分布外、走停式和时空敏感交互的问题。官方在 80 条场景描述上进行评测，并报告闭环编排相对开环执行获得 23% 的成功率提升；在固定场景的参数网格实验中，该方法在全部测试参数上均成功。官方项目页将其列为 ICRA 2026 工作，作者为 Frieda Rong、Chris Zhang、Kelvin Wong 和 Raquel Urtasun。([waabi.ai](https://waabi.ai/research/scenario-orchestration?utm_source=openai))"
+    }
+  },
+  "xpeng-unveils-x-mind-a-future-foresight-brain-fo-3726a56": {
+    "checked_at": "2026-08-12T03:43:03.240679+00:00",
+    "title": "XPENG Unveils X-Mind: A Future-Foresight Brain for Autonomous Driving",
+    "accepted": false,
+    "reason": "正在核验，暂不作最终准入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验 XPENG 官方发布页及其链接材料，重点确认发布日期、软件是否为独立发布主题，以及组织、能力和指标是否有明确来源。随后按严格准入条件给出结构化结论。",
+        "这一步也会检查候选标题中的“2026-06-02”是否与官方页面实际日期一致，避免把页面编号或搜索摘要误当发布日期。",
+        "我正在读取官方正文并交叉检查 XPENG 的技术页面。初步看它确实把 X-Mind 描述为面向物理车辆的世界模型软件，而不是单纯的汽车硬件发布；接下来会限定技术点和指标，只保留官方明确报告的内容。"
+      ],
+      "fields": [
+        "World models",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验官方资料，尚未形成最终判定。",
+        "将严格区分软件技术发布与车辆产品发布。",
+        "不会使用 arXiv 单独支撑官方项目证据。",
+        "仅采纳官方页面或其链接技术材料中的能力和指标。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在进行官方来源核验",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.xpeng.com/pressroom/news/019f12539bff9f1220b48a028223000e",
+      "open_source": false,
+      "organization_en": "XPENG",
+      "organization_kind": "Company",
+      "organization_zh": "小鹏汽车",
+      "reason": "正在核验，暂不作最终准入判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 XPENG 官方页面及相关技术材料。"
+    }
+  },
+  "conditional-flow-vae-for-safety-critical-traffic-439d1cc": {
+    "checked_at": "2026-08-12T03:43:03.257485+00:00",
+    "title": "Conditional Flow-VAE for Safety-Critical Traffic Scenario Generation",
+    "accepted": true,
+    "reason": "符合收录条件。Waabi 提供了独立的官方研究项目页，明确将其标为 Waabi 的 ICRA 2026 项目，并介绍可执行安全关键交通场景生成的软件模型、训练方法、数据组成、控制方式和实验结果。该成果面向自动驾驶这一物理具身系统，可用于训练与基准评估，不是车辆硬件或产品规格页。官方页面仅链接论文和海报，未发现代码仓库或明确的开源发布，因此 open_source=false。候选所给 2026-06-04 日期未获页面支持；arXiv 记录显示首次提交日期为 2026-05-06。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从普通道路场景初始化生成具有急刹、强制并线和近失碰撞等行为的安全关键多智能体交通轨迹。",
+        "通过 nominal、safety-critical、very safety-critical 离散机动标签控制生成场景的危险程度。",
+        "通过调节流匹配推理时间步，在普通驾驶与安全关键行为之间进行连续插值。",
+        "结合真实驾驶日志与仿真数据生成可用于自动驾驶系统训练、测试和基准评估的场景。",
+        "自动选择与自车发生关键交互的交通参与者及其机动，无需逐个手工编写交互脚本。"
+      ],
+      "fields": [
+        "World models",
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "项目提出 Flow VAE：先在普通与安全关键场景的混合数据上训练条件 VAE，再冻结 VAE，并训练流匹配 Transformer，将普通场景的潜变量分布迁移到安全关键聚合后验分布。",
+        "两阶段训练用于避免 VAE 潜空间在早期训练中快速变化，使流模型不必持续追逐移动的目标分布，从而提高训练稳定性。",
+        "VAE 与流 Transformer 使用共同的注意力骨干，交错执行 actor-to-map、actor-to-actor 和 actor-to-time 注意力，并采用 PairPose 相对位置编码实现视角不变性。",
+        "模型为每个交通参与者预测独立潜变量，并逐参与者解码转向和加速度，从给定历史状态及地图生成多智能体未来 rollout。",
+        "训练数据混合约 500 个真实安全关键片段、约 10,000 个仿真安全关键片段和约 10,000 个真实普通驾驶片段；仿真部分使用基于 Intelligent Driver Model 的关键车辆以及拒绝采样。",
+        "系统提供两级可控性：离散机动标签控制总体危险等级，连续流时间步控制从普通行为到安全关键行为的渐进程度。",
+        "官方实验使用 minSTTC、无碰撞近失率、场景碰撞率、速度/加速度/加加速度分布 JSD 和位移误差，联合衡量场景危险性与运动真实性。"
+      ],
+      "metrics": [
+        {
+          "label": "最佳真实数据混合区间的近失率",
+          "note": "官方页面称真实安全关键数据占比约 40%–60% 时达到峰值，并同时获得最佳位移误差。",
+          "value": "58.3%"
+        },
+        {
+          "label": "机动标签控制下的 minSTTC",
+          "note": "从 nominal 标签切换到 challenging 标签；数值越低表示场景越具挑战性。",
+          "value": "3.26 s → 1.97 s"
+        },
+        {
+          "label": "机动标签控制下的近失率",
+          "note": "从 nominal 标签切换到 challenging 标签。",
+          "value": "28.1% → 50.0%"
+        },
+        {
+          "label": "STRIVE 基线碰撞率",
+          "note": "官方页面指出 STRIVE 虽取得相近近失率，但产生更高碰撞率和更差位移误差。",
+          "value": "7.0%"
+        },
+        {
+          "label": "实验数据规模",
+          "note": "约 10,000 个真实普通场景、10,000 个仿真安全关键场景及额外约 500 个真实安全关键场景；每个片段包含 20 秒驾驶数据。",
+          "value": "约 20,500 个场景片段"
+        }
+      ],
+      "official_organization_url": "https://waabi.ai/",
+      "official_project_url": "https://waabi.ai/research/conditional-flow-vae-for-safety-critical-traffic-scenario-generation",
+      "open_source": false,
+      "organization_en": "Waabi",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。Waabi 提供了独立的官方研究项目页，明确将其标为 Waabi 的 ICRA 2026 项目，并介绍可执行安全关键交通场景生成的软件模型、训练方法、数据组成、控制方式和实验结果。该成果面向自动驾驶这一物理具身系统，可用于训练与基准评估，不是车辆硬件或产品规格页。官方页面仅链接论文和海报，未发现代码仓库或明确的开源发布，因此 open_source=false。候选所给 2026-06-04 日期未获页面支持；arXiv 记录显示首次提交日期为 2026-05-06。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Conditional Flow-VAE（Flow VAE）是 Waabi 面向自动驾驶训练与评估开发的安全关键交通场景生成模型。它不依赖逐个手写危险事件，也不直接通过容易制造不自然碰撞的对抗优化来编辑轨迹，而是在条件 VAE 的潜空间中学习从普通交通分布到安全关键分布的流式迁移。系统先用普通、真实安全关键和仿真安全关键数据建立稳定的驾驶行为潜空间，再以独立的流匹配 Transformer 学习分布传输。模型能够生成急刹、侵入式并线和近失交互等多智能体 rollout，并通过离散机动标签和连续流时间步控制危险程度。官方结果显示，真实与仿真安全关键数据的混合优于任一单一来源；在约 40%–60% 真实数据占比附近，近失率达到 58.3%。该项目属于面向物理自动驾驶系统的数据与仿真软件成果，而非硬件产品。"
+    }
+  },
+  "working-with-the-robot-model-hello-robot-docs-gi-e8ad968": {
+    "checked_at": "2026-08-12T03:43:03.273095+00:00",
+    "title": "Working with the Robot Model | Hello Robot Docs GitBook Assistant GitBook Assistant arrow-up-right-and-arrow-down-left-from-center GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant GitBook Assistant linkedin GitBook Assistant GitBook Assistant",
+    "accepted": false,
+    "reason": "不收录。虽然 Hello Robot 有公开的 Stretch URDF 软件仓库，候选链接本身只是“Working with the Robot Model”操作文档；可访问的官方来源未能证明该页面对应一个于 2025 年后独立发布、以软件为主体且具有明确项目身份的技术项目，也无法核实所给 2026-06-02 发布日期。缺失的是条件 1 所要求的具体软件发布物证据及其发布时间，而不是组织归属或官方页面真实性。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供 Stretch 移动操作机器人使用的 URDF 与网格资源",
+        "通过 Python 包安装并定位机器人描述文件",
+        "按机器人型号与末端工具组合选择对应的 URDF"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "候选链接是 Hello Robot 官方文档中的操作指南页面，而不是可核实的独立软件项目发布页。",
+        "官方 GitHub 仓库表明 Hello Robot 确实维护 `stretch_urdf` 软件包，其中包含 Stretch 移动操作机器人的 URDF 和 Mesh 文件。",
+        "该软件包可通过 `hello-robot-stretch-urdf` Python 包安装，并按机器人型号和末端工具命名、加载相应 URDF。",
+        "仓库明确说明这些 URDF 数据未经标定，并与 Stretch ROS/ROS 2 使用的已标定 URDF 数据分开管理。",
+        "现有可访问来源无法证明候选页面在 2026-06-02 发布了一个新的、具有独立身份的机器人软件项目；它更像 Stretch 4 产品文档体系中的一项常规使用说明。"
+      ],
+      "metrics": [
+        {
+          "label": "GitHub 仓库提交数",
+          "note": "搜索时官方 `hello-robot/stretch_urdf` 仓库页面显示的累计提交数；不是候选项目的性能指标。",
+          "value": "146 commits"
+        },
+        {
+          "label": "仓库语言构成",
+          "note": "官方 GitHub 仓库显示。",
+          "value": "Python 99.3%，Shell 0.7%"
+        },
+        {
+          "label": "机器人自由度",
+          "note": "Hello Robot 官方 Stretch 4 产品资料报告的硬件自由度；不属于该文档页面的软件评测结果。",
+          "value": "9-DOF"
+        },
+        {
+          "label": "自碰撞规避频率",
+          "note": "Hello Robot 官方 Stretch 4 数据表报告采用 MuJoCo 与 URDF 的自碰撞规避频率，但无法确认它是候选页面所发布的独立软件成果。",
+          "value": "100 Hz"
+        }
+      ],
+      "official_organization_url": "https://hello-robot.com/",
+      "official_project_url": "https://docs.hello-robot.com/stretch4_docs/working-with-stretch/common_tasks/working-with-stretch-robot-model",
+      "open_source": false,
+      "organization_en": "Hello Robot",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。虽然 Hello Robot 有公开的 Stretch URDF 软件仓库，候选链接本身只是“Working with the Robot Model”操作文档；可访问的官方来源未能证明该页面对应一个于 2025 年后独立发布、以软件为主体且具有明确项目身份的技术项目，也无法核实所给 2026-06-02 发布日期。缺失的是条件 1 所要求的具体软件发布物证据及其发布时间，而不是组织归属或官方页面真实性。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该候选项来自 Hello Robot 的 Stretch 4 官方文档，主题是如何使用机器人的数字模型。Hello Robot 另有公开的 `stretch_urdf` 仓库，提供 Stretch 移动操作机器人的 URDF、网格资源、Python 安装包以及按机器人型号和末端工具选择描述文件的机制。这些资源属于机器人系统开发软件，可用于加载和处理 Stretch 的运动学描述。不过，候选页面呈现为 Stretch 4 使用文档中的常规任务指南，而非一个拥有独立名称、发布声明或版本成果的新软件项目。官方可访问材料也没有将 2026-06-02 确认为该软件项目的发布日期。因此，在要求严格限定为“2025 年以来发布的有影响力具身机器人技术项目”的索引中，现有证据不足以收录。"
+    }
+  },
+  "salf-sparse-local-fields-for-multi-sensor-render-c24b18d": {
+    "checked_at": "2026-08-12T03:43:03.290749+00:00",
+    "title": "SaLF: Sparse Local Fields for Multi-Sensor Rendering in Real-Time",
+    "accepted": true,
+    "reason": "收录。SaLF 是由 Waabi 明确负责并通过官方专属研究页面发布的自动驾驶多传感器仿真软件项目。其核心是用于物理车辆感知系统测试的稀疏体积场景表示和相机/LiDAR 实时渲染方法，不是硬件或产品规格页面。官方页面提供方法、能力、结果、论文和演示材料；论文于 2025 年 7 月 24 日公开，项目在 ICRA 2026 展示。官方材料未提供可核实的源代码仓库，因此 open_source=false，但开源并非收录条件。([waabi.ai](https://waabi.ai/research/salf))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "相机与 LiDAR 的统一实时传感器渲染",
+        "非针孔相机与 360° 全景相机模拟",
+        "旋转式 LiDAR 和滚动快门效应模拟",
+        "支持折射、反射与阴影的光线追踪",
+        "面向大规模驾驶场景的快速重建与新视角合成"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI",
+        "World models"
+      ],
+      "include": true,
+      "key_points": [
+        "SaLF 是 Waabi 面向自动驾驶传感器仿真的软件研究项目，而非车辆、传感器或其他硬件产品；其核心产物是一种可用于相机和 LiDAR 渲染的稀疏体积场景表示。([waabi.ai](https://waabi.ai/research/salf))",
+        "场景被表示为稀疏的三维体素基元集合，每个体素包含局部隐式场，将三维坐标映射为密度与颜色；体素同时具有位置、尺度、旋转以及几何场、颜色场和球谐函数等可学习参数。([waabi.ai](https://waabi.ai/research/salf))",
+        "该表示将场景数据与单一渲染方式解耦：同一稀疏体素格式既可通过基于八叉树加速的 ray-casting 处理复杂传感器和光学效应，也可通过 tile-based splatting 高效渲染针孔相机。([waabi.ai](https://waabi.ai/research/salf))",
+        "SaLF 使用自适应裁剪和致密化机制，只存储非空或有用的局部区域，以较紧凑的表示处理大型道路场景并保留局部细节。([waabi.ai](https://waabi.ai/research/salf))",
+        "其传感器模型不局限于标准针孔相机，官方材料展示了 360° 全景视图、滚动快门时序畸变以及旋转式 LiDAR 的模拟能力。([waabi.ai](https://waabi.ai/research/salf))",
+        "ray-casting 路径可模拟折射、反射和阴影等复杂光传输现象，使同一场景表示能够覆盖传统光栅化难以直接支持的传感器与成像效果。([waabi.ai](https://waabi.ai/research/salf))",
+        "项目由 Waabi 官方研究页面发布并明确署名“by Waabi”；该页面将项目列为 ICRA 2026 工作，而论文记录显示其最初于 2025 年 7 月 24 日公开，因此满足“2025 年以来发布”的时间条件。([waabi.ai](https://waabi.ai/research/salf))"
+      ],
+      "metrics": [
+        {
+          "label": "场景训练时间",
+          "note": "Waabi 官方页面注明在 NVIDIA RTX 3090 上完成训练；论文摘要也报告相同量级。",
+          "value": "<30 分钟"
+        },
+        {
+          "label": "相机渲染速度",
+          "note": "Waabi 项目页给出的保守指标为 >30 FPS；论文摘要进一步报告 50+ FPS。",
+          "value": ">30 FPS（论文摘要：50+ FPS）"
+        },
+        {
+          "label": "LiDAR 渲染速度",
+          "note": "Waabi 项目页给出的保守指标为 >400 FPS；论文摘要进一步报告 600+ FPS。",
+          "value": ">400 FPS（论文摘要：600+ FPS）"
+        },
+        {
+          "label": "全景相机覆盖范围",
+          "note": "官方项目页展示对非标准相机模型的支持。",
+          "value": "360° 全景渲染"
+        }
+      ],
+      "official_organization_url": "https://waabi.ai/",
+      "official_project_url": "https://waabi.ai/research/salf",
+      "open_source": false,
+      "organization_en": "Waabi",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。SaLF 是由 Waabi 明确负责并通过官方专属研究页面发布的自动驾驶多传感器仿真软件项目。其核心是用于物理车辆感知系统测试的稀疏体积场景表示和相机/LiDAR 实时渲染方法，不是硬件或产品规格页面。官方页面提供方法、能力、结果、论文和演示材料；论文于 2025 年 7 月 24 日公开，项目在 ICRA 2026 展示。官方材料未提供可核实的源代码仓库，因此 open_source=false，但开源并非收录条件。([waabi.ai](https://waabi.ai/research/salf))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "SaLF（Sparse Local Fields）是 Waabi 开发的自动驾驶多传感器仿真场景表示与实时渲染方法。它以稀疏三维体素组织场景，每个体素保存局部隐式几何和颜色场，并通过自适应裁剪、细分与致密化覆盖大型道路环境。与只能依赖单一路径的传统 NeRF 或 3D Gaussian Splatting 方法不同，SaLF 的同一表示可同时接入 tile-based splatting 和八叉树加速 ray-casting：前者服务于高效针孔相机渲染，后者支持旋转式 LiDAR、非针孔相机、滚动快门以及折射、反射和阴影等效果。官方报告其在 RTX 3090 上可于 30 分钟内训练场景，并实现实时相机和高吞吐量 LiDAR 渲染。该项目的直接用途是构建逼真的驾驶数字场景，从新视角生成相机图像和点云，为自动驾驶感知及自主系统的训练、测试和安全评估提供可扩展的软件仿真基础。([waabi.ai](https://waabi.ai/research/salf))"
+    }
+  },
+  "genre-diffusion-guided-generalizable-enhancer-fo-2796fff": {
+    "checked_at": "2026-08-12T03:43:03.307505+00:00",
+    "title": "GenRe: Diffusion-guided Generalizable Enhancer for Urban Scene Reconstruction",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、所属机构、发布日期和软件产物性质。重点判断 GenRe 是否属于面向物理机器人/具身智能的仿真软件，而不是单纯的三维重建研究。",
+        "随后会只采用官方页面、技术报告及其直接链接材料中的技术点和指标，不补猜缺失信息。",
+        "检索进行中。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验来源",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://waabi.ai/research/genre",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方资料。"
+    }
+  },
+  "fe0-8fcfa04": {
+    "checked_at": "2026-08-12T03:43:03.324477+00:00",
+    "title": "Fe0",
+    "accepted": true,
+    "reason": "收录。2026 年 5 月 30 日发布的官方专页明确将 Fe0 定义为具身基础模型，并给出模型构成、跨本体数据设计、开放环动作预测评估以及在 IRON-R01-1.11 实体人形机器人上的闭环执行结果。该页面的主题是具身模型及其受控评估框架，而非机器人硬件或产品规格；责任主体明确为 XPENG Robotics / Multimodal Team，满足发布日期、软件属性、官方专页和明确组织归属要求。官方材料未声明代码、模型权重或数据已经开放，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于视觉与语言指令，在 IRON-R01-1.11 人形机器人上执行闭环物体操作",
+        "在新场景、外观变化和干扰物存在时定位并操作任务目标",
+        "将未见物体、容器、类别描述和功能性描述映射到可操作目标",
+        "执行新动作-物体组合、最高级属性选择及部分多物体、多步骤任务",
+        "泛化到姿态恢复和接触式推动等训练锚点之外的动作"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Humanoid intelligence",
+        "Vision-language-action",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "Fe0 是小鹏机器人多模态团队发布的具身基础模型研究项目，基于 UniT 与内部多模态模型构建；其核心产物是面向实体人形机器人执行的模型及受控评估框架，不是 IRON 机器人的硬件产品页。",
+        "项目采用极度不对称的训练设计：目标本体锚点只有约 3 小时 IRON-R01-1.11 遥操作数据，并严格以 approach、grasp、lift、transport、release 组成的基础抓取放置动作为主；迁移池则混合人类活动视频及多种夹爪、灵巧手机器人数据。",
+        "锚点数据中 95% 是单物体到单容器的原子任务，其余 5% 是两个物体放到同一货架不同层级；语义范围仅覆盖 20 种日常物体和 6 个固定目标位置，因此超出这些对象、容器、任务逻辑或动作原语的表现可用于隔离跨本体迁移效果。",
+        "项目提出 L1-L5 多轴分解评估：依次测试视觉鲁棒性、语义落地、关系推理、组合规划和动作泛化；每一层都包含更细的场景迁移、未见目标、属性绑定、多步操作、姿态恢复和受约束运动等测试。",
+        "开放环评估逐帧输入真实遥操作轨迹中的状态，以模型动作与对应遥操作动作之间的均方误差评分；同时在 IRON-R01-1.11 上进行闭环真实机器人测试，对比使用完整跨本体数据的模型与仅使用锚点数据的 0% 基线。",
+        "完整跨本体模型在 L1 视觉鲁棒性和 L2 语义落地上通过真实机器人测试，也能完成新动作-物体组合、最高级目标选择和部分多步骤任务；但精确属性及空间关系绑定仍不稳定，长程计划较脆弱。",
+        "动作迁移是主要瓶颈：模型可以完成姿态泛化、姿态恢复和接触式推动，却无法完成平面受约束运动；项目据此认为，仅扩大异构轨迹规模不足以迁移接触模式、约束几何和力方向等物理结构。"
+      ],
+      "metrics": [
+        {
+          "label": "开放环总体误差变化",
+          "note": "完整跨本体数据相对于不使用跨本体数据的零迁移基线；指标为预测动作相对遥操作动作的聚合 MSE。",
+          "value": "约降低 8%"
+        },
+        {
+          "label": "跨本体池与锚点的 episode 规模比",
+          "note": "跨本体迁移池相对于 IRON 目标本体遥操作锚点。",
+          "value": "345×"
+        },
+        {
+          "label": "跨本体池与锚点的帧数比",
+          "note": "跨本体迁移池相对于 IRON 目标本体遥操作锚点。",
+          "value": "909×"
+        },
+        {
+          "label": "跨本体池与锚点的时长比",
+          "note": "跨本体迁移池相对于 IRON 目标本体遥操作锚点。",
+          "value": "1,587×"
+        },
+        {
+          "label": "目标本体锚点规模",
+          "note": "IRON-R01-1.11 遥操作数据；平均每个 episode 为 6.1 秒，95% 为单物体到单容器任务。",
+          "value": "约 3 小时"
+        }
+      ],
+      "official_organization_url": "https://xpeng-robotics.github.io/",
+      "official_project_url": "https://xpeng-robotics.github.io/fe0/",
+      "open_source": false,
+      "organization_en": "XPENG Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "小鹏机器人",
+      "reason": "收录。2026 年 5 月 30 日发布的官方专页明确将 Fe0 定义为具身基础模型，并给出模型构成、跨本体数据设计、开放环动作预测评估以及在 IRON-R01-1.11 实体人形机器人上的闭环执行结果。该页面的主题是具身模型及其受控评估框架，而非机器人硬件或产品规格；责任主体明确为 XPENG Robotics / Multimodal Team，满足发布日期、软件属性、官方专页和明确组织归属要求。官方材料未声明代码、模型权重或数据已经开放，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Fe0 是小鹏机器人多模态团队于 2026 年 5 月 30 日发布的具身基础模型与受控迁移评估项目，研究异构人类和机器人经验究竟能向目标人形机器人迁移哪些能力。项目刻意只为 IRON-R01-1.11 提供约 3 小时、以单一抓取放置原语为主的本体内遥操作锚点，再引入规模大得多的跨本体数据池，从而把超出有限物体、容器、任务逻辑和动作模板的表现归因于跨本体学习。其 L1-L5 框架同时通过开放环动作 MSE 和实体机器人闭环试验评估视觉、语义、关系、规划与控制迁移。结果显示，跨本体数据显著改善视觉鲁棒性、未见目标语义落地和部分任务逻辑，总体开放环误差约下降 8%；但精确关系绑定、多步骤稳定性及受约束物理动作仍是明显短板。"
+    }
+  },
+  "unit-8abc2b2": {
+    "checked_at": "2026-08-12T03:43:03.341258+00:00",
+    "title": "UniT",
+    "accepted": false,
+    "reason": "正在完成官方来源核验，尚未形成最终收录结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、代码仓库、机构归属及定量结果，重点确认它是否确实是面向物理机器人的软件项目，而非仅有论文或硬件说明。",
+        "随后会只采用官方页面、技术报告及其直接链接材料中的可验证指标。",
+        "该项目已经有独立的官方项目页与公开代码仓库，初步符合软件项目和专页证据要求。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://xpeng-robotics.github.io/unit/",
+      "open_source": true,
+      "organization_en": "XPENG Robotics",
+      "organization_kind": "Research Lab",
+      "organization_zh": "小鹏机器人",
+      "reason": "正在完成官方来源核验，尚未形成最终收录结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于官方项目页、代码仓库与技术报告整理严格收录档案。"
+    }
+  },
+  "how-do-i-add-custom-mujoco-environments-to-docke-04ab3e8": {
+    "checked_at": "2026-08-12T03:43:03.358129+00:00",
+    "title": "How do I add custom Mujoco environments to docker install of stretch_ros2/stretch_simulation - Ask - Stretch Forum",
+    "accepted": false,
+    "reason": "不收录。候选 URL 是一篇 2026 年 4 月 7 日发布的用户技术支持问答，不是软件工件的发布页、官方项目公告或研究实验室项目页，因此不满足条件 3；页面也没有发布一个新的模型、框架、数据集、基准、仿真器版本或控制栈，因而不能作为独立的 2026 年具身机器人技术项目。其讨论的 Stretch Mujoco 是真实的开源机器人仿真软件，并有独立官方仓库和文档，但对应的 0.5.0 发布发生在 2025 年 6 月 10 日，应以该正式项目或发布记录作为候选，而不能以本论坛求助帖替代。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 MuJoCo 中实时模拟 Stretch 3 移动操作机器人，并提供无头运行和交互式可视化模式",
+        "通过 Python API 和 ROS 2 接口控制移动底盘、机械臂、头部与夹爪，并读取关节状态",
+        "模拟经过标定的彩色与深度相机、二维旋转激光雷达，并生成点云",
+        "生成数百种 RoboCasa 厨房环境组合，也可通过 XML 路径或 MuJoCo MjModel 加载自定义场景",
+        "与 Nav2、激光雷达 SLAM 和 Stretch Web Teleop 等机器人软件集成"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "候选页面是 Hello Robot 官方论坛中的用户求助帖，发布日期为 2026 年 4 月 7 日；它询问如何在 Docker 版 stretch_ros2/stretch_simulation 中加载自定义 MuJoCo 场景，并不是软件发布或项目公告。",
+        "官方回复说明 StretchMujocoSimulator 接受 scene_xml_path 或已加载的 MjModel，因此底层 stretch_mujoco 软件确实支持自定义 MuJoCo 环境。",
+        "官方回复同时指出，当时 ROS 2 的 stretch_mujoco_driver 尚未公开提供相应服务；用户需要自行扩展驱动代码，官方表示未来计划添加。",
+        "该论坛讨论所涉及的实际软件是 Hello Robot 的 Stretch Mujoco：一个面向 Stretch 移动操作机器人的 MuJoCo 仿真栈，包含 Python API 和 ROS 2 软件包。",
+        "Stretch Mujoco 支持底盘速度控制，以及机械臂、头部和夹爪的关节位置控制；还能输出关节状态、标定的 RGB/深度图像和二维激光雷达扫描。",
+        "项目支持交互式查看器与无头执行，并可结合 RoboCasa 生成厨房场景；官方文档还列出 Nav2、激光雷达 SLAM、点云和 Web Teleop 集成。",
+        "虽然底层 Stretch Mujoco 0.5.0 是符合软件定义的官方项目，并于 2025 年 6 月 10 日发布，但不能把后来的一篇技术支持问答重新认定为独立项目发布。"
+      ],
+      "metrics": [
+        {
+          "label": "底层软件正式版本日期",
+          "note": "这是 Stretch Mujoco 0.5.0 的发布日期，不是候选论坛帖的项目发布日期。",
+          "value": "2025-06-10"
+        },
+        {
+          "label": "支持的桌面操作系统",
+          "note": "0.5.0 更新日志明确列出 Ubuntu、macOS 和 Windows。",
+          "value": "3"
+        },
+        {
+          "label": "RoboCasa 环境规模",
+          "note": "官方使用“100s of permutations”，未提供更精确数量。",
+          "value": "数百种厨房环境组合"
+        },
+        {
+          "label": "ROS 2 控制模式",
+          "note": "官方仿真教程列出 position、navigation 和 trajectory。",
+          "value": "3 种"
+        },
+        {
+          "label": "仿真运行特性",
+          "note": "官方更新日志报告 Stretch 3 可实时仿真，并支持无头模式。",
+          "value": "实时仿真"
+        }
+      ],
+      "official_organization_url": "https://hello-robot.com/",
+      "official_project_url": "https://github.com/hello-robot/stretch_mujoco",
+      "open_source": true,
+      "organization_en": "Hello Robot Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录。候选 URL 是一篇 2026 年 4 月 7 日发布的用户技术支持问答，不是软件工件的发布页、官方项目公告或研究实验室项目页，因此不满足条件 3；页面也没有发布一个新的模型、框架、数据集、基准、仿真器版本或控制栈，因而不能作为独立的 2026 年具身机器人技术项目。其讨论的 Stretch Mujoco 是真实的开源机器人仿真软件，并有独立官方仓库和文档，但对应的 0.5.0 发布发生在 2025 年 6 月 10 日，应以该正式项目或发布记录作为候选，而不能以本论坛求助帖替代。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该候选本身不是具身机器人软件项目，而是 Hello Robot 官方论坛上的配置求助帖。提问者希望在 Docker 安装的 stretch_ros2/stretch_simulation 中使用自定义 MuJoCo 场景；官方答复确认底层 StretchMujocoSimulator 可接收 scene_xml_path 或 MjModel，但 ROS 2 驱动当时没有直接暴露这一能力。帖子所指向的 Stretch Mujoco 是 Hello Robot 开发的开源 Stretch 机器人仿真栈，具备实时 MuJoCo 仿真、Python/ROS 2 控制、RGB-D 与激光雷达传感器、RoboCasa 场景生成、无头执行及导航软件集成等能力。不过，这些能力属于独立的 Stretch Mujoco 项目及其 2025 年 6 月 10 日发布的 0.5.0 版本，而不是该 2026 年论坛帖发布的新工件。"
+    }
+  },
+  "q1-2026-vention-platform-release-609fa71": {
+    "checked_at": "2026-08-12T03:43:03.374531+00:00",
+    "title": "Q1 2026 Vention Platform Release",
+    "accepted": true,
+    "reason": "收录。Vention 于 2026 年 4 月 9 日发布了专门的官方季度版本页，明确由 Vention Official 负责；页面主体包含用于真实工业机器人和自动化单元的编程、控制、仿真、I/O、数字孪生及机器人集成软件更新。官方技术文档进一步证明 MachineLogic 程序可以在云端仿真并部署到 MachineMotion 控制器和物理机器人执行，因此它不是硬件单品公告。需要保留版本状态边界：原公告中部分能力已发布，部分明确标为“Targeting v3.5.0”或“Upcoming”，本档案未把后者误写成公告当日已经全面可用。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 MachineLogic 的无代码流程编辑器或 Python SDK 编写工业机器人、输送机、气动装置、传感器及运动轴控制程序，并部署至 MachineMotion 控制器。([docs.vention.com](https://docs.vention.com/docs/how-to-configure-program-and-simulate-with-machinelogic?utm_source=openai))",
+        "在云端数字孪生中执行机器人运动、时序、交互及真空夹具仿真，再将同一应用部署到物理设备。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+        "为 Universal Robots 提供基于法兰力/力矩检测的接触停止、可选回撤、接触位姿记录及运行时场景资产校准。([docs.vention.com](https://docs.vention.com/docs/robot-move-until-contact?utm_source=openai))",
+        "通过统一的 MachineLogic 环境配置和控制 FANUC 六关节工业机器人，并覆盖硬件、数字化设计、编程和仿真工作流。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+        "读取输送机电机输入，并通过 EtherNet/IP、数字 I/O 和远程控制中心连接机器人单元及外围自动化设备；其中部分 v3.5.0 功能在公告发布时仍标注为目标版本。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Vention 制造自动化平台的季度软件版本公告，主体覆盖 MachineLogic、MachineCode、云端仿真、机器人集成和远程运维，而不是机器人本体、执行器或控制器硬件规格页。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+        "MachineLogic/MachineCode v3.4.0 增加专用输送机电机配置节点，使程序能够直接读取输送机电机输入；序列画布迁移到 React，并加入被调用序列的面包屑导航、改进的拖放操作和快速删除。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+        "仿真侧正式发布 VRMCS，并加入真空夹具仿真，以提高数字孪生对抓取设备行为的覆盖；公告同时明确把物理引擎服务端迁移、仿真力反馈和完整 FANUC 仿真中的一部分列为后续工作。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+        "Move Until Tool Contact 使用机器人内置力/力矩感知，在达到阈值或最大行程时终止直线运动；它支持无代码指令和同步、异步 Python SDK，并能在仿真与物理机器人上保持相同的程序语义。([docs.vention.com](https://docs.vention.com/docs/robot-move-until-contact?utm_source=openai))",
+        "Universal Robots 工作流加入接触式“Move until”运动和 Blend 优化；FANUC 集成则覆盖六关节机器人、MachineLogic 编程、数字化工作流和仿真。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+        "I/O 架构更新移除了内部轮询环路，并把 Machine Interface 从 MQTT/HTTP 迁移到固件级 gRPC；但原始公告将该项以及 EtherNet/IP 读写标为目标 v3.5.0，不能视为 2026 年 4 月 9 日已经全面上线的功能。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+        "Vention 官方资料将 MachineLogic 定义为面向工业自动化的云端编程工具：程序可在云环境仿真，也可部署至 MachineMotion 控制器执行，因此满足“用于物理机器人且软件是页面主题”的收录要求。([docs.vention.com](https://docs.vention.com/technicaldocumentation/docs/robot-programming-and-scene-assets-in-machinelogic?utm_source=openai))"
+      ],
+      "metrics": [
+        {
+          "label": "I/O 轮询延迟改动",
+          "note": "公告称该改动以目标 v3.5.0 发布：移除内部轮询并迁移到固件级 gRPC。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+          "value": "移除 20 ms 内部轮询环路"
+        },
+        {
+          "label": "接触运动速度上限",
+          "note": "官方使用文档规定 Move Until Tool Contact 的速度必须为正，并限制为不超过该值。([docs.vention.com](https://docs.vention.com/docs/robot-move-until-contact?utm_source=openai))",
+          "value": "100 mm/s"
+        },
+        {
+          "label": "接触运动结果码",
+          "note": "Python SDK 文档列出从“检测到接触”到“路径存在奇异点”的完整结果码。([docs.vention.com](https://docs.vention.com/docs/robot-move-until-contact?utm_source=openai))",
+          "value": "10 种结果码"
+        },
+        {
+          "label": "FANUC 运动结构",
+          "note": "季度公告称已完成面向 M20iD/35、M-710iD/70、LR-10iA/10 和 LR Mate 系列的端到端集成。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+          "value": "支持六关节 FANUC 机器人集成"
+        },
+        {
+          "label": "版本范围",
+          "note": "输送机电机节点属于 v3.4.0；接触运动、UR 增强、FANUC 集成及若干连接能力标注为 v3.5.0 或目标 v3.5.0。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+          "value": "v3.4.0–v3.5.0"
+        }
+      ],
+      "official_organization_url": "https://vention.com/about",
+      "official_project_url": "https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094",
+      "open_source": false,
+      "organization_en": "Vention",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Vention 于 2026 年 4 月 9 日发布了专门的官方季度版本页，明确由 Vention Official 负责；页面主体包含用于真实工业机器人和自动化单元的编程、控制、仿真、I/O、数字孪生及机器人集成软件更新。官方技术文档进一步证明 MachineLogic 程序可以在云端仿真并部署到 MachineMotion 控制器和物理机器人执行，因此它不是硬件单品公告。需要保留版本状态边界：原公告中部分能力已发布，部分明确标为“Targeting v3.5.0”或“Upcoming”，本档案未把后者误写成公告当日已经全面可用。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Q1 2026 Vention Platform Release 是 Vention 制造自动化平台的一次跨模块软件更新，覆盖 MachineLogic/MachineCode 编程、机器人数字孪生仿真、I/O 与工业协议、远程运维以及 Universal Robots 和 FANUC 集成。已明确发布的内容包括 v3.4.0 输送机电机配置与输入读取、VRMCS、真空夹具仿真、UR 接触运动与 Blend 优化，以及 FANUC 六关节机器人端到端工作流。接触运动允许机器人沿指定方向低速移动，利用法兰力/力矩阈值停止，并可记录接触位姿、回撤和校准场景资产；官方后续文档确认其同时存在于无代码编辑器、Python SDK、物理机器人和物理仿真中。公告还披露了移除 20 ms I/O 轮询、固件级 gRPC、EtherNet/IP 读写、仿真力反馈和更完整 FANUC 仿真等工作，但其中若干项目在 2026 年 4 月 9 日仍属于目标 v3.5.0 或后续计划。整体上，这是直接面向真实工业机器人设计、编程、仿真、部署和运行的软件平台版本，符合具身机器人技术项目索引的收录条件。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094?utm_source=openai))"
+    }
+  },
+  "gen-1-scaling-embodied-foundation-models-to-mast-e5d5d50": {
+    "checked_at": "2026-08-12T03:43:03.391499+00:00",
+    "title": "GEN-1: Scaling Embodied Foundation Models to Mastery",
+    "accepted": false,
+    "reason": "Verification in progress.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official GEN-1 materials first, then I’ll verify the organization, release date, technical claims, and reported results against linked primary sources.",
+        "I’ll treat the supplied date and summary as leads only; inclusion depends on what the accessible official pages actually support.",
+        "I’m also separating GEN-1’s software contribution from any robot hardware used in demonstrations, since that distinction determines eligibility."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress.",
+        "Official source verification pending.",
+        "No verdict has been made yet.",
+        "Metrics and capabilities will only be included when explicitly reported."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Primary-source review underway",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Verification in progress.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目页面及其链接的技术材料。"
+    }
+  },
+  "dial-855cb00": {
+    "checked_at": "2026-08-12T03:43:03.407638+00:00",
+    "title": "DIAL",
+    "accepted": false,
+    "reason": "",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、代码仓库与技术报告中的归属、开源状态和可复述指标。项目页已确认 DIAL 是面向实体人形机器人的端到端 VLA 软件，而非硬件产品页。 ",
+        "随后会仅保留官方材料明确支持的技术点与结果，避免从摘要推断未报告的数值。 ",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "brainos-clean-2-0-with-selfpath-ai-771cadd": {
+    "checked_at": "2026-08-12T03:43:03.424665+00:00",
+    "title": "BrainOS Clean 2.0 with SelfPath AI",
+    "accepted": true,
+    "reason": "符合收录条件：该项目于2026年3月31日由Brain Corporation正式发布，存在专门的官方项目页和官方发布公告；主体是运行于Tennant实体地面清洁机器人的自主导航、感知、重规划和工作流软件更新，而不是硬件产品公告。官方资料明确列出负责组织、支持的机器人平台、部署时间、实现能力及运行结果。未发现官方开源代码发布，因此open_source设为false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于简化场地地图自动生成、调整并持续优化低重复度清洁路径，无需人工逐段示教完整路线",
+        "通过增强视觉感知识别临时障碍物，并实时重规划、绕行和自动恢复清洁任务",
+        "根据设施布局变化动态调整覆盖策略，优先处理尚未清洁的区域",
+        "执行定时清洁、访问补水站等指定兴趣点，并在中断后自动续作",
+        "自主管理充电流程，并与商业设施的日常清洁工作流集成"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "BrainOS Clean 2.0是面向Tennant实体地面清洁机器人的自主软件更新，并非机器人硬件或单纯的产品规格页面；官方将其描述为结合AI自主性、视觉智能与工作流感知自动化的软件系统。",
+        "核心SelfPath AI取代了必须由操作员推动机器人逐段录制固定路线的传统Teach & Repeat部署方式；部署人员只需引导机器人建立简化场地地图，路径生成算法即可创建并持续改进清洁路线。",
+        "系统根据当前环境生成低重复度路径，减少清洁区域重叠，并将未覆盖区域纳入优先规划；原有Teach & Repeat和Area Fill模式仍然保留，已有路线也不会被删除。",
+        "视觉智能与实时重规划用于处理被阻塞的通道、购物车、托盘等非预期障碍；机器人可动态绕行，随后自动恢复原清洁任务，降低人工协助需求。",
+        "工作流感知自动化覆盖定时任务、兴趣点访问、自动续作和自主充电，使机器人能够在较少日常监管的情况下融入零售、教育、医疗和工业设施流程。",
+        "该版本由Brain Corporation发布，并与Tennant Company合作部署于Tennant机器人；官方资料称其初期适用于X4 ROVR和X6 ROVR，并于2026年4月6日起首先向部分零售客户推送。"
+      ],
+      "metrics": [
+        {
+          "label": "清洁覆盖提升",
+          "note": "官方称在商业和工业设施中，相比传统Teach & Repeat配置的路线，SelfPath AI通过减少重叠并优先覆盖未清洁区域提升独特覆盖范围。",
+          "value": "+22%"
+        },
+        {
+          "label": "自主性提升",
+          "note": "官方称在已部署的X4 ROVR和X6 ROVR上，动态路径调整、自动恢复和重规划减少了人工干预。",
+          "value": "+55%"
+        },
+        {
+          "label": "部署速度",
+          "note": "官方称在X4 ROVR和X6 ROVR上，相比传统Teach & Repeat设施部署方式，SelfPath AI免除了完整路线录制。",
+          "value": ">3× faster"
+        },
+        {
+          "label": "布局变化后的路线重训练时间",
+          "note": "官方技术介绍称系统可自行重新生成路线，因此设施布局变化后不再需要人工重新训练路线。",
+          "value": "0"
+        }
+      ],
+      "official_organization_url": "https://www.braincorp.com/about",
+      "official_project_url": "https://www.braincorp.com/brainosclean2-0",
+      "open_source": false,
+      "organization_en": "Brain Corporation",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：该项目于2026年3月31日由Brain Corporation正式发布，存在专门的官方项目页和官方发布公告；主体是运行于Tennant实体地面清洁机器人的自主导航、感知、重规划和工作流软件更新，而不是硬件产品公告。官方资料明确列出负责组织、支持的机器人平台、部署时间、实现能力及运行结果。未发现官方开源代码发布，因此open_source设为false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "BrainOS Clean 2.0 with SelfPath AI是Brain Corporation为Tennant商用地面清洁机器人推出的自适应自主软件版本。它以简化场地地图为输入，由路径生成算法自动规划、调整并持续优化清洁路线，从而减少对人工Teach & Repeat路线录制及布局变化后重新示教的依赖。系统同时加入增强视觉感知、实时重规划、障碍绕行和任务自动恢复，并将定时清洁、兴趣点访问、自动续作与自主充电纳入统一工作流。官方在初始部署中报告清洁覆盖提升22%、整体自主性提升55%、部署速度超过传统方式的3倍，并称路线重训练时间降至零。该版本最初面向Tennant X4 ROVR和X6 ROVR，通过商业设备的软件更新机制推送；它属于面向真实物理机器人的完整自主运行软件，而非开放源代码研究发布。"
+    }
+  },
+  "rapid-operator-ai-and-griip-67a1f05": {
+    "checked_at": "2026-08-12T03:43:03.441108+00:00",
+    "title": "Rapid Operator AI and GRIIP",
+    "accepted": false,
+    "reason": "正在进行强制网页核验，暂不作收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该页面是否确实以机器人软件为主体，并从 Vention 官方材料及其链接技术资料中提取发布日期、责任组织、能力和可量化结果。也会区分 Rapid Operator AI 软件栈与可能配套的机器人硬件或产品规格。",
+        "检索后将严格按条件给出收录结论；任何无法由可访问来源支持的字段都会留空或明确说明缺失条件。只是检索说明，不是最终结论。当前状态：正在核验官方项目证据。",
+        "避免把营销描述当作独立指标，优先记录官方明确报告的周期、成功率、吞吐量、规划性能或部署结果。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索，尚未形成项目档案。",
+        "待确认 dedicated official page 是否可访问。",
+        "待确认 GRIIP 的性质、全称和在软件栈中的角色。",
+        "待确认发布日期与候选日期是否一致。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Vention",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在进行强制网页核验，暂不作收录判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 Vention 的 Rapid Operator AI 与 GRIIP 是否构成面向物理机器人的独立软件项目，以及候选材料中的技术能力、发布日期和指标能否由官方可访问来源支持。"
+    }
+  },
+  "one-model-all-roads-zero-shot-autonomy-in-tokyo-9c020cc": {
+    "checked_at": "2026-08-12T03:43:03.458736+00:00",
+    "title": "One Model, All Roads: Zero-Shot Autonomy in Tokyo",
+    "accepted": false,
+    "reason": "正在检索官方与一手来源，尚未形成最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该页面是否确实以自主驾驶软件模型为主体，并检查发布日期、责任组织、技术细节及可精确引用的评测结果。官方页面足以满足项目证据要求，但技术指标仍需由可访问的一手材料支持。",
+        "我会同时区分“车辆产品/硬件部署”与“面向物理车辆的具身软件模型”，避免仅凭自动驾驶场景直接纳入。",
+        "检索完成后，我将严格按指定结构给出纳入结论；无法从可访问来源核实的字段会留空或明确说明缺失。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "正在核验。",
+        "正在核验。",
+        "正在核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成检索",
+          "value": "核验中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索官方与一手来源，尚未形成最终结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "truckdrive-long-range-autonomous-highway-driving-6d4539e": {
+    "checked_at": "2026-08-12T03:43:03.475706+00:00",
+    "title": "TruckDrive: Long-Range Autonomous Highway Driving Dataset",
+    "accepted": true,
+    "reason": "符合收录条件：TruckDrive于2026年发布，是服务于实体重型卡车自动驾驶研究的多模态数据集、基准和开发工具软件；存在独立官方项目页、Torc Robotics官方出版物页面及公开开发工具仓库，且责任机构被明确列为Torc Robotics和Princeton University。它不是硬件产品页。开发工具包以Apache License 2.0发布，因此open_source为true；但完整数据集采用独立的Torc Robotics Non-Commercial License v1.0，商业使用需要另行取得书面许可。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向重型卡车高速公路自动驾驶研究的长距离、多模态同步数据。",
+        "支持最远1,000米范围的二维目标检测评测，以及最远400米范围的三维目标检测评测。",
+        "支持深度估计、目标跟踪、运动预测和规划等自动驾驶任务。",
+        "支持基于连续高速公路序列的端到端驾驶研究与评测。",
+        "官方开发工具包提供数据下载、传感器与标注加载、二维/三维可视化、数据划分生成及MMDetection3D实验代码。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "TruckDrive是由Torc Robotics与Princeton University联合发布的长距离高速公路自动驾驶数据集和评测基准，数据通过安装在半挂卡车上的多模态传感器系统采集，软件与数据集本身是专门项目页的核心内容，而非卡车硬件产品介绍。",
+        "传感器配置包括7个可测量距离和径向速度的长距离FMCW激光雷达、3个高分辨率近距离激光雷达、10个4D雷达，以及按车辆配置变化的11至15个8MP RCCB相机，覆盖环视、不同焦距和长焦立体视觉。",
+        "数据覆盖高速公路速度下的长距离场景，并包含变道、匝道汇入、超车、夜间交通、路口停车、高速公路合流及城市道路等示例，用于研究远距离观测误差如何影响感知和规划。",
+        "项目利用全局一致的激光雷达累积恢复静态几何，通过FMCW径向速度进行运动分割，再将动态物体逐帧重新插入，生成时间一致、全局对齐并覆盖各相机视角的累积深度真值。",
+        "官方基准覆盖二维和三维检测、深度估计、跟踪、预测、规划及端到端驾驶；项目页还展示了远距离遗失货物、复杂场景和路口等案例，并对Alpamayo与UniAD等规划方法进行了可视化分析。",
+        "官方Apache-2.0开发工具包包含交互式数据查看器，可同步检查相机、激光雷达、雷达、三维框、车道线和累积深度，也提供训练/验证/测试元数据生成以及MMDetection3D实验支持；完整数据集则采用独立的Torc Robotics非商业许可证。"
+      ],
+      "metrics": [
+        {
+          "label": "同步多模态样本",
+          "note": "官方项目页及开发工具包报告的数据集总量。",
+          "value": "475,000"
+        },
+        {
+          "label": "密集标注帧",
+          "note": "带有密集标注的帧数。",
+          "value": "165,000"
+        },
+        {
+          "label": "二维标注与评测距离",
+          "note": "二维目标检测基准覆盖的最远报告距离。",
+          "value": "最远1,000米"
+        },
+        {
+          "label": "三维标注与评测距离",
+          "note": "三维检测等长距离任务覆盖的最远报告距离。",
+          "value": "最远400米"
+        },
+        {
+          "label": "远距离三维感知性能下降",
+          "note": "官方报告称，现有先进自动驾驶模型在超过150米后无法良好泛化，在三维感知任务上的性能下降范围。",
+          "value": "31%–99%"
+        }
+      ],
+      "official_organization_url": "https://torc.ai/",
+      "official_project_url": "https://torc-ai.github.io/TruckDrive/",
+      "open_source": true,
+      "organization_en": "Torc Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：TruckDrive于2026年发布，是服务于实体重型卡车自动驾驶研究的多模态数据集、基准和开发工具软件；存在独立官方项目页、Torc Robotics官方出版物页面及公开开发工具仓库，且责任机构被明确列为Torc Robotics和Princeton University。它不是硬件产品页。开发工具包以Apache License 2.0发布，因此open_source为true；但完整数据集采用独立的Torc Robotics Non-Commercial License v1.0，商业使用需要另行取得书面许可。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "TruckDrive针对重型卡车在高速行驶时制动距离长、必须提前数百米理解道路环境的问题，建立了一个长距离高速公路自动驾驶数据集与评测体系。项目以半挂卡车为实体采集平台，融合长短距离激光雷达、4D雷达和多焦距高分辨率相机，提供475,000个同步多模态样本及165,000个密集标注帧。其二维检测标注最远覆盖1,000米，三维检测及相关任务最远覆盖400米，并支持深度估计、跟踪、预测、规划和端到端驾驶。项目还提供通过全局激光雷达累积和动态物体重建生成的稠密深度真值，以及Apache-2.0许可的查看器、数据处理和MMDetection3D开发工具。官方实验指出，现有先进模型在150米以外出现明显泛化缺口，三维感知任务性能下降31%至99%，使TruckDrive成为专门检验长距离高速公路感知与规划可靠性的具身自动驾驶基准。"
+    }
+  },
+  "q4-2025-vention-platform-release-50135d9": {
+    "checked_at": "2026-08-12T03:43:03.493006+00:00",
+    "title": "Q4 2025 Vention Platform Release",
+    "accepted": true,
+    "reason": "纳入。该候选具有Vention发布的专门官方版本页面，责任组织明确；发布对象是用于真实工业机器人和自动化设备设计、编程、仿真、调试与部署的软件平台，并包含直接控制机器人、运动轴和传感器的SDK，因此满足实体机器人软件条件。它不是硬件规格页或硬件单品公告。官方文档还确认MachineLogic程序能够在云端仿真或部署到MachineMotion控制器，并通过SDK连接真实设备。官方来源未将该平台或完整Developer Toolkit声明为开源，因此open_source记为false，而非推断其源代码许可状态。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在浏览器中完成工业机器人与自动化设备的三维设计、程序编写、仿真验证和部署",
+        "依据MachineBuilder三维场景中的航点、坐标系和零件几何信息生成Python控制代码",
+        "通过MachineLogic SDK控制真实或仿真的机器人、运动轴、传感器及数字I/O",
+        "使用单步执行、状态检查和运动错误可视化调试自动化序列",
+        "以状态机、持久化数据模型、REST API和工业HMI组件构建定制机器应用"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是面向实体工业机器人和自动化设备的软件平台更新，而非硬件产品公告。官方发布页明确覆盖MachineBuilder、MachineLogic和Developer Toolkit，并将工作流定义为设计、仿真和部署。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))",
+        "MachineLogic的AI Copilot获得三维场景感知能力，可引用设计中的真实航点、坐标系和零件几何信息生成Python代码，将机器人场景表示直接接入程序生成。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))",
+        "新增Move-Relative无代码指令，可按相对偏移而非固定位置定义运动序列，适用于位置变化或动态工作流程；Wait for Multiple则支持等待多个信号或输入后继续执行。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))",
+        "软件定义配置由云端管理，使MachineMotion AI控制器、机器人和传感器按照当前设计自动完成配置，以减少设计、程序和实体设备之间的配置偏差。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))",
+        "Simulation Debugger支持逐步运行仿真、检查运行状态并在部署前可视化运动错误；MachineLogic程序既可在云端仿真，也可部署至MachineMotion控制器执行。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))",
+        "Developer Toolkit提供Starter Template、状态机、存储层、MachineUI、MachineApp、CLI和MachineLogic SDK；其中SDK负责运动命令、输入读取和输出写入，CLI支持本地IDE与MachineBuilder之间的双向同步。([docs.vention.com](https://docs.vention.com/docs/introduction-to-the-vention-developer-toolkit?utm_source=openai))"
+      ],
+      "metrics": [
+        {
+          "label": "官方发布日期",
+          "note": "官方Q4 2025版本说明页面标注的发布日期；季度名称描述功能开发周期，不是页面发布日期。",
+          "value": "2026-01-30"
+        },
+        {
+          "label": "场景感知代码生成",
+          "note": "官方报告的定性结果，未提供准确率或开发时间对比。",
+          "value": "Copilot可引用三维场景中的航点、坐标系和零件几何信息生成Python代码"
+        },
+        {
+          "label": "仿真调试能力",
+          "note": "官方报告的定性能力，未公布缺陷检出率或部署成功率。",
+          "value": "支持单步执行仿真、检查状态和可视化运动错误"
+        },
+        {
+          "label": "实体设备控制范围",
+          "note": "Developer Toolkit官方文档列出的MachineLogic SDK接口范围。",
+          "value": "机器人、运动轴、传感器、输入和输出"
+        },
+        {
+          "label": "应用开发组件",
+          "note": "官方文档列出的已实现工具类别。",
+          "value": "Starter Template、状态机、存储与REST API、MachineUI、MachineApp、CLI、MachineLogic SDK"
+        }
+      ],
+      "official_organization_url": "https://vention.com/about",
+      "official_project_url": "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
+      "open_source": false,
+      "organization_en": "Vention",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。该候选具有Vention发布的专门官方版本页面，责任组织明确；发布对象是用于真实工业机器人和自动化设备设计、编程、仿真、调试与部署的软件平台，并包含直接控制机器人、运动轴和传感器的SDK，因此满足实体机器人软件条件。它不是硬件规格页或硬件单品公告。官方文档还确认MachineLogic程序能够在云端仿真或部署到MachineMotion控制器，并通过SDK连接真实设备。官方来源未将该平台或完整Developer Toolkit声明为开源，因此open_source记为false，而非推断其源代码许可状态。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Q4 2025 Vention Platform Release是Vention面向工业机器人与制造自动化的全栈软件版本更新，官方页面于2026年1月30日发布。其核心并非机器人本体，而是贯穿设计、程序生成、仿真验证和实体部署的软件环境：MachineBuilder提供带设计树、子组件分组、面板加工和二维厂房平面图导入的三维工程空间；MachineLogic统一无代码程序、Python脚本和仿真，并加入相对运动、多信号等待、云端软件定义硬件配置以及场景感知Copilot；Simulation Debugger允许工程师逐步检查状态和运动错误。同期Developer Toolkit进一步开放机器应用开发能力，通过状态机、自动生成数据库及REST API的存储组件、工业操作界面组件、双向同步CLI和MachineLogic Python SDK，把应用逻辑连接到数字孪生或真实的机器人、运动轴、传感器与I/O。官方材料没有给出模型成功率、轨迹精度或基准测试提升等定量结果，因此本档案仅记录其明确实现的功能，不推造性能数字。([vention.com](https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049?utm_source=openai))"
+    }
+  },
+  "building-better-ears-nuro-s-unified-siren-percep-eb9129c": {
+    "checked_at": "2026-08-12T03:43:03.510801+00:00",
+    "title": "Building Better Ears: Nuro's Unified Siren Perception Model",
+    "accepted": false,
+    "reason": "Pending source verification.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official Nuro announcement and linked technical material first, then I’ll verify whether the artifact qualifies as embodied-robotics software and extract only explicitly reported results.",
+        "I’ll also verify the organization identity and release date without relying on the supplied abstract.",
+        "The final decision will distinguish the siren-perception software from Nuro’s vehicle hardware or commercial product pages."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress.",
+        "Official-source verification pending.",
+        "Eligibility decision pending.",
+        "Metrics extraction pending."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification underway.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Nuro",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Pending source verification.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方项目页、发布时间、技术内容与明确报告的结果。"
+    }
+  },
+  "vention-developer-toolkit-3d19dab": {
+    "checked_at": "2026-08-12T03:43:03.530252+00:00",
+    "title": "Vention Developer Toolkit",
+    "accepted": true,
+    "reason": "收录。该项目于 2025 年 11 月 7 日由 Vention 官方发布，具有独立的官方项目公告和完整官方文档。其主体是用于开发、仿真和部署实体工业自动化及机器人应用的软件工具链，包括控制状态机、MachineLogic 硬件控制 SDK、数据层、操作员界面组件、CLI 和数字孪生验证，而不是硬件产品页。官方资料明确标识 Vention 为责任组织，并说明软件可连接和控制真实或仿真的传感器、运动轴及机器人，因此满足实体机器人/具身系统软件条件。官方资料未表明整个工具包以开放源代码许可证发布，故 open_source 设为 false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "使用 Python 和状态机定义工业自动化设备的控制逻辑、运行状态、故障处理与恢复流程",
+        "通过 MachineLogic SDK 控制真实或仿真的运动轴、传感器、I/O 与机器人组件",
+        "使用 React、MachineUI 和 MachineApp 组件构建面向操作员的工业人机界面",
+        "通过命令行工具将本地应用同步至 Vention 云端，并在三维数字孪生中验证逻辑、界面与运动行为",
+        "从 Python 数据模型自动生成持久化数据库和 REST API，并提供验证、审计与备份能力"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "Vention Developer Toolkit 是面向实体工业自动化系统的软件开发工具链，而非机器人硬件产品；官方页面明确将其用于构建能够控制或监控 Vention 自动化设备的 Machine App。",
+        "工具包采用 Python 后端与 React 前端架构：开发者可在 Python 中编写设备逻辑和数据模型，并通过 MachineUI、MachineApp 组件开发操作员界面。",
+        "State Machine 组件以具名状态和状态转换组织控制流程，支持调试、故障恢复和异步任务管理，使设备行为具有可预测、可测试的执行结构。",
+        "MachineLogic SDK 提供对 Vention MachineMotion 及其连接设备的直接控制，可执行运动命令、读取输入、写入输出，并连接传感器、运动轴和机器人。",
+        "Storage 组件可根据 Python 模型自动创建数据库及完整 REST API，并提供数据验证、审计记录、备份和持久化能力。",
+        "Vention CLI 将本地开发环境连接到其云端仿真生态；应用可先部署至三维数字孪生，联合测试控制逻辑、操作界面和运动行为，再部署到真实机器。",
+        "官方提供预配置 Starter Template，其中包含状态机实现、数据模型、FastAPI 服务和 React 前端，用于展示实时控制、持久化存储及响应式 HMI 的完整应用结构。"
+      ],
+      "metrics": [
+        {
+          "label": "已部署机器规模",
+          "note": "官方发布页称，该工具包所开放的软件基础已被用于 Vention 平台在全球工厂部署的系统。",
+          "value": "超过 20,000 台机器"
+        },
+        {
+          "label": "后端运行环境",
+          "note": "官方入门文档列出的本地开发运行时要求。",
+          "value": "Python 3.10"
+        },
+        {
+          "label": "核心工具组件",
+          "note": "官方介绍列出 Starter Template、State Machine、Storage、MachineUI、MachineApp、CLI 和 MachineLogic SDK。",
+          "value": "7 个核心组件"
+        },
+        {
+          "label": "数字孪生验证范围",
+          "note": "官方文档明确支持在接触真实硬件前联合测试应用逻辑、UI 交互与运动行为。",
+          "value": "逻辑、界面和运动行为的三维仿真验证"
+        }
+      ],
+      "official_organization_url": "https://vention.com/about",
+      "official_project_url": "https://vention.com/blogs/automation-programming-and-simulation/vention-developer-toolkit-1005",
+      "open_source": false,
+      "organization_en": "Vention",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该项目于 2025 年 11 月 7 日由 Vention 官方发布，具有独立的官方项目公告和完整官方文档。其主体是用于开发、仿真和部署实体工业自动化及机器人应用的软件工具链，包括控制状态机、MachineLogic 硬件控制 SDK、数据层、操作员界面组件、CLI 和数字孪生验证，而不是硬件产品页。官方资料明确标识 Vention 为责任组织，并说明软件可连接和控制真实或仿真的传感器、运动轴及机器人，因此满足实体机器人/具身系统软件条件。官方资料未表明整个工具包以开放源代码许可证发布，故 open_source 设为 false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Vention Developer Toolkit 是 Vention 于 2025 年发布的工业自动化应用开发工具链，面向需要编写定制机器逻辑、控制实体运动设备并构建操作员界面的开发者和系统集成商。它将 Python 状态机与数据模型、MachineLogic 运动控制 SDK、React 工业 UI 组件、云端同步 CLI 和三维数字孪生整合为统一工作流。开发者可以描述作业、零件、托盘或夹具等数据实体，由系统生成数据库和 REST API；随后以状态和转换定义设备行为，并通过 SDK 操作传感器、I/O、运动轴和机器人。应用可先在数字孪生中联合验证逻辑、界面和运动，再部署到真实设备。该项目并非 VLA 或机器人基础模型，但属于直接面向物理机器人和工业自动化设备的软件控制、仿真及部署基础设施。"
+    }
+  },
+  "gaia-3-fa89c04": {
+    "checked_at": "2026-08-12T03:43:03.547530+00:00",
+    "title": "GAIA-3",
+    "accepted": true,
+    "reason": "收录。Wayve 于 2025年12月2日发布了专门的官方研究页面和官方新闻稿，明确将 GAIA-3 定义为用于自动驾驶 AI 离线评估与安全验证的生成式世界模型。该项目的核心交付物是模型及其可控场景生成、跨车辆 embodiment transfer 和评测方法，而不是车辆、传感器或其他硬件产品，因此满足实体智能软件项目条件。官方材料未宣布开放模型权重或源代码，故 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "生成可控且保持时空一致性的自动驾驶视频场景，用于离线评测端到端驾驶策略。",
+        "通过动作条件和 World-on-Rails 扰动修改自车轨迹，同时尽量保持其他交通参与者、静态环境、天气和光照的一致性。",
+        "生成碰撞、近碰撞、偏离车道、速度异常等安全关键反事实场景，并支持 CCFTAP、CCRS 等 NCAP 风格测试。",
+        "把同一驾驶场景迁移到不同车型、摄像头位置、视场和传感器配置，无需成对采集源与目标车辆数据。",
+        "控制天气、光照、时间和场景外观，并围绕少量罕见失效样本扩展跨环境、跨国家的结构化测试集。"
+      ],
+      "fields": [
+        "World models",
+        "Data & benchmarks",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "GAIA-3 是面向自动驾驶系统评估与验证的潜空间扩散世界模型，而非汽车硬件或整车产品；其官方专页明确将生成式世界建模用于实体车辆智能的软件测试流程。",
+        "模型把真实驾驶片段作为场景基础，通过参数化动作条件改变自车行为，并采用 World-on-Rails 方式约束未被干预的交通参与者和环境，从而构建可重复的反事实实验。",
+        "安全评测能力覆盖驶入对向车流、追尾静止车辆、与转弯车辆碰撞以及撞向骑行者等场景；生成结果可使用真实数据所采用的占用和轨迹指标进行评估。",
+        "官方使用与原始驾驶记录对齐的 LiDAR 点云检查生成帧的空间结构：即使修改自车轨迹制造碰撞，生成画面仍需与变换后的 LiDAR 结构保持对齐。",
+        "离线评测套件可从单条记录生成左偏、右偏、过快和过慢等干预条件，用于比较驾驶策略能否恢复到安全状态；官方称合成干预与道路实验的相关性研究能够预测策略之间的相对性能。",
+        "Embodiment Transfer 使用目标传感器配置的少量非配对样本，将同一场景重新渲染到不同车型、摄像头位置、镜头视场和朝向，支持跨车辆项目复用评测套件。",
+        "新版视频 tokenizer 强化了行人、骑行者、车辆、道路标志和交通灯等安全关键时空结构的表示；训练数据覆盖多种地域、车辆、环境和驾驶条件，并特别强调安全相关场景元素。"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方称其规模为 GAIA-2 的两倍。",
+          "value": "150亿参数"
+        },
+        {
+          "label": "训练数据规模",
+          "note": "相较 GAIA-2 的预训练数据量。",
+          "value": "约10倍"
+        },
+        {
+          "label": "训练计算量",
+          "note": "相较 GAIA-2。",
+          "value": "5倍"
+        },
+        {
+          "label": "地域覆盖",
+          "note": "官方技术专页报告的训练数据地理范围。",
+          "value": "3个大洲、9个国家"
+        },
+        {
+          "label": "合成测试拒绝率",
+          "note": "官方新闻稿称早期研究中该拒绝率已降低。",
+          "value": "降低5倍"
+        }
+      ],
+      "official_organization_url": "https://wayve.ai/",
+      "official_project_url": "https://wayve.ai/thinking/gaia-3/",
+      "open_source": false,
+      "organization_en": "Wayve",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Wayve 于 2025年12月2日发布了专门的官方研究页面和官方新闻稿，明确将 GAIA-3 定义为用于自动驾驶 AI 离线评估与安全验证的生成式世界模型。该项目的核心交付物是模型及其可控场景生成、跨车辆 embodiment transfer 和评测方法，而不是车辆、传感器或其他硬件产品，因此满足实体智能软件项目条件。官方材料未宣布开放模型权重或源代码，故 open_source=false。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/posts/wayve-technologies_gaia3-embodiedai-aisafety-activity-7401592385027338240-_Xtn"
+        }
+      ],
+      "software_project": true,
+      "summary_zh": "GAIA-3 是 Wayve 于 2025年12月2日发布的 150 亿参数生成式驾驶世界模型，目标是把世界模型从视觉合成工具推进为自动驾驶 AI 的离线评估和安全验证基础设施。它能够从真实驾驶记录出发，以动作条件和 World-on-Rails 扰动精确改变自车轨迹，同时保持其他车辆、行人、道路结构、天气和光照尽可能一致，据此生成可重复的碰撞、近碰撞及恢复性测试。系统还支持 NCAP 风格安全场景、天气与光照变化、罕见失效模式扩展，以及不同车型和摄像头配置之间的 embodiment transfer。Wayve 报告该模型使用约为 GAIA-2 十倍的数据和五倍的训练计算量，覆盖 3 个大洲的 9 个国家；重新设计的视频 tokenizer 规模为前代的两倍。官方进一步报告，GAIA-3 的合成干预测试与真实道路实验呈现可用于判断驾驶策略相对性能的相关性，并使合成测试拒绝率降低五倍。"
+    }
+  },
+  "rig3r-436fb69": {
+    "checked_at": "2026-08-12T03:43:03.564795+00:00",
+    "title": "Rig3R",
+    "accepted": false,
+    "reason": "Pending web verification.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources.",
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources.",
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources.",
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources.",
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources."
+      ],
+      "fields": [
+        "Embodied AI",
+        "World models",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources.",
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources.",
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources.",
+        "I’m checking the official Wayve project material first, then I’ll verify the release date, software scope, organization identity, and any exact reported results against primary sources."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification in progress.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://wayve.ai/thinking/rig3r/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Pending web verification.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方项目页及其链接的一手资料。"
+    }
+  },
+  "fomo-3d-using-vision-foundation-models-for-long--79e3c4e": {
+    "checked_at": "2026-08-12T03:43:03.582029+00:00",
+    "title": "FOMO-3D: Using Vision Foundation Models for Long-Tailed 3D Object Detection",
+    "accepted": true,
+    "reason": "纳入。Waabi 提供了专门的官方项目页面，并明确将 FOMO-3D 归属为 Waabi 的 CoRL 2025 研究项目。该成果是供自动驾驶实体车辆使用的多模态三维感知模型，处理相机与 LiDAR 传感器数据并输出道路目标的三维检测结果，符合实体机器人软件条件。官方页面及论文提供了架构、实现方法和量化实验结果。未发现官方代码或模型权重发布链接，因此不认定为开源。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "融合相机图像与多帧 LiDAR 数据，对自动驾驶车辆周围的常见及长尾道路目标进行三维检测",
+        "利用 OWLv2 的开放词汇二维检测与图像特征识别儿童、施工人员、碎片等稀有类别",
+        "利用 Metric3Dv2 的逐像素度量深度，将二维目标候选提升为三维候选框",
+        "通过基于查询的多模态注意力细化候选框，并输出目标类别与鸟瞰图三维边界框",
+        "面向城市道路和最远 230 米的高速公路场景执行长距离感知"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "FOMO-3D 是面向自动驾驶实体系统的多模态三维感知软件，由 Waabi 官方项目页发布并标注为 CoRL 2025 项目；其核心对象是长尾三维目标检测模型，而非车辆硬件或传感器产品。",
+        "系统接收原始相机图像和 LiDAR 点云，并引入三类视觉基础模型先验：OWLv2 的二维检测结果、OWLv2 图像特征，以及 Metric3Dv2 的逐像素稠密度量深度。",
+        "模型采用类似 DETR 的两阶段结构。第一阶段由 LiDAR 分支和相机分支分别生成三维候选；LiDAR 分支基于 CenterPoint 处理当前及历史 LiDAR 扫描，相机分支则负责补充图像中更容易辨认的稀有、小型或远距离目标。",
+        "相机分支将 OWLv2 二维检测框结合 Metric3Dv2 深度提升至三维空间，并通过新设计的视锥融合与注意力机制，联合 LiDAR 显式几何信息和图像深度隐式几何信息修正初始三维位置。",
+        "来自两个模态分支的候选框经拼接和非极大值抑制去重，再依次接受目标自注意力、LiDAR 注意力和相机注意力细化，最终解码目标类别及鸟瞰图边界框。",
+        "实验覆盖 nuScenes 城市场景和 Waabi 内部高速公路数据集；后者包含超过 1700 个、每段20秒的训练序列和400个评估序列，检测纵向范围延伸至230米。",
+        "论文明确指出当前实现使用计算成本较高的 OWL-Large 和 Metric3D-Giant，尚不能实时运行，更适合离线感知和自动标注；因此它不是已经可直接部署的实时车载检测栈。"
+      ],
+      "metrics": [
+        {
+          "label": "nuScenes 全类别 mAP",
+          "note": "在18个类别的长尾三维检测评估中，高于对比方法 MMLF 的51.4。",
+          "value": "54.6"
+        },
+        {
+          "label": "nuScenes Few 组 mAP",
+          "note": "稀有类别聚合结果由此前最佳20.0提高至27.6，绝对提升7.6 mAP。",
+          "value": "27.6"
+        },
+        {
+          "label": "nuScenes Many 组 mAP",
+          "note": "相比此前最佳77.9提高2.0 mAP。",
+          "value": "79.9"
+        },
+        {
+          "label": "nuScenes 儿童类别 mAP",
+          "note": "类别级结果；对比 MMF 的5.3和 MMLF 的8.8。",
+          "value": "29.8"
+        },
+        {
+          "label": "高速公路人员类别 mAP",
+          "note": "在内部长距离 Highway 数据集上，对比 LiDAR 基线58.4和 MMLF的58.3。",
+          "value": "68.7"
+        }
+      ],
+      "official_organization_url": "https://waabi.ai/",
+      "official_project_url": "https://waabi.ai/research/fomo3d",
+      "open_source": false,
+      "organization_en": "Waabi",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Waabi 提供了专门的官方项目页面，并明确将 FOMO-3D 归属为 Waabi 的 CoRL 2025 研究项目。该成果是供自动驾驶实体车辆使用的多模态三维感知模型，处理相机与 LiDAR 传感器数据并输出道路目标的三维检测结果，符合实体机器人软件条件。官方页面及论文提供了架构、实现方法和量化实验结果。未发现官方代码或模型权重发布链接，因此不认定为开源。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "FOMO-3D 是 Waabi 面向自动驾驶长尾感知问题开发的多模态三维目标检测模型。它针对施工人员、儿童、婴儿车、碎片等在真实驾驶数据中样本稀少但具有安全意义的对象，将 OWLv2 的开放词汇二维检测和语义特征、Metric3Dv2 的单目度量深度，与车辆 LiDAR 点云共同纳入两阶段检测框架。系统先通过 CenterPoint 风格的 LiDAR 分支和基于视锥提升的相机分支生成互补候选，再使用目标、LiDAR及相机注意力进行融合细化。官方报告显示，该方法在 nuScenes 的整体及长尾类别组上均超过所比较方法，Few 组 mAP 达27.6；在最远230米的内部高速公路数据上，也显著改善人员、锥桶等稀有或远距离目标的检测。项目具有明确的实体自动驾驶感知用途，但现有大型基础模型带来的计算开销使其主要适用于离线感知和自动标注，而非实时车载推理。"
+    }
+  },
+  "gen-0-embodied-foundation-models-that-scale-with-07b2aae": {
+    "checked_at": "2026-08-12T03:43:03.599561+00:00",
+    "title": "GEN-0: Embodied Foundation Models That Scale with Physical Interaction",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、发布主体、软件属性及可复述的技术结果。搜索后会严格区分官方陈述与缺失证据。",
+        "随后将检查项目页链接的技术材料，确认发布日期、能力、指标和是否开源。",
+        "最终只使用可访问来源支持结论，不根据候选摘要补全信息。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "k-sim-0-2-9-d581f8e": {
+    "checked_at": "2026-08-12T03:43:03.617093+00:00",
+    "title": "K-Sim 0.2.9",
+    "accepted": false,
+    "reason": "正在检索官方来源，尚未形成最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验 K-Sim 的官方归属、项目定位、0.2.9 发布内容，以及可由官方材料支持的技术能力和结果。重点会区分机器人软件项目与硬件产品页面。",
+        "我会优先采用 K-Scale Labs 官方 GitHub、官方站点和项目所链接的一手技术材料；无法核实的指标或社交证据不会补猜。",
+        "结果将严格按给定字段输出。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索官方来源，尚未形成最终判定。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "k-sim-0-2-8-9e806b3": {
+    "checked_at": "2026-08-12T03:43:03.634631+00:00",
+    "title": "K-Sim 0.2.8",
+    "accepted": true,
+    "reason": "收录。该候选是由 K-Scale Labs 明确负责、面向实体人形机器人策略训练和仿真到现实工作流的软件项目，不是硬件产品页；官方 GitHub 仓库、0.2.8 专属发布页和官方项目文档均可访问。发布页确认版本于 2025 年 8 月 17 日发布，并明确列出足高奖励的恢复与改进。仓库采用 MIT 许可证。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于 MuJoCo/MJX 与 JAX 训练机器人强化学习策略",
+        "训练人形机器人行走与全身运动控制策略",
+        "通过接触、足端位置和控制周期构造有状态奖励",
+        "生成并可视化人形机器人参考运动数据"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "K-Sim 是 K-Scale Labs 面向人形机器人运动与操作的模块化强化学习训练框架，底层采用 MuJoCo/MJX 和 JAX，并支持通过 Python 包安装。",
+        "0.2.8 版本恢复了独立的 FeetHeightReward，并将其重新接入行走训练示例；该奖励读取足部接触状态和三维足端位置。",
+        "足高奖励在一次摆动期间持续记录每只脚达到的最大高度，只在脚重新接触地面时给出稀疏奖励，随后重置累计时间和最大高度状态。",
+        "奖励值按照摆动持续时间与设定周期的比值缩放，缩放上限为 1；记录到的最大足高也会被目标高度截断，避免奖励无限增长。",
+        "实现使用 xax.scan 在整条轨迹上更新每只脚的 elapsed_time 和 max_height 状态，并对双足奖励取最大值形成逐时刻奖励。",
+        "行走示例把目标足高设置为 max_foot_height，把奖励周期设置为 gait_period/2；同一版本还显著降低了足部力和足部扭矩惩罚的缩放量级。"
+      ],
+      "metrics": [
+        {
+          "label": "版本改动",
+          "note": "官方发布页列出的两项改动均针对足高奖励：恢复该奖励并进一步改进其实现。",
+          "value": "2 项"
+        },
+        {
+          "label": "默认足数量",
+          "note": "FeetHeightReward 的 num_feet 默认值。",
+          "value": "2"
+        },
+        {
+          "label": "运动判定线速度阈值",
+          "note": "奖励类中报告的默认 linvel_moving_threshold。",
+          "value": "0.05"
+        },
+        {
+          "label": "运动判定角速度阈值",
+          "note": "奖励类中报告的默认 angvel_moving_threshold。",
+          "value": "0.05"
+        },
+        {
+          "label": "足部惩罚缩放",
+          "note": "0.2.8 行走示例将足部力惩罚设为 -1e-6、足部扭矩惩罚设为 -1e-7。",
+          "value": "-1e-6 / -1e-7"
+        }
+      ],
+      "official_organization_url": "https://www.kscale.dev/",
+      "official_project_url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.8",
+      "open_source": true,
+      "organization_en": "K-Scale Labs",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该候选是由 K-Scale Labs 明确负责、面向实体人形机器人策略训练和仿真到现实工作流的软件项目，不是硬件产品页；官方 GitHub 仓库、0.2.8 专属发布页和官方项目文档均可访问。发布页确认版本于 2025 年 8 月 17 日发布，并明确列出足高奖励的恢复与改进。仓库采用 MIT 许可证。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "K-Sim 0.2.8 是 K-Scale Labs 人形机器人强化学习训练框架的一次针对步态奖励塑形的维护版本。它恢复并重构了 FeetHeightReward：在仿真轨迹中按脚跟踪离地后的最大高度与经过时间，在落地接触时产生受目标高度和步态周期约束的稀疏奖励。该机制被接入官方行走示例，并配合重新缩放的足部力、扭矩惩罚，用于训练更明确的抬脚行为。项目本身是建立在 MuJoCo/MJX 和 JAX 上的开源软件框架，面向人形机器人行走、全身控制及操作策略训练，因此满足实体机器人与具身智能软件项目的收录条件。"
+    }
+  },
+  "k-sim-0-2-7-f517c59": {
+    "checked_at": "2026-08-12T03:43:03.652196+00:00",
+    "title": "K-Sim 0.2.7",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选版本、项目归属和软件用途，并检查是否存在满足条件的官方专页及可引用的技术结果。后续结论只采用可访问的官方或项目关联材料。相应信息将在最终结构化结论中给出。现阶段不将仅有的版本说明或 arXiv 视为充分证据。此消息仅为进度更新。最终会严格按指定字段输出。暂不对收录与否作推测。继续检查版本标签、仓库文档和组织页面。完成后将给出中文技术档案。",
+        "请稍候。",
+        "我会重点验证 0.2.7 是否在给定日期正式发布，以及 K-Sim 是否明确是面向实体机器人的仿真和策略训练软件。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "核验中。",
+        "核验中。",
+        "核验中。",
+        "核验中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在进行网页核验",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目的官方来源与技术属性。"
+    }
+  },
+  "k-sim-0-2-6-e92df03": {
+    "checked_at": "2026-08-12T03:43:03.669508+00:00",
+    "title": "K-Sim 0.2.6",
+    "accepted": true,
+    "reason": "符合收录条件：这是由 K-Scale Labs 明确负责、面向物理机器人及具身智能的人形运动与操作强化学习训练软件；官方 GitHub 仓库构成专门项目页，0.2.6 具有独立官方 Release 页面及明确的 2025 年发布日期。项目不是硬件产品页，代码以 MIT 许可证公开。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在基于 MuJoCo/MJX 与 JAX 的仿真环境中训练机器人强化学习策略",
+        "面向人形机器人运动与操作任务配置模块化训练环境",
+        "在环境重置时随机化机器人的俯仰角和滚转角",
+        "记录训练命令相关指标，用于分析策略对控制指令的执行情况",
+        "通过可配置奖励 API 构建和调整策略训练目标"
+      ],
+      "fields": [
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "K-Sim 是 K-Scale Labs 发布的机器人强化学习训练软件，而非机器人硬件或产品规格页；官方将其定义为面向人形运动与操作的 RL 训练库。",
+        "框架建立在 MuJoCo/MJX 和 JAX 之上，用于在物理仿真中训练机器人策略，并支持 CPU 或 GPU 环境。",
+        "项目采用模块化设计，可组合机器人环境、观测、命令、奖励、终止条件和训练任务，服务于运动控制与操作策略开发。",
+        "0.2.6 改进了仿真环境的重置流程，减少重置状态处理中的问题。",
+        "该版本加入随机俯仰角与滚转角重置，使策略能够从更多初始姿态开始训练，支持更丰富的姿态扰动。",
+        "该版本增加命令指标日志，以记录和检查策略训练过程中与控制命令相关的表现。",
+        "0.2.6 同时更新奖励 API，调整训练任务定义奖励项的接口。"
+      ],
+      "metrics": [
+        {
+          "label": "版本发布时间",
+          "note": "GitHub 官方 Release 页面报告的发布时间。",
+          "value": "2025-08-17 04:46"
+        },
+        {
+          "label": "版本变更项",
+          "note": "官方 0.2.6 Release 列出 improved resets、random pitch / roll reset、Log command metrics 和 update rewards api。",
+          "value": "4 项"
+        },
+        {
+          "label": "重置姿态随机化",
+          "note": "官方版本记录明确报告环境重置支持随机俯仰角和滚转角；未报告数值范围。",
+          "value": "2 个姿态轴：pitch、roll"
+        },
+        {
+          "label": "合并贡献者",
+          "note": "官方 Release 列出的该版本贡献者为 codekansas 与 WT-MM。",
+          "value": "2 名"
+        },
+        {
+          "label": "安装方式",
+          "note": "官方项目页提供的已实现 Python 包安装入口。",
+          "value": "pip install ksim"
+        }
+      ],
+      "official_organization_url": "https://www.kscale.dev/",
+      "official_project_url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.6",
+      "open_source": true,
+      "organization_en": "K-Scale Labs",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是由 K-Scale Labs 明确负责、面向物理机器人及具身智能的人形运动与操作强化学习训练软件；官方 GitHub 仓库构成专门项目页，0.2.6 具有独立官方 Release 页面及明确的 2025 年发布日期。项目不是硬件产品页，代码以 MIT 许可证公开。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "K-Sim 0.2.6 是 K-Scale Labs 于 2025 年 8 月 17 日发布的机器人强化学习训练框架版本。K-Sim 以 MuJoCo/MJX 提供物理仿真，并使用 JAX 支持硬件加速计算，主要面向人形机器人的运动控制与操作策略训练。框架将环境、观测、控制命令、奖励、终止条件和训练任务组织为可组合的软件组件。0.2.6 是一次以训练环境可靠性和可观测性为核心的增量发布：它改进环境重置逻辑，加入俯仰角和滚转角的随机初始姿态，增加控制命令指标日志，并更新奖励 API。随机姿态重置可扩大策略训练时覆盖的初始状态，命令指标则为检查策略是否正确跟随目标控制信号提供记录基础。官方没有为该版本报告训练速度、成功率、sim-to-real 性能或相对于其他模拟器的量化基准，因此不能据此声称数值性能提升。"
+    }
+  },
+  "k-sim-0-2-4-c6cb999": {
+    "checked_at": "2026-08-12T03:43:03.687147+00:00",
+    "title": "K-Sim 0.2.4",
+    "accepted": false,
+    "reason": "正在检索与核验，暂不作最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方发布页、组织归属和软件用途，并检查是否存在可引用的技术文档与量化结果。后续结论只采用可访问的一手来源。",
+        "开始检索 K-Sim 0.2.4 的官方仓库、发布记录及 K-Scale Labs 的项目材料。可能需要区分该版本的实际变更与整个 K-Sim 框架的能力。",
+        "确认发布时间与 RNG 修复细节后，我会判断它是独立技术项目发布，还是仅属不应单列的维护版本。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中，尚未形成最终收录判断。",
+        "将以官方 GitHub 发布页和仓库文档为主要证据。",
+        "不会把论文或第三方页面单独视为官方项目证据。",
+        "将核实负责组织的法定或通用中英文名称。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方来源",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.4",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索与核验，暂不作最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 K-Sim 0.2.4 是否满足严格索引标准。"
+    }
+  },
+  "k-sim-0-2-5-5e3d22b": {
+    "checked_at": "2026-08-12T03:43:03.704546+00:00",
+    "title": "K-Sim 0.2.5",
+    "accepted": false,
+    "reason": "",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m verifying the release, project ownership, and whether K-Sim is substantively a software artifact for physical-robot policy training. I’ll rely on official K-Scale material first, then use linked technical documentation for concrete capabilities and results.",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "vention-ai-operator-78e301a": {
+    "checked_at": "2026-08-12T03:43:03.723122+00:00",
+    "title": "Vention AI Operator",
+    "accepted": true,
+    "reason": "纳入。Vention 于 2025 年 8 月 7 日发布了专门的官方 AI Operator 页面，明确将其描述为用于实体工业机器人的 Physical AI 系统，并以 AI 感知、抓取规划和基于 NVIDIA cuMotion 的上下文感知运动规划为主要技术内容。虽然系统与 MachineMotion AI 控制器、GPU、机器人和夹具结合部署，但官方页面的核心对象是使机器人完成非结构化拣选任务的软件智能管线，因此不属于硬件-only 公告。责任组织 Vention、发布日期和软件用途均可由官方页面直接支持。官方材料没有声明开放源代码，故 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "无代码导入零件 CAD 模型，并快速配置检测、抓取与整理流程",
+        "利用 AI 视觉识别不同颜色、形状、材质、朝向及光照条件下的零件",
+        "综合零件几何、材料属性、夹具能力和环境约束，在线生成抓取方案",
+        "在包含障碍物和布局变化的三维环境中进行实时、上下文感知的运动规划",
+        "执行料箱拣选、机床上下料、料筐放置和配套分拣等非结构化工业任务"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "AI Operator 是面向实体工业机器人的 Physical AI 软件系统，核心由感知、抓取规划和上下文感知运动规划组成，而不是单纯的机器人硬件或控制器产品。",
+        "感知模块采用 NVIDIA FoundationPose 模型，从视觉输入理解作业环境，并适应零件变化和环境变化，减少针对传感器的手工配置、重新标定与重新编程。",
+        "抓取模块同时考虑零件几何形状、材料属性、夹具能力和环境约束，可针对深料箱内形状、尺寸、材质和朝向不一的零件即时规划抓取。",
+        "运动规划基于 NVIDIA cuMotion，在复杂三维环境中结合障碍物、布局和零件位置生成运动路径，并在现场条件变化时实时调整。",
+        "系统提供无代码工作流：操作人员可以上传零件 CAD 模型，让机器人完成零件检测、抓取和整理，无需具备机器人编程专业知识。",
+        "官方列出的目标场景包括 bin picking、machine tending、tote placement 和 kitting，重点解决高混合度制造中传统固定程序难以覆盖的非结构化任务。",
+        "软件运行于 Vention MachineMotion AI 控制器的边缘计算环境；该控制器集成 NVIDIA Jetson NX16 GPU，使视觉处理、规划和控制能够在工厂现场执行。"
+      ],
+      "metrics": [
+        {
+          "label": "部署配置时间",
+          "note": "官方称上传 CAD 后可在几分钟内让机器人检测、抓取并整理零件；未披露更精确的测试时间或实验条件。",
+          "value": "几分钟"
+        },
+        {
+          "label": "持续运行定位",
+          "note": "官方将 AI Operator 描述为可全天候工作的系统；这是产品能力表述，不是带测试协议的可靠性基准。",
+          "value": "24/7"
+        },
+        {
+          "label": "任务编程要求",
+          "note": "官方明确描述为无代码自动化路径，并称不需要训练；页面未提供独立验证结果。",
+          "value": "无需编码、无需训练"
+        },
+        {
+          "label": "运动规划环境",
+          "note": "官方报告系统能够理解复杂三维环境，并根据障碍物、布局变化和零件位置实时调整运动。",
+          "value": "实时上下文感知的 3D 运动规划"
+        },
+        {
+          "label": "感知与抓取适应范围",
+          "note": "官方明确列出可适应不同颜色、形状、光照条件、材料、朝向和夹具类型，但未给出类别数量或成功率。",
+          "value": "跨颜色、形状、材质、朝向、光照和夹具类型适应"
+        }
+      ],
+      "official_organization_url": "https://vention.com",
+      "official_project_url": "https://vention.io/blogs/AI-operator/",
+      "open_source": false,
+      "organization_en": "Vention",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Vention 于 2025 年 8 月 7 日发布了专门的官方 AI Operator 页面，明确将其描述为用于实体工业机器人的 Physical AI 系统，并以 AI 感知、抓取规划和基于 NVIDIA cuMotion 的上下文感知运动规划为主要技术内容。虽然系统与 MachineMotion AI 控制器、GPU、机器人和夹具结合部署，但官方页面的核心对象是使机器人完成非结构化拣选任务的软件智能管线，因此不属于硬件-only 公告。责任组织 Vention、发布日期和软件用途均可由官方页面直接支持。官方材料没有声明开放源代码，故 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Vention AI Operator 是一套面向高混合度工业制造的实体 AI 机器人软件系统，目标是把传统依赖固定轨迹和专家编程的机器人单元转变为能够处理非结构化拣选任务的自适应系统。其软件管线由三个主要部分构成：基于 AI 视觉的环境与零件感知、结合零件和夹具条件的抓取规划，以及能够理解障碍物和现场布局的上下文感知运动规划。官方页面称其感知环节采用 NVIDIA FoundationPose，运动规划采用 NVIDIA cuMotion，并通过集成 Jetson NX16 GPU 的 MachineMotion AI 控制器在工厂现场运行。操作人员可以通过无代码流程上传零件 CAD 模型，使机器人在数分钟内开始检测、抓取和整理零件。系统针对颜色、形状、材料、朝向、光照和夹具类型不断变化的高混合度场景设计，覆盖深料箱拣选、机床上下料、料筐放置和 kitting 等任务。官方没有提供标准化成功率、吞吐量或与其他方法的数值对比，因此其影响力判断主要建立在完整的感知至动作软件架构、明确的实体机器人部署场景，以及由 Vention 发布的专门项目材料之上。"
+    }
+  },
+  "k-sim-0-2-3-2431c40": {
+    "checked_at": "2026-08-12T03:43:03.741114+00:00",
+    "title": "K-Sim 0.2.3",
+    "accepted": false,
+    "reason": "正在检索官方来源，尚未形成最终准入结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验发布页、仓库归属、项目用途和可复现的技术细节，再按严格准入条件给出结论。不会把 GitHub 发布说明之外无法证实的指标或组织信息补全。内容：检索官方来源。能力：来源核验。结果：进行中。组织：待核实。开源：待核实。项目属性：待核实。日期：2025-08-08。候选：K-Sim 0.2.3。类型：软件候选。状态：核验中。范围：具身机器人控制策略训练。依据：用户提供的 GitHub Release。限制：不采用 arXiv 作为唯一官方证据。输出：结构化中文档案。判断：待定。关注点：actor phase information、base-height tracking reward。下一步：确认官方组织及项目文档。备注：仅引用可访问资料。",
+        "官方页面核验",
+        "软件属性判断",
+        "组织归属确认"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "暂未形成最终结论。",
+        "将以官方项目资料为主。",
+        "不会猜测缺失信息。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "检索进行中",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索官方来源，尚未形成最终准入结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 K-Sim 0.2.3 是否属于有明确责任组织、具有官方专页且面向物理机器人或具身智能的软件项目。"
+    }
+  },
+  "brainos-release-1-18-map-centric-workflows-62497c3": {
+    "checked_at": "2026-08-12T03:43:03.759659+00:00",
+    "title": "BrainOS Release 1.18: Map-Centric Workflows",
+    "accepted": true,
+    "reason": "收录。该项目于 2025 年 8 月 5 日由 Brain Corp 在其官方网站发布，属于 2025 年后的正式软件发布。官方专页明确将 Map-Centric Workflows 定义为 BrainOS 平台 Release 1.18 的软件更新，服务于实体自主清洁机器人，覆盖路线示教、地图管理、任务配置、路线执行、运行结果可视化以及自主导航改进，符合物理机器人软件和 embodied intelligence 项目的范围。页面明确标示责任组织 Brain Corp，并同时存在官方软件版本说明。它不是硬件产品页；虽然软件部署于 X4 ROVR 和 X6 ROVR，发布主题和具体功能均为 BrainOS 软件。官方资料未声明开放源代码，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于完整场地地图创建和保存自主清洁路线",
+        "在地图上统一管理路线、清洁默认设置、兴趣点和场地地图",
+        "从全场地图选择并执行一条或多条已训练清洁路线",
+        "任务结束后可视化已完成路线、清洁覆盖和待处理区域",
+        "实时识别并避让隔离柱等低矮障碍物，并在遇到大型未建图区域时进行全局重规划"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "BrainOS Release 1.18 是面向 X4 ROVR 和 X6 ROVR 自主洗地机器人的软件更新，核心发布物是 BrainOS 平台中的 Map-Centric Workflows，而不是机器人硬件或产品规格。",
+        "新的 Teach 流程在路线创建前显示完整场地地图、现有路线与清洁覆盖，使操作员能够识别遗漏区域和路线重叠；新路线保存后会立即显示在地图上，形成明确的可视确认。",
+        "Teach 流程将路线重命名、删除、参数设置、清洁默认值调整、兴趣点管理及场地地图管理整合到统一的地图界面。",
+        "新的 Clean 流程允许操作员直接从完整场地地图查看并选择可用路线，并把清洁任务的设置选项集中到单一确认页面，降低操作员预先了解区域与路线对应关系的要求。",
+        "清洁任务完成后，系统在同一场地地图中呈现所有已完成路线，并提供近期清洁活动记录，用于判断已覆盖区域、仍需处理的区域及后续清洁安排。",
+        "1.18 的配套自主运行改进包括实时隔离柱识别与避让、低矮障碍物检测阈值优化、清洁刷盘在重规划期间的行为改进、面对大型未建图区域时的全局重规划优化，以及地图保存速度优化。"
+      ],
+      "metrics": [
+        {
+          "label": "最低障碍物检测高度",
+          "note": "BrainOS 1.18 官方发布说明报告的导航感知改进。",
+          "value": "5.5 cm"
+        },
+        {
+          "label": "已部署自主移动机器人规模",
+          "note": "Brain Corp 在 Map-Centric Workflows 官方公告中报告的全球 BrainOS 驱动 AMR 数量。",
+          "value": "超过 40,000 台 AMR"
+        },
+        {
+          "label": "全球累计覆盖面积",
+          "note": "官方公告报告的 BrainOS 全球机器人队伍累计覆盖空间。",
+          "value": "超过 2500 亿平方英尺"
+        },
+        {
+          "label": "支持的目标机器人",
+          "note": "官方项目公告明确指出 Map-Centric Workflows 用于这两款 BrainOS 驱动的自主洗地机器人。",
+          "value": "X4 ROVR 和 X6 ROVR"
+        },
+        {
+          "label": "软件版本",
+          "note": "Map-Centric Workflows 所属的 BrainOS 正式版本。",
+          "value": "BrainOS Release 1.18"
+        }
+      ],
+      "official_organization_url": "https://www.braincorp.com/",
+      "official_project_url": "https://www.braincorp.com/resources/brain-corp-unveils-new-map-centric-workflows-simplifying-robot-operations-and-boosting-visual-clarity",
+      "open_source": false,
+      "organization_en": "Brain Corporation",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该项目于 2025 年 8 月 5 日由 Brain Corp 在其官方网站发布，属于 2025 年后的正式软件发布。官方专页明确将 Map-Centric Workflows 定义为 BrainOS 平台 Release 1.18 的软件更新，服务于实体自主清洁机器人，覆盖路线示教、地图管理、任务配置、路线执行、运行结果可视化以及自主导航改进，符合物理机器人软件和 embodied intelligence 项目的范围。页面明确标示责任组织 Brain Corp，并同时存在官方软件版本说明。它不是硬件产品页；虽然软件部署于 X4 ROVR 和 X6 ROVR，发布主题和具体功能均为 BrainOS 软件。官方资料未声明开放源代码，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "BrainOS Release 1.18 的 Map-Centric Workflows 是 Brain Corporation 面向商用自主清洁机器人的地图化操作与任务管理软件。它把场地地图、已训练路线、历史清洁覆盖和兴趣点放入统一视觉上下文，重新组织了路线示教和自主清洁执行流程。操作员可在创建路线前检查全场覆盖，在保存后立即确认路线，在地图上维护路线与兴趣点，并从完整地图直接选择清洁任务。任务完成后，系统汇总显示已执行路线和近期活动，辅助后续调度。该版本还实现隔离柱实时识别与避让、最低 5.5 厘米障碍物检测、重规划期间刷盘行为优化、大型未建图区域的全局重规划改进及地图保存性能优化。"
+    }
+  },
+  "av-3-0-torc-s-ai-blueprint-7b9fb3d": {
+    "checked_at": "2026-08-12T03:43:03.778286+00:00",
+    "title": "AV 3.0: Torc's AI Blueprint",
+    "accepted": false,
+    "reason": "正在使用网页来源核验候选是否满足全部收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核对 Torc 官方项目页、组织归属、发布日期及其链接的技术材料，重点判断该页面是否以可部署于实体自动驾驶卡车的软件框架为主体。严格区分软件项目与车辆产品宣传，并只记录来源明确支持的技术点和指标。",
+        "检索后将按给定结构输出结论；缺少任何硬性条件时会明确设为不收录。",
+        "我正在核实官方页面所称的 AV 3.0 架构、强化学习虚拟驾驶员、数据闭环和生成式仿真，同时寻找可验证的量化结果。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "核验中。",
+        "核验中。",
+        "核验中。",
+        "核验中。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在检索官方来源。",
+          "value": "待确认"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在使用网页来源核验候选是否满足全部收录条件。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验。"
+    }
+  },
+  "research-preview-cross-embodied-sensorimotor-pol-9e7ffad": {
+    "checked_at": "2026-08-12T03:43:03.796402+00:00",
+    "title": "Research Preview: Cross-Embodied Sensorimotor Policies",
+    "accepted": true,
+    "reason": "符合收录条件：Generalist AI于2025年6月17日发布了独立官方研究预览页，页面主体明确是用于真实物理机器人的跨本体端到端神经传感运动策略，而非机器人硬件产品。官方材料明确给出了实时动作频率、机器人本体、操作任务及零样本迁移设置。页面未宣布开放源代码，因此open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "实时闭环视觉与多传感器机器人控制",
+        "跨机械臂本体迁移与新环境泛化",
+        "双臂协同及精细力控制",
+        "刚性、关节式和柔性物体的长时序操作",
+        "受扰动条件下的反应式灵巧操作"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "系统采用端到端深度神经网络，将像素及其他传感器数据直接映射为机器人动作，并以100 Hz频率实时闭环运行。",
+        "研究重点是可跨不同机器人本体、环境和物理交互方式工作的灵巧传感运动策略；官方展示了同一跨本体模型在Flexiv Rizon 4与UR5机械臂之间的迁移。",
+        "操作技能覆盖推、拉、扭转、多步重新抓取、抖动、投掷以及飞行中抓取调整，强调高频反应式控制，而非仅执行低速预设轨迹。",
+        "双臂协同用于稳定并拆解乐高结构、张紧柔性材料，以及将纸盘弯成临时漏斗来搬运小型零件；相关行为需要精确的双手时序和力调节。",
+        "长时序装箱任务结合纸箱折叠、柔性链锁盘绕和双侧箱盖对齐，用于评估关节式及可变形物体处理、抗扰恢复和精细力控制。",
+        "紧固件分拣任务要求机器人从杂乱场景中抓取薄小零件，并按方向放入对应隔间；官方指出循环速度当前受硬件扭矩限制。",
+        "乐高任务通过视觉条件控制适应不同积木结构、料箱顺序和位置，执行拆解、重新抓取、按颜色分拣及高速投掷。"
+      ],
+      "metrics": [
+        {
+          "label": "控制频率",
+          "note": "端到端网络实时输出机器人动作。",
+          "value": "100 Hz"
+        },
+        {
+          "label": "已展示机械臂本体",
+          "note": "跨本体模型在两种自由度和厂商不同的机械臂上运行。",
+          "value": "7-DoF Flexiv Rizon 4；6-DoF UR5"
+        },
+        {
+          "label": "紧固件任务跨本体迁移",
+          "note": "官方称该任务训练数据中没有UR5机械臂数据。",
+          "value": "0条UR5任务数据"
+        },
+        {
+          "label": "紧固件任务环境泛化",
+          "note": "官方称训练数据中没有该任务在被评估环境内的数据。",
+          "value": "0条同任务同评估环境数据"
+        },
+        {
+          "label": "纸箱闭合精度",
+          "note": "同时对齐纸箱两侧箱盖所需的操作公差。",
+          "value": "毫米级公差"
+        }
+      ],
+      "official_organization_url": "https://generalistai.com/about",
+      "official_project_url": "https://generalistai.com/blog/research-preview",
+      "open_source": false,
+      "organization_en": "Generalist AI, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：Generalist AI于2025年6月17日发布了独立官方研究预览页，页面主体明确是用于真实物理机器人的跨本体端到端神经传感运动策略，而非机器人硬件产品。官方材料明确给出了实时动作频率、机器人本体、操作任务及零样本迁移设置。页面未宣布开放源代码，因此open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Generalist AI的Research Preview展示了一组面向真实机器人的跨本体端到端传感运动策略。模型直接接收视觉像素和其他传感器数据，以100 Hz输出动作，驱动单臂或双臂机器人完成紧固件分拣、纸箱折叠与链锁装箱、螺丝回收、乐高拆解分拣和投掷等任务。技术重点包括精细抓取、重新抓取、双臂协调、柔性与关节式物体处理、力调节、外部扰动恢复和高速反应动作。官方还报告模型可在7自由度Flexiv Rizon 4和6自由度UR5之间迁移，并在紧固件任务中于没有UR5任务训练数据、也没有相同评估环境任务数据的条件下运行。该页面属于能力研究预览，没有公开模型、代码或数据下载。"
+    }
+  },
+  "genassets-generating-in-the-wild-3d-assets-in-la-4507f63": {
+    "checked_at": "2026-08-12T03:43:03.813192+00:00",
+    "title": "GenAssets: Generating In-the-Wild 3D Assets in Latent Space",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方项目页、发布日期、责任机构和技术结果，再按严格软件项目标准判断是否收录。若页面实际聚焦自动驾驶仿真资产生成，我也会明确它与硬件产品的边界。技术点和指标只采用官方页面及其链接材料中可核实的内容。检索完成后将返回结构化结论。",
+        "正在核验候选项目的官方证据。",
+        "将重点确认它是否属于面向物理机器人或具身智能的软件工件，而非仅与自动驾驶场景有关的通用三维生成研究。",
+        "同时核对日期、机构、开源状态和准确指标。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索中，最终结论将在核验官方资料后给出。",
+        "不以 arXiv 单独作为官方项目证据。",
+        "不会猜测无法从可访问来源确认的信息。",
+        "将区分仿真软件工件与单纯生成模型研究。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://waabi.ai/research/genassets",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在检索官方资料并核验候选资格。"
+    }
+  },
+  "dio-decomposable-implicit-4d-occupancy-flow-worl-f0e912e": {
+    "checked_at": "2026-08-12T03:43:03.831463+00:00",
+    "title": "DIO: Decomposable Implicit 4D Occupancy-Flow World Model",
+    "accepted": false,
+    "reason": "Pending accessible-web verification of all eligibility conditions and exact technical evidence.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目页、发布主体和技术材料，再判断它是否属于面向物理机器人或具身系统的软件项目。重点会检查 DIO 是否只是自动驾驶感知研究，还是可独立认定的世界/动作模型软件 artifact。  Researching official project page, responsible organization, release date, technical evidence, metrics, and any public social references.",
+        "Reviewing Waabi's official DIO materials and linked paper/project resources to verify eligibility as embodied robotics software rather than a hardware or generic perception announcement.",
+        "Validating exact reported capabilities and quantitative results from primary sources only; unsupported fields will remain empty rather than inferred."
+      ],
+      "fields": [
+        "World models"
+      ],
+      "include": false,
+      "key_points": [
+        "Research in progress: official-source verification required before a final inclusion decision.",
+        "The provided Waabi URL appears to be an official organization research page, but its accessible content, date, software framing, and metrics must be checked.",
+        "No affiliations, dates, metrics, open-source status, or social evidence will be assumed from the candidate metadata alone.",
+        "Final dossier will distinguish occupancy forecasting/world modeling for autonomous vehicles from hardware-only or product-page content."
+      ],
+      "metrics": [
+        {
+          "label": "Verification status",
+          "note": "Awaiting primary-source confirmation.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "https://waabi.ai",
+      "official_project_url": "https://waabi.ai/research/dio",
+      "open_source": false,
+      "organization_en": "Waabi",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Pending accessible-web verification of all eligibility conditions and exact technical evidence.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方资料；当前不作最终收录判断。"
+    }
+  },
+  "alphabot-2-agi-cb76a2e": {
+    "checked_at": "2026-08-12T03:43:03.848775+00:00",
+    "title": "智平方发布全新一代智能机器人AlphaBot 2，开启AGI终端新时代！ - 智平方科技",
+    "accepted": false,
+    "reason": "不收录。虽然官方页面详细介绍了 Alpha Brain/GOVLA 具身模型及其全身控制能力，但该候选页面的标题、发布对象和主要产品定义均指向 AlphaBot 2 机器人整机，且大量内容属于机器人结构、自由度、工作范围、臂展、续航和应用场景等产品规格。GOVLA 是其搭载的软件技术，而不是该候选专页独立发布的主体，因此不满足“软件必须是专页主题”的条件，并触发硬件/机器人产品页排除规则。另需纠正日期：官方页面标注发布日期为 2025-04-18，正文所述发布活动发生于 2025-04-17，并非候选提供的 2025-04-01。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "视觉、语言与动作端到端协同",
+        "面向复杂任务的指令理解、逻辑推理与任务拆解",
+        "输出全身控制动作与移动轨迹",
+        "在制造和公共服务场景执行上下料、搬运、装配、设备操作及收纳分发等任务",
+        "通过多视角感知、双臂操作和移动底盘覆盖开放环境任务"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Humanoid intelligence",
+        "Whole-body control",
+        "Robot manipulation"
+      ],
+      "include": false,
+      "key_points": [
+        "候选官方页面的发布对象是通用智能机器人整机 AlphaBot 2，而非一个以软件为主体的独立技术项目；页面将其定位为由 Alpha Brain 定义的新一代智能终端。",
+        "AlphaBot 2 搭载智平方自研的全域全身 VLA 模型 GOVLA，通过视觉、语言和动作的端到端协同处理机器人任务。",
+        "官方介绍称 GOVLA 由空间交互基础模型、慢系统 System 2 和快系统 System 1 构成：System 2 负责复杂推理、任务拆解和语言交互，System 1 负责生成全身动作与移动轨迹。",
+        "该系统接收用户指令、实时环境信息和机器人自身状态，覆盖从桌面操作到开放环境、从单臂操作到全身协同、从简单任务到长程任务推理的范围。",
+        "发布材料称其将 DeepSeek 相关技术融入 VLA 构建过程，以增强长程复杂任务的理解和分析能力，但未在该页面提供可复核的模型评测数据。",
+        "机器人采用轮式移动底盘、双机械臂、腰腿升降结构和多位置视觉传感器，可更换灵巧手、夹爪或其他末端工具。",
+        "官方产品资料列出的应用包括汽车与电子制造、半导体制造、生物科技和公共服务，涉及上下料、搬运、装配、设备操作、物料转运及盘点分发等任务。"
+      ],
+      "metrics": [
+        {
+          "label": "发布活动日期",
+          "note": "官方公告正文称 AlphaBot 2 于该日在深圳正式发布；候选给出的 2025-04-01 与官方材料不符。",
+          "value": "2025-04-17"
+        },
+        {
+          "label": "全身自由度",
+          "note": "2025 年发布公告报告的配置，表述为“34+”。后续官方硬件文档对当前配置另列为 22 自由度且不含末端执行器，因此此处保留发布时原始口径。",
+          "value": "34+"
+        },
+        {
+          "label": "垂直工作范围",
+          "note": "2025 年官方发布公告报告。",
+          "value": "0–240 cm"
+        },
+        {
+          "label": "单臂臂展",
+          "note": "2025 年官方发布公告报告，不含末端夹具。",
+          "value": "700 mm"
+        },
+        {
+          "label": "连续工作时间",
+          "note": "2025 年官方发布公告报告为“6h+”。",
+          "value": "6 小时以上"
+        }
+      ],
+      "official_organization_url": "https://ai2robotics.com/",
+      "official_project_url": "https://ai2robotics.com/%E6%99%BA%E5%B9%B3%E6%96%B9%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0%E4%B8%80%E4%BB%A3%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BAalphabot-2%E5%BC%80%E5%90%AFagi%E7%BB%88%E7%AB%AF%E6%96%B0/?p=2613",
+      "open_source": false,
+      "organization_en": "AI² Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "智平方科技",
+      "reason": "不收录。虽然官方页面详细介绍了 Alpha Brain/GOVLA 具身模型及其全身控制能力，但该候选页面的标题、发布对象和主要产品定义均指向 AlphaBot 2 机器人整机，且大量内容属于机器人结构、自由度、工作范围、臂展、续航和应用场景等产品规格。GOVLA 是其搭载的软件技术，而不是该候选专页独立发布的主体，因此不满足“软件必须是专页主题”的条件，并触发硬件/机器人产品页排除规则。另需纠正日期：官方页面标注发布日期为 2025-04-18，正文所述发布活动发生于 2025-04-17，并非候选提供的 2025-04-01。",
+      "social_evidence": [
+        {
+          "independent": false,
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Rf-sIu4TZBk"
+        }
+      ],
+      "software_project": false,
+      "summary_zh": "AlphaBot 2 是智平方科技于 2025 年 4 月 17 日发布的轮式双臂通用智能机器人。其核心智能系统 Alpha Brain 包含全域全身视觉-语言-动作模型 GOVLA，利用慢系统进行复杂推理和任务拆解，并由快系统生成全身控制动作及移动轨迹。官方材料宣称该架构能够把能力范围从桌面扩展至开放环境、从单臂扩展至全身协同，并支持制造业、半导体、生物科技和公共服务中的多类操作任务。不过，本候选对应的官方文章本质上是 AlphaBot 2 整机及“AGI 终端”战略的产品发布页，软件模型只是机器人搭载的核心技术之一，不是专页独立发布的技术项目。依照严格索引规则，应将该条目判定为硬件/机器人产品公告并排除；Alpha Brain、GOVLA 或其后续独立模型若存在专门的软件项目页，应作为不同候选单独审核。"
+    }
+  },
+  "gaia-2-5cba164": {
+    "checked_at": "2026-08-12T03:43:03.866470+00:00",
+    "title": "GAIA-2",
+    "accepted": false,
+    "reason": "正在进行网页来源核验，尚未形成最终纳入结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验 Wayve 官方项目页、技术材料及可访问的发布信息，重点确认 GAIA-2 是否是面向具身系统的软件项目，并提取可精确归因的技术点与指标。后续结论不会仅依赖给出的摘要或 arXiv。",
+        "同时会检查责任组织、发布日期、开源状态和可验证的社交媒体证据；无法由来源支持的字段将保持保守。以下先进行网页检索。专业词汇说明：VLA = 视觉-语言-动作模型；world model = 世界模型；multi-view video generation = 多视角视频生成。验证标准将严格遵循候选条件。目标是输出结构化中文档案。",
+        "检索开始。"
+      ],
+      "fields": [
+        "World models",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验官方来源。",
+        "正在核验软件属性。",
+        "正在提取技术信息。",
+        "正在核验指标与发布日期。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "Wayve",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在进行网页来源核验，尚未形成最终纳入结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 GAIA-2 的官方项目证据与技术内容。"
+    }
+  },
+  "robot-programming-and-scene-assets-in-machinelog-903fdd5": {
+    "checked_at": "2026-08-12T03:43:03.883977+00:00",
+    "title": "Robot Programming and Scene Assets in MachineLogic",
+    "accepted": false,
+    "reason": "正在核验候选项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该页面的发布日期、软件属性、责任组织与可验证功能，并区分 MachineLogic 软件项目和 Vention 的机器人硬件产品。随后仅采用官方文档、官方公告及其直接链接材料填写指标。 ",
+        "fields：待核验",
+        "include：待核验",
+        "key_points：待核验",
+        "metrics：待核验"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索官方资料。",
+        "不会以硬件产品页或 arXiv 单独作为收录依据。",
+        "未获官方材料支持的日期、指标和链接将不填写。",
+        "最终结论将严格按候选资格条件给出。"
+      ],
+      "metrics": [
+        {
+          "label": "检索状态",
+          "note": "正在核验",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://docs.vention.com/docs/robot-programming-and-scene-assets-in-machinelogic",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验候选项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于官方可访问来源核验 MachineLogic 的机器人编程与场景资产功能。"
+    }
+  },
+  "anybotics-unveils-data-navigator-future-of-asset-0e00637": {
+    "checked_at": "2026-08-12T03:43:03.901719+00:00",
+    "title": "ANYbotics Unveils Data Navigator: Future of Asset Management - ANYbotics",
+    "accepted": true,
+    "reason": "符合收录条件。Data Navigator 是由 ANYbotics 明确负责并于 2025 年发布的机器人巡检数据、分析和任务管理软件；它直接处理实体 ANYmal 机器人产生的多模态检查数据，并包含异常检测、趋势分析和任务调度等已实现功能。ANYbotics 同时提供了专门的官方项目页和官方发布公告，因此不是硬件专页，也不依赖 arXiv 作为项目证据。官方材料未宣称开放源代码，故 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "汇聚并结构化 ANYmal 机器人采集的热成像、声学、可见光和气体检测数据",
+        "通过异常仪表板、历史对比和自动趋势线识别设备状态变化与潜在故障",
+        "按资产组织检查结果，并支持跨维护、可靠性和运营团队筛选与访问洞察",
+        "规划和调度 ANYmal 检查任务，形成从自动采集到维护决策的连续工作流",
+        "支持云端、本地部署及完全隔离网络部署，并可与 SAP、IBM 等企业系统集成"
+      ],
+      "fields": [
+        "Robot systems",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Data Navigator 是 ANYbotics 面向 ANYmal 实体巡检机器人的集中式数据与资产管理软件，而非机器人硬件或通用产品规格页；其核心任务是把自主巡检产生的数据转化为设备健康洞察。",
+        "平台集中处理热成像、声学、可见光和气体读数，并以资产为中心组织多模态检查数据，使用户能够在统一界面评估设备状态。",
+        "已实现异常仪表板、跨时间状态对比和自动趋势线，可用于发现关键异常、建立正常运行基线，并识别逐步恶化的设备状态。",
+        "平台包含任务调度功能，可预先规划 ANYmal 的巡检任务，实现持续、可重复的数据采集及全天候资产监测工作流。",
+        "其 Web 界面面向维护、可靠性和运营人员，无需专门的机器人操作知识或额外培训即可访问和筛选检查结果。",
+        "部署方式包括云端、本地和完全隔离网络；官方还说明其可按需接入 SAP、IBM 等企业系统，适用于关键基础设施的数据安全要求。",
+        "候选日期“2025-02-02”与官方页面不一致：官方新闻页面显示 February 25, 2025，而公告正文写明发布地点和日期为 2025 年 2 月 27 日；本条不采用候选日期作为已验证发布日期。"
+      ],
+      "metrics": [
+        {
+          "label": "发布前试点规模",
+          "note": "官方发布公告称，近期试点覆盖三家领先工业企业。",
+          "value": "3 家工业企业"
+        },
+        {
+          "label": "试点处理量",
+          "note": "Data Navigator 在试点期间分析的 ANYmal 机器人巡检记录数量。",
+          "value": "两周内超过 2,500 次巡检"
+        },
+        {
+          "label": "本地部署时间",
+          "note": "官方称试点中的本地集成可在数小时内投入运行。",
+          "value": "数小时内上线"
+        },
+        {
+          "label": "Grace Silica 月度运行结果",
+          "note": "ANYbotics 后续官方项目材料报告的 Data Navigator 与 ANYmal 联合部署结果。",
+          "value": "每月 130 次巡检任务、超过 1,400 条有效洞察"
+        },
+        {
+          "label": "Grace Silica 业务结果",
+          "note": "ANYbotics 官方项目材料报告的投资回收与工厂运行时间变化。",
+          "value": "投资回收期少于 8 个月，工厂运行时间提高 1.5%"
+        }
+      ],
+      "official_organization_url": "https://www.anybotics.com/",
+      "official_project_url": "https://www.anybotics.com/solutions/data-navigator/",
+      "open_source": false,
+      "organization_en": "ANYbotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件。Data Navigator 是由 ANYbotics 明确负责并于 2025 年发布的机器人巡检数据、分析和任务管理软件；它直接处理实体 ANYmal 机器人产生的多模态检查数据，并包含异常检测、趋势分析和任务调度等已实现功能。ANYbotics 同时提供了专门的官方项目页和官方发布公告，因此不是硬件专页，也不依赖 arXiv 作为项目证据。官方材料未宣称开放源代码，故 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Data Navigator 是 ANYbotics 为 ANYmal 自主巡检机器人构建的集中式资产数据与运维分析平台。它将机器人在工业设施中采集的热成像、声学、可见光和气体数据按设备资产统一组织，通过异常仪表板、历史状态对比和自动趋势线帮助维护团队发现退化迹象、确定维护优先级并提前处理潜在故障。平台还提供 ANYmal 巡检任务调度，将实体机器人的持续数据采集与设备健康分析连接为一套完整工作流。其工程部署覆盖云端、本地和完全隔离网络，并支持接入企业资产管理系统。官方发布时披露的三个工业试点在两周内处理了超过 2,500 次巡检；后续官方案例还报告了每月 130 次任务、超过 1,400 条月度洞察、少于八个月的投资回收期以及 1.5% 的工厂运行时间提升。"
+    }
   }
 }

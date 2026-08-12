@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-11T14:52:31.118188+00:00",
+  "updated_at": "2026-08-12T03:13:44.036764+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -990,6 +990,202 @@
       ],
       "bootstrap_candidate_urls": [],
       "last_bootstrapped_at": "2026-08-11T14:51:58.759601+00:00",
+      "last_error": null
+    },
+    "hello-robot-82afe1d3": {
+      "name": "Hello Robot",
+      "official_urls": [
+        "https://docs.hello-robot.com/",
+        "https://forum.hello-robot.com/",
+        "https://github.com/hello-robot",
+        "https://hello-robot.com/",
+        "https://hello-robot.com/develop/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332",
+        "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248",
+        "https://forum.hello-robot.com/t/software-drop-january-31-2025/1216",
+        "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344"
+      ],
+      "last_bootstrapped_at": "2026-08-12T02:57:42.014863+00:00",
+      "last_error": null
+    },
+    "vention-78e5b33f": {
+      "name": "Vention",
+      "official_urls": [
+        "https://docs.vention.com/",
+        "https://vention.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://docs.vention.com/docs/robot-programming-and-scene-assets-in-machinelogic",
+        "https://rails.vention.io/blogs/AI-operator/",
+        "https://vention.com/blogs/AI-operator/nvidia_gtc2026-1088",
+        "https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094",
+        "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
+        "https://vention.com/blogs/automation-programming-and-simulation/vention-developer-toolkit-1005"
+      ],
+      "last_bootstrapped_at": "2026-08-12T02:59:38.497186+00:00",
+      "last_error": null
+    },
+    "brain-corp-b574a870": {
+      "name": "Brain Corp",
+      "official_urls": [
+        "https://www.braincorp.com/",
+        "https://www.braincorp.com/brainos-software-updates",
+        "https://www.braincorp.com/brainosclean2-0",
+        "https://www.braincorp.com/resources"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.braincorp.com/resources/brain-corp-launches-brainos-r-clean-2-0-with-selfpath-tm-ai-advancing-adaptive-autonomy-for-tennant-company-floor-cleaning-robots",
+        "https://www.braincorp.com/resources/brain-corp-unveils-new-map-centric-workflows-simplifying-robot-operations-and-boosting-visual-clarity"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:00:31.921465+00:00",
+      "last_error": null
+    },
+    "nuro-002a0bc2": {
+      "name": "Nuro",
+      "official_urls": [
+        "https://www.nuro.ai/",
+        "https://www.nuro.ai/blog",
+        "https://www.nuro.ai/press",
+        "https://www.nuro.ai/technology"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.nuro.ai/blog/building-better-ears-nuros-unified-siren-perception-model",
+        "https://www.nuro.ai/blog/one-model-all-roads-zero-shot-autonomy-in-tokyo"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:01:09.312455+00:00",
+      "last_error": null
+    },
+    "torc-robotics-3e402840": {
+      "name": "Torc Robotics",
+      "official_urls": [
+        "https://github.com/torc-ai",
+        "https://torc.ai/",
+        "https://torc.ai/knowledge-center/news/",
+        "https://torc.ai/knowledge-center/publications/",
+        "https://torc.ai/solutions/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/torc-ai/Telescope",
+        "https://torc-ai.github.io/TruckDrive/",
+        "https://torc.ai/av-3-0-ai-artificial-intelligence/"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:02:46.363377+00:00",
+      "last_error": null
+    },
+    "waabi-c58d5952": {
+      "name": "Waabi",
+      "official_urls": [
+        "https://waabi.ai/",
+        "https://waabi.ai/insights",
+        "https://waabi.ai/press",
+        "https://waabi.ai/research"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://waabi.ai/research/conditional-flow-vae-for-safety-critical-traffic-scenario-generation",
+        "https://waabi.ai/research/dio",
+        "https://waabi.ai/research/drivegatr",
+        "https://waabi.ai/research/fomo3d",
+        "https://waabi.ai/research/genassets",
+        "https://waabi.ai/research/genre",
+        "https://waabi.ai/research/salf",
+        "https://waabi.ai/research/scenario-orchestration"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:04:23.692453+00:00",
+      "last_error": null
+    },
+    "wayve-e6aa6b85": {
+      "name": "Wayve",
+      "official_urls": [
+        "https://github.com/wayveai",
+        "https://wayve.ai/",
+        "https://wayve.ai/labs/",
+        "https://wayve.ai/press/",
+        "https://wayve.ai/science/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://wayve.ai/press/wayve-launches-gaia3/",
+        "https://wayve.ai/press/wayve-unveils-gaia2/",
+        "https://wayve.ai/thinking/rig3r/"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:05:50.370613+00:00",
+      "last_error": null
+    },
+    "k-scale-labs-5ddf8a4f": {
+      "name": "K-Scale Labs",
+      "official_urls": [
+        "https://docs.kscale.dev/",
+        "https://github.com/kscalelabs",
+        "https://www.kscale.dev/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.10",
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.3",
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.4",
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.5",
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.6",
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.7",
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.8",
+        "https://github.com/kscalelabs/ksim/releases/tag/0.2.9"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:07:24.451813+00:00",
+      "last_error": null
+    },
+    "小鹏机器人-xpeng-robotics-701a3779": {
+      "name": "小鹏机器人 / XPENG Robotics",
+      "official_urls": [
+        "https://github.com/xpeng-robotics",
+        "https://www.xiaopeng.com/airobot.html?forcePlat=h5",
+        "https://www.xpeng.com/pressroom",
+        "https://xpeng-robotics.github.io/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/xpeng-robotics/DIAL",
+        "https://github.com/xpeng-robotics/UniT",
+        "https://xpeng-robotics.github.io/agra/",
+        "https://xpeng-robotics.github.io/capek-0.5/",
+        "https://xpeng-robotics.github.io/fe0/",
+        "https://xpeng-robotics.github.io/rove/",
+        "https://xpeng-robotics.github.io/si0/"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:09:51.842706+00:00",
+      "last_error": null
+    },
+    "generalist-ai-a7dbd5e1": {
+      "name": "Generalist AI",
+      "official_urls": [
+        "https://generalistai.com/",
+        "https://generalistai.com/about",
+        "https://generalistai.com/blog"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://generalistai.com/blog/gen-0",
+        "https://generalistai.com/blog/gen-1",
+        "https://generalistai.com/blog/research-preview",
+        "https://generalistai.com/blog/towards-machines-with-a-thousand-hands"
+      ],
+      "last_bootstrapped_at": "2026-08-12T03:11:25.837858+00:00",
+      "last_error": null
+    },
+    "破壳机器人-5a2cab0c": {
+      "name": "破壳机器人",
+      "official_urls": [
+        "https://www.sina.cn/media/5848784131"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-12T03:11:59.272956+00:00",
+      "last_error": null
+    },
+    "灵心巧手-5c145977": {
+      "name": "灵心巧手",
+      "official_urls": [
+        "https://github.com/linker-bot",
+        "https://github.com/linkerbotai",
+        "https://linkerbot.cn/"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-12T03:12:57.933097+00:00",
       "last_error": null
     }
   }

@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=vFEZMJAYfgfUwZw02A_LYQ&_nc_ss=7b20f&oh=00_AQHLguQNBozPNByQ9gmrdFT64WAddpJYUtNS5X7FgW8kKQ&oe=6A9566F3",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=AiX3z1YdGPkQ7kNvwHX0_eg&_nc_oc=Adr4nMa6_pfyCmNT4DQifhqVw_JtlcUGg5_y1xbQ_DQJhdMX7qtl_m2_KlQSEJrkDtY&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=7MEFzWT--_fiirh-cleTsA&_nc_ss=7b20f&oh=00_AQFyuR0sQiesUQr7XU5tDeIIMsqAEKFhhd2OW-2ctsArjw&oe=6A9647F3",
       "width": 1920,
       "height": 1080
     },
@@ -248,6 +248,18 @@
       "height": 166
     },
     {
+      "id": "gen-1-multi-end-effector-expansion-08b0316",
+      "asset": "frameworks/gen-1-multi-end-effector-expansion-08b0316.jpg",
+      "source_url": "https://generalistai.com/blog/towards-machines-with-a-thousand-hands",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://generalistai.com/assets/pages/blog/towards-machines-with-a-thousand-hands/assets/images/organic-space-dark-mode.png",
+      "width": 658,
+      "height": 658
+    },
+    {
       "id": "xiaomi-robotics-1-db45b5f",
       "asset": "frameworks/xiaomi-robotics-1-db45b5f.jpg",
       "source_url": "https://robotics.xiaomi.com/xiaomi-robotics-1.html",
@@ -332,6 +344,30 @@
       "height": 300
     },
     {
+      "id": "how-hydroshear-gives-robots-a-realistic-sense-of-d3b8467",
+      "asset": "frameworks/how-hydroshear-gives-robots-a-realistic-sense-of-d3b8467.jpg",
+      "source_url": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://cdn.amazon.science/26/0a/47bb5de4438483f43551f13963d9/cloud-and-systems.svg",
+      "width": 270,
+      "height": 270
+    },
+    {
+      "id": "si0-dd244b6",
+      "asset": "frameworks/si0-dd244b6.jpg",
+      "source_url": "https://xpeng-robotics.github.io/si0/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://xpeng-robotics.github.io/si0/assets/fe0-iron-front-hand.png",
+      "width": 2400,
+      "height": 1345
+    },
+    {
       "id": "g0-5-robotwin-2-0-evaluation-release-f38d2d0",
       "asset": "frameworks/g0-5-robotwin-2-0-evaluation-release-f38d2d0.jpg",
       "source_url": "https://github.com/OpenGalaxea/GalaxeaVLA",
@@ -380,6 +416,78 @@
       "height": 1707
     },
     {
+      "id": "agra-48128f2",
+      "asset": "frameworks/agra-48128f2.jpg",
+      "source_url": "https://xpeng-robotics.github.io/agra/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://xpeng-robotics.github.io/agra/figures/architecture.png",
+      "width": 3966,
+      "height": 2240
+    },
+    {
+      "id": "drivegatr-efficient-equivariant-transformer-for--545e9c2",
+      "asset": "frameworks/drivegatr-efficient-equivariant-transformer-for--545e9c2.jpg",
+      "source_url": "https://waabi.ai/research/drivegatr",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://waabi.ai/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F163962%2F1775071366-main.png%3Ffit%3Dmax%26h%3D3000%26q%3D90%26w%3D2000&w=3840&q=75",
+      "width": 2000,
+      "height": 943
+    },
+    {
+      "id": "conditional-flow-vae-for-safety-critical-traffic-439d1cc",
+      "asset": "frameworks/conditional-flow-vae-for-safety-critical-traffic-439d1cc.jpg",
+      "source_url": "https://waabi.ai/research/conditional-flow-vae-for-safety-critical-traffic-scenario-generation",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://waabi.ai/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F163962%2F1778717495-fig_2.png%3Ffit%3Dmax%26h%3D3000%26q%3D90%26w%3D2000&w=3840&q=75",
+      "width": 1504,
+      "height": 682
+    },
+    {
+      "id": "xpeng-showcases-physical-ai-world-model-at-cvpr--a36d78f",
+      "asset": "frameworks/xpeng-showcases-physical-ai-world-model-at-cvpr--a36d78f.jpg",
+      "source_url": "https://www.xpeng.com/pressroom/news/019e95aed2899e8226228a028d650112",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://a-cdn.xpeng.com/www/public/country/china.svg",
+      "width": 290,
+      "height": 192
+    },
+    {
+      "id": "traffic-scenario-orchestration-from-language-via-c9cbde8",
+      "asset": "frameworks/traffic-scenario-orchestration-from-language-via-c9cbde8.jpg",
+      "source_url": "https://waabi.ai/research/scenario-orchestration",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://waabi.ai/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F163962%2F1779388207-figure_2-1.png%3Ffit%3Dmax%26h%3D3000%26q%3D90%26w%3D2000&w=3840&q=75",
+      "width": 2000,
+      "height": 1125
+    },
+    {
+      "id": "salf-sparse-local-fields-for-multi-sensor-render-c24b18d",
+      "asset": "frameworks/salf-sparse-local-fields-for-multi-sensor-render-c24b18d.jpg",
+      "source_url": "https://waabi.ai/research/salf",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://waabi.ai/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F163962%2F1780360511-salf-visual-abstract.png%3Ffit%3Dmax%26h%3D3000%26q%3D90%26w%3D2000&w=3840&q=75",
+      "width": 2000,
+      "height": 1369
+    },
+    {
       "id": "humanoid-gpt-72a5854",
       "asset": "frameworks/humanoid-gpt-72a5854.jpg",
       "source_url": "https://qizekun.github.io/Humanoid-GPT/",
@@ -402,6 +510,18 @@
       "image_url": "https://opengraph.githubassets.com/5d84d614a3b57fbf0df3cb60cbcf05e59ff2029627f1624c917138caeb01df68/LejuRobotics/LeTools-Learning",
       "width": 1200,
       "height": 600
+    },
+    {
+      "id": "fe0-8fcfa04",
+      "asset": "frameworks/fe0-8fcfa04.jpg",
+      "source_url": "https://xpeng-robotics.github.io/fe0/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://xpeng-robotics.github.io/fe0/assets/iron-david-stance.png",
+      "width": 2200,
+      "height": 1237
     },
     {
       "id": "wall-wm-world-action-model-9de8900",
@@ -644,6 +764,18 @@
       "height": 654
     },
     {
+      "id": "q1-2026-vention-platform-release-609fa71",
+      "asset": "frameworks/q1-2026-vention-platform-release-609fa71.jpg",
+      "source_url": "https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://ventionblobs.s3.amazonaws.com/blogs/images/1119/thumb_title_image.png",
+      "width": 600,
+      "height": 328
+    },
+    {
       "id": "hy-embodied-0-5-34cd06a",
       "asset": "frameworks/hy-embodied-0-5-34cd06a.jpg",
       "source_url": "https://github.com/Tencent-Hunyuan/HY-Embodied",
@@ -678,6 +810,18 @@
       "image_url": "https://rai-inst.com/wp-content/uploads/2026/03/passive-roller.png",
       "width": 500,
       "height": 333
+    },
+    {
+      "id": "brainos-clean-2-0-with-selfpath-ai-771cadd",
+      "asset": "frameworks/brainos-clean-2-0-with-selfpath-ai-771cadd.jpg",
+      "source_url": "https://www.braincorp.com/brainosclean2-0",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://cdn.prod.website-files.com/650caff2e60146b72295e1c4/654eaaae02de8be391fb3d0b_partners-3.webp",
+      "width": 2121,
+      "height": 1414
     },
     {
       "id": "humanoid-lab-f5cc41c",
@@ -812,6 +956,18 @@
       "height": 180
     },
     {
+      "id": "truckdrive-long-range-autonomous-highway-driving-6d4539e",
+      "asset": "frameworks/truckdrive-long-range-autonomous-highway-driving-6d4539e.jpg",
+      "source_url": "https://torc-ai.github.io/TruckDrive/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://torc-ai.github.io/TruckDrive/static/images/truckdrive-hero.jpg",
+      "width": 1920,
+      "height": 600
+    },
+    {
       "id": "a-new-benchmark-in-robot-juggling-rai-institute-9ce9d31",
       "asset": "frameworks/a-new-benchmark-in-robot-juggling-rai-institute-9ce9d31.jpg",
       "source_url": "https://rai-inst.com/resources/videos/a-new-benchmark-in-robot-juggling/",
@@ -884,6 +1040,18 @@
       "height": 600
     },
     {
+      "id": "q4-2025-vention-platform-release-50135d9",
+      "asset": "frameworks/q4-2025-vention-platform-release-50135d9.jpg",
+      "source_url": "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://ventionblobs.s3.amazonaws.com/blogs/images/1119/thumb_title_image.png",
+      "width": 600,
+      "height": 328
+    },
+    {
       "id": "rho-alpha-c4aba6b",
       "asset": "frameworks/rho-alpha-c4aba6b.jpg",
       "source_url": "https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/",
@@ -918,6 +1086,18 @@
       "image_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/user-upload/47w9omio5aorw.jpeg",
       "width": 2690,
       "height": 1965
+    },
+    {
+      "id": "gaia-3-fa89c04",
+      "asset": "frameworks/gaia-3-fa89c04.jpg",
+      "source_url": "https://wayve.ai/thinking/gaia-3/",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://wayve.ai/wp-content/uploads/2026/07/GAIA-4-Hero-Image-512x391.jpg",
+      "width": 512,
+      "height": 391
     },
     {
       "id": "vitra-d321807",
@@ -978,6 +1158,18 @@
       "image_url": "https://lh3.googleusercontent.com/KwuGClFlsydWIS2azo2WjBWkMY-Hm3geOZAad00wP-CMtmWQa8DlpmqOMvXC6QKiPnEUBgtToVWnJ9rzz0O7dTcaVFhYOSggEugNVJBWVgc1hegDfg=w1440",
       "width": 1440,
       "height": 1130
+    },
+    {
+      "id": "vention-developer-toolkit-3d19dab",
+      "asset": "frameworks/vention-developer-toolkit-3d19dab.jpg",
+      "source_url": "https://vention.com/blogs/automation-programming-and-simulation/vention-developer-toolkit-1005",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://ventionblobs.s3.amazonaws.com/blogs/images/1119/thumb_title_image.png",
+      "width": 600,
+      "height": 328
     },
     {
       "id": "lbm-eval-1-1-0-632b92a",
@@ -1100,6 +1292,18 @@
       "height": 431
     },
     {
+      "id": "fomo-3d-using-vision-foundation-models-for-long--79e3c4e",
+      "asset": "frameworks/fomo-3d-using-vision-foundation-models-for-long--79e3c4e.jpg",
+      "source_url": "https://waabi.ai/research/fomo3d",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://waabi.ai/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F163962%2F1760716391-overview.png%3Ffit%3Dmax%26h%3D3000%26q%3D90%26w%3D2000&w=1920&q=75",
+      "width": 853,
+      "height": 340
+    },
+    {
       "id": "gemini-robotics-1-5-brings-ai-agents-into-the-ph-5fd6c1e",
       "asset": "frameworks/gemini-robotics-1-5-brings-ai-agents-into-the-ph-5fd6c1e.jpg",
       "source_url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
@@ -1110,198 +1314,6 @@
       "image_url": "https://lh3.googleusercontent.com/vSMY895gzWpK-nGK2Vn__6OsjX5DIlTkiBBqggd0f-oAw1oNgh5tFPiZPKtSKIONx4UCT7kiop72Nuj0RMrJ-bICxx21SZCG55LlqcqBA-n_znJw=w1440",
       "width": 1440,
       "height": 809
-    },
-    {
-      "id": "the-case-for-an-omni-bodied-robot-brain-2cf0385",
-      "asset": "frameworks/the-case-for-an-omni-bodied-robot-brain-2cf0385.jpg",
-      "source_url": "https://www.skild.ai/blogs/omni-bodied",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.skild.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flocoformer.fe908b66.png&w=3840&q=75",
-      "width": 2199,
-      "height": 1018
-    },
-    {
-      "id": "go-1-embodied-foundation-model-7598ed3",
-      "asset": "frameworks/go-1-embodied-foundation-model-7598ed3.jpg",
-      "source_url": "https://agibot.com.cn/article/188/detail/79.html",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://agibot.com.cn/public/uploads/images/20260331/df2e4f59a81fd14809124705e482d3f1.png",
-      "width": 320,
-      "height": 426
-    },
-    {
-      "id": "opentrack-1f26182",
-      "asset": "frameworks/opentrack-1f26182.jpg",
-      "source_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack/raw/main/storage/assets/demo/original.gif",
-      "width": 1080,
-      "height": 608
-    },
-    {
-      "id": "project-go-big-internet-scale-humanoid-pretraini-7d3b87a",
-      "asset": "frameworks/project-go-big-internet-scale-humanoid-pretraini-7d3b87a.jpg",
-      "source_url": "https://www.figure.ai/news/project-go-big",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7p8BmuMQwpfQ0O9aHdhlzP/52f749276d2c74e9e7390962bad17253/Open_Graph_1.jpg",
-      "width": 1200,
-      "height": 630
-    },
-    {
-      "id": "viam-apps-for-robot-fleet-dashboards-fee2211",
-      "asset": "frameworks/viam-apps-for-robot-fleet-dashboards-fee2211.jpg",
-      "source_url": "https://www.viam.com/post/build-a-custom-dashboard-for-your-fleet-operators-minus-the-complex-infrastructure",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/68c2f5c20eeb5d84dd5f5817_202509_ViamApps_main.png",
-      "width": 750,
-      "height": 500
-    },
-    {
-      "id": "menteebot-ai-approach-d54bfcc",
-      "asset": "frameworks/menteebot-ai-approach-d54bfcc.jpg",
-      "source_url": "https://menteebot.com/blog/menteebot-ai-approach/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.menteebot.com/static_assets/Mobile_menu.PNG",
-      "width": 461,
-      "height": 1006
-    },
-    {
-      "id": "lerobot-v0-3-29c251d",
-      "asset": "frameworks/lerobot-v0-3-29c251d.jpg",
-      "source_url": "https://github.com/huggingface/lerobot/releases/tag/v0.3.2",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/0166d75b5fc825909caca2e2a99b4541da03876ae4ec93dc243cf8225e84d6cf/huggingface/lerobot/releases/tag/v0.3.2",
-      "width": 1200,
-      "height": 600
-    },
-    {
-      "id": "training-a-whole-body-control-foundation-model-7302c7e",
-      "asset": "frameworks/training-a-whole-body-control-foundation-model-7302c7e.jpg",
-      "source_url": "https://www.agilityrobotics.com/content/training-a-whole-body-control-foundation-model",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://cdn.prod.website-files.com/6980c63561bbbeb67b4b7ab5/698e37055337911ae273548f_698e0485e06a92021ff4afab_68a50bf11b3d698e0c7e8cc0_whole-body%2520controller%2520cover%2520image.jpeg",
-      "width": 1200,
-      "height": 675
-    },
-    {
-      "id": "xr-1-cross-embodiment-vla-model-2cbb033",
-      "asset": "frameworks/xr-1-cross-embodiment-vla-model-2cbb033.jpg",
-      "source_url": "https://xr-1-vla.github.io/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://xr-1-vla.github.io/static/images/xr1_overview.png",
-      "width": 2234,
-      "height": 1117
-    },
-    {
-      "id": "humanoid-whole-body-control-and-autonomous-navig-f3d61a9",
-      "asset": "frameworks/humanoid-whole-body-control-and-autonomous-navig-f3d61a9.jpg",
-      "source_url": "https://www.x-humanoid.com/yk.html",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.x-humanoid.com/oss/static/img/project/hskw.png",
-      "width": 784,
-      "height": 588
-    },
-    {
-      "id": "deepseek-v31",
-      "asset": "frameworks/deepseek-v31.jpg",
-      "source_url": "https://api-docs.deepseek.com/zh-cn/news/news250821",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://cdn.deepseek.com/api-docs/v3.1_benchmark_1.webp",
-      "width": 1080,
-      "height": 495
-    },
-    {
-      "id": "mindjourney-3ab9503",
-      "asset": "frameworks/mindjourney-3ab9503.jpg",
-      "source_url": "https://www.microsoft.com/en-us/research/project/mindjourney/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/08/MindJourney_pipeline_1400x788-1024x576.jpg",
-      "width": 1024,
-      "height": 576
-    },
-    {
-      "id": "k-sim-0-2-10-b69d5fd",
-      "asset": "frameworks/k-sim-0-2-10-b69d5fd.jpg",
-      "source_url": "https://github.com/kscalelabs/ksim/releases/tag/0.2.10",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/b9a6ca79330b23dc48ba1bc0d00e788b21e09f4b64d90ac737101dbe6442e2d2/kscalelabs/ksim/releases/tag/0.2.10",
-      "width": 1200,
-      "height": 600
-    },
-    {
-      "id": "unitree-ros2-v0-3-0-6259924",
-      "asset": "frameworks/unitree-ros2-v0-3-0-6259924.jpg",
-      "source_url": "https://github.com/unitreerobotics/unitree_ros2/releases/tag/v0.3.0",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/7eb6c035d84e077f7f0eb995205ffad9069bd0abd39313e25252a49f1db082bd/unitreerobotics/unitree_ros2/releases/tag/v0.3.0",
-      "width": 1200,
-      "height": 600
-    },
-    {
-      "id": "helix-02-full-body-autonomy-a42b12f",
-      "asset": "frameworks/helix-02-full-body-autonomy-a42b12f.jpg",
-      "source_url": "https://www.figure.ai/news/helix-02",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
-      "width": 1200,
-      "height": 630
-    },
-    {
-      "id": "helix-02-95fd74a",
-      "asset": "frameworks/helix-02-95fd74a.jpg",
-      "source_url": "https://www.figure.ai/news/helix-02",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://images.ctfassets.net/qx5k8y1u9drj/7qpJLAT9FKWaptebSQgA0Y/4e2bdb81cbecddfd7cbea49f8ab143ac/Open_Graph_Image__4_.jpg",
-      "width": 1200,
-      "height": 630
     }
   ]
 }
