@@ -1,6 +1,82 @@
 {
-  "generated_at": "2026-08-12T04:19:31.374354+00:00",
+  "generated_at": "2026-08-13T04:24:12.856957+00:00",
   "candidates": [
+    {
+      "title": "StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models",
+      "summary": "Vision-Language-Action (VLA) models can follow instructions and manipulate objects, but their performance often collapses out of distribution (OOD), when the scene, viewpoint, or object differs from training. Adapting to each new situation typically requires collecting more data and fine-tuning. We present StellaVLA, a framework that instead adapts at test time by conditioning on a single retrieved demonstration. The key idea is to move beyond imitating what an expert did and instead convey why: an automated offline pipeline converts each raw trajectory into a structured demonstration, e.g., a task plan, sub-goal descriptions, and verbalized 3D motion, at zero human-annotation cost. Provided as in-context guidance, this structured demonstration lets the policy reason about the task rather than mimic a pixel trajectory, which also makes it transferable across embodiments (real-robot, human-hand, or XR demonstrations). A parallel dual-training design internalizes this reasoning during training through a joint action-and-language objective, while inference uses the action expert alone, preserving real-time, high-frequency control with no added latency. On the VLA-Arena leaderboard(Aug 1, 2026), StellaVLA ranks first with an overall score of 0.63, versus 0.44 and 0.22 for the strong prior models ($π_{0.5}$ and LingBot-VLA), and it further leads on LIBERO with 98.8% average success rate and LIBERO-Plus with 85.1% success rate. Our real-robot benchmark demonstrates that StellaVLA can use both human/robot demos and human-to-robot (XR) demos as in-context structured demonstration to help VLA model adapt to OOD tasks.",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.11671v1",
+      "authors": [
+        "Siyu Xu",
+        "Yunke Wang",
+        "Zijian Wang",
+        "Dihao Zhu",
+        "Chenghao Xia",
+        "Chengbin Du",
+        "Daochang Liu",
+        "Tao Huang",
+        "Chang Xu"
+      ],
+      "score": 54,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title"
+      ]
+    },
+    {
+      "title": "Policy-Induced Hand Priors in Humanoid Dual-Arm Manipulation: Diagnosing and Mitigating Initial-Pose Dependence",
+      "summary": "Vision-language-action (VLA) policies are expected to operate robustly across variations in the robot's initial configuration, yet aggregate task success can conceal pose-specific failures and inappropriate hand selection. This work investigates initial-pose dependence in VLA-based humanoid dual-arm manipulation. We characterize the initial-condition-dependent early hand preference as a policy-induced hand prior and quantify it using HandPriorScore, residual hand bias, and target responsiveness. Evaluations across multiple policies and 17 initial configurations reveal strong initial-pose--policy interactions: the same pose produces substantially different success rates across policies, while a single policy exhibits large performance variation across poses. Specific initial arm configurations can suppress or induce an asymmetric hand preference, with the resulting effect varying in direction and strength across policies. Wrist-camera observations also influence hand selection and task performance. Expanding initial-pose coverage in the training dataset substantially improves robustness, while targeted augmentation around a low-performing configuration increases its success rate. Comparisons across training configurations show that sufficient exposure to the target simulation task is beneficial, whereas the effect of real or auxiliary data depends on pose coverage, simulation ratio, and observation availability. These findings characterize a pose-conditioned hand prior, identify a localized initial arm configuration as a causal handle on hand-selection behavior, and demonstrate how data coverage and training composition affect initial-pose robustness.",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.11769v1",
+      "authors": [
+        "Chaeyeon Jung",
+        "Juyoun Park"
+      ],
+      "score": 34,
+      "reasons": [
+        "keywords: vision-language-action, vla, humanoid"
+      ]
+    },
+    {
+      "title": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "summary": "The prevailing recipe for Vision-Language-Action (VLA) models couples a pretrained VLM with a separately trained flow-matching action expert. This makes the VLM a context encoder rather than a decision-maker. We introduce G0.5, a pretrained autoregressive VLA in which a single transformer decoder emits reasoning and action tokens under a single objective. Three components make this tractable at foundation-model scale: a learnable cross-embodiment action tokenizer that maps heterogeneous robot actions into a shared vocabulary; a native chain-of-thought stream interleaving task decomposition, object grounding, and action hints with action tokens; and a visual memory module that injects multi-second history through the vision encoder. Because reasoning and action share a single set of weights, the pretrained VLM's capabilities carry over to physical behavior: the model follows instructions closely, and prompts directly steer action granularity, task horizon, and out-of-distribution scene handling without further training. Pretrained on a large collection of robot datasets together with VQA samples, G0.5 surpasses state-of-the-art models across 7 independent regimes: real-world fine-tuning on R1lite and R1pro robots (76.7\\% vs.\\ 53.3\\% for $π_{0.5}$ and 24.4\\% for GR00T-N1.7), the 2025 BEHAVIOR Challenge on 50 long-horizon household mobile manipulation tasks using a generalist policy (31.4\\% vs.\\ 26.3\\% for $π_{0.5}$ and 26.1\\% for the challenge winner), DROID post-training followed by zero-shot transfer to an unseen environment and objects (82.5\\%), a language-following Pick-and-Place benchmark, LIBERO (98.9\\%), RoboTwin 2.0 (93.3\\%), and SimplerEnv-Bridge (87.3\\%).",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.11739v1",
+      "authors": [
+        "Yicheng Liu",
+        "Zibin Dong",
+        "Baijun Ye",
+        "Tianyuan Yuan",
+        "Tao Jiang",
+        "Anqi Yang",
+        "Shicheng Cao",
+        "Haonan Liu",
+        "Yue Sun",
+        "Zihan Guo",
+        "Xiao Liu",
+        "Dong Ke",
+        "Changxun Pan",
+        "Chenru Wu",
+        "Tailai Cheng",
+        "Xiaoshu Ren",
+        "Xinlei Zhang",
+        "Jianning Cui",
+        "Zijie Zhao",
+        "Haoyu Zhang",
+        "Kaiming Xu",
+        "Haodong Yang",
+        "Bowen Zhang",
+        "Jiahui Niu",
+        "Shaoting Zhu",
+        "Shiduo Zhang",
+        "Hang Zhao"
+      ],
+      "score": 52,
+      "reasons": [
+        "keywords: vision-language-action, vla, cross-embodiment",
+        "physical-robot evidence"
+      ]
+    },
     {
       "title": "XCoT-VLA: Executable Chain-of-Thought for Vision-Language-Action Driving",
       "summary": "Vision-Language-Action (VLA) models can connect scene understanding, semantic reasoning, and trajectory generation for autonomous driving. However, verbose natural-language Chain-of-Thought (CoT) is poorly suited to real-time control because it is open-ended, costly to decode, and difficult to optimize as an action-facing representation. We propose XCoT-VLA, which replaces descriptive rationales with compact executable CoT tokens learned from automatically constructed Reason-Action supervision. Logged trajectories provide action evidence, while scene context supplies causal semantics. The predicted XCoT sequence remains in context and conditions fixed trajectory queries through shared multimodal self-attention. Deterministic token-function routing applies the Reason FFN to XCoT tokens and the Control FFN to trajectory queries for flow-matching trajectory generation. We further introduce XCoT Policy Optimization (XCPO) as an optional refinement extension in the same executable token space. XCoT-VLA reduces longitudinal ADE from 1.645 to 1.323 on a general-distribution set and lateral FDE from 1.616 to 0.648 in lane-change scenarios. By representing driving-oriented reasoning with only 2-6 executable XCoT tokens, our method substantially reduces autoregressive reasoning overhead and remains within the real-time planning budget. These results demonstrate that driving-oriented reasoning can be compact, executable, and directly connected to trajectory generation.",
@@ -139,7 +215,7 @@
       "title": "VANE: Reliable Test-Time Training for Vision-Language-Action Models via Future Visual Representation Prediction",
       "summary": "Test-time training (TTT) offers a lightweight way to adapt vision--language--action (VLA) policies from unlabeled deployment streams, but it remains difficult to use reliably in closed-loop manipulation. A shared adaptation space can mix incompatible task corrections, while an online update can alter subsequent actions before its consequences are known. We introduce a reliable TTT framework for VLA policies (VANE). VANE conditions prompt adaptation on the current vision--language context and learns from the future visual consequences of executed actions. Candidate updates are isolated from the live policy, evaluated on subsequent observations, and committed only when supported by future evidence, making adaptation selective and reversible. On SimplerEnv WidowX, VANE improves average success by $3.2$ percentage points over the corresponding TTT baseline. Results on Google Robot further show that deployment-time gains remain task- and embodiment-dependent. Together, these results demonstrate a constrained, evidence-based approach to adapting VLA policies during interaction.",
       "date": "2026-08-10",
-      "url": "https://arxiv.org/abs/2608.09448v1",
+      "url": "https://arxiv.org/abs/2608.09448v2",
       "authors": [
         "Hongjin Ji",
         "Guoyang Xia",
@@ -2402,23 +2478,6 @@
       ]
     },
     {
-      "title": "HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving",
-      "summary": "Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises robustness in noisy driving scenarios. Conversely, latent-based world models alleviate this sensitivity but often incur limited interpretability and representational degradation due to absent pixel-level grounding. To reconcile this trade-off, we propose HyWorldVLA, a hybrid world-VLA framework that unifies pixel-level supervision and latent representation learning. In the pre-training stage, HyWorldVLA predicts video latents encoded by a pre-trained video VAE, while simultaneously reconstructing video frames to provide precise pixel-level grounding. During the subsequent co-fine-tuning phase, the model exclusively predicts latent features, which are fed into an action expert to generate trajectories. Extensive experiments on NAVSIM v1 and v2 benchmarks demonstrate that HyWorldVLA significantly outperforms both pixel-based and latent-based world model baselines. Notably, we present the first comprehensive qualitative and quantitative analysis of world model noise robustness in autonomous driving, establishing a new benchmark for evaluating future architectures.",
-      "date": "2026-07-23",
-      "url": "https://arxiv.org/abs/2607.20988v1",
-      "authors": [
-        "Quanfu Yu",
-        "Xian Wu",
-        "Hao Xu",
-        "Liulong Ma"
-      ],
-      "score": 62,
-      "reasons": [
-        "keywords: vision-language-action, vla, world model",
-        "report/model title"
-      ]
-    },
-    {
       "title": "GEN-1 Multi-End-Effector Expansion",
       "url": "https://generalistai.com/blog/towards-machines-with-a-thousand-hands",
       "date": "2026-07-23",
@@ -2428,49 +2487,6 @@
       "score": 100,
       "reasons": [
         "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Addressing the Orchestration Gap in Generalist Robots via Physical Agency",
-      "summary": "General-purpose robots need to reason about their actions, combining perception, world knowledge, planning, success detection, recovery, and low-level control. Today's state-of-the-art models attempt to combine all these capabilities into the learned policy via large-scale pre-training. Instead, we show that these capabilities can be decomposed into a general language-conditioned policy/control agent and a high-level agent manager/orchestrator. Rather than training policies to reason via pre-training, we build a closed-loop physical agent orchestrator that can do high-level planning, decompose the goal into achievable subgoals, command low-level motor commands, track and verify the outcome from low-level observations, and recover from failures. Our Physical Agency orchestrator (Pigey) can control existing vision-language-action (VLA) policies as well as parametrized skills to solve complex reasoning tasks in the real world, without any additional data collection or post-training. We evaluate Pigey extensively across simulation benchmarks and challenging real-world robotic manipulation tasks, and demonstrate significant performance improvements over existing generalist policies. On LIBERO-PRO, Pigey advances the state-of-the-art by over 4x (12.8% -> 53.3%) with no task-specific fine-tuning. On a real robot, Pigey lifts the frozen policy from near-zero to over 90% on reasoning-limited tasks. We call the difference between what frozen motor skills achieve alone and inside the agentic loop the orchestration gap.",
-      "date": "2026-07-23",
-      "url": "https://arxiv.org/abs/2607.21725v1",
-      "authors": [
-        "Liane Galanti",
-        "Dhruv Shah",
-        "Tri Dao"
-      ],
-      "score": 44,
-      "reasons": [
-        "keywords: vision-language-action, vla",
-        "physical-robot evidence"
-      ]
-    },
-    {
-      "title": "AXIS: A Growable Community-Driven Data Engine for Scalable Robot Manipulation",
-      "summary": "Learning effective robot manipulation policies requires diverse, high-quality demonstrations, yet existing data pipelines are often difficult to scale because they rely on specialized hardware, centralized operators, or fixed task suites. We present AXIS, a growable community-driven data engine and benchmark for scalable robot learning, which enables browser-based teleoperation for large-scale demonstration collection, automatically generates and validates new manipulation tasks, and transforms community-collected demonstrations into training-ready data through automated success checking, quality filtering, trajectory smoothing, and visual and physics-based augmentation. The AXIS dataset currently contains 207 diverse tasks and 50K+ trajectories. Meanwhile, AXIS organizes data into task snapshots and evaluates policies with a systematic held-out protocol. We compare vision-language-action (VLA) policies under a unified AXIS evaluation suite and analyze scaling behavior across different data volumes. Continual pretraining on AXIS substantially improves the overall success rate of $π_{0.5}$ by 5.8%, outperforms the model pretrained on RoboCasa365 by 37.3%, and exhibits consistent scaling with increasing data volume, with the largest gains observed under layout, sensor-noise, and camera perturbations.",
-      "date": "2026-07-23",
-      "url": "https://arxiv.org/abs/2607.21588v1",
-      "authors": [
-        "Mengfei Zhao",
-        "Dihong Huang",
-        "Yikai Tang",
-        "Peihao Li",
-        "Mingxuan Yan",
-        "Ruiqi Zhuang",
-        "Yanjia Huang",
-        "Jie Wang",
-        "Hai Zhai",
-        "Tony Zhou",
-        "Rui Zhang",
-        "Zhexi Luo",
-        "Yuchen Huang",
-        "Jianfei Yang",
-        "Jiachen Li"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: vision-language-action, vla"
       ]
     },
     {
@@ -7144,27 +7160,6 @@
       "score": 100,
       "reasons": [
         "official web-project discovery"
-      ]
-    },
-    {
-      "title": "CeRLP: A Cross-embodiment Robot Local Planning Framework for Visual Navigation",
-      "summary": "Visual navigation for cross-embodiment robots is challenging due to variations in robot and camera configurations, which can lead to the failure of navigation tasks. Previous approaches typically rely on collecting massive datasets across different robots, which is highly data-intensive, or fine-tuning models, which is time-consuming. Furthermore, both methods often lack explicit consideration of robot geometry. In this paper, we propose a Cross-embodiment Robot Local Planning (CeRLP) framework for general visual navigation, which abstracts visual information into a unified geometric formulation and applies to heterogeneous robots with varying physical dimensions, camera parameters, and camera types. CeRLP introduces a depth estimation scale correction method that utilizes offline pre-calibration to resolve the scale ambiguity of monocular depth estimation, thereby recovering precise metric depth images. Furthermore, CeRLP designs a visual-to-scan abstraction module that projects varying visual inputs into height-adaptive laser scans, making the policy robust to heterogeneous robots. Experiments in simulation environments demonstrate that CeRLP outperforms comparative methods, validating its robust obstacle avoidance capabilities as a local planner. Additionally, extensive real-world experiments verify the effectiveness of CeRLP in tasks such as point-to-point navigation and vision-language navigation, demonstrating its generalization across varying robot and camera configurations.",
-      "date": "2026-03-20",
-      "url": "https://arxiv.org/abs/2603.19602v1",
-      "authors": [
-        "Haoyu Xi",
-        "Mingao Tan",
-        "Xinming Zhang",
-        "Siwei Cheng",
-        "Shanze Wang",
-        "Yin Gu",
-        "Xiaoyu Shen",
-        "Wei Zhang"
-      ],
-      "score": 36,
-      "reasons": [
-        "keywords: cross-embodiment",
-        "physical-robot evidence"
       ]
     },
     {
