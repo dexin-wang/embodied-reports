@@ -80,6 +80,84 @@
     ]
   },
   {
+    "id": "rokae-xcoreplugin-client-v1-0-2-7-54dd3b6",
+    "title": "ROKAE xCorePlugin Client v1.0.2.7",
+    "organization": "珞石机器人 / ROKAE Robotics",
+    "organizationKind": "Company",
+    "date": "2026-08-03",
+    "year": 2026,
+    "summary": "ROKAE xCorePlugin Client v1.0.2.7 是珞石机器人面向 xCore 客户端 HMI 的插件开发包，用于在实体工业机器人和协作机器人控制环境中增加工艺界面、状态栏、辅助编程、自定义 RL 指令及控制器通信能力。它属于机器人控制与集成基础设施，而不是 VLA 或具身基础模型。该版本重点处理点位、变量和工程接口的可靠性：修复 moveTo 点位值传递错误、变量接口取值失败和工程接口缺陷，同时更新完整演示程序的说明与布局。项目提供 C++ 头文件、Qt 示例和跨 Windows/Linux 目标的预编译库分发方式，构成 ROKAE+ 客户端与控制器插件生态的一部分。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是面向 ROKAE xCore 机器人客户端 HMI 的 C++ 二次开发 SDK，允许开发者在不修改 HMI 宿主核心的情况下扩展机器人操作与工艺界面。",
+        "SDK公开提供 PluginBase、InterfaceManager、RL 指令、事件系统和日志等接口，并定义 init、afterInit、render、idle、detach 五阶段插件生命周期。",
+        "客户端插件能够注册主界面、底部状态栏、右侧扩展窗体、辅助编程指令组及自定义 RL 指令，并可与运行于机器人控制器端的插件通信。",
+        "仓库包含对外头文件、完整 xplugindemo、精简示例和变更记录；Windows x86_64 与 Linux aarch64 的预编译 xplugin 动态库通过 GitHub Releases 分发。",
+        "v1.0.2.7 修正了 moveTo 点位值传递、变量接口无法取得值以及工程接口缺陷，并重新调整演示应用的功能描述和样式结构。",
+        "插件需编译为 DLL 或 SO，并依据工艺包 config.json 进行打包后导入 xCore 客户端；客户端 SDK、控制器 API 和目标 xCore/HMI 版本必须保持兼容。"
+      ],
+      "capabilities": [
+        "扩展 ROKAE xCore 客户端的工艺包界面、底部状态栏和右侧功能窗体",
+        "集成辅助编程功能并注册自定义 RL 机器人指令",
+        "通过服务接口与 xCore 控制器插件交换数据",
+        "读取工程变量、处理机器人点位数据并调用 moveTo 等运动相关接口",
+        "将编译生成的 DLL 或 SO 插件打包并导入 xCore 客户端"
+      ],
+      "metrics": [
+        {
+          "label": "目标 xCore 版本",
+          "note": "项目 README 报告的最低兼容版本。",
+          "value": ">= v3.2.2"
+        },
+        {
+          "label": "客户端 SDK 版本",
+          "note": "该候选发布对应的开发包版本。",
+          "value": "v1.0.2.7"
+        },
+        {
+          "label": "编程与 GUI 基线",
+          "note": "官方仓库列出的开发环境要求。",
+          "value": "C++11；Qt >= 5.12"
+        },
+        {
+          "label": "支持的预编译平台",
+          "note": "Release 库对应的两类目标环境。",
+          "value": "Windows 10/11 x86_64；Linux aarch64"
+        },
+        {
+          "label": "本次发布修订项",
+          "note": "Release 页面逐项报告了 3 个缺陷修复和 1 个演示应用调整。",
+          "value": "4 项"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/RokaeRobot/xCorePlugin-client/releases/tag/v1.0.2.7"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.rokae.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/RokaeRobot/xCorePlugin-client/releases/tag/v1.0.2.7"
+      }
+    ]
+  },
+  {
     "id": "lerobot-v0-6-1-8bbdfe1",
     "title": "LeRobot v0.6.1",
     "organization": "Hugging Face",
@@ -322,6 +400,84 @@
       {
         "label": "Report",
         "url": "https://news.mit.edu/2026/making-robots-faster-helping-them-think-ahead-0728"
+      }
+    ]
+  },
+  {
+    "id": "flexiv-rdk-v1-9-3-2ff8c8c",
+    "title": "Flexiv RDK v1.9.3",
+    "organization": "非夕科技 / Flexiv",
+    "organizationKind": "Company",
+    "date": "2026-07-28",
+    "year": 2026,
+    "summary": "Flexiv RDK v1.9.3 是非夕科技面向其实体自适应机器人的开发与控制软件版本。RDK 在机器人软件平台中连接应用程序和机器人控制层，同时暴露低层实时接口与高层非实时接口，可用于执行器控制、状态与传感器数据读取以及复杂计划执行。本次版本的核心功能增量是 NrtCartesianCmd 与 Robot::SendMultiCartesianMotionForce()：开发者能够在 NRT_SUPER_PRIMITIVE 模式下离散提交笛卡尔多路点运动和力控制命令。版本同时扩展至 Rizon 10R，并要求 Flexiv software package v3.11.2。工程稳定性改进覆盖事件日志、模型 API 和调度器 API 的线程安全，以及通过提高心跳发送频率减少错误连接丢失判定。项目提供 C++、Python 接口和示例，覆盖 Linux、macOS、Windows、QNX，并可通过配套 ROS 1/ROS 2 包进入机器人应用栈。官方页面报告实时传感器与控制数据收发频率为 1 kHz；公开仓库采用 Apache-2.0 许可证。",
+    "tags": [
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Flexiv RDK 是非夕机器人软件平台的机器人开发工具包，面向真实非夕机器人提供低层实时控制和高层非实时控制 API，而不是机器人硬件产品页。",
+        "v1.9.3 新增 NrtCartesianCmd 数据结构，以及 Robot::SendMultiCartesianMotionForce()，可在 NRT_SUPER_PRIMITIVE 模式下离散发送笛卡尔空间的多路点运动指令、力指令或两者组合。",
+        "该版本新增对 Rizon 10R 机器人型号的支持，并明确要求配合 Flexiv software package v3.11.2。",
+        "并发可靠性方面，v1.9.3 将 Robot::event_log()、rdk::Model 的全部函数和 rdk::Scheduler 的全部函数改为线程安全。",
+        "连接可靠性方面，该版本通过提高心跳发送频率，修复错误判定连接丢失的问题；Robot::Stop() 在机器人已处于故障状态时会直接返回。",
+        "RDK 同时提供 C++ 与 Python 接口；项目文档列出 Linux、macOS、Windows 和 QNX 环境，并提供基于 RDK 的 ROS 1 与 ROS 2 集成包。"
+      ],
+      "capabilities": [
+        "通过低层实时与高层非实时 API 开发、部署面向非夕实体机器人的定制应用",
+        "在 NRT_SUPER_PRIMITIVE 模式下离散发送笛卡尔多路点运动与力指令",
+        "直接控制机器人执行器，或调用高层计划完成复杂机器人任务",
+        "以 1 kHz 收发传感器测量和控制数据，支持实时数据采集及精密控制",
+        "通过 C++、Python 以及配套 ROS 1/ROS 2 软件包集成机器人应用"
+      ],
+      "metrics": [
+        {
+          "label": "实时数据与控制频率",
+          "note": "官方项目页报告可实时接收和发送传感器测量及控制数据。",
+          "value": "1 kHz"
+        },
+        {
+          "label": "v1.9.3 配套软件版本",
+          "note": "官方 GitHub release 的兼容性要求。",
+          "value": "Flexiv software package v3.11.2"
+        },
+        {
+          "label": "支持的编程语言",
+          "note": "官方项目页和代码仓库明确列出的接口语言。",
+          "value": "2 种：C++、Python"
+        },
+        {
+          "label": "支持的操作系统",
+          "note": "v1.9.3 代码仓库文档列出 Linux、macOS、Windows 和 QNX。",
+          "value": "4 类"
+        },
+        {
+          "label": "新增机器人型号支持",
+          "note": "v1.9.3 release 明确新增的型号。",
+          "value": "Rizon 10R"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.flexiv.com/software/rdk"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.flexiv.com"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.3"
       }
     ]
   },
@@ -1553,6 +1709,87 @@
     ]
   },
   {
+    "id": "flexiv-rdk-v2-1-2367aa3",
+    "title": "Flexiv RDK v2.1",
+    "organization": "非夕科技 / Flexiv",
+    "organizationKind": "Company",
+    "date": "2026-06-18",
+    "year": 2026,
+    "summary": "Flexiv RDK v2.1 是非夕科技面向 Enlight 系列实体机器人的机器人开发与控制软件版本，于 2026 年 6 月 18 日正式发布。它在已有实时和非实时 RDK 控制体系上增加同步运动模式、多关节组数据与控制抽象、多路点笛卡尔运动力控制，以及带参数和结果结构的约束逆运动学求解器。版本将机器人动作从普通状态数据中独立出来，可按关节组读取关节空间和笛卡尔空间动作，并把模型、工具、安全和夹爪接口扩展到多关节组系统，从而适配单臂、双臂和外部轴组合。通信层由 Fast DDS 切换到 Zenoh，安装脚本、示例、单元测试和 API 文档亦同步更新。官方文档表明 RDK 的实时模式以 1 kHz 交换控制命令和机器人状态，通信延迟低于 1 ms；项目提供 C++ 和 Python 接口，并覆盖 Linux、macOS、Windows 与 QNX。v2.1 同时公开记录了 Enlight-LL 双臂系统第二机械臂在部分非实时关节控制和笛卡尔零空间姿态控制模式下的已知问题，修复版本需按请求取得。",
+    "tags": [
+      "Robot systems",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Whole-body control",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Flexiv RDK 是面向 Flexiv 实体机器人的软件开发工具包，提供低层实时控制与高层非实时控制 API；它不是机器人本体、执行器或其他硬件产品页面。",
+        "v2.1 于 2026 年 6 月 18 日由 Flexiv 官方 GitHub 组织发布，兼容 Flexiv software package v3E.1，且仅适用于 Flexiv Enlight 系列。",
+        "版本新增 SyncMotionMode，同步控制可覆盖由 JointGroup 表示的单臂、多臂和外部轴；RobotInfo 同时提供 all_groups 与 single_arm_groups 映射。",
+        "新增 RobotActions 与 Robot::actions()，可按关节组取得当前关节空间和笛卡尔空间动作数据；期望关节力矩字段从 RobotStates::tau_des 迁移为 RobotActions::tau_d。",
+        "新增 NrtCartesianMultiWaypointCmd 和 Robot::SendCartesianMotionForceMultiWaypoint()，用于非实时、多路点的笛尔运动与力控制。",
+        "新增 IKParams、IKResult 和 Model::SolveConstrainedIK()；Model、Tool、Safety 与 Gripper 接口也被改造为支持多个关节组。",
+        "底层通信中间件由 Fast DDS 及其依赖替换为 Zenoh；同时更新了 C++、Python 示例、单元测试、文档和安装脚本。"
+      ],
+      "capabilities": [
+        "通过 C++ 与 Python API 对 Flexiv Enlight 系列实体机器人进行实时及非实时编程控制",
+        "以 SyncMotionMode 实现同步运动控制，并按关节组读取当前关节空间与笛卡尔空间动作数据",
+        "通过 SendCartesianMotionForceMultiWaypoint 执行多路点笛卡尔运动与力控制",
+        "通过 Model::SolveConstrainedIK 求解带约束逆运动学",
+        "使用多关节组接口统一操作单臂、双臂及外部轴，并集成工具、夹爪、安全和模型接口"
+      ],
+      "metrics": [
+        {
+          "label": "实时命令与状态频率",
+          "note": "官方 RDK 文档报告，实时控制模式下用户命令和机器人状态以该频率交换。",
+          "value": "1 kHz"
+        },
+        {
+          "label": "实时通信延迟",
+          "note": "官方控制模式文档报告的实时控制通信延迟。",
+          "value": "低于 1 ms"
+        },
+        {
+          "label": "v2.1 机器人软件兼容性",
+          "note": "该版本仅面向 Flexiv Enlight 系列。",
+          "value": "Flexiv software package v3E.1"
+        },
+        {
+          "label": "支持的编程语言",
+          "note": "官方项目提供原生开发接口。",
+          "value": "C++、Python"
+        },
+        {
+          "label": "支持的桌面/实时操作系统",
+          "note": "官方仓库列出的平台为 Linux、macOS、Windows 和 QNX。",
+          "value": "4 类操作系统"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v2.1"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.flexiv.com/about"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v2.1"
+      }
+    ]
+  },
+  {
     "id": "object-centric-residual-rl-for-zero-shot-sim-to--f1def0f",
     "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
     "organization": "微软亚洲研究院（东京） / Microsoft Research Asia – Tokyo",
@@ -1712,6 +1949,85 @@
       {
         "label": "Report",
         "url": "https://qwen.ai/blog?id=qwen-robotmanip"
+      }
+    ]
+  },
+  {
+    "id": "flexiv-rdk-v1-9-2-211dc03",
+    "title": "Flexiv RDK v1.9.2",
+    "organization": "非夕科技 / Flexiv Ltd.",
+    "organizationKind": "Company",
+    "date": "2026-06-12",
+    "year": 2026,
+    "summary": "Flexiv RDK v1.9.2 是非夕科技面向其自适应机器人平台发布的一次机器人控制与数据接口更新。RDK 本身连接开发者工作站与实体 Flexiv 机器人，提供低层实时控制、高层任务调用、状态反馈、夹爪及外围设备控制，以及运动学和动力学访问能力。v1.9.2 的核心变化是把“机器人实际测得的状态”和“机器人当前被指令执行的动作”在数据模型中明确拆分：新增 `RobotActions` 结构及 `Robot::actions()` API，并将期望关节力矩从 `RobotStates::tau_des` 迁移到 `RobotActions::tau_d`。配套示例可同时打印动作与状态，使控制器调试、轨迹记录、状态－动作数据采集和后续机器人学习数据管线能够使用语义更清晰的接口。项目支持 C++、Python 以及 Linux、macOS、Windows、QNX，并包含实时调度、时效监控、机器人描述和运动学动力学工具。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Flexiv RDK 是面向非夕实体机器人的软件开发套件，通过 C++ 和 Python API 提供低层实时控制与高层非实时操作能力，并非机器人本体或硬件规格页面。",
+        "v1.9.2 新增 `RobotActions` 数据结构，用于表示关节空间和笛卡尔空间中的机器人指令动作；当系统包含外部轴时，相关关节动作向量也会包含外部轴数据。",
+        "该版本新增 `Robot::actions()` 接口，使应用能够读取机器人当前执行或被指令执行的动作，而不再只能观察测量状态。",
+        "接口数据模型将原先位于 `RobotStates` 中的期望关节力矩 `tau_des` 迁移为 `RobotActions::tau_d`，明确区分测量状态与指令动作。",
+        "官方示例同步更新，可并列输出 robot actions 与 robot states，适合机器人轨迹记录、控制调试、行为数据采集以及状态－动作对齐。",
+        "RDK 同时覆盖关节力矩、关节位置、笛卡尔位姿等实时命令，以及计划、原语、数字 I/O、夹爪、工具和外围设备等非实时或设备级接口。",
+        "项目提供运动学与动力学运行时接口、机器人 URDF 与三维网格、实时调度器和控制时效监控，并支持多操作系统及 x86_64、arm64 平台。"
+      ],
+      "capabilities": [
+        "通过实时接口下发关节力矩、关节位置和笛卡尔位姿等低层控制命令",
+        "执行计划、原语、数字 I/O 和非实时运动命令等高层操作",
+        "读取机器人关节与笛卡尔空间的测量状态及当前指令动作",
+        "控制受支持的夹爪、末端工具和外围设备",
+        "运行时访问雅可比矩阵、质量矩阵、重力项和可达性等运动学与动力学数据"
+      ],
+      "metrics": [
+        {
+          "label": "实时控制频率",
+          "note": "官方文档报告，低层关节力矩、关节位置和笛卡尔位姿命令可按该频率执行。",
+          "value": "1 kHz"
+        },
+        {
+          "label": "实时状态反馈频率",
+          "note": "机器人在所有控制模式下均按官方报告频率返回状态数据。",
+          "value": "1 kHz"
+        },
+        {
+          "label": "机器人软件兼容版本",
+          "note": "v1.9.2 发布说明列出的对应 Flexiv software package。",
+          "value": "v3.11.1"
+        },
+        {
+          "label": "正式支持的操作系统",
+          "note": "该版本项目材料列出 Linux、macOS、Windows 和 QNX。",
+          "value": "4"
+        },
+        {
+          "label": "应用编程语言",
+          "note": "官方项目提供 C++ 与 Python 库和示例。",
+          "value": "2"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.2"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.flexiv.com"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.2"
       }
     ]
   },
@@ -3202,6 +3518,85 @@
     ]
   },
   {
+    "id": "flexiv-rdk-v1-9-1-c76d30f",
+    "title": "Flexiv RDK v1.9.1",
+    "organization": "非夕科技 / Flexiv",
+    "organizationKind": "Company",
+    "date": "2026-05-28",
+    "year": 2026,
+    "summary": "Flexiv RDK v1.9.1 是非夕科技面向其自适应实体机器人的官方开发套件版本。RDK 将低层实时控制、高层任务调用、机器人状态反馈、运动学与动力学查询，以及夹爪、工具和外部设备管理统一到 C++ 和 Python API 中。该版本的核心增量是在流式关节力矩接口中加入 `friction_comp_scale`，允许应用按需调整摩擦补偿，并新增 Python 3.14 支持。官方资料报告实时命令和状态反馈频率为 1 kHz，适合力控制、遥操作、双臂任务、外部感知闭环和定制自动化研究。项目具有独立官网、完整手册、API 文档和官方公开代码仓库，因此满足“有明确责任机构、专门软件页面且直接服务物理机器人”的收录标准。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Flexiv RDK 是非夕机器人官方的机器人开发套件，通过 API 为物理机器人提供低层实时控制和高层非实时操作能力，属于面向实体机器人的软件项目，而非机器人硬件或产品规格页。",
+        "v1.9.1 为 `Robot::StreamJointTorque()` 新增 `friction_comp_scale` 输入参数，使开发者能够调整流式关节力矩控制中的摩擦补偿比例。",
+        "该版本新增 Python 3.14 支持，同时保留 C++ 与 Python 两套开发接口；官方项目资料说明 RDK 可运行于 Linux、Windows、macOS 等平台，代码仓库还列出 QNX 支持。",
+        "实时接口能够以 1 kHz 下发关节力矩、关节位置和笛卡尔位姿等低层命令；机器人在不同控制模式下也以 1 kHz 返回状态数据，并由服务器监测实时命令是否按时到达。",
+        "非实时接口支持执行任务计划、基础技能、数字 I/O 和非实时运动命令；配套接口还覆盖夹爪、末端工具及受支持外部设备的控制与配置。",
+        "RDK 提供运行时运动学与动力学访问，包括雅可比矩阵、质量矩阵、重力项和可达性信息，并附带机器人 URDF、三维网格、示例程序以及 ROS 1/ROS 2 扩展包。",
+        "v1.9.1 明确兼容 Flexiv software package v3.11.1；官方文档同时说明实时控制和机器人动力学等完整能力需要 Professional RDK license。"
+      ],
+      "capabilities": [
+        "以 C++ 和 Python API 对非夕自适应机器人进行低层实时控制与高层非实时任务编程",
+        "以 1 kHz 流式发送关节力矩、关节位置和笛卡尔位姿等控制指令",
+        "以 1 kHz 获取机器人状态、传感器测量与控制反馈",
+        "控制受支持的夹爪、末端工具、数字 I/O 及外接设备",
+        "访问雅可比矩阵、质量矩阵、重力项和可达性等运动学与动力学数据"
+      ],
+      "metrics": [
+        {
+          "label": "实时控制与状态反馈频率",
+          "note": "官方项目页和功能文档报告，实时控制数据传输及机器人状态反馈均以该频率运行。",
+          "value": "1 kHz"
+        },
+        {
+          "label": "新增力矩控制参数",
+          "note": "v1.9.1 为 `Robot::StreamJointTorque()` 增加可调摩擦补偿比例参数。",
+          "value": "`friction_comp_scale`"
+        },
+        {
+          "label": "Python 版本支持",
+          "note": "v1.9.1 发布说明明确新增该解释器版本支持。",
+          "value": "Python 3.14"
+        },
+        {
+          "label": "机器人软件包兼容版本",
+          "note": "v1.9.1 发布说明列出的兼容 Flexiv software package 版本。",
+          "value": "v3.11.1"
+        },
+        {
+          "label": "非实时全环路延迟",
+          "note": "官方 Linux 安装文档对非实时运行环境报告的发送命令至接收反馈延迟范围。",
+          "value": "4–10 ms"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.flexiv.com/software/rdk"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.flexiv.cn/about"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.1"
+      }
+    ]
+  },
+  {
     "id": "accelerating-residual-reinforcement-learning-wit-1601e49",
     "title": "Accelerating Residual Reinforcement Learning with Uncertainty Estimation",
     "organization": "Robotics and AI Institute",
@@ -3283,6 +3678,82 @@
       {
         "label": "Evidence",
         "url": "https://x.com/lakshitadodeja/status/2034297446596026416?s=20"
+      }
+    ]
+  },
+  {
+    "id": "next-generation-intelligent-operation-platform-i-1eb9db8",
+    "title": "Next-Generation Intelligent Operation Platform (IOP)",
+    "organization": "极智嘉 / Geek+",
+    "organizationKind": "Company",
+    "date": "2026-05-22",
+    "year": 2026,
+    "summary": "Next-Generation Intelligent Operation Platform（IOP）是极智嘉面向智能仓储和机器人运营的新一代云原生软件平台。它连接仓库执行数据与机器人设备数据，提供运营效率分析、设备状态和故障分析、全天候异常告警、多来源数据整合及无代码可视化仪表盘。平台可部署于不足100台机器人规模的精益仓库，也可服务超过1,000台机器人的大型履约中心，并支持公有云、私有云和本地环境。其技术重点是通过BI、数据仓库和AI辅助分析改善实体机器人系统的运营决策与资源配置；官方提到的AI Agent自主学习和自主优化仍属于未来规划，不应计入当前能力。",
+    "tags": [
+      "Robot systems"
+    ],
+    "fields": [
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "IOP是极智嘉智能仓储软件套件的三个核心支柱之一，官方发布页明确将其定位为面向机器人仓库运营的软件平台，而非机器人硬件或产品规格页面。",
+        "平台采用云原生、多租户架构，提供统一的平台服务、弹性扩缩容和按需在线访问，并支持公有云、私有云及本地部署。",
+        "Operations Analytics模块汇总处理效率、工作站利用率、库存状态、拣选任务和补货任务等执行数据，用于调整订单释放、工作站分配及人员排班。",
+        "平台使用BI与数据仓库能力构建KPI和运营分析体系，可进行多维趋势与关联分析，以识别人员或机器人效率问题及仓库瓶颈。",
+        "Device Analytics模块覆盖机器人故障、警告、运行时间、里程、任务执行、充电活动和实时状态；Monitoring and Alerting模块通过持续数据采集和分析自动发现异常并发出告警。",
+        "仪表盘支持无代码拖放布局、图表与KPI组件、多来源数据接入，以及实时或定时数据更新；安全机制包括传输和存储加密、多因素认证、细粒度访问控制及持续审计。",
+        "官方将AI Agent的自主学习、决策与优化描述为后续集成方向，因此不把这些未来能力视为当前已实现功能。"
+      ],
+      "capabilities": [
+        "对货架、料箱、托盘及混合仓储场景进行实时运营分析",
+        "监控机器人故障、告警、运行时间、里程、任务执行、充电活动和设备状态",
+        "基于实时数据自动检测异常、生成告警并支持持续监控",
+        "通过可定制仪表盘整合数据库、API及外部数据服务，展示仓库KPI"
+      ],
+      "metrics": [
+        {
+          "label": "支持的机器人部署规模",
+          "note": "官方称平台可针对不同运营规模提供相应服务配置。",
+          "value": "少于100台至超过1,000台机器人"
+        },
+        {
+          "label": "监控运行时间",
+          "note": "Monitoring and Alerting模块持续监控关键基础设施和运营事件。",
+          "value": "24/7"
+        },
+        {
+          "label": "采用规模",
+          "note": "官方发布页称已有全球企业采用该解决方案，但未披露逐一可核验的客户清单。",
+          "value": "超过1,000家企业"
+        },
+        {
+          "label": "部署模式",
+          "note": "官方明确列出的可选部署方式。",
+          "value": "公有云、私有云和本地部署三种模式"
+        },
+        {
+          "label": "合规标准",
+          "note": "官方列出的安全与合规标准。",
+          "value": "MLPS 2.0、ISO 27001、SOC 2"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.geekplus.com/resources/robotics-blogs/geek-launches-next-generation-intelligent-operation-platform-iop"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.geekplus.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.geekplus.com/resources/robotics-blogs/geek-launches-next-generation-intelligent-operation-platform-iop"
       }
     ]
   },
@@ -3459,6 +3930,84 @@
     ]
   },
   {
+    "id": "flexiv-ros-2-jazzy-2-0-fe3a3c7",
+    "title": "Flexiv ROS 2 Jazzy 2.0",
+    "organization": "非夕科技 / Flexiv",
+    "organizationKind": "Company",
+    "date": "2026-05-20",
+    "year": 2026,
+    "summary": "Flexiv ROS 2 Jazzy 2.0 是非夕科技面向实体 Enlight 系列机器人的 ROS 2 驱动与控制栈版本。它把 Flexiv RDK API 封装为 ROS 2 软件包，支持关节控制、ros2_control、MoveIt 2 运动规划、机器人状态与 GPIO 通信以及夹爪操作。本次发行的核心是迁移到 RDK v2.0 和 Flexiv software package v4.0，统一采用 CycloneDDS，并将启动、构建和接口文档整理到 flexiv.launch.py 与 flexiv_moveit.launch.py 两条主要路径。发布时该 Jazzy 版本聚焦 EnlightL 单臂部署，同时删除旧 Rizon、双臂和 AICO 配置，以使控制栈与当时实际支持的机器人软件路径一致。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是面向实体非夕机器人的 ROS 2 控制与集成软件，而非机器人硬件产品页；官方仓库将其定义为 Flexiv RDK 的 ROS 2 集成，并实现机器人控制、状态反馈、运动规划和末端执行器接口。",
+        "Jazzy 2.0 将底层依赖升级至 Flexiv RDK v2.0，并要求搭配 Flexiv software package v4.0，用于 Enlight 系列机器人。",
+        "该版本将 CycloneDDS 的 rmw_cyclonedds_cpp 设为唯一支持的 ROS 2 中间件，删除 Fast DDS 支持及相关部署说明，同时在文档和 CI 工作流中明确配置要求。",
+        "启动入口统一为 flexiv.launch.py 与 flexiv_moveit.launch.py；前者加载机器人硬件、关节与机器人状态广播器及控制器，后者连接 MoveIt 2 的运动规划流程。",
+        "接口覆盖关节位置、速度和力矩状态，以及 TCP 位姿、TCP 速度、机器人综合状态和 GPIO；夹爪包还提供移动、直接力抓取和停止接口。",
+        "Jazzy 2.0 发布时将部署范围收敛到 EnlightL 单臂路径，移除了旧版 rizon.launch.py，以及双臂、AICO1、AICO2 的旧启动文件、控制器配置和说明，降低错误部署风险。"
+      ],
+      "capabilities": [
+        "通过 ROS 2 接口执行实时与非实时关节位置、速度及力矩控制",
+        "集成 ros2_control，加载机器人硬件、状态广播器和控制器",
+        "通过 MoveIt 2 与 RViz 完成机械臂运动规划和可视化操作",
+        "发布关节状态、笛卡尔位姿、TCP 速度及机器人综合状态，并提供 GPIO 读写接口",
+        "通过 flexiv_gripper 节点执行夹爪移动、直接力控制抓取与停止操作"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "官方 GitHub Release 页面标记的发布时间。",
+          "value": "2026-05-20 09:08"
+        },
+        {
+          "label": "ROS 2 版本",
+          "note": "该发行版明确兼容的 ROS 2 发行版。",
+          "value": "ROS 2 Jazzy"
+        },
+        {
+          "label": "RDK 依赖",
+          "note": "Jazzy 2.0 更新后的 Flexiv Robot Development Kit 版本。",
+          "value": "Flexiv RDK v2.0"
+        },
+        {
+          "label": "机器人软件包",
+          "note": "官方发布说明限定用于 Flexiv Enlight 系列。",
+          "value": "Flexiv software package v4.0"
+        },
+        {
+          "label": "ROS 2 中间件",
+          "note": "该版本移除 Fast DDS 后唯一支持的 RMW 实现。",
+          "value": "CycloneDDS（rmw_cyclonedds_cpp）"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/jazzy-v2.0"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.flexiv.cn/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/jazzy-v2.0"
+      }
+    ]
+  },
+  {
     "id": "expertgen-ae30a3c",
     "title": "ExpertGen",
     "organization": "Robotics and AI Institute",
@@ -3619,6 +4168,85 @@
       {
         "label": "Report",
         "url": "https://github.com/rerun-io/rerun/releases/tag/0.32.1"
+      }
+    ]
+  },
+  {
+    "id": "flexiv-ros-2-humble-1-9-1-47fd066",
+    "title": "Flexiv ROS 2 Humble 1.9.1",
+    "organization": "非夕科技 / Flexiv Robotics",
+    "organizationKind": "Company",
+    "date": "2026-05-05",
+    "year": 2026,
+    "summary": "Flexiv ROS 2 Humble 1.9.1 是非夕科技为 Flexiv 实体机器人维护的 ROS 2 控制与系统集成版本。项目将 Flexiv RDK 封装成 ROS 2 软件包，为机器人提供关节位置与力矩控制、ros2_control 硬件接入、自定义控制器和状态广播、MoveIt 2 运动规划以及末端夹爪控制。1.9.1 的具体增量集中在运行时集成可靠性：夹爪节点新增轻量级 RDK 实例选项和就绪状态发布器，bring-up 启动文件则修正了节点启动顺序。官方发布页同时给出 Flexiv 软件包 v3.11.1、RDK v1.9.1、双机器人 DRDK v1.2.1 和 ROS 2 Humble 的兼容组合。该项目具有明确的软件主体、实体机器人控制用途、官方专页和责任公司，因此符合索引条件。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是非夕科技面向实体 Flexiv 机器人的 ROS 2 软件集成项目，将 Flexiv RDK API 封装为 ROS 2 软件包；官方资料明确支持关节力矩和位置控制，并实现 ros2_control 与 MoveIt 2 集成。",
+        "Humble 1.9.1 是一个明确发布的软件版本，而非机器人本体或硬件产品页；官方 GitHub Release 显示其发布日期为 2026 年 5 月 5 日。",
+        "该版本为 flexiv_gripper 节点加入轻量级 RDK 实例选项，使夹爪节点可以采用更轻量的 RDK 连接方式运行，同时新增夹爪就绪状态发布器。",
+        "该版本修正 flexiv_bringup 启动文件中的节点启动顺序，涉及机器人硬件、控制器、状态广播器及相关节点的有序启动。",
+        "项目由多个 ROS 2 功能包组成，包括启动与运行配置、自定义控制器、夹爪控制、ros2_control 硬件接口、MoveIt 配置、自定义消息和测试节点。",
+        "官方文档说明其控制栈可以连接真实机器人，也可使用 ROS 2 模拟硬件接口进行无实体机器人测试；机器人状态广播器可发布关节空间和笛卡尔空间状态。",
+        "代码仓库采用 Apache-2.0 许可证公开发布；官方 GitHub 组织和非夕官网均明确将该项目归属于 Flexiv Robotics（非夕科技）。"
+      ],
+      "capabilities": [
+        "通过 ROS 2 接口对 Flexiv 实体机器人执行实时与非实时关节力矩、位置控制",
+        "利用 ros2_control 硬件接口、控制器和状态广播器接入真实机器人",
+        "通过 MoveIt 2 配置完成机械臂运动规划与执行",
+        "通过 Flexiv 夹爪动作服务器控制机器人末端夹爪，并发布夹爪就绪状态",
+        "使用模拟硬件接口在没有连接实体机器人时测试控制与启动流程"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "官方 GitHub Release 页面记录的 Humble 1.9.1 发布时间。",
+          "value": "2026-05-05"
+        },
+        {
+          "label": "Flexiv 软件包兼容版本",
+          "note": "该 Release 明确列出的兼容版本。",
+          "value": "v3.11.1"
+        },
+        {
+          "label": "Flexiv RDK 兼容版本",
+          "note": "该 Release 对单机器人开发套件的版本要求。",
+          "value": "v1.9.1"
+        },
+        {
+          "label": "Flexiv DRDK 兼容版本",
+          "note": "该 Release 对双机器人配置所使用 DRDK 的版本要求。",
+          "value": "v1.2.1"
+        },
+        {
+          "label": "ROS 2 发行版",
+          "note": "该发布分支明确面向的 ROS 2 版本。",
+          "value": "ROS 2 Humble"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/humble-v1.9.1"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.flexiv.com"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/humble-v1.9.1"
       }
     ]
   },
@@ -6035,6 +6663,88 @@
     ]
   },
   {
+    "id": "upgraded-robot-management-system-rms-2fb0c25",
+    "title": "Upgraded Robot Management System (RMS)",
+    "organization": "极智嘉 / Geek+",
+    "organizationKind": "Company",
+    "date": "2026-02-12",
+    "year": 2026,
+    "summary": "Upgraded Robot Management System（RMS）是极智嘉面向仓储物理机器人集群发布的软件平台升级。其技术重点不是单台机器人硬件，而是从业务订单到机器人执行的系统级编排：利用实时数据动态分配任务和协调车队，通过全局与全向路径规划管理场内交通，并以实时三维界面呈现机器人、任务和设施状态。升级还覆盖企业权限、安全、接口与部署运维能力，使 RMS 能够作为上层仓储业务系统和底层机器人执行系统之间的统一管理层。官方页面报告了上述能力类型，但没有公开可可靠引用的吞吐率、成功率、时延或相对提升百分比，因此不应为该项目补造量化性能结论。",
+    "tags": [
+      "Robot systems",
+      "Whole-body control",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Whole-body control",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Geek+ 将该项目明确描述为 Robot Management System（机器人管理系统）的重大升级，页面主体是用于物理仓储机器人集群的调度、规划、监控和运维软件，而不是机器人本体或硬件规格。",
+        "升级版 RMS 采用数据驱动的动态车队调度，将订单、库存、机器人状态及现场运行数据用于实时任务分配和资源协调，以适应波峰、布局变化和多业务流程。",
+        "系统提供全局路径规划与全向路径规划：前者从场地整体层面协调路线和交通，后者面向可多方向运动的机器人生成路径，从而提升复杂环境中的通行灵活性。",
+        "官方材料强调实时 3D 监控，可在三维场景中呈现机器人及设施运行状态，帮助用户识别拥堵、异常和任务执行情况，并支持更直接的现场运维。",
+        "该版本强化企业级安全与管理能力，包括用户和权限治理、数据及接口安全控制，并面向大型客户的信息系统和合规要求。",
+        "RMS 被定位为连接仓储业务系统与机器人执行层的软件平台，可统一管理机器人任务、交通和运行状态，并支持不同业务场景的配置与扩展。"
+      ],
+      "capabilities": [
+        "我会先核验候选页面是否为官方、发布日期与责任组织，再从官方技术材料中确认它是否以机器人软件为主体，并提取可复核的功能和指标。报告只保留来源能够直接支持的内容。掌握相关场景下大规模异构机器人集群管理，包括任务分配、交通协调、路径规划与运行监控。",
+        "能够依据实时订单、库存与设备状态进行数据驱动的动态调度，并按业务变化调整机器人任务。",
+        "支持全局及全向路径规划，用于复杂仓储环境中的路线计算、避障和拥堵管理。",
+        "提供实时三维可视化监控，使运维人员查看机器人位置、状态、任务和场内交通。",
+        "支持企业级系统集成、权限与安全控制，以及面向部署和运维的配置管理。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "候选所给日期可由 Geek+ 官方博客页面确认。",
+          "value": "2026-02-12"
+        },
+        {
+          "label": "路径规划范围",
+          "note": "官方明确报告的规划能力类型；页面未提供可靠的百分比提升数据。",
+          "value": "全局路径规划与全向路径规划"
+        },
+        {
+          "label": "监控呈现",
+          "note": "官方明确说明为实时可视化能力，但未给出刷新率或延迟数值。",
+          "value": "实时 3D 监控"
+        },
+        {
+          "label": "调度方式",
+          "note": "官方报告的具体实现能力，未披露吞吐量或效率提升百分比。",
+          "value": "数据驱动的动态车队调度"
+        },
+        {
+          "label": "安全级别",
+          "note": "官方称其为 enterprise-grade security controls；未提供可核验的认证编号或量化安全指标。",
+          "value": "企业级安全控制"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.geekplus.com/resources/robotics-blogs/geek-rms-major-upgrade-redefine-flexibility-safety-and-ease-of-use"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.geekplus.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.geekplus.com/resources/robotics-blogs/geek-rms-major-upgrade-redefine-flexibility-safety-and-ease-of-use"
+      }
+    ]
+  },
+  {
     "id": "the-real-world-learning-loop-c472922",
     "title": "The Real-World Learning Loop",
     "organization": "Sereact",
@@ -7165,6 +7875,84 @@
     ]
   },
   {
+    "id": "agile-one-robotic-foundation-model-and-layered-a-bc94972",
+    "title": "Agile ONE Robotic Foundation Model and Layered AI System",
+    "organization": "Agile Robots SE",
+    "organizationKind": "Company",
+    "date": "2025-11-19",
+    "year": 2025,
+    "summary": "Agile Robots 于2025年公开了驱动 Agile ONE 及其他工业机器人的 Robotic Foundation Model 与分层AI系统。模型以真实生产数据、仿真合成数据、机器人遥操作和人类示范数据为训练基础，并采用模仿学习从示范中端到端获得特定机器人行为。其分层架构分别处理高层战略推理与任务规划、需要低延迟的快速响应，以及依赖力觉和触觉反馈的精细运动控制。官方还披露了一个实体双臂机器人服务器维护案例：操作者通过自然语言下达指令后，H10-W 能自主前往机柜、识别硬盘槽位、取出已有硬盘并精确插入替换设备；该流程被描述为几乎完全依靠具备零样本能力的基础模型执行。训练和数据处理使用由 Deutsche Telekom 与 NVIDIA 提供的 Industrial AI Cloud，包括可扩展GPU集群、高速存储、网络连接和合成数据生成能力。虽然该模型没有公开参数规模、标准化基准成绩、成功率、代码或权重，但官方专门页面提供了足够证据，表明它是已在物理机器人上实施的软件系统，而不是仅附带于硬件规格中的未来AI设想。",
+    "tags": [
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Humanoid intelligence",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Agile Robots 在2025年11月6日发布了专门介绍其机器人基础模型及训练基础设施的官方技术文章，并在2025年11月19日的 Agile ONE 官方发布中进一步公开分层AI系统，因此证据不限于人形机器人产品规格页。",
+        "Robotic Foundation Model 的训练数据由三类来源组成：真实工业流程数据、仿真生成的合成数据，以及数据农场采集的人类示范和机器人遥操作数据。",
+        "训练方法包含模仿学习：系统直接从示范中端到端学习特定行为，以减少传统机器人任务所需的复杂显式编程。",
+        "分层AI架构按时间尺度和控制抽象划分为战略推理与任务规划、快速响应、精细运动控制三个层级，面向同时需要认知规划、实时反应和触觉精细操作的工业任务。",
+        "官方披露其双臂机器人 H10-W 可接收自然语言服务器维护指令，自主移动到机柜、识别硬盘槽位、触觉敏感地取出硬盘，并将指定存储设备精确插入空槽。",
+        "该服务器维护流程被描述为几乎完全依靠具备零样本能力的基础模型运行，机器人能够自主检测空槽并继续执行硬盘更换任务。",
+        "模型训练与数据处理依托 Deutsche Telekom 和 NVIDIA 的 Industrial AI Cloud，使用可扩展GPU集群、存储和高速网络，并利用该基础设施生成合成训练数据。"
+      ],
+      "capabilities": [
+        "基于自然语言指令驱动机器人完成工业任务",
+        "以模仿学习从示范数据端到端学习特定机器人行为",
+        "结合真实工业数据、仿真数据和数据农场采集的人类数据训练机器人基础模型",
+        "通过分层架构执行战略推理与任务规划、快速响应和精细运动控制",
+        "在服务器维护演示中自主定位硬盘槽位、取出硬盘并精确插入替换设备"
+      ],
+      "metrics": [
+        {
+          "label": "分层AI架构层级",
+          "note": "官方列出的层级分别是战略推理与任务规划、快速响应、精细运动控制。",
+          "value": "3个层级"
+        },
+        {
+          "label": "训练数据来源类别",
+          "note": "包括真实工业数据、仿真数据，以及通过数据农场和机器人遥操作获得的人类数据。",
+          "value": "3类"
+        },
+        {
+          "label": "服务器维护演示的模型依赖程度",
+          "note": "官方称整个流程几乎完全基于具备零样本能力的基础模型运行，未公布成功率或试验次数。",
+          "value": "几乎完全由基础模型执行"
+        },
+        {
+          "label": "已报告的零样本任务结果",
+          "note": "H10-W 根据自然语言指令自主到达服务器机架、识别硬盘槽位、移除硬盘并将适当的存储设备插入空槽。",
+          "value": "完成端到端硬盘更换演示"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.agile-robots.com/en/news/detail/industrial-ai-cloud-the-cloud-infrastructure-behind-our-foundation-model/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.agile-robots.com/en/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.agile-robots.com/en/news/detail/agile-robots-launches-humanoid-robot-for-industry-agile-one/"
+      }
+    ]
+  },
+  {
     "id": "act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2",
     "title": "ACT-1: A Robot Foundation Model Trained on Zero Robot Data",
     "organization": "Sunday Robotics",
@@ -7807,6 +8595,84 @@
     ]
   },
   {
+    "id": "nebula-platform-2-0-9cdb171",
+    "title": "Nebula Platform 2.0",
+    "organization": "仙工智能 / SEER Robotics",
+    "organizationKind": "Company",
+    "date": "2025-10-30",
+    "year": 2025,
+    "summary": "Nebula Platform 2.0 是仙工智能于 2025 年 10 月正式发布升级的一站式工业机器人获取、配置与仿真平台。其核心不只是展示机器人目录，而是把实体机器人的选型、功能与外观配置、实时三维预览、环境数字化、运行验证和交付管理整合进同一软件流程。2.0 的主要技术增量是智能仿真：平台可快速扫描真实工厂，采用高保真 3D Gaussian reconstruction 重建环境，并在数字世界中预演机器人和工厂流程。既有 Nebula 材料还显示，该平台聚合超过 1,000 款搭载 SRC 控制体系的机器人，并提供 300 多款即插即用配件以及导航、感知、避障和载具识别等配置选项。其技术定位更接近面向实体机器人部署的配置与数字验证基础设施，而不是 VLA、通用机器人策略或独立世界模型。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Nebula Platform 2.0 是仙工智能面向实体工业机器人的一站式软件平台，覆盖机器人选型、可视化配置、智能仿真和配件商城，不是单纯的机器人硬件或产品规格页面。([seer-robotics.ai](https://seer-robotics.ai/media/287))",
+        "平台支持按照功能设备、可选参数和外观定制机器人，并通过实时三维渲染提供“所见即所得”的配置结果。([seer-robotics.ai](https://seer-robotics.ai/media/287))",
+        "2.0 版本加入智能仿真流程：快速扫描工厂环境，利用高保真 3D Gaussian reconstruction 建立数字场景，再在虚拟环境中预演工厂运行。([seer-robotics.ai](https://seer-robotics.ai/media/287))",
+        "平台面向多类实体机器人，包括轮式人形机器人、多足机器人、智能叉车、顶升机器人、料箱机器人、清洁机器人、机器人底盘和全地形机器人。([seer-robotics.ai](https://seer-robotics.ai/zh/media/269))",
+        "平台将传统的项目制机器人定制转化为标准化选型与模块化配置，并支持从选配、定制到交付的进度可视化和全流程跟踪。([seer-robotics.ai](https://seer-robotics.ai/media/287))",
+        "其配置生态可组合激光导航、托盘识别、3D 避障、3D 导航和云台监测等能力，并允许配置货叉宽度、颜色及标识等项目。([seer-robotics.ai](https://seer-robotics.ai/zh/media/269))"
+      ],
+      "capabilities": [
+        "面向仓储、制造和物流场景进行机器人选型与方案配置",
+        "通过功能设备、参数和外观选项实时生成机器人三维配置效果",
+        "快速扫描真实环境并以高保真 3D Gaussian 方法重建场景",
+        "在数字化工厂中仿真机器人运行、产线布局与工作流程",
+        "管理从机器人及配件选择到定制、交付跟踪和长期运行支持的流程"
+      ],
+      "metrics": [
+        {
+          "label": "机器人资源规模",
+          "note": "仙工智能在 2.0 发布前的官方 Nebula 专题材料中报告，平台覆盖轮式人形、机器狗、叉车、顶升及全地形机器人等类型。",
+          "value": "超过 1,000 款机器人"
+        },
+        {
+          "label": "可选配件规模",
+          "note": "官方材料以 SFL-CBD15-ZL 智能叉车为例，称用户可通过 Nebula 选择仙工智能的即插即用配件。",
+          "value": "300+ 款即插即用配件"
+        },
+        {
+          "label": "智能仿真流程",
+          "note": "2.0 官方发布将环境扫描、高保真 3D Gaussian 重建及数字工厂运行概括为三步流程。",
+          "value": "3 步完成数字工厂预演"
+        },
+        {
+          "label": "部署周期表述",
+          "note": "官方页面报告平台可将机器人选型、配置和组建机队压缩到以天计的周期，但没有公布更精确的统计值。",
+          "value": "数天内组建机器人机队"
+        },
+        {
+          "label": "发布现场平台实例",
+          "note": "CeMAT ASIA 2025 官方公告列出 P300、SPR-DTE10-JB、SFL-CDD10-OS 和 SFL-300L 四款 Nebula 平台工业机器人。",
+          "value": "4 款工业机器人实例"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://seer-robotics.ai/zh/media/287"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://seer-robotics.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://seer-robotics.ai/zh/media/287"
+      }
+    ]
+  },
+  {
     "id": "intrinsic-vision-model-a823cb6",
     "title": "Intrinsic Vision Model",
     "organization": "Intrinsic",
@@ -8220,6 +9086,85 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/agilityrobotics_digits-next-steps-activity-7381065415495622656-bjY2"
+      }
+    ]
+  },
+  {
+    "id": "rig3r-learning-3d-perception-for-autonomous-vehi-f9ce172",
+    "title": "Rig3R: Learning 3D Perception for Autonomous Vehicles - Wayve",
+    "organization": "Wayve",
+    "organizationKind": "Company",
+    "date": "2025-10-01",
+    "year": 2025,
+    "summary": "Rig3R 是 Wayve 发布的 rig-aware 几何感知模型，针对自动驾驶车辆同步多相机系统中传统通用多视图模型忽略相机固定结构的问题。它把相机 ID、时间戳和 rig-relative raymap 作为可选条件注入多视图 transformer，同时通过元数据 dropout 学习在信息缺失时恢复相机分组及标定。模型在单次前向传播中联合预测稠密 pointmap、全局姿态 raymap 和 rig-relative raymap，可完成三维重建、相机姿态与自运动估计以及 rig discovery。官方与论文报告其在 Waymo Open、WayveScenes101 等真实驾驶评测上达到领先结果，相对传统和学习式基线取得 17–45% mAA 提升，并能泛化到训练中未见过的相机配置。",
+    "tags": [
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "fields": [
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Rig3R 是 Wayve 面向自动驾驶多相机系统开发的 transformer 几何感知模型，官方项目页明确将其用于车辆的世界结构和 ego-motion 估计，而非硬件产品。",
+        "模型采用共享 ViT-Large 图像编码器和第二个 ViT-Large 多视图融合解码器，在全部视角与时间步之间执行联合注意力。",
+        "输入可选携带相机 ID、时间戳和 rig-relative raymap；训练时独立随机丢弃这些元数据，使模型既能使用已知 rig 约束，也能在信息不完整时依靠图像内容推断结构。",
+        "模型设置 pointmap、pose raymap 和 rig raymap 三个预测头，分别输出逐像素三维点及置信度、全局坐标系下的相机射线与中心、rig 坐标系下的相机射线与中心。raymap 可统一编码相机内参与外参，并支持闭式恢复相机参数。",
+        "训练采用 pointmap、全局射线几何和 rig-centric 射线几何的多任务目标；数据覆盖室内、自动驾驶、合成及物体中心场景，并特别强调多相机 rig 数据和 Wayve 内部驾驶数据。",
+        "评测覆盖 Waymo Open、WayveScenes101 和不同规模的 Argoverse 2 rig。WayveScenes101 的相机配置在训练中未出现，因此用于检验跨 rig 的分布外泛化。",
+        "论文将其描述为首个可在学习式重建中利用 rig 约束、并可从完全无约束的无序图像中发现 rig 结构的方法；无需后处理、迭代优化或传统 bundle adjustment。"
+      ],
+      "capabilities": [
+        "从多相机、多时间步 RGB 图像中，在单次前向传播内完成稠密 3D 场景重建。",
+        "通过姿态 raymap 估计相机内参、外参及车辆自运动。",
+        "在提供相机 ID、时间戳或标定信息时利用多相机 rig 约束增强跨视角几何推理。",
+        "在标定或元数据缺失时，从无序图像中发现相机分组和 rig 标定结构。",
+        "适配单目输入以及包含 1、3、5、7 个相机的不同 rig 配置。"
+      ],
+      "metrics": [
+        {
+          "label": "相对基线提升",
+          "note": "官方页面和论文摘要报告：在真实驾驶数据集的 3D 重建、相机姿态估计及 rig discovery 任务上，相对传统及学习式方法的 mAA 提升范围。",
+          "value": "17–45% mAA"
+        },
+        {
+          "label": "评测 rig 规模",
+          "note": "Waymo Open 与 WayveScenes101 均采用五相机 rig。",
+          "value": "5 cameras"
+        },
+        {
+          "label": "场景序列规格",
+          "note": "两个主要评测基准的每个场景约含 200 个时间步，采样频率为 10 FPS。",
+          "value": "约 200 timesteps per scene at 10 FPS"
+        },
+        {
+          "label": "模型评测输入",
+          "note": "每个场景抽取两段完整五相机片段，两段之间约相隔两秒。",
+          "value": "2 × 24-frame clips per scene"
+        },
+        {
+          "label": "跨配置泛化",
+          "note": "论文在 Argoverse 2 验证集上通过相机子采样检验不同 rig 几何配置。",
+          "value": "1、3、5、7-camera rigs"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://wayve.ai/thinking/rig3r/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://wayve.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://wayve.ai/thinking/rig3r/"
       }
     ]
   },
@@ -12424,6 +13369,89 @@
     ]
   },
   {
+    "id": "stretch-mujoco-v0-5-release-announce-stretch-for-08b57c0",
+    "title": "Stretch MuJoCo v0.5 Release - Announce - Stretch Forum",
+    "organization": "Hello Robot",
+    "organizationKind": "Company",
+    "date": "2025-06-01",
+    "year": 2025,
+    "summary": "Stretch MuJoCo v0.5 是 Hello Robot 为 Stretch 3 移动操作机器人发布的高保真 MuJoCo 仿真栈。它模拟机器人的运动机构、彩色与深度相机、二维旋转激光雷达及控制接口，并提供 Python 和 ROS 2 集成，可用于位置控制、底盘速度控制、SLAM、Nav2、点云生成和网页遥操作。该版本重点缩小仿真与真实机器人之间的行为差异，对相机内参、深度范围、激光扫描顺序和运动质量进行了匹配。系统可实时运行，支持 Ubuntu、macOS 和 Windows，也能以无头模式部署在 Google Colab T4 或 CPU 实例中。其 RoboCasa 集成能够生成数百种厨房环境组合，同时保留导入自定义场景以及使用 MuJoCo 可变形物体、布料和程序化模型功能的能力。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是面向实体机器人 Stretch 3 的高保真 MuJoCo 软件仿真栈，而非机器人硬件或产品规格页面；目标是让针对仿真编写的软件更容易迁移到真实 Stretch 机器人。",
+        "v0.5 对相机内参、深度范围、激光扫描顺序和运动质量等仿真行为进行了表征与匹配，并使用 Stretch Web Teleop 等现有应用检查预期行为。",
+        "传感器仿真包括带标定内参和硬件渲染支持的彩色与深度相机，以及二维旋转激光雷达；ROS 2 集成能够生成点云。",
+        "控制接口同时提供 Python 与 ROS 2 库，支持机械臂、头部和夹爪的位置控制，以及移动底盘的速度控制，并可读取关节状态和相机图像。",
+        "环境系统可生成数百种基于 RoboCasa 的厨房布局、风格与任务组合，也允许用户加载自定义环境。",
+        "系统支持交互式可视化和无头执行，可在本地计算机、Google Colab T4 或仅 CPU 实例上运行；ROS 2 功能已覆盖激光雷达 SLAM、Nav2 和 Stretch Web Teleop。",
+        "高级 MuJoCo 接口开放可变形物体、程序化模型生成、SDF 碰撞和布料仿真等能力。"
+      ],
+      "capabilities": [
+        "在 MuJoCo 中实时仿真 Stretch 3 移动操作机器人",
+        "通过 Python 与 ROS 2 接口执行关节位置控制和移动底盘速度控制",
+        "输出带标定内参的彩色、深度相机数据以及二维旋转激光雷达扫描",
+        "生成数百种 RoboCasa 厨房风格环境组合，并支持导入自定义环境",
+        "以交互式可视化或无头模式运行，并连接 SLAM、Nav2、点云和网页遥操作应用"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "候选资料所列 2025-06-01 与官方论坛不一致；采用官方帖子显示的日期。",
+          "value": "2025-06-10"
+        },
+        {
+          "label": "桌面操作系统支持",
+          "note": "官方发布公告明确列出 Ubuntu、macOS 和 Windows。",
+          "value": "3 种"
+        },
+        {
+          "label": "仿真运行速度",
+          "note": "官方公告称 Stretch 3 可实时仿真，但未报告具体实时因子或帧率。",
+          "value": "实时"
+        },
+        {
+          "label": "RoboCasa 环境规模",
+          "note": "官方使用“100s of permutations”表述，没有给出更精确总数。",
+          "value": "数百种组合"
+        },
+        {
+          "label": "激光雷达维度",
+          "note": "仿真提供旋转式激光雷达扫描。",
+          "value": "2D"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://hello-robot.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344"
+      }
+    ]
+  },
+  {
     "id": "openvla-oft-d2d6db6",
     "title": "OpenVLA-OFT",
     "organization": "Stanford University",
@@ -12802,6 +13830,170 @@
       {
         "label": "Report",
         "url": "https://x-humanoid.com/m/news-view-198.html"
+      }
+    ]
+  },
+  {
+    "id": "mech-vision-mech-viz-2-1-2-162eeda",
+    "title": "Mech-Vision & Mech-Viz 2.1.2",
+    "organization": "梅卡曼德机器人 / Mech-Mind Robotics",
+    "organizationKind": "Company",
+    "date": "2025-05-16",
+    "year": 2025,
+    "summary": "Mech-Vision & Mech-Viz 2.1.2是梅卡曼德机器人面向工业实体机器人的3D视觉引导与运动规划软件套件。Mech-Vision承担图像和点云处理、目标识别、抓取点配置及视觉结果输出，Mech-Viz则将视觉结果、机器人模型、工具、工件和场景对象组织为可执行工作流，完成无碰撞路径规划、仿真验证、机器人通信和真实抓取执行。2.1.2重点加强了视觉结果与规划历史的联动调试、按视觉侧抓取点优先级规划、点云及模型测量、多工具动作配置、狭窄料箱进出路径生成和碰撞诊断。视觉侧还加入漂移自校正、点云预处理和操作历史记录，提升长期部署稳定性和现场问题复现能力。它是明确服务于物理机器人操作与部署的软件发布，满足项目页、责任组织和2025年后发布日期要求。([downloads.mech-mind.com](https://downloads.mech-mind.com/?tab=tab-suite&utm_source=openai))",
+    "tags": [
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Mech-Vision负责图像与点云处理并输出视觉结果，Mech-Viz利用这些结果动态生成机器人运动路径；官方手册明确将视觉处理、路径规划和机器人控制列为该软件套件的核心功能。([docs.mech-mind.net](https://docs.mech-mind.net/en/suite-software-manual/2.1.2/index.html))",
+        "Mech-Viz项目通过图形化工作流组织机器人、通信、视觉处理和路径规划配置，可先运行模拟机器人验证轨迹，再连接实体机器人执行抓取。([docs.mech-mind.net](https://docs.mech-mind.net/en/suite-software-manual/2.1.2/viz-quick-facts/getting-started.html?utm_source=openai))",
+        "2.1.2新增视觉结果可视化：在3D仿真空间显示工件与抓取点，按工件或抓取点筛选规划历史，并显示抓取点状态以定位规划失败原因。([docs.mech-mind.net](https://docs.mech-mind.net/en/suite-software-manual/2.1.2/viz-release-notes.html))",
+        "该版本新增3D测量模式，可直接测量场景模型和点云中的距离、角度及圆直径，用于核验场景位置和模型尺寸。([docs.mech-mind.net](https://docs.mech-mind.net/en/suite-software-manual/2.1.2/viz-release-notes.html))",
+        "Mech-Viz 2.1.2可保留Mech-Vision生成的抓取点数组排序，并按照视觉侧定义的抓取点优先级规划路径，不再重新生成抓取点数组。([docs.mech-mind.net](https://docs.mech-mind.net/en/suite-software-manual/2.1.2/viz-release-notes.html))",
+        "碰撞与狭窄料箱规划得到改进，包括更新碰撞检测逻辑、显示点云柱基准位置，以及根据工件实际尺寸自动生成进出料箱路径和计算避碰提升高度。([docs.mech-mind.net](https://docs.mech-mind.net/en/suite-software-manual/2.1.2/viz-release-notes.html))",
+        "Mech-Vision 2.1.2增加视觉系统漂移自校正、点云预处理和操作历史记录；点云预处理覆盖点过滤、点云合并和图像过滤，以清除干扰点并加快后续处理。([docs.mech-mind.net](https://docs.mech-mind.net/en/suite-software-manual/2.1.2/vision-release-notes.html?utm_source=openai))"
+      ],
+      "capabilities": [
+        "基于3D视觉结果生成机器人抓取与放置流程",
+        "在仿真环境中规划无碰撞机器人运动路径",
+        "通过标准接口或主控模式与实体机器人通信并执行任务",
+        "对点云、工件模型、抓取点和场景对象进行配置与调试",
+        "支持多工具动作、视觉识别和按抓取点优先级规划"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "官方软件下载中心列出的Mech-Vision & Mech-Viz 2.1.2发布日期。",
+          "value": "2025-05-16"
+        },
+        {
+          "label": "安装包大小",
+          "note": "官方软件下载中心报告的2.1.2安装包大小。",
+          "value": "3.21 GB"
+        },
+        {
+          "label": "升级兼容范围",
+          "note": "官方迁移与升级文档称2.0.0和2.1.0可直接升级至2.1.2；早于2.0.0的版本不能直接兼容。",
+          "value": "支持从2个既有版本直接升级：2.0.0、2.1.0"
+        },
+        {
+          "label": "方案结构限制",
+          "note": "一个方案可以包含多个Mech-Vision项目，但最多包含一个Mech-Viz路径规划项目。",
+          "value": "每个方案最多1个Mech-Viz项目"
+        },
+        {
+          "label": "3D测量类型",
+          "note": "2.1.2的3D仿真测量模式明确支持的测量对象。",
+          "value": "3类：距离、角度、圆直径"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://downloads.mech-mind.com/?tab=tab-suite"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.mech-mind.com/about/about-us.html"
+      },
+      {
+        "label": "Report",
+        "url": "https://downloads.mech-mind.com/?tab=tab-suite"
+      }
+    ]
+  },
+  {
+    "id": "jaka-lumi-embodied-intelligence-platform-9e01add",
+    "title": "JAKA Lumi Embodied Intelligence Platform",
+    "organization": "节卡机器人股份有限公司 / JAKA Robotics Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-05-15",
+    "year": 2025,
+    "summary": "JAKA Lumi是节卡机器人于2025年5月15日发布的轻量级具身智能训练平台，面向科研教育、商业零售、生物化学以及配送、巡检、分拣等场景。其核心价值不只是提供一台轮式单臂机器人，而是把多模态感知、数据采集、模型训练、本地推理、仿真验证和实体执行整合为统一工具链。平台原生兼容MuJoCo与NVIDIA Isaac Sim，通过开放API和SDK支持二次开发，并可连接灵巧手、电动夹爪等末端工具。JAKA RoboHub控制器可选配RTX 3050 GPU并在本地运行模型；激光雷达、3D视觉和超声波组成的感知系统则为建图、定位、避障和移动操作提供实体执行基础。官方没有发布标准化任务成功率或与其他具身平台的可复现实验对比，因此其现阶段最可靠的技术证据是已实现的开发接口、仿真兼容性、端到端工作流和公开的软件仓库，而不是模型性能排行榜。",
+    "tags": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "官方将JAKA Lumi定义为以“感知—训练—决策—执行”为核心的一站式具身智能训练平台，而非仅作为机器人本体销售；其软件工具链覆盖数据采集、模型训练和模型部署。([jaka.com](https://www.jaka.com/zh/newsDetail/599?utm_source=openai))",
+        "平台原生兼容MuJoCo和NVIDIA Isaac Sim等仿真环境，用于构建从仿真验证到实体部署的“虚实融合”流程，并支持AI算法迁移。([jaka.com](https://www.jaka.com/zh/newsDetail/599?utm_source=openai))",
+        "JAKA RoboHub控制器支持本地化模型推理，可选配RTX 3050 GPU，从而降低对云端算力和持续网络连接的依赖。([jaka.com](https://www.jaka.com/zh/newsDetail/599?utm_source=openai))",
+        "开发接口包括开放API、SDK以及TCP/IP和USB协议接口；官方产品页还将其描述为支持主流仿真驱动工作流的二次开发平台。([jaka.com](https://www.jaka.com/en/productDetails/JAKA%20Lumi?utm_source=openai))",
+        "软件与12自由度协同运动系统、升降模块、移动底盘和多模态传感器集成，可把感知、规划、移动和机械臂执行纳入同一训练与运行闭环。([jaka.com](https://www.jaka.com/zh/newsDetail/599?utm_source=openai))",
+        "感知栈结合底盘激光雷达、3D视觉和超声波避障，官方报告其可完成自主建图、自主归位以及在人流环境中的导航避障。([jaka.com](https://www.jaka.com/zh/newsDetail/599?utm_source=openai))",
+        "官方GitHub已公开JAKA_Lumi软件仓库，主要语言为Python，并标注Apache-2.0许可证。([github.com](https://github.com/JAKARobotics))"
+      ],
+      "capabilities": [
+        "提供覆盖数据采集、模型训练、本地推理和模型部署的一体化训练流程。",
+        "通过SDK、标准化API及TCP/IP、USB等接口支持机器人二次开发。",
+        "兼容MuJoCo和NVIDIA Isaac Sim，可执行仿真验证及算法向实体机器人的迁移。",
+        "融合激光雷达、3D视觉和超声波感知，实现自主建图、定位、避障及移动操作。",
+        "支持接入灵巧手、电动夹爪和柔性夹爪等末端执行器，开展抓取、分拣、配送等操作训练。"
+      ],
+      "metrics": [
+        {
+          "label": "开箱部署时间",
+          "note": "官方发布页报告的一体化系统部署时间。",
+          "value": "5分钟"
+        },
+        {
+          "label": "首发价格",
+          "note": "2025年5月15日中国市场公布的首发价格。",
+          "value": "人民币7.98万元"
+        },
+        {
+          "label": "系统自由度",
+          "note": "官方项目页及产品参数列出的协同运动系统自由度。",
+          "value": "12自由度"
+        },
+        {
+          "label": "机械臂负载",
+          "note": "单个六自由度机械臂的额定负载。",
+          "value": "2 kg"
+        },
+        {
+          "label": "仿真与部署结果",
+          "note": "官方报告平台可连接数据采集、仿真验证、模型训练、本地推理和实体部署，但未发布统一任务成功率基准。",
+          "value": "兼容MuJoCo与NVIDIA Isaac Sim，并支持从数据采集到模型部署的虚实融合闭环"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.jaka.com/zh/newsDetail/599"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.jaka.com/zh/about"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.jaka.com/zh/newsDetail/599"
       }
     ]
   },
@@ -13722,6 +14914,84 @@
     ]
   },
   {
+    "id": "dobot-6axis-ros2-v4-ec1bf63",
+    "title": "DOBOT 6Axis ROS2 V4",
+    "organization": "深圳市越疆科技股份有限公司 / SHENZHEN DOBOT CORP LTD",
+    "organizationKind": "Company",
+    "date": "2025-04-02",
+    "year": 2025,
+    "summary": "DOBOT 6Axis ROS2 V4 是越疆科技为其 V4 控制器六轴机械臂提供的 ROS 2 Humble 控制与开发栈。项目通过 DOBOT TCP/IP 协议连接实体控制器，把实时反馈接入标准 ROS 2 关节状态、TF、RViz 和 MoveIt 数据流，并将 MoveIt 生成的轨迹转换为 ServoJ 控制指令执行。除实体机器人控制外，仓库还集成 Gazebo 联合仿真、虚拟 MoveIt 演示、机器人 URDF/XACRO 描述、模型专用规划配置和基础运动示例，覆盖 CR、CRAF、E/ME6 与 Nova 系列。其技术价值主要在于为 DOBOT 商用机械臂提供完整、可修改的 ROS 2 驱动及规划接口，而不是提出新的通用具身模型或学习算法。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是面向实体 DOBOT 六轴机械臂的 ROS 2 软件开发套件，而非硬件产品页；驱动通过 Socket 和 DOBOT TCP/IP V4 协议连接机器人控制器。",
+        "软件栈包含实体机器人驱动、ROS 2 消息与服务定义、MoveIt 配置、RViz 可视化、Gazebo 仿真、运动示例和关节轨迹客户端。",
+        "实体控制链路将控制器反馈转换为 `/joint_states_robot`，再由中继节点提供 MoveIt、robot_state_publisher、TF 和 RViz 所需的关节状态。",
+        "MoveIt 规划轨迹通过 FollowJointTrajectory action 交给 `action_move_server`，后者逐路点调用 ServoJ，将轨迹发送至实体控制器。",
+        "精确点到点控制流程使用控制器端、基于标定 DH 参数的 InverseKin 计算目标关节角，再由 OMPL 在关节空间规划无碰路径；支持先在 RViz 中检查路径再执行。",
+        "项目同时提供纯虚拟 MoveIt 演示、Gazebo-MoveIt 联合仿真和实体机器人运行入口，并为 CR、CRAF、E/ME6 与 Nova 系列提供机器人描述和 MoveIt 配置。"
+      ],
+      "capabilities": [
+        "通过 TCP/IP 将 ROS 2 节点连接到实体 DOBOT 六轴机械臂，并发布实时关节状态与笛卡尔位姿反馈",
+        "使用 MoveIt 和 OMPL/CHOMP 对实体或虚拟机械臂进行运动规划、碰撞规避与轨迹执行",
+        "在 RViz 中显示机器人模型及实体硬件的实时状态",
+        "通过 Gazebo 与 MoveIt 联合运行物理仿真和规划控制",
+        "执行 MovJ、MovL、数字输出以及基于 FollowJointTrajectory/ServoJ 的关节轨迹控制"
+      ],
+      "metrics": [
+        {
+          "label": "实体反馈频率",
+          "note": "README 架构说明中，TCP 端口 30004 的关节状态反馈发布到 `/joint_states_robot`。",
+          "value": "10 Hz"
+        },
+        {
+          "label": "标定逆运动学目标精度",
+          "note": "项目说明 `send_pose_target.py` 使用控制器 InverseKin 和标定 DH 参数获得目标关节角。",
+          "value": "TCP accuracy < 0.05 mm"
+        },
+        {
+          "label": "当前软件版本",
+          "note": "官方仓库 README 的版本信息。",
+          "value": "V4.6.5"
+        },
+        {
+          "label": "运行环境",
+          "note": "官方快速入门列出的 ROS 发行版与操作系统。",
+          "value": "ROS 2 Humble on Ubuntu 22.04 LTS"
+        },
+        {
+          "label": "控制协议版本",
+          "note": "官方仓库 README 的协议版本信息。",
+          "value": "DOBOT TCP/IP V4.6.5"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.dobot.cn/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4"
+      }
+    ]
+  },
+  {
     "id": "a-vla-with-open-world-generalization-71d41c5",
     "title": "A VLA with Open-World Generalization",
     "organization": "Physical Intelligence",
@@ -13799,6 +15069,87 @@
       {
         "label": "Report",
         "url": "https://www.pi.website/blog/pi05"
+      }
+    ]
+  },
+  {
+    "id": "software-drop-april-18-2025-announce-stretch-for-89235b1",
+    "title": "Software drop - April 18, 2025 - Announce - Stretch Forum",
+    "organization": "Hello Robot Inc.",
+    "organizationKind": "Company",
+    "date": "2025-04-01",
+    "year": 2025,
+    "summary": "这是 Hello Robot 于 2025 年 4 月 18 日发布的 Stretch 软件栈综合更新，核心价值在于提高实体移动操作机器人远程部署和 ROS 2 运动控制的可靠性。更新为 WebRTC 远程操作界面加入基于 Firebase Realtime Database 的信令路径，并配套 Firebase Authentication 登录、机器人呼叫和占用状态管理，从而支持更可控的互联网远程操作。机器人控制侧修复了 ROS 2 航点样条轨迹跟踪和腕部俯仰 action server 完成判据，同时完善操作系统升级中的标定数据权限及参数迁移处理。它不是新的基础模型或学习策略，而是一组直接部署于 Stretch 实体机器人的系统软件、控制接口和运维可靠性更新。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation",
+      "Whole-body control"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation",
+      "Whole-body control"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "官方发布为 Stretch 软件栈的一次综合更新，而非机器人硬件产品公告；内容覆盖 Web 远程操作界面、ROS 2 驱动、操作系统升级工具以及底层 Python 库。",
+        "Web 界面继续使用 WebRTC 在浏览器与实体机器人之间传输摄像头、麦克风数据和移动控制指令，并新增基于 Google Firebase Realtime Database 的信令方法。",
+        "Firebase 信令旨在改善错误处理和机器人连接能力，并使长期互联网部署无需维护专用信令服务器；本地信令仍是默认选项。",
+        "Web 界面新增处于 alpha 阶段的登录页和主页：登录页使用 Firebase Authentication 对受邀用户进行认证，主页用于呼叫机器人并显示机器人是否已被其他操作员占用。",
+        "Stretch Install 修复操作系统升级时的文件权限和参数迁移问题，包括从 USB 恢复的标定数据缺少读取权限而导致复制及后续升级失败的情况。",
+        "ROS 2 驱动修复 trajectory mode 在开始跟踪航点样条后约一秒内失败的问题，并修正腕部俯仰关节完成条件导致 action server 错报目标失败的问题。",
+        "底层库更新还包括恢复底盘 effort 状态、避免轮段查询空值引发未处理异常、在停止轨迹后重置轮位以支持再次调用 follow_trajectory，以及若干 ROS 2 启动与操作规划配置修复。"
+      ],
+      "capabilities": [
+        "基于 WebRTC 的浏览器远程操控与音视频传输",
+        "基于 Firebase Realtime Database 的互联网信令和机器人连接管理",
+        "通过 ROS 2 轨迹模式跟踪关节航点样条",
+        "通过 ROS 2 action server 发起并监控各关节运动",
+        "Stretch 操作系统升级、标定参数迁移与底层 Python 控制库维护"
+      ],
+      "metrics": [
+        {
+          "label": "正式公告日期",
+          "note": "候选输入中的 2025-04-01 与官方页面不一致；采用官方论坛帖标注的日期。",
+          "value": "2025-04-18"
+        },
+        {
+          "label": "互联网信令部署",
+          "note": "官方报告 Firebase 方案无需为长期部署设置专用信令服务器。",
+          "value": "Eliminates the need for a dedicated signaling server"
+        },
+        {
+          "label": "多操作员状态管理",
+          "note": "官方报告主页会在机器人正由另一位操作员使用时显示占用状态。",
+          "value": "Robot shown as occupied when already in use"
+        },
+        {
+          "label": "ROS 2 轨迹修复",
+          "note": "官方报告修复前，硬件开始跟踪轨迹后会在最初一秒内失败。",
+          "value": "Failure within the first second fixed"
+        },
+        {
+          "label": "腕部动作监控",
+          "note": "官方报告修正腕部俯仰关节成功判据，避免 action server 错误报告运动目标失败。",
+          "value": "False action-goal failure reporting fixed"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://hello-robot.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332"
       }
     ]
   },
@@ -14129,6 +15480,85 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/figure-ai_figure-can-now-walk-naturally-like-a-human-activity-7310300795042742272-AVFL"
+      }
+    ]
+  },
+  {
+    "id": "dobotstudio-pro-4-6-0-0-43e367a",
+    "title": "DobotStudio Pro 4.6.0.0",
+    "organization": "深圳市越疆科技股份有限公司 / Shenzhen Dobot Corp Ltd",
+    "organizationKind": "Company",
+    "date": "2025-03-20",
+    "year": 2025,
+    "summary": "DobotStudio Pro 4.6.0.0 是越疆面向 CRA 系列协作机器人和 E6 推出的机器人编程、调试、安全配置及运行维护软件版本，并同步配套控制器和从站固件。其重点是提高实体机器人生产程序的恢复与诊断能力：报警暂停后可安全调整机器人并恢复原轨迹，调试器支持指定行启动、断点、单步和实时变量监控。版本还引入六轴力传感器插件，用于低启动力拖动、柔顺控制和力数据可视化；安全层则采用量化 TCP 与关节限制、参数校验和越界恢复模式。文件迁移、一键固件升级、TCP 远程控制、安全状态反馈、负载自动识别及单轴零点校准进一步覆盖了机器人部署、集成和维护流程。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "轨迹恢复功能在急停、命令错误等报警触发后将机器人置于暂停状态；操作员可点动或拖拽机器人至安全位置，恢复时机器人先低速返回停止位置，再继续执行原轨迹。",
+        "程序调试体系支持从指定行运行、从指定行单步执行、断点调试和程序变量实时监控，可用于定位脚本及 Blockly 程序中的运行问题。",
+        "新增六轴力传感器插件，提供力控拖动、按工具或用户坐标系约束拖动方向、柔顺控制参数实时调整，以及六方向力数据曲线显示。",
+        "安全配置由原有碰撞等级扩展为量化的安全限值，可分别设置正常模式和缩减模式下的 TCP 力、功率、速度、动量、停止时间和停止距离；同时支持关节软限位、安全校验和越界恢复模式。",
+        "文件迁移功能可在机器人之间批量复制工程文件、IO 配置、安全参数和运动参数，也可按文件类型分别导入导出，用于批量部署、备份和恢复。",
+        "TCP 二次开发得到增强：可通过 TCP 命令切换机器人控制模式，在远程 TCP 模式下通过 DobotStudio Pro 查看 IO 和变量，并在 30003 至 30006 实时反馈端口获取安全状态。",
+        "版本还加入控制器及从站固件一键升级、机器人授权使用期限、单关节零点校准、目标位姿可视化点动、Z 轴自动对齐和更多积木编程指令。"
+      ],
+      "capabilities": [
+        "面向 CRA 系列与 E6 实体机器人的编程、示教、调试和运行管理",
+        "在报警暂停后通过点动或拖拽调整机器人，并沿原轨迹恢复执行",
+        "利用六轴力传感器插件执行柔顺拖动、恒力打磨和恒力保压",
+        "配置 TCP 力、功率、速度、动量、停止时间、停止距离及关节软限位",
+        "通过 TCP 命令、实时反馈端口和 IO/变量监控支持机器人二次开发"
+      ],
+      "metrics": [
+        {
+          "label": "程序调试效率",
+          "note": "官方称系统优化后的任意行启动、断点和单步调试功能带来该提升。",
+          "value": "提升超过 25%"
+        },
+        {
+          "label": "断点与单步组合调试效率",
+          "note": "先以断点粗筛、再以单步精确定位时的官方报告结果。",
+          "value": "提升超过 40%"
+        },
+        {
+          "label": "力控拖动启动力",
+          "note": "采用高精度六轴力传感器进行拖动时可达到的启动力。",
+          "value": "最低 3 N"
+        },
+        {
+          "label": "批量配置迁移时间",
+          "note": "将工程文件及机器人参数复制到另一台机器人时的官方报告时间。",
+          "value": "少于 1 分钟"
+        },
+        {
+          "label": "自动负载识别",
+          "note": "优化后的识别过程约需 3 分钟，官方称识别误差可降至该水平。",
+          "value": "误差低于 10%"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.dobot-robots.com/insights/news/1079.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.dobot.cn/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.dobot-robots.com/insights/news/1079.html"
       }
     ]
   },
@@ -15674,6 +17104,83 @@
       {
         "label": "Report",
         "url": "https://www.anybotics.com/news/anybotics-launches-data-navigator/"
+      }
+    ]
+  },
+  {
+    "id": "geek-system-portal-39a9838",
+    "title": "Geek+ System Portal",
+    "organization": "极智嘉 / Geek+",
+    "organizationKind": "Company",
+    "date": "2025-01-22",
+    "year": 2025,
+    "summary": "Geek+ System Portal 是极智嘉于 2025 年 1 月 22 日发布的机器人智能仓统一运营门户。它并非新的机器人本体或仓储硬件，而是部署在实际移动机器人仓之上的软件入口，将 RMS 机器人管理、WES 仓储执行和 IOP 智能运营能力集中到统一界面。系统支持两种标准软件组合及单点登录，减少操作人员在不同业务系统之间切换和重复维护权限的需求。门户直接呈现订单完成进度、逾期或未完成订单分布、拣选产能、工作站可操作时间、机器人电量和告警等现场信息，并提供全场地图视图来监控机器人及仓储任务。用户还可利用 Portlet 组件和拖拽操作定制看板布局、功能、外观与主题。其技术意义主要在于为多层仓储机器人软件栈提供统一的人机操作与可观测性界面，而不是提出新的基础模型、学习策略或机器人控制算法。官方没有披露独立基准测试、性能增益或开源代码，因此相关能力应按已实现的系统功能评价。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C?utm_source=openai))",
+    "tags": [
+      "Robot systems"
+    ],
+    "fields": [
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "System Portal 是极智嘉智能仓软件套件的统一入口，集成机器人管理系统 RMS、仓储执行系统 WES 和智能运营平台 IOP；其正式发布日为 2025 年 1 月 22 日。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C?utm_source=openai))",
+        "该软件面向实际部署的机器人仓，而非机器人硬件产品页；它汇总拣货、上架、告警和机器人运行等现场数据，为仓储机器人系统提供一站式运营管控界面。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C?utm_source=openai))",
+        "门户支持 RMS+IOP 和 RMS+WES+IOP 两种标准系统部署组合，并通过单点登录统一用户访问及权限管理。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C?utm_source=openai))",
+        "运营视图覆盖已完成订单及进度、未完成订单时效分布、拣选产能趋势、工作站可操作时间占比和机器人电量趋势，可用于调整订单下发、任务优先级、派单策略及工作站启停。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C?utm_source=openai))",
+        "集成地图监控界面用于全场作业和机器人运行的监控与跟踪，使 Portal 与实际移动机器人系统形成明确的软件到物理系统连接。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C?utm_source=openai))",
+        "用户可选择 Portlet 组件、拖拽调整可视化内容位置，并定制门户功能、外观和窗口主题，以适配不同仓库的运营决策需求。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C?utm_source=openai))",
+        "极智嘉官方软件平台材料进一步将 System Portal 定义为端到端智能仓软件体系中的工具与可视化组件，该体系覆盖仓库设计、机器人集群控制和作业执行。([geekplus.com](https://www.geekplus.com/zh-cn/resources/product-brochures/%E6%9E%81%E6%99%BA%E5%98%89%E6%99%BA%E8%83%BD%E4%BB%93%E7%B3%BB%E7%BB%9F%E5%B9%B3%E5%8F%B0?utm_source=openai))"
+      ],
+      "capabilities": [
+        "统一接入并管理面向机器人仓的 RMS、WES 和 IOP 软件",
+        "通过单点登录在多个仓储机器人应用系统之间切换",
+        "监控订单、拣选产能、工作站状态、机器人电量及告警",
+        "在集成地图中跟踪全场作业与机器人运行状态",
+        "通过可拖拽 Portlet 组件配置运营仪表板、内容布局和界面主题"
+      ],
+      "metrics": [
+        {
+          "label": "标准部署方案",
+          "note": "官方发布页明确列出的 Portal 集成方式。",
+          "value": "2 种：RMS+IOP；RMS+WES+IOP"
+        },
+        {
+          "label": "身份验证",
+          "note": "一次登录 Portal 后，可从侧栏访问已集成的其他应用系统。",
+          "value": "支持单点登录（SSO）"
+        },
+        {
+          "label": "现场机器人可视化",
+          "note": "官方未报告刷新率、时延或规模数据，仅明确说明实现的功能。",
+          "value": "通过集成地图监控并跟踪全场作业及机器人运行情况"
+        },
+        {
+          "label": "运营指标覆盖",
+          "note": "官方页面明确列出的主要指标类别。",
+          "value": "订单进度、未完成订单时效、拣选产能、工作站可操作时间占比、机器人电量趋势"
+        },
+        {
+          "label": "仪表板配置",
+          "note": "官方未提供量化效率对比，因此记录其确切实现能力。",
+          "value": "支持 Portlet 选择、拖拽布局以及功能、外观和主题定制"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.geekplus.com/about-geek"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C"
       }
     ]
   },

@@ -1,6 +1,162 @@
 {
-  "generated_at": "2026-08-13T04:24:12.856957+00:00",
+  "generated_at": "2026-08-14T04:56:40.751495+00:00",
   "candidates": [
+    {
+      "title": "UniTexture: Cross-Task Universal Adversarial Textures for Vision-Language-Action Models",
+      "summary": "Vision-Language-Action (VLA) models have emerged as generalist robotic policies capable of following diverse language instructions and performing a wide range of manipulation tasks. However, their direct control over embodied agents also exposes them to adversarial interference that may cause unsafe physical behaviors. Existing attacks on robotic policies are typically optimized for a single task or instruction, leaving the cross-task vulnerabilities of multitask VLAs largely unexplored. We introduce UniTexture, a cross-task universal adversarial texture attack that uses a single textured 3D object to induce targeted deviations in VLA action predictions across multiple tasks. UniTexture backpropagates gradients from the policy's action outputs to surface texture parameters through a differentiable renderer. It jointly optimizes the shared texture over a distribution of tasks, instructions, states, and viewpoints using a targeted action-space objective, steering predicted actions toward attacker-defined targets without optimizing a separate texture for each task. We evaluate UniTexture on OpenVLA and $π_{0.5}$ across diverse manipulation tasks and multiple evaluation settings. UniTexture reduces the mean task success rate from 90.0% under benign conditions to 48.4% under attack, induces target-aligned action shifts, and further exhibits cross-suite and cross-model transfer without re-optimization. Together, these findings reveal shared cross-task vulnerabilities in multitask VLAs that can be systematically exploited through a single adversarial surface texture.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13453v1",
+      "authors": [
+        "Yukun Dai",
+        "Mingzhe Dai",
+        "Tianshi Wang",
+        "Fengling Li",
+        "Jingjing Li",
+        "Lei Zhu"
+      ],
+      "score": 54,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title"
+      ]
+    },
+    {
+      "title": "Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning",
+      "summary": "Outcome-driven reinforcement learning offers a scalable way to post-train vision-language-action (VLA) policies from sparse task-success feedback. In common GRPO-based VLA post-training, one rollout-level advantage is applied to every action in the trajectory. A rollout that completes several valid stages but fails later can therefore penalize the actions that produced its earlier progress. We call this trajectory-level credit aliasing. Temporal GRPO addresses this problem by constructing detectable task stages, aligning each rollout with stage-specific action intervals, and comparing only rollouts that have entered the same stage. The resulting stage advantages are applied to their corresponding intervals in a single policy update. On RoboTwin 2.0, Temporal GRPO improves task success and sample efficiency, with consistent gains across task horizons. Controlled updates on LIBERO-Long preserve shared prerequisite stages and concentrate improvement at the first stage where rollout outcomes diverge.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13026v1",
+      "authors": [
+        "Yao Zhou",
+        "Hang Gao",
+        "Fengge Wu",
+        "Changwen Zheng",
+        "Wenwen Qiang"
+      ],
+      "score": 54,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title"
+      ]
+    },
+    {
+      "title": "H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models",
+      "summary": "Large-scale manipulation data is essential for robot learning, yet collecting robot demonstrations remains expensive and difficult to scale. Meanwhile, abundant egocentric human manipulation videos provide rich behavioral experiences, but transferring them across embodiments remains challenging due to differences between human hands and robotic end-effectors. Recent advances in video world models offer a promising pathway to synthesize robot-centric manipulation videos from human observations, while their cross-embodiment transfer capability remains largely unexplored. Therefore, we introduce H2R-Bench, a benchmark for evaluating cross-embodiment human-to-robot manipulation video generation, where models transform egocentric human demonstrations into robot manipulation videos under specified embodiments. Each benchmark instance contains a human demonstration video, target embodiment constraints, and source-grounded annotations covering task goals, action events, functional contacts, and object responses. H2R-Bench evaluates generated videos through five dimensions, including goal-state completion, action-event completion, functional contact transfer, embodiment correctness, and general video quality. We benchmark eleven state-of-the-art video generation models across six manipulation families and two robot embodiments. Our evaluation reveals that current video world models remain limited in human-to-robot manipulation transfer: even leading models often fail in embodiment consistency, functional interaction, and task execution. H2R-Bench provides a systematic diagnostic framework for evaluating whether video world models can bridge the human-to-robot embodiment gap and convert human manipulation observations into robot-centric training resources.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13049v1",
+      "authors": [
+        "Dingyi Rong",
+        "Yue Shi",
+        "Chaofan Ma",
+        "Jiezhang Cao",
+        "Zongrui Wang",
+        "Zeyu Zhang",
+        "Yao Mu",
+        "Guangtao Zhai",
+        "Ning Liu"
+      ],
+      "score": 26,
+      "reasons": [
+        "keywords: world model, cross-embodiment"
+      ]
+    },
+    {
+      "title": "FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving",
+      "summary": "Vision-Language-Action (VLA) models promise to bring end-to-end reasoning to autonomous driving, but their computational cost remains far too high for real-time control. The core challenge is structural: VLA inference is not a single bottleneck but a cascade of four. Visual encoding wastes compute on overlapping video frames; language-model prefill recomputes context that could be carried over from the previous timestep; reasoning tokens are generated serially despite low entropy; and flow-matching denoising applies uniform compute to a non-uniform velocity field. Addressing any one stage in isolation leaves the others untouched. We propose FlashDrive, an algorithm-system co-design framework that targets all four stages simultaneously. Our key insight is that each bottleneck admits a distinct, lightweight algorithmic shortcut: temporal overlap enables streaming KV-cache reuse across frames; the low per-token entropy and strong intra-block correlations of driving-domain reasoning make a non-autoregressive diffusion drafter highly effective for speculative decoding; and the velocity field's structure---sharp at the endpoints, flat in the middle---permits adaptive step caching that concentrates compute where it matters. Layered on system-level CUDA Graph compilation and kernel fusion, these techniques compound. Applied to Alpamayo 1.5-10B with W4A8 quantization, FlashDrive reduces end-to-end latency from 717ms to 151ms (4.7x) while leaving accuracy essentially unchanged: minADE6@6.4s shifts by only 0.08m, minADE1 improves, and closed-loop collision and off-road rates improve in simulation. By raising a 10B-parameter reasoning VLA from 1.4~Hz to 6.6~Hz on a single GPU, FlashDrive moves end-to-end autonomous driving substantially closer to real-time deployment.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12932v1",
+      "authors": [
+        "Zekai Li",
+        "Yihao Liang",
+        "Hongfei Zhang",
+        "Jian Chen",
+        "Yesheng Liang",
+        "Zhijian Liu"
+      ],
+      "score": 54,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title"
+      ]
+    },
+    {
+      "title": "FIRE-VLA: Failure-Informed Self-Evolution for Vision-Language-Action Models in Autonomous Driving",
+      "summary": "Reinforcement learning improves autonomous-driving vision-language-action (VLA) models by evaluating trajectories sampled from the current policy. Group relative policy optimization (GRPO) learns from reward differences within each rollout group. When all sampled trajectories are poor, this relative signal can rank failures without identifying behavior outside the failed region. We introduce FIRE-VLA, a failure-informed self-evolution framework that converts such unresolved failures into privileged supervision for the next policy. Low-reward, low-diversity groups trigger self-distillation from a frozen round-start copy of the same model. Teacher and student have the same parameter scale, but only the teacher observes the hidden future trajectory. Supervision follows the student's generated prefix and is restricted to answer tokens, while GRPO remains active for every group. The updated policy supplies the teacher for the next round, allowing the routed failure distribution to change with the policy without requiring a larger external teacher. Starting from the same Qwen2.5-VL-3B SFT checkpoint, the comparison matches student rollout and policy-update counts. On 6,019 examples from 150 held-out nuScenes scenes, FIRE-VLA retains comparable single-sample planning, reduces G=4 mean L2 from 1.848 to 1.500 m, and lowers evaluation-persistent failure prevalence from 13.03% to 11.20%. The reduction in mean error arises mainly from rare severe rollouts rather than uniform improvement across ordinary trajectories.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13395v1",
+      "authors": [
+        "Hao Dou"
+      ],
+      "score": 66,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title",
+        "release signal"
+      ]
+    },
+    {
+      "title": "Decoding Task Progress from VLA Representations",
+      "summary": "Vision-language-action models (VLAs) are moving rapidly towards deployment as general-purpose manipulation policies, but we currently lack basic tools for understanding what these models represent internally or for monitoring them at runtime. Leveraging ideas from mechanistic interpretability, we probe the residual stream of $π_{0.5}$ and find that task progress, the normalized time remaining in a trajectory, is linearly readable from the activations. We find that this signal is present in the pretrained PaliGemma backbone prior to training on any robot-specific data. A single linear probe generalizes to unseen tasks and varies under language counterfactuals when trained on multi-prompt data, but does not enable meaningful steering of the policy. These properties make the signal directly useful for instrumenting deployed VLAs. We use the probe as a simple label-free OOD detector, which detects stalled task progress, and find it competitive with state-of-the-art methods. Our results suggest that VLAs have rich, linearly readable internal representations of semantic quantities like task progress, and that learning to read these signals offers a lightweight, interpretable path toward monitoring deployed visuomotor policies.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.13474v1",
+      "authors": [
+        "Atiksh Bhardwaj",
+        "Edward Weiyi Duan",
+        "Prithwish Dan",
+        "Wei-Chiu Ma",
+        "Preston Culbertson"
+      ],
+      "score": 26,
+      "reasons": [
+        "keywords: vision-language-action, vla"
+      ]
+    },
+    {
+      "title": "BrainWAM: Action-Space Coordination of Semantic Priors and Predictive Dynamics for Autonomous Driving",
+      "summary": "Autonomous driving requires planning under both semantic constraints and predictive dynamics. Existing end-to-end driving approaches, however, typically emphasize only one side of this requirement: Vision-Language-Action (VLA) models exploit VLM priors for semantic reasoning, while World Action Models (WAMs) provide future-aware prediction through generative world modeling. This naturally motivates a unified planner that can leverage both semantic priors and predictive dynamics. However, we find that a naive combination through joint token-level attention suffers from an attention-allocation mismatch, where semantic shortcuts dominate the shared attention space and suppress predictive dynamics. Inspired by neuroscience evidence that complex behavior arises from coordination among functionally specialized systems, we propose BrainWAM, a structured action-space coordination framework that converts semantic reasoning and predictive world modeling into two specialized action-oriented pathways, and aligns them at the level of compact action representations. We further introduce an asynchronous rectified-flow inference strategy with decoupled video and action denoising, which shortens inference latency while preserving planning-relevant predictive context. BrainWAM reaches state-of-the-art performance on both NAVSIM v1 (89.5 PDMS) and NAVSIM v2 (89.6 EPDMS), consistently outperforming VLA-only or WAM-only methods, highlighting BrainWAM as a practical and promising direction for autonomous driving systems.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12854v1",
+      "authors": [
+        "Bing Zhan",
+        "Shuyao Shang",
+        "Jiahao Gu",
+        "Shuo Lu",
+        "Yuan Xu",
+        "Zhao Wang",
+        "Yida Wang",
+        "Xueyang Zhang",
+        "Kun Zhan",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "score": 34,
+      "reasons": [
+        "keywords: vision-language-action, vla, world model"
+      ]
+    },
+    {
+      "title": "ARIES-Mission2: A Zero-Shot Vision-Language-Action Framework for Fast Large-Scale Aerial Mission Generation",
+      "summary": "Multimodal Large Language Models (MLLMs) have shown strong semantic understanding capabilities, but their direct use in low-altitude Unmanned Aerial Vehicle (UAV) mission generation remains limited by weak spatial optimization and inefficient route planning. To address this issue, we propose ARIES-Mission2, a zero-shot Vision-Language-Action (VLA) framework that decouples visual-semantic perception from physical route optimization. Given natural-language instructions and satellite imagery, ARIES-Mission2 first uses DeepSeek-V3 for task parsing and Molmo-7B for zero-shot target grounding, and then converts detected pixel locations into GPS waypoints through geospatial interpolation. To reduce the redundant backtracking caused by raw VLM-generated visiting orders, the back end formulates multi-target UAV traversal as a Traveling Salesperson Problem (TSP) and compares four candidate routes, including the raw VLM order and the routes optimized by PSO, GPSO, and IPSO. The minimum-cost closed-loop route is then selected for mission generation. Experiments on the UAV-VLPA-nano-30 benchmark show that ARIES-Mission2 achieves a total flight distance of 62.43 km, reducing the route length by 21.6% compared with the unoptimized VLA baseline (79.66 km) and by 9.5% compared with manual human planning (69.00 km). The complete 30-task workflow takes 575.40 s, averaging 19.18 s per task, which is approximately 3.6 times faster than human expert planning. Component-level timing shows that VLM inference dominates the runtime with 19.02 s per task, while the TSP solver requires only 0.16 s per task. Scalability analysis further indicates that the TSP module maintains lower growth in computation time as the number of targets increases.",
+      "date": "2026-08-13",
+      "url": "https://arxiv.org/abs/2608.12763v1",
+      "authors": [
+        "Junhao Wei",
+        "Yanxiao Li",
+        "Haochen Li",
+        "Yifu Zhao",
+        "Dexing Yao",
+        "Baili Lu",
+        "Zikun Li",
+        "Yapeng Wang",
+        "Sio-Kei Im",
+        "Dingcheng Yang",
+        "Xu Yang"
+      ],
+      "score": 54,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title"
+      ]
+    },
     {
       "title": "StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models",
       "summary": "Vision-Language-Action (VLA) models can follow instructions and manipulate objects, but their performance often collapses out of distribution (OOD), when the scene, viewpoint, or object differs from training. Adapting to each new situation typically requires collecting more data and fine-tuning. We present StellaVLA, a framework that instead adapts at test time by conditioning on a single retrieved demonstration. The key idea is to move beyond imitating what an expert did and instead convey why: an automated offline pipeline converts each raw trajectory into a structured demonstration, e.g., a task plan, sub-goal descriptions, and verbalized 3D motion, at zero human-annotation cost. Provided as in-context guidance, this structured demonstration lets the policy reason about the task rather than mimic a pixel trajectory, which also makes it transferable across embodiments (real-robot, human-hand, or XR demonstrations). A parallel dual-training design internalizes this reasoning during training through a joint action-and-language objective, while inference uses the action expert alone, preserving real-time, high-frequency control with no added latency. On the VLA-Arena leaderboard(Aug 1, 2026), StellaVLA ranks first with an overall score of 0.63, versus 0.44 and 0.22 for the strong prior models ($π_{0.5}$ and LingBot-VLA), and it further leads on LIBERO with 98.8% average success rate and LIBERO-Plus with 85.1% success rate. Our real-robot benchmark demonstrates that StellaVLA can use both human/robot demos and human-to-robot (XR) demos as in-context structured demonstration to help VLA model adapt to OOD tasks.",
@@ -21,6 +177,37 @@
       "reasons": [
         "keywords: vision-language-action, vla",
         "report/model title"
+      ]
+    },
+    {
+      "title": "RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills",
+      "summary": "Achieving generalizable robotic manipulation remains a central challenge in embodied intelligence. Despite rapid advances in model architectures and learning algorithms, progress is often limited by the scarcity and narrow diversity of real-world data. The RoboSynChallenge competition introduces a unified benchmark to evaluate and advance the generalizability of manipulation policies across a spectrum of tasks, environments, and difficulty levels. To alleviate the shortage of realistic data, the challenge integrates large-scale synthetic data generation with standardized real-world robotic evaluation. Participants are encouraged to leverage synthesized state-action trials to improve general-purpose policy learning, while final assessments are conducted exclusively on unseen real-world manipulation environments. Baseline implementations, including Transformer-, Diffusion-, Vision-Language-Action, and World-Action-Model-based policies, are provided to ensure reproducibility and comparability. By coupling scalable simulation-based training with rigorous real-world validation, RoboSynChallenge aims to foster the development of broadly capable, data-efficient, and adaptable manipulation systems, thereby paving the way toward truly general robotic intelligence.",
+      "date": "2026-08-12",
+      "url": "https://arxiv.org/abs/2608.12416v1",
+      "authors": [
+        "Runyi Zhao",
+        "Ruixin Wu",
+        "Chengkun Li",
+        "Hongrui Zhang",
+        "Ang Li",
+        "Ruixing Jin",
+        "Yueci Deng",
+        "Yingying Guo",
+        "Lihe Ding",
+        "Shaocong Dong",
+        "Tianfan Xue",
+        "Yanjun Gao",
+        "Yudong Luo",
+        "Pascal Poupart",
+        "Simo Wu",
+        "Kui Jia",
+        "Wei-shi Zheng",
+        "Guiliang Liu"
+      ],
+      "score": 36,
+      "reasons": [
+        "keywords: vision-language-action",
+        "physical-robot evidence"
       ]
     },
     {
@@ -1309,6 +1496,18 @@
       ]
     },
     {
+      "title": "ROKAE xCorePlugin Client v1.0.2.7",
+      "url": "https://github.com/RokaeRobot/xCorePlugin-client/releases/tag/v1.0.2.7",
+      "date": "2026-08-03",
+      "summary": "ROKAE+ client plugin release that fixes moveTo point-value transfer, variable retrieval, and project-interface defects, and revises the demonstration application's descriptions and layout.",
+      "organization_hint": "珞石机器人 / ROKAE",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies",
       "summary": "Vision-Language-Action (VLA) models have shown strong generalization in robotic manipulation, yet complex contact-rich tasks often benefit from multi-camera observations that jointly capture the end effector, objects, and targets under occlusion. Existing multi-camera VLAs usually concatenate view tokens, leaving action representations weak in metric depth and inconsistent across cameras. We introduce Multi-View Unified Camera Fields (MVUCF), a training-only framework that forms a shared action-facing latent field across views. A coordinate-query depth objective makes metric depth recoverable, while a preprocessing-aware correspondence objective aligns tokens observing the same physical point from different cameras. Both directly shape the hidden states consumed by the action module. After geometry injection, depth, camera calibration, and auxiliary heads are removed, so deployment uses the original RGB-only graph with no extra inference FLOPs. Held-out probes confirm stronger depth recovery and cross-view matching. Under matched GR00T-N1.6 settings, MVUCF reaches 98.9% on LIBERO, improves LIBERO-Plus by 22.4 points, and raises success by 23.3 points across six RoboTwin tasks spanning three action families: touch, move-and-place, and contact interaction. Real-world humanoid experiments further provide evidence of its practical effectiveness under RGB-only deployment.",
       "date": "2026-08-03",
@@ -2208,6 +2407,18 @@
       ]
     },
     {
+      "title": "Flexiv RDK v1.9.3",
+      "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.3",
+      "date": "2026-07-28",
+      "summary": "Flexiv RDK v1.9.3 adds discrete multi-waypoint Cartesian motion and force commands, Rizon 10R support, thread-safe model and scheduler APIs, and improved connection-loss handling.",
+      "organization_hint": "非夕科技 / Flexiv",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model",
       "summary": "Vision-Language-Action (VLA) models translate natural-language commands into robot action sequences, but leading systems on the LIBERO-Plus robustness benchmark use three- to seven-billion-parameter backbones whose memory demands can exceed embedded robotic budgets. We present CoTinyVLA, a 0.9B-parameter action model on a Qwen3.5-0.8B backbone that obtains that robustness by structuring supervision instead of enlarging the model. Three components target different axes of the problem: dual-view temporal input of 16 history frames per step with textual camera and time markers; hierarchical chain-of-thought (CoT) distillation from a 35B teacher into an episode-level Plan and a chunk-level Think span over task phase, gripper state and next subaction; and paraphrase augmentation expanding 40 base commands into 800 variants. On LIBERO-Plus, spanning 10,030 perturbed tasks across seven perturbation dimensions, CoTinyVLA reaches 90.8% on Spatial, 87.3% on Object, 86.6% on Goal and 80.7% on Long, leading the strongest 7B baseline on all four suites by 4.7, 2.8, 15.9 and 3.0 points, with every margin interval excluding zero. The gains concentrate on the hardest axes of the benchmark: across the eleven published baselines none exceeds 53.2% on Robot Initial States in any suite, whereas CoTinyVLA reaches 73.6% on Goal against 39.9% for the strongest baseline. Ablations show the three components to be separable by perturbation axis, and at a matched image budget how frames are divided between the two cameras and across time accounts for 8.6 points on its own. Closed-loop inference peaks at 2.25 GiB of allocated GPU memory, and paired interventions show the episode Plan to be load-bearing: replacing it with an empty or contradictory span costs 40 to 45 points of success. Structured supervision thus lets a 0.9B backbone exceed all of them. Code: https://github.com/BrainJellyPie/CoTinyVLA",
       "date": "2026-07-28",
@@ -2263,65 +2474,6 @@
       ]
     },
     {
-      "title": "τ: Learning Touch-Augmented Vision-Language-Action Models from Future Visual Supervision",
-      "summary": "Incorporating tactile sensing into Vision-Language-Action (VLA) models holds promise for contact-rich manipulation, where visual observations alone often fail to capture critical cues about physical interactions. However, learning informative tactile representation while effectively adapting it to pretrained VLA models remains challenging under limited task-specific data. Existing methods either focus on instantaneous contact states or model temporal interaction dynamics using 6D wrench sequences, leaving high-dimensional tactile signals underexplored. To address these challenges, we present τ, a touch-augmented VLA framework that learns an action-conditioned spatiotemporal tactile representation from future visual supervision inspired by the Joint-Embedding Predictive Architecture (JEPA), and fuses it with vision-language features for action generation. This supervision operates in latent space and is used only during training, adding no deployment overhead. We also introduce TacAura, a dataset of synchronized vision, proprioception, and vision-based tactile signals across four representative contact-rich manipulation tasks. Experiments show that τ outperforms existing models and generalizes to unseen objects and scenes, delivering improved manipulation performance and robustness. Project Page: https://cocacola-lab.github.io/tau-Page/.",
-      "date": "2026-07-27",
-      "url": "https://arxiv.org/abs/2607.24485v3",
-      "authors": [
-        "Ning Cheng",
-        "Jinan Xu",
-        "Wanlin Li",
-        "Yangzhi Chen",
-        "Jing Gao",
-        "Yiqun Wang",
-        "Kelan Peng",
-        "Wenjuan Han"
-      ],
-      "score": 62,
-      "reasons": [
-        "keywords: vision-language-action, vla, tactile",
-        "report/model title"
-      ]
-    },
-    {
-      "title": "FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking",
-      "summary": "Real-time deployment of Vision-Language-Action (VLA) policies necessitates asynchronous execution, wherein subsequent action chunks are computed concurrently with the execution of the current chunk, leading to prediction-execution misalignment and manifesting as inter-chunk discontinuities. Existing methods either superficially smooth chunk boundaries, require costly policy optimization, or exclusively forward-predict proprioceptive states yet neglect critical visual observations. In this paper, we propose \\textbf{FutureRTC}, a plug-and-play adaptation framework that predicts execution-time observations and states for asynchronous VLA control without modifying the underlying policy. Specifically, FutureRTC features a state correction module to compensate for the discrepancy between rolled-forward and actual execution-time proprioceptive states and an observation prediction module that forecasts execution-time visual representations by leveraging robot motion as an explicit physical prior through motion-aware feature transport and reconstruction. Furthermore, we introduce a policy consistency loss to align the action chunks generated from predicted contexts with those produced under the expected execution-time inputs of the VLA policy. Extensive experiments across simulated and real-world environments demonstrate that FutureRTC achieves superior robustness to inference delays, resulting in smoother trajectories, faster execution, and consistently higher task success rates.",
-      "date": "2026-07-27",
-      "url": "https://arxiv.org/abs/2607.24008v1",
-      "authors": [
-        "Hai Jiang",
-        "Yixian Zou",
-        "Binbin Liang",
-        "Boqian Liu",
-        "Fanman Meng",
-        "Shuaicheng Liu"
-      ],
-      "score": 44,
-      "reasons": [
-        "keywords: vision-language-action, vla",
-        "physical-robot evidence"
-      ]
-    },
-    {
-      "title": "DeVA: Decoupled Video-Action Model with physical guidance for robot policy learning",
-      "summary": "Generalizable robot manipulation requires policies that can anticipate how visual scenes evolve while executing language instructions. While recent Vision-Language-Action models benefit from large-scale pretraining, their predominantly static pretraining objectives provide limited supervision for physical dynamics and temporal causality, leaving control-relevant knowledge to be learned from downstream robot demonstrations. Video generative models offer a promising foundation by encoding rich spatiotemporal priors through future predictions. However, existing Video-Action Models either couple video and action prediction in a shared backbone, making policy adaptation harder to optimize, or under-utilize video information when guiding the action branch. In this work, we introduce DeVA, a Decoupled Video-Action model with specialized video and action experts, multi-level feature transfer, and physically salient guidance. DeVA transfers representations from multiple video layers to the action expert, enabling rich information exchange while making policy learning more tractable. It further supervises intermediate video features and the action stream with physically salient guidance (affordance/depth). Experiments on both simulation benchmarks and real-world deployment demonstrate strong performance with limited data, faster convergence than a unified architecture, and clear performance gains from physical guidance.",
-      "date": "2026-07-27",
-      "url": "https://arxiv.org/abs/2607.24159v1",
-      "authors": [
-        "Mengqi Zhang",
-        "Sahil Khose",
-        "Simar Kareer",
-        "Yuchen Song",
-        "Unnat Jain",
-        "Judy Hoffman"
-      ],
-      "score": 36,
-      "reasons": [
-        "keywords: vision-language-action",
-        "physical-robot evidence"
-      ]
-    },
-    {
       "title": "Data Pyramid for Embodied Manipulation: A Survey",
       "summary": "Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be provided, to varying degrees, by multiple data sources. In this work, we organize the embodied data ecosystem as a \"pyramid\" spanning five complementary sources: real-robot data, UMI-style data, egocentric and exocentric data, simulation data, and general vision-language data. We organize the pyramid around the tension between scalability and robot alignment, and further characterize each source in terms of data quality, diversity, reusability, and physical fidelity. We then analyze recent embodied foundation models through the lens of their data recipes, examining how different sources are selected, aligned, and mixed during pretraining. For embodied brain models, vision-language-action models, and world-action models alike, we relate data composition to capabilities in perception, reasoning, planning, action generation, and world prediction. We close by discussing six open challenges: building large-scale tactile datasets, collecting failure and recovery data, developing scalable data-collection pipelines, aligning actions across embodiments, leveraging egocentric data for dexterous manipulation, and designing principled data recipes for robot learning. We hope this work paves the foundation for the design of next-generation embodied systems.",
       "date": "2026-07-27",
@@ -2363,97 +2515,6 @@
       ]
     },
     {
-      "title": "A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference",
-      "summary": "Vision-Language-Action (VLA) models have demonstrated strong potential for embodied AI, yet their high inference latency on GPUs limits real-time deployment. Existing accelerators, such as Dadu-Corki, improve efficiency but treat VLA models as full-precision workloads, leaving substantial redundancy in both memory and computation underexploited. In this paper, we propose VQVLA, an algorithm-hardware co-design framework that accelerates VLA inference by exploiting weight similarity and execution dynamics. We first introduce MotionVQ, a motion-aware vector quantization scheme that dynamically adjusts quantization precision based on the robot's execution state, reducing memory access while preserving task success rate. We then propose a merged-centroid vectorized GEMM paradigm that operates on the codebook-index representation, eliminating redundant multiplications through spatial aggregation and temporal reuse of centroids. To realize these optimizations, we design an accelerator that efficiently supports dynamic precision selection and centroid-reuse computation. Experimental results show that VQVLA achieves 6.5x, 2.8x, 1.9x, 3.3x, and 4.3x speedup over the A100 GPU, Dadu-Corki, LUT-DLA, CodeGEMM, and ShiftAddLLM, respectively, with negligible accuracy degradation.",
-      "date": "2026-07-27",
-      "url": "https://arxiv.org/abs/2607.24148v1",
-      "authors": [
-        "Zhuoran Song",
-        "Haozhe Jiang",
-        "Chunyu Qi",
-        "Minnan Pei",
-        "Gang Li",
-        "Xiaoyao Liang",
-        "Haibing Guan"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: vision-language-action, vla"
-      ]
-    },
-    {
-      "title": "MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents",
-      "summary": "Smart-city airspace is transforming Uncrewed Aerial Vehicles (UAVs) from passive sensing platforms into cyber-physical decision makers that must follow operational rules under degraded observations and ambiguous language. Existing UAV and multimodal benchmarks evaluate perception, navigation, collaboration, and reasoning, but few assess whether physical evidence, protocol constraints, and action risk remain coupled during critical decisions. We introduce MulRobBench, an offline, protocol-conditioned benchmark for Vision-Language-Action (VLA) UAV agents in smart-city environments. MulRobBench integrates real UAV multimodal observations, protocol-level security policies, and action-level cyber-physical safety into a unified evaluation framework. The benchmark contains 3,024 samples spanning 17 task taxonomy nodes and 12 scoring dimensions across four stages: operational context understanding, multimodal evidence arbitration, degradation-aware reasoning, and risk-aware action planning. Evaluation combines semantic scoring with structural diagnostics, including policy compliance, format compliance, unsafe actions, parsing failures, and dimension-level validity. Across 17 multimodal models, the best semantic protocol-decision score reaches only 0.5141, while the best strict mean scoring-dimension accuracy is 0.1599. A controlled 20-anchor modality-ablation study changes 4-15 action selections per model, confirming that both visual and textual inputs influence decisions. Analysis identifies modality-trust selection, constraint extraction, glare, missing data, and operator shorthand as the primary causes of decision instability. MulRobBench provides a reproducible benchmark for trustworthy multimodal UAV decision making under realistic operational constraints.",
-      "date": "2026-07-26",
-      "url": "https://arxiv.org/abs/2607.23870v1",
-      "authors": [
-        "Belal S. Alsinglawi",
-        "Weizheng Wang",
-        "Junyi Wu",
-        "Yi Jiang",
-        "Lianhai Lin",
-        "Merouane Debbah",
-        "Izzat Alsmadi"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: vision-language-action, vla"
-      ]
-    },
-    {
-      "title": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
-      "summary": "While vision-language-action models have demonstrated impressive zero-shot manipulation capabilities, they remain fundamentally black box policies that are difficult to interpret, adapt, or correct when they inevitably fail. In this work, we propose ARCHITECT, a framework that treats robot policy acquisition as an interactive program synthesis task. ARCHITECT leverages the reasoning capabilities of LLM coding agents to synthesize modular robot programs that utilize a suite of perception and control tools. Unlike end-to-end models where distribution shift leads to unpredictable, cascading failures, our modular architecture allows users to isolate failures and localize feedback at the level of abstraction required. We introduce an iterative process where a human supervisor provides natural language corrections to steer the policy. These corrections are grounded in the policy code by program execution traces and distilled into a persistent skill library, a form of long-term in-context learning which enables the agent to accumulate a repertoire of reusable, interpretable behaviors. In a benchmark evaluation on a Franka Panda robot, ARCHITECT outperforms state-of-the-art VLA models and program synthesis baselines on complex, long-horizon tasks, including articulated object manipulation and cloth folding. Our results demonstrate that the synthesized skill library enables the system to transfer to novel tasks with decreasing human intervention, providing a steerable and data-efficient alternative to black-box robot learning. Website: https://robo-architect.github.io/",
-      "date": "2026-07-26",
-      "url": "https://arxiv.org/abs/2607.23784v1",
-      "authors": [
-        "Daphne Chen",
-        "Archit Ritesh Jain",
-        "Eric Goossen",
-        "Emma Romig",
-        "Michael Murray",
-        "Nick Walker",
-        "Maya Cakmak"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: vision-language-action, vla"
-      ]
-    },
-    {
-      "title": "WCM: World-Cognition Model for Generalizable Human-Robot Interaction",
-      "summary": "Language agents can now interact fluently with users in software, but robots still struggle to bring comparable interaction to physical tasks. Current robot-control paradigms, including vision-language-action policies and world-model-based planners, are mainly optimized for instruction execution, leaving users with little visibility into why an action is chosen and few mechanisms to redirect, correct, or teach the robot through interaction. To solve this problem, we present the World-Cognition Model (WCM), a human-centered embodied agent built on the SLAK architecture (Sensing, Logic, Action, and Knowledge) and an asynchronous runtime. SLAK separates perception, reasoning, control, and memory, while the runtime allows reasoning, dialogue, and execution to proceed concurrently. WCM further introduces a human-in-the-loop teaching mode that enables users to interactively teach the robot difficult or long-horizon tasks. Teaching episodes and autonomous task rollouts are refined into chain-of-thought supervision to continually improve the model. WCM achieves a 73.8% average success rate across nine real-world human-robot interaction tasks, including tasks held out from CoT fine-tuning and a long-horizon task learned through teaching.",
-      "date": "2026-07-25",
-      "url": "https://arxiv.org/abs/2607.22999v2",
-      "authors": [
-        "Yuzhen Chen",
-        "KC Zhou"
-      ],
-      "score": 36,
-      "reasons": [
-        "keywords: vision-language-action",
-        "physical-robot evidence"
-      ]
-    },
-    {
-      "title": "Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline",
-      "summary": "Physical AI -- the integration of large vision-language-action (VLA) models with embodied agents that act in the real world -- has emerged as the next major frontier for AI, echoed by industry leaders such as Jensen Huang (``the next big thing is Physical AI, AI with a body,'' GTC Paris, June 2025) and Dr. Lisa Su (`we're entering the world of Physical AI ... this is where AI enters the real world,' CES 2026). This paper presents an end-to-end, fully AMD-accelerated technology stack for embodied manipulation, spanning data-center training silicon, Radeon PRO simulation/rendering GPUs, and Ryzen AI edge compute, unified by the open ROCm software stack. We demonstrate that training and deploying VLA-based manipulation policies does not require a CUDA-locked ecosystem. Four progressive demonstrations are presented: (1) a Sim-to-Real manipulation pipeline trained with SmolVLA and deployed on a physical Franka arm; (2) a semantic, language-grounded object-selection task (`one-of-three'); (3) a Real2Sim synthetic-data generation pipeline that fuses 3D Gaussian Splatting (3DGS) reconstructions of real scenes with the Genesis physics engine; and (4) large-scale reinforcement learning for quadruped and humanoid locomotion benchmarked across multiple hardware platforms. All pipelines run natively on ROCm + PyTorch on RDNA4 (Radeon AI PRO R9700) and RDNA3.5 (Radeon PRO W7900) hardware and are reproducible on the free Radeon Cloud Platform.",
-      "date": "2026-07-25",
-      "url": "https://arxiv.org/abs/2607.22997v1",
-      "authors": [
-        "Qing Yang",
-        "Xun Wang",
-        "Ziguan Wang",
-        "Zhenjiang Li",
-        "Hongqiang Wang",
-        "Dongdong Weng"
-      ],
-      "score": 62,
-      "reasons": [
-        "keywords: vision-language-action, vla, humanoid",
-        "report/model title"
-      ]
-    },
-    {
       "title": "MindMemOS",
       "url": "https://github.com/huawei-noah/noah-research/tree/master/MindMemOS",
       "date": "2026-07-24",
@@ -2471,6 +2532,18 @@
       "date": "2026-07-23",
       "summary": "Rerun 0.35.0 advances the robotics data engine and viewer with updates to data loading, querying, visualization and multimodal dataset workflows.",
       "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mech-DLK 3.0.1",
+      "url": "https://downloads.mech-mind.com/?tab=tab-dlk",
+      "date": "2026-07-23",
+      "summary": "Mech-DLK 3.0.1 is a deep-learning model training and deployment release supporting robot-guidance models, including Pick Anything V2 and Object-Bin Segmentation.",
+      "organization_hint": "梅卡曼德 / Mech-Mind",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -2632,11 +2705,35 @@
       ]
     },
     {
+      "title": "GINO ECO Embodied-AI Ecosystem",
+      "url": "https://www.geekplus.com/resources/news/geek-debuts-gravity-and-its-one-core-dual-engine-strategy-at-waic-2026-accelerating-the-next-era-of-embodied-ai",
+      "date": "2026-07-19",
+      "summary": "Geek+ launched GINO ECO, an open ecosystem intended to support the integration and large-scale commercial deployment of embodied-AI solutions.",
+      "organization_hint": "极智嘉 / Geek+",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-07-18",
       "organization_hint": "AGIBOT Innovation (Shanghai) Technology Co., Ltd.",
       "summary": "Product release comprising the A3 Ultra humanoid, X2 Edu research robot, heavy-payload G2 Max and direct-drive OmniHand 3 Ultra-M dexterous hand.",
       "title": "AGIBOT WAIC 2026 Product Releases",
       "url": "https://www.agibot.com/article/231/detail/85.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "ROKAE xCorePlugin Client v1.0.2.6",
+      "url": "https://github.com/RokaeRobot/xCorePlugin-client/releases/tag/v1.0.2.6",
+      "date": "2026-07-17",
+      "summary": "Initial release of ROKAE's client-side plugin development kit for extending the xCore robot control platform.",
+      "organization_hint": "珞石机器人 / ROKAE",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -3539,6 +3636,18 @@
       ]
     },
     {
+      "title": "A Gentle Introduction to Agile Robots and Idealworks Edge AI Stack for maximum compatibility. | Agile Robots SE",
+      "url": "https://www.agile-robots.com/en/news/detail/a-gentle-introduction-to-agile-robots-and-idealworks-edge-ai-stack-for-maximum-compatibility/",
+      "date": "2026-07-02",
+      "summary": "“AI is a five-layer cake”. And one core layer we are tackling at Agile Robots and Idealworks is edge inference. Five ingredients are crucial for a successful model deployment with maximum reliability in production: hardware, BSP, inference pipeline, serving frameworks, and model quantization. In this section of the blog, we will brush on how Agile Robots and its subsidiary Idealworks developed each of the layers in their GPU revolution since 2018 while focusing on accomplishing more on existing platforms through software and pipeline optimizations.",
+      "organization_hint": "思灵机器人 / Agile Robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "ROSA: A Robotics Foundation Model Serving System for Robot Factories",
       "summary": "Robotics foundation models (RFMs) are making general-purpose robots increasingly practical for factory deployments. While RFM serving systems are central to this vision, existing systems are largely shaped by a single-robot, single-model assumption: inference is treated as an edge-computing problem handled by an on-robot or dedicated nearby GPU, and the serving objective is to minimize the latency of a single action model. In this paper, we propose ROSA, an RFM serving system for robot factories designed around three key principles. First, ROSA adopts shared GPU-pool serving, allowing a fleet of robots to access powerful server-class GPUs over the network in order to improve inference performance, battery duration, and GPU utilization. Second, ROSA provides a robotics-aware programming abstraction and system design that supports multi-model pipelines, per-task performance requirements, and failure handling. Third, ROSA uses factory-objective-driven scheduling to maximize SLO-qualified factory productivity rather than minimizing individual request latency. We implement ROSA on top of Ray Serve for distributed orchestration, with vLLM, PyTorch, and JAX as model-serving backends, and evaluate it on both real robots and synthetic large-scale workloads. The results show that ROSA improves factory productivity by up to 12.06x over conventional dedicated serving systems.",
       "date": "2026-07-01",
@@ -3577,18 +3686,6 @@
       "date": "2026-06-30",
       "summary": "A multimodal action tokenizer that provides a semantic interface between vision-language reasoning and continuous robot control for VLA pretraining.",
       "organization_hint": "自变量机器人 / X² Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Si0",
-      "url": "https://xpeng-robotics.github.io/si0/",
-      "date": "2026-06-30",
-      "summary": "A multimodal foundation-model backbone designed to provide spatial and physical-world understanding for humanoid control, using general, human egocentric-exocentric and robot-domain training data.",
-      "organization_hint": "小鹏机器人 / XPENG Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -3640,6 +3737,18 @@
       "date": "2026-06-29",
       "summary": "Released a G0.5 evaluation entry point and checkpoint for the RoboTwin 2.0 dual-arm manipulation benchmark.",
       "organization_hint": "星海图 / Robot Era",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Flexiv ROS 2 Jazzy 2.1",
+      "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/jazzy-v2.1",
+      "date": "2026-06-29",
+      "summary": "Flexiv ROS 2 Jazzy 2.1 adds unified ROS 2 and MoveIt support for Flexiv single-arm, dual-arm, and MICO configurations, including topology-specific controllers, planning groups, and dual grippers.",
+      "organization_hint": "非夕科技 / Flexiv",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -4023,6 +4132,18 @@
       ]
     },
     {
+      "title": "Flexiv RDK v2.1",
+      "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v2.1",
+      "date": "2026-06-18",
+      "summary": "Flexiv RDK v2.1 adds synchronous motion control, multi-waypoint Cartesian motion-force control, constrained inverse kinematics, multi-joint-group APIs, and Zenoh-based communication.",
+      "organization_hint": "非夕科技 / Flexiv",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Telescope: Learnable Hyperbolic Foveation for Ultra-Long-Range Object Detection",
       "url": "https://github.com/torc-ai/Telescope",
       "date": "2026-06-17",
@@ -4222,6 +4343,18 @@
       ]
     },
     {
+      "title": "ROKAE xCore SDK for Python v0.7.1",
+      "url": "https://github.com/RokaeRobot/xCoreSDK-Python/releases/tag/v0.7.1",
+      "date": "2026-06-15",
+      "summary": "Python SDK release for controlling ROKAE robots, with improved real-time joint-position following near singularities and corrections to tool, work-object, rotation, and payload settings.",
+      "organization_hint": "珞石机器人 / ROKAE",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Qwen-RobotWorld",
       "url": "https://qwen.ai/blog?id=qwen-robotworld",
       "date": "2026-06-15",
@@ -4390,6 +4523,30 @@
       "reasons": [
         "keywords: vision-language-action, vla, robot foundation",
         "report/model title"
+      ]
+    },
+    {
+      "title": "ROKAE xCore SDK for C++ v0.7.1",
+      "url": "https://github.com/RokaeRobot/xCoreSDK-CPP/releases/tag/v0.7.1",
+      "date": "2026-06-12",
+      "summary": "C++ SDK release for controlling ROKAE robots, with improved real-time joint-position following near singularities and corrections to tool, work-object, rotation, and payload settings.",
+      "organization_hint": "珞石机器人 / ROKAE",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Flexiv RDK v1.9.2",
+      "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.2",
+      "date": "2026-06-12",
+      "summary": "Flexiv RDK v1.9.2 adds robot-action data APIs, exposes current commanded actions, and updates examples to report robot actions alongside measured states.",
+      "organization_hint": "非夕科技 / Flexiv",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -4738,6 +4895,18 @@
       ]
     },
     {
+      "title": "OmniVTLA 2.0",
+      "url": "https://paxini.com/us/news",
+      "date": "2026-06-04",
+      "summary": "PaXini announced OmniVTLA 2.0, an embodied vision-tactile-language-action model associated with its physical AI partnership with SynapX.",
+      "organization_hint": "帕西尼感知 / PaXini",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Conditional Flow-VAE for Safety-Critical Traffic Scenario Generation",
       "url": "https://waabi.ai/research/conditional-flow-vae-for-safety-critical-traffic-scenario-generation",
       "date": "2026-06-04",
@@ -4767,6 +4936,18 @@
       "date": "2026-06-03",
       "summary": "This neurosymbolic framework translates natural-language scenario descriptions into constraints for controllable, closed-loop autonomous-vehicle simulation.",
       "organization_hint": "Waabi",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Si₀: The capabilities that transfer, perceived through the robot's eyes",
+      "url": "https://xpeng-robotics.github.io/si0/",
+      "date": "2026-06-03",
+      "summary": "What makes a good foundation model for an embodied physical model? Spatial intelligence that translates into action, and a vision stack co-designed with humanoid sensors.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -4999,18 +5180,6 @@
       ]
     },
     {
-      "title": "Fe0",
-      "url": "https://xpeng-robotics.github.io/fe0/",
-      "date": "2026-05-30",
-      "summary": "An embodied foundation model and controlled evaluation framework examining how heterogeneous human and robot data transfers visual, semantic, relational, planning and control capabilities to humanoid execution.",
-      "organization_hint": "小鹏机器人 / XPENG Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "date": "2026-05-29",
       "organization_hint": "X Square Robot",
       "summary": "WALL-WM is an open-source world-action model that represents robot interaction as semantically meaningful events rather than fixed action chunks.",
@@ -5188,6 +5357,18 @@
       ]
     },
     {
+      "title": "Flexiv RDK v1.9.1",
+      "url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.1",
+      "date": "2026-05-28",
+      "summary": "Flexiv RDK v1.9.1 adds adjustable friction compensation for streamed joint-torque control and Python 3.14 support.",
+      "organization_hint": "非夕科技 / Flexiv",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Turning Video Models into Generalist Robot Policies",
       "summary": "Video generative models have emerged as a promising robotics backbone, capable of generating videos that depict the completion of complex tasks across embodiments and environments. Recent work proposes robot foundation models that jointly predict future observations and actions by finetuning video models with action-labeled data. In this paper, we test the limits of an alternative approach: leave the video planner as-is while training an embodiment-specific inverse dynamics model (IDM). This decoupling offers several natural benefits: the video planner remains embodiment-agnostic, different video models can be interchanged easily without re-training the IDM, and the IDM can be independently trained with readily available self-play data. We present a closed-loop, video-to-action policy that combines an action-free video world model with a carefully-designed IDM based on the robot embodiment Jacobian. We demonstrate that our IDM design is both data-efficient and scalable to high-dimensional action spaces. Our policy, which we coin the Video-to-Embodied Robot Action Model (VERA), achieves strong performance across simulated and real-world benchmarks, including zero-shot Panda arm manipulation and 16-DoF Allegro-hand dexterous cube re-orientation. The same video planner can be used across multiple embodiments by pairing it with different embodiment-specific IDMs. Our results show that decoupled video planning plus faithful video-to-action translation is a viable alternative route towards zero-shot, cross-embodiment, and generalizable robot control. More results are available on our project website: https://vera.csail.mit.edu.",
       "date": "2026-05-27",
@@ -5283,6 +5464,18 @@
       ]
     },
     {
+      "title": "Next-Generation Intelligent Operation Platform (IOP)",
+      "url": "https://www.geekplus.com/resources/robotics-blogs/geek-launches-next-generation-intelligent-operation-platform-iop",
+      "date": "2026-05-22",
+      "summary": "Geek+ launched a cloud-native generation of its Intelligent Operation Platform, providing AI-assisted warehouse analytics, demand forecasting, resource allocation and operational decision support.",
+      "organization_hint": "极智嘉 / Geek+",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Any2Any: Efficient Cross-Embodiment Transfer for Humanoid Whole-Body Tracking",
       "summary": "Whole-body tracking (WBT) models have become a key foundation for humanoid robots, enabling them to imitate diverse motions with high fidelity. Training such models from scratch requires large-scale data and computation, making rapid deployment on new humanoid platforms costly. This raises a natural question: Can pretrained WBT models transfer across embodiments with minimal adaptation? To answer this question, we propose Any2Any, a paradigm that efficiently transfers an existing WBT specialist to a new humanoid embodiment with only a small amount of data and compute. Any2Any first performs kinematic alignment between source and target humanoids, aligning their input and output spaces so that the pretrained source policy can be meaningfully reused on the target embodiment.Any2Any then performs dynamics adaptation by applying lightweight parameter-efficient fine-tuning (PEFT) components to selected dynamics-sensitive modules, preserving useful behavioral priors while enabling targeted adaptation to the target robot. Extensive experiments on multiple humanoid platforms and pretrained backbones show that Any2Any substantially accelerates convergence and reduces training cost compared with training from scratch, while achieving competitive or superior tracking performance. Notably, using only 1% of the compute and data required for full training, Any2Any successfully transfers Sonic models pre-trained on Unitree G1 to LimX Oli and LimX Luna. These results suggest that pretrained WBT specialists can be efficiently reused across embodiments, providing a scalable path toward deploying humanoid whole-body control on new robots. More results and videos are available on our project page: https://any2any.top/.",
       "date": "2026-05-22",
@@ -5355,6 +5548,18 @@
       "date": "2026-05-20",
       "summary": "Rerun 0.32.2 improves query performance and MCAP ingestion, including preservation of channels without schemas as raw robotics data.",
       "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Flexiv ROS 2 Jazzy 2.0",
+      "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/jazzy-v2.0",
+      "date": "2026-05-20",
+      "summary": "Flexiv ROS 2 Jazzy 2.0 aligns the control stack with Flexiv RDK v2.0, standardizes CycloneDDS, and consolidates launch, MoveIt, state, and GPIO interfaces for Enlight single-arm robots.",
+      "organization_hint": "非夕科技 / Flexiv",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -5853,6 +6058,30 @@
       ]
     },
     {
+      "title": "Flexiv ROS 2 Jazzy 1.9.1",
+      "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/jazzy-v1.9.1",
+      "date": "2026-05-05",
+      "summary": "Flexiv ROS 2 Jazzy 1.9.1 adds a lightweight RDK option and gripper-readiness publication, while correcting the Flexiv bring-up node startup sequence.",
+      "organization_hint": "非夕科技 / Flexiv",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Flexiv ROS 2 Humble 1.9.1",
+      "url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/humble-v1.9.1",
+      "date": "2026-05-05",
+      "summary": "Flexiv ROS 2 Humble 1.9.1 adds a lightweight RDK option to the gripper node and corrects the Flexiv bring-up node startup order.",
+      "organization_hint": "非夕科技 / Flexiv",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Evaluating Generative Models as Interactive Emergent Representations of Human-Like Collaborative Behavior",
       "summary": "Human-AI collaboration requires AI agents to understand human behavior for effective coordination. While advances in foundation models show promising capabilities in understanding and showing human-like behavior, their application in embodied collaborative settings needs further investigation. This work examines whether embodied foundation model agents exhibit emergent collaborative behaviors indicating underlying mental models of their collaborators, which is an important aspect of effective coordination. This paper develops a 2D collaborative game environment where large language model agents and humans complete color-matching tasks requiring coordination. We define five collaborative behaviors as indicators of emergent mental model representation: perspective-taking, collaborator-aware planning, introspection, theory of mind, and clarification. An automated behavior detection system using LLM-based judges identifies these behaviors, achieving fair to substantial agreement with human annotations. Results from the automated behavior detection system show that foundation models consistently exhibit emergent collaborative behaviors without being explicitly trained to do so. These behaviors occur at varying frequencies during collaboration stages, with distinct patterns across different LLMs. A user study was also conducted to evaluate human satisfaction and perceived collaboration effectiveness, with the results indicating positive collaboration experiences. Participants appreciated the agents' task focus, plan verbalization, and initiative, while suggesting improvements in response times and human-like interactions. This work provides an experimental framework for human-AI collaboration, empirical evidence of collaborative behaviors in embodied LLM agents, a validated behavioral analysis methodology, and an assessment of collaboration effectiveness.",
       "date": "2026-05-05",
@@ -5885,6 +6114,18 @@
       "score": 18,
       "reasons": [
         "keywords: cross-embodiment"
+      ]
+    },
+    {
+      "title": "Inside Fe₀: What Cross-Embodiment Data Teaches an Embodied Foundation Model",
+      "url": "https://xpeng-robotics.github.io/fe0/",
+      "date": "2026-05-03",
+      "summary": "Official release page from 小鹏机器人 / XPENG Robotics.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6083,6 +6324,18 @@
       "reasons": [
         "keywords: cross-embodiment, tactile",
         "release signal"
+      ]
+    },
+    {
+      "title": "Mech-DLK SDK 3.0.0",
+      "url": "https://downloads.mech-mind.com/?tab=tab-dlk-sdk",
+      "date": "2026-04-29",
+      "summary": "Mech-DLK SDK 3.0.0 provides APIs and runtime components for integrating inference from Mech-DLK-trained models into external robotic and vision applications.",
+      "organization_hint": "梅卡曼德 / Mech-Mind",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -6932,11 +7185,35 @@
       ]
     },
     {
+      "title": "Humanoid Agile ONE embodies Physical AI at Hannover Messe 2026 | Agile Robots SE",
+      "url": "https://www.agile-robots.com/en/news/detail/humanoid-agile-one-embodies-physical-ai-at-hannover-messe-2026/",
+      "date": "2026-04-02",
+      "summary": "Official release page from 思灵机器人 / Agile Robots.",
+      "organization_hint": "思灵机器人 / Agile Robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "GEN-1: Scaling Embodied Foundation Models to Mastery",
       "url": "https://generalistai.com/blog/gen-1",
       "date": "2026-04-02",
       "summary": "Generalist introduced GEN-1, a large multimodal embodied foundation model and action system designed for real-time robot control, rapid task adaptation, reliable execution and recovery from unexpected physical situations.",
       "organization_hint": "Generalist AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DeepSeek | DeepSeek-V4 预览版：迈入百万上下文普惠时代",
+      "url": "https://www.deepseek.com/news/v4-preview/",
+      "date": "2026-04-02",
+      "summary": "DeepSeek 全新系列模型 V4 预览版正式上线并同步开源，拥有百万字超长上下文。",
+      "organization_hint": "深度求索 / DeepSeek",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7131,23 +7408,6 @@
         "keywords: world model, cross-embodiment",
         "report/model title",
         "release signal"
-      ]
-    },
-    {
-      "title": "ROI-Driven Foveated Attention for Unified Egocentric Representations in Vision-Language-Action Systems",
-      "summary": "The development of embodied AI systems is increasingly constrained by the availability and structure of physical interaction data. Despite recent advances in vision-language-action (VLA) models, current pipelines suffer from high data collection cost, limited cross-embodiment alignment, and poor transfer from internet-scale visual data to robot control. We propose a region-of-interest (ROI) driven engineering workflow that introduces an egocentric, geometry-grounded data representation. By projecting end-effector poses via forward kinematics (FK) into a single external camera, we derive movement-aligned hand-centric ROIs without requiring wrist-mounted cameras or multi-view systems. Unlike directly downsampling the full frame, ROI is cropped from the original image before resizing, preserving high local information density for contact-critical regions while retaining global context. We present a reproducible pipeline covering calibration, synchronization, ROI generation, deterministic boundary handling, and metadata governance. The resulting representation is embodiment-aligned and viewpoint-normalized, enabling data reuse across heterogeneous robots. We argue that egocentric ROI serves as a practical data abstraction for scalable collection and cross-embodiment learning, bridging internet-scale perception and robot-specific control.",
-      "date": "2026-03-21",
-      "url": "https://arxiv.org/abs/2603.20668v1",
-      "authors": [
-        "Xinhai Sun",
-        "Xiang Shi",
-        "Menglin Zou",
-        "Wenlong Huang"
-      ],
-      "score": 62,
-      "reasons": [
-        "keywords: vision-language-action, vla, cross-embodiment",
-        "report/model title"
       ]
     },
     {
@@ -7639,6 +7899,18 @@
       ]
     },
     {
+      "title": "National Team and Industrial Capital Inject Funds, The Dexterous Hand Sector Welcomes a “Top-Tier Alliance” - INSPIRE",
+      "url": "https://en.inspire-robots.com/news/7704.html",
+      "date": "2026-03-01",
+      "summary": "As the humanoid robot competition enters its \"second half,\" the flow of capital has become exceptionally clear. On February 24, INSPIRE ROBOTS, a benchmark enterprise in the domestic Dexterous Hand sector, officially announced the completion of C1 and C2 financing rounds, with a combined amount of hundreds of millions of RMB. If looking at the",
+      "organization_hint": "因时机器人 / Inspire Robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "LeRobot v0.4.4",
       "url": "https://github.com/huggingface/lerobot/releases/tag/v0.4.4",
       "date": "2026-02-27",
@@ -7805,6 +8077,18 @@
       "date": "2026-02-12",
       "summary": "Released Xiaomi-Robotics-0, a 4.7-billion-parameter vision-language-action model with pretrained and benchmark-specific weights, inference code, evaluation scripts, and real-time asynchronous execution.",
       "organization_hint": "小米机器人 / Xiaomi Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Upgraded Robot Management System (RMS)",
+      "url": "https://www.geekplus.com/resources/robotics-blogs/geek-rms-major-upgrade-redefine-flexibility-safety-and-ease-of-use",
+      "date": "2026-02-12",
+      "summary": "Geek+ released a major Robot Management System upgrade with data-driven dynamic fleet scheduling, global and omnidirectional path planning, enterprise security controls and real-time 3D monitoring.",
+      "organization_hint": "极智嘉 / Geek+",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8080,6 +8364,18 @@
       "score": 28,
       "reasons": [
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Physical AI – Digital intelligence, physical results | Agile Robots SE",
+      "url": "https://www.agile-robots.com/en/news/detail/physical-ai-digital-intelligence-physical-results/",
+      "date": "2026-02-01",
+      "summary": "Official release page from 思灵机器人 / Agile Robots.",
+      "organization_hint": "思灵机器人 / Agile Robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8700,7 +8996,7 @@
       "url": "https://github.com/resources/articles/what-is-prompt-engineering",
       "date": "2025-12-01",
       "summary": "Discover what prompt engineering is, how AI prompt engineering improves model performance, and why mastering prompt design is essential for building effective AI applications.",
-      "organization_hint": "灵心巧手",
+      "organization_hint": "节卡机器人 / JAKA Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8746,6 +9042,18 @@
       "url": "https://api-docs.deepseek.com/news/news251201/",
       "date": "2025-12-01",
       "summary": "DeepSeek-V3.2 is an LLM supporting thinking and non-thinking modes, tool use, and agent-oriented reasoning through DeepSeek's web, application and API services.",
+      "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DeepSeek | DeepSeek V3.2 正式版：强化 Agent 能力，融入思考推理",
+      "url": "https://www.deepseek.com/news/deepseek-v3-2/",
+      "date": "2025-12-01",
+      "summary": "DeepSeek-V3.2 和 V3.2-Speciale 正式发布，推理能力全球领先，首个将思考融入工具使用的模型，斩获 IMO、CMO、ICPC、IOI 金牌。",
       "organization_hint": "深度求索 / DeepSeek",
       "authors": [],
       "score": 100,
@@ -8983,6 +9291,18 @@
       ]
     },
     {
+      "title": "Agile ONE Robotic Foundation Model and Layered AI System",
+      "url": "https://www.agile-robots.com/en/news/detail/agile-robots-launches-humanoid-robot-for-industry-agile-one/",
+      "date": "2025-11-19",
+      "summary": "Agile Robots introduced the Robotic Foundation Model and layered AI system behind Agile ONE. The model is trained on real-world industrial, simulated, and human-collected data, while specialized architecture layers handle strategic reasoning and task planning, rapid responses, and fine motor control.",
+      "organization_hint": "思灵机器人 / Agile Robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-19",
       "organization_hint": "Sunday Robotics",
       "summary": "ACT-1 is a robot foundation model trained without robot teleoperation trajectories. It uses transformed human movement data for long-horizon mobile manipulation, map-conditioned navigation in unseen homes, and dexterous household tasks.",
@@ -9012,6 +9332,18 @@
       "summary": "These electronics-free fluidic soft robots use air pressure and mechanical coupling through the ground to produce complex rhythmic motion and synchronize with one another.",
       "title": "Self-Synchronizing Fluidic Robots",
       "url": "https://www.ox.ac.uk/news/2025-11-14-researchers-develop-air-powered-robots-move-sync-without-electronics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DobotStudio Pro 4.6.5",
+      "url": "https://www.dobot.cn/service/download-center?lang=cn",
+      "date": "2025-11-14",
+      "summary": "DobotStudio Pro 4.6.5 is a robot programming and control software release for DOBOT CRA, CRV, CRAF, Nova, Magician E6, and NovaLite systems.",
+      "organization_hint": "越疆科技 / DOBOT",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9099,6 +9431,18 @@
       ]
     },
     {
+      "title": "Industrial AI Cloud – The cloud infrastructure behind our Foundation Model | Agile Robots SE",
+      "url": "https://www.agile-robots.com/en/news/detail/industrial-ai-cloud-the-cloud-infrastructure-behind-our-foundation-model/",
+      "date": "2025-11-06",
+      "summary": "Official release page from 思灵机器人 / Agile Robots.",
+      "organization_hint": "思灵机器人 / Agile Robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-05",
       "organization_hint": "XPENG",
       "summary": "A large model developed specifically for robots and described by XPENG as the core engine for autonomous action, deeper reasoning, and decision-making in its humanoid robotics stack.",
@@ -9135,6 +9479,18 @@
       ]
     },
     {
+      "title": "Agile Robots acquires thyssenkrupp Auto­mation Engineering: Physical AI as a catalyst for Industrial Transformation | Agile Robots SE",
+      "url": "https://www.agile-robots.com/en/news/detail/agile-robots-acquires-thyssenkrupp-automation-engineering-physical-ai-as-a-catalyst-for-industrial-transformation/",
+      "date": "2025-11-02",
+      "summary": "Official release page from 思灵机器人 / Agile Robots.",
+      "organization_hint": "思灵机器人 / Agile Robots",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-01",
       "organization_hint": "Physical Intelligence",
       "summary": "π0.6 is a vision-language-action model release focused on improved dexterity, robustness, and long-horizon manipulation across multiple robot embodiments.",
@@ -9151,7 +9507,7 @@
       "url": "https://github.com/resources/articles/what-is-generative-ai-genai",
       "date": "2025-11-01",
       "summary": "Generative AI creates text, images, and code using deep learning. Explore GenAI tools, models, and how it’s shaping artificial intelligence today.",
-      "organization_hint": "灵心巧手",
+      "organization_hint": "节卡机器人 / JAKA Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9200,6 +9556,30 @@
       "date": "2025-11-01",
       "summary": "A method for training our generalist policies with RL to improve success rate and throughput on real-world tasks.",
       "organization_hint": "Physical Intelligence",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Nebula Platform 2.0",
+      "url": "https://seer-robotics.ai/zh/media/287",
+      "date": "2025-10-30",
+      "summary": "Version 2.0 of SEER Robotics' robot platform, adding intelligent simulation based on rapid environment scanning, high-fidelity 3D Gaussian reconstruction and virtual factory validation.",
+      "organization_hint": "仙工智能 / SEER Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "QuickMix",
+      "url": "https://quicktron.com/en_US/blogs/246",
+      "date": "2025-10-27",
+      "summary": "Quicktron debuted QuickMix, an all-scenario hybrid automation framework that coordinates tote-to-person, shelf-to-person, pallet-to-person, dense-storage and material-handling workflows through a unified Robot Control System.",
+      "organization_hint": "快仓智能 / Quicktron",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9324,18 +9704,6 @@
       ]
     },
     {
-      "title": "Rig3R",
-      "url": "https://wayve.ai/thinking/rig3r/",
-      "date": "2025-10-15",
-      "summary": "Rig3R is a geometric foundation model that estimates ego-motion and reconstructs three-dimensional scene structure from embodied multi-camera rigs.",
-      "organization_hint": "Wayve",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "DYNA-1i: Open-World Dexterity",
       "url": "https://www.dyna.co/research/open-world-dexterity",
       "date": "2025-10-15",
@@ -9401,6 +9769,18 @@
       "date": "2025-10-02",
       "summary": "Designed with Amazon’s front-line employees in mind, these innovations reduce repetitive tasks, improve safety, and boost productivity—while speeding up delivery.",
       "organization_hint": "Amazon Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Rig3R: Learning 3D Perception for Autonomous Vehicles - Wayve",
+      "url": "https://wayve.ai/thinking/rig3r/",
+      "date": "2025-10-01",
+      "summary": "Explore how Wayve's Rig3R enhances 3D understanding for autonomous vehicles using geometric foundation models and multi-camera rigs.",
+      "organization_hint": "Wayve",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9535,19 +9915,6 @@
         "keywords: world model",
         "physical-robot evidence",
         "release signal"
-      ]
-    },
-    {
-      "date": "2025-09-25",
-      "organization_hint": "Google DeepMind",
-      "summary": "新智元报道的新一代机器人模型家族。Gemini Robotics 1.5在执行动作前进行任务推理并支持跨本体技能迁移；Robotics-ER 1.5负责空间推理、工具调用和多步任务规划。",
-      "title": "Gemini Robotics 1.5 and Gemini Robotics-ER 1.5",
-      "url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "media-resolved official project discovery",
-        "official web-project discovery"
       ]
     },
     {
@@ -9695,6 +10062,18 @@
         "keywords: embodied foundation",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "JAKA EVO Industrial Embodied Intelligence Platform",
+      "url": "https://www.jaka.com/en/productDetails/JAKA%20EVO%20Industrial%20Embodied%20Intelligence%20Platform",
+      "date": "2025-09-17",
+      "summary": "Industrial embodied-AI operating platform with an integrated toolchain for data collection, augmentation, synthetic-data generation, model training and deployment. It uses pretrained foundation models for zero-shot task generalization and a 3B multimodal manipulation model for task planning and policy generation.",
+      "organization_hint": "节卡机器人 / JAKA Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -9889,6 +10268,19 @@
       "score": 100,
       "reasons": [
         "maintained official seed",
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-09-02",
+      "organization_hint": "Google DeepMind Robotics",
+      "summary": "We’re powering an era of physical agents — enabling robots to perceive, plan, think, use tools and act to better solve complex, multi-step tasks.",
+      "title": "Gemini Robotics 1.5 brings AI agents into the physical world — Google DeepMind",
+      "url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "media-resolved official project discovery",
         "official web-project discovery"
       ]
     },
@@ -10182,6 +10574,18 @@
       ]
     },
     {
+      "title": "OmniSharing DB",
+      "url": "https://omnisharingdb.paxini.com/home",
+      "date": "2025-08-12",
+      "summary": "OmniSharing DB is a human-collected embodied robotics dataset combining multidimensional tactile sensing, multiview vision, speech, text, proprioception and spatial trajectories for model training and cross-platform generalization.",
+      "organization_hint": "帕西尼感知 / PaXini",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-08-11",
       "organization_hint": "Alibaba DAMO Academy",
       "summary": "量子位报道的开源VLA模型，利用第一人称人类视频进行轨迹预训练，并迁移到机器人操作策略，以改善动作连续性和跨任务泛化。",
@@ -10358,10 +10762,10 @@
       ]
     },
     {
-      "title": "AV 3.0: Torc's AI Blueprint",
+      "title": "AV 3.0: Torc’s AI Blueprint - Torc Robotics",
       "url": "https://torc.ai/av-3-0-ai-artificial-intelligence/",
       "date": "2025-08-06",
-      "summary": "Torc's autonomous-trucking software framework combines a modular reinforcement-learned virtual driver for perception, prediction and planning with an advanced data loop and generative-AI simulation infrastructure.",
+      "summary": "Official release page from Torc Robotics.",
       "organization_hint": "Torc Robotics",
       "authors": [],
       "score": 100,
@@ -11162,18 +11566,6 @@
       ]
     },
     {
-      "date": "2025-06-10",
-      "organization_hint": "Hello Robot",
-      "summary": "Stretch MuJoCo v0.5 is a high-fidelity Stretch 3 simulation stack with real-time sensor simulation, Python and ROS 2 control interfaces, headless execution, Nav2 integration, and generated RoboCasa kitchen environments.",
-      "title": "Stretch MuJoCo v0.5",
-      "url": "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Redwood AI",
       "url": "https://www.1x.tech/discover/redwood-ai",
       "date": "2025-06-10",
@@ -11238,7 +11630,7 @@
       "url": "https://github.com/resources/articles/what-are-generative-ai-models",
       "date": "2025-06-02",
       "summary": "Generative AI models are algorithms that learn from existing data to produce new content like text, images, or code.",
-      "organization_hint": "灵心巧手",
+      "organization_hint": "仙工智能 / SEER Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11251,6 +11643,18 @@
       "summary": "We’re introducing an efficient, on-device robotics model with general-purpose dexterity and fast task adaptation.",
       "title": "Gemini Robotics On-Device brings AI to local robotic devices — Google DeepMind",
       "url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-06-01",
+      "organization_hint": "Hello Robot",
+      "summary": "Hi all, today we’re releasing v0.5 of Stretch MuJoCo, a high-fidelity simulation of Stretch 3 built on the MuJoCo physics engine. Here’s what’s new with the release:   Runs on Ubuntu, MacOS, and Windows Simulates Stretch 3 in real-time  Depth and Color cameras, with calibrated intrinsics, and support for hardware rendering 2D spinning lidar Python & ROS2 library, with position & velocity control   Can generate 100s of permutations of Robocasa kitchen-style environments  or add any custom envi...",
+      "title": "Stretch MuJoCo v0.5 Release - Announce - Stretch Forum",
+      "url": "https://forum.hello-robot.com/t/stretch-mujoco-v0-5-release/1344",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11467,6 +11871,18 @@
       ]
     },
     {
+      "title": "Mech-Vision & Mech-Viz 2.1.2",
+      "url": "https://downloads.mech-mind.com/?tab=tab-suite",
+      "date": "2025-05-16",
+      "summary": "Mech-Vision and Mech-Viz 2.1.2 provide machine vision, robot programming, simulation, path planning, collision detection, and robot communication for vision-guided manipulation.",
+      "organization_hint": "梅卡曼德 / Mech-Mind",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Towards Safe Robot Foundation Models Using Inductive Biases",
       "summary": "Safety is a critical requirement for the real-world deployment of robotic systems. Unfortunately, while current robot foundation models show promising generalization capabilities across a wide variety of tasks, they fail to address safety, an important aspect for ensuring long-term operation. Current robot foundation models assume that safe behavior should emerge by learning from a sufficiently large dataset of demonstrations. However, this approach has two clear major drawbacks. Firstly, there are no formal safety guarantees for a behavior cloning policy trained using supervised learning. Secondly, without explicit knowledge of any safety constraints, the policy may require an unreasonable number of additional demonstrations to even approximate the desired constrained behavior. To solve these key issues, we show how we can instead combine robot foundation models with geometric inductive biases using ATACOM, a safety layer placed after the foundation policy that ensures safe state transitions by enforcing action constraints. With this approach, we can ensure formal safety guarantees for generalist policies without providing extensive demonstrations of safe behavior, and without requiring any specific fine-tuning for safety. Our experiments show that our approach can be beneficial both for classical manipulation tasks, where we avoid unwanted collisions with irrelevant objects, and for dynamic tasks, such as the robot air hockey environment, where we can generate fast trajectories respecting complex tasks and joint space constraints.",
       "date": "2025-05-15",
@@ -11487,6 +11903,18 @@
         "keywords: robot foundation",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "JAKA Lumi Embodied Intelligence Platform",
+      "url": "https://www.jaka.com/zh/newsDetail/599",
+      "date": "2025-05-15",
+      "summary": "Embodied-robotics training platform providing a software toolchain from data collection through model deployment, compatibility with MuJoCo and NVIDIA Isaac Sim, local model inference and an integrated data-training-execution workflow.",
+      "organization_hint": "节卡机器人 / JAKA Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -11762,18 +12190,6 @@
       ]
     },
     {
-      "date": "2025-04-18",
-      "organization_hint": "Hello Robot",
-      "summary": "This software drop added Firebase signaling and authenticated deployment features to Stretch Web Teleop, fixed ROS 2 trajectory control and action-server behavior, and updated manipulation-planning and robot-control packages.",
-      "title": "Stretch Software Drop - April 18, 2025",
-      "url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Meta Perception Language Model",
       "url": "https://github.com/facebookresearch/perception_models",
       "date": "2025-04-17",
@@ -11856,6 +12272,30 @@
       ]
     },
     {
+      "title": "Mech-DLK 2.6.1",
+      "url": "https://downloads.mech-mind.com/?tab=tab-history",
+      "date": "2025-04-02",
+      "summary": "Mech-DLK 2.6.1 is a deep-learning software release for labeling, training, validation, inference, and deployment of vision models used in robotic guidance workflows.",
+      "organization_hint": "梅卡曼德 / Mech-Mind",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DOBOT 6Axis ROS2 V4",
+      "url": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4",
+      "date": "2025-04-02",
+      "summary": "DOBOT 6Axis ROS2 V4 is the official ROS 2 control and MoveIt integration repository for DOBOT CRA and Magician E6 robots using V4 controllers.",
+      "organization_hint": "越疆科技 / DOBOT",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "A VLA with Open-World Generalization",
       "url": "https://www.pi.website/blog/pi05",
       "date": "2025-04-02",
@@ -11885,6 +12325,18 @@
       "summary": "The X-Humanoid open-source community released robot-development resources including the RoboMIND dataset and a Tiangong-compatible training toolchain.",
       "title": "X-Humanoid Open-Source Community, RoboMIND and Training Toolchain",
       "url": "https://kfqgw.beijing.gov.cn/zwgkkfq/ztzl/lqztkfq/lqzx/zsdt/202505/t20250514_4088610.html",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-04-01",
+      "organization_hint": "Hello Robot",
+      "summary": "Hey all,  Here’s a quick round-up of some of the new software that’s been released for Stretch these past few weeks.  Firebase networking for the web interface   When you call your robot using the web interface, you’re using a protocol called WebRTC. This streams the robot’s cameras, microphone, and carries button presses (movement commands) back to the robot. WebRTC connects the two “peers”, your browser and the robot, using a process called signaling. We’ve supported local signaling for a whil...",
+      "title": "Software drop - April 18, 2025 - Announce - Stretch Forum",
+      "url": "https://forum.hello-robot.com/t/software-drop-april-18-2025/1332",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -12075,6 +12527,18 @@
       "date": "2025-03-25",
       "summary": "DeepSeek-V3-0324 is an updated general-purpose LLM with improved reasoning, coding, function calling, writing and search capabilities.",
       "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "DobotStudio Pro 4.6.0.0",
+      "url": "https://www.dobot-robots.com/insights/news/1079.html",
+      "date": "2025-03-20",
+      "summary": "DobotStudio Pro 4.6.0.0 introduced trajectory recovery, program debugging, force-control functions, safety-limit configuration, robot jogging improvements, and TCP control enhancements.",
+      "organization_hint": "越疆科技 / DOBOT",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -12333,6 +12797,18 @@
       ]
     },
     {
+      "title": "DOBOT X-Trainer SDK with Graphical Control Interface",
+      "url": "https://www.dobot.cn/service/download-center?data_type%5B%5D=2",
+      "date": "2025-03-11",
+      "summary": "The graphical X-Trainer SDK package provides a user interface for teleoperation, device debugging, embodied-robot data collection, and dataset compression.",
+      "organization_hint": "越疆科技 / DOBOT",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Towards Safe Robot Foundation Models",
       "summary": "Robot foundation models hold the potential for deployment across diverse environments, from industrial applications to household tasks. While current research focuses primarily on the policies' generalization capabilities across a variety of tasks, it fails to address safety, a critical requirement for deployment on real-world systems. In this paper, we introduce a safety layer designed to constrain the action space of any generalist policy appropriately. Our approach uses ATACOM, a safe reinforcement learning algorithm that creates a safe action space and, therefore, ensures safe state transitions. By extending ATACOM to generalist policies, our method facilitates their deployment in safety-critical scenarios without requiring any specific safety fine-tuning. We demonstrate the effectiveness of this safety layer in an air hockey environment, where it prevents a puck-hitting agent from colliding with its surroundings, a failure observed in generalist policies.",
       "date": "2025-03-10",
@@ -12487,18 +12963,6 @@
       ]
     },
     {
-      "date": "2025-02-28",
-      "organization_hint": "Hello Robot",
-      "summary": "This software drop improved Stretch AI and DynaMem installation, corrected fast-mode behavior in the Dex Teleop demonstration-collection system, and updated Nav2 mapping, ROS 2 control, and web teleoperation software.",
-      "title": "Stretch Software Drop - February 28, 2025",
-      "url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Magma",
       "url": "https://github.com/microsoft/Magma",
       "date": "2025-02-25",
@@ -12598,6 +13062,18 @@
       ]
     },
     {
+      "date": "2025-02-02",
+      "organization_hint": "Hello Robot",
+      "summary": "Hey all,  Here’s a quick round-up of some of the new software that’s been released for Stretch these past few weeks.  New tutorial for developing on web interface If you’re interested in learning how write frontend React components that can call into ROS2 APIs, I’ve written a new tutorial called Developing on the Web Interface. The web interface is sophisticated web app that enables user to call and teleoperate their Stretch robot over the internet. I hope this tutorial makes it easier to approa...",
+      "title": "Software drop - February 28, 2025 - Announce - Stretch Forum",
+      "url": "https://forum.hello-robot.com/t/software-drop-february-28-2025/1248",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Sanctuary AI Equips General Purpose Robots with New Touch Sensors for Performing Highly Dexterous Tasks | Robotics News & Insights | Sanctuary AI",
       "url": "https://sanctuary.ai/news/sanctuary-ai-equips-general-purpose-robots/",
       "date": "2025-02-02",
@@ -12651,18 +13127,6 @@
       "summary": "MuJoCo Playground is an open-source framework for GPU-accelerated robot learning, simulation, training, and sim-to-real deployment built around MuJoCo and MJX.",
       "title": "MuJoCo Playground",
       "url": "https://playground.mujoco.org/",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "date": "2025-01-31",
-      "organization_hint": "Hello Robot",
-      "summary": "This software drop introduced on-demand URDF generation for inverse kinematics, motion planning, and perception; isolated FUNMAP in a reproducible Python environment; and fixed lidar artifacts that impaired Nav2 planning.",
-      "title": "Stretch Software Drop - January 31, 2025",
-      "url": "https://forum.hello-robot.com/t/software-drop-january-31-2025/1216",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -12724,6 +13188,18 @@
       "summary": "Research release of Computer-Using Agent (CUA), a vision-and-reasoning action model trained through reinforcement learning to operate graphical user interfaces using screenshots, mouse actions, and keyboard input.",
       "title": "Computer-Using Agent",
       "url": "https://openai.com/index/computer-using-agent/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Geek+ System Portal",
+      "url": "https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C",
+      "date": "2025-01-22",
+      "summary": "Geek+ introduced System Portal as a unified interface for its RMS, WES and IOP software, with single sign-on, robot and warehouse monitoring, operational metrics and configurable dashboards.",
+      "organization_hint": "极智嘉 / Geek+",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -12857,6 +13333,18 @@
       "summary": "NVIDIA Cosmos is a platform of world foundation models, tokenizers, guardrails, and data-processing tools for generating and evaluating physics-aware synthetic data for physical AI.",
       "title": "NVIDIA Cosmos",
       "url": "https://nvidianews.nvidia.com/news/cosmos-world-foundation-models",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "date": "2025-01-03",
+      "organization_hint": "Hello Robot",
+      "summary": "Hey all,  Here’s a quick round-up of some of the new software that’s been released for Stretch these past few weeks.  Generate custom URDFs on-the-fly The Stretch URDF library provides a module to modify, generate, and retrieve URDFs for a variety of applications. See full details in this post:   Launching Apps on Boot A new tutorial looks at using Systemd Unit files to get applications to start automatically when the robot boots up. See full details here:   Run FUNMAP within a UV Python Virtual...",
+      "title": "Software drop - January 31, 2025 - Announce - Stretch Forum",
+      "url": "https://forum.hello-robot.com/t/software-drop-january-31-2025/1216",
       "authors": [],
       "score": 100,
       "reasons": [

@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=XFYTpzooxWYQ7kNvwF9F1Oq&_nc_oc=AdowWkMn9QouurY9w_vp84tO2Ubc8iTcKJ8BmlTG9D5EzyTd8W6FGS4qmPWiVG6ssco&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=uLfd9tudeK0zcO5JAcn3GA&_nc_ss=7b20f&oh=00_AQGc8O6qb9LRKZef4VvcmBK581oyp3D0Kad42zC_Ngfpog&oe=6A979973",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=XFYTpzooxWYQ7kNvwF9F1Oq&_nc_oc=AdowWkMn9QouurY9w_vp84tO2Ubc8iTcKJ8BmlTG9D5EzyTd8W6FGS4qmPWiVG6ssco&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=vZtK9ov_tp-cG73FbuPLkA&_nc_ss=7b20f&oh=00_AQF_YZImWnraqOzWgKqpzmHPsbHi2WHPhMrrmmrvqPcRVg&oe=6A98EAF3",
       "width": 1920,
       "height": 1080
     },
@@ -200,6 +200,18 @@
       "height": 600
     },
     {
+      "id": "rokae-xcoreplugin-client-v1-0-2-7-54dd3b6",
+      "asset": "frameworks/rokae-xcoreplugin-client-v1-0-2-7-54dd3b6.jpg",
+      "source_url": "https://github.com/RokaeRobot/xCorePlugin-client/releases/tag/v1.0.2.7",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/654faffee1a84b013f87a4f5624720fbee7a8365334770e48a1624f56916d183/RokaeRobot/xCorePlugin-client/releases/tag/v1.0.2.7",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "lerobot-v0-6-1-8bbdfe1",
       "asset": "frameworks/lerobot-v0-6-1-8bbdfe1.jpg",
       "source_url": "https://github.com/huggingface/lerobot/releases/tag/v0.6.1",
@@ -236,6 +248,18 @@
       "height": 1468
     },
     {
+      "id": "flexiv-rdk-v1-9-3-2ff8c8c",
+      "asset": "frameworks/flexiv-rdk-v1-9-3-2ff8c8c.jpg",
+      "source_url": "https://www.flexiv.com/software/rdk",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://oss-flexiv-web-com.flexiv.com/image/software/rdk/acquisition.png?x-oss-process=image/resize,w_2000,limit_0/format,jpg/interlace,1/quality,Q_90",
+      "width": 2000,
+      "height": 1143
+    },
+    {
       "id": "rerun-0-35-0-2462fa6",
       "asset": "frameworks/rerun-0-35-0-2462fa6.jpg",
       "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.35.0",
@@ -243,7 +267,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODY1OTUzNjUsIm5iZiI6MTc4NjU5NTA2NSwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgxMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MTNUMDQyNDI1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YWM2ZWM4ZTg1NTM5OWJmNTFjYjBlYTc1ODQ1ZTE1ZGIxNTZmOTE2N2RkNTYwZjg5NWUxYTRhZDkzNjMyOTJkZCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.Lld48FqEa47fZwL70-Q3BLFwF1q6MWM7s-GHgT3MIsE",
+      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODY2ODUwODYsIm5iZiI6MTc4NjY4NDc4NiwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgxNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MTRUMDUxOTQ2WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTdiMzQ0ODBlZTE5ZmY3NDljYTU5NjUxNzIzYTdiN2Q2OGY2ZjljY2QxYTk4YzI3NmQwYzI2YzJiNGUwZTBiNyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.weQzgjCYL_yx9gn1ghnU1oP8kb734x3kGv3-eyhUHcM",
       "width": 453,
       "height": 166
     },
@@ -392,6 +416,18 @@
       "height": 600
     },
     {
+      "id": "flexiv-rdk-v2-1-2367aa3",
+      "asset": "frameworks/flexiv-rdk-v2-1-2367aa3.jpg",
+      "source_url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v2.1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/ccb94a4a6610b658c656cb1efaabe27f36bf2a789c7797034df5c0033ab9c8ff/flexivrobotics/flexiv_rdk/releases/tag/v2.1",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "object-centric-residual-rl-for-zero-shot-sim-to--f1def0f",
       "asset": "frameworks/object-centric-residual-rl-for-zero-shot-sim-to--f1def0f.jpg",
       "source_url": "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
@@ -402,6 +438,18 @@
       "image_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/06/image-14-1024x322.png",
       "width": 1024,
       "height": 322
+    },
+    {
+      "id": "flexiv-rdk-v1-9-2-211dc03",
+      "asset": "frameworks/flexiv-rdk-v1-9-2-211dc03.jpg",
+      "source_url": "https://github.com/flexivrobotics/flexiv_rdk/releases/tag/v1.9.2",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/bd81f0154045a9686e2a085b92bd6bfd4a83f3e79f21d4df3bd6fa03352ef026/flexivrobotics/flexiv_rdk/releases/tag/v1.9.2",
+      "width": 1200,
+      "height": 600
     },
     {
       "id": "show-don-t-tell-detecting-novel-objects-by-watch-26b5133",
@@ -507,7 +555,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/c20990eb814071077aa582d41dd1f25b072d4db75db3231cff7b9c60d7c3f21d/LejuRobotics/LeTools-Learning",
+      "image_url": "https://opengraph.githubassets.com/d9337d27fe555be00f0d9ad544b689ed35a5b3315b7d0f928112729fedbb8d5c/LejuRobotics/LeTools-Learning",
       "width": 1200,
       "height": 600
     },
@@ -584,6 +632,18 @@
       "height": 600
     },
     {
+      "id": "flexiv-rdk-v1-9-1-c76d30f",
+      "asset": "frameworks/flexiv-rdk-v1-9-1-c76d30f.jpg",
+      "source_url": "https://www.flexiv.com/software/rdk",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://oss-flexiv-web-com.flexiv.com/image/software/rdk/acquisition.png?x-oss-process=image/resize,w_2000,limit_0/format,jpg/interlace,1/quality,Q_90",
+      "width": 2000,
+      "height": 1143
+    },
+    {
       "id": "accelerating-residual-reinforcement-learning-wit-1601e49",
       "asset": "frameworks/accelerating-residual-reinforcement-learning-wit-1601e49.jpg",
       "source_url": "https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/",
@@ -594,6 +654,18 @@
       "image_url": "https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/static/images/final_teaser.png",
       "width": 5300,
       "height": 2100
+    },
+    {
+      "id": "next-generation-intelligent-operation-platform-i-1eb9db8",
+      "asset": "frameworks/next-generation-intelligent-operation-platform-i-1eb9db8.jpg",
+      "source_url": "https://www.geekplus.com/resources/robotics-blogs/geek-launches-next-generation-intelligent-operation-platform-iop",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.geekplus.com/hs-fs/hubfs/35bbbebb-a8f7-4d34-82dc-72e6987cac26.jpg?width=1198&height=826&name=35bbbebb-a8f7-4d34-82dc-72e6987cac26.jpg",
+      "width": 1198,
+      "height": 826
     },
     {
       "id": "q2rl-extracting-q-values-from-behavior-cloning-f-bbac5d3",
@@ -620,6 +692,18 @@
       "height": 471
     },
     {
+      "id": "flexiv-ros-2-jazzy-2-0-fe3a3c7",
+      "asset": "frameworks/flexiv-ros-2-jazzy-2-0-fe3a3c7.jpg",
+      "source_url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/jazzy-v2.0",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/b4529e27e1a693cca4c5f5804d6aa805c97ea8c92c1c82542fd253a2f4343cea/flexivrobotics/flexiv_ros2/releases/tag/jazzy-v2.0",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "expertgen-ae30a3c",
       "asset": "frameworks/expertgen-ae30a3c.jpg",
       "source_url": "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
@@ -640,6 +724,18 @@
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
       "image_url": "https://opengraph.githubassets.com/ffea34d059de87f215e177116c3dfcf24cff981f5f3d08c0ac48d24692221442/rerun-io/rerun/releases/tag/0.32.1",
+      "width": 1200,
+      "height": 600
+    },
+    {
+      "id": "flexiv-ros-2-humble-1-9-1-47fd066",
+      "asset": "frameworks/flexiv-ros-2-humble-1-9-1-47fd066.jpg",
+      "source_url": "https://github.com/flexivrobotics/flexiv_ros2/releases/tag/humble-v1.9.1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/c68c5bd173fc7cb1b3fd2f5e1faeae6b093b648fa9ca83d465a7fc93ff6f196b/flexivrobotics/flexiv_ros2/releases/tag/humble-v1.9.1",
       "width": 1200,
       "height": 600
     },
@@ -992,6 +1088,18 @@
       "height": 600
     },
     {
+      "id": "upgraded-robot-management-system-rms-2fb0c25",
+      "asset": "frameworks/upgraded-robot-management-system-rms-2fb0c25.jpg",
+      "source_url": "https://www.geekplus.com/resources/robotics-blogs/geek-rms-major-upgrade-redefine-flexibility-safety-and-ease-of-use",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.geekplus.com/hs-fs/hubfs/35bbbebb-a8f7-4d34-82dc-72e6987cac26.jpg?width=1198&height=826&name=35bbbebb-a8f7-4d34-82dc-72e6987cac26.jpg",
+      "width": 1198,
+      "height": 826
+    },
+    {
       "id": "the-real-world-learning-loop-c472922",
       "asset": "frameworks/the-real-world-learning-loop-c472922.jpg",
       "source_url": "https://sereact.ai/posts/real-world-learning-loop",
@@ -1035,7 +1143,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/39d584c6c15182f2363161c5a4f8ebb57cbc3aa8bf897ae02584d2c608950d3c/huawei-noah/noah-research",
+      "image_url": "https://opengraph.githubassets.com/aea6bb0eb3d4ba50137444d938619b5a98ab49db1c18d9b170bcc932d9179174/huawei-noah/noah-research",
       "width": 1200,
       "height": 600
     },
@@ -1068,12 +1176,12 @@
       "asset": "frameworks/viam-platform-roundup-january-2026-9cf1b2c.jpg",
       "source_url": "https://www.viam.com/post/january-2026-platform-roundup",
       "page": null,
-      "caption_detected": true,
+      "caption_detected": false,
       "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/6968f4eb3666d4655bb7d101_model%20selection%20UI.png",
-      "width": 1317,
-      "height": 663
+      "selection": "official_project_visual",
+      "image_url": "https://cdn.prod.website-files.com/62fba5686b6d47653f1ed2ae/69690a0c6b5d6beda9e8581b_012026_blog_jan-platform-roundup_main-final.png",
+      "width": 750,
+      "height": 500
     },
     {
       "id": "seed-gr-rl-866989b",
@@ -1148,6 +1256,18 @@
       "height": 1188
     },
     {
+      "id": "agile-one-robotic-foundation-model-and-layered-a-bc94972",
+      "asset": "frameworks/agile-one-robotic-foundation-model-and-layered-a-bc94972.jpg",
+      "source_url": "https://www.agile-robots.com/en/news/detail/industrial-ai-cloud-the-cloud-infrastructure-behind-our-foundation-model/",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.agile-robots.com/media/files/New_website/Blog/Blogpost_Telekom/AgileRobots-Blog-Telekom-006.jpeg",
+      "width": 2400,
+      "height": 1601
+    },
+    {
       "id": "act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2",
       "asset": "frameworks/act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2.jpg",
       "source_url": "https://www.sunday.ai/blog/no-robot-data",
@@ -1206,114 +1326,6 @@
       "image_url": "https://s-cdn.xpeng.com/xpwebsite/prod/2025-11-06/a0de30fe7ed84db1b4f31f8593c6ad23.png",
       "width": 864,
       "height": 485
-    },
-    {
-      "id": "transactable-world-models-dexterity-ace73fb",
-      "asset": "frameworks/transactable-world-models-dexterity-ace73fb.jpg",
-      "source_url": "https://dexterity.ai/blog/transactable-world-models",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://dexterity.ai/images/blog-twm.jpg",
-      "width": 800,
-      "height": 472
-    },
-    {
-      "id": "a-vla-that-learns-from-experience-dd4ff94",
-      "asset": "frameworks/a-vla-that-learns-from-experience-dd4ff94.jpg",
-      "source_url": "https://www.pi.website/blog/pistar06",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://physicalintelligence.company/images/pistar06-og.png",
-      "width": 2400,
-      "height": 1260
-    },
-    {
-      "id": "intrinsic-vision-model-a823cb6",
-      "asset": "frameworks/intrinsic-vision-model-a823cb6.jpg",
-      "source_url": "https://www.intrinsic.ai/intrinsic-vision-model",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://cdn.prod.website-files.com/65ef6590d3b13c549fc95d9b/65fc839c941f94ab5376a709_image-placeholder.svg",
-      "width": 1200,
-      "height": 1200
-    },
-    {
-      "id": "project-eluna-ac61ce6",
-      "asset": "frameworks/project-eluna-ac61ce6.jpg",
-      "source_url": "https://www.aboutamazon.com/news/operations/new-robots-amazon-fulfillment-agentic-ai",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://assets.aboutamazon.com/dims4/default/4db44c3/2147483647/strip/true/crop/2000x1125+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Fassets.aboutamazon.com%2Ff3%2Fc1%2Fcfcea1784fbdbecaa361808c37b1%2Fabout-amazon-hero-aa-102024-proteusworkday-featured-hero-v1-600kb-2550x1125.jpg",
-      "width": 1320,
-      "height": 743
-    },
-    {
-      "id": "x1-multirobot-response-system-c40730d",
-      "asset": "frameworks/x1-multirobot-response-system-c40730d.jpg",
-      "source_url": "https://www.caltech.edu/about/news/caltech-and-technology-innovation-institute-demo-multirobot-response-team",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://caltech-prod.resources.caltech.edu/main/images/CAST-X1-Robot-CaltechHall-WE.2e16d0ba.fill-1600x810-c100.jpg",
-      "width": 1600,
-      "height": 810
-    },
-    {
-      "id": "digit-s-next-steps-6c867db",
-      "asset": "frameworks/digit-s-next-steps-6c867db.jpg",
-      "source_url": "https://www.agilityrobotics.com/content/digits-next-steps",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://cdn.prod.website-files.com/6980c63561bbbeb67b4b7ab5/698e3705dd8e5fdc8073c968_698e0485df3a91085bfe56c1_68ca0133b866bfc54927d3f1_nav-cover.jpeg",
-      "width": 1200,
-      "height": 630
-    },
-    {
-      "id": "lerobot-v0-4-d36c040",
-      "asset": "frameworks/lerobot-v0-4-d36c040.jpg",
-      "source_url": "https://huggingface.co/blog/lerobot-release-v040",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.4.0/lerobot-libero-groot-v040.gif",
-      "width": 1152,
-      "height": 648
-    },
-    {
-      "id": "piegraph-learning-equivariant-neural-augmented-o-eb0d1eb",
-      "asset": "frameworks/piegraph-learning-equivariant-neural-augmented-o-eb0d1eb.jpg",
-      "source_url": "https://rai-inst.com/resources/papers/learning-equivariant-neural-augmented-object-dynamics-from-few-interactions/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://rai-inst.com/wp-content/uploads/2026/02/5ea7ba21-5995-4c91-9c85-3f314719bc58-768x431.png",
-      "width": 768,
-      "height": 431
-    },
-    {
-      "id": "fomo-3d-using-vision-foundation-models-for-long--79e3c4e",
-      "asset": "frameworks/fomo-3d-using-vision-foundation-models-for-long--79e3c4e.jpg",
-      "source_url": "https://waabi.ai/research/fomo3d",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://waabi.ai/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F163962%2F1760716391-overview.png%3Ffit%3Dmax%26h%3D3000%26q%3D90%26w%3D2000&w=1920&q=75",
-      "width": 853,
-      "height": 340
     }
   ]
 }
