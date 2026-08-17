@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-14T04:56:40.750678+00:00",
+  "updated_at": "2026-08-17T04:00:00.104316+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -1375,6 +1375,183 @@
         "https://www.agile-robots.com/en/news/detail/agile-robots-launches-humanoid-robot-for-industry-agile-one/"
       ],
       "last_bootstrapped_at": "2026-08-14T04:56:10.232465+00:00",
+      "last_error": null
+    },
+    "普渡科技-pudu-robotics-de9f05f3": {
+      "name": "普渡科技 / Pudu Robotics",
+      "official_urls": [
+        "https://open.pudutech.com/",
+        "https://www.pudurobotics.com/",
+        "https://www.pudurobotics.com/en/company",
+        "https://www.pudurobotics.com/en/news"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.pudurobotics.com/en/news/pudu-robotics-launches-puduagent-universal-embodied-ai-agent-platform",
+        "https://www.pudurobotics.com/en/news/pudu-robotics-unveils-breakthroughs-four-product-lines-2026-partner-summit",
+        "https://www.pudurobotics.com/en/news/pudu-robotics-unveils-pudufm-1-0-embodied-intelligence-foundation-model"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:49:45.384139+00:00",
+      "last_error": null
+    },
+    "优艾智合-youibot-4a290aca": {
+      "name": "优艾智合 / Youibot",
+      "official_urls": [
+        "https://en.youibot.com/",
+        "https://jp.youibot.com/",
+        "https://semi.youibot.com/",
+        "https://zh.youibot.com/",
+        "https://zh.youibot.com/news.html"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-17T03:51:26.742493+00:00",
+      "last_error": null
+    },
+    "斯坦德机器人-standard-robots-9bedb744": {
+      "name": "斯坦德机器人 / Standard Robots",
+      "official_urls": [
+        "https://en.standard-robots.com/",
+        "https://www.standard-robots.com/",
+        "https://www.standard-robots.com/blog",
+        "https://www.standard-robots.com/products/cid-3.html"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-17T03:52:03.124855+00:00",
+      "last_error": null
+    },
+    "睿尔曼智能-realman-robotics-8a62e981": {
+      "name": "睿尔曼智能 / RealMan Robotics",
+      "official_urls": [
+        "https://develop.realman-robotics.com/",
+        "https://github.com/RealManRobot",
+        "https://www.realman-robotics.cn/",
+        "https://www.realman-robotics.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.0.7",
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.0",
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1",
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.2",
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.3",
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.4",
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.5",
+        "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:52:59.372639+00:00",
+      "last_error": null
+    },
+    "大族机器人-han-s-robot-46f548fc": {
+      "name": "大族机器人 / Han's Robot",
+      "official_urls": [
+        "https://www.huayan-robotics.com/",
+        "https://www.huayan-robotics.com/about-us/news",
+        "https://www.huayan-robotics.net/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.huayan-robotics.com/about-us/news/2507.html",
+        "https://www.huayan-robotics.com/about-us/news/2635.html"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:53:52.755003+00:00",
+      "last_error": null
+    },
+    "埃斯顿-estun-automation-160bef29": {
+      "name": "埃斯顿 / Estun Automation",
+      "official_urls": [
+        "https://en.estun.com/",
+        "https://www.estun.com/",
+        "https://www.estun.com/about-us/",
+        "https://www.estun.com/solute/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.estun.com/news/489.html",
+        "https://www.estun.com/news/640.html",
+        "https://www.estun.com/news/700.html",
+        "https://www.estun.com/news/750.html"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:54:25.981406+00:00",
+      "last_error": null
+    },
+    "遨博智能-aubo-robotics-7851cc80": {
+      "name": "遨博智能 / AUBO Robotics",
+      "official_urls": [
+        "https://developer.aubo-robotics.cn/",
+        "https://docs.aubo-robotics.cn/",
+        "https://github.com/AuboRobot",
+        "https://www.aubo-robotics.cn/"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-17T03:55:08.190860+00:00",
+      "last_error": null
+    },
+    "新松机器人-siasun-robot-automation-91a532c6": {
+      "name": "新松机器人 / SIASUN Robot & Automation",
+      "official_urls": [
+        "https://en.siasun.com/",
+        "https://www.siasun.com/",
+        "https://www.siasunagv.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.siasun.com/index.php/news-detail162.html",
+        "https://www.siasun.com/news-detail948.html"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:55:57.541848+00:00",
+      "last_error": null
+    },
+    "慧灵科技-huiling-technology-bedff6d7": {
+      "name": "慧灵科技 / Huiling Technology",
+      "official_urls": [
+        "https://www.hitbot.cc/",
+        "https://www.hitbot.cc/news.html",
+        "https://www.hitbot.cc/scenario-model.html",
+        "https://www.hitbotrobot.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.hitbot.cc/industry-trends/432.html",
+        "https://www.hitbot.cc/industry-trends/hitbotos001.html"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:56:48.352778+00:00",
+      "last_error": null
+    },
+    "开普勒机器人-kepler-robot-b6fb68f0": {
+      "name": "开普勒机器人 / Kepler Robot",
+      "official_urls": [
+        "https://developer.gotokepler.com/",
+        "https://www.gotokepler.com/",
+        "https://www.gotokepler.com/about",
+        "https://www.gotokepler.com/developerPlatform",
+        "https://www.gotokepler.com/news"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-17T03:57:30.236347+00:00",
+      "last_error": null
+    },
+    "松灵机器人-agilex-robotics-e8695288": {
+      "name": "松灵机器人 / AgileX Robotics",
+      "official_urls": [
+        "https://bbs.agilex.ai/",
+        "https://github.com/agilexrobotics",
+        "https://global.agilex.ai/",
+        "https://www.agilex.ai/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/agilexrobotics/agilex_arm_mujoco_sim",
+        "https://github.com/agilexrobotics/data_tools",
+        "https://github.com/agilexrobotics/gr00t-agilex",
+        "https://github.com/agilexrobotics/mobile_aloha_sim_ros2"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:58:59.933108+00:00",
+      "last_error": null
+    },
+    "穹彻智能-noematrix-ai-1a0c07db": {
+      "name": "穹彻智能 / Noematrix AI",
+      "official_urls": [
+        "https://www.noematrix.ai/",
+        "https://www.noematrix.ai/about",
+        "https://www.noematrix.ai/research-innovation"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.noematrix.ai/news/Noematrix-WAIC-2025"
+      ],
+      "last_bootstrapped_at": "2026-08-17T03:59:56.237406+00:00",
       "last_error": null
     }
   }

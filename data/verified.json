@@ -482,6 +482,84 @@
     ]
   },
   {
+    "id": "rm-api2-1-1-6-7d99ad3",
+    "title": "RM_API2 1.1.6",
+    "organization": "睿尔曼智能科技（北京）有限公司 / RealMan Intelligent Technology (Beijing) Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2026-07-24",
+    "year": 2026,
+    "summary": "RM_API2 1.1.6 是睿尔曼面向其实体机械臂的控制与二次开发 API 版本，核心用途包括运动控制、路径规划、设备状态读取和自动化系统集成。该版本集中改进命令通信与运动接口的可靠性：发送 JSON 前清理队列、优化 Linux socket 接收路径、为 JSON 收发增加调试日志、开放自动工具坐标系生成接口，并完善阻塞运动命令中途失败时的返回处理。项目提供 Python、C、C++、C# 开发入口，覆盖 Windows 32/64 位和 Linux x86/ARM 环境，并附有 Visual Studio、Qt、CMake 等示例工程。它不是 VLA 或基础模型，而是直接作用于物理机械臂的底层开发与控制栈，因此归入 Robot systems 和 Robot manipulation。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6))",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "RM_API2 是面向睿尔曼实体机械臂的二次开发软件包，不是机械臂硬件或产品规格页面；官方说明其接口覆盖机械臂控制、路径规划和状态监控。([github.com](https://github.com/RealManRobot/RM_API2))",
+        "项目提供 Python、C、C++、C# 等开发接口；仓库同时包含 C、C++、Python 代码目录以及多个演示项目。([github.com](https://github.com/RealManRobot/RM_API2))",
+        "Python 包可通过 pip 安装，也可直接克隆官方仓库；官方示例展示了建立机械臂网络连接并读取产品、算法库、控制层、动力学和规划层软件版本的流程。([github.com](https://github.com/RealManRobot/RM_API2))",
+        "1.1.6 在发送 JSON 命令前加入队列清理，降低残留队列影响后续控制指令的风险。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6))",
+        "该版本优化 Linux 下 thread_socket_receive 的 socket 接收实现，并为 JSON 收发增加 debug 日志输出，以改善通信诊断能力。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6))",
+        "该版本开放 rm_generate_auto_tool_frame 自动工具坐标系生成接口，并调整阻塞运动接口在运动中途失败时的返回处理。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6))"
+      ],
+      "capabilities": [
+        "控制睿尔曼实体机械臂并执行运动命令",
+        "进行机械臂路径规划与运行状态监控",
+        "通过 Python、C、C++ 和 C# 接口开展二次开发",
+        "生成自动工具坐标系，并处理阻塞式运动命令的执行结果",
+        "在 Windows、Linux x86 和 Linux ARM 环境中集成机械臂应用"
+      ],
+      "metrics": [
+        {
+          "label": "版本发布日期",
+          "note": "GitHub 官方发布页显示该版本于 2026 年 7 月 24 日发布。",
+          "value": "2026-07-24"
+        },
+        {
+          "label": "版本变更项",
+          "note": "官方 1.1.6 发布说明列出的独立更新条目数量。",
+          "value": "5 项"
+        },
+        {
+          "label": "Python 版本要求",
+          "note": "官方快速开始文档规定的最低 Python 版本。",
+          "value": "Python 3.9+"
+        },
+        {
+          "label": "Linux 编译器要求",
+          "note": "官方 C/C++ 开发说明规定的最低 GCC 版本。",
+          "value": "GCC 7.5+"
+        },
+        {
+          "label": "支持的平台架构",
+          "note": "文档明确列出 Windows 32/64 位，以及 Linux x86/ARM。",
+          "value": "4 种平台/架构组合"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.realman-robotics.com/en/main/about-us.html"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6"
+      }
+    ]
+  },
+  {
     "id": "rerun-0-35-0-2462fa6",
     "title": "Rerun 0.35.0",
     "organization": "Rerun Technologies AB",
@@ -1326,6 +1404,84 @@
     ]
   },
   {
+    "id": "scenario-model-driven-strain-construction-agent--b5adfbe",
+    "title": "Scenario-Model-Driven Strain Construction Agent Platform",
+    "organization": "慧灵科技 / HITBOT",
+    "organizationKind": "Company",
+    "date": "2026-07-02",
+    "year": 2026,
+    "summary": "Scenario-Model-Driven Strain Construction Agent Platform是慧灵科技面向微生物实验自动化构建的物理智能体软件平台。它以HITBOT OS为执行和设备集成底座，将实验人员用自然语言或简单图形表达的实验目标转换成标准化流程，并结合行业知识库、前沿文献、实验室SOP和设备能力模型生成可执行任务。系统不仅规划实验步骤，还会把机械路径、移液速度、吹打次数、温控与时间等物理约束编译为底层设备指令，由部署在模块化工作站上的多个智能体协同执行。其场景模型架构融合基座大模型、RAG、分层提示词、任务依赖拆解和多智能体路由，承担需求理解、策略推演、方案生成与异常判断。实验和设备执行产生的反馈会重新进入知识库，形成面向后续规划的更新闭环。官方报告该全自动工程菌株构建平台可将通量提高10倍以上、人工成本降低80%，并称其于2026年3月在analytica 2026现场自主演示了从需求解析到硬件执行的完整闭环。",
+    "tags": [
+      "LLM",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "LLM",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "平台以HITBOT OS为软硬件一体化执行核心，允许实验人员用自然语言输入实验目标，并把目标贯通到物理设备动作。",
+        "系统把自然语言或简单图形描述的实验流程转换为标准化操作流程图，再依据预先录入的设备能力模型执行硬件感知的指令编译。",
+        "规划阶段综合实验室SOP、设备物理约束和任务依赖，可计算机械移动路径，并为不同液体配置移液速度、吹打循环及温控曲线等执行参数。",
+        "场景模型将多模态、高结构化行业知识库与基座大模型结合，使用分层提示词控制、检索增强生成、任务依赖拆解和多智能体协同调度完成认知与决策。",
+        "平台采用模块化工作站架构，每个独立工作站搭载专属智能体；工艺调整可通过增删功能模块完成，而不必整体替换自动化产线。",
+        "系统形成从知识沉淀、知识表征、智能决策到硬件执行的闭环；新的实验与执行反馈会回流知识库，用于更新后续方案设计与执行依据。",
+        "官方页面称其采用分布式学习框架，在保障客户数据安全的前提下整合跨领域工艺数据和模型经验，并通过迁移学习帮助数据较少的新场景启动。"
+      ],
+      "capabilities": [
+        "自然语言或简单图形实验流程到标准化操作流程图的转换",
+        "结合实验室SOP与设备物理约束进行任务分解、路径规划和参数规划",
+        "将规划后的任务流编译为底层实验设备可执行的机器指令序列",
+        "通过多个专属智能体调度模块化工作站协同完成菌株构建流程",
+        "采集实验设计与设备执行反馈并回流知识库，持续更新规划依据"
+      ],
+      "metrics": [
+        {
+          "label": "实验通量",
+          "note": "HITBOT OS官方场景页面对“全自动工程菌株构建平台”的报告结果。",
+          "value": "提升10倍以上"
+        },
+        {
+          "label": "人工成本",
+          "note": "HITBOT OS官方场景页面对“全自动工程菌株构建平台”的报告结果。",
+          "value": "降低80%"
+        },
+        {
+          "label": "首次公开亮相",
+          "note": "官方公告称平台于2026年3月在慕尼黑analytica 2026首次公开亮相。",
+          "value": "2026年3月"
+        },
+        {
+          "label": "现场闭环演示",
+          "note": "官方公告报告平台在真实行业场景演示中自主完成需求解析、方案与任务生成到硬件执行的完整闭环；未披露数值成功率。",
+          "value": "自主完成从需求解析到硬件执行的完整闭环"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.hitbot.cc/industry-trends/432.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.hitbot.cc/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.hitbot.cc/industry-trends/432.html"
+      }
+    ]
+  },
+  {
     "id": "quanxta-zero-embodied-data-collection-series-f7d4cee",
     "title": "QUANXTA Zero Embodied Data-Collection Series",
     "organization": "自变量机器人 / X² Robotics",
@@ -1465,6 +1621,89 @@
       {
         "label": "Report",
         "url": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch"
+      }
+    ]
+  },
+  {
+    "id": "geek-debuts-gravity-and-its-one-core-dual-engine-00a780c",
+    "title": "Geek+ Debuts Gravity and Its “One Core, Dual Engine” Strategy at WAIC 2026, Accelerating the Next Era of Embodied AI Follow us on Facebook Follow us on LinkedIn Follow us on LinkedIn Follow us on Twitter",
+    "organization": "极智嘉 / Geekplus",
+    "organizationKind": "Company",
+    "date": "2026-07-01",
+    "year": 2026,
+    "summary": "Gravity 是极智嘉于 2026 年发布的统一具身智能框架，目标是让机器人在执行长程、复杂物理任务前同时完成语义规划与物理后果推演。其 Mixture-of-Transformers 架构由 AR Transformer 认知脑和 Diffusion Transformer 行动脑组成：前者理解指令并拆解任务，后者基于 Gravity 4D 世界动作模型预测交互结果并生成连续动作。Gravity 4D 使用四维潜表示联合建模 RGB 外观、三维空间结构和三维运动，通过 pointmap 与 scene flow 引入物理空间监督。官方在 LIBERO-Plus 零样本测试中报告，四维表示将主要版本成功率由 73.73% 提升至 78.62%，最佳变体达到 79.25%。该框架还与极智嘉的真实仓储数据引擎结合，利用大规模拣选作业产生的视觉、触觉、力和任务结果数据持续优化模型，重点处理多 SKU、多材质、任意姿态以及环境视觉变化下的机器人操作。",
+    "tags": [
+      "Embodied AI",
+      "World models",
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Embodied AI",
+      "World models",
+      "Vision-language-action",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Gravity 是极智嘉面向长程复杂物理任务发布的统一具身智能软件框架，其首个核心基础模型为 Gravity 4D，而非单纯的机器人硬件产品。",
+        "框架采用 Mixture-of-Transformers 双脑架构：AR Transformer 构成认知脑，负责指令理解、场景语义理解、任务规划和长程任务分解；Diffusion Transformer 构成行动脑，负责物理情景推演和连续动作生成。",
+        "Gravity 4D 将传统二维视频预测扩展为世界动作模型：以 Gravity 4D-VAE 提取的四维潜表示作为教师监督，在潜空间同时学习未来 RGB、由 pointmap 表示的三维结构，以及由 scene flow 表示的三维运动。",
+        "该方法通过从四维基础模型向世界动作模型蒸馏先验，不要求直接监督原始点云或构建显式三维处理流水线，目标是从视觉上合理的未来预测转向符合三维运动动力学的未来建模。",
+        "训练阶段融合视觉、触觉和力等多维物理表征；真实部署推理时则自动裁剪冗余推理分支，通过低延迟路径输出动作。官方将其概括为训练时增加认知、执行时精简计算。",
+        "框架的数据引擎以真实仓储拣选为持续训练环境，利用成功拣取和时效是否达标等明确结果形成反馈，并针对多 SKU、不同材质、任意物体姿态及人机混合环境持续优化。",
+        "官方消融结果称 pointmap-only 变体表现突出，说明空间结构是操作学习中的关键监督信号；简单增加深度预测反而降低性能，表明模型架构中的信息路径比直接堆叠模态更重要。"
+      ],
+      "capabilities": [
+        "解析复杂人类指令、理解场景语义，并将长程任务拆解为可执行子步骤",
+        "在潜空间联合预测未来 RGB 外观、三维空间结构和三维运动",
+        "通过 Diffusion Transformer 推演物理交互后生成连续机器人动作序列",
+        "在相机视角变化、传感器噪声和光照变化下执行零样本操作任务",
+        "面向多 SKU、多材质、无约束物体姿态和人机混合作业环境进行仓储拣选"
+      ],
+      "metrics": [
+        {
+          "label": "LIBERO-Plus 零样本成功率（基线）",
+          "note": "官方页面报告的未引入四维表示时的成功率。",
+          "value": "73.73%"
+        },
+        {
+          "label": "LIBERO-Plus 零样本成功率（主要版本）",
+          "note": "引入四维表示后的主要版本结果。",
+          "value": "78.62%"
+        },
+        {
+          "label": "LIBERO-Plus 零样本成功率（最佳变体）",
+          "note": "官方报告的最优模型变体结果。",
+          "value": "79.25%"
+        },
+        {
+          "label": "真实商业机器人项目规模",
+          "note": "官方称其数据与部署基础覆盖的项目数量及国家范围。",
+          "value": "超过 1,700 个项目，覆盖 40 多个国家"
+        },
+        {
+          "label": "单仓多机器人编排规模",
+          "note": "官方报告已有在单个仓库编排机器人集群的经验。",
+          "value": "超过 5,000 台机器人"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.geekplus.com/resources/news/geek-debuts-gravity-and-its-one-core-dual-engine-strategy-at-waic-2026-accelerating-the-next-era-of-embodied-ai"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.geekplus.com/en"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.geekplus.com/resources/news/geek-debuts-gravity-and-its-one-core-dual-engine-strategy-at-waic-2026-accelerating-the-next-era-of-embodied-ai"
       }
     ]
   },
@@ -3682,6 +3921,82 @@
     ]
   },
   {
+    "id": "puduagent-7d706e2",
+    "title": "PuduAgent",
+    "organization": "普渡机器人 / Pudu Robotics",
+    "organizationKind": "Company",
+    "date": "2026-05-26",
+    "year": 2026,
+    "summary": "PuduAgent 是普渡机器人面向真实物理环境发布的通用具身智能体基础设施，目标是把认知、长时记忆、机器人技能执行、安全约束和多机器人协作整合到统一软件平台中。其系统层使用 Agent Core 规划和闭环调整任务，Agent Memory 管理工作记忆、情景记忆及压缩，Agent Runner 负责毫秒级执行；技能层则把机器人行为标准化为可动态加载、跨本体适配且与底层模型解耦的原子能力。平台还将动作可行性和风险预测提升为统一安全层，可在潜在碰撞、过载或失稳时干预执行。针对多机器人场景，PuduAgent 将不同形态的机器人抽象为统一可调度资源，动态分解和分配任务，并利用共享记忆维持一致的环境与进度信息。官方同时宣布 SDK、仿真环境和 SkillHub 技能市场，但尚未提供可核验的开源代码仓库。",
+    "tags": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "PuduAgent 是面向物理机器人的通用具身智能体平台，核心软件架构由 PuduAgent OS、PuduAgent Skills 和 PuduAgent Safety 三层组成，而不是机器人本体或硬件产品页面。",
+        "系统层包含负责多尺度任务规划和动态闭环调节的 Agent Core、结合工作记忆与情景记忆及记忆压缩的 Agent Memory，以及面向实时动作执行的 Agent Runner。",
+        "能力层把导航、操作、交互等机器人行为抽象为标准化原子技能，支持动态加载、跨机器人本体适配和模型无关部署，开发者可以按任务组合技能。",
+        "安全层在动作执行前进行可行性判断和风险预测，并可在检测到碰撞、过载、失稳等异常风险时调整或终止任务，以降低真实环境中的试错成本。",
+        "平台采用“一个大脑、多种本体”的解耦方式，覆盖配送、商用清洁、工业配送和通用具身智能机器人，并将不同形态机器人抽象为可统一调度的资源。",
+        "多机器人架构能够根据任务、环境和机器人当前能力动态分解、分配及重新分配工作，同时通过共享记忆同步环境状态和任务进度。",
+        "官方公告称平台将提供 SDK、仿真环境和 SkillHub 技能市场，允许开发者创建、贡献及商业化技能模块；但公告未提供源代码仓库或开源许可证。"
+      ],
+      "capabilities": [
+        "通过 Agent Core 进行多尺度任务规划，并依据物理环境反馈实施动态闭环调节",
+        "通过工作记忆、情景记忆和记忆压缩机制支持长时程连续任务",
+        "将导航、操作与交互等机器人行为封装为可动态加载、组合和复用的原子技能",
+        "在动作执行前评估物理可行性并预测碰撞、过载或失稳风险，异常时调整或中止任务",
+        "对异构机器人进行任务分解、动态分配和共享记忆驱动的多机器人协同调度"
+      ],
+      "metrics": [
+        {
+          "label": "长时任务问题基线",
+          "note": "官方页面用于说明传统机器人智能体长时运行中的累计误差问题，并非 PuduAgent 的实测改进结果。",
+          "value": "连续任务超过 30 分钟时，传统系统失败率最高可达 40%"
+        },
+        {
+          "label": "Agent Runner 执行级别",
+          "note": "官方仅报告执行延迟级别，没有披露具体毫秒数、测试硬件或基准方法。",
+          "value": "毫秒级执行"
+        },
+        {
+          "label": "支持的机器人业务形态",
+          "note": "官方列出的跨本体适配范围。",
+          "value": "4 类：服务配送、商用清洁、工业配送和通用具身智能机器人"
+        },
+        {
+          "label": "平台软件架构",
+          "note": "官方公布的顶层架构组成。",
+          "value": "3 个核心层：PuduAgent OS、PuduAgent Skills、PuduAgent Safety"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pudurobotics.com/en/news/pudu-robotics-launches-puduagent-universal-embodied-ai-agent-platform"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pudurobotics.com/en/company"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.pudurobotics.com/en/news/pudu-robotics-launches-puduagent-universal-embodied-ai-agent-platform"
+      }
+    ]
+  },
+  {
     "id": "next-generation-intelligent-operation-platform-i-1eb9db8",
     "title": "Next-Generation Intelligent Operation Platform (IOP)",
     "organization": "极智嘉 / Geek+",
@@ -3926,6 +4241,85 @@
       {
         "label": "Report",
         "url": "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/"
+      }
+    ]
+  },
+  {
+    "id": "magic-cleaning-ai-agent-system-ef7fe88",
+    "title": "Magic Cleaning AI Agent System",
+    "organization": "普渡机器人 / Pudu Robotics",
+    "organizationKind": "Company",
+    "date": "2026-05-20",
+    "year": 2026,
+    "summary": "Magic Cleaning AI Agent System是普渡机器人在2026年发布的商用清洁机器人自主智能栈，目标是把清洁作业从固定路线执行升级为由环境感知、污渍识别、策略调整、效果检查和复洗组成的闭环。系统以自研360° VSLAM和AIGC数据系统为基础，结合机器人传感器及清洁执行机构，能够识别复杂地面、干湿污渍和不同垃圾类型，并动态调整路线、清洁模式、刷盘压力及相关机构。其功能覆盖污渍热力图、清洁效果图、极速定点清洁、漏扫区域自动返回、引导式人工处理和多机器人协同。官方技术材料报告定点刷洗效率达到3倍、路线可在1秒内重新规划，但没有公开标准化数据集上的识别准确率、独立评测结果、模型规模或训练数据规模。该项目属于部署在实体商用清洁机器人上的专有软件系统，而非硬件单品公告。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Magic Cleaning AI Agent System是普渡机器人面向实体商用清洁机器人的自主作业软件系统，不是单纯的清洁机器人硬件或产品规格页；官方将其作为清洁产品线进入“AI-Native 2.0”阶段的核心升级发布。([pudurobotics.com](https://www.pudurobotics.com/en/news/pudu-robotics-unveils-breakthroughs-four-product-lines-2026-partner-summit?utm_source=openai))",
+        "系统以普渡自研的360° VSLAM和AIGC数据系统为基础，用于提升环境理解、障碍物识别、复杂地面材质识别及垃圾类型识别能力。([pudurobotics.com](https://www.pudurobotics.com/en/news/pudu-robotics-unveils-breakthroughs-four-product-lines-2026-partner-summit?utm_source=openai))",
+        "配套技术材料显示，其AI Magic Cleaning架构将传感器、轮毂电机、边刷和滚刷进行软硬件协同，以实现自适应清洁、垃圾识别、巡检清洁和定点清洁。([cdn.pudutech.com](https://cdn.pudutech.com/Pudu_Robotics_Cleaning_Product_Brochure_EN_20260417_compressed_67e532c8e1.pdf))",
+        "系统可根据污渍或垃圾状况调整清洁模式，并在识别到湿黏污渍时抬升清扫组件、在面对顽固重垢时提高盘刷下压力，形成感知、决策和物理执行闭环。([pudurobotics.com](https://www.pudurobotics.com/zh-HK/products/pudu-bg1-series))",
+        "系统提供垃圾分布热力图和清洁效果热力图：前者用于定位垃圾高频聚集区域，后者标记多次清洁后仍存在残留的区域，以支持针对性复洗或人工处理。([cdn.pudutech.com](https://cdn.pudutech.com/Pudu_Robotics_Cleaning_Product_Brochure_EN_20260417_compressed_67e532c8e1.pdf))",
+        "自主清洁策略能够在障碍物消失后返回此前遗漏区域；引导式清洁则记录残留位置并引导工作人员前往目标点处理顽固污渍。([cdn.pudutech.com](https://cdn.pudutech.com/Pudu_Robotics_Cleaning_Product_Brochure_EN_20260417_compressed_67e532c8e1.pdf))",
+        "官方发布还明确列出极速清洁、智能定点复洗、多机器人协同清洁、重新设计的操作界面和AI语音交互。([pudurobotics.com](https://www.pudurobotics.com/en/news/pudu-robotics-unveils-breakthroughs-four-product-lines-2026-partner-summit?utm_source=openai))"
+      ],
+      "capabilities": [
+        "基于360° VSLAM进行定位、环境建图、路径规划和自主清洁导航",
+        "识别复杂地面材质、干湿污渍及具有挑战性的垃圾类型，并据此调整清洁策略",
+        "生成污渍或垃圾热力图、清洁效果图，并对漏扫或残留区域执行智能复洗",
+        "支持极速定点清洁、召唤清洁和引导式清洁等按需任务模式",
+        "支持多台清洁机器人协同作业，并通过重新设计的界面和AI语音交互降低部署及日常操作复杂度"
+      ],
+      "metrics": [
+        {
+          "label": "定点刷洗效率",
+          "note": "官方清洁产品技术手册对搭载Magic Cleaning AI System的AI Spot Scrubbing所报告的结果。",
+          "value": "3× efficiency"
+        },
+        {
+          "label": "路径重规划响应",
+          "note": "检测到作业变化后重新规划路线，官方称清洁过程无需空闲等待。",
+          "value": "within 1 second"
+        },
+        {
+          "label": "引导式顽固污渍处理闭环",
+          "note": "由实时检测、位置记录报告和引导人员到目标点执行组成。",
+          "value": "3 steps"
+        },
+        {
+          "label": "环境与垃圾理解结果",
+          "note": "官方未披露准确率或标准化测试分数，仅报告系统可更准确地识别复杂地面材质和具有挑战性的垃圾类型。",
+          "value": "Improved recognition accuracy; no numerical score reported"
+        },
+        {
+          "label": "协同作业结果",
+          "note": "官方确认已实现多机器人协同清洁，但未公布吞吐量、效率增益或机器人规模上限。",
+          "value": "Multi-robot collaborative cleaning implemented"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.pudurobotics.com/en/news/pudu-robotics-unveils-breakthroughs-four-product-lines-2026-partner-summit"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pudurobotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.pudurobotics.com/en/news/pudu-robotics-unveils-breakthroughs-four-product-lines-2026-partner-summit"
       }
     ]
   },
@@ -7074,6 +7468,83 @@
     ]
   },
   {
+    "id": "gr00t-agilex-a996169",
+    "title": "GR00T-AgileX",
+    "organization": "松灵机器人 / AgileX Robotics",
+    "organizationKind": "Company",
+    "date": "2026-02-02",
+    "year": 2026,
+    "summary": "GR00T-AgileX 是松灵机器人针对其双臂具身平台制作的 GR00T N1.6 集成与部署工程。它不是一个新提出的基础模型，而是将 NVIDIA 的 3B 参数 VLA 基础模型落到 COBOT MAGIC 和双 PiPER 类实体系统上的软件适配层：项目覆盖采集数据向 LeRobot 格式的转换、双臂观测和动作模态配置、下游任务微调、网络推理服务以及机器人侧执行。部署时，左右 PiPER 机械臂分别运行 ROS 2 正逆运动学进程，并与多相机输入和 GR00T 服务连接；服务端通过 ALOHA 或 MULTI_PIKA embodiment tag 加载微调检查点。该项目的重要性在于提供了一条针对松灵双臂硬件的可执行 VLA 训练与部署路径，而不只是声明硬件兼容性。仓库源代码可公开访问，但其许可证把用途限制为非商业研究，因此不属于通常意义上的开源软件。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是松灵机器人官方 GitHub 组织下的专用软件仓库，主体是 GR00T N1.6 在松灵双臂机器人上的数据准备、微调和部署工具，而不是机器人硬件产品页。",
+        "项目基于 NVIDIA Isaac-GR00T，并指定使用 GR00T N1.6 3B 基础 VLA 检查点进行下游任务微调；官方说明该基础模型使用超过一万小时的机器人数据预训练。",
+        "仓库内置 ALOHA 与带头部相机的 PIKA 双臂模态配置，分别面向 COBOT MAGIC 和双 PiPER 类配置；采集数据通过松灵官方 data_tools 转换成 LeRobot 数据格式。",
+        "微调流程提供面向两类双臂配置的脚本，并要求开发者设置数据集路径、批大小和 GPU 数量，以适配本地训练环境。",
+        "实体部署流程包含左右 PiPER 机械臂的 ROS 2 正运动学与逆运动学进程、多相机输入、GR00T 网络推理服务，以及机器人侧推理客户端。",
+        "推理服务器通过 MULTI_PIKA 或 ALOHA embodiment tag 加载微调检查点，并可使用 multi-PiPER 包装层，把模型推理接入松灵双臂系统。",
+        "代码公开可获取，但仓库采用带有严格用途限制的 NVIDIA License，只允许非商业研究使用，并排除军事、监控、核技术服务和生物识别处理，因此不按通常的开放源代码定义标记为开源。"
+      ],
+      "capabilities": [
+        "为 COBOT MAGIC 双臂平台准备数据配置、微调 GR00T N1.6，并运行面向实体机器人的推理流程。",
+        "为带头部相机的双 PiPER 配置提供数据适配、模型微调和推理示例。",
+        "将松灵数据采集工具产生的数据转换为 LeRobot 格式，并通过 modality.json 描述双臂观测与动作模态。",
+        "通过独立 GR00T 推理服务连接双臂 ROS 2 SDK、多相机以及正逆运动学进程，生成实体机器人动作。"
+      ],
+      "metrics": [
+        {
+          "label": "基础模型规模",
+          "note": "仓库指定的 GR00T N1.6 基础 VLA 检查点",
+          "value": "3B parameters"
+        },
+        {
+          "label": "基础模型预训练数据量",
+          "note": "官方 README 对所提供基础检查点的描述",
+          "value": "10k+ hours of robot data"
+        },
+        {
+          "label": "双臂数据配置",
+          "note": "README 明确列出 ALOHA 与带头部相机的 PIKA 两类内置配置",
+          "value": "2 configurations"
+        },
+        {
+          "label": "验证过的 CUDA 环境",
+          "note": "CUDA 12.4 为推荐且正式测试的版本；CUDA 11.8 也已验证可用，但需手动安装兼容的 flash-attn",
+          "value": "CUDA 12.4 officially tested; CUDA 11.8 verified"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/agilexrobotics/gr00t-agilex"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.agilex.ai/about-us"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/agilexrobotics/gr00t-agilex"
+      }
+    ]
+  },
+  {
     "id": "q4-2025-vention-platform-release-50135d9",
     "title": "Q4 2025 Vention Platform Release",
     "organization": "Vention",
@@ -7536,6 +8007,84 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/wayve-technologies_gaia3-embodiedai-aisafety-activity-7401592385027338240-_Xtn"
+      }
+    ]
+  },
+  {
+    "id": "rm-api2-1-1-1-6c746ef",
+    "title": "RM_API2 1.1.1",
+    "organization": "睿尔曼智能科技（北京）有限公司 / Realman Intelligent Technology (Beijing) Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-12-01",
+    "year": 2025,
+    "summary": "RM_API2 1.1.1 是睿尔曼面向实体机械臂二次开发发布的控制与算法 SDK 版本。其核心更新是把 API2 的运动学算法层扩展到可变自由度和通用机械臂：开发者可以在不连接真实机械臂的情况下设定算法自由度、读取适配不同自由度的 DH 参数，并通过自定义 DH 参数初始化算法系统和识别通用机械臂模型。版本同时加入 UNIVERSAL、ZML、ZMR、RXL75、RXR75 支持，补充电压启动、子网掩码与网关配置，并改进多个机械臂并发连接时的运动控制逻辑。项目整体提供 Python、C、C++、C# 开发接口，覆盖连接管理、轨迹运动、路径规划、逆运动学、力位混合控制、拖动示教、状态监控以及夹爪、灵巧手、六维力传感器、扩展关节和 IO 集成，属于面向物理机器人部署的底层控制与系统集成软件。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1))",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "RM_API2 是面向睿尔曼实体机械臂二次开发的多语言 SDK，而非机械臂硬件产品页；官方说明其用于机械臂控制、路径规划和状态监控，并提供 API 与示例程序。([github.com](https://github.com/RealManRobot/RM_API2))",
+        "1.1.1 版新增 UNIVERSAL、ZML、ZMR、RXL75 和 RXR75 型号支持，并通过 DH 参数识别通用型机械臂。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1))",
+        "新增 `rm_algo_set_robot_dof`，允许在未连接机械臂且型号设为 `RM_MODEL_UNIVERSAL_E` 时指定算法自由度；DH 参数读取接口也适配不同自由度机械臂。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1))",
+        "新增 `rm_algo_init_sys_data_by_dh`，支持在离线、通用型号配置下直接以 Denavit-Hartenberg 参数初始化算法程序。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1))",
+        "该版本扩展供电与网络配置：`rm_set_voltage` 增加 `start_enable` 参数，`rm_set_NetIP` 增加 `netmask` 和 `gw` 参数。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1))",
+        "版本优化了多机械臂同时连接时的运动控制逻辑；完整 SDK 还覆盖轨迹控制、力位混合控制、逆运动学、拖动示教、灵巧手、六维力传感器和实时状态上报等接口。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1))"
+      ],
+      "capabilities": [
+        "通过 Python、C、C++ 与 C# 接口连接、配置和控制睿尔曼实体机械臂",
+        "执行关节空间与笛卡尔空间轨迹控制、路径规划、示教及运动状态管理",
+        "在不连接机械臂时，基于自定义 DH 参数初始化通用机械臂算法，并设置算法自由度",
+        "管理多机械臂连接与运动控制，同时查询机械臂、关节、控制层、规划层和动力学状态",
+        "集成夹爪、五指灵巧手、六维力传感器、扩展关节、升降机构及控制器 IO 等外设"
+      ],
+      "metrics": [
+        {
+          "label": "版本与发布日期",
+          "note": "GitHub 官方版本页记录的发布版本和日期。",
+          "value": "1.1.1；2025-12-01 11:55"
+        },
+        {
+          "label": "新增型号",
+          "note": "版本说明逐项列出的新增型号。",
+          "value": "5 个：UNIVERSAL、ZML、ZMR、RXL75、RXR75"
+        },
+        {
+          "label": "支持的开发语言",
+          "note": "官方仓库说明列出的 SDK 接口语言。",
+          "value": "4 种：Python、C、C++、C#"
+        },
+        {
+          "label": "Python 运行要求",
+          "note": "官方快速开始文档给出的最低 Python 版本。",
+          "value": "Python 3.9 及以上"
+        },
+        {
+          "label": "系统与架构支持",
+          "note": "官方文档列出的目标平台。",
+          "value": "Windows 32/64 位；Linux x86/ARM"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.realman-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1"
       }
     ]
   },
@@ -11883,6 +12432,85 @@
     ]
   },
   {
+    "id": "e-care-robot-remote-operations-and-maintenance-p-b868d9c",
+    "title": "E-Care Robot Remote Operations and Maintenance Platform",
+    "organization": "南京埃斯顿自动化股份有限公司 / ESTUN Automation Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-07-18",
+    "year": 2025,
+    "summary": "E-Care 是南京埃斯顿自动化股份有限公司于 2025 年发布的工业机器人远程运维与数据连接平台。它以手机 USB 或工厂网络为接入入口，将机器人、传感器、第三方设备、PLC/MES 与云端应用连接起来，提供持续状态监控、告警、日志分析、远程诊断、OTA 升级和数据看板。平台采用分层微应用模式：标准版覆盖数据采集、边缘计算、日志与移动监控；专业版增加 API、指令下发、PLC 通信、数据转发和系统集成；平台版进一步提供云管理、场景数字孪生、智能保养提醒和智能客服。E-Care 还可与 E-Noesis 协同，将机器人运行数据送入云端，形成生产数据闭环并提供机器人编程辅助。其技术重点是工业机器人机群的可观测性、远程维护、OT/IT 数据融合和应用扩展，而不是机器人本体或运动硬件。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))",
+    "tags": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "E-Care 是面向实体工业机器人的远程运维软件平台，而非机器人本体、传感器或其他硬件产品；官方将其定位为连接设备层、数据层和应用层的“智能运维中枢”。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))",
+        "平台支持轻量化接入：可使用智能手机和 USB 线连接机器人，也支持 WiFi、4G 物联卡及有线网络，官方称无需增加专用硬件网关或改造机器人硬件。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))",
+        "运维软件提供机器人状态与预警监控、日志管理和分析、远程故障诊断、OTA 软件升级，以及移动端和 PC 端可视化管理。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))",
+        "其微应用架构分为标准版、专业版和平台版：由基础的数据采集、边缘计算和日志管理，扩展至 API、指令下发、PLC 通信、系统集成、云平台及场景数字孪生。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))",
+        "E-Care 可连通传感器、第三方设备及 IT 系统，并与客户 PLC/MES 对接；官方将其描述为打通 OT 与 IT 数据通路的机器人数字化基础设施。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))",
+        "平台可与 E-Noesis 云平台形成数据闭环，将机器人运行数据送入云端，用于生产管理、智能保养提醒、智能客服和机器人编程辅助。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))",
+        "官方专门发布页面标注发布日期为 2025 年 7 月 18 日，并明确由南京埃斯顿自动化股份有限公司负责，满足 2025 年后发布、具名机构负责和存在官方专页的收录条件。([estun.com](https://www.estun.com/news/489.html?utm_source=openai))"
+      ],
+      "capabilities": [
+        "通过手机 USB、WiFi、4G 物联卡或网线将工业机器人接入远程运维平台",
+        "在移动端和 PC 端持续监控机器人状态、告警信息及可视化数据看板",
+        "基于日志分析执行远程故障诊断，并通过 OTA 完成软件升级",
+        "连接传感器、第三方设备、PLC、MES 和其他 IT 系统，实现设备及生产数据融合",
+        "通过云端 E-Noesis 平台提供数字孪生、保养提醒、智能客服和机器人编程辅助"
+      ],
+      "metrics": [
+        {
+          "label": "最低移动接入配置",
+          "note": "官方描述的手机 USB 接入方案",
+          "value": "1 部智能手机 + 1 根 USB 线"
+        },
+        {
+          "label": "监控服务时间",
+          "note": "实时获取设备状态和预警信息",
+          "value": "7×24 小时"
+        },
+        {
+          "label": "远程软件故障处理",
+          "note": "通过日志分析与 OTA 升级处理软件问题；这是官方报告的时间等级，并非第三方测评结果",
+          "value": "分钟级修复"
+        },
+        {
+          "label": "网络接入方式",
+          "note": "官方明确列出的灵活接入方式",
+          "value": "USB、WiFi、4G 物联卡、网线"
+        },
+        {
+          "label": "功能版本层级",
+          "note": "标准版、专业版和平台版组成的微应用架构",
+          "value": "3 个版本层级"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.estun.com/news/489.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.estun.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.estun.com/news/489.html"
+      }
+    ]
+  },
+  {
     "id": "steerable-scene-generation-3d840a5",
     "title": "Steerable Scene Generation",
     "organization": "Massachusetts Institute of Technology",
@@ -13289,6 +13917,76 @@
     ]
   },
   {
+    "id": "estun-robot-interface-eri-cfb4738",
+    "title": "ESTUN Robot Interface (ERI)",
+    "organization": "南京埃斯顿自动化股份有限公司 / ESTUN Automation Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-06-06",
+    "year": 2025,
+    "summary": "ESTUN Robot Interface（ERI，埃斯顿机器人实时接口）是南京埃斯顿自动化股份有限公司面向高阶工业机器人应用发布的工业级实时控制接口和SDK。它将外部计算系统与机器人控制执行层连接起来，使开发者能够实时驱动机器人运动，并高速读取或输出高精度工艺数据。开发套件支持C++和Python，提供1毫秒级控制、信号滤波、TCP/IP及总线通信，并设置灵活的权限控制。ERI并非通用具身基础模型，而是承载规划、AI算法和先进工艺控制的机器人系统接口层；官方展示的落地方向包括免示教打磨、激光焊缝实时纠偏、高速涂胶数据流控制以及ROS 2规划框架集成。其软件属性、物理机器人控制对象、明确负责企业和2025年官方发布页面均满足索引条件。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "ERI是面向物理工业机器人的实时控制接口与开发套件，软件接口本身是官方发布内容之一，并非仅作为机器人硬件规格的附带描述。",
+        "接口允许外部系统实时驱动机器人动作，为上层智能控制、规划算法和工艺应用提供执行通道。",
+        "开发套件明确支持C++和Python，可用于定制机器人控制与AI融合应用。",
+        "系统提供1毫秒级实时控制，并包含信号滤波能力，以支持对时序和运动精度要求较高的外部控制任务。",
+        "通信层支持TCP/IP协议及总线通信，并能够高速输出高精度工艺数据流。",
+        "官方列出的应用包括免示教打磨、激光焊缝实时纠偏、高速涂胶数据流控制，以及与ROS 2规划框架的生态集成。"
+      ],
+      "capabilities": [
+        "通过外部计算系统实时驱动工业机器人运动",
+        "高速输出高精度工艺数据流",
+        "使用C++或Python SDK进行机器人应用二次开发",
+        "接入ROS 2规划框架",
+        "支持免示教打磨、激光焊缝跟踪和高速涂胶等应用"
+      ],
+      "metrics": [
+        {
+          "label": "实时控制周期",
+          "note": "官方表述为“1ms级实时控制”。",
+          "value": "1 ms级"
+        },
+        {
+          "label": "明确支持的开发语言",
+          "note": "官方项目介绍明确列出C++和Python。",
+          "value": "2种：C++、Python"
+        },
+        {
+          "label": "官方列举的应用方向",
+          "note": "包括免示教打磨、激光焊缝跟踪、高速涂胶控制和ROS 2规划框架扩展。",
+          "value": "4类"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.estun.com/news/700.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.estun.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.estun.com/news/700.html"
+      }
+    ]
+  },
+  {
     "id": "smolvla-bd300e4",
     "title": "SmolVLA",
     "organization": "Hugging Face",
@@ -13758,6 +14456,87 @@
     ]
   },
   {
+    "id": "ario-dataset-tools-f4085a2",
+    "title": "ARIO Dataset Tools",
+    "organization": "松灵机器人 / AgileX Robotics",
+    "organizationKind": "Company",
+    "date": "2025-05-19",
+    "year": 2025,
+    "summary": "ARIO Dataset Tools 是松灵机器人于 2025 年 5 月 19 日公开的具身机器人数据工程工具链。它不是 ARIO 模型本身，也不是机器人硬件页面，而是一套面向真实机器人示范数据的 ROS/catkin 软件：从相机、点云、机械臂、夹爪、IMU、定位和移动底盘等数据源采集异步流，按固定 episode 目录落盘，生成时间同步索引，并转换成便于训练使用的 HDF5。项目提供 ALOHA 与 PiKA 单臂、双臂及遥操作配置，同时允许研究者通过 YAML 添加自己的 ROS topic 和传感器定义。其价值主要在于把多模态实体机器人数据的采集、结构化、同步、检查、回放和训练格式转换连接成可复用流程。",
+    "tags": [
+      "Data & benchmarks",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Data & benchmarks",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是松灵机器人官方 GitHub 组织发布的 ROS/catkin 软件包，首个提交日期为 2025 年 5 月 19 日；项目页明确将其定义为 ARIO dataset tools，而非机器人硬件产品。",
+        "工具链覆盖数据采集、固定目录结构存储、跨模态时间同步、原始数据或 HDF5 数据发布，以及训练数据加载等环节。",
+        "数据目录按 episode 组织，可分别保存机械臂末端位姿与关节状态、彩色图、深度图、点云、语言指令和机器人底盘速度等数据。",
+        "同步工具既提供 ROS launch 入口，也提供 Python 命令行入口，并为各数据流生成 sync.txt 同步索引文件。",
+        "HDF5 转换支持选择是否使用相机点云；视觉和点云数据既可通过文件索引引用，也可在关闭索引后写入指定目标目录。",
+        "项目预置 ALOHA、单 PiKA、双 PiKA及其遥操作配置，并允许通过 YAML 中的 ROS topic、文件名和坐标系字段接入自定义传感器。",
+        "官方项目页列出的消息类型覆盖 sensor_msgs::Image、PointCloud2、JointState、geometry_msgs::PoseStamped、Imu、nav_msgs::Odometry 和自定义夹爪消息，可用于构建多模态具身机器人示范数据。"
+      ],
+      "capabilities": [
+        "面向真实机器人示范数据执行采集、落盘、时间同步与回放发布。",
+        "支持 ALOHA、单 PiKA、双 PiKA，以及单/双 PiKA 遥操作配置。",
+        "将多模态原始数据转换为训练可用的 HDF5，并提供 HDF5 数据加载示例。",
+        "通过 YAML 配置扩展相机、机械臂、定位、夹爪、IMU、激光雷达和移动底盘等传感器或数据源。",
+        "可选生成和过滤相机点云，并保留图像、深度图及点云的文件索引。"
+      ],
+      "metrics": [
+        {
+          "label": "首个公开提交",
+          "note": "GitHub 提交历史中的 Initial commit。",
+          "value": "2025-05-19"
+        },
+        {
+          "label": "预置采集/同步配置",
+          "note": "ALOHA、single_pika、multi_pika、single_pika_teleop、multi_pika_teleop。",
+          "value": "5 种"
+        },
+        {
+          "label": "支持的数据类别",
+          "note": "官方 README 的 Required sensors & data types 列出彩色图、深度图、相机点云、关节状态、末端位姿、定位位姿、夹爪编码器、九轴 IMU、激光雷达点云和底盘速度。",
+          "value": "10 类"
+        },
+        {
+          "label": "传感器频率要求",
+          "note": "README 要求所有已配置传感器在线并高于该频率，否则采集和同步会失败。",
+          "value": ">25 Hz"
+        },
+        {
+          "label": "官方示例采集结果",
+          "note": "README 展示的一次运行状态输出。",
+          "value": "7.0014 秒、总计 1,229 帧"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/agilexrobotics/data_tools"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.agilex.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/agilexrobotics/data_tools"
+      }
+    ]
+  },
+  {
     "id": "x-humanoid-training-toolchain-76b39cf",
     "title": "X-Humanoid Training Toolchain",
     "organization": "北京人形机器人创新中心 / Beijing Humanoid Robot Innovation Center",
@@ -13994,6 +14773,84 @@
       {
         "label": "Report",
         "url": "https://www.jaka.com/zh/newsDetail/599"
+      }
+    ]
+  },
+  {
+    "id": "rm-api2-1-1-0-f901940",
+    "title": "RM_API2 1.1.0",
+    "organization": "睿尔曼智能科技（北京）有限公司 / RealMan Intelligent Technology (Beijing) Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-05-06",
+    "year": 2025,
+    "summary": "RM_API2 1.1.0 是睿尔曼面向其实体机械臂的多语言控制与二次开发 SDK 版本。其核心价值不在于提出新的学习模型，而在于提供连接、轨迹运动、状态监控、示教、力控、末端设备和工业通信等机器人系统接口。本次更新集中支持第四代控制器 1.0.3：加入直线偏移运动、流程图程序状态查询、拖动示教轨迹管理、急停控制及新版 Modbus 接口，并同步调整控制器、关节和末端的软件版本数据结构。官方材料还表明该 SDK 覆盖 Python、C/C++，支持 Windows 与 Linux 的多种处理器架构，适合机械臂应用开发、自动化集成和机器人控制研究。",
+    "tags": [
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "RM_API2 是面向睿尔曼实体机械臂二次开发的软件 SDK，而非机械臂硬件产品页；官方仓库明确将其用于机械臂控制、路径规划和状态监控。([github.com](https://github.com/RealManRobot/RM_API2))",
+        "1.1.0 版本适配第四代控制器 1.0.3，并新增偏移运动接口 `rm_movel_offset`。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.0))",
+        "该版本新增流程图编程运行状态查询、拖动示教轨迹列表管理，以及机械臂急停状态设置接口 `rm_set_arm_emergency_stop`。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.0))",
+        "1.1.0 增加第四代控制器新 Modbus 功能接口，同时重构机械臂软件版本和机器人信息结构体，并调整关节及末端软件版本查询接口。([github.com](https://github.com/RealManRobot/RM_API2/releases/tag/1.1.0))",
+        "SDK 提供 Python、C 和 C++ 代码与示例；Python 包可通过 `pip install Robotic_Arm` 安装，示例展示了连接真实机械臂并查询控制层、规划层、动力学模型和算法库版本的流程。([github.com](https://github.com/RealManRobot/RM_API2))",
+        "官方开发文档覆盖轨迹控制、逆运动学、力位混合控制、在线编程、UDP 实时状态推送、IO、末端工具及 Modbus 等接口，并由睿尔曼官方二次开发资源页直接链接该仓库。([develop.realman-robotics.com](https://develop.realman-robotics.com/en/robot4th/download/redevelopment/))"
+      ],
+      "capabilities": [
+        "通过 API 执行机械臂轨迹控制、路径规划及运动状态控制。",
+        "查询机械臂、关节、末端工具及流程图程序的运行状态。",
+        "管理拖动示教轨迹，并支持多次拖动示教相关参数。",
+        "配置控制器 IO、末端 IO，以及 Modbus TCP/RTU 通信。",
+        "控制夹爪、五指灵巧手、升降机构和六维力传感器等扩展设备。"
+      ],
+      "metrics": [
+        {
+          "label": "第四代控制器兼容版本",
+          "note": "1.1.0 发布说明明确写明适配第四代控制器。",
+          "value": "1.0.3"
+        },
+        {
+          "label": "Python 版本要求",
+          "note": "官方仓库 README 报告的最低 Python 版本。",
+          "value": "Python 3.9+"
+        },
+        {
+          "label": "Windows 架构支持",
+          "note": "官方仓库提供对应的 Windows 开发库。",
+          "value": "32-bit 和 64-bit"
+        },
+        {
+          "label": "Linux 架构支持",
+          "note": "官方仓库列出的共享库目标架构。",
+          "value": "x86 和 ARM"
+        },
+        {
+          "label": "Linux 编译器要求",
+          "note": "官方仓库给出的 GCC 最低版本。",
+          "value": "GCC 7.5+"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.0"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.realman-robotics.cn/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.0"
       }
     ]
   },
@@ -15484,6 +16341,89 @@
     ]
   },
   {
+    "id": "hitbot-os-37f378e",
+    "title": "HITBOT OS",
+    "organization": "慧灵科技（深圳）股份有限公司 / Hitbot Technology (Shenzhen) Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-03-25",
+    "year": 2025,
+    "summary": "HITBOT OS是慧灵科技在2025年3月25日正式发布的通用具身智能操作系统和智能体协同平台。其分布式“大脑-小脑”架构把行业知识、语义理解、策略规划、物理仿真、实时运动控制与多模态反馈连接成闭环，并通过任务抽象层把高层语义映射到不同机器人本体的动作参数。平台覆盖自然语言编程、图像到工程方案生成、虚拟训练、技能封装、低代码任务编排、跨品牌设备接入和异构多机协同。官方材料报告其设备库支持300多种行业设备协议，自然语言编程可把数日开发压缩至几十分钟；项目页还称仿真模块可积累千万级试错经验，并在全自动工程菌株构建应用中实现通量提升10倍以上、人工成本降低80%。这些结果主要来自企业官方材料，未提供统一公开基准、实验方法或第三方复现证据。",
+    "tags": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation",
+      "World models"
+    ],
+    "fields": [
+      "Embodied AI",
+      "Robot systems",
+      "Robot manipulation",
+      "World models"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "HITBOT OS是面向实体机器人和自动化设备的软件平台，而非机器人硬件产品；官方将其定义为集自动化设备编程、控制、设计、仿真和维护于一体的软件。",
+        "系统采用分布式AI和“大脑-小脑”双层架构：“大脑”融合行业知识与AI算法，负责语义解析、任务规划和策略推演；“小脑”结合实时运动控制与多模态反馈，将决策转换为物理动作。",
+        "其任务抽象层采用“语义-动作”解耦方式，可根据实际机器人本体生成不同运动参数，使同一任务指令能够映射到异构机械臂、夹爪及其他自动化设备。",
+        "多模态工作流支持自然语言生成图形化代码，也支持解析设计草图、提取几何特征和功能意图，再结合物理仿真生成3D工程方案与电气图。",
+        "仿真训练模块建立与实体设备对应的几何、运动学、电气接口和I/O逻辑模型；智能体可在虚拟环境中反复试错，验证后的技能自动封装入库供真实任务调用。",
+        "执行矩阵提供抓取与放置、柔性物体操作、力位混合装配、轨迹示教和多机协调等技能，并将真实执行中的多模态数据反馈给认知与规划模块。",
+        "平台内置低代码可视化编排、行业流程知识和设备协议库，覆盖机械臂、夹爪、电缸、移液工作站、离心机及PCR设备，并允许接入符合标准通信协议的第三方设备。"
+      ],
+      "capabilities": [
+        "自然语言生成图形化程序，并以自然语言直接控制机器人及其他自动化部件。",
+        "通过图像解析与物理仿真，将二维方案草图转换为3D工程方案并同步生成设备电气图。",
+        "把任务语义抽象为跨不同机器人本体的运动参数和控制策略，支持异构设备协同执行。",
+        "在高保真虚拟环境中训练、验证并封装可复用的机器人技能，再部署到真实场景。",
+        "通过低代码拖拽界面、预设技能库和设备协议库搭建工业制造、科学实验及服务场景智能体。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "慧灵科技官方发布公告标注的日期。",
+          "value": "2025-03-25"
+        },
+        {
+          "label": "编程开发时间",
+          "note": "官方称自然语言与图形化编程可将传统需要数日的开发过程压缩到几十分钟。",
+          "value": "数日缩短至几十分钟"
+        },
+        {
+          "label": "行业设备协议",
+          "note": "发布公告列举移液工作站、离心机和PCR等设备。",
+          "value": "300多种"
+        },
+        {
+          "label": "仿真交互经验",
+          "note": "当前官方项目页称技能训练可积累千万级虚拟试错或身体交互经验。",
+          "value": "千万级"
+        },
+        {
+          "label": "工程菌株构建应用结果",
+          "note": "官方项目页针对全自动工程菌株构建平台报告的场景结果，并非通用机器人基准。",
+          "value": "通量提升10倍以上，人工成本降低80%"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.hitbot.cc/hitbot-os-system.html"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.hitbot.cc/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.hitbot.cc/industry-trends/hitbotos001.html"
+      }
+    ]
+  },
+  {
     "id": "dobotstudio-pro-4-6-0-0-43e367a",
     "title": "DobotStudio Pro 4.6.0.0",
     "organization": "深圳市越疆科技股份有限公司 / Shenzhen Dobot Corp Ltd",
@@ -15559,6 +16499,84 @@
       {
         "label": "Report",
         "url": "https://www.dobot-robots.com/insights/news/1079.html"
+      }
+    ]
+  },
+  {
+    "id": "rm-api2-1-0-7-a10d76a",
+    "title": "RM_API2 1.0.7",
+    "organization": "睿尔曼智能科技（北京）有限公司 / Realman Intelligent Technology (Beijing) Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-03-19",
+    "year": 2025,
+    "summary": "RM_API2 1.0.7是睿尔曼智能科技面向其实体机械臂平台发布的控制与算法SDK版本，重点扩展了运动学求解和执行安全能力。它不属于机械臂硬件公告，而是具有独立官方仓库、版本发行页和配套开发文档的软件项目。该版本可为六自由度机械臂生成8组逆运动学候选解，通过选择策略确定最优解，并在执行前检查关节位置和速度限制；同时提供基于雅可比矩阵最小奇异值及解析方法的奇异位形分析。自碰撞模块通过工具包络球描述末端工具，再对机器人构型执行碰撞检测。对于RM75，SDK进一步提供参考构型到臂角的计算和指定臂角逆解接口。除算法能力外，版本还完善了超时、Modbus、一体化六维力设备、末端生态协议、触觉传感器模式和UDP实时状态上报接口，使其能够作为睿尔曼机械臂应用开发、系统集成和安全运动规划的底层软件栈。",
+    "tags": [
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "fields": [
+      "Robot manipulation",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "RM_API2是面向睿尔曼实体机械臂的二次开发SDK，官方仓库明确将控制、路径规划和状态监控列为主要用途，并提供Python、C、C++和C#开发接口。",
+        "1.0.7版新增六自由度机械臂逆运动学全解接口，可计算8组候选解，并提供多解最优解选择策略。",
+        "逆解工具链加入关节位置限位与关节速度限位检查，便于在执行前过滤不可行或不安全的关节解。",
+        "奇异性分析同时支持基于雅可比矩阵最小奇异值的通用分析和解析法判断，并允许设置、读取及初始化自定义奇异阈值。",
+        "自碰撞计算接口支持设置和读取工具包络球参数，并据此执行机器人自碰撞检测。",
+        "针对RM75七自由度机械臂，版本新增由参考构型计算臂角以及基于指定臂角求逆运动学的专用接口。",
+        "该版本还增加通用超时设置、Modbus读写超时适配、一体化六维力型号设置，并适配控制器1.7.0的末端生态协议、触觉传感器模式及UDP实时状态上报。"
+      ],
+      "capabilities": [
+        "提供睿尔曼机械臂连接、轨迹控制、路径规划和状态监控接口",
+        "计算六自由度机械臂逆运动学的8组候选解，并按策略选择最优解",
+        "检查逆解的关节位置限位、关节速度限位、奇异状态和机器人自碰撞",
+        "控制及读取末端生态设备、六维力设备、触觉传感器模式和UDP实时状态"
+      ],
+      "metrics": [
+        {
+          "label": "逆运动学候选解数量",
+          "note": "1.0.7发布说明明确新增求取8组逆解的接口；全解接口当前仅支持六自由度机器人。",
+          "value": "8组"
+        },
+        {
+          "label": "RM75机械臂自由度",
+          "note": "RM75专用臂角法逆运动学面向七自由度RM75机械臂。",
+          "value": "7自由度"
+        },
+        {
+          "label": "适配控制器版本",
+          "note": "1.0.7发布说明明确更新适配该控制器版本。",
+          "value": "1.7.0"
+        },
+        {
+          "label": "Python最低版本",
+          "note": "官方仓库快速开始文档要求Python 3.9或以上。",
+          "value": "Python 3.9+"
+        },
+        {
+          "label": "Linux最低GCC版本",
+          "note": "官方仓库说明Linux开发包要求GCC 7.5以上。",
+          "value": "GCC 7.5+"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.0.7"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.realman-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.0.7"
       }
     ]
   },
@@ -17427,6 +18445,77 @@
       {
         "label": "Report",
         "url": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-platform-to-accelerate-physical-ai-development"
+      }
+    ]
+  },
+  {
+    "id": "follow-us-on-facebook-follow-us-on-linkedin-foll-da11077",
+    "title": "极智嘉系统门户，打造一站式机器人仓运营管控体验 Follow us on Facebook Follow us on LinkedIn Follow us on LinkedIn Follow us on Twitter",
+    "organization": "北京极智嘉科技股份有限公司 / Beijing Geekplus Technology Co., Ltd.",
+    "organizationKind": "Company",
+    "date": "2025-01-02",
+    "year": 2025,
+    "summary": "极智嘉系统门户（System Portal）是面向智能机器人仓的统一运营入口，将机器人管理系统 RMS、仓储执行系统 WES 和智能运营平台 IOP 集成到同一界面。系统面向仓库操作与运维人员集中展示订单履约、拣选产能、工作站可操作时间、告警、机器人电量和地图运行状态，并允许依据这些信息调整订单下发、任务优先级、派单策略和工作站启停。门户提供 RMS+IOP 及 RMS+WES+IOP 两种标准部署方式，支持 SSO 和跨应用权限一致性管理。其可视化界面可通过 Portlet 组件、拖拽布局和主题配置进行个性化定制。该项目不是新的机器人本体或硬件规格，而是直接服务于实体 AMR 仓库运行、监控和运营决策的软件系统。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C))",
+    "tags": [
+      "Robot systems"
+    ],
+    "fields": [
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "System Portal 是极智嘉智能仓软件套件的统一入口，面向实际仓储机器人系统的日常运营与管控，而非机器人硬件产品页。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C))",
+        "其上层软件套件由 RMS、WES 和 IOP 组成，采用模块化设计并提供开放接口；门户负责将这些系统集中呈现和访问。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C))",
+        "统一界面汇总拣货、上架、告警和机器人运行等关键数据，使操作人员无需分别进入底层业务系统即可掌握现场状态。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C))",
+        "门户支持 RMS+IOP 与 RMS+WES+IOP 两种标准部署组合，并通过 SSO 提供一次登录、多系统访问及一致的用户权限管理。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C))",
+        "运营可视化覆盖已完成订单及进度、未完成订单时效分布、拣选产能趋势、工作站可操作时间占比、机器人电量趋势和全场地图监控。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C))",
+        "用户可以选择 Portlet 组件、拖拽调整内容位置并设置界面主题，以构建适合具体仓库运营需求的个性化看板。([geekplus.com](https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C))"
+      ],
+      "capabilities": [
+        "统一接入机器人管理系统 RMS、仓储执行系统 WES 和智能运营平台 IOP",
+        "通过单点登录在多个仓储机器人应用系统之间切换并统一管理用户权限",
+        "显示订单进度、履约时效、拣选产能和工作站状态等运营数据",
+        "通过地图界面监控全场作业及机器人运行状态，并跟踪机器人电量趋势",
+        "通过 Portlet 组件、拖拽布局和主题设置定制运营看板"
+      ],
+      "metrics": [
+        {
+          "label": "标准部署方案",
+          "note": "官方列出的两种组合为 RMS+IOP 和 RMS+WES+IOP。",
+          "value": "2 种"
+        },
+        {
+          "label": "核心软件系统",
+          "note": "智能仓软件套件由 RMS、WES、IOP 三个核心系统组成。",
+          "value": "3 个"
+        },
+        {
+          "label": "明确列出的运营指标与监控场景",
+          "note": "包括订单进度、未完成订单时效、拣选产能、工作站可操作时间、机器人电量和地图监控。",
+          "value": "6 类"
+        },
+        {
+          "label": "登录流程",
+          "note": "支持 SSO，用户登录一次 Portal 后即可访问其他集成应用。",
+          "value": "单次登录"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.geekplus.com/zh-cn/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.geekplus.com/zh-cn/resources/news/%E6%9E%81%E6%99%BA%E5%98%89%E7%B3%BB%E7%BB%9F%E9%97%A8%E6%88%B7%E6%89%93%E9%80%A0%E4%B8%80%E7%AB%99%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%93%E8%BF%90%E8%90%A5%E7%AE%A1%E6%8E%A7%E4%BD%93%E9%AA%8C"
       }
     ]
   }

@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=RbtyBhYKTXQQ7kNvwECZuQk&_nc_oc=AdpXwlQYFUIYkbpjmwuDBsMz4N6r4YldrZG4fzh8WnQCByWOzLC4O-WxwUeccgTW2uk&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=eCOUznUDffwcbcy100WH5A&_nc_ss=7b20f&oh=00_AQHW5836cQFIQiLcuF5bGHGcHMkTbOBOkK9TrWyZhQ94VA&oe=6A9B55B3",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=RbtyBhYKTXQQ7kNvwECZuQk&_nc_oc=AdpXwlQYFUIYkbpjmwuDBsMz4N6r4YldrZG4fzh8WnQCByWOzLC4O-WxwUeccgTW2uk&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=P3x3k38KEdh06oXJRNv9lA&_nc_ss=7b20f&oh=00_AQE9eEoGFvL95tkB3K3FwOANBpvC3jn0wSAzNKeSJjgFGQ&oe=6A9CDF73",
       "width": 1920,
       "height": 1080
     },
@@ -260,6 +260,18 @@
       "height": 1143
     },
     {
+      "id": "rm-api2-1-1-6-7d99ad3",
+      "asset": "frameworks/rm-api2-1-1-6-7d99ad3.jpg",
+      "source_url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.6",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/8ab54c3c9dc489d1b52ca8e45eff7bae7409a5e7341c214b15d54f70fcd5a503/RealManRobot/RM_API2/releases/tag/1.1.6",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "rerun-0-35-0-2462fa6",
       "asset": "frameworks/rerun-0-35-0-2462fa6.jpg",
       "source_url": "https://github.com/rerun-io/rerun/releases/tag/0.35.0",
@@ -267,7 +279,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODY4NTA0MjksIm5iZiI6MTc4Njg1MDEyOSwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgxNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MTZUMDMxNTI5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Mjk5MDQ0NThkNmEyN2NlMGM5ZDQyMzQxYzYyOGJlZTZjN2M3NTExMThhOWU0MDg4ZTM4NWI2NWVmZTBjYTQwNiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.MsFmRwQKbZ72uO5ASxX4G8-oKtklKu0VFSYFQwUzaiE",
+      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODY5NDAyOTYsIm5iZiI6MTc4NjkzOTk5NiwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgxNyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MTdUMDQxMzE2WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9N2JlN2Y5ZWE1OGExZjZmZDgwMTdhNzE1NDUwNjJkNTI3NzNhNDdlMDkxZmM5MTUzYzFlMDcxOWNiZTU1NzYzNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.fg5_OeW15CLtZjBM2-Rb-CPKp7XADK2XPZ3uqVztIzg",
       "width": 453,
       "height": 166
     },
@@ -368,6 +380,18 @@
       "height": 300
     },
     {
+      "id": "scenario-model-driven-strain-construction-agent--b5adfbe",
+      "asset": "frameworks/scenario-model-driven-strain-construction-agent--b5adfbe.jpg",
+      "source_url": "https://www.hitbot.cc/industry-trends/432.html",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.hitbot.cc/static/home/images/ico-arrow.svg",
+      "width": 300,
+      "height": 300
+    },
+    {
       "id": "how-hydroshear-gives-robots-a-realistic-sense-of-d3b8467",
       "asset": "frameworks/how-hydroshear-gives-robots-a-realistic-sense-of-d3b8467.jpg",
       "source_url": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
@@ -378,6 +402,18 @@
       "image_url": "https://cdn.amazon.science/26/0a/47bb5de4438483f43551f13963d9/cloud-and-systems.svg",
       "width": 270,
       "height": 270
+    },
+    {
+      "id": "geek-debuts-gravity-and-its-one-core-dual-engine-00a780c",
+      "asset": "frameworks/geek-debuts-gravity-and-its-one-core-dual-engine-00a780c.jpg",
+      "source_url": "https://www.geekplus.com/resources/news/geek-debuts-gravity-and-its-one-core-dual-engine-strategy-at-waic-2026-accelerating-the-next-era-of-embodied-ai",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://www.geekplus.com/hs-fs/hubfs/35bbbebb-a8f7-4d34-82dc-72e6987cac26.jpg?width=1198&height=826&name=35bbbebb-a8f7-4d34-82dc-72e6987cac26.jpg",
+      "width": 1198,
+      "height": 826
     },
     {
       "id": "si0-dd244b6",
@@ -555,7 +591,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/7e1a980eae08b5c3f9fbf6c2a4f5ad781452f3fdeb0a905a6541a9c6dfc0aa8d/LejuRobotics/LeTools-Learning",
+      "image_url": "https://opengraph.githubassets.com/2552f90ccff6d808180f948f36b5a008c4176f1c53eae23074d1aeddabc59133/LejuRobotics/LeTools-Learning",
       "width": 1200,
       "height": 600
     },
@@ -656,6 +692,18 @@
       "height": 2100
     },
     {
+      "id": "puduagent-7d706e2",
+      "asset": "frameworks/puduagent-7d706e2.jpg",
+      "source_url": "https://www.pudurobotics.com/en/news/pudu-robotics-launches-puduagent-universal-embodied-ai-agent-platform",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://cdn.pudutech.com/_616aa776f4.png",
+      "width": 1184,
+      "height": 752
+    },
+    {
       "id": "next-generation-intelligent-operation-platform-i-1eb9db8",
       "asset": "frameworks/next-generation-intelligent-operation-platform-i-1eb9db8.jpg",
       "source_url": "https://www.geekplus.com/resources/robotics-blogs/geek-launches-next-generation-intelligent-operation-platform-iop",
@@ -690,6 +738,18 @@
       "image_url": "https://rai-inst.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-3.36.38-PM-768x471.png",
       "width": 768,
       "height": 471
+    },
+    {
+      "id": "magic-cleaning-ai-agent-system-ef7fe88",
+      "asset": "frameworks/magic-cleaning-ai-agent-system-ef7fe88.jpg",
+      "source_url": "https://www.pudurobotics.com/en/news/pudu-robotics-unveils-breakthroughs-four-product-lines-2026-partner-summit",
+      "page": null,
+      "caption_detected": true,
+      "source_kind": "official_project_page",
+      "selection": "method_figure",
+      "image_url": "https://cdn.pudutech.com/pudu_commercial_cleaning_robots_cc1_mt1_bg1_growth_data_95a2be2e9f.webp",
+      "width": 1080,
+      "height": 720
     },
     {
       "id": "flexiv-ros-2-jazzy-2-0-fe3a3c7",
@@ -1148,6 +1208,18 @@
       "height": 600
     },
     {
+      "id": "gr00t-agilex-a996169",
+      "asset": "frameworks/gr00t-agilex-a996169.jpg",
+      "source_url": "https://github.com/agilexrobotics/gr00t-agilex",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/d56c008bf37cc6099a3a52ef8a914f95389f5d59d70c43874231d11bb25baaf5/agilexrobotics/gr00t-agilex",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "q4-2025-vention-platform-release-50135d9",
       "asset": "frameworks/q4-2025-vention-platform-release-50135d9.jpg",
       "source_url": "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
@@ -1208,6 +1280,18 @@
       "height": 391
     },
     {
+      "id": "rm-api2-1-1-1-6c746ef",
+      "asset": "frameworks/rm-api2-1-1-1-6c746ef.jpg",
+      "source_url": "https://github.com/RealManRobot/RM_API2/releases/tag/1.1.1",
+      "page": null,
+      "caption_detected": false,
+      "source_kind": "official_project_page",
+      "selection": "official_project_visual",
+      "image_url": "https://opengraph.githubassets.com/1ee711317a1259eb081024544f576763fe2f46438b6078b22891fc91796d6390/RealManRobot/RM_API2/releases/tag/1.1.1",
+      "width": 1200,
+      "height": 600
+    },
+    {
       "id": "vitra-d321807",
       "asset": "frameworks/vitra-d321807.jpg",
       "source_url": "https://microsoft.github.io/VITRA/",
@@ -1254,78 +1338,6 @@
       "image_url": "https://www.dyna.co/assets/figma/59a6a920eae52ed7057c0d082e84e4cbf14f90c1.svg",
       "width": 918,
       "height": 1188
-    },
-    {
-      "id": "agile-one-robotic-foundation-model-and-layered-a-bc94972",
-      "asset": "frameworks/agile-one-robotic-foundation-model-and-layered-a-bc94972.jpg",
-      "source_url": "https://www.agile-robots.com/en/news/detail/industrial-ai-cloud-the-cloud-infrastructure-behind-our-foundation-model/",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.agile-robots.com/media/files/New_website/Blog/Blogpost_Telekom/AgileRobots-Blog-Telekom-006.jpeg",
-      "width": 2400,
-      "height": 1601
-    },
-    {
-      "id": "act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2",
-      "asset": "frameworks/act-1-a-robot-foundation-model-trained-on-zero-r-f1ce9f2.jpg",
-      "source_url": "https://www.sunday.ai/blog/no-robot-data",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://www.sunday.ai/_next/image?url=https%3A%2F%2Fimage.mux.com%2F2b02N5Y501hFejR2Yas02RZAb8sMOLsWqzE68RX7T8hp3s%2Fthumbnail.webp%3Ftime%3D0&w=3840&q=90",
-      "width": 1920,
-      "height": 1080
-    },
-    {
-      "id": "sima-2-d5416a6",
-      "asset": "frameworks/sima-2-d5416a6.jpg",
-      "source_url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://lh3.googleusercontent.com/KwuGClFlsydWIS2azo2WjBWkMY-Hm3geOZAad00wP-CMtmWQa8DlpmqOMvXC6QKiPnEUBgtToVWnJ9rzz0O7dTcaVFhYOSggEugNVJBWVgc1hegDfg=w1440",
-      "width": 1440,
-      "height": 1130
-    },
-    {
-      "id": "vention-developer-toolkit-3d19dab",
-      "asset": "frameworks/vention-developer-toolkit-3d19dab.jpg",
-      "source_url": "https://vention.com/blogs/automation-programming-and-simulation/vention-developer-toolkit-1005",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://ventionblobs.s3.amazonaws.com/blogs/images/1119/thumb_title_image.png",
-      "width": 600,
-      "height": 328
-    },
-    {
-      "id": "lbm-eval-1-1-0-632b92a",
-      "asset": "frameworks/lbm-eval-1-1-0-632b92a.jpg",
-      "source_url": "https://github.com/ToyotaResearchInstitute/lbm_eval/releases/tag/1.1.0",
-      "page": null,
-      "caption_detected": false,
-      "source_kind": "official_project_page",
-      "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/af34938b5d6dfe17e4bba5f218da66f6f09c32664ffd6f180a61c423a81fc399/ToyotaResearchInstitute/lbm_eval/releases/tag/1.1.0",
-      "width": 1200,
-      "height": 600
-    },
-    {
-      "id": "xpeng-vlt-large-model-94cea0a",
-      "asset": "frameworks/xpeng-vlt-large-model-94cea0a.jpg",
-      "source_url": "https://www.xpeng.com/pressroom/news/019a56f54fe99a2a0a8d8a0282e402b7",
-      "page": null,
-      "caption_detected": true,
-      "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://s-cdn.xpeng.com/xpwebsite/prod/2025-11-06/a0de30fe7ed84db1b4f31f8593c6ad23.png",
-      "width": 864,
-      "height": 485
     }
   ]
 }
