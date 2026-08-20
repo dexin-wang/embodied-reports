@@ -33842,5 +33842,1896 @@
       "software_project": false,
       "summary_zh": "正在核验候选项目。"
     }
+  },
+  "reachy-mini-conversation-app-v0-10-0-9fb8bd4": {
+    "checked_at": "2026-08-20T04:33:17.170267+00:00",
+    "title": "Reachy Mini Conversation App v0.10.0",
+    "accepted": true,
+    "reason": "收录。该候选满足全部条件：它是控制实体 Reachy Mini 的具身对话与动作代理软件；Pollen Robotics 官方 GitHub 组织提供了专门项目仓库及 v0.10.0 Release 页面；项目配置明确将作者标为 Pollen Robotics；版本于 2026 年发布；仓库采用 Apache-2.0 许可证。它不是硬件产品页，软件本身就是页面主体。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "实时语音对话与低延迟音频流处理",
+        "基于相机画面的视觉感知和问答",
+        "通过异步工具调用执行头部运动、舞蹈、情绪动作与人脸跟踪",
+        "使用可配置人格、长期事实记忆和外部 MCP 工具构建具身对话代理"
+      ],
+      "fields": [
+        "Embodied AI",
+        "LLM",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "这是直接面向实体 Reachy Mini 机器人的对话代理软件，而非机器人硬件或产品规格页；官方将其描述为结合实时语音后端、视觉处理和编排动作库的 Conversation App。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0))",
+        "系统通过 Hugging Face 实时后端运行低延迟音频对话循环，默认可连接内置托管服务，也可改接用户自行部署的本地 WebSocket 实时后端。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "视觉能力以 LLM 工具形式接入：camera 工具获取最新相机帧并交给当前实时后端分析；head_tracking 工具可利用相机与带 vision 扩展的机器人守护进程跟随用户面部。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "分层动作系统负责排队执行舞蹈、情绪片段、目标姿态和呼吸动作，并可叠加与语音反应相关的摆动；异步工具调度把语言模型输出连接到真实机器人动作与相机采集。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0))",
+        "默认人格公开了舞蹈、情绪播放、头部移动、扫视、休眠、视觉、人脸跟踪、记忆、网页搜索、天气和时间等工具；remember/forget 会把跨会话用户事实保存在本地 memory.v1.json。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "人格配置可分别定义提示词、启动问候和允许使用的工具，还支持在 Web UI 中切换或创建人格；切换人格会快速重连后端并重新加载指令与工具，无需重启整个应用。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "v0.10.0 增加了内置搜索、天气和时间工具，将 Space 工具规格缓存到清单以避免启动时联网，并让后端连接与媒体预热并行，同时改用 Reachy Mini SDK 的 JPEG 帧接口处理相机图像。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/releases/tag/v0.10.0))"
+      ],
+      "metrics": [
+        {
+          "label": "版本",
+          "note": "项目配置和官方 GitHub Release 均标明该版本。",
+          "value": "v0.10.0"
+        },
+        {
+          "label": "发布日期",
+          "note": "官方 GitHub Release 页面显示 released this 15 Jul；结合候选年份记为 2026-07-15。",
+          "value": "2026-07-15"
+        },
+        {
+          "label": "默认公开工具数",
+          "note": "v0.10.0 README 的默认人格工具表列出 15 个可调用工具。",
+          "value": "15"
+        },
+        {
+          "label": "默认空闲超时",
+          "note": "REACHY_MINI_APP_TIMEOUT_MINUTES 的默认值；设为 0 可关闭超时。",
+          "value": "1440 分钟"
+        },
+        {
+          "label": "最低 Python 版本",
+          "note": "pyproject.toml 中 requires-python 的明确要求。",
+          "value": ">=3.11"
+        }
+      ],
+      "official_organization_url": "https://pollen-robotics.com/",
+      "official_project_url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/releases/tag/v0.10.0",
+      "open_source": true,
+      "organization_en": "Pollen Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该候选满足全部条件：它是控制实体 Reachy Mini 的具身对话与动作代理软件；Pollen Robotics 官方 GitHub 组织提供了专门项目仓库及 v0.10.0 Release 页面；项目配置明确将作者标为 Pollen Robotics；版本于 2026 年发布；仓库采用 Apache-2.0 许可证。它不是硬件产品页，软件本身就是页面主体。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Reachy Mini Conversation App v0.10.0 是 Pollen Robotics 为实体桌面机器人 Reachy Mini 发布的开源具身对话代理。它把实时语音后端、相机视觉、语言模型工具调用、人格配置、跨会话记忆和机器人动作调度整合为一个可运行的软件栈。语言模型不仅生成对话，还能调用工具驱动头部姿态、扫视、舞蹈、情绪动作、休眠和人脸跟踪，并可通过相机帧理解机器人周围环境。v0.10.0 的重点是扩展联网工具和改善运行链路：默认加入搜索、天气和时间工具，缓存 Hugging Face Space 工具规格以消除启动阶段的网络发现，将后端连接与媒体预热并行，并通过 Reachy Mini SDK 直接取得 JPEG 相机帧。项目同时提供控制台模式和 Web UI，可切换或创建人格、配置问候与工具权限，并允许接入本地实时语音后端及外部 MCP 兼容工具。"
+    }
+  },
+  "reachy-mini-conversation-app-v1-0-0-b88e756": {
+    "checked_at": "2026-08-20T04:33:17.198274+00:00",
+    "title": "Reachy Mini Conversation App v1.0.0",
+    "accepted": false,
+    "reason": "尚未完成来源核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选版本、官方归属、发布日期，以及该仓库是否以实体机器人软件为主体。随后会对照官方文档提取可验证的能力和指标。",
+        "我会优先使用 Pollen Robotics 的官方仓库、文档与组织页面；第三方来源只用于独立社交证据，不替代官方项目证据。",
+        "当前重点是确认 `v1.0.0` 标签在 2026 年 8 月 5 日是否真实发布，并区分 Conversation App 软件与 Reachy Mini 硬件产品页。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "核验进行中。",
+        "不以用户提供的日期、摘要或 URL 推断结论。",
+        "仅记录可由可访问来源直接支持的信息。",
+        "arXiv 不作为官方项目证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "尚未完成来源核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "real-bench-875b2ab": {
+    "checked_at": "2026-08-20T04:33:17.224704+00:00",
+    "title": "REAL-Bench",
+    "accepted": true,
+    "reason": "收录。REAL-Bench是面向物理移动操作智能体的软件评测基准，而非机器人硬件或产品规格页面。官方项目页明确介绍其241项任务、四类评测能力、训练与模拟到真实机器人评估流程；官方MIT许可仓库于2026年7月15日发布了任务定义、加载器、验证器、智能体和MCP运行代码。项目作者同时来自多家机构，但官方Intern Robotics组织明确隶属于上海人工智能实验室，因此以该实验室作为主要负责研究机构。相关发布与技术结果由官方项目页和仓库支持。 ([internrobotics.github.io](https://internrobotics.github.io/REAL/))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供可直接加载和验证的开放世界移动操作评测任务定义",
+        "评测基于RGB视觉的主动探索、目标发现与视觉定位能力",
+        "评测视觉相似家具及开放词汇物体干扰下的拾取放置能力",
+        "评测家具开合等关节操作中的状态一致性",
+        "通过模拟用户评测歧义识别、主动询问和交互式意图消歧"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot manipulation",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "REAL-Bench于2026年7月15日正式发布，是REAL开放世界移动操作框架的评测组成部分；官方项目页、上海人工智能实验室Intern Robotics组织页面和公开代码仓库均可访问。",
+        "基准包含241个任务实例，分为四类：72个Furniture-Distractor Pick-and-Place（FDP）、56个Furniture & Object Distractors（FODP）、48个Furniture-Distractor Open/Close（FDO）和65个Simulator-User Loop（SUL）任务。",
+        "任务要求智能体从RGB视觉观察出发完成导航、检测、Set-of-Mark提示和视觉定位，不向策略暴露全局物体清单、物体位姿或其他特权模拟器状态。",
+        "FDP与FODP用于检验主动视觉搜索及干扰环境中的开放词汇推理：智能体必须辨别相似家具、物体和目标容器，再完成跨容器拾取放置。",
+        "FDO覆盖家具开合等关节物体操作，重点检查智能体在环境状态变化后的长时序一致性，而SUL要求智能体发现指令歧义并通过统一工具接口主动询问模拟用户。",
+        "仓库实现了基于YAML的任务包、Python加载器和验证器；验证过程检查任务模式、基准ID、全局索引、四类任务数量、运行时物体与放置关系以及MesaTask物体锁定清单。",
+        "REAL采用固定的MCP高层动作模式连接模拟处理器与真实机器人控制器，并以Qwen3-VL-8B进行SFT和在线强化学习；同一高层策略还在双臂移动机器人上进行零样本部署验证。"
+      ],
+      "metrics": [
+        {
+          "label": "基准规模",
+          "note": "官方发布的REAL-Bench任务定义总数。",
+          "value": "241个任务"
+        },
+        {
+          "label": "任务构成",
+          "note": "FDP、FODP、FDO和SUL四个任务族的官方数量。",
+          "value": "72 / 56 / 48 / 65"
+        },
+        {
+          "label": "交互任务成功率",
+          "note": "最终REAL-8B策略在SUL交互式任务上的成功率。",
+          "value": "56.9%"
+        },
+        {
+          "label": "开放词汇探索成功率",
+          "note": "官方项目页报告的最终策略FODP成功率。",
+          "value": "33.9%"
+        },
+        {
+          "label": "真实机器人端到端结果",
+          "note": "冻结高层策略通过相同MCP接口零样本迁移至双臂移动机器人，在60次真实环境试验中的结果。",
+          "value": "78.3%（60个真实机器人回合）"
+        }
+      ],
+      "official_organization_url": "https://internrobotics.shlab.org.cn",
+      "official_project_url": "https://internrobotics.github.io/REAL/",
+      "open_source": true,
+      "organization_en": "Shanghai Artificial Intelligence Laboratory",
+      "organization_kind": "Research Lab",
+      "organization_zh": "上海人工智能实验室",
+      "reason": "收录。REAL-Bench是面向物理移动操作智能体的软件评测基准，而非机器人硬件或产品规格页面。官方项目页明确介绍其241项任务、四类评测能力、训练与模拟到真实机器人评估流程；官方MIT许可仓库于2026年7月15日发布了任务定义、加载器、验证器、智能体和MCP运行代码。项目作者同时来自多家机构，但官方Intern Robotics组织明确隶属于上海人工智能实验室，因此以该实验室作为主要负责研究机构。相关发布与技术结果由官方项目页和仓库支持。 ([internrobotics.github.io](https://internrobotics.github.io/REAL/))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "REAL-Bench是上海人工智能实验室Intern Robotics牵头发布的开放世界移动操作智能体评测基准，也是REAL视觉交互式具身智能框架的一部分。它通过241个可执行任务，系统评估智能体仅依赖RGB观察进行主动探索、视觉定位、干扰环境拾取放置、关节家具操作以及面向歧义指令的主动询问能力。官方仓库不仅提供任务元数据，还实现了YAML加载与完整性验证、MCP工具服务器、模拟环境配置、程序化数据生成以及SFT训练组件，因此属于可实际运行的软件项目。基准刻意避免向策略暴露全局物体列表、精确位姿等模拟器特权信息，并让模拟与真实机器人共享高层工具模式，以提高评测对真实部署约束的代表性。"
+    }
+  },
+  "omniscene-dataset-9d1afe5": {
+    "checked_at": "2026-08-20T04:33:17.250817+00:00",
+    "title": "OmniScene Dataset",
+    "accepted": true,
+    "reason": "收录。OmniScene 是 2026 年 7 月随 X-Lens 发布并可下载的软件数据资产，不是机器人硬件或产品规格页面。D-Robotics 的官方公告和官方 X-Lens 项目页均明确介绍该数据集；项目页提供专门的 OmniScene Dataset 技术部分及官方下载入口，并将项目责任主体标为 D-Robotics。数据集以 CC BY-NC 4.0 许可公开，直接服务于异构机器人相机的多视图度量深度学习和评测，满足具身智能数据与基准项目的收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向异构多相机度量深度学习的合成训练数据",
+        "同步提供鱼眼与针孔相机视图，支持跨镜头模型训练和评测",
+        "提供逐像素稠密度量深度、有效区域掩码与天空标记",
+        "提供逐帧相机内参、世界坐标外参及相机间相对位姿",
+        "采用场景不重叠的测试集评估未见环境泛化"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "OmniScene 是 D-Robotics 在 X-Lens 官方项目中发布的大规模合成数据集，目标是补足机器人和具身视觉中异构相机度量深度训练数据的不足。",
+        "数据通过 NVIDIA Isaac Sim 渲染；每个样本使用经过标定的六相机系统，包含四个 180 度鱼眼侧视相机以及前、后两个针孔相机，并保持六路视图同步。",
+        "每帧提供无噪声的稠密度量真值，包括逐像素 z-depth、有效区域掩码、天空标记以及采用 OpenCV 坐标约定的相机参数。",
+        "鱼眼相机采用 Mei unified-sphere 模型并提供 xi、radtan 参数和固定的逐像素射线方向查找表；针孔相机提供 3×3 内参矩阵。",
+        "逐帧元数据包含相机到世界的 4×4 位姿、相机之间的相对位姿以及完整镜头标定信息，可用于多视图融合和跨投影几何学习。",
+        "场景覆盖住宅、商业、工业、城市及科幻环境，使用专业制作的 Kujiale 和 Unreal Engine 场景资产；测试集由与训练场景完全分离的场景组成。",
+        "数据以场景级 TAR 文件组织，划分为 train、valid 和 test；深度保存为 16 位 PNG，数值除以 256 后得到以米为单位的深度，零值表示天空或无效区域。"
+      ],
+      "metrics": [
+        {
+          "label": "场景数量",
+          "note": "官方 X-Lens 项目页报告的复杂室内和室外合成场景数。",
+          "value": "103"
+        },
+        {
+          "label": "运动序列数量",
+          "note": "六相机系统在各场景中生成的运动序列总数。",
+          "value": "564"
+        },
+        {
+          "label": "同步六视图帧数",
+          "note": "每帧包含四路鱼眼和两路针孔相机数据。",
+          "value": "266K"
+        },
+        {
+          "label": "标定图像数量",
+          "note": "官方项目页报告的数据集图像总量。",
+          "value": "1.7M+"
+        },
+        {
+          "label": "单视图图像分辨率",
+          "note": "OmniScene 数据卡列出的 RGB 与深度视图分辨率。",
+          "value": "1920×1200"
+        }
+      ],
+      "official_organization_url": "https://en.d-robotics.cc/",
+      "official_project_url": "https://drobotics-xlens.github.io/",
+      "open_source": true,
+      "organization_en": "D-Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "地瓜机器人",
+      "reason": "收录。OmniScene 是 2026 年 7 月随 X-Lens 发布并可下载的软件数据资产，不是机器人硬件或产品规格页面。D-Robotics 的官方公告和官方 X-Lens 项目页均明确介绍该数据集；项目页提供专门的 OmniScene Dataset 技术部分及官方下载入口，并将项目责任主体标为 D-Robotics。数据集以 CC BY-NC 4.0 许可公开，直接服务于异构机器人相机的多视图度量深度学习和评测，满足具身智能数据与基准项目的收录条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "OmniScene 是地瓜机器人（D-Robotics）于 2026 年 7 月随 X-Lens 发布的异构多相机度量深度合成数据集。它以四个 180 度鱼眼相机和两个针孔相机构成同步六视图系统，在 103 个室内外场景和 564 条运动序列中提供约 26.6 万组六视图帧、超过 170 万张标定图像。数据不仅包含 RGB 和以米为单位的稠密深度，还提供镜头有效区域、天空掩码、鱼眼射线查找表、相机内外参及跨相机相对位姿，能够支撑跨镜头投影学习、多视图几何融合和真实尺度深度评测。其测试场景与训练场景完全分离，并已作为 X-Lens 鱼眼、针孔及混合相机实验的训练和评测资源公开发布。"
+    }
+  },
+  "reachy-mini-sdk-v1-9-0-634b67b": {
+    "checked_at": "2026-08-20T04:33:17.276795+00:00",
+    "title": "Reachy Mini SDK v1.9.0",
+    "accepted": true,
+    "reason": "纳入。官方 Pollen Robotics GitHub 仓库及其专门的 v1.9.0 Release 页面明确发布了面向实体 Reachy Mini 的 SDK、daemon、媒体、运动控制和应用生命周期软件；该版本包含人脸跟踪、JPEG 摄像头编码及应用自动启动等已实现功能。官方仓库提供源码和许可证，责任组织明确，发布日期晚于 2025 年，满足索引的全部准入条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Python SDK 与后台 daemon 控制实体 Reachy Mini，也支持无硬件的 MuJoCo 仿真环境。",
+        "执行头部、双天线与机身偏航的平滑插值运动，并可使用即时目标接口运行高频跟踪或轨迹控制。",
+        "在 daemon 内检测最近的人脸，驱动机器人头部跟随鼻部位置，并允许按权重混合自动跟踪与应用动作。",
+        "获取摄像头原始帧或通过新增的 `get_frame_jpeg()` 使用 GStreamer 编码 JPEG 帧。",
+        "管理机器人应用生命周期，包括开机自动启动默认应用、通过天线触摸启动应用、配置启动应用，以及应用停止后的休眠与卸力状态。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Pollen Robotics 官方公开仓库中的 Reachy Mini SDK 与 daemon 软件版本，不是单纯的机器人硬件或产品规格页面；仓库包含 Python/TypeScript SDK、后台服务、仿真、应用框架、示例和测试。",
+        "v1.9.0 新增 daemon 侧人脸跟踪：系统寻找最近的人脸，并控制头部朝向其鼻部；SDK 提供启动、读取跟踪结果和停止跟踪的接口。",
+        "人脸跟踪可通过 `weight` 与应用自身的头部动作混合：`1.0` 由跟踪器控制头部，`0.0` 暂停检测并释放头部和计算资源，但不销毁跟踪器。",
+        "媒体接口增加 `get_frame_jpeg()`，使用 GStreamer 将摄像头画面直接编码为 JPEG，补充原有的 NumPy 原始帧访问方式。",
+        "应用启动流程得到扩展：默认应用可在机器人启动时自动运行，也可由天线触摸触发，并支持配置具体的启动应用。",
+        "运行状态和生命周期修复包括：backend 不再 ready 时终止 `/state/ws/full` 流式循环；应用停止后让机器人保持 asleep 和 limp，避免应用退出导致不符合预期的唤醒或电机保持状态。",
+        "该版本同时弃用旧 Web Dashboard，并更新 Windows 用户的 RPiBoot 操作说明；官方发布记录列出从 v1.8.4 到 v1.9.0 的完整变更。"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "官方 GitHub Releases 页面记录的 v1.9.0 发布时间。",
+          "value": "2026-07-09"
+        },
+        {
+          "label": "发布记录中的变更项",
+          "note": "官方 v1.9.0 “What's Changed”列表包含功能、修复、弃用和文档更新。",
+          "value": "9 项"
+        },
+        {
+          "label": "人脸位置输出范围",
+          "note": "`get_tracked_face()` 返回 detected、x、y 和 roll，其中 x、y 为归一化坐标。",
+          "value": "x、y ∈ [-1, 1]"
+        },
+        {
+          "label": "原始摄像头帧格式",
+          "note": "Python SDK 文档报告 `get_frame()` 返回的数组格式。",
+          "value": "(height, width, 3)，uint8"
+        },
+        {
+          "label": "运动插值方法",
+          "note": "SDK 文档明确列出的轨迹插值选项。",
+          "value": "4 种：linear、minjerk、ease_in_out、cartoon"
+        }
+      ],
+      "official_organization_url": "https://pollen-robotics.com/",
+      "official_project_url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.9.0",
+      "open_source": true,
+      "organization_en": "Pollen Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。官方 Pollen Robotics GitHub 仓库及其专门的 v1.9.0 Release 页面明确发布了面向实体 Reachy Mini 的 SDK、daemon、媒体、运动控制和应用生命周期软件；该版本包含人脸跟踪、JPEG 摄像头编码及应用自动启动等已实现功能。官方仓库提供源码和许可证，责任组织明确，发布日期晚于 2025 年，满足索引的全部准入条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Reachy Mini SDK v1.9.0 是 Pollen Robotics 面向实体 Reachy Mini 机器人及其仿真环境发布的软件控制栈版本。它以 Python/TypeScript SDK、机器人端 daemon、媒体管线和应用运行机制为核心，而不是硬件产品公告。本次发布最显著的能力是 daemon 侧人脸检测与头部跟踪：应用可以读取归一化的人脸位置和滚转信息，并通过权重将跟踪动作与自身生成的头部运动混合。媒体层新增基于 GStreamer 的 JPEG 帧编码接口，便于网络应用直接取得压缩视觉数据。应用平台方面，v1.9.0 支持开机自动运行可配置的默认应用，也允许通过天线触摸触发启动；应用结束后机器人保持休眠和电机卸力。该版本还修复了 backend 失效后状态 WebSocket 继续循环的问题，并弃用旧版 Web Dashboard。整体上，它是一项直接作用于物理机器人感知、运动控制、媒体访问和应用生命周期的开源机器人系统软件发布。"
+    }
+  },
+  "legend-of-mirokai-v0-8-0-4aa166e": {
+    "checked_at": "2026-08-20T04:33:17.297930+00:00",
+    "title": "Legend of Mirokai v0.8.0",
+    "accepted": false,
+    "reason": "正在检索和核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方发布页、软件构成、组织归属和可复现的版本指标。重点会区分 Mirokaï 机器人硬件产品与 Legend of Mirokai 开发者软件发布。",
+        "正在核验官方发布页、软件构成、组织归属和可复现的版本指标。重点会区分 Mirokaï 机器人硬件产品与 Legend of Mirokai 开发者软件发布。",
+        "正在核验官方发布页、软件构成、组织归属和可复现的版本指标。重点会区分 Mirokaï 机器人硬件产品与 Legend of Mirokai 开发者软件发布。"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索证据。",
+        "正在检索证据。",
+        "正在检索证据。",
+        "正在检索证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.8.0/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在检索和核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "reachy-mini-sdk-v1-8-4-ae803a6": {
+    "checked_at": "2026-08-20T04:33:17.317886+00:00",
+    "title": "Reachy Mini SDK v1.8.4",
+    "accepted": true,
+    "reason": "符合收录条件：该候选是由 Pollen Robotics 明确负责、面向实体 Reachy Mini 机器人及其仿真环境的开源控制与交互软件版本；官方仓库、固定版本源码和独立 Release 页面均可访问。发布对象包含运动控制、媒体处理、远程连接、仿真和机器人应用接口，不是硬件单品或规格页面。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Python SDK 在实体 Reachy Mini、Reachy Mini Lite 与 MuJoCo 仿真环境中控制头部、身体和天线运动。",
+        "在缺少 Reachy Mini 音频卡及其硬件回声消除能力时，为 sim/mockup-sim 模式启用基于 GStreamer WebRTC DSP 的软件声学回声消除。",
+        "将声音与录制动作绑定并同步播放，同时支持 WAV 之外的多种音频容器。",
+        "通过中央中继连接、自动重连和令牌更新机制支持无线机器人的远程会话。",
+        "通过摄像头、麦克风、扬声器、运动接口和应用框架构建交互式具身机器人应用。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI",
+        "Whole-body control"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Pollen Robotics 官方 Reachy Mini 仓库发布的实体机器人 SDK，而非硬件产品页；v1.8.4 有独立的官方 GitHub Release 和固定版本源码，发布时间为 2026 年 6 月 25 日。",
+        "音频管线在未检测到 Reachy Mini Audio 声卡时，将 `webrtcdsp` 插入麦克风路径，并在播放路径加入 `webrtcechoprobe`，以播放信号作为远端参考执行软件回声消除，面向仿真及 mockup-sim 场景。",
+        "录制动作的音频 sidecar 查找不再限定 `.wav`，而是尝试守护进程可播放的多种容器；协议的 `UploadAudioStartCmd.encoding` 也从固定 `wav-base64` 扩展为通用的 `<container>-base64`，同时保留 WAV 默认值以兼容旧客户端。",
+        "TypeScript SDK 会依据 `audioBlob` 的 MIME 类型推导上传容器并转发给守护进程；无 MIME 类型或旧式 Blob 仍回退到 `wav-base64`，从而支持 Marionette 等应用打包 Opus/Ogg 动作音频。",
+        "中央中继重连从固定间隔改为带少量随机抖动的封顶指数退避；成功连接、更新令牌或强制重连会重置退避，令牌更新事件仍可中断等待并立即重连。",
+        "头部 `goto` 插值增加将 yaw 视为有符号标量的处理方式，避免从正大角度转到负大角度时选择经过不可达后方 180° 的角度最短路径，从而减少跳变运动。",
+        "项目采用 Apache-2.0 软件许可证，并同时提供 Python SDK、TypeScript SDK、守护进程、测试、示例、应用框架以及实体和 MuJoCo 仿真平台文档。"
+      ],
+      "metrics": [
+        {
+          "label": "中央中继重连退避范围",
+          "note": "从 5 秒开始指数增长，封顶于 60 秒，并加入小幅加性抖动；连接成功后恢复从 5 秒开始。",
+          "value": "5–60 秒"
+        },
+        {
+          "label": "录制动作可查找的音频容器",
+          "note": "sidecar 查找覆盖 wav、mp3、ogg、oga、opus、flac、m4a、aac；发生同名匹配时 WAV 优先。",
+          "value": "8 种"
+        },
+        {
+          "label": "yaw 插值问题示例",
+          "note": "官方合并说明使用从 yaw=120° 到 yaw=-120° 的转换说明旧插值会试图经过机器人不可达的 180° 后方路径。",
+          "value": "120° → -120°"
+        },
+        {
+          "label": "软件 AEC 实现组件",
+          "note": "在硬件 AEC 不可用时，麦克风和播放路径分别使用 GStreamer 的 WebRTC DSP 与回声参考组件。",
+          "value": "webrtcdsp + webrtcechoprobe"
+        },
+        {
+          "label": "支持的平台形态",
+          "note": "官方版本文档列出 Wireless、Lite 和无需硬件的 MuJoCo Simulation。",
+          "value": "3 种"
+        }
+      ],
+      "official_organization_url": "https://pollen-robotics.com/",
+      "official_project_url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.4",
+      "open_source": true,
+      "organization_en": "Pollen Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：该候选是由 Pollen Robotics 明确负责、面向实体 Reachy Mini 机器人及其仿真环境的开源控制与交互软件版本；官方仓库、固定版本源码和独立 Release 页面均可访问。发布对象包含运动控制、媒体处理、远程连接、仿真和机器人应用接口，不是硬件单品或规格页面。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Reachy Mini SDK v1.8.4 是 Pollen Robotics 于 2026 年 6 月 25 日发布的机器人软件维护版本，服务于实体 Reachy Mini/Lite 和 MuJoCo 仿真平台。它并非新的 VLA 或基础模型，而是覆盖运动、音频、远程通信和应用运行时的机器人系统 SDK。该版最具体的改进包括：在硬件回声消除不可用的仿真模式中建立软件 AEC 信号链；让录制动作携带八类可识别音频容器；让 TypeScript 客户端按 MIME 类型保留真实上传格式；将中继重连改为 5 至 60 秒的封顶指数退避；以及修复头部 yaw 在跨越正负大角度时错误经过不可达 180° 后方路径的问题。这些改动直接提高了对话式应用、动作音效同步、无线远程会话和表现性头部运动的可靠性。"
+    }
+  },
+  "reachy-mini-conversation-app-v0-9-0-34c7a44": {
+    "checked_at": "2026-08-20T04:33:17.345160+00:00",
+    "title": "Reachy Mini Conversation App v0.9.0",
+    "accepted": false,
+    "reason": "正在使用官方来源核验候选项目，尚未形成最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核实官方仓库、版本发布日期、负责组织及该版本实际实现内容，再按严格准入条件判断。重点会区分这是面向实体 Reachy Mini 的软件项目，还是仅作为硬件产品的附属说明。",
+        "指标只采用官方页面或仓库中可直接核验的版本、模型、配置与测试结果，不从摘要补全。需要的条件若缺失，我会明确标为不收录。官方链接和组织归属也会逐项验证。需要先核查该 GitHub 标签、仓库归属和官方文档链接。",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "正在核验。",
+        "正在核验。",
+        "正在核验。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "等待官方来源检索",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.9.0",
+      "open_source": true,
+      "organization_en": "Pollen Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在使用官方来源核验候选项目，尚未形成最终判定。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Reachy Mini Conversation App v0.9.0 是否满足软件项目、官方专页、明确责任组织及 2025 年后发布等条件。"
+    }
+  },
+  "reachy-mini-sdk-v1-8-3-3905b9b": {
+    "checked_at": "2026-08-20T04:33:17.368199+00:00",
+    "title": "Reachy Mini SDK v1.8.3",
+    "accepted": true,
+    "reason": "符合收录条件：这是由 Pollen Robotics 明确负责、面向实体 Reachy Mini 机器人控制与应用开发的 SDK/守护进程软件版本；存在独立的官方 GitHub Release 页面和公开源代码，发布日期为 2026 年 6 月 16 日。该页面的主题是机器人软件栈更新，而非硬件产品公告。官方发布页列出原生应用 WebView CORS 支持和物理 CI 改进，相关合并请求提供了可核验的实现细节。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Python SDK 编写脚本、实时控制循环及机器人端应用",
+        "控制 Reachy Mini 的头部、身体和双天线运动",
+        "访问摄像头、麦克风和扬声器等多模态输入输出资源",
+        "在实体 Reachy Mini、Reachy Mini Lite 与 MuJoCo 仿真环境中开发和测试"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "v1.8.3 是 Pollen Robotics 官方 Reachy Mini SDK 仓库发布的软件版本，不是机器人硬件或产品规格页面；仓库明确将其定位为“Reachy Mini's SDK”。",
+        "该版本修复了 v1.8.2 收紧 CORS 后原生桌面应用无法直接探测机器人的问题：守护进程将 Tauri、Capacitor 等原生应用 WebView 的 Origin 加入允许范围，同时继续限制普通跨域网页访问。",
+        "CORS 规则被提取为统一的 CORS_ORIGIN_REGEX 常量，使运行时配置和自动化测试针对同一规则源，降低安全策略与测试断言漂移的风险。",
+        "物理 CI 流程可通过 workflow_dispatch 指定分支、标签或提交引用，并先通过 GitHub API解析为完整 SHA；无效引用会在门控任务中使整个流程提前终止。",
+        "实体无线机器人测试通过 SSH 安装指定代码引用，并轮询守护进程报告的八位提交标识，以避免实际测试版本与请求版本不一致。",
+        "CI 覆盖 Wireless、Lite 和模拟环境，改进了安装与守护进程日志汇总、Windows PowerShell 编码及退出状态处理、macOS 安装缓存问题，并保持共享无线机器人任务串行执行。"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "GitHub 官方 Release 页面报告的发布时间。",
+          "value": "2026-06-16 16:12"
+        },
+        {
+          "label": "版本变更项",
+          "note": "v1.8.3 Release Notes 列出的合并变更数量。",
+          "value": "2 项"
+        },
+        {
+          "label": "CORS 修复验证",
+          "note": "原生 WebView CORS 修复 PR #1213 合并时 GitHub 报告的检查结果。",
+          "value": "8 checks passed"
+        },
+        {
+          "label": "物理 CI 改进规模",
+          "note": "PR #1215 合并到主分支的提交数量。",
+          "value": "27 commits"
+        },
+        {
+          "label": "WebSocket CI 超时配置",
+          "note": "物理 CI 针对运行器到机器人的网络路径，将连接 open_timeout 从 10 秒提高到 30 秒，并增加守护进程启动后的等待时间。",
+          "value": "30 秒超时 + 5 秒等待"
+        }
+      ],
+      "official_organization_url": "https://pollen-robotics.com/",
+      "official_project_url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.3",
+      "open_source": true,
+      "organization_en": "Pollen Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是由 Pollen Robotics 明确负责、面向实体 Reachy Mini 机器人控制与应用开发的 SDK/守护进程软件版本；存在独立的官方 GitHub Release 页面和公开源代码，发布日期为 2026 年 6 月 16 日。该页面的主题是机器人软件栈更新，而非硬件产品公告。官方发布页列出原生应用 WebView CORS 支持和物理 CI 改进，相关合并请求提供了可核验的实现细节。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Reachy Mini SDK v1.8.3 是 Pollen Robotics 于 2026 年 6 月 16 日发布的实体机器人软件栈维护版本。其核心用户侧修复针对 Reachy Mini 桌面应用的 Wi-Fi 预检：v1.8.2 的 CORS 安全收紧仅允许 localhost/127.0.0.1，导致携带 Tauri 或 Windows 原生 WebView Origin 的跨域探测请求被浏览器丢弃。v1.8.3 在保留网页端防护边界的同时，将受信任的 Tauri/Capacitor 原生应用来源加入守护进程白名单，并用共享正则常量和测试固定该策略。另一项主要工作是重构实体机器人 CI，使指定分支、标签或提交能被解析、安装并在 Wireless、Lite 与仿真配置上验证；流程处理了共享机器人串行访问、守护进程重启、日志采集、Windows PowerShell 编码与错误传播，以及 macOS 安装缓存导致测试旧版本等问题。SDK 本身支持 Python 控制循环、机器人运动、摄像头与音频资源访问，并提供无需硬件的 MuJoCo 原型环境。项目代码采用 Apache 2.0 许可证公开发布。"
+    }
+  },
+  "reachy-mini-conversation-app-v0-8-0-5dcf079": {
+    "checked_at": "2026-08-20T04:33:17.391182+00:00",
+    "title": "Reachy Mini Conversation App v0.8.0",
+    "accepted": false,
+    "reason": "正在核验候选项目的官方发布页、版本日期、组织归属和实体机器人软件属性。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m verifying the tagged release, repository ownership, and whether the artifact is genuinely robot software rather than a hardware product page. I’ll use the official repository and organization materials as the primary evidence.",
+        "I’ll also check linked technical documentation for concrete capabilities and reported results, without treating the supplied date or summary as established facts.",
+        "I’m gathering the release metadata and implementation details now; the key eligibility question is whether this repository is a dedicated, organization-owned software artifact integrated with the physical Reachy Mini robot."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "No verdict yet.",
+        "Official sources are being checked.",
+        "Metrics will only be included if explicitly reported."
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在核验官方来源",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验候选项目的官方发布页、版本日期、组织归属和实体机器人软件属性。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在基于官方来源核验。"
+    }
+  },
+  "reachy-mini-sdk-v1-8-2-7855d2f": {
+    "checked_at": "2026-08-20T04:33:17.412458+00:00",
+    "title": "Reachy Mini SDK v1.8.2",
+    "accepted": true,
+    "reason": "纳入。Pollen Robotics 的官方 GitHub 仓库和独立版本发布页均可访问；仓库明确以 Reachy Mini SDK 为主题，并包含控制实体机器人所需的 SDK、守护进程、媒体通信、应用接口和仿真软件。v1.8.2 有日期明确的官方 Release，具体变更涉及 BLE 网络配置、BLE/WebRTC 守护进程更新、中继连接韧性、媒体验证和守护进程访问控制，满足实体机器人软件项目及专属官方页面要求。([github.com](https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.2))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Python SDK 对 Reachy Mini 的头部、天线和身体偏航进行运动控制",
+        "通过守护进程管理电机、传感器、摄像头、麦克风和扬声器等机器人资源",
+        "通过 Bluetooth Low Energy 扫描并连接 Wi-Fi 网络，以及触发守护进程更新",
+        "通过 WebRTC 数据通道远程发送更新命令并承载机器人应用通信",
+        "支持实体 Reachy Mini Wireless、Reachy Mini Lite 和 MuJoCo 仿真环境"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是面向实体 Reachy Mini 机器人的开源 SDK 与守护进程版本，而不是硬件产品页；官方仓库明确将项目描述为“Reachy Mini's SDK”，并提供 Python、JavaScript/Web、守护进程及仿真代码。",
+        "v1.8.2 新增基于 Bluetooth Low Energy 的 Wi-Fi 扫描与连接流程，使无线版机器人可通过蓝牙完成网络配置。",
+        "该版本增加通过 BLE 更新机器人守护进程的能力，并为 WebRTC 数据通道加入 start_update 命令，扩展远程维护路径。",
+        "中央中继在 Hugging Face 令牌过期并返回 HTTP 401 时采用退避重连，避免持续快速重试，提高远程连接韧性。",
+        "守护进程收紧网络访问边界：CORS 从通配符改为仅允许 localhost；非无线模式绑定回环接口；应用安装 API 仅接受 Hugging Face Spaces。",
+        "针对 Raspberry Pi 4 Wireless，将 glibc 的 MALLOC_ARENA_MAX 设为 2，以限制守护进程的内存分配 arena 数量。",
+        "版本修复媒体声音上传验证；SDK 整体仍提供平滑轨迹与实时控制、相机取帧、音频输入输出、WebRTC 通信和 MuJoCo 仿真等机器人开发接口。"
+      ],
+      "metrics": [
+        {
+          "label": "正式版本",
+          "note": "官方 GitHub Release 于 2026年6月15日发布。",
+          "value": "v1.8.2"
+        },
+        {
+          "label": "内存分配限制",
+          "note": "针对 Raspberry Pi 4 Wireless 守护进程设置的 glibc 参数。",
+          "value": "MALLOC_ARENA_MAX=2"
+        },
+        {
+          "label": "中继认证故障处理",
+          "note": "中央中继收到过期 Hugging Face 令牌导致的认证响应时执行退避重连。",
+          "value": "HTTP 401 时退避重连"
+        },
+        {
+          "label": "守护进程跨域范围",
+          "note": "v1.8.2 将守护进程 CORS 从通配符收紧至本机来源。",
+          "value": "仅 localhost"
+        },
+        {
+          "label": "远程更新能力",
+          "note": "官方发布记录报告新增 WebRTC 数据通道更新指令。",
+          "value": "新增 start_update 命令"
+        }
+      ],
+      "official_organization_url": "https://www.pollen-robotics.com/",
+      "official_project_url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.2",
+      "open_source": true,
+      "organization_en": "Pollen Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Pollen Robotics 的官方 GitHub 仓库和独立版本发布页均可访问；仓库明确以 Reachy Mini SDK 为主题，并包含控制实体机器人所需的 SDK、守护进程、媒体通信、应用接口和仿真软件。v1.8.2 有日期明确的官方 Release，具体变更涉及 BLE 网络配置、BLE/WebRTC 守护进程更新、中继连接韧性、媒体验证和守护进程访问控制，满足实体机器人软件项目及专属官方页面要求。([github.com](https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.2))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Reachy Mini SDK v1.8.2 是 Pollen Robotics 于 2026年6月15日发布的实体机器人软件栈更新。该项目覆盖 Python 与 JavaScript 控制接口、机器人端守护进程、REST/WebRTC 通信、媒体输入输出和 MuJoCo 仿真。此次版本重点完善无线机器人的部署与运维：加入 BLE Wi-Fi 配置和守护进程更新、增加 WebRTC 更新命令、改善过期令牌下的中继重连，并通过本机 CORS、回环绑定和应用来源限制收紧守护进程攻击面。它不是硬件公告，而是有独立官方代码仓库、版本页和文档的机器人 SDK 发布。"
+    }
+  },
+  "report-719b0b5": {
+    "checked_at": "2026-08-20T04:33:17.433508+00:00",
+    "title": "王鹤荣获第三十六届“北京青年五四奖章”-新闻动态-北京大学前沿计算研究中心",
+    "accepted": false,
+    "reason": "正在检索并核验，暂不作为最终结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该链接的页面性质、责任机构和是否存在以软件为主体的专门项目材料，再按严格准入条件给出结论。网页中的奖项报道与其中提到的科研成果会分别判断，不能用人物荣誉新闻替代项目发布证据。",
+        "我会核验该链接的页面性质、责任机构和是否存在以软件为主体的专门项目材料，再按严格准入条件给出结论。网页中的奖项报道与其中提到的科研成果会分别判断，不能用人物荣誉新闻替代项目发布证据。",
+        "我会核验该链接的页面性质、责任机构和是否存在以软件为主体的专门项目材料，再按严格准入条件给出结论。网页中的奖项报道与其中提到的科研成果会分别判断，不能用人物荣誉新闻替代项目发布证据。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验官方页面及其可访问的关联材料。",
+        "正在核验官方页面及其可访问的关联材料。",
+        "正在核验官方页面及其可访问的关联材料。",
+        "正在核验官方页面及其可访问的关联材料。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "尚未完成最终判断",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "https://cfcs.pku.edu.cn/",
+      "official_project_url": "https://cfcs.pku.edu.cn/news/d53316500ff94534b839be0114a96032.htm",
+      "open_source": false,
+      "organization_en": "Peking University Center on Frontiers of Computing Studies",
+      "organization_kind": "University",
+      "organization_zh": "北京大学前沿计算研究中心",
+      "reason": "正在检索并核验，暂不作为最终结论。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选页面是否构成2025年以后发布的具身机器人软件项目。"
+    }
+  },
+  "legend-of-mirokai-v0-7-2-2f2c9be": {
+    "checked_at": "2026-08-20T04:33:17.455252+00:00",
+    "title": "Legend of Mirokai v0.7.2",
+    "accepted": false,
+    "reason": "正在核实候选项目是否满足全部收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核对官方文档中的版本日期、软件范围、责任组织、功能与可量化结果，并确认它不是以硬件产品说明为主的页面。公开索引判断将只采用可访问来源支持的内容。geliştirme tools. docs.",
+        " ",
+        " "
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索官方资料。",
+        "将区分 PyMirokai 软件接口与 Mirokaï 机器人硬件产品。",
+        "不会用 arXiv 或未验证的社交媒体补齐缺失信息。",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "检索进行中",
+          "value": "待核实"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.2/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核实候选项目是否满足全部收录条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于官方页面和关联技术材料进行严格核验。"
+    }
+  },
+  "legend-of-mirokai-v0-7-1-a873429": {
+    "checked_at": "2026-08-20T04:33:17.477501+00:00",
+    "title": "Legend of Mirokai v0.7.1",
+    "accepted": true,
+    "reason": "符合收录条件：该候选是 Enchanted Tools 发布的实体机器人软件开发接口，具有独立的官方版本化开发者文档，明确用于连接、控制和扩展 Mirokaï 机器人，而不是仅介绍机器人硬件。官方页面可确认具体责任组织及 2026 年 2 月 19 日的发布记录。公开资料未提供可验证的源代码仓库或开源许可证，因此不将其标记为开源；开源并非收录必要条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Python `Robot` 类连接并控制实体 Mirokaï 机器人，统一调用交互、导航、操作和动画功能",
+        "通过 REST API 发送机器人命令，并通过 WebSocket 订阅状态主题、发布消息和注册异步回调",
+        "以 `Mission` 对象管理技能的启动、完成、取消和异常处理，并支持父子任务嵌套及取消传播",
+        "执行相对或绝对位置移动、原地转向、目标跟踪、用户跟随和障碍物规避等移动任务",
+        "执行左右手抓取、放置、递交物体、手臂动画、语音对话及用户互动技能"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Humanoid intelligence",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "PyMirokai 是面向实体 Mirokaï 机器人的 Python 开发接口，而非机器人硬件产品页；官方文档明确将其定义为通过 REST 与 WebSocket API 进行机器人通信和控制的软件接口。",
+        "`Robot` 类把行为、交互、操作、导航、规划、动画、运输和系统功能整合为统一对象；开发者既可显式连接，也可通过异步上下文管理器自动完成连接和断开。",
+        "机器人动作被抽象为 `Mission`：调用方可以等待任务启动或完成、忽略完成异常、取消任务，或取消后等待结束。每个任务具有唯一 ID，并可形成保留父子关系的执行树。",
+        "嵌套任务支持状态和取消传播：父任务取消时，其子任务会被自动取消，从而避免子行为在上层任务失败或被用户终止后继续运行。",
+        "接口覆盖真实机器人工作流，包括相对与绝对导航、转向、障碍物规避、人体和目标感知、左右手抓取、放置与递交、手臂和颈部动作、语音输出以及 LLM 会话启停。",
+        "开发者可编写 Python 自定义技能，并在机器人本体或远程计算机上执行；远程技能可利用外部 Python 包、GPU/CPU、存储、数据库和其他服务，随后通过 Skill Manager 上传、注册和调用。"
+      ],
+      "metrics": [
+        {
+          "label": "官方版本发布时间",
+          "note": "官方开发者文档目录记录的 v0.7.1 页面时间为 2026-02-19 14:23。",
+          "value": "2026-02-19 14:23"
+        },
+        {
+          "label": "声音等级参数范围",
+          "note": "`set_sound_level` 接口记录的可设声音等级范围。",
+          "value": "0–100"
+        },
+        {
+          "label": "动画强度参数范围",
+          "note": "动画与交互状态接口采用归一化强度参数；例如 `play_animation` 的默认强度为 0.85。",
+          "value": "0.0–1.0"
+        },
+        {
+          "label": "任务层级能力",
+          "note": "官方文档说明任务可以扩展到任意深度，并允许任意数量的并行子任务；未提供性能基准数字。",
+          "value": "支持任意深度及多个并行子任务"
+        },
+        {
+          "label": "实体机器人执行覆盖",
+          "note": "官方示例在同一异步流程中演示语音、挥手、左右转向、移动和抓取已知物体，并通过任务接口等待或取消执行。",
+          "value": "交互、导航、抓取与动画的统一任务执行"
+        }
+      ],
+      "official_organization_url": "https://enchanted.tools/",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.1/",
+      "open_source": false,
+      "organization_en": "Enchanted Tools",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：该候选是 Enchanted Tools 发布的实体机器人软件开发接口，具有独立的官方版本化开发者文档，明确用于连接、控制和扩展 Mirokaï 机器人，而不是仅介绍机器人硬件。官方页面可确认具体责任组织及 2026 年 2 月 19 日的发布记录。公开资料未提供可验证的源代码仓库或开源许可证，因此不将其标记为开源；开源并非收录必要条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Legend of Mirokai v0.7.1 是 Enchanted Tools 为 Mirokaï 实体社交机器人提供的版本化开发者软件包，其核心是 PyMirokai Python 接口。该接口把机器人连接、状态流、技能调用和执行生命周期封装为异步编程模型：REST 用于命令与配置操作，WebSocket 用于连续状态数据、主题订阅和回调；导航、抓取、表达、对话及系统行为则统一表示为可等待、可取消的 `Mission`。v0.7.1 文档还描述了任务树、父子任务追踪与取消传播机制，使复合机器人行为能够被结构化编排和终止。除内置的移动、人体互动、语音、动画和双臂操作技能外，开发者还能创建 Python 自定义技能，并选择在机器人本体或远程计算资源上运行。整体上，它属于针对特定实体机器人平台的控制与具身应用开发栈，而非通用基础模型、数据集或硬件发布。"
+    }
+  },
+  "neuraverse-early-access-release-e94de1b": {
+    "checked_at": "2026-08-20T04:33:17.500140+00:00",
+    "title": "Neuraverse early-access release",
+    "accepted": true,
+    "reason": "纳入。Neuraverse 有独立官方项目页和 NEURA Robotics 于 2026 年 1 月 5 日发布的官方早期访问公告；其主体是用于实体机器人开发、仿真、数据处理、AI 模型管理、多机器人编排和技能分发的软件平台，而非硬件产品。责任组织 NEURA Robotics GmbH 在官方页面中有明确标识。现有官方材料没有提供开源代码仓库或开源许可证，因此不认定为开源项目。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过可视化、基于流程的编辑器设计机器人行为与自动化逻辑，并将其直接部署到生产环境",
+        "在实时数字孪生中仿真和测试自动化逻辑，以便在实体部署前发现问题",
+        "统一配置和管理机器人、传感器、相机、夹爪、应用及 AI 模型",
+        "集中协调多机器人与移动系统，包括任务分配、状态管理和运行同步",
+        "使用自有数据集成、更新和改进面向物体识别、质量控制或自主导航的 AI 模型"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "Neuraverse 是面向实体机器人和自动化系统的软件平台，而非机器人硬件产品页；NEURA Robotics 将其描述为连接机器人、设备、开发者和行业用户的操作系统及共享智能层。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))",
+        "平台把机器人、传感器、应用和人员产生的数据汇入统一的数据与智能层，用于支持决策、训练 AI 模型，并让不同部署之间复用经验。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "Creator Hub 提供可视化流程编程、操作员界面设计和设备配置工具；开发者可以组合机器人行为、连接设备和完整应用，并将成果部署到生产环境。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "平台提供实时数字孪生，可在实体部署前设计和验证自动化逻辑；同时提供实时仪表盘，用于跟踪机器人活动、系统健康状况和运行指标。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "Neuraverse 支持从统一界面协调多个机器人和移动系统，执行任务分配、状态管理和系统同步，体现了跨设备机器人编排能力。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "Model Zoo 用于创建、管理、访问和发布 AI 模型；Marketplace 则计划承载可复用的机器人技能、应用、AI 模型和完整解决方案。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))",
+        "2026 年 1 月 5 日，NEURA Robotics 正式宣布 Neuraverse 向早期访问合作伙伴开放；同期展示的 NEURA Sync、NEURA Gym、Aura AI 和 Neuraverse Marketplace 分别覆盖设备通信、真实世界训练、情境智能及技能与应用分发。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))"
+      ],
+      "metrics": [
+        {
+          "label": "发布状态",
+          "note": "官方公告明确表示平台已向早期访问合作伙伴开放；未报告公开发布用户数或部署规模。",
+          "value": "Early access opened on January 5, 2026"
+        },
+        {
+          "label": "官方列出的核心创新组件",
+          "note": "CES 2026 官方公告列出的组件为 NEURA Sync、NEURA Gym、Aura AI 和 Neuraverse Marketplace。",
+          "value": "4 components"
+        },
+        {
+          "label": "开发方式",
+          "note": "官方项目页报告可通过拖放式流程编辑器定义机器人行为与自动化逻辑。",
+          "value": "Visual flow-based, no-code programming"
+        },
+        {
+          "label": "部署前验证",
+          "note": "官方项目页报告平台实现实时数字孪生仿真和自动化逻辑测试。",
+          "value": "Real-time digital-twin simulation"
+        },
+        {
+          "label": "机器人编排范围",
+          "note": "官方项目页明确报告可从一个平台控制和同步多个机器人及移动系统，但未公布数量上限。",
+          "value": "Multi-robot and mobile-system coordination"
+        }
+      ],
+      "official_organization_url": "https://neura-robotics.com/",
+      "official_project_url": "https://neuraverse.com/",
+      "open_source": false,
+      "organization_en": "NEURA Robotics GmbH",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Neuraverse 有独立官方项目页和 NEURA Robotics 于 2026 年 1 月 5 日发布的官方早期访问公告；其主体是用于实体机器人开发、仿真、数据处理、AI 模型管理、多机器人编排和技能分发的软件平台，而非硬件产品。责任组织 NEURA Robotics GmbH 在官方页面中有明确标识。现有官方材料没有提供开源代码仓库或开源许可证，因此不认定为开源项目。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Neuraverse 是 NEURA Robotics 面向实体机器人和工业自动化构建的云端软件生态与操作层，于 2026 年 1 月 5 日宣布向早期访问合作伙伴开放。平台的核心目标是打通原本隔离的机器人、传感器、应用和 AI 模型数据，使机器人经验与已学习技能能够跨设备和部署环境复用。其工程工具覆盖项目与设备管理、可视化流程编程、操作员应用设计、实时数字孪生仿真、运行监控、多机器人协调以及 AI 模型训练和版本管理。Creator Hub 支持开发者组合机器人行为、界面和连接设备；Model Zoo 面向 AI 模型的创建、访问与发布；Marketplace 则承担机器人技能、应用和完整自动化方案的分发与商业化。CES 公告还将 NEURA Sync、NEURA Gym、Aura AI 和 Marketplace 分别定位于设备通信、真实世界机器人训练、情境智能和可扩展技能生态。官方尚未公布标准化任务成功率、基准测试成绩、支持机器人数量上限或生产部署规模，因此不能据此判断其相对于其他机器人平台的量化性能。"
+    }
+  },
+  "legend-of-mirokai-v0-7-0-45a22bd": {
+    "checked_at": "2026-08-20T04:33:17.521114+00:00",
+    "title": "Legend of Mirokai v0.7.0",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方开发者页面、组织归属、发布日期以及软件组件与可报告指标。完成后会按严格纳入条件输出结构化结论。 official_organization_url official_project_url and open_source",
+        "I’m verifying the official developer page, organization attribution, release date, software components, and any reportable results before applying the inclusion criteria.",
+        "The final answer will be returned as a structured verdict under the required schema."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "No final inclusion decision has been made yet.",
+        "Official project and organization sources are being checked.",
+        "Software scope and exact metrics are being validated."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Web verification is in progress.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.0/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在基于官方可访问资料核验该候选项目。"
+    }
+  },
+  "dggt-6791599": {
+    "checked_at": "2026-08-20T04:33:17.541611+00:00",
+    "title": "DGGT",
+    "accepted": true,
+    "reason": "纳入。清华大学智能产业研究院于2025年12月9日发布了专门的官方项目介绍，并链接独立项目主页和公开代码库。DGGT是服务于实体自动驾驶系统训练、评测、仿真和数据合成的前馈式 4D 驾驶场景重建软件，能够从真实车辆采集的无标定图像生成可编辑动态世界表示，符合具身智能世界/仿真模型的软件条件；它不是硬件或整车产品页。官方材料还明确列出清华大学智能产业研究院、小米汽车、香港大学和北京智源人工智能研究院等责任机构。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "从稀疏、未标定的多帧 RGB 图像中，以单次前向推理重建长序列动态驾驶场景，并同时估计相机内外参与深度。",
+        "联合生成逐帧 3D Gaussian 地图、动态区域、三维运动和 lifespan 时序可见性，形成时空一致的可编辑 4D 场景表示。",
+        "通过运动头预测像素级三维位移，建立动态目标的稠密时序对应，并支持任意时间点的运动插值与新视角渲染。",
+        "在 Gaussian 表示层面对车辆、行人等实例执行添加、删除、移动、替换和跨场景组合，供自动驾驶仿真与数据合成使用。",
+        "使用单步扩散精修处理稀疏输入、遮挡、运动插值和场景编辑产生的空洞、伪影及细节缺失。"
+      ],
+      "fields": [
+        "World models",
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "DGGT（Driving Gaussian Grounded Transformer）是面向自动驾驶仿真与再模拟的软件框架，而非车辆或传感器硬件产品；其核心产物是可重建、渲染和编辑的动态驾驶世界表示。",
+        "框架将相机位姿由必要输入改为模型输出，无需预先提供相机标定或执行逐场景优化，可直接处理稀疏、无位姿图像及不同数量的输入视角。",
+        "系统以 ViT 编码器融合 DINO 先验和交替注意力共享特征，并行设置相机、Gaussian、lifespan、动态、运动和天空预测头，一次前向联合恢复场景几何、相机参数与动态信息。",
+        "动态头负责分离静态与动态成分，运动头预测像素级三维位移；lifespan 头则按时间调制 Gaussian 可见性，以表达光照、反射和阴影等静态区域的时变外观。",
+        "渲染结果经过单步扩散模型精修，以减少遮挡和运动插值伪影、修补场景编辑留下的空洞，并改善稀疏输入条件下的新视角质量。",
+        "项目在 Waymo、nuScenes 和 Argoverse2 上训练或评测，并专门验证了从 Waymo 到另外两个数据集、无需微调和姿态校准的零样本迁移。",
+        "官方代码库提供训练与推理代码、预训练检查点、三套驾驶数据集的处理支持，以及重建、插帧、深度输出和 PSNR/SSIM/LPIPS 评测入口；代码采用 Apache License 2.0，但部分衍生文件同时受 VGGT 上游许可证约束。"
+      ],
+      "metrics": [
+        {
+          "label": "Waymo 单场景重建速度",
+          "note": "官方 AIR 页面报告采用 20 帧/视角输入。",
+          "value": "约 0.39 秒"
+        },
+        {
+          "label": "Waymo 重建质量",
+          "note": "官方页面报告的 DGGT 结果。",
+          "value": "PSNR 27.41；SSIM 0.846"
+        },
+        {
+          "label": "Waymo 场景流误差",
+          "note": "EPE3D，数值越低越好。",
+          "value": "0.183 m"
+        },
+        {
+          "label": "nuScenes 零样本 LPIPS",
+          "note": "仅在 Waymo 上训练、未在 nuScenes 微调；相较 STORM 从 0.394 降至 0.152。",
+          "value": "0.152，下降 61.4%"
+        },
+        {
+          "label": "Argoverse2 零样本 LPIPS",
+          "note": "仅在 Waymo 上训练、未在 Argoverse2 微调；相较 STORM 从 0.326 降至 0.155。",
+          "value": "0.155，下降 52.5%"
+        }
+      ],
+      "official_organization_url": "https://air.tsinghua.edu.cn/",
+      "official_project_url": "https://xiaomi-research.github.io/dggt/",
+      "open_source": true,
+      "organization_en": "Institute for AI Industry Research, Tsinghua University",
+      "organization_kind": "Research Lab",
+      "organization_zh": "清华大学智能产业研究院",
+      "reason": "纳入。清华大学智能产业研究院于2025年12月9日发布了专门的官方项目介绍，并链接独立项目主页和公开代码库。DGGT是服务于实体自动驾驶系统训练、评测、仿真和数据合成的前馈式 4D 驾驶场景重建软件，能够从真实车辆采集的无标定图像生成可编辑动态世界表示，符合具身智能世界/仿真模型的软件条件；它不是硬件或整车产品页。官方材料还明确列出清华大学智能产业研究院、小米汽车、香港大学和北京智源人工智能研究院等责任机构。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DGGT 是清华大学智能产业研究院赵昊课题组联合小米汽车、香港大学和北京智源人工智能研究院等机构发布的无姿态前馈式动态驾驶场景重建框架。它从稀疏、未标定 RGB 图像中，在一次前向过程中联合预测相机参数、深度、逐帧 3D Gaussian、动态区域、三维运动、时间可见性和天空表示，避免传统方法所需的逐场景优化与预先相机标定。其动态/静态解耦、lifespan 时序建模和扩散渲染精修支持长序列重建、新视角合成、运动插值以及车辆和行人的实例级编辑，使输出可直接作为自动驾驶仿真、再模拟和数据合成所需的可编辑 4D 场景资产。官方结果报告其在 Waymo 上以约0.39秒完成20帧/视角场景重建，并在从 Waymo 到 nuScenes、Argoverse2 的零样本迁移中显著降低 LPIPS。"
+    }
+  },
+  "styledrive-ae5a11d": {
+    "checked_at": "2026-08-20T04:33:17.562403+00:00",
+    "title": "StyleDrive",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方页面是否将 StyleDrive 定义为面向真实车辆的具身软件/数据与评测项目，并交叉检查发布日期、责任机构、技术组成和可量化结果。重点排除仅有论文或仅描述自动驾驶硬件的情况。",
+        "随后只采用官方项目页、机构公告、技术报告及其直接链接材料，不补猜作者、网址或指标。现有候选日期为 2025 年 12 月 5 日，按当前日期 2026 年 8 月 20 日属于已发布项目。",
+        "我正在查看清华 AIR 官方公告及其链接材料，确认 StyleDrive 是否确有独立的软件型产物，而不只是论文摘要或车辆产品介绍。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "核验中：官方项目页和技术材料尚未完成读取。",
+        "核验中：责任机构、开源状态、指标与项目链接尚待确认。",
+        "核验中：需判断自动驾驶数据集、模拟基准和评测指标是否直接服务于物理车辆策略。",
+        "核验中：不会将 arXiv 单独作为官方项目证据。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在使用网页来源确认",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终判定。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 StyleDrive 的官方发布材料、技术产物和报告结果。"
+    }
+  },
+  "internnav-v0-2-0-325e97d": {
+    "checked_at": "2026-08-20T04:33:17.583305+00:00",
+    "title": "InternNav v0.2.0",
+    "accepted": true,
+    "reason": "纳入。InternNav v0.2.0 是面向具身导航研究的开源软件版本，而非机器人硬件或产品规格页。官方 GitHub 发布页明确记录了 2025-12-04 的版本变更，包括 VLN-PE 分布式评测、统一评测入口、HabitatEnv/InternUtopiaEnv 集成、episode 管理和结果聚合；官方文档还说明该框架覆盖仿真与真实机器人环境。Intern Robotics 的官方组织页面明确说明其来自上海人工智能实验室，因此项目责任机构和专门官方项目页面均可确认。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 VLN-PE 上执行多 GPU 分布式具身导航评测",
+        "通过统一的 eval.py 入口配置和运行 Habitat 等后端的评测任务",
+        "管理 HabitatEnv 与 InternUtopiaEnv 的分布式 episode 池",
+        "在长时间评测中保存进度检查点并增量汇总结果"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "v0.2.0 为 VLN-PE 加入分布式评测路径，可将导航 benchmark 的 episode 分配到多个 GPU 并行执行。",
+        "版本引入统一评测脚本 eval.py，并在 scripts/eval/configs 中提供新的 Habitat 评测配置，减少不同环境和模型使用独立入口造成的接口分裂。",
+        "DistributedEvaluator 与 HabitatEnv 被纳入 InternNav 框架；HabitatEnv 实现 episode 池管理，以支持分布式任务调度。",
+        "InternUtopiaEnv 同步获得分布式执行和 episode 池管理能力，使 Isaac Sim/InternUtopia 路径能够使用同类评测基础设施。",
+        "VLN-PE 的 episode_loader 增加与新分布式模式兼容的加载逻辑；data_collector 支持进度检查点和评测结果的增量聚合。",
+        "安装依赖被拆分为 habitat、isaac 和 model 三组可选安装标志，以隔离不同仿真器及模型栈所需的依赖。",
+        "官方文档显示 InternNav 采用 Env、Task、Agent 分离设计，并提供 InternUtopia/Isaac Sim、Habitat Sim 和真实机器人环境接口；同一 agent 逻辑可在实现统一 Env API 的仿真或实体平台上运行。"
+      ],
+      "metrics": [
+        {
+          "label": "VLN-PE 完整评测耗时",
+          "note": "官方 v0.2.0 发布说明报告的近似结果，使用 16 张 GPU。",
+          "value": "约 1.6 小时"
+        },
+        {
+          "label": "分布式评测加速比",
+          "note": "相对于官方发布说明中的单 GPU 评测。",
+          "value": "约 13×"
+        },
+        {
+          "label": "并行评测规模",
+          "note": "上述耗时与加速结果采用的 GPU 数量。",
+          "value": "16 GPUs"
+        }
+      ],
+      "official_organization_url": "https://internrobotics.shlab.org.cn",
+      "official_project_url": "https://github.com/InternRobotics/InternNav/releases/tag/0.2.0",
+      "open_source": true,
+      "organization_en": "Shanghai Artificial Intelligence Laboratory",
+      "organization_kind": "Research Lab",
+      "organization_zh": "上海人工智能实验室",
+      "reason": "纳入。InternNav v0.2.0 是面向具身导航研究的开源软件版本，而非机器人硬件或产品规格页。官方 GitHub 发布页明确记录了 2025-12-04 的版本变更，包括 VLN-PE 分布式评测、统一评测入口、HabitatEnv/InternUtopiaEnv 集成、episode 管理和结果聚合；官方文档还说明该框架覆盖仿真与真实机器人环境。Intern Robotics 的官方组织页面明确说明其来自上海人工智能实验室，因此项目责任机构和专门官方项目页面均可确认。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "InternNav v0.2.0 是上海人工智能实验室 Intern Robotics 团队发布的具身导航软件基础设施版本，核心工作是将 VLN-PE 评测扩展为可分布式运行的统一流水线。该版本把 DistributedEvaluator、HabitatEnv 和改造后的 InternUtopiaEnv 接入同一框架，通过 episode 池进行任务管理，并更新 VLN-PE 的 episode_loader 以适配并行执行。统一的 eval.py 与配置目录为不同后端提供共同评测入口；data_collector 则加入进度检查点和结果增量聚合，提升大规模、长时间评测的可恢复性。官方报告在 16 张 GPU 上完成完整 VLN-PE benchmark 约需 1.6 小时，相比单 GPU 约加速 13 倍。框架的 Env、Task、Agent 分层还允许导航策略在 Habitat、InternUtopia/Isaac Sim 以及实现统一接口的真实机器人环境之间复用。"
+    }
+  },
+  "x-vla-08042ee": {
+    "checked_at": "2026-08-20T04:33:17.604617+00:00",
+    "title": "X-VLA",
+    "accepted": true,
+    "reason": "符合收录条件：2025年10月16日由清华大学智能产业研究院与上海人工智能实验室正式发布；专门项目页明确将其定义为面向真实机器人和仿真平台的跨本体视觉-语言-动作软件模型，而非机器人硬件产品；官方页面、代码、模型权重和训练数据均可访问。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过视觉、自然语言指令和机器人本体状态生成连续动作序列",
+        "在异构机器人数据上进行跨本体联合预训练",
+        "通过Soft Prompt和LoRA适配新的机器人本体、任务与环境",
+        "执行单臂、双臂协同及布料折叠等灵巧操作任务",
+        "通过统一服务端接口部署到仿真环境和真实机器人"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Dexterous manipulation",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "X-VLA是基于flow matching的跨本体视觉-语言-动作基础模型，0.9B版本使用标准Transformer编码器生成机器人动作序列。",
+        "模型为不同数据源或机器人本体配置独立的可学习Soft Prompt，将自由度、相机视角和动作空间等本体差异编码为连续提示，同时共享主要策略主干。",
+        "多模态编码流水线将输入按功能拆分：主视角由视觉语言模型提取高层语义，辅助视角使用轻量网络提取局部空间反馈，并融合语言指令与本体状态。",
+        "训练数据流水线将不同机器人动作映射到统一任务空间，并执行时间对齐、重采样、均衡采样以及视觉-语言-动作一致性筛选，以支持异构数据联合训练。",
+        "开源实现提供训练、LoRA微调、评测和部署代码，并采用服务端-客户端架构接收图像、语言指令、本体状态及domain ID，输出由flow matching生成的动作。",
+        "项目同时发布Soft-FOLD布料折叠数据；其采集流程将任务分为布料展开平整与折叠两个阶段，并采用类似DAgger的迭代式失败案例补充策略。"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方发布的X-VLA-0.9B实例。",
+          "value": "0.9B参数"
+        },
+        {
+          "label": "评测覆盖",
+          "note": "项目页报告覆盖六个仿真环境以及三个真实机器人平台。",
+          "value": "6个仿真环境、3个真实机器人"
+        },
+        {
+          "label": "LIBERO",
+          "note": "官方开源仓库列出的X-VLA-Libero模型评测结果。",
+          "value": "98.1%成功率"
+        },
+        {
+          "label": "RoboTwin2.0",
+          "note": "双臂协同操作模型每项任务使用50条演示训练。",
+          "value": "70%成功率"
+        },
+        {
+          "label": "长时布料折叠",
+          "note": "官方仓库报告模型在连续两小时布料折叠运行中的表现，并提供120分钟未剪辑视频。",
+          "value": "120分钟内100%成功率"
+        }
+      ],
+      "official_organization_url": "https://air.tsinghua.edu.cn/info/1007/2467.htm",
+      "official_project_url": "https://thu-air-dream.github.io/X-VLA/",
+      "open_source": true,
+      "organization_en": "Institute for AI Industry Research (AIR), Tsinghua University & Shanghai Artificial Intelligence Laboratory",
+      "organization_kind": "Research Lab",
+      "organization_zh": "清华大学智能产业研究院（AIR）与上海人工智能实验室",
+      "reason": "符合收录条件：2025年10月16日由清华大学智能产业研究院与上海人工智能实验室正式发布；专门项目页明确将其定义为面向真实机器人和仿真平台的跨本体视觉-语言-动作软件模型，而非机器人硬件产品；官方页面、代码、模型权重和训练数据均可访问。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "X-VLA是清华大学智能产业研究院与上海人工智能实验室联合发布的通用跨本体视觉-语言-动作基础模型。它针对不同机器人在自由度、传感器视角和动作表示上的差异，为每个数据域引入少量本体相关Soft Prompt，并让各本体共享基于标准Transformer和flow matching的策略主干。模型将任务主视角、辅助视角、语言指令与本体状态进行分工编码，通过统一动作空间、时间重采样、均衡采样和语义-动作一致性筛选处理大规模异构机器人数据。官方实现覆盖预训练、参数高效微调、标准化评测、模型服务和真实机器人客户端，可适配单臂、双臂及布料等可变形物体操作。项目还开放模型参数、代码、训练数据和Soft-FOLD数据集，并报告X-VLA-0.9B在六个仿真环境、三个真实机器人平台以及长时自主叠衣任务上的结果。"
+    }
+  },
+  "legend-of-mirokai-v0-6-3-bdbfbe3": {
+    "checked_at": "2026-08-20T04:33:17.625152+00:00",
+    "title": "Legend of Mirokai v0.6.3",
+    "accepted": false,
+    "reason": "正在基于官方可访问来源核验，尚未形成最终收录结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方文档、组织归属、软件构成与版本发布日期，并确认该候选不是硬件产品页。完成后会按严格收录条件给出结构化结论。",
+        "我会优先使用 Enchanted Tools 的官方开发者文档与组织页面；若指标或发布日期无法从可访问来源支持，会明确标为缺失而不推断。",
+        "当前在整理 v0.6.3 的模拟器、Python SDK、Web API 及其可执行能力，同时检查是否存在可精确引用的版本号、接口或支持范围等结果。"
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "核验进行中。",
+        "将区分软件开发栈与 Mirokaï 机器人硬件。",
+        "不会把 arXiv 或第三方报道作为官方项目页的替代。",
+        "无法确认的信息不会填充。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在检索官方来源",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.6.3/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在基于官方可访问来源核验，尚未形成最终收录结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "legend-of-mirokai-v0-6-0-d4f8ff2": {
+    "checked_at": "2026-08-20T04:33:17.646127+00:00",
+    "title": "Legend of Mirokai v0.6.0",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验该版本页面是否确实是面向实体机器人的软件发布，并从官方文档中确认组织、发布日期、功能和可量化结果。若页面只证明硬件或无法支持某个必要条件，我会明确排除。 ",
+        "我会优先使用 Enchanted Tools 的官方开发者文档和组织页面；只有在官方链接材料不足以解释技术内容时，才补充其他可访问的一手来源。 ",
+        "我将逐项核对软件属性、专属官方页面、责任组织和发布时间，并区分已实现接口与宣传性描述。 "
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在检索和核验来源。",
+        "最终结论待官方页面证据确认。",
+        "不会根据候选摘要猜测指标或链接。",
+        "不会把机器人硬件本身当作合格软件项目。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在检查官方资料",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.6.0/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终收录判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在基于官方来源核验该候选项目。"
+    }
+  },
+  "streamvln-training-and-data-collection-code-c187061": {
+    "checked_at": "2026-08-20T04:33:17.666921+00:00",
+    "title": "StreamVLN training and data-collection code",
+    "accepted": true,
+    "reason": "收录。官方项目页和InternRobotics官方代码仓库均可访问，明确将StreamVLN定义为从连续视频流生成导航动作的流式视觉-语言-动作软件框架。官方仓库于2025年8月21日明确发布DAgger数据采集和第二阶段联合训练代码，并列出上海人工智能实验室、香港大学、浙江大学和上海交通大学等责任机构；因此满足2025年后发布、具备专门官方页面、责任组织明确且软件面向实体机器人/具身导航的全部条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于连续第一视角视频与自然语言指令，在线自回归生成机器人导航动作",
+        "通过多轮对话形式交错处理视觉观测、语言指令和历史动作",
+        "使用DAgger采集偏离专家轨迹后的纠错样本，并与专家导航数据共同训练",
+        "在Habitat的R2R-CE、RxR-CE连续环境中训练和评测导航策略",
+        "提供Unitree Go2实体机器人部署代码与指南"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "LLM",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "StreamVLN是面向连续环境视觉语言导航的流式VLA软件框架，以LLaVA-Video为基础，将视觉、语言和动作建模统一为在线多轮自回归过程；每轮接收新观测，并依据当前输入和历史对话生成动作。",
+        "其快速上下文采用滑动窗口和跨轮KV缓存复用，只需对当前新增观测执行主要的prefill计算，以降低连续交互中的动作生成延迟。",
+        "其慢速记忆上下文保存较长期的视觉状态，并利用体素化三维邻近关系进行无需额外训练的空间token剪枝；同一体素内只保留较新的观测token，以限制上下文规模和推理成本。",
+        "官方仓库于2025年8月21日明确发布DAgger数据采集代码，以及第二阶段联合训练代码；联合训练覆盖LLaVA-Video-178K、ScanQA和MMC4等通用多模态数据。",
+        "项目训练配方包含约45万条专家导航视频片段、24万条DAgger纠错样本、24.8万条视频问答样本和23万条交错图文样本，用于联合学习导航、时空推理与多轮交互能力。",
+        "仓库提供Habitat-Sim/Habitat-Lab环境配置、VLN-CE数据准备、预采集观测-动作轨迹、训练与评测代码；2025年8月28日又发布了Unitree Go2实体机器人部署代码和操作指南。"
+      ],
+      "metrics": [
+        {
+          "label": "R2R-CE Val-Unseen",
+          "note": "官方项目页报告的RGB-only StreamVLN结果。",
+          "value": "SR 56.9%，SPL 51.9%"
+        },
+        {
+          "label": "RxR-CE Val-Unseen",
+          "note": "官方项目页报告的RGB-only StreamVLN结果。",
+          "value": "SR 52.9%，SPL 46.0%"
+        },
+        {
+          "label": "训练数据规模",
+          "note": "官方项目页列出的第二阶段数据配方。",
+          "value": "450K专家导航片段 + 240K DAgger样本 + 248K视频QA样本 + 230K交错图文样本"
+        },
+        {
+          "label": "空间记忆剪枝",
+          "note": "技术报告中仅对8个记忆帧执行体素空间剪枝的结果，报告称性能无明显下降。",
+          "value": "R2R记忆token减少28%；RxR减少22%"
+        },
+        {
+          "label": "第二阶段联合训练增益",
+          "note": "R2R Val-Unseen消融：加入DAgger和VideoQA后，相对仅使用oracle导航数据。",
+          "value": "SR +5.3个百分点；SPL +4.1个百分点"
+        }
+      ],
+      "official_organization_url": "https://internrobotics.shlab.org.cn",
+      "official_project_url": "https://streamvln.github.io/",
+      "open_source": true,
+      "organization_en": "Shanghai Artificial Intelligence Laboratory",
+      "organization_kind": "Research Lab",
+      "organization_zh": "上海人工智能实验室",
+      "reason": "收录。官方项目页和InternRobotics官方代码仓库均可访问，明确将StreamVLN定义为从连续视频流生成导航动作的流式视觉-语言-动作软件框架。官方仓库于2025年8月21日明确发布DAgger数据采集和第二阶段联合训练代码，并列出上海人工智能实验室、香港大学、浙江大学和上海交通大学等责任机构；因此满足2025年后发布、具备专门官方页面、责任组织明确且软件面向实体机器人/具身导航的全部条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "StreamVLN是由上海人工智能实验室牵头、联合香港大学、浙江大学和上海交通大学开发的流式视觉语言导航框架。它把连续视频观测、语言指令和机器人动作组织为多轮交错序列，并通过滑动窗口KV缓存与三维感知的慢速记忆压缩，在保持上下文规模有界的同时支持低延迟长时导航。候选所指的2025年8月21日发布内容并非硬件公告，而是可执行的软件工件：包括DAgger纠错轨迹采集代码，以及将导航数据与视频问答、ScanQA和MMC4交错图文数据联合训练的第二阶段代码。项目同时提供Habitat连续环境训练评测流程、预采集轨迹和Unitree Go2实体部署支持，符合严格具身机器人技术项目索引的收录标准。"
+    }
+  },
+  "seed-diffusion-preview-fca2dec": {
+    "checked_at": "2026-08-20T04:33:17.687758+00:00",
+    "title": "Seed Diffusion Preview",
+    "accepted": false,
+    "reason": "不收录：不满足条件 1。虽然它是有官方项目页和明确责任机构的软件模型，但其发布物是专注于代码生成与代码编辑的扩散大语言模型。官方项目页和技术报告均未将其定义为物理机器人、具身智能、机器人策略、VLA、控制规划栈、机器人数据引擎、仿真器或具身评测基准，也没有提供机器人输入输出或部署证据。官网将其归入 LLM/Models，而非 Robotics；因此不能因为发布机构另有机器人研究方向而将该项目归入具身机器人索引。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于离散状态扩散执行非自回归、并行的代码文本生成。",
+        "通过掩码补全学习局部代码上下文、结构模式和特征分布。",
+        "通过插入、删除和替换扰动训练，对完整代码序列进行检查和修正。",
+        "执行需要全局规划的指令式代码编辑，并支持分块并行推理。"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "Seed Diffusion Preview 是面向代码生成的离散状态扩散大语言模型，不是面向物理机器人或具身智能的软件；官方材料没有展示机器人感知输入、动作输出、控制策略、仿真环境或机器人评测。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))",
+        "模型采用两阶段扩散训练：前 80% 训练步骤使用动态噪声调度的掩码扩散，后 20% 加入基于编辑距离的插入、删除和替换扰动，以增强全局纠错能力。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))",
+        "约束顺序训练利用模型生成并筛选优选生成轨迹，再通过蒸馏使模型学习代码中的结构依赖，例如变量声明与使用之间的先后关系。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))",
+        "其 on-policy 学习以减少生成步骤并维持最终输出质量为目标，使用基于相邻生成步骤编辑距离的代理损失改善训练稳定性和收敛效率。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))",
+        "推理实现采用分块并行扩散采样，在块之间保留因果顺序，并结合 KV cache 与内部扩散采样基础设施进行系统级加速。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))",
+        "官方发布日是 2025 年 7 月 31 日；候选所列 2025 年 8 月 4 日对应 arXiv 提交日期，并非官方项目发布日期。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))"
+      ],
+      "metrics": [
+        {
+          "label": "代码推理速度",
+          "note": "技术报告说明该结果在 H20 GPU 上测得。",
+          "value": "2,146 tokens/s"
+        },
+        {
+          "label": "相对推理加速",
+          "note": "相对于规模相近的自回归模型，由官方公告报告。",
+          "value": "5.4×"
+        },
+        {
+          "label": "CanItEdit pass@1",
+          "note": "官方公告将其与自回归基线 50.5 对比。",
+          "value": "54.3"
+        },
+        {
+          "label": "CanItEdit pass@1 提升",
+          "note": "编辑式扩散训练相对公告所列自回归模型的绝对提升。",
+          "value": "4.8 个百分点"
+        },
+        {
+          "label": "代码基准表现",
+          "note": "官方报告称其在多项标准代码评测中达到与规模相近自回归模型相当的表现；不同公开系统的速度测试硬件和条件并不一致。",
+          "value": "相当于规模相近的自回归模型"
+        }
+      ],
+      "official_organization_url": "https://seed.bytedance.com/",
+      "official_project_url": "https://seed.bytedance.com/seed_diffusion",
+      "open_source": false,
+      "organization_en": "ByteDance Seed; Institute for AI Industry Research (AIR), Tsinghua University; SIA-Lab of Tsinghua AIR and ByteDance Seed",
+      "organization_kind": "Research Lab",
+      "organization_zh": "字节跳动 Seed；清华大学智能产业研究院（AIR）；清华 AIR—字节跳动可扩展大模型智能技术联合研究中心（SIA-Lab）",
+      "reason": "不收录：不满足条件 1。虽然它是有官方项目页和明确责任机构的软件模型，但其发布物是专注于代码生成与代码编辑的扩散大语言模型。官方项目页和技术报告均未将其定义为物理机器人、具身智能、机器人策略、VLA、控制规划栈、机器人数据引擎、仿真器或具身评测基准，也没有提供机器人输入输出或部署证据。官网将其归入 LLM/Models，而非 Robotics；因此不能因为发布机构另有机器人研究方向而将该项目归入具身机器人索引。([seed.bytedance.com](https://seed.bytedance.com/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Seed Diffusion Preview 是字节跳动 Seed、清华大学智能产业研究院及双方 SIA-Lab 于 2025 年 7 月 31 日发布的实验性离散扩散语言模型。它通过两阶段扩散训练、约束顺序轨迹蒸馏、on-policy 加速学习以及分块并行采样，在代码生成和编辑任务中兼顾速度与质量。官方报告给出的最高推理速度为 2,146 tokens/s，并报告相对同规模自回归模型达到 5.4 倍加速；CanItEdit pass@1 为 54.3。尽管项目具有明确的软件成果、官方页面和技术报告，它只处理代码文本，没有面向物理机器人或具身环境的感知、动作、控制或评测接口，故不符合本具身机器人项目索引的核心软件条件。"
+    }
+  },
+  "graspvla-1f8321d": {
+    "checked_at": "2026-08-20T04:33:17.708868+00:00",
+    "title": "GraspVLA",
+    "accepted": false,
+    "reason": "正在使用网页来源核验候选项目，尚未形成最终收录结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验官方仓库、项目页面及其链接材料，重点确认它是否是面向物理机器人的软件项目、责任机构、发布日期和报告结果。字段中只保留来源明确支持的内容。剩余搜索说明将体现在最终结构化结果中。",
+        "字段中只保留来源明确支持的内容。其余结果将根据官方材料判定。",
+        "正在检索官方页面与技术材料。"
+      ],
+      "fields": [
+        "Vision-language-action"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验。",
+        "正在核验。",
+        "正在核验。",
+        "正在核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "尚未完成来源核验",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/PKU-EPIC/GraspVLA",
+      "open_source": true,
+      "organization_en": "Peking University",
+      "organization_kind": "University",
+      "organization_zh": "北京大学",
+      "reason": "正在使用网页来源核验候选项目，尚未形成最终收录结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 GraspVLA 的官方项目资料。"
+    }
+  },
+  "escapecraft-5140cdc": {
+    "checked_at": "2026-08-20T04:33:17.730247+00:00",
+    "title": "EscapeCraft",
+    "accepted": false,
+    "reason": "这是中间进度更新，尚未完成来源核验，暂不作收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方发布页、责任机构、软件属性与可复现的报告结果。完成后会按严格准入条件给出结构化结论。维度不适用，此条为进度更新。",
+        "将优先采用清华 AIR 官方页面及其链接的项目材料，不以 arXiv 页面单独作为项目证据。",
+        "会区分“3D 交互环境/评测基准”与单纯论文成果，并核查其是否面向具身智能软件。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "尚未形成最终准入判断。",
+        "不猜测项目 URL、指标或作者归属。",
+        "最终结论将仅采用可访问来源。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在使用网页来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "这是中间进度更新，尚未完成来源核验，暂不作收录判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 EscapeCraft 是否具有独立官方项目证据、是否构成面向具身智能的可配置 3D 软件环境与基准，以及官方材料所报告的具体技术点、能力和结果。"
+    }
+  },
+  "agent-hospital-1-143fafb": {
+    "checked_at": "2026-08-20T04:33:17.751058+00:00",
+    "title": "Agent Hospital 1",
+    "accepted": false,
+    "reason": "正在使用公开网页来源核验；此为工作进度更新，非最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会核验候选项目的官方页面、发布主体和软件形态，重点判断它是否实际面向物理机器人或具身智能，而不是仅属于医疗 LLM 智能体。项目若不满足这一核心条件，将明确排除并指出依据。所需字段：include=false，reason中说明缺失条件。其他字段如metrics等只填官方来源支持的内容。最终会提供官方项目页和组织页链接。检索范围包括清华大学智能产业研究院（AIR）及Tairex官方渠道。时间节点为2025年6月30日。候选名称：Agent Hospital 1。初步描述显示其为医疗系统，利用Simulacrum-based Evolutionary Agent Learning训练和部署演化型大语言模型智能体。需确认是否有物理机器人接口、控制策略、仿真环境或具身任务。若仅为医院流程、虚拟患者/医生或医疗问答智能体，则不符合严格具身机器人索引标准。技术点将基于官方页面、技术报告和链接材料，避免推断。组织中英文名称会按官方称谓填写。开源状态仅在官方明确时标记。社交证据不作强制要求，但若有独立官方账号可记录。字段分类仅限用户提供的11项。最终输出为结构化判定。后续会检索页面内容及可能关联论文。",
+        "核验官方页面与发布主体",
+        "检查是否属于物理机器人/具身软件",
+        "提取受支持的技术要点、能力与指标",
+        "输出严格纳入判定"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验官方材料。",
+        "重点区分虚拟医疗智能体与物理机器人软件。",
+        "不会将 arXiv 单独视为官方项目证据。",
+        "不会猜测作者、指标、链接或社会媒体证据。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待官方来源核验",
+          "value": "核验中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://air.tsinghua.edu.cn/info/1007/2437.htm",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在使用公开网页来源核验；此为工作进度更新，非最终判定。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Agent Hospital 1 是否满足严格的具身机器人软件收录条件。"
+    }
+  },
+  "neuraverse-launch-3699d88": {
+    "checked_at": "2026-08-20T04:33:17.771891+00:00",
+    "title": "Neuraverse launch",
+    "accepted": false,
+    "reason": "include=false：当前无法完成强制要求的网页检索，也无法访问并核验候选所指向的官方发布页及其关联材料。缺失的是条件 1、3、4 的可访问来源支持，以及发布日期、软件主体、技术细节和结果的独立核验。为避免猜测 URL、开放源码状态、指标和项目性质，不予收录。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方发布页、软件属性、责任组织及可引用的技术细节与结果。重点会区分 Neuraverse 软件生态与同页可能出现的机器人硬件产品。",
+        "随后会交叉检查官方关联材料，确认发布日期、开放性以及是否存在可精确报告的指标。需要证据不足的字段将保持保守。，也在核对项目是否真的“开源”，因为“开放生态”不等同于公开源代码。剩余判断将只采用官方或项目直接材料。",
+        "现有证据已足以确认它是面向实体机器人的软件生态，而不是单纯硬件发布。最后一步是在整理可验证的能力与结果，并避免把宣传性目标写成已经实现的指标。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "网页检索暂不可用，无法按照要求使用可访问的网络来源核验候选项目。",
+        "因此无法独立确认该页面在 2025 年 6 月 24 日发布、Neuraverse 是否为软件主体、责任组织、开放源码状态、具体技术能力及报告指标。",
+        "用户提供的摘要本身不足以替代官方页面和关联项目材料的核验。",
+        "按照严格收录规则，只要任一必要条件无法由可访问网页来源支持，就必须排除。"
+      ],
+      "metrics": [
+        {
+          "label": "可核验指标",
+          "note": "因无法访问并核验官方页面及关联材料，不能可靠报告任何数字或定性结果。",
+          "value": "未核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "NEURA Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "include=false：当前无法完成强制要求的网页检索，也无法访问并核验候选所指向的官方发布页及其关联材料。缺失的是条件 1、3、4 的可访问来源支持，以及发布日期、软件主体、技术细节和结果的独立核验。为避免猜测 URL、开放源码状态、指标和项目性质，不予收录。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "候选摘要将 Neuraverse 描述为一个用于开发、分发和运行机器人应用的开放学习型生态，并声称联网机器人能够共享真实任务经验、复用所学能力。这一描述在概念上符合具身机器人软件平台，但本次无法通过强制网页检索验证官方页面内容、软件实现范围、实际发布状态、责任主体及任何具体结果。因此不能把摘要中的宣传性描述当作已核实事实，也不能确认其达到严格公共索引的收录门槛。"
+    }
+  },
+  "robotwin-2-0-f441edd": {
+    "checked_at": "2026-08-20T04:33:17.793037+00:00",
+    "title": "RoboTwin 2.0",
+    "accepted": false,
+    "reason": "正在核验，尚未作出最终准入判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页面、责任组织、发布时间和技术指标。重点会区分 RoboTwin 2.0 的软件项目证据与仅有论文或代码仓库的证据。怀疑是北京大学 / 松灵机器人 / 地平线相关，但不猜。",
+        "随后将只采用官方页面、官方仓库及其链接的技术材料，并按严格准入条件给出结构化结论。暂不把 arXiv 单独视为项目证据。等确认。暂不输出 verdict。共识。核查中。",
+        "将检查 GitHub README 的官方网站链接、机构归属、release/tag 日期和 benchmark 数据。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "核验进行中，尚未形成最终结论。",
+        "不会以 arXiv 单独作为官方项目证据。",
+        "不会猜测机构、指标或链接。",
+        "将确认其是否为面向物理机器人的模拟器、数据框架与评测基准。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在进行网页核验",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/D-Robotics/RoboTwin",
+      "open_source": true,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验，尚未作出最终准入判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 RoboTwin 2.0 的官方项目证据、责任机构、发布时间、能力和指标。"
+    }
+  },
+  "legend-of-mirokai-v0-5-0-9700ba0": {
+    "checked_at": "2026-08-20T04:33:17.815409+00:00",
+    "title": "Legend of Mirokai v0.5.0",
+    "accepted": true,
+    "reason": "纳入。Enchanted Tools 的官方 v0.5.0 专用开发者页面在 2025 年 5 月 9 日列出 Pymirokai Python SDK、Web API，并为该版本提供 Mirokaï Simulator；文档明确说明这些软件用于实体 Mirokaï 机器人的通信、控制、导航、交互、抓取、实时状态处理和自定义技能部署，因此满足具身机器人软件项目要求。未发现官方页面声明该版本以开源许可证发布，故不将其标记为开源；开源并非纳入条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过 Pymirokai 的 Robot 类连接并控制实体 Mirokaï 机器人",
+        "通过 REST API 下发导航、交互、行为与抓取相关命令",
+        "通过 WebSocket 订阅、发布并实时处理机器人状态和遥测数据",
+        "创建、上传、移除、列出及动态启用或禁用自定义机器人技能",
+        "编排移动、语音、手臂动画、物体抓取和物品递交等多步骤任务"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "v0.5.0 的官方开发者目录同时提供 Mirokaï Simulator、Pymirokai Python SDK 和 Web API 三部分，是面向实体 Mirokaï 机器人的专门软件发布，而非机器人硬件规格页。",
+        "Pymirokai 以 Robot 类统一封装机器人连接和控制，覆盖交互、导航、行为控制、抓取等功能，并同时接入 REST 与 WebSocket 服务。",
+        "机器人命令返回 Mission 对象；开发者可等待任务启动或完成，也可取消任务并等待取消流程结束，以编排异步机器人行为。",
+        "WebSocket 接口支持主题订阅、取消订阅、数据发布和回调注册，可处理 navigation_state、battery_voltage 等实时状态数据。",
+        "SDK 示例展示了由转向、相对位置移动、语音、手臂动画、已知把手抓取、面前物体抓取和递交动作组成的实体机器人任务流程。",
+        "自定义技能通过 @custom_skill 注册，可声明访问级别、多语言自然语言触发表达和参数描述；参数描述用于帮助 LLM 为技能提供输入，返回 llm_output 时可交由 LLM 重述。",
+        "自定义技能可直接上传至机器人，并通过 API 移除、枚举以及动态启用或禁用，从而形成可扩展的机器人应用与技能部署机制。"
+      ],
+      "metrics": [
+        {
+          "label": "发布组成",
+          "note": "官方 v0.5.0 目录列出的独立软件文档模块。",
+          "value": "3 个：Mirokaï Simulator、Pymirokai、Web API"
+        },
+        {
+          "label": "通信接口",
+          "note": "Pymirokai Robot 类和官方 Web API 文档明确支持的机器人通信方式。",
+          "value": "2 种：REST 和 WebSocket"
+        },
+        {
+          "label": "WebSocket 核心操作",
+          "note": "SDK 明确提供 subscribe、unsubscribe、publish 和 register_callback。",
+          "value": "4 项"
+        },
+        {
+          "label": "自定义技能管理操作",
+          "note": "官方管理文档实现上传、移除、列出以及启用/禁用。",
+          "value": "4 类"
+        },
+        {
+          "label": "示例相对移动距离",
+          "note": "Pymirokai 入门示例通过 Coordinates(x=2) 控制机器人前进。",
+          "value": "2 米"
+        }
+      ],
+      "official_organization_url": "https://enchanted.tools/",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.5.0/",
+      "open_source": false,
+      "organization_en": "Enchanted Tools",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Enchanted Tools 的官方 v0.5.0 专用开发者页面在 2025 年 5 月 9 日列出 Pymirokai Python SDK、Web API，并为该版本提供 Mirokaï Simulator；文档明确说明这些软件用于实体 Mirokaï 机器人的通信、控制、导航、交互、抓取、实时状态处理和自定义技能部署，因此满足具身机器人软件项目要求。未发现官方页面声明该版本以开源许可证发布，故不将其标记为开源；开源并非纳入条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Legend of Mirokai v0.5.0 是法国机器人公司 Enchanted Tools 面向 Mirokaï 实体服务机器人的开发者软件版本。官方版本目录将模拟器、Python SDK 与 Web API 组织在同一发布下：Pymirokai 提供统一 Robot 类及异步 Mission 任务接口，开发者能够控制导航、语音交互、行为动画、手臂动作和抓取流程；REST 用于命令与状态访问，WebSocket 用于实时主题数据、发布订阅和回调处理。该版本还提供自定义技能机制，可声明自然语言触发语句、LLM 参数说明和访问权限，并支持把技能上传到机器人后动态启停。其技术定位是 Mirokaï 的机器人应用开发、任务编排和系统集成栈，而不是机器人本体或硬件产品公告。"
+    }
+  },
+  "aetherv1-bde4778": {
+    "checked_at": "2026-08-20T04:33:17.836766+00:00",
+    "title": "AetherV1",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核实候选项目的官方仓库、责任机构、发布日期与具体软件能力，并将只采用官方页面、论文及其链接材料中的可验证信息。",
+        "随后会按严格纳入条件判断，并对无法证实的字段保持空值或明确排除理由。 ",
+        "  ",
+        "  "
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。",
+        "检索进行中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "等待官方来源核验",
+          "value": "检索中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Research Lab",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在检索并核验 AetherV1 的官方项目材料。"
+    }
+  },
+  "dapo-a371e1e": {
+    "checked_at": "2026-08-20T04:33:17.857870+00:00",
+    "title": "DAPO",
+    "accepted": false,
+    "reason": "不满足条件 1。官方项目页和技术材料明确将 DAPO 定义为面向大语言模型数学推理的大规模强化学习算法与训练系统；其输入、训练任务、验证器和评测均围绕文本数学问题，没有可支持其用于物理机器人、机器人控制或具身环境交互的证据。它虽是开源软件且具有合格的官方项目页和明确责任机构，但不属于 embodied-robotics 技术项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "面向大语言模型的大规模强化学习训练",
+        "基于 verl 框架复现 DAPO 强化学习流程",
+        "使用 DAPO-Math-17K 数据集训练数学推理模型",
+        "通过规则式验证器计算数学答案奖励",
+        "提供算法、数据、模型权重及训练基础设施"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "DAPO 全称为 Decoupled Clip and Dynamic sAmpling Policy Optimization，是用于训练大语言模型推理能力的强化学习算法及训练系统。",
+        "算法包含 Clip-Higher、Dynamic Sampling、Token-Level Policy Gradient Loss 和 Overlong Reward Shaping 四项关键技术，用于改善大规模 LLM 强化学习的稳定性和训练效率。",
+        "项目以 Qwen2.5-32B 基础模型开展训练，任务是 AIME 等竞赛数学问题的文本推理与答案生成。",
+        "训练系统构建于 verl 框架之上，并提供可直接运行的训练脚本、算法实现、验证器和复现材料。",
+        "项目发布 DAPO-Math-17K 训练数据集；验证阶段采用 AIME 2024，并使用基于字符串规范化与匹配的规则式验证器。",
+        "官方材料提供代码、训练数据、模型权重和训练基础设施，但没有展示物理机器人、机器人控制策略、具身环境交互、机器人传感器输入或现实世界动作输出。",
+        "因此，DAPO 是通用 LLM 数学推理强化学习项目，而不是面向物理机器人或具身智能的软件项目。"
+      ],
+      "metrics": [
+        {
+          "label": "AIME 2024 成绩",
+          "note": "官方项目页报告 DAPO 在 Qwen2.5-32B 基础模型上训练得到该结果。",
+          "value": "50 分"
+        },
+        {
+          "label": "训练步数",
+          "note": "官方项目页称达到上述成绩所需训练步数相较 DeepSeek-R1-Zero-Qwen-32B 减少。",
+          "value": "减少 50%"
+        },
+        {
+          "label": "训练数据集",
+          "note": "官方发布的数学强化学习训练集 DAPO-Math-17K。",
+          "value": "17K 规模"
+        },
+        {
+          "label": "基础模型规模",
+          "note": "公开复现实验使用 Qwen2.5-32B 基础模型。",
+          "value": "32B 参数"
+        },
+        {
+          "label": "训练硬件",
+          "note": "官方项目页报告的开源实验配置。",
+          "value": "128 张 H20 GPU"
+        }
+      ],
+      "official_organization_url": "https://air.tsinghua.edu.cn/info/1007/2401.htm",
+      "official_project_url": "https://dapo-sia.github.io/",
+      "open_source": true,
+      "organization_en": "SIA-Lab of Tsinghua AIR and ByteDance Seed",
+      "organization_kind": "Research Lab",
+      "organization_zh": "清华大学智能产业研究院与字节跳动联合实验室 SIA-Lab",
+      "reason": "不满足条件 1。官方项目页和技术材料明确将 DAPO 定义为面向大语言模型数学推理的大规模强化学习算法与训练系统；其输入、训练任务、验证器和评测均围绕文本数学问题，没有可支持其用于物理机器人、机器人控制或具身环境交互的证据。它虽是开源软件且具有合格的官方项目页和明确责任机构，但不属于 embodied-robotics 技术项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "DAPO 是清华大学智能产业研究院与字节跳动 Seed 联合实验室 SIA-Lab 发布的开源大语言模型强化学习系统。它通过 Clip-Higher、动态采样、Token 级策略梯度损失和超长输出奖励塑形等机制，提高数学推理模型强化学习的稳定性与效率，并公开代码、DAPO-Math-17K 数据、验证器、模型权重和复现脚本。官方报告其使用 128 张 H20 GPU 从 Qwen2.5-32B 基础模型开始训练，在 AIME 2024 上达到 50 分，并将达到该成绩所需的训练步数减少 50%。然而，项目材料没有物理机器人、具身环境、机器人动作空间或现实世界控制接口；其目标是提升文本大模型的数学推理能力。因此，本索引应将其排除。"
+    }
+  },
+  "biomedgpt-r1-f0acf84": {
+    "checked_at": "2026-08-20T04:33:17.882279+00:00",
+    "title": "BioMedGPT-R1",
+    "accepted": false,
+    "reason": "不满足条件 1。尽管 BioMedGPT-R1 是在 2025 年 2 月 20 日发布、具有官方专题公告和可获取模型的软件项目，但官方页面与模型材料明确将其定义为面向生物医药问答、分子理解、蛋白质表示和药物研发的多模态基础模型。现有材料没有显示其面向物理机器人或具身智能，也没有机器人动作、控制、规划、操作、仿真或实体环境交互组件，因此不能收录进具身机器人技术项目索引。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "生物医学文本、化学分子与蛋白质信息的跨模态理解",
+        "面向生物医药问题生成带有推理过程的自然语言回答",
+        "从分子结构、官能团、生化性质和潜在应用等角度分析化学分子",
+        "支持药物分子理解分析以及药物靶点探索任务"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "BioMedGPT-R1 是生物医药多模态推理模型，不是用于物理机器人、机器人控制或具身智能的软件。",
+        "模型以 DeepSeek-R1-Distill-Qwen-14B 更新上一版本的文本基础模型，从而增强文本推理能力。",
+        "系统包含 Molecule Encoder、Protein Encoder 和 Translator；Translator 将生物模态编码器输出映射至自然语言表征空间。",
+        "训练分为两个阶段：先单独训练跨模态对齐 Translator，再联合微调 Translator 与基础大语言模型，以获得下游任务的多模态推理能力。",
+        "模型可将化学分子表征与语言指令共同输入语言模型，生成对分子结构、官能团、生化性质和潜在应用的文本分析。",
+        "官方材料将其应用定位于药物分子理解、药物靶点探索和生物医药问答，没有报告机器人感知、动作生成、控制、规划、仿真或实体环境交互能力。"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方模型卡使用 BioMedGPT-R1-17B 名称。",
+          "value": "17B"
+        },
+        {
+          "label": "训练阶段",
+          "note": "跨模态对齐训练与多模态推理监督微调。",
+          "value": "2 个阶段"
+        },
+        {
+          "label": "CheBI-20 化学分子描述任务",
+          "note": "清华 AIR 官方公告称，相比上一版本的效果提升超过 15%。",
+          "value": ">15% 提升"
+        }
+      ],
+      "official_organization_url": "https://air.tsinghua.edu.cn/",
+      "official_project_url": "https://air.tsinghua.edu.cn/info/1007/2393.htm",
+      "open_source": true,
+      "organization_en": "Institute for AI Industry Research (AIR), Tsinghua University; Beijing Shuimu Molecule Biotechnology Co., Ltd. (PharMolix)",
+      "organization_kind": "Research Lab",
+      "organization_zh": "清华大学智能产业研究院；北京水木分子生物科技有限公司",
+      "reason": "不满足条件 1。尽管 BioMedGPT-R1 是在 2025 年 2 月 20 日发布、具有官方专题公告和可获取模型的软件项目，但官方页面与模型材料明确将其定义为面向生物医药问答、分子理解、蛋白质表示和药物研发的多模态基础模型。现有材料没有显示其面向物理机器人或具身智能，也没有机器人动作、控制、规划、操作、仿真或实体环境交互组件，因此不能收录进具身机器人技术项目索引。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "BioMedGPT-R1 是清华大学智能产业研究院与北京水木分子生物科技有限公司联合发布的开源生物医药多模态推理模型。它以 DeepSeek-R1-Distill-Qwen-14B 为文本基础，通过分子和蛋白质编码器提取生物模态特征，再利用 Translator 将这些特征对齐到自然语言表征空间。模型采用先训练对齐层、再联合微调对齐层与语言模型的两阶段策略，可执行化学分子分析、跨模态生物医药问答和药物靶点探索。官方报告其在 CheBI-20 化学分子描述任务上较上一版本提升超过 15%。然而，该项目完全属于生物医药人工智能范畴，不涉及物理机器人或具身智能，故应排除。"
+    }
+  },
+  "internlm3-8b-instruct-92312b3": {
+    "checked_at": "2026-08-20T04:33:17.904552+00:00",
+    "title": "InternLM3-8B-Instruct",
+    "accepted": false,
+    "reason": "不收录：缺少资格条件 1。官方项目将 InternLM3-8B-Instruct 明确定义为面向通用使用和高级推理的指令大语言模型；其输入、输出、使用示例及评测均围绕文本对话、推理、数学、代码和长上下文任务。可访问的官方项目材料没有表明它是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、数据引擎、仿真器、控制规划栈、机器人评测基准或具身代理框架。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通用文本指令跟随与多轮对话",
+        "长思维链复杂推理与普通回复双模式",
+        "数学、知识和代码类文本任务求解",
+        "最长 128K 上下文范围的评测能力"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "InternLM3-8B-Instruct 是一个面向通用使用和高阶推理的 80 亿参数指令语言模型，并非面向物理机器人控制的软件。",
+        "模型提供普通回复与“深度思考”两种工作模式；后者通过长思维链处理复杂推理任务。",
+        "官方材料报告其使用 4 万亿个高质量词元训练，并称相较同量级模型节省超过 75% 的训练成本。",
+        "官方仓库提供基于 Transformers、vLLM、SGLang、Ollama 和 LMDeploy 的文本推理与部署方式，但没有机器人观测、动作输出、控制接口或具身环境集成。",
+        "公开评测集中于知识、推理、数学、代码、指令遵循、长上下文和聊天能力，不包含真实机器人、仿真机器人、操作规划或具身任务基准。",
+        "模型代码及权重采用 Apache-2.0 许可证公开发布。"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方公布的参数规模",
+          "value": "8B parameters"
+        },
+        {
+          "label": "训练数据量",
+          "note": "官方称使用高质量训练词元",
+          "value": "4 trillion tokens"
+        },
+        {
+          "label": "MATH-500",
+          "note": "0-shot，Thinking Mode；官方 OpenCompass 评测表",
+          "value": "83.0"
+        },
+        {
+          "label": "RULER",
+          "note": "4K–128K 上下文平均成绩；官方 OpenCompass 评测表",
+          "value": "87.9"
+        },
+        {
+          "label": "IFEval",
+          "note": "Prompt-Strict；官方 OpenCompass 评测表",
+          "value": "79.3"
+        }
+      ],
+      "official_organization_url": "https://www.shlab.org.cn/index",
+      "official_project_url": "https://github.com/InternLM/InternLM",
+      "open_source": true,
+      "organization_en": "Shanghai Artificial Intelligence Laboratory",
+      "organization_kind": "Research Lab",
+      "organization_zh": "上海人工智能实验室",
+      "reason": "不收录：缺少资格条件 1。官方项目将 InternLM3-8B-Instruct 明确定义为面向通用使用和高级推理的指令大语言模型；其输入、输出、使用示例及评测均围绕文本对话、推理、数学、代码和长上下文任务。可访问的官方项目材料没有表明它是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、数据引擎、仿真器、控制规划栈、机器人评测基准或具身代理框架。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "InternLM3-8B-Instruct 是上海人工智能实验室于 2025 年 1 月 15 日发布的通用指令大语言模型。它拥有 80 亿参数，使用 4 万亿个高质量词元训练，支持面向流畅交互的普通回复模式，以及利用长思维链求解复杂问题的深度思考模式。官方通过 OpenCompass 在 CMMLU、MMLU、GPQA-Diamond、MATH-500、HumanEval、IFEval、RULER 和 AlpacaEval 2.0 等通用语言模型基准上进行评测，并提供 Transformers、vLLM、SGLang、Ollama 与 LMDeploy 等部署路径。尽管它是具有明确发布主体、官方项目仓库和开放权重的软件项目，官方材料并未提供机器人感知输入、动作生成、运动控制、操作策略、仿真环境接口或具身任务结果。因此它属于通用 LLM 项目，而非本索引要求的具身机器人技术项目。"
+    }
+  },
+  "legend-of-mirokai-v0-4-1-2566ec3": {
+    "checked_at": "2026-08-20T04:33:17.926036+00:00",
+    "title": "Legend of Mirokai v0.4.1",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选项目的官方页面、软件属性、责任组织及可引用的技术指标。将优先使用 Enchanted Tools 的开发者文档和官方材料，并把无法确认的字段留空或明确标为不纳入。",
+        "随后会区分模拟器/SDK/API 软件发布与机器人硬件产品信息，避免把硬件能力误记为该软件项目的实现能力。  NOTE: accidental wrong format? json schema intermediary bad. Need proceed.",
+        "fields",
+        "Data & benchmarks"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "placeholder",
+        "placeholder",
+        "placeholder",
+        "placeholder"
+      ],
+      "metrics": [
+        {
+          "label": "status",
+          "note": "placeholder",
+          "value": "checking"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.4.1/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验。"
+    }
   }
 }

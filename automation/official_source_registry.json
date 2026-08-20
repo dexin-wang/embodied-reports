@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-17T04:00:00.104316+00:00",
+  "updated_at": "2026-08-20T04:16:56.937228+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -1552,6 +1552,188 @@
         "https://www.noematrix.ai/news/Noematrix-WAIC-2025"
       ],
       "last_bootstrapped_at": "2026-08-17T03:59:56.237406+00:00",
+      "last_error": null
+    },
+    "地瓜机器人-d-robotics-d3c62e0a": {
+      "name": "地瓜机器人 / D-Robotics",
+      "official_urls": [
+        "https://developer.d-robotics.cc/",
+        "https://en.d-robotics.cc/",
+        "https://en.d-robotics.cc/blog",
+        "https://github.com/D-Robotics"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://en.d-robotics.cc/blog/d-robotics-open-sources-x-lens-a-40-million-parameter-model-for-real-time-metric-depth-estimation",
+        "https://github.com/D-Robotics/RoboTwin"
+      ],
+      "last_bootstrapped_at": "2026-08-20T04:07:00.826821+00:00",
+      "last_error": null
+    },
+    "清华大学智能产业研究院-air-91301b27": {
+      "name": "清华大学智能产业研究院 / AIR",
+      "official_urls": [
+        "https://air.tsinghua.edu.cn/",
+        "https://air.tsinghua.edu.cn/en/",
+        "https://air.tsinghua.edu.cn/lby.jsp?wbtreeid=1007",
+        "https://github.com/AIR-DISCOVER"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://air.tsinghua.edu.cn/info/1007/2393.htm",
+        "https://air.tsinghua.edu.cn/info/1007/2401.htm",
+        "https://air.tsinghua.edu.cn/info/1007/2437.htm",
+        "https://air.tsinghua.edu.cn/info/1007/2438.htm",
+        "https://air.tsinghua.edu.cn/info/1007/2455.htm",
+        "https://air.tsinghua.edu.cn/info/1007/2467.htm",
+        "https://air.tsinghua.edu.cn/info/1007/2477.htm",
+        "https://air.tsinghua.edu.cn/info/1007/2480.htm"
+      ],
+      "last_bootstrapped_at": "2026-08-20T04:08:21.852998+00:00",
+      "last_error": null
+    },
+    "北京大学前沿计算研究中心-peking-university-frontier-computin-979671e4": {
+      "name": "北京大学前沿计算研究中心 / Peking University Frontier Computing",
+      "official_urls": [
+        "https://cfcs.pku.edu.cn/",
+        "https://cfcs.pku.edu.cn/research/research_labs/22b682f716b048d3b51559212191abf5.htm",
+        "https://github.com/PKU-EPIC",
+        "https://pku-epic.github.io/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/PKU-EPIC/GraspVLA"
+      ],
+      "last_bootstrapped_at": "2026-08-20T04:09:15.456968+00:00",
+      "last_error": null
+    },
+    "上海人工智能实验室-shanghai-ai-laboratory-04be948a": {
+      "name": "上海人工智能实验室 / Shanghai AI Laboratory",
+      "official_urls": [
+        "https://github.com/InternLM",
+        "https://github.com/InternRobotics",
+        "https://internrobotics.shlab.org.cn/",
+        "https://www.shlab.org.cn/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/InternLM/InternLM",
+        "https://github.com/InternRobotics/Aether",
+        "https://github.com/InternRobotics/InternNav/releases",
+        "https://github.com/InternRobotics/REAL",
+        "https://github.com/InternRobotics/StreamVLN"
+      ],
+      "last_bootstrapped_at": "2026-08-20T04:09:59.839398+00:00",
+      "last_error": null
+    },
+    "robust-ai-8b2adccc": {
+      "name": "Robust AI",
+      "official_urls": [
+        "https://www.robust.ai/blog",
+        "https://www.robust.ai/home"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-20T04:10:52.924345+00:00",
+      "last_error": null
+    },
+    "osaro-cb68bc3a": {
+      "name": "Osaro",
+      "official_urls": [
+        "https://www.osaro.com/",
+        "https://www.osaro.com/media",
+        "https://www.osaro.com/resources",
+        "https://www.osaro.com/solutions"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-20T04:11:31.929264+00:00",
+      "last_error": null
+    },
+    "nimble-robotics-6df32c79": {
+      "name": "Nimble Robotics",
+      "official_urls": [
+        "https://nimble.ai/",
+        "https://nimble.ai/blog"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-20T04:11:59.616920+00:00",
+      "last_error": null
+    },
+    "pickle-robot-320d1615": {
+      "name": "Pickle Robot",
+      "official_urls": [
+        "https://www.picklerobot.com/",
+        "https://www.picklerobot.com/company",
+        "https://www.picklerobot.com/news",
+        "https://www.picklerobot.com/products",
+        "https://www.picklerobot.com/technology"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-20T04:12:35.667444+00:00",
+      "last_error": null
+    },
+    "righthand-robotics-6e80faaf": {
+      "name": "RightHand Robotics",
+      "official_urls": [
+        "https://github.com/RightHandRobotics",
+        "https://righthandrobotics.com/",
+        "https://righthandrobotics.com/the-latest",
+        "https://www.rhrdocs.com/welcome"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-20T04:13:00.313694+00:00",
+      "last_error": null
+    },
+    "pollen-robotics-722bdf65": {
+      "name": "Pollen Robotics",
+      "official_urls": [
+        "https://docs.pollen-robotics.com/",
+        "https://github.com/pollen-robotics",
+        "https://huggingface.co/pollen-robotics",
+        "https://pollen-robotics.com/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/pollen-robotics/reachy_mini/tree/v1.8.2",
+        "https://github.com/pollen-robotics/reachy_mini/tree/v1.8.3",
+        "https://github.com/pollen-robotics/reachy_mini/tree/v1.8.4",
+        "https://github.com/pollen-robotics/reachy_mini/tree/v1.9.0",
+        "https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0",
+        "https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.8.0",
+        "https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.9.0",
+        "https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v1.0.0"
+      ],
+      "last_bootstrapped_at": "2026-08-20T04:14:41.685765+00:00",
+      "last_error": null
+    },
+    "enchanted-tools-564afbfe": {
+      "name": "Enchanted Tools",
+      "official_urls": [
+        "https://docs.developers.enchanted.tools/",
+        "https://enchanted-tools.notion.site/Enchanted-Tools-media-kit-a402fd1610f14f33a7125421b70915f0",
+        "https://enchanted.tools/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.4.1/",
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.5.0/",
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.6.0/",
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.6.3/",
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.0/",
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.1/",
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.2/",
+        "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.8.0/"
+      ],
+      "last_bootstrapped_at": "2026-08-20T04:15:56.103621+00:00",
+      "last_error": null
+    },
+    "neura-robotics-4f3a6642": {
+      "name": "NEURA Robotics",
+      "official_urls": [
+        "https://neura-robotics.com/",
+        "https://neura-robotics.com/neuragym/",
+        "https://neura-robotics.com/neuraverse/",
+        "https://neura-robotics.com/news/",
+        "https://neura-robotics.com/press/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://neura-robotics.com/neura-robotics-at-ces-2026/",
+        "https://neura-robotics.com/neura-robotics-launches-technological-revolution/"
+      ],
+      "last_bootstrapped_at": "2026-08-20T04:16:47.985066+00:00",
       "last_error": null
     }
   }

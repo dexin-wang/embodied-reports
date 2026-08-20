@@ -802,6 +802,250 @@
     ]
   },
   {
+    "id": "reachy-mini-conversation-app-v0-10-0-9fb8bd4",
+    "title": "Reachy Mini Conversation App v0.10.0",
+    "organization": "Pollen Robotics",
+    "organizationKind": "Company",
+    "date": "2026-07-15",
+    "year": 2026,
+    "summary": "Reachy Mini Conversation App v0.10.0 是 Pollen Robotics 为实体桌面机器人 Reachy Mini 发布的开源具身对话代理。它把实时语音后端、相机视觉、语言模型工具调用、人格配置、跨会话记忆和机器人动作调度整合为一个可运行的软件栈。语言模型不仅生成对话，还能调用工具驱动头部姿态、扫视、舞蹈、情绪动作、休眠和人脸跟踪，并可通过相机帧理解机器人周围环境。v0.10.0 的重点是扩展联网工具和改善运行链路：默认加入搜索、天气和时间工具，缓存 Hugging Face Space 工具规格以消除启动阶段的网络发现，将后端连接与媒体预热并行，并通过 Reachy Mini SDK 直接取得 JPEG 相机帧。项目同时提供控制台模式和 Web UI，可切换或创建人格、配置问候与工具权限，并允许接入本地实时语音后端及外部 MCP 兼容工具。",
+    "tags": [
+      "Embodied AI",
+      "LLM",
+      "Robot systems"
+    ],
+    "fields": [
+      "Embodied AI",
+      "LLM",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是直接面向实体 Reachy Mini 机器人的对话代理软件，而非机器人硬件或产品规格页；官方将其描述为结合实时语音后端、视觉处理和编排动作库的 Conversation App。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0))",
+        "系统通过 Hugging Face 实时后端运行低延迟音频对话循环，默认可连接内置托管服务，也可改接用户自行部署的本地 WebSocket 实时后端。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "视觉能力以 LLM 工具形式接入：camera 工具获取最新相机帧并交给当前实时后端分析；head_tracking 工具可利用相机与带 vision 扩展的机器人守护进程跟随用户面部。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "分层动作系统负责排队执行舞蹈、情绪片段、目标姿态和呼吸动作，并可叠加与语音反应相关的摆动；异步工具调度把语言模型输出连接到真实机器人动作与相机采集。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0))",
+        "默认人格公开了舞蹈、情绪播放、头部移动、扫视、休眠、视觉、人脸跟踪、记忆、网页搜索、天气和时间等工具；remember/forget 会把跨会话用户事实保存在本地 memory.v1.json。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "人格配置可分别定义提示词、启动问候和允许使用的工具，还支持在 Web UI 中切换或创建人格；切换人格会快速重连后端并重新加载指令与工具，无需重启整个应用。([raw.githubusercontent.com](https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v0.10.0/README.md))",
+        "v0.10.0 增加了内置搜索、天气和时间工具，将 Space 工具规格缓存到清单以避免启动时联网，并让后端连接与媒体预热并行，同时改用 Reachy Mini SDK 的 JPEG 帧接口处理相机图像。([github.com](https://github.com/pollen-robotics/reachy_mini_conversation_app/releases/tag/v0.10.0))"
+      ],
+      "capabilities": [
+        "实时语音对话与低延迟音频流处理",
+        "基于相机画面的视觉感知和问答",
+        "通过异步工具调用执行头部运动、舞蹈、情绪动作与人脸跟踪",
+        "使用可配置人格、长期事实记忆和外部 MCP 工具构建具身对话代理"
+      ],
+      "metrics": [
+        {
+          "label": "版本",
+          "note": "项目配置和官方 GitHub Release 均标明该版本。",
+          "value": "v0.10.0"
+        },
+        {
+          "label": "发布日期",
+          "note": "官方 GitHub Release 页面显示 released this 15 Jul；结合候选年份记为 2026-07-15。",
+          "value": "2026-07-15"
+        },
+        {
+          "label": "默认公开工具数",
+          "note": "v0.10.0 README 的默认人格工具表列出 15 个可调用工具。",
+          "value": "15"
+        },
+        {
+          "label": "默认空闲超时",
+          "note": "REACHY_MINI_APP_TIMEOUT_MINUTES 的默认值；设为 0 可关闭超时。",
+          "value": "1440 分钟"
+        },
+        {
+          "label": "最低 Python 版本",
+          "note": "pyproject.toml 中 requires-python 的明确要求。",
+          "value": ">=3.11"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/releases/tag/v0.10.0"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://pollen-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/tree/v0.10.0"
+      }
+    ]
+  },
+  {
+    "id": "real-bench-875b2ab",
+    "title": "REAL-Bench",
+    "organization": "上海人工智能实验室 / Shanghai Artificial Intelligence Laboratory",
+    "organizationKind": "Research Lab",
+    "date": "2026-07-15",
+    "year": 2026,
+    "summary": "REAL-Bench是上海人工智能实验室Intern Robotics牵头发布的开放世界移动操作智能体评测基准，也是REAL视觉交互式具身智能框架的一部分。它通过241个可执行任务，系统评估智能体仅依赖RGB观察进行主动探索、视觉定位、干扰环境拾取放置、关节家具操作以及面向歧义指令的主动询问能力。官方仓库不仅提供任务元数据，还实现了YAML加载与完整性验证、MCP工具服务器、模拟环境配置、程序化数据生成以及SFT训练组件，因此属于可实际运行的软件项目。基准刻意避免向策略暴露全局物体列表、精确位姿等模拟器特权信息，并让模拟与真实机器人共享高层工具模式，以提高评测对真实部署约束的代表性。",
+    "tags": [
+      "Data & benchmarks",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Data & benchmarks",
+      "Robot manipulation",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "REAL-Bench于2026年7月15日正式发布，是REAL开放世界移动操作框架的评测组成部分；官方项目页、上海人工智能实验室Intern Robotics组织页面和公开代码仓库均可访问。",
+        "基准包含241个任务实例，分为四类：72个Furniture-Distractor Pick-and-Place（FDP）、56个Furniture & Object Distractors（FODP）、48个Furniture-Distractor Open/Close（FDO）和65个Simulator-User Loop（SUL）任务。",
+        "任务要求智能体从RGB视觉观察出发完成导航、检测、Set-of-Mark提示和视觉定位，不向策略暴露全局物体清单、物体位姿或其他特权模拟器状态。",
+        "FDP与FODP用于检验主动视觉搜索及干扰环境中的开放词汇推理：智能体必须辨别相似家具、物体和目标容器，再完成跨容器拾取放置。",
+        "FDO覆盖家具开合等关节物体操作，重点检查智能体在环境状态变化后的长时序一致性，而SUL要求智能体发现指令歧义并通过统一工具接口主动询问模拟用户。",
+        "仓库实现了基于YAML的任务包、Python加载器和验证器；验证过程检查任务模式、基准ID、全局索引、四类任务数量、运行时物体与放置关系以及MesaTask物体锁定清单。",
+        "REAL采用固定的MCP高层动作模式连接模拟处理器与真实机器人控制器，并以Qwen3-VL-8B进行SFT和在线强化学习；同一高层策略还在双臂移动机器人上进行零样本部署验证。"
+      ],
+      "capabilities": [
+        "提供可直接加载和验证的开放世界移动操作评测任务定义",
+        "评测基于RGB视觉的主动探索、目标发现与视觉定位能力",
+        "评测视觉相似家具及开放词汇物体干扰下的拾取放置能力",
+        "评测家具开合等关节操作中的状态一致性",
+        "通过模拟用户评测歧义识别、主动询问和交互式意图消歧"
+      ],
+      "metrics": [
+        {
+          "label": "基准规模",
+          "note": "官方发布的REAL-Bench任务定义总数。",
+          "value": "241个任务"
+        },
+        {
+          "label": "任务构成",
+          "note": "FDP、FODP、FDO和SUL四个任务族的官方数量。",
+          "value": "72 / 56 / 48 / 65"
+        },
+        {
+          "label": "交互任务成功率",
+          "note": "最终REAL-8B策略在SUL交互式任务上的成功率。",
+          "value": "56.9%"
+        },
+        {
+          "label": "开放词汇探索成功率",
+          "note": "官方项目页报告的最终策略FODP成功率。",
+          "value": "33.9%"
+        },
+        {
+          "label": "真实机器人端到端结果",
+          "note": "冻结高层策略通过相同MCP接口零样本迁移至双臂移动机器人，在60次真实环境试验中的结果。",
+          "value": "78.3%（60个真实机器人回合）"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://internrobotics.github.io/REAL/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://internrobotics.shlab.org.cn"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/InternRobotics/REAL"
+      }
+    ]
+  },
+  {
+    "id": "omniscene-dataset-9d1afe5",
+    "title": "OmniScene Dataset",
+    "organization": "地瓜机器人 / D-Robotics",
+    "organizationKind": "Company",
+    "date": "2026-07-15",
+    "year": 2026,
+    "summary": "OmniScene 是地瓜机器人（D-Robotics）于 2026 年 7 月随 X-Lens 发布的异构多相机度量深度合成数据集。它以四个 180 度鱼眼相机和两个针孔相机构成同步六视图系统，在 103 个室内外场景和 564 条运动序列中提供约 26.6 万组六视图帧、超过 170 万张标定图像。数据不仅包含 RGB 和以米为单位的稠密深度，还提供镜头有效区域、天空掩码、鱼眼射线查找表、相机内外参及跨相机相对位姿，能够支撑跨镜头投影学习、多视图几何融合和真实尺度深度评测。其测试场景与训练场景完全分离，并已作为 X-Lens 鱼眼、针孔及混合相机实验的训练和评测资源公开发布。",
+    "tags": [
+      "Data & benchmarks",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "fields": [
+      "Data & benchmarks",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "OmniScene 是 D-Robotics 在 X-Lens 官方项目中发布的大规模合成数据集，目标是补足机器人和具身视觉中异构相机度量深度训练数据的不足。",
+        "数据通过 NVIDIA Isaac Sim 渲染；每个样本使用经过标定的六相机系统，包含四个 180 度鱼眼侧视相机以及前、后两个针孔相机，并保持六路视图同步。",
+        "每帧提供无噪声的稠密度量真值，包括逐像素 z-depth、有效区域掩码、天空标记以及采用 OpenCV 坐标约定的相机参数。",
+        "鱼眼相机采用 Mei unified-sphere 模型并提供 xi、radtan 参数和固定的逐像素射线方向查找表；针孔相机提供 3×3 内参矩阵。",
+        "逐帧元数据包含相机到世界的 4×4 位姿、相机之间的相对位姿以及完整镜头标定信息，可用于多视图融合和跨投影几何学习。",
+        "场景覆盖住宅、商业、工业、城市及科幻环境，使用专业制作的 Kujiale 和 Unreal Engine 场景资产；测试集由与训练场景完全分离的场景组成。",
+        "数据以场景级 TAR 文件组织，划分为 train、valid 和 test；深度保存为 16 位 PNG，数值除以 256 后得到以米为单位的深度，零值表示天空或无效区域。"
+      ],
+      "capabilities": [
+        "提供面向异构多相机度量深度学习的合成训练数据",
+        "同步提供鱼眼与针孔相机视图，支持跨镜头模型训练和评测",
+        "提供逐像素稠密度量深度、有效区域掩码与天空标记",
+        "提供逐帧相机内参、世界坐标外参及相机间相对位姿",
+        "采用场景不重叠的测试集评估未见环境泛化"
+      ],
+      "metrics": [
+        {
+          "label": "场景数量",
+          "note": "官方 X-Lens 项目页报告的复杂室内和室外合成场景数。",
+          "value": "103"
+        },
+        {
+          "label": "运动序列数量",
+          "note": "六相机系统在各场景中生成的运动序列总数。",
+          "value": "564"
+        },
+        {
+          "label": "同步六视图帧数",
+          "note": "每帧包含四路鱼眼和两路针孔相机数据。",
+          "value": "266K"
+        },
+        {
+          "label": "标定图像数量",
+          "note": "官方项目页报告的数据集图像总量。",
+          "value": "1.7M+"
+        },
+        {
+          "label": "单视图图像分辨率",
+          "note": "OmniScene 数据卡列出的 RGB 与深度视图分辨率。",
+          "value": "1920×1200"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://drobotics-xlens.github.io/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://en.d-robotics.cc/"
+      },
+      {
+        "label": "Report",
+        "url": "https://en.d-robotics.cc/blog/d-robotics-open-sources-x-lens-a-40-million-parameter-model-for-real-time-metric-depth-estimation"
+      }
+    ]
+  },
+  {
     "id": "dmuon-d95d446",
     "title": "DMuon",
     "organization": "自变量机器人 / X² Robotics",
@@ -994,6 +1238,85 @@
       {
         "label": "Evidence",
         "url": "https://www.limxdynamics.com/zh/news/BK000067"
+      }
+    ]
+  },
+  {
+    "id": "reachy-mini-sdk-v1-9-0-634b67b",
+    "title": "Reachy Mini SDK v1.9.0",
+    "organization": "Pollen Robotics",
+    "organizationKind": "Company",
+    "date": "2026-07-09",
+    "year": 2026,
+    "summary": "Reachy Mini SDK v1.9.0 是 Pollen Robotics 面向实体 Reachy Mini 机器人及其仿真环境发布的软件控制栈版本。它以 Python/TypeScript SDK、机器人端 daemon、媒体管线和应用运行机制为核心，而不是硬件产品公告。本次发布最显著的能力是 daemon 侧人脸检测与头部跟踪：应用可以读取归一化的人脸位置和滚转信息，并通过权重将跟踪动作与自身生成的头部运动混合。媒体层新增基于 GStreamer 的 JPEG 帧编码接口，便于网络应用直接取得压缩视觉数据。应用平台方面，v1.9.0 支持开机自动运行可配置的默认应用，也允许通过天线触摸触发启动；应用结束后机器人保持休眠和电机卸力。该版本还修复了 backend 失效后状态 WebSocket 继续循环的问题，并弃用旧版 Web Dashboard。整体上，它是一项直接作用于物理机器人感知、运动控制、媒体访问和应用生命周期的开源机器人系统软件发布。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是 Pollen Robotics 官方公开仓库中的 Reachy Mini SDK 与 daemon 软件版本，不是单纯的机器人硬件或产品规格页面；仓库包含 Python/TypeScript SDK、后台服务、仿真、应用框架、示例和测试。",
+        "v1.9.0 新增 daemon 侧人脸跟踪：系统寻找最近的人脸，并控制头部朝向其鼻部；SDK 提供启动、读取跟踪结果和停止跟踪的接口。",
+        "人脸跟踪可通过 `weight` 与应用自身的头部动作混合：`1.0` 由跟踪器控制头部，`0.0` 暂停检测并释放头部和计算资源，但不销毁跟踪器。",
+        "媒体接口增加 `get_frame_jpeg()`，使用 GStreamer 将摄像头画面直接编码为 JPEG，补充原有的 NumPy 原始帧访问方式。",
+        "应用启动流程得到扩展：默认应用可在机器人启动时自动运行，也可由天线触摸触发，并支持配置具体的启动应用。",
+        "运行状态和生命周期修复包括：backend 不再 ready 时终止 `/state/ws/full` 流式循环；应用停止后让机器人保持 asleep 和 limp，避免应用退出导致不符合预期的唤醒或电机保持状态。",
+        "该版本同时弃用旧 Web Dashboard，并更新 Windows 用户的 RPiBoot 操作说明；官方发布记录列出从 v1.8.4 到 v1.9.0 的完整变更。"
+      ],
+      "capabilities": [
+        "通过 Python SDK 与后台 daemon 控制实体 Reachy Mini，也支持无硬件的 MuJoCo 仿真环境。",
+        "执行头部、双天线与机身偏航的平滑插值运动，并可使用即时目标接口运行高频跟踪或轨迹控制。",
+        "在 daemon 内检测最近的人脸，驱动机器人头部跟随鼻部位置，并允许按权重混合自动跟踪与应用动作。",
+        "获取摄像头原始帧或通过新增的 `get_frame_jpeg()` 使用 GStreamer 编码 JPEG 帧。",
+        "管理机器人应用生命周期，包括开机自动启动默认应用、通过天线触摸启动应用、配置启动应用，以及应用停止后的休眠与卸力状态。"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "官方 GitHub Releases 页面记录的 v1.9.0 发布时间。",
+          "value": "2026-07-09"
+        },
+        {
+          "label": "发布记录中的变更项",
+          "note": "官方 v1.9.0 “What's Changed”列表包含功能、修复、弃用和文档更新。",
+          "value": "9 项"
+        },
+        {
+          "label": "人脸位置输出范围",
+          "note": "`get_tracked_face()` 返回 detected、x、y 和 roll，其中 x、y 为归一化坐标。",
+          "value": "x、y ∈ [-1, 1]"
+        },
+        {
+          "label": "原始摄像头帧格式",
+          "note": "Python SDK 文档报告 `get_frame()` 返回的数组格式。",
+          "value": "(height, width, 3)，uint8"
+        },
+        {
+          "label": "运动插值方法",
+          "note": "SDK 文档明确列出的轨迹插值选项。",
+          "value": "4 种：linear、minjerk、ease_in_out、cartoon"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.9.0"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://pollen-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/pollen-robotics/reachy_mini/tree/v1.9.0"
       }
     ]
   },
@@ -1874,6 +2197,87 @@
     ]
   },
   {
+    "id": "reachy-mini-sdk-v1-8-4-ae803a6",
+    "title": "Reachy Mini SDK v1.8.4",
+    "organization": "Pollen Robotics",
+    "organizationKind": "Company",
+    "date": "2026-06-25",
+    "year": 2026,
+    "summary": "Reachy Mini SDK v1.8.4 是 Pollen Robotics 于 2026 年 6 月 25 日发布的机器人软件维护版本，服务于实体 Reachy Mini/Lite 和 MuJoCo 仿真平台。它并非新的 VLA 或基础模型，而是覆盖运动、音频、远程通信和应用运行时的机器人系统 SDK。该版最具体的改进包括：在硬件回声消除不可用的仿真模式中建立软件 AEC 信号链；让录制动作携带八类可识别音频容器；让 TypeScript 客户端按 MIME 类型保留真实上传格式；将中继重连改为 5 至 60 秒的封顶指数退避；以及修复头部 yaw 在跨越正负大角度时错误经过不可达 180° 后方路径的问题。这些改动直接提高了对话式应用、动作音效同步、无线远程会话和表现性头部运动的可靠性。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI",
+      "Whole-body control"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI",
+      "Whole-body control"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是 Pollen Robotics 官方 Reachy Mini 仓库发布的实体机器人 SDK，而非硬件产品页；v1.8.4 有独立的官方 GitHub Release 和固定版本源码，发布时间为 2026 年 6 月 25 日。",
+        "音频管线在未检测到 Reachy Mini Audio 声卡时，将 `webrtcdsp` 插入麦克风路径，并在播放路径加入 `webrtcechoprobe`，以播放信号作为远端参考执行软件回声消除，面向仿真及 mockup-sim 场景。",
+        "录制动作的音频 sidecar 查找不再限定 `.wav`，而是尝试守护进程可播放的多种容器；协议的 `UploadAudioStartCmd.encoding` 也从固定 `wav-base64` 扩展为通用的 `<container>-base64`，同时保留 WAV 默认值以兼容旧客户端。",
+        "TypeScript SDK 会依据 `audioBlob` 的 MIME 类型推导上传容器并转发给守护进程；无 MIME 类型或旧式 Blob 仍回退到 `wav-base64`，从而支持 Marionette 等应用打包 Opus/Ogg 动作音频。",
+        "中央中继重连从固定间隔改为带少量随机抖动的封顶指数退避；成功连接、更新令牌或强制重连会重置退避，令牌更新事件仍可中断等待并立即重连。",
+        "头部 `goto` 插值增加将 yaw 视为有符号标量的处理方式，避免从正大角度转到负大角度时选择经过不可达后方 180° 的角度最短路径，从而减少跳变运动。",
+        "项目采用 Apache-2.0 软件许可证，并同时提供 Python SDK、TypeScript SDK、守护进程、测试、示例、应用框架以及实体和 MuJoCo 仿真平台文档。"
+      ],
+      "capabilities": [
+        "通过 Python SDK 在实体 Reachy Mini、Reachy Mini Lite 与 MuJoCo 仿真环境中控制头部、身体和天线运动。",
+        "在缺少 Reachy Mini 音频卡及其硬件回声消除能力时，为 sim/mockup-sim 模式启用基于 GStreamer WebRTC DSP 的软件声学回声消除。",
+        "将声音与录制动作绑定并同步播放，同时支持 WAV 之外的多种音频容器。",
+        "通过中央中继连接、自动重连和令牌更新机制支持无线机器人的远程会话。",
+        "通过摄像头、麦克风、扬声器、运动接口和应用框架构建交互式具身机器人应用。"
+      ],
+      "metrics": [
+        {
+          "label": "中央中继重连退避范围",
+          "note": "从 5 秒开始指数增长，封顶于 60 秒，并加入小幅加性抖动；连接成功后恢复从 5 秒开始。",
+          "value": "5–60 秒"
+        },
+        {
+          "label": "录制动作可查找的音频容器",
+          "note": "sidecar 查找覆盖 wav、mp3、ogg、oga、opus、flac、m4a、aac；发生同名匹配时 WAV 优先。",
+          "value": "8 种"
+        },
+        {
+          "label": "yaw 插值问题示例",
+          "note": "官方合并说明使用从 yaw=120° 到 yaw=-120° 的转换说明旧插值会试图经过机器人不可达的 180° 后方路径。",
+          "value": "120° → -120°"
+        },
+        {
+          "label": "软件 AEC 实现组件",
+          "note": "在硬件 AEC 不可用时，麦克风和播放路径分别使用 GStreamer 的 WebRTC DSP 与回声参考组件。",
+          "value": "webrtcdsp + webrtcechoprobe"
+        },
+        {
+          "label": "支持的平台形态",
+          "note": "官方版本文档列出 Wireless、Lite 和无需硬件的 MuJoCo Simulation。",
+          "value": "3 种"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.4"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://pollen-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/pollen-robotics/reachy_mini/tree/v1.8.4"
+      }
+    ]
+  },
+  {
     "id": "rerun-0-33-1-1f93b29",
     "title": "Rerun 0.33.1",
     "organization": "Rerun Technologies AB",
@@ -2105,6 +2509,162 @@
       {
         "label": "Report",
         "url": "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/"
+      }
+    ]
+  },
+  {
+    "id": "reachy-mini-sdk-v1-8-3-3905b9b",
+    "title": "Reachy Mini SDK v1.8.3",
+    "organization": "Pollen Robotics",
+    "organizationKind": "Company",
+    "date": "2026-06-16",
+    "year": 2026,
+    "summary": "Reachy Mini SDK v1.8.3 是 Pollen Robotics 于 2026 年 6 月 16 日发布的实体机器人软件栈维护版本。其核心用户侧修复针对 Reachy Mini 桌面应用的 Wi-Fi 预检：v1.8.2 的 CORS 安全收紧仅允许 localhost/127.0.0.1，导致携带 Tauri 或 Windows 原生 WebView Origin 的跨域探测请求被浏览器丢弃。v1.8.3 在保留网页端防护边界的同时，将受信任的 Tauri/Capacitor 原生应用来源加入守护进程白名单，并用共享正则常量和测试固定该策略。另一项主要工作是重构实体机器人 CI，使指定分支、标签或提交能被解析、安装并在 Wireless、Lite 与仿真配置上验证；流程处理了共享机器人串行访问、守护进程重启、日志采集、Windows PowerShell 编码与错误传播，以及 macOS 安装缓存导致测试旧版本等问题。SDK 本身支持 Python 控制循环、机器人运动、摄像头与音频资源访问，并提供无需硬件的 MuJoCo 原型环境。项目代码采用 Apache 2.0 许可证公开发布。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "v1.8.3 是 Pollen Robotics 官方 Reachy Mini SDK 仓库发布的软件版本，不是机器人硬件或产品规格页面；仓库明确将其定位为“Reachy Mini's SDK”。",
+        "该版本修复了 v1.8.2 收紧 CORS 后原生桌面应用无法直接探测机器人的问题：守护进程将 Tauri、Capacitor 等原生应用 WebView 的 Origin 加入允许范围，同时继续限制普通跨域网页访问。",
+        "CORS 规则被提取为统一的 CORS_ORIGIN_REGEX 常量，使运行时配置和自动化测试针对同一规则源，降低安全策略与测试断言漂移的风险。",
+        "物理 CI 流程可通过 workflow_dispatch 指定分支、标签或提交引用，并先通过 GitHub API解析为完整 SHA；无效引用会在门控任务中使整个流程提前终止。",
+        "实体无线机器人测试通过 SSH 安装指定代码引用，并轮询守护进程报告的八位提交标识，以避免实际测试版本与请求版本不一致。",
+        "CI 覆盖 Wireless、Lite 和模拟环境，改进了安装与守护进程日志汇总、Windows PowerShell 编码及退出状态处理、macOS 安装缓存问题，并保持共享无线机器人任务串行执行。"
+      ],
+      "capabilities": [
+        "通过 Python SDK 编写脚本、实时控制循环及机器人端应用",
+        "控制 Reachy Mini 的头部、身体和双天线运动",
+        "访问摄像头、麦克风和扬声器等多模态输入输出资源",
+        "在实体 Reachy Mini、Reachy Mini Lite 与 MuJoCo 仿真环境中开发和测试"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "GitHub 官方 Release 页面报告的发布时间。",
+          "value": "2026-06-16 16:12"
+        },
+        {
+          "label": "版本变更项",
+          "note": "v1.8.3 Release Notes 列出的合并变更数量。",
+          "value": "2 项"
+        },
+        {
+          "label": "CORS 修复验证",
+          "note": "原生 WebView CORS 修复 PR #1213 合并时 GitHub 报告的检查结果。",
+          "value": "8 checks passed"
+        },
+        {
+          "label": "物理 CI 改进规模",
+          "note": "PR #1215 合并到主分支的提交数量。",
+          "value": "27 commits"
+        },
+        {
+          "label": "WebSocket CI 超时配置",
+          "note": "物理 CI 针对运行器到机器人的网络路径，将连接 open_timeout 从 10 秒提高到 30 秒，并增加守护进程启动后的等待时间。",
+          "value": "30 秒超时 + 5 秒等待"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.3"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://pollen-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/pollen-robotics/reachy_mini/tree/v1.8.3"
+      }
+    ]
+  },
+  {
+    "id": "reachy-mini-sdk-v1-8-2-7855d2f",
+    "title": "Reachy Mini SDK v1.8.2",
+    "organization": "Pollen Robotics",
+    "organizationKind": "Company",
+    "date": "2026-06-15",
+    "year": 2026,
+    "summary": "Reachy Mini SDK v1.8.2 是 Pollen Robotics 于 2026年6月15日发布的实体机器人软件栈更新。该项目覆盖 Python 与 JavaScript 控制接口、机器人端守护进程、REST/WebRTC 通信、媒体输入输出和 MuJoCo 仿真。此次版本重点完善无线机器人的部署与运维：加入 BLE Wi-Fi 配置和守护进程更新、增加 WebRTC 更新命令、改善过期令牌下的中继重连，并通过本机 CORS、回环绑定和应用来源限制收紧守护进程攻击面。它不是硬件公告，而是有独立官方代码仓库、版本页和文档的机器人 SDK 发布。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是面向实体 Reachy Mini 机器人的开源 SDK 与守护进程版本，而不是硬件产品页；官方仓库明确将项目描述为“Reachy Mini's SDK”，并提供 Python、JavaScript/Web、守护进程及仿真代码。",
+        "v1.8.2 新增基于 Bluetooth Low Energy 的 Wi-Fi 扫描与连接流程，使无线版机器人可通过蓝牙完成网络配置。",
+        "该版本增加通过 BLE 更新机器人守护进程的能力，并为 WebRTC 数据通道加入 start_update 命令，扩展远程维护路径。",
+        "中央中继在 Hugging Face 令牌过期并返回 HTTP 401 时采用退避重连，避免持续快速重试，提高远程连接韧性。",
+        "守护进程收紧网络访问边界：CORS 从通配符改为仅允许 localhost；非无线模式绑定回环接口；应用安装 API 仅接受 Hugging Face Spaces。",
+        "针对 Raspberry Pi 4 Wireless，将 glibc 的 MALLOC_ARENA_MAX 设为 2，以限制守护进程的内存分配 arena 数量。",
+        "版本修复媒体声音上传验证；SDK 整体仍提供平滑轨迹与实时控制、相机取帧、音频输入输出、WebRTC 通信和 MuJoCo 仿真等机器人开发接口。"
+      ],
+      "capabilities": [
+        "通过 Python SDK 对 Reachy Mini 的头部、天线和身体偏航进行运动控制",
+        "通过守护进程管理电机、传感器、摄像头、麦克风和扬声器等机器人资源",
+        "通过 Bluetooth Low Energy 扫描并连接 Wi-Fi 网络，以及触发守护进程更新",
+        "通过 WebRTC 数据通道远程发送更新命令并承载机器人应用通信",
+        "支持实体 Reachy Mini Wireless、Reachy Mini Lite 和 MuJoCo 仿真环境"
+      ],
+      "metrics": [
+        {
+          "label": "正式版本",
+          "note": "官方 GitHub Release 于 2026年6月15日发布。",
+          "value": "v1.8.2"
+        },
+        {
+          "label": "内存分配限制",
+          "note": "针对 Raspberry Pi 4 Wireless 守护进程设置的 glibc 参数。",
+          "value": "MALLOC_ARENA_MAX=2"
+        },
+        {
+          "label": "中继认证故障处理",
+          "note": "中央中继收到过期 Hugging Face 令牌导致的认证响应时执行退避重连。",
+          "value": "HTTP 401 时退避重连"
+        },
+        {
+          "label": "守护进程跨域范围",
+          "note": "v1.8.2 将守护进程 CORS 从通配符收紧至本机来源。",
+          "value": "仅 localhost"
+        },
+        {
+          "label": "远程更新能力",
+          "note": "官方发布记录报告新增 WebRTC 数据通道更新指令。",
+          "value": "新增 start_update 命令"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.8.2"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.pollen-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/pollen-robotics/reachy_mini/tree/v1.8.2"
       }
     ]
   },
@@ -7057,6 +7617,88 @@
     ]
   },
   {
+    "id": "legend-of-mirokai-v0-7-1-a873429",
+    "title": "Legend of Mirokai v0.7.1",
+    "organization": "Enchanted Tools",
+    "organizationKind": "Company",
+    "date": "2026-02-19",
+    "year": 2026,
+    "summary": "Legend of Mirokai v0.7.1 是 Enchanted Tools 为 Mirokaï 实体社交机器人提供的版本化开发者软件包，其核心是 PyMirokai Python 接口。该接口把机器人连接、状态流、技能调用和执行生命周期封装为异步编程模型：REST 用于命令与配置操作，WebSocket 用于连续状态数据、主题订阅和回调；导航、抓取、表达、对话及系统行为则统一表示为可等待、可取消的 `Mission`。v0.7.1 文档还描述了任务树、父子任务追踪与取消传播机制，使复合机器人行为能够被结构化编排和终止。除内置的移动、人体互动、语音、动画和双臂操作技能外，开发者还能创建 Python 自定义技能，并选择在机器人本体或远程计算资源上运行。整体上，它属于针对特定实体机器人平台的控制与具身应用开发栈，而非通用基础模型、数据集或硬件发布。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation",
+      "Humanoid intelligence",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation",
+      "Humanoid intelligence",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "PyMirokai 是面向实体 Mirokaï 机器人的 Python 开发接口，而非机器人硬件产品页；官方文档明确将其定义为通过 REST 与 WebSocket API 进行机器人通信和控制的软件接口。",
+        "`Robot` 类把行为、交互、操作、导航、规划、动画、运输和系统功能整合为统一对象；开发者既可显式连接，也可通过异步上下文管理器自动完成连接和断开。",
+        "机器人动作被抽象为 `Mission`：调用方可以等待任务启动或完成、忽略完成异常、取消任务，或取消后等待结束。每个任务具有唯一 ID，并可形成保留父子关系的执行树。",
+        "嵌套任务支持状态和取消传播：父任务取消时，其子任务会被自动取消，从而避免子行为在上层任务失败或被用户终止后继续运行。",
+        "接口覆盖真实机器人工作流，包括相对与绝对导航、转向、障碍物规避、人体和目标感知、左右手抓取、放置与递交、手臂和颈部动作、语音输出以及 LLM 会话启停。",
+        "开发者可编写 Python 自定义技能，并在机器人本体或远程计算机上执行；远程技能可利用外部 Python 包、GPU/CPU、存储、数据库和其他服务，随后通过 Skill Manager 上传、注册和调用。"
+      ],
+      "capabilities": [
+        "通过 Python `Robot` 类连接并控制实体 Mirokaï 机器人，统一调用交互、导航、操作和动画功能",
+        "通过 REST API 发送机器人命令，并通过 WebSocket 订阅状态主题、发布消息和注册异步回调",
+        "以 `Mission` 对象管理技能的启动、完成、取消和异常处理，并支持父子任务嵌套及取消传播",
+        "执行相对或绝对位置移动、原地转向、目标跟踪、用户跟随和障碍物规避等移动任务",
+        "执行左右手抓取、放置、递交物体、手臂动画、语音对话及用户互动技能"
+      ],
+      "metrics": [
+        {
+          "label": "官方版本发布时间",
+          "note": "官方开发者文档目录记录的 v0.7.1 页面时间为 2026-02-19 14:23。",
+          "value": "2026-02-19 14:23"
+        },
+        {
+          "label": "声音等级参数范围",
+          "note": "`set_sound_level` 接口记录的可设声音等级范围。",
+          "value": "0–100"
+        },
+        {
+          "label": "动画强度参数范围",
+          "note": "动画与交互状态接口采用归一化强度参数；例如 `play_animation` 的默认强度为 0.85。",
+          "value": "0.0–1.0"
+        },
+        {
+          "label": "任务层级能力",
+          "note": "官方文档说明任务可以扩展到任意深度，并允许任意数量的并行子任务；未提供性能基准数字。",
+          "value": "支持任意深度及多个并行子任务"
+        },
+        {
+          "label": "实体机器人执行覆盖",
+          "note": "官方示例在同一异步流程中演示语音、挥手、左右转向、移动和抓取已知物体，并通过任务接口等待或取消执行。",
+          "value": "交互、导航、抓取与动画的统一任务执行"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.1/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://enchanted.tools/"
+      },
+      {
+        "label": "Report",
+        "url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.1/"
+      }
+    ]
+  },
+  {
     "id": "upgraded-robot-management-system-rms-2fb0c25",
     "title": "Upgraded Robot Management System (RMS)",
     "organization": "极智嘉 / Geek+",
@@ -7842,6 +8484,240 @@
       {
         "label": "Evidence",
         "url": "https://www.limxdynamics.com/zh"
+      }
+    ]
+  },
+  {
+    "id": "neuraverse-early-access-release-e94de1b",
+    "title": "Neuraverse early-access release",
+    "organization": "NEURA Robotics GmbH",
+    "organizationKind": "Company",
+    "date": "2026-01-05",
+    "year": 2026,
+    "summary": "Neuraverse 是 NEURA Robotics 面向实体机器人和工业自动化构建的云端软件生态与操作层，于 2026 年 1 月 5 日宣布向早期访问合作伙伴开放。平台的核心目标是打通原本隔离的机器人、传感器、应用和 AI 模型数据，使机器人经验与已学习技能能够跨设备和部署环境复用。其工程工具覆盖项目与设备管理、可视化流程编程、操作员应用设计、实时数字孪生仿真、运行监控、多机器人协调以及 AI 模型训练和版本管理。Creator Hub 支持开发者组合机器人行为、界面和连接设备；Model Zoo 面向 AI 模型的创建、访问与发布；Marketplace 则承担机器人技能、应用和完整自动化方案的分发与商业化。CES 公告还将 NEURA Sync、NEURA Gym、Aura AI 和 Marketplace 分别定位于设备通信、真实世界机器人训练、情境智能和可扩展技能生态。官方尚未公布标准化任务成功率、基准测试成绩、支持机器人数量上限或生产部署规模，因此不能据此判断其相对于其他机器人平台的量化性能。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Neuraverse 是面向实体机器人和自动化系统的软件平台，而非机器人硬件产品页；NEURA Robotics 将其描述为连接机器人、设备、开发者和行业用户的操作系统及共享智能层。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))",
+        "平台把机器人、传感器、应用和人员产生的数据汇入统一的数据与智能层，用于支持决策、训练 AI 模型，并让不同部署之间复用经验。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "Creator Hub 提供可视化流程编程、操作员界面设计和设备配置工具；开发者可以组合机器人行为、连接设备和完整应用，并将成果部署到生产环境。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "平台提供实时数字孪生，可在实体部署前设计和验证自动化逻辑；同时提供实时仪表盘，用于跟踪机器人活动、系统健康状况和运行指标。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "Neuraverse 支持从统一界面协调多个机器人和移动系统，执行任务分配、状态管理和系统同步，体现了跨设备机器人编排能力。([neuraverse.com](https://neuraverse.com/?utm_source=openai))",
+        "Model Zoo 用于创建、管理、访问和发布 AI 模型；Marketplace 则计划承载可复用的机器人技能、应用、AI 模型和完整解决方案。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))",
+        "2026 年 1 月 5 日，NEURA Robotics 正式宣布 Neuraverse 向早期访问合作伙伴开放；同期展示的 NEURA Sync、NEURA Gym、Aura AI 和 Neuraverse Marketplace 分别覆盖设备通信、真实世界训练、情境智能及技能与应用分发。([neura-robotics.com](https://neura-robotics.com/neura-robotics-at-ces-2026/?utm_source=openai))"
+      ],
+      "capabilities": [
+        "通过可视化、基于流程的编辑器设计机器人行为与自动化逻辑，并将其直接部署到生产环境",
+        "在实时数字孪生中仿真和测试自动化逻辑，以便在实体部署前发现问题",
+        "统一配置和管理机器人、传感器、相机、夹爪、应用及 AI 模型",
+        "集中协调多机器人与移动系统，包括任务分配、状态管理和运行同步",
+        "使用自有数据集成、更新和改进面向物体识别、质量控制或自主导航的 AI 模型"
+      ],
+      "metrics": [
+        {
+          "label": "发布状态",
+          "note": "官方公告明确表示平台已向早期访问合作伙伴开放；未报告公开发布用户数或部署规模。",
+          "value": "Early access opened on January 5, 2026"
+        },
+        {
+          "label": "官方列出的核心创新组件",
+          "note": "CES 2026 官方公告列出的组件为 NEURA Sync、NEURA Gym、Aura AI 和 Neuraverse Marketplace。",
+          "value": "4 components"
+        },
+        {
+          "label": "开发方式",
+          "note": "官方项目页报告可通过拖放式流程编辑器定义机器人行为与自动化逻辑。",
+          "value": "Visual flow-based, no-code programming"
+        },
+        {
+          "label": "部署前验证",
+          "note": "官方项目页报告平台实现实时数字孪生仿真和自动化逻辑测试。",
+          "value": "Real-time digital-twin simulation"
+        },
+        {
+          "label": "机器人编排范围",
+          "note": "官方项目页明确报告可从一个平台控制和同步多个机器人及移动系统，但未公布数量上限。",
+          "value": "Multi-robot and mobile-system coordination"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://neuraverse.com/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://neura-robotics.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://neura-robotics.com/neura-robotics-at-ces-2026/"
+      }
+    ]
+  },
+  {
+    "id": "dggt-6791599",
+    "title": "DGGT",
+    "organization": "清华大学智能产业研究院 / Institute for AI Industry Research, Tsinghua University",
+    "organizationKind": "Research Lab",
+    "date": "2025-12-09",
+    "year": 2025,
+    "summary": "DGGT 是清华大学智能产业研究院赵昊课题组联合小米汽车、香港大学和北京智源人工智能研究院等机构发布的无姿态前馈式动态驾驶场景重建框架。它从稀疏、未标定 RGB 图像中，在一次前向过程中联合预测相机参数、深度、逐帧 3D Gaussian、动态区域、三维运动、时间可见性和天空表示，避免传统方法所需的逐场景优化与预先相机标定。其动态/静态解耦、lifespan 时序建模和扩散渲染精修支持长序列重建、新视角合成、运动插值以及车辆和行人的实例级编辑，使输出可直接作为自动驾驶仿真、再模拟和数据合成所需的可编辑 4D 场景资产。官方结果报告其在 Waymo 上以约0.39秒完成20帧/视角场景重建，并在从 Waymo 到 nuScenes、Argoverse2 的零样本迁移中显著降低 LPIPS。",
+    "tags": [
+      "World models",
+      "Data & benchmarks",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "World models",
+      "Data & benchmarks",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "DGGT（Driving Gaussian Grounded Transformer）是面向自动驾驶仿真与再模拟的软件框架，而非车辆或传感器硬件产品；其核心产物是可重建、渲染和编辑的动态驾驶世界表示。",
+        "框架将相机位姿由必要输入改为模型输出，无需预先提供相机标定或执行逐场景优化，可直接处理稀疏、无位姿图像及不同数量的输入视角。",
+        "系统以 ViT 编码器融合 DINO 先验和交替注意力共享特征，并行设置相机、Gaussian、lifespan、动态、运动和天空预测头，一次前向联合恢复场景几何、相机参数与动态信息。",
+        "动态头负责分离静态与动态成分，运动头预测像素级三维位移；lifespan 头则按时间调制 Gaussian 可见性，以表达光照、反射和阴影等静态区域的时变外观。",
+        "渲染结果经过单步扩散模型精修，以减少遮挡和运动插值伪影、修补场景编辑留下的空洞，并改善稀疏输入条件下的新视角质量。",
+        "项目在 Waymo、nuScenes 和 Argoverse2 上训练或评测，并专门验证了从 Waymo 到另外两个数据集、无需微调和姿态校准的零样本迁移。",
+        "官方代码库提供训练与推理代码、预训练检查点、三套驾驶数据集的处理支持，以及重建、插帧、深度输出和 PSNR/SSIM/LPIPS 评测入口；代码采用 Apache License 2.0，但部分衍生文件同时受 VGGT 上游许可证约束。"
+      ],
+      "capabilities": [
+        "从稀疏、未标定的多帧 RGB 图像中，以单次前向推理重建长序列动态驾驶场景，并同时估计相机内外参与深度。",
+        "联合生成逐帧 3D Gaussian 地图、动态区域、三维运动和 lifespan 时序可见性，形成时空一致的可编辑 4D 场景表示。",
+        "通过运动头预测像素级三维位移，建立动态目标的稠密时序对应，并支持任意时间点的运动插值与新视角渲染。",
+        "在 Gaussian 表示层面对车辆、行人等实例执行添加、删除、移动、替换和跨场景组合，供自动驾驶仿真与数据合成使用。",
+        "使用单步扩散精修处理稀疏输入、遮挡、运动插值和场景编辑产生的空洞、伪影及细节缺失。"
+      ],
+      "metrics": [
+        {
+          "label": "Waymo 单场景重建速度",
+          "note": "官方 AIR 页面报告采用 20 帧/视角输入。",
+          "value": "约 0.39 秒"
+        },
+        {
+          "label": "Waymo 重建质量",
+          "note": "官方页面报告的 DGGT 结果。",
+          "value": "PSNR 27.41；SSIM 0.846"
+        },
+        {
+          "label": "Waymo 场景流误差",
+          "note": "EPE3D，数值越低越好。",
+          "value": "0.183 m"
+        },
+        {
+          "label": "nuScenes 零样本 LPIPS",
+          "note": "仅在 Waymo 上训练、未在 nuScenes 微调；相较 STORM 从 0.394 降至 0.152。",
+          "value": "0.152，下降 61.4%"
+        },
+        {
+          "label": "Argoverse2 零样本 LPIPS",
+          "note": "仅在 Waymo 上训练、未在 Argoverse2 微调；相较 STORM 从 0.326 降至 0.155。",
+          "value": "0.155，下降 52.5%"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://xiaomi-research.github.io/dggt/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://air.tsinghua.edu.cn/"
+      },
+      {
+        "label": "Report",
+        "url": "https://air.tsinghua.edu.cn/info/1007/2480.htm"
+      }
+    ]
+  },
+  {
+    "id": "internnav-v0-2-0-325e97d",
+    "title": "InternNav v0.2.0",
+    "organization": "上海人工智能实验室 / Shanghai Artificial Intelligence Laboratory",
+    "organizationKind": "Research Lab",
+    "date": "2025-12-04",
+    "year": 2025,
+    "summary": "InternNav v0.2.0 是上海人工智能实验室 Intern Robotics 团队发布的具身导航软件基础设施版本，核心工作是将 VLN-PE 评测扩展为可分布式运行的统一流水线。该版本把 DistributedEvaluator、HabitatEnv 和改造后的 InternUtopiaEnv 接入同一框架，通过 episode 池进行任务管理，并更新 VLN-PE 的 episode_loader 以适配并行执行。统一的 eval.py 与配置目录为不同后端提供共同评测入口；data_collector 则加入进度检查点和结果增量聚合，提升大规模、长时间评测的可恢复性。官方报告在 16 张 GPU 上完成完整 VLN-PE benchmark 约需 1.6 小时，相比单 GPU 约加速 13 倍。框架的 Env、Task、Agent 分层还允许导航策略在 Habitat、InternUtopia/Isaac Sim 以及实现统一接口的真实机器人环境之间复用。",
+    "tags": [
+      "Data & benchmarks",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Data & benchmarks",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "v0.2.0 为 VLN-PE 加入分布式评测路径，可将导航 benchmark 的 episode 分配到多个 GPU 并行执行。",
+        "版本引入统一评测脚本 eval.py，并在 scripts/eval/configs 中提供新的 Habitat 评测配置，减少不同环境和模型使用独立入口造成的接口分裂。",
+        "DistributedEvaluator 与 HabitatEnv 被纳入 InternNav 框架；HabitatEnv 实现 episode 池管理，以支持分布式任务调度。",
+        "InternUtopiaEnv 同步获得分布式执行和 episode 池管理能力，使 Isaac Sim/InternUtopia 路径能够使用同类评测基础设施。",
+        "VLN-PE 的 episode_loader 增加与新分布式模式兼容的加载逻辑；data_collector 支持进度检查点和评测结果的增量聚合。",
+        "安装依赖被拆分为 habitat、isaac 和 model 三组可选安装标志，以隔离不同仿真器及模型栈所需的依赖。",
+        "官方文档显示 InternNav 采用 Env、Task、Agent 分离设计，并提供 InternUtopia/Isaac Sim、Habitat Sim 和真实机器人环境接口；同一 agent 逻辑可在实现统一 Env API 的仿真或实体平台上运行。"
+      ],
+      "capabilities": [
+        "在 VLN-PE 上执行多 GPU 分布式具身导航评测",
+        "通过统一的 eval.py 入口配置和运行 Habitat 等后端的评测任务",
+        "管理 HabitatEnv 与 InternUtopiaEnv 的分布式 episode 池",
+        "在长时间评测中保存进度检查点并增量汇总结果"
+      ],
+      "metrics": [
+        {
+          "label": "VLN-PE 完整评测耗时",
+          "note": "官方 v0.2.0 发布说明报告的近似结果，使用 16 张 GPU。",
+          "value": "约 1.6 小时"
+        },
+        {
+          "label": "分布式评测加速比",
+          "note": "相对于官方发布说明中的单 GPU 评测。",
+          "value": "约 13×"
+        },
+        {
+          "label": "并行评测规模",
+          "note": "上述耗时与加速结果采用的 GPU 数量。",
+          "value": "16 GPUs"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/InternRobotics/InternNav/releases/tag/0.2.0"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://internrobotics.shlab.org.cn"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/InternRobotics/InternNav/releases"
       }
     ]
   },
@@ -9379,6 +10255,88 @@
     ]
   },
   {
+    "id": "x-vla-08042ee",
+    "title": "X-VLA",
+    "organization": "清华大学智能产业研究院（AIR）与上海人工智能实验室 / Institute for AI Industry Research (AIR), Tsinghua University & Shanghai Artificial Intelligence Laboratory",
+    "organizationKind": "Research Lab",
+    "date": "2025-10-16",
+    "year": 2025,
+    "summary": "X-VLA是清华大学智能产业研究院与上海人工智能实验室联合发布的通用跨本体视觉-语言-动作基础模型。它针对不同机器人在自由度、传感器视角和动作表示上的差异，为每个数据域引入少量本体相关Soft Prompt，并让各本体共享基于标准Transformer和flow matching的策略主干。模型将任务主视角、辅助视角、语言指令与本体状态进行分工编码，通过统一动作空间、时间重采样、均衡采样和语义-动作一致性筛选处理大规模异构机器人数据。官方实现覆盖预训练、参数高效微调、标准化评测、模型服务和真实机器人客户端，可适配单臂、双臂及布料等可变形物体操作。项目还开放模型参数、代码、训练数据和Soft-FOLD数据集，并报告X-VLA-0.9B在六个仿真环境、三个真实机器人平台以及长时自主叠衣任务上的结果。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Dexterous manipulation",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "X-VLA是基于flow matching的跨本体视觉-语言-动作基础模型，0.9B版本使用标准Transformer编码器生成机器人动作序列。",
+        "模型为不同数据源或机器人本体配置独立的可学习Soft Prompt，将自由度、相机视角和动作空间等本体差异编码为连续提示，同时共享主要策略主干。",
+        "多模态编码流水线将输入按功能拆分：主视角由视觉语言模型提取高层语义，辅助视角使用轻量网络提取局部空间反馈，并融合语言指令与本体状态。",
+        "训练数据流水线将不同机器人动作映射到统一任务空间，并执行时间对齐、重采样、均衡采样以及视觉-语言-动作一致性筛选，以支持异构数据联合训练。",
+        "开源实现提供训练、LoRA微调、评测和部署代码，并采用服务端-客户端架构接收图像、语言指令、本体状态及domain ID，输出由flow matching生成的动作。",
+        "项目同时发布Soft-FOLD布料折叠数据；其采集流程将任务分为布料展开平整与折叠两个阶段，并采用类似DAgger的迭代式失败案例补充策略。"
+      ],
+      "capabilities": [
+        "通过视觉、自然语言指令和机器人本体状态生成连续动作序列",
+        "在异构机器人数据上进行跨本体联合预训练",
+        "通过Soft Prompt和LoRA适配新的机器人本体、任务与环境",
+        "执行单臂、双臂协同及布料折叠等灵巧操作任务",
+        "通过统一服务端接口部署到仿真环境和真实机器人"
+      ],
+      "metrics": [
+        {
+          "label": "模型规模",
+          "note": "官方发布的X-VLA-0.9B实例。",
+          "value": "0.9B参数"
+        },
+        {
+          "label": "评测覆盖",
+          "note": "项目页报告覆盖六个仿真环境以及三个真实机器人平台。",
+          "value": "6个仿真环境、3个真实机器人"
+        },
+        {
+          "label": "LIBERO",
+          "note": "官方开源仓库列出的X-VLA-Libero模型评测结果。",
+          "value": "98.1%成功率"
+        },
+        {
+          "label": "RoboTwin2.0",
+          "note": "双臂协同操作模型每项任务使用50条演示训练。",
+          "value": "70%成功率"
+        },
+        {
+          "label": "长时布料折叠",
+          "note": "官方仓库报告模型在连续两小时布料折叠运行中的表现，并提供120分钟未剪辑视频。",
+          "value": "120分钟内100%成功率"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://thu-air-dream.github.io/X-VLA/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://air.tsinghua.edu.cn/info/1007/2467.htm"
+      },
+      {
+        "label": "Report",
+        "url": "https://air.tsinghua.edu.cn/info/1007/2467.htm"
+      }
+    ]
+  },
+  {
     "id": "x1-multirobot-response-system-c40730d",
     "title": "X1 Multirobot Response System",
     "organization": "California Institute of Technology (Caltech)",
@@ -10896,6 +11854,88 @@
       {
         "label": "Report",
         "url": "https://www.x-humanoid.com/news-view-238.html"
+      }
+    ]
+  },
+  {
+    "id": "streamvln-training-and-data-collection-code-c187061",
+    "title": "StreamVLN training and data-collection code",
+    "organization": "上海人工智能实验室 / Shanghai Artificial Intelligence Laboratory",
+    "organizationKind": "Research Lab",
+    "date": "2025-08-21",
+    "year": 2025,
+    "summary": "StreamVLN是由上海人工智能实验室牵头、联合香港大学、浙江大学和上海交通大学开发的流式视觉语言导航框架。它把连续视频观测、语言指令和机器人动作组织为多轮交错序列，并通过滑动窗口KV缓存与三维感知的慢速记忆压缩，在保持上下文规模有界的同时支持低延迟长时导航。候选所指的2025年8月21日发布内容并非硬件公告，而是可执行的软件工件：包括DAgger纠错轨迹采集代码，以及将导航数据与视频问答、ScanQA和MMC4交错图文数据联合训练的第二阶段代码。项目同时提供Habitat连续环境训练评测流程、预采集轨迹和Unitree Go2实体部署支持，符合严格具身机器人技术项目索引的收录标准。",
+    "tags": [
+      "Vision-language-action",
+      "LLM",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "LLM",
+      "Robot systems",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "StreamVLN是面向连续环境视觉语言导航的流式VLA软件框架，以LLaVA-Video为基础，将视觉、语言和动作建模统一为在线多轮自回归过程；每轮接收新观测，并依据当前输入和历史对话生成动作。",
+        "其快速上下文采用滑动窗口和跨轮KV缓存复用，只需对当前新增观测执行主要的prefill计算，以降低连续交互中的动作生成延迟。",
+        "其慢速记忆上下文保存较长期的视觉状态，并利用体素化三维邻近关系进行无需额外训练的空间token剪枝；同一体素内只保留较新的观测token，以限制上下文规模和推理成本。",
+        "官方仓库于2025年8月21日明确发布DAgger数据采集代码，以及第二阶段联合训练代码；联合训练覆盖LLaVA-Video-178K、ScanQA和MMC4等通用多模态数据。",
+        "项目训练配方包含约45万条专家导航视频片段、24万条DAgger纠错样本、24.8万条视频问答样本和23万条交错图文样本，用于联合学习导航、时空推理与多轮交互能力。",
+        "仓库提供Habitat-Sim/Habitat-Lab环境配置、VLN-CE数据准备、预采集观测-动作轨迹、训练与评测代码；2025年8月28日又发布了Unitree Go2实体机器人部署代码和操作指南。"
+      ],
+      "capabilities": [
+        "基于连续第一视角视频与自然语言指令，在线自回归生成机器人导航动作",
+        "通过多轮对话形式交错处理视觉观测、语言指令和历史动作",
+        "使用DAgger采集偏离专家轨迹后的纠错样本，并与专家导航数据共同训练",
+        "在Habitat的R2R-CE、RxR-CE连续环境中训练和评测导航策略",
+        "提供Unitree Go2实体机器人部署代码与指南"
+      ],
+      "metrics": [
+        {
+          "label": "R2R-CE Val-Unseen",
+          "note": "官方项目页报告的RGB-only StreamVLN结果。",
+          "value": "SR 56.9%，SPL 51.9%"
+        },
+        {
+          "label": "RxR-CE Val-Unseen",
+          "note": "官方项目页报告的RGB-only StreamVLN结果。",
+          "value": "SR 52.9%，SPL 46.0%"
+        },
+        {
+          "label": "训练数据规模",
+          "note": "官方项目页列出的第二阶段数据配方。",
+          "value": "450K专家导航片段 + 240K DAgger样本 + 248K视频QA样本 + 230K交错图文样本"
+        },
+        {
+          "label": "空间记忆剪枝",
+          "note": "技术报告中仅对8个记忆帧执行体素空间剪枝的结果，报告称性能无明显下降。",
+          "value": "R2R记忆token减少28%；RxR减少22%"
+        },
+        {
+          "label": "第二阶段联合训练增益",
+          "note": "R2R Val-Unseen消融：加入DAgger和VideoQA后，相对仅使用oracle导航数据。",
+          "value": "SR +5.3个百分点；SPL +4.1个百分点"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://streamvln.github.io/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://internrobotics.shlab.org.cn"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/InternRobotics/StreamVLN"
       }
     ]
   },
@@ -14773,6 +15813,87 @@
       {
         "label": "Report",
         "url": "https://www.jaka.com/zh/newsDetail/599"
+      }
+    ]
+  },
+  {
+    "id": "legend-of-mirokai-v0-5-0-9700ba0",
+    "title": "Legend of Mirokai v0.5.0",
+    "organization": "Enchanted Tools",
+    "organizationKind": "Company",
+    "date": "2025-05-09",
+    "year": 2025,
+    "summary": "Legend of Mirokai v0.5.0 是法国机器人公司 Enchanted Tools 面向 Mirokaï 实体服务机器人的开发者软件版本。官方版本目录将模拟器、Python SDK 与 Web API 组织在同一发布下：Pymirokai 提供统一 Robot 类及异步 Mission 任务接口，开发者能够控制导航、语音交互、行为动画、手臂动作和抓取流程；REST 用于命令与状态访问，WebSocket 用于实时主题数据、发布订阅和回调处理。该版本还提供自定义技能机制，可声明自然语言触发语句、LLM 参数说明和访问权限，并支持把技能上传到机器人后动态启停。其技术定位是 Mirokaï 的机器人应用开发、任务编排和系统集成栈，而不是机器人本体或硬件产品公告。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "v0.5.0 的官方开发者目录同时提供 Mirokaï Simulator、Pymirokai Python SDK 和 Web API 三部分，是面向实体 Mirokaï 机器人的专门软件发布，而非机器人硬件规格页。",
+        "Pymirokai 以 Robot 类统一封装机器人连接和控制，覆盖交互、导航、行为控制、抓取等功能，并同时接入 REST 与 WebSocket 服务。",
+        "机器人命令返回 Mission 对象；开发者可等待任务启动或完成，也可取消任务并等待取消流程结束，以编排异步机器人行为。",
+        "WebSocket 接口支持主题订阅、取消订阅、数据发布和回调注册，可处理 navigation_state、battery_voltage 等实时状态数据。",
+        "SDK 示例展示了由转向、相对位置移动、语音、手臂动画、已知把手抓取、面前物体抓取和递交动作组成的实体机器人任务流程。",
+        "自定义技能通过 @custom_skill 注册，可声明访问级别、多语言自然语言触发表达和参数描述；参数描述用于帮助 LLM 为技能提供输入，返回 llm_output 时可交由 LLM 重述。",
+        "自定义技能可直接上传至机器人，并通过 API 移除、枚举以及动态启用或禁用，从而形成可扩展的机器人应用与技能部署机制。"
+      ],
+      "capabilities": [
+        "通过 Pymirokai 的 Robot 类连接并控制实体 Mirokaï 机器人",
+        "通过 REST API 下发导航、交互、行为与抓取相关命令",
+        "通过 WebSocket 订阅、发布并实时处理机器人状态和遥测数据",
+        "创建、上传、移除、列出及动态启用或禁用自定义机器人技能",
+        "编排移动、语音、手臂动画、物体抓取和物品递交等多步骤任务"
+      ],
+      "metrics": [
+        {
+          "label": "发布组成",
+          "note": "官方 v0.5.0 目录列出的独立软件文档模块。",
+          "value": "3 个：Mirokaï Simulator、Pymirokai、Web API"
+        },
+        {
+          "label": "通信接口",
+          "note": "Pymirokai Robot 类和官方 Web API 文档明确支持的机器人通信方式。",
+          "value": "2 种：REST 和 WebSocket"
+        },
+        {
+          "label": "WebSocket 核心操作",
+          "note": "SDK 明确提供 subscribe、unsubscribe、publish 和 register_callback。",
+          "value": "4 项"
+        },
+        {
+          "label": "自定义技能管理操作",
+          "note": "官方管理文档实现上传、移除、列出以及启用/禁用。",
+          "value": "4 类"
+        },
+        {
+          "label": "示例相对移动距离",
+          "note": "Pymirokai 入门示例通过 Coordinates(x=2) 控制机器人前进。",
+          "value": "2 米"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.5.0/"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://enchanted.tools/"
+      },
+      {
+        "label": "Report",
+        "url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.5.0/"
       }
     ]
   },
