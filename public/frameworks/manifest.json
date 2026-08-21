@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=Fj052v86aoEQ7kNvwEAbfr9&_nc_oc=AdoiPGGWyRxy8zzFvNA_dJyahIerhrCax4vjaCqZDnF8U8y0uo7rNv_0-F-1fUnRw1Q&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=xoTewWJwv_m5YLlMeK34xA&_nc_ss=7b20f&oh=00_AQHokvjWtSOK5bQ31LxSeP9qIV9bVQ7HbOALcbM_kx5hLw&oe=6AA0D3F3",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=Fj052v86aoEQ7kNvwEAbfr9&_nc_oc=AdoiPGGWyRxy8zzFvNA_dJyahIerhrCax4vjaCqZDnF8U8y0uo7rNv_0-F-1fUnRw1Q&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=Yjdr51iEeqU_cyeA0geCug&_nc_ss=7b20f&oh=00_AQHsFKLuViczrkgG1zsO_oFmk1S-AVSO1FHffnhlHQ1EBA&oe=6AA1ED33",
       "width": 1920,
       "height": 1080
     },
@@ -159,9 +159,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_hero.2e16d0ba.fill-300x300.format-webp.webp",
-      "width": 300,
-      "height": 300
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/OneBillionGemma_Hero.png",
+      "width": 3840,
+      "height": 2160
     },
     {
       "id": "cosa-05-v3",
@@ -279,7 +279,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODcyMDA3MjYsIm5iZiI6MTc4NzIwMDQyNiwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgyMCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MjBUMDQzMzQ2WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODk4NjI1ZDY4M2FhNTIxODc5ZjJlMmVlNzVlNTMxODM2NDUyMjUwYjBiMjQ0ZjQ3Nzc4NjA5Mzg2MWJhNjgwZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.9PZPSntmNQrqugyab_sOOKlRWgpByqYXWIIrsQzuGZ8",
+      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODcyODI2NTksIm5iZiI6MTc4NzI4MjM1OSwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgyMSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MjFUMDMxOTE5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjUyYWJiZmRkMDFlZDU0NTU3Njg1NjgzYTE1MDFjMzRiNzYzMDUxMmU2MzZjOWUxMTNiMzc3OTY0MzcxMDQ2MiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ITTD8OB1G7AgKXU3G3-F0ErZUHzg-62IlQ7VtWS3SYo",
       "width": 453,
       "height": 166
     },
@@ -1287,7 +1287,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://opengraph.githubassets.com/28b06b1063166a3466445c3a96c4d85de29c71d3792de28ba27b6bc97d276948/huawei-noah/noah-research",
+      "image_url": "https://opengraph.githubassets.com/9da61fb092fe31f7213d431bcb00c687619513539d90d81d5f31a2a616aef607/huawei-noah/noah-research",
       "width": 1200,
       "height": 600
     },
