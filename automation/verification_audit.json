@@ -35733,5 +35733,1709 @@
       "software_project": true,
       "summary_zh": "正在核验。"
     }
+  },
+  "introducing-matlantis-pfp-v9-benchmarking-on-mli-2f4efcb": {
+    "checked_at": "2026-08-23T04:22:42.352114+00:00",
+    "title": "Introducing Matlantis-PFP v9: Benchmarking on MLIP Arena and Improving Experimental Agreement with r2SCAN - Preferred Networks Tech Blog",
+    "accepted": false,
+    "reason": "不满足条件 1。官方页面将 Matlantis-PFP v9 明确定义为面向材料发现和原子级仿真的通用机器学习原子间势，应用对象是晶体、分子、表面、催化剂、电池材料及其他材料体系；页面没有表明它是用于物理机器人、机器人策略、控制规划、具身代理或机器人评测的软件。故即使它具有正式官方发布页，也不能收入具身机器人技术项目索引。另需纠正候选信息：官方页面的发布日期是 2026 年 8 月 17 日，而不是所给的 2026 年 8 月 1 日。([tech.preferred.jp](https://tech.preferred.jp/en/blog/introducing-matlantis-pfp-v9/))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "使用机器学习原子间势进行材料体系的原子级模拟",
+        "在 PBE 模式下执行双原子分子、体相状态方程、能量-体积扫描、稳定性与燃烧等基准任务",
+        "通过 r2SCAN 模式覆盖有机物、无机物、表面、吸附结构、团簇及金属配合物等材料结构"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "PFP v9.0.0 是 Matlantis 原子模拟平台的通用机器学习原子间势，用于近似量子化学计算中的原子能量、作用力和材料行为。",
+        "r2SCAN 模式加入镧系和锕系元素后，元素覆盖范围由 70 种扩展至 96 种，从氢到锔。",
+        "训练数据包含晶体、分子、表面薄层、吸附结构、团簇和金属配合物，以覆盖材料科学中的多种化学及结构环境。",
+        "相较 PFP v8.0.0，官方报告其在 GMTKN55、熔点和表面能评估上有所改善，同时在形成能和相图任务上保持相近表现。",
+        "PFP v9 的 PBE 模式按照 MLIP Arena 协议评估五类任务：双原子分子、体相状态方程、能量-体积扫描、稳定性和燃烧。",
+        "该项目属于计算材料科学与原子级仿真，不是面向物理机器人、机器人控制或具身智能的软件。"
+      ],
+      "metrics": [
+        {
+          "label": "r2SCAN 模式支持元素数",
+          "note": "覆盖氢（H）至锔（Cm），包括新增的镧系与锕系元素。",
+          "value": "96"
+        },
+        {
+          "label": "MLIP Arena 总排名",
+          "note": "官方称截至 2026 年 3 月 1 日的榜单比较中与 MACE-MPA 并列。",
+          "value": "并列第 1 名"
+        },
+        {
+          "label": "MLIP Arena 单项领先数",
+          "note": "在五项基准任务中排名第一的任务数量。",
+          "value": "3/5"
+        },
+        {
+          "label": "MLIP Arena 评测任务数",
+          "note": "包括 diatomics、eos_bulk、wbm_ev、stability 和 combustion。",
+          "value": "5"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en/",
+      "official_project_url": "https://tech.preferred.jp/en/blog/introducing-matlantis-pfp-v9/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不满足条件 1。官方页面将 Matlantis-PFP v9 明确定义为面向材料发现和原子级仿真的通用机器学习原子间势，应用对象是晶体、分子、表面、催化剂、电池材料及其他材料体系；页面没有表明它是用于物理机器人、机器人策略、控制规划、具身代理或机器人评测的软件。故即使它具有正式官方发布页，也不能收入具身机器人技术项目索引。另需纠正候选信息：官方页面的发布日期是 2026 年 8 月 17 日，而不是所给的 2026 年 8 月 1 日。([tech.preferred.jp](https://tech.preferred.jp/en/blog/introducing-matlantis-pfp-v9/))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Matlantis-PFP v9.0.0 是 Preferred Networks 发布的通用机器学习原子间势更新，服务于 Matlantis 材料模拟平台。它通过扩展 r2SCAN 模式的元素覆盖、增加多样化原子结构训练数据，并在 MLIP Arena 上评估实际模拟行为，提升材料体系的原子级计算能力。尽管它属于具有明确官方页面、模型版本和基准结果的软件项目，其技术目标是计算材料科学和分子动力学仿真，而非物理机器人或具身智能，因此不符合本索引的核心软件范围。"
+    }
+  },
+  "benchmarking-matlantis-pfp-v9-on-mlip-arena-full-f4921a0": {
+    "checked_at": "2026-08-23T04:22:42.381859+00:00",
+    "title": "Benchmarking Matlantis-PFP v9 on MLIP Arena (full version) - Preferred Networks Tech Blog",
+    "accepted": false,
+    "reason": "不纳入。缺少资格条件 1：该发布物虽然是软件模型及其基准评测，但它服务于材料发现、计算化学和原子级分子动力学模拟，不是用于物理机器人或具身智能的软件。官方页面没有展示机器人感知、动作生成、操作、运动控制、规划、具身交互、机器人数据或机器人评测用途。它也不能仅因属于机器学习模型或模拟器而被归入具身机器人项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过机器学习原子间势预测原子体系的能量与力",
+        "执行体相材料的状态方程和能量-体积扫描",
+        "在加热、压缩及高温反应条件下运行分子动力学模拟",
+        "使用 PBE 或 r2SCAN 计算模式估算氢燃烧反应能"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "PFP v9 是用于材料科学和计算化学的通用机器学习原子间势，目标是近似密度泛函理论计算，而非生成物理机器人的动作、控制信号或具身策略。",
+        "官方评测使用 MLIP Arena 的五项任务：同核双原子、体相状态方程、能量-体积扫描、稳定性和燃烧。",
+        "模型面向原子级材料模拟，支持 96 种元素；相关任务考察能量、力、曲线平滑性、物理稳定性和反应能预测。",
+        "PFP 的模型基础是图神经网络，将原子及其相互作用表示为图；Matlantis 还使用专用 PFVM 推理引擎执行计算。",
+        "该页面属于 Preferred Networks 官方技术博客，并明确将项目归入 Chemoinformatics / Materials Science 和 Machine Learning / Deep Learning，而不是机器人或具身智能。",
+        "候选信息所给日期 2026-08-01 与官方页面不符；官方技术博客的发布日期是 2026-08-17，Matlantis 后续官方公告日期是 2026-08-21。"
+      ],
+      "metrics": [
+        {
+          "label": "MLIP Arena 总排名",
+          "note": "与 MACE-MPA 并列第一；比较采用截至 2026-03-01 的公开榜单数据。",
+          "value": "并列第 1"
+        },
+        {
+          "label": "单项排名",
+          "note": "在同核双原子、体相状态方程和稳定性三项中排名第一。",
+          "value": "5 项中 3 项第 1"
+        },
+        {
+          "label": "元素覆盖范围",
+          "note": "官方资料报告 PFP 支持的元素数量。",
+          "value": "96 种元素"
+        },
+        {
+          "label": "氢燃烧反应能 RMSE",
+          "note": "基于 19 个基本氢燃烧反应；PFP v9 r2SCAN、PFP v9 PBE 和 MACE-MPA 的结果分别为 3.10、7.88 和 11.15 kcal/mol。",
+          "value": "PFP v9 r2SCAN：3.10 kcal/mol"
+        },
+        {
+          "label": "体相状态方程指标",
+          "note": "PFP v9 的能量差翻转计数、曲折度、压缩能量 Spearman、压缩导数和张力能量 Spearman 指标。",
+          "value": "1.032；1.005；-1.000；0.998；0.987"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en/",
+      "official_project_url": "https://tech.preferred.jp/en/blog/matlantis-pfp-v9-mlip-arena/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不纳入。缺少资格条件 1：该发布物虽然是软件模型及其基准评测，但它服务于材料发现、计算化学和原子级分子动力学模拟，不是用于物理机器人或具身智能的软件。官方页面没有展示机器人感知、动作生成、操作、运动控制、规划、具身交互、机器人数据或机器人评测用途。它也不能仅因属于机器学习模型或模拟器而被归入具身机器人项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Matlantis-PFP v9 是 Preferred Networks 开发的通用机器学习原子间势。本次官方技术博客发布的是其在 MLIP Arena 上的完整评测，覆盖双原子能量-力曲线、体相状态方程、能量-体积关系、热与压缩稳定性以及高温氢燃烧模拟。PFP v9 在总榜上并列第一，并在五项任务中的三项排名第一；使用 r2SCAN 模式时，19 个氢燃烧反应的反应能 RMSE 为 3.10 kcal/mol。尽管它是具有明确官方页面、责任组织和量化结果的软件项目，其技术对象是原子体系与材料模拟，不涉及物理机器人或具身智能，因此不符合本索引的核心范围。"
+    }
+  },
+  "news-from-sereact-90e0957": {
+    "checked_at": "2026-08-23T04:22:42.409533+00:00",
+    "title": "News from Sereact",
+    "accepted": false,
+    "reason": "不收录：候选页面是 Sereact 的通用新闻与博客索引，不是一个自 2025 年以来发布的、名称明确的物理机器人或具身智能软件制品的专属项目页。虽然页面包含 Cortex 等软件相关内容，并且责任公司明确，但候选标题“News from Sereact”本身不对应 VLA、机器人基础模型、策略、数据集、仿真器、控制栈、基准或具身智能框架。官方索引中也未找到与所给 2026 年 7 月 2 日日期对应的具体发布。缺失的是条件 1 所要求的特定软件制品及其发布证据；同时，该 URL 不能作为该特定制品的专属官方项目页面。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "汇总 Sereact 的公司新闻、技术博客、合作公告与融资消息",
+        "提供各篇新闻和技术文章的入口，而非发布单一机器人软件制品",
+        "展示包括 Cortex、机器人拣选和具身 AI 在内的相关内容，但没有将新闻索引本身定义为技术项目"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "候选 URL 是 Sereact 的“News & Insights”内容索引页，页面主体是按时间排列的博客、新闻和媒体报道。",
+        "该页面没有发布或定义一个名称明确的软件项目，也没有给出该候选项目的模型架构、软件接口、训练方法或评测方案。",
+        "索引中确实链接到 Cortex 2.5 等独立技术文章，但不能把索引页自动等同于其中某个项目；候选标题也未指定 Cortex 或其他软件制品。",
+        "官方页面当前列出的相邻文章日期包括 2026 年 6 月 25 日和 2026 年 7月15日，没有找到与候选日期 2026 年 7 月 2 日对应的项目发布记录。",
+        "Sereact 是明确负责该网站和相关具身 AI 技术的公司，满足责任主体可识别条件，但这不足以弥补候选对象不是具体软件项目的问题。"
+      ],
+      "metrics": [
+        {
+          "label": "可核实的候选项目指标",
+          "note": "新闻索引页没有为名为“News from Sereact”的软件项目报告技术指标或评测结果。",
+          "value": "无"
+        }
+      ],
+      "official_organization_url": "https://sereact.ai/company",
+      "official_project_url": "https://sereact.ai/news",
+      "open_source": false,
+      "organization_en": "Sereact",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录：候选页面是 Sereact 的通用新闻与博客索引，不是一个自 2025 年以来发布的、名称明确的物理机器人或具身智能软件制品的专属项目页。虽然页面包含 Cortex 等软件相关内容，并且责任公司明确，但候选标题“News from Sereact”本身不对应 VLA、机器人基础模型、策略、数据集、仿真器、控制栈、基准或具身智能框架。官方索引中也未找到与所给 2026 年 7 月 2 日日期对应的具体发布。缺失的是条件 1 所要求的特定软件制品及其发布证据；同时，该 URL 不能作为该特定制品的专属官方项目页面。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "“News from Sereact”是德国机器人软件公司 Sereact 官网的新闻与洞察聚合页，而不是独立技术项目。该页面用于汇总公司融资、合作、部署案例以及 Cortex 技术文章。它能够证明 Sereact 从事仓储机器人具身 AI 和物理 AI 软件研发，但没有定义一个名为“News from Sereact”的软件制品，也没有提供对应的架构、模型版本、代码、数据、接口或评测结果。页面中出现的 Cortex 2.5 等条目可能分别构成后续候选对象，但需要以其各自的专属页面、实际发布日期和具体技术内容单独审核，不能依据新闻索引页合并推定。因此，本候选不满足严格索引对“具体已发布软件项目”的要求。"
+    }
+  },
+  "building-a-strong-japanese-reward-model-on-plamo-1cbd02c": {
+    "checked_at": "2026-08-23T04:22:42.436723+00:00",
+    "title": "Building a Strong Japanese Reward Model on PLaMo - Preferred Networks Tech Blog",
+    "accepted": false,
+    "reason": "不满足条件 1。官方项目页明确将该成果定义为用于 LLM 对齐、对候选文本回答进行人类偏好评分的日英双语奖励模型及其翻译评测方法；页面没有将该软件用于物理机器人、机器人操作、控制、规划、感知、仿真或其他具身智能任务。Preferred Networks 从事机器人研究这一组织背景，以及 PLaMo 系列可能存在的其他机器人应用，均不能使这个专门的文本奖励模型项目成为具身机器人软件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "对日语和英语候选回答进行偏好评分",
+        "使用 Bradley-Terry 偏好目标训练标量奖励模型",
+        "通过整项翻译保留提示、优选回答和拒绝回答之间的偏好关系",
+        "在三个独立译者生成的日语基准上进行去偏评估",
+        "使用英日混合偏好数据进行双语奖励建模"
+      ],
+      "fields": [
+        "LLM",
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "该项目是面向大语言模型对齐的日英双语奖励模型，而不是用于物理机器人、机器人控制或具身智能的软件。",
+        "模型以 PLaMo-3 31B 因果语言模型为基础，将输出头替换为单标量头，并采用 Bradley-Terry 偏好目标训练。",
+        "训练数据主要来自允许商业使用的 NVIDIA Nemotron-Cascade RLHF 英文偏好数据，并使用 plamo-translate 将其翻译为日语。",
+        "项目采用整项翻译方式，在同一次调用中翻译提示、优选回答和拒绝回答，以减少分字段翻译对偏好信号的破坏。",
+        "团队分别使用 Gemma 4 31B、Qwen3-235B 和 plamo-translate 构建三个日语 RewardBench-2 版本，并以三者平均准确率 rb2-jp-avg 降低自翻译偏差。",
+        "实验表明，仅用翻译后的日语数据训练会损害英语性能；将原始英文数据与日语译文混合训练，才能同时保持英语能力并提高日语评分表现。",
+        "官方页面标注的发布日期是 2026 年 7 月 17 日，而候选信息给出的 2026 年 7 月 1 日与官方日期不一致。"
+      ],
+      "metrics": [
+        {
+          "label": "日语 RewardBench-2 平均准确率",
+          "note": "在 Gemma、Qwen 和 plamo-translate 三个日语译本上取平均的 rb2-jp-avg。",
+          "value": "82.9"
+        },
+        {
+          "label": "72B 参考模型日语准确率",
+          "note": "NVIDIA Nemotron-Cascade 72B 奖励模型在同一 translator-neutral 指标上的结果。",
+          "value": "82.6"
+        },
+        {
+          "label": "英语准确率",
+          "note": "最终 PLaMo-3 31B 奖励模型的英语结果；72B 参考模型为 82.6。",
+          "value": "80.9"
+        },
+        {
+          "label": "模型规模",
+          "note": "官方文章称其约为 72B 参考模型参数量的 40%。",
+          "value": "31B parameters"
+        },
+        {
+          "label": "训练偏好对数量",
+          "note": "最终模型使用的偏好训练数据规模。",
+          "value": "约 81,000 对"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en/",
+      "official_project_url": "https://tech.preferred.jp/en/blog/building-a-strong-japanese-reward-model-on-plamo/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不满足条件 1。官方项目页明确将该成果定义为用于 LLM 对齐、对候选文本回答进行人类偏好评分的日英双语奖励模型及其翻译评测方法；页面没有将该软件用于物理机器人、机器人操作、控制、规划、感知、仿真或其他具身智能任务。Preferred Networks 从事机器人研究这一组织背景，以及 PLaMo 系列可能存在的其他机器人应用，均不能使这个专门的文本奖励模型项目成为具身机器人软件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Preferred Networks 的这项工作构建了一个基于 PLaMo-3 31B 的日英双语文本奖励模型，重点解决日语偏好数据稀缺、翻译导致偏好差异弱化以及奖励模型偏爱自身训练译者风格等问题。团队将 RewardBench-2 整项翻译为三个日语版本，通过跨译者平均得到 rb2-jp-avg，并使用英文偏好数据及其日语译文混合训练。最终模型在该日语指标上取得 82.9，接近 72B 参考模型的 82.6，同时保持 80.9 的英语结果。尽管这是具有明确软件实现和官方技术页面的 2026 年 LLM 项目，但其目标和评测对象都是文本回答偏好，不涉及物理机器人或具身智能，因此不能收入具身机器人技术项目索引。"
+    }
+  },
+  "plamo-3-0-prime-df32764": {
+    "checked_at": "2026-08-23T04:22:42.464180+00:00",
+    "title": "PLaMo 3.0 Prime",
+    "accepted": false,
+    "reason": "不纳入。虽然它是由明确公司负责、具有专门官方发布页且在 2025 年之后发布的软件模型，但不满足条件 1：官方资料将 PLaMo 3.0 Prime 定位为面向文本推理、编程、工具调用和企业 AI Agent 的通用生成式大语言模型，没有证据表明该发布物是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制栈、仿真器、机器人数据集或评测框架。PFN 本身从事机器人业务并不能使这一独立的通用 LLM 发布符合收录标准。([preferred.jp](https://www.preferred.jp/ja/news/pr20260622?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向复杂任务的 Reasoning 模型",
+        "提供侧重响应速度的 Non-reasoning 模型",
+        "支持复杂指令遵循、分步推理及数学与算法问题处理",
+        "支持工具调用、结构化输出及 AI Agent 工作流",
+        "可通过 API 或本地部署方式用于企业系统"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 3.0 Prime 是 Preferred Networks 从零开发的日语生成式 AI 基础模型旗舰版本，官方将其定位为通用大语言模型，而非机器人模型。",
+        "正式版本分别提供高推理能力的 Reasoning 模型和低延迟的 Non-reasoning 模型，以适配不同企业任务。",
+        "模型增强了复杂指令遵循、分步推理、数学与算法问题求解、编程以及工具调用能力。",
+        "上下文窗口由测试版本所述的 64k 扩展至 256k，以支持长文档处理和多步骤智能体任务。",
+        "模型采用自主开发的 tokenizer，并针对日语业务文档、对话及专业领域数据进行训练和评估。",
+        "官方提供云端 API 和本地部署方案，但发布页没有说明开放模型权重或采用开源许可证。",
+        "官方材料没有将该模型描述为 VLA、机器人策略、世界/动作模型、控制规划栈、机器人数据引擎、仿真器或具身智能评测基准，也没有展示其感知或控制物理机器人的接口与实验。"
+      ],
+      "metrics": [
+        {
+          "label": "正式发布日期",
+          "note": "Preferred Networks 官方新闻稿标注的正式提供开始日期。",
+          "value": "2026-06-22"
+        },
+        {
+          "label": "上下文长度",
+          "note": "官方称由 64k 扩展。",
+          "value": "256k tokens"
+        },
+        {
+          "label": "模型运行模式",
+          "note": "正式版本分别提供推理与非推理配置。",
+          "value": "2 种：Reasoning、Non-reasoning"
+        },
+        {
+          "label": "部署方式",
+          "note": "官方明确列出的企业交付方式。",
+          "value": "API 或 on-premises"
+        },
+        {
+          "label": "具身机器人结果",
+          "note": "官方发布页未报告实体机器人控制、操作、导航或具身评测结果。",
+          "value": "未报告"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://www.preferred.jp/ja/news/pr20260622",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不纳入。虽然它是由明确公司负责、具有专门官方发布页且在 2025 年之后发布的软件模型，但不满足条件 1：官方资料将 PLaMo 3.0 Prime 定位为面向文本推理、编程、工具调用和企业 AI Agent 的通用生成式大语言模型，没有证据表明该发布物是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制栈、仿真器、机器人数据集或评测框架。PFN 本身从事机器人业务并不能使这一独立的通用 LLM 发布符合收录标准。([preferred.jp](https://www.preferred.jp/ja/news/pr20260622?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 3.0 Prime 是 Preferred Networks 于 2026 年 6 月 22 日正式推出的通用日语生成式 AI 基础模型。它提供 Reasoning 与 Non-reasoning 两种模型，强化复杂指令遵循、分步推理、数学与算法求解、编程、工具调用和长上下文智能体处理，并可通过 API 或企业本地环境部署。其 256k token 上下文、日语业务数据训练和自主 tokenizer 属于通用 LLM 的技术改进；官方项目材料没有给出机器人感知、动作生成、实体控制或具身任务评测，因此不能作为具身机器人技术项目收录。"
+    }
+  },
+  "subtask-prediction-34d69c7": {
+    "checked_at": "2026-08-23T04:22:42.492185+00:00",
+    "title": "Subtask Prediction",
+    "accepted": false,
+    "reason": "核验中",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方项目页、组织归属、发布日期及其是否属于面向实体机器人的独立软件模块。随后只保留来源可直接支持的技术点与指标。",
+        "我会特别区分“Cortex 2.0 的功能更新”和硬件/产品宣传，并检查是否有可确认的项目 URL、机构 URL及公开源码。 ",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "metrics": [
+        {
+          "label": "",
+          "note": "",
+          "value": ""
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "核验中",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": ""
+    }
+  },
+  "cortex-2-0-multi-gripper-generalization-a61fb23": {
+    "checked_at": "2026-08-23T04:22:42.514304+00:00",
+    "title": "Cortex 2.0 Multi-Gripper Generalization",
+    "accepted": true,
+    "reason": "收录。Sereact GmbH 于2026年5月11日在其官方网站发布了独立项目文章，明确介绍用于物理机器人的 Cortex 2.0 多夹爪策略泛化软件，包括可学习夹爪嵌入、共享世界模型与动作解码器、VLA 动作头及新末端执行器适配流程。页面虽展示自研鞋盒夹爪等硬件，但主题和主要技术贡献是跨末端执行器复用的机器人智能软件，而非硬件产品规格。官方材料未提供源代码仓库或开放源代码声明，因此 open_source=false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "以少量针对性遥操作示范，将同一策略适配到新的末端执行器",
+        "在视觉潜空间生成候选未来，并按任务进展、风险和稳定性进行评分与选择",
+        "统一支持单臂工作站、双臂退货处理站和人形机器人等不同具身形态",
+        "操控鞋盒专用夹爪、两指夹爪、五指人形手和吸盘夹爪",
+        "执行鞋盒、纸箱、软质及不规则商品、塑料袋等仓储物品的抓取与搬运"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "World models",
+        "Robot manipulation",
+        "Dexterous manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "Cortex 2.0 将每种夹爪表示为共享嵌入表中的独立可学习动态嵌入，并把当前夹爪的条件信息注入世界模型、低层视觉语言模型和 VLA 动作头。",
+        "系统在视觉潜空间进行规划，使对象、接触和运动的像素级规律可以跨机器人及末端执行器迁移；PRO 模块对候选未来的任务进展、风险和稳定性进行评分。",
+        "动作解码器的大部分参数由不同夹爪共享，其上设置两个轻量输出头，分别产生机械臂命令和末端执行器命令。",
+        "接入新夹爪时，只需在嵌入表中增加一行、采集少量有针对性的遥操作示范，并学习该夹爪输出头的特定执行器行为，不需要重新训练规划器。",
+        "官方展示的适配对象包括鞋盒专用夹爪、两指夹爪、五指人形手和吸盘夹爪，覆盖单臂高速拣选、双臂退货处理以及人形机器人装卸推车等场景。",
+        "该更新属于面向物理机器人的策略与规划软件，而不是夹爪硬件发布：官方页面的核心主题是同一 Cortex 模型如何通过共享规划、动作组件和夹爪嵌入跨末端执行器泛化。"
+      ],
+      "metrics": [
+        {
+          "label": "可靠处理品类扩展",
+          "note": "官方称新鞋类末端执行器的接入使机器人群能够可靠处理的商品范围扩大了一个数量级。",
+          "value": "10倍量级"
+        },
+        {
+          "label": "规划器再训练需求",
+          "note": "加入新夹爪时保留原有世界模型与共享解码组件，官方明确表示无需重新训练规划器。",
+          "value": "无需重新训练"
+        },
+        {
+          "label": "部署周期",
+          "note": "鞋盒夹爪在硬件准备就绪后，于数周内部署到客户现场。",
+          "value": "数周内"
+        },
+        {
+          "label": "生产部署规模",
+          "note": "该多夹爪 Cortex 系统发布时，官方称其已在生产环境中交付超过这一数量的部署。",
+          "value": "超过200个部署"
+        },
+        {
+          "label": "鞋盒工作站处理规模",
+          "note": "官方称专用鞋盒夹爪可在持续班次中移动数千件商品。",
+          "value": "每班数千件"
+        }
+      ],
+      "official_organization_url": "https://sereact.ai/company",
+      "official_project_url": "https://sereact.ai/posts/cortex-2-0-multi-gripper-generalization",
+      "open_source": false,
+      "organization_en": "Sereact GmbH",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Sereact GmbH 于2026年5月11日在其官方网站发布了独立项目文章，明确介绍用于物理机器人的 Cortex 2.0 多夹爪策略泛化软件，包括可学习夹爪嵌入、共享世界模型与动作解码器、VLA 动作头及新末端执行器适配流程。页面虽展示自研鞋盒夹爪等硬件，但主题和主要技术贡献是跨末端执行器复用的机器人智能软件，而非硬件产品规格。官方材料未提供源代码仓库或开放源代码声明，因此 open_source=false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Cortex 2.0 Multi-Gripper Generalization 是 Sereact 面向工业机器人发布的一项跨末端执行器策略泛化更新。它没有为鞋盒夹爪、两指夹爪、人形手和吸盘分别维护完整策略，而是为每种夹爪学习动态嵌入，并将其注入世界模型、低层 VLM 与 VLA 动作头。系统在视觉潜空间生成多个候选未来，再由 PRO 模块依据任务进展、风险和稳定性进行评分，选定结果后由共享动作解码器及机械臂、夹爪输出头执行。接入新硬件主要需要少量针对性遥操作数据和新的夹爪输出头，不需要重新训练规划器。官方称鞋盒专用夹爪由此在数周内完成客户现场部署，使机器人群可靠处理的商品范围扩大一个数量级；同一软件栈还运行于单臂拣选、双臂退货处理和人形机器人装卸场景，并已覆盖超过200个生产部署。"
+    }
+  },
+  "plamo-3-0-prime-beta-561d202": {
+    "checked_at": "2026-08-23T04:22:42.535112+00:00",
+    "title": "PLaMo 3.0 Prime Beta",
+    "accepted": false,
+    "reason": "检索进行中。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方发布页及其链接材料，重点确认该项目是否明确面向物理机器人或具身智能，而不是通用基础语言模型。随后只按可访问来源填写归属、发布日期、能力与指标。示例占位用于进度同步，不代表最终判定。",
+        "正在核验候选项目的软件对象与官方归属。",
+        "将检查是否存在面向物理机器人或具身智能的专用项目证据。"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "此消息为检索进度更新，不是最终档案。",
+        "最终结论将基于官方页面及其可访问链接材料。",
+        "不会从“基础模型”名称推断具身机器人用途。",
+        "无法由来源支持的字段将保持为空或按缺失条件拒绝。"
+      ],
+      "metrics": [
+        {
+          "label": "检索状态",
+          "note": "正在核验",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://tech.preferred.jp/ja/blog/plamo-3-prime-beta-release/",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "检索进行中。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验官方发布材料。"
+    }
+  },
+  "micropsi-industries-integration-sdk-0-26-3-fadb2e6": {
+    "checked_at": "2026-08-23T04:22:42.555944+00:00",
+    "title": "Micropsi Industries Integration SDK 0.26.3",
+    "accepted": true,
+    "reason": "纳入。该候选是由 Micropsi Industries 明确维护、以 MIT 许可证公开发布的实体机器人集成软件；官方仓库和 0.26.3 专用发布页均可访问。它包含机器人控制抽象接口、真实运动测试工具、MIRAI 技能开发服务器/客户端及 PLC/机器人程序通信协议，满足“物理机器人软件”和“专门官方页面”条件，并非硬件产品页。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "为接入 MIRAI 的实体机器人实现统一的 Python 抽象控制接口，可读取机器人位姿并发送运动命令。",
+        "提供 mirai-sandbox，在真实机器人或仿真实现上检查几何变换、实时控制以及工具坐标系平移和旋转。",
+        "提供简化的 MIRAI 开发服务器和客户端，用于联调 PLC、机器人程序与技能执行流程。",
+        "支持查询、预加载、执行 MIRAI 技能，并读取执行结果、终止状态参数和异常信息。",
+        "通过 JSON、XML-RPC 和两版自定义二进制协议连接外部机器人程序或 PLC。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "这是面向物理机器人的集成与测试软件包，而非机器人本体或硬件产品；官方说明将其定义为用于实现和测试 MIRAI 机器人集成的 SDK。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk))",
+        "SDK 的 Python 模块提供抽象接口，机器人适配器必须实现这些接口，才能让 MIRAI 读取机器人状态并进行控制。仓库还提供不连接真实硬件的示例实现，供开发新适配器时使用。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk))",
+        "mirai-sandbox 会读取机器人位姿并发送运动指令，测试工具坐标系三个方向的平移、单轴与对角轴旋转，以及 Z-Y-X 连续旋转，并检查机器人能否返回起始位姿。([raw.githubusercontent.com](https://raw.githubusercontent.com/micropsi-industries/micropsi-integration-sdk/0.26.3/README.md))",
+        "mirai-dev-server 在 6599 端口模拟简化的 MIRAI 控制器，可接收 PLC、机器人程序或配套开发客户端发出的技能命令；ExecuteSkill 流程会尝试连接机器人并近似执行完整技能。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk))",
+        "技能 API 覆盖控制器元数据、已训练技能列表、异步预加载、技能触发、执行结果、终止状态值和异常信息；终止状态数据包括速度、力和完成概率。([raw.githubusercontent.com](https://raw.githubusercontent.com/micropsi-industries/micropsi-integration-sdk/0.26.3/skill_api.md))",
+        "技能调用接口同时提供 JSON、XML-RPC 和自定义 TCP 二进制协议；二进制 API v2 在 v1 消息结构基础上增加 CRLF 结尾并限定字符串为 ASCII 编码。([raw.githubusercontent.com](https://raw.githubusercontent.com/micropsi-industries/micropsi-integration-sdk/0.26.3/skill_api.md))",
+        "0.26.3 是一个范围很窄的修复版本：当机器人实现以 Python package 而不是单文件提供时，加载器现在会实际导入该 package。官方 GitHub 发布页显示该版本于 2026 年 2 月 17 日发布。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3))"
+      ],
+      "metrics": [
+        {
+          "label": "发布结果",
+          "note": "官方发布说明仅报告一项变更：修复 package 形式机器人实现的实际导入。",
+          "value": "1 项导入修复"
+        },
+        {
+          "label": "Sandbox 默认线速度",
+          "note": "mirai-sandbox 的默认末端线速度。",
+          "value": "0.05 m/s"
+        },
+        {
+          "label": "Sandbox 默认旋转速度",
+          "note": "mirai-sandbox 的默认末端旋转速度。",
+          "value": "5.0°/s"
+        },
+        {
+          "label": "Sandbox 到位容差",
+          "note": "默认线性到位容差为 0.001 m，默认旋转到位容差为 0.5°。",
+          "value": "0.001 m / 0.5°"
+        },
+        {
+          "label": "技能协议覆盖",
+          "note": "官方文档实现 JSON、XML-RPC，以及自定义二进制 API v1 和 v2。",
+          "value": "3 类接口；2 个二进制协议版本"
+        }
+      ],
+      "official_organization_url": "https://www.micropsi-industries.com/",
+      "official_project_url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3",
+      "open_source": true,
+      "organization_en": "Micropsi Industries",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。该候选是由 Micropsi Industries 明确维护、以 MIT 许可证公开发布的实体机器人集成软件；官方仓库和 0.26.3 专用发布页均可访问。它包含机器人控制抽象接口、真实运动测试工具、MIRAI 技能开发服务器/客户端及 PLC/机器人程序通信协议，满足“物理机器人软件”和“专门官方页面”条件，并非硬件产品页。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Micropsi Industries Integration SDK 0.26.3 是 MIRAI 工业机器人控制系统的开源集成工具包，目标是让新的实体机器人平台实现 MIRAI 所需的状态读取和实时运动控制接口。项目不仅提供接口定义，还包含可执行的运动测试 sandbox、简化 MIRAI 控制器的开发服务器、联调客户端以及面向 PLC 和机器人程序的技能执行协议。0.26.3 并非新的机器人基础模型或大型功能版本，而是一个具体的兼容性修复：机器人实现被组织为 Python package 时，加载过程会正确导入整个 package，而不再只按单个文件处理。其技术价值主要位于机器人系统集成、控制接口验证和 MIRAI 技能部署链路。"
+    }
+  },
+  "cortex-2-0-planning-before-acting-ec2a335": {
+    "checked_at": "2026-08-23T04:22:42.577525+00:00",
+    "title": "Cortex 2.0: Planning Before Acting",
+    "accepted": false,
+    "reason": "正在核验候选项目的官方资料与软件属性。若页面无法访问或关键条件缺少明确证据，我会按规则标记为不收录。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目页、发布主体和可访问的技术材料，再判断它是否属于以具身软件为主体的 2025 年后项目。随后只提取来源明确支持的技术点、能力和指标。",
+        "正在核验候选项目的官方资料与软件属性。若页面无法访问或关键条件缺少明确证据，我会按规则标记为不收录。",
+        "已找到官方项目文章及其链接的技术材料。接下来重点核对发布组织名称、模型构成、训练/推理机制，以及页面是否给出了可精确引用的结果。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索与核验进行中。",
+        "当前尚未形成最终收录判断。",
+        "不会依据给定摘要补全官方来源中未出现的信息。",
+        "不会猜测组织、指标、开源状态或社交证据。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在搜索官方项目页面及关联材料",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://sereact.ai/posts/cortex-2",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验候选项目的官方资料与软件属性。若页面无法访问或关键条件缺少明确证据，我会按规则标记为不收录。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "已找到官方项目文章及其链接的技术材料。接下来重点核对发布组织名称、模型构成、训练/推理机制，以及页面是否给出了可精确引用的结果。"
+    }
+  },
+  "micropsi-industries-integration-sdk-0-26-2-c790e5a": {
+    "checked_at": "2026-08-23T04:22:42.599294+00:00",
+    "title": "Micropsi Industries Integration SDK 0.26.2",
+    "accepted": false,
+    "reason": "不纳入。候选确实是由 Micropsi Industries 负责、采用 MIT 许可证并服务于实体机器人集成的软件项目，且有官方 GitHub 仓库和版本页。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.2)) 但该 SDK 至少从 2021 年起已有公开版本，0.25.0 也已于 2024 年发布；候选 0.26.2 只是 2026 年 2 月 11 日发布的维护版本，唯一列明的变化是移除 pkg_resources 引用。([pypi.org](https://pypi.org/project/micropsi-integration-sdk/0.26.2/?utm_source=openai)) 因此它不满足“自 2025 年以来发布的影响力技术项目”这一时间与项目级新颖性门槛，不能把一次依赖清理补丁视为新的项目发布。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "为接入 MIRAI 的机器人实现定义抽象 Python 控制接口",
+        "通过 MIRAI sandbox 读取机器人位姿并发送运动命令，测试几何和实时控制实现",
+        "提供简化的 MIRAI 控制器开发服务器，用于联调机器人或 PLC 程序",
+        "提供开发客户端，对技能查询、执行和结果获取等二进制 Skill API 命令进行冒烟测试"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "该仓库是用于实现和测试 MIRAI 机器人集成的 Python SDK，属于面向物理机器人的软件，而非机器人硬件或产品规格页。",
+        "SDK 提供抽象接口，集成方需要实现相应方法，才能让 MIRAI 控制受支持的机器人类型。",
+        "仓库包含不连接真实硬件的示例机器人实现，可响应 sandbox 和开发服务器并模拟简单运动。",
+        "MIRAI sandbox 会读取机器人位姿、发送运动命令，并以平移、单轴旋转及连续旋转序列检查几何与实时控制实现。",
+        "开发服务器在端口 6599 上模拟简化的 MIRAI 控制器，接收机器人程序、PLC 程序或配套开发客户端发送的命令。",
+        "开发客户端支持 GetBoxMetadata、GetTrainedSkills、ExecuteSkill、PrepareSkillAsync、GetResult、GetLastEndstateValues、GetExceptionMessage 和 KeepAlive 等命令。",
+        "0.26.2 的官方发行说明只报告移除 pkg_resources 引用；它是既有 SDK 的依赖维护补丁，没有构成自 2025 年以来首次发布的新技术项目。"
+      ],
+      "metrics": [
+        {
+          "label": "0.26.2 发布时间",
+          "note": "GitHub 官方 Release 与 PyPI 发布记录一致。",
+          "value": "2026-02-11"
+        },
+        {
+          "label": "该版本报告的变更",
+          "note": "发行说明仅列出移除 pkg_resources 引用。",
+          "value": "1 项"
+        },
+        {
+          "label": "Sandbox 标准运动序列",
+          "note": "包括三个平移、六个单次旋转和一个连续旋转往返序列。",
+          "value": "10 个序列"
+        },
+        {
+          "label": "Sandbox 默认线速度",
+          "note": "README 所列默认末端执行器线速度。",
+          "value": "0.05 m/s"
+        },
+        {
+          "label": "Sandbox 默认线性到位容差",
+          "note": "README 所列位置到达判定阈值。",
+          "value": "0.001 m"
+        }
+      ],
+      "official_organization_url": "https://www.micropsi-industries.com/",
+      "official_project_url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.2",
+      "open_source": true,
+      "organization_en": "Micropsi Industries",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不纳入。候选确实是由 Micropsi Industries 负责、采用 MIT 许可证并服务于实体机器人集成的软件项目，且有官方 GitHub 仓库和版本页。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.2)) 但该 SDK 至少从 2021 年起已有公开版本，0.25.0 也已于 2024 年发布；候选 0.26.2 只是 2026 年 2 月 11 日发布的维护版本，唯一列明的变化是移除 pkg_resources 引用。([pypi.org](https://pypi.org/project/micropsi-integration-sdk/0.26.2/?utm_source=openai)) 因此它不满足“自 2025 年以来发布的影响力技术项目”这一时间与项目级新颖性门槛，不能把一次依赖清理补丁视为新的项目发布。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Micropsi Industries Integration SDK 是 MIRAI 机器人控制系统的开源集成工具包，用于开发和验证面向真实机器人的适配层。其核心不是训练或发布新的机器人基础模型，而是规定机器人控制接口，并提供示例实现、运动 sandbox、简化控制器服务器和 Skill API 测试客户端。Sandbox 能读取位姿并发送低速运动命令，以工具坐标系平移、单轴旋转和连续旋转序列检查坐标几何、运动流与实时控制行为；开发服务器则在端口 6599 上模拟部分 MIRAI 控制器协议，便于机器人程序或 PLC 在接触真实控制器前完成联调。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk)) 候选版本 0.26.2 没有新增控制能力、模型、数据集、基准或实验结果，官方说明仅记录删除已弃用的 pkg_resources 引用，因而应视为既有集成栈的维护补丁，而不是符合本索引范围的 2025 年后新项目。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.2))"
+    }
+  },
+  "micropsi-industries-integration-sdk-0-26-1-9f3a046": {
+    "checked_at": "2026-08-23T04:22:42.620718+00:00",
+    "title": "Micropsi Industries Integration SDK 0.26.1",
+    "accepted": false,
+    "reason": "正在核验，尚未形成最终判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选版本的官方发布页、项目的软件属性、责任组织及可引用的技术细节。重点会区分机器人集成软件与硬件产品说明，并只采用可访问的一手来源。 ",
+        "随后会检查该版本的发布日期、变更内容、仓库文档及组织官网，确保指标和能力描述不超出来源。 ",
+        "若官方材料仅支持一个修复点而无法支撑要求的完整技术档案，我会保留确切事实，并在纳入理由中明确证据边界。 "
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "核验中。",
+        "核验中。",
+        "核验中。",
+        "核验中。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索官方来源",
+          "value": "待核验"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.1",
+      "open_source": true,
+      "organization_en": "Micropsi Industries",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验，尚未形成最终判断。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "micropsi-industries-integration-sdk-0-26-0-518cc08": {
+    "checked_at": "2026-08-23T04:22:42.642327+00:00",
+    "title": "Micropsi Industries Integration SDK 0.26.0",
+    "accepted": true,
+    "reason": "符合收录条件：这是由 Micropsi Industries 官方 GitHub 组织发布、采用 MIT 许可证的实体机器人集成与控制接口测试软件。0.26.0 具有独立官方发布页，软件主体包括机器人接口抽象、MIRAI 风格运动沙箱、开发服务器、Skill API 客户端和仿真实例；它不是硬件产品页，也不依赖 arXiv 作为项目证据。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供用于接入 MIRAI 的机器人抽象接口，开发者可据此实现特定机器人型号的控制适配层。",
+        "通过沙箱读取机器人位姿，并以接近 MIRAI 实际运行方式发送平移和旋转运动命令。",
+        "自动执行工具坐标系下的多轴平移、单轴及对角轴旋转和连续旋转测试，并检查机器人是否返回起始位姿。",
+        "通过开发服务器近似模拟 MIRAI 控制器和完整技能执行流程，并通过开发客户端测试二进制 Skill API 命令。",
+        "提供不连接真实硬件的示例机器人实现，用于仿真、接口开发和初步冒烟测试。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation"
+      ],
+      "include": true,
+      "key_points": [
+        "0.26.0 是 Micropsi Industries 官方 GitHub 组织发布的机器人集成软件版本，发布日期为 2026 年 2 月 5 日；发布说明将本次变更概括为“More realistic sandbox”。",
+        "该 SDK 面向需要与 MIRAI 集成的实体机器人，Python 模块定义机器人控制适配器必须实现的抽象接口，而不是机器人硬件或产品规格页。",
+        "新版沙箱通过读取工具位姿并发送类似 MIRAI 的运动命令，检查坐标几何、实时控制循环和机器人接口实现中的问题。",
+        "测试序列覆盖工具坐标系 X、Y、Z 三轴往返平移，绕 X、Y、Z 及 XY、YZ、XZ 对角轴旋转，以及按 Z-Y-X 顺序执行并逆序返回的连续旋转。",
+        "测试工具允许分别选择 translations、single-rotations 和 chained-rotations 测试组，并可配置线速度、旋转速度、最大运动范围及位置和角度容差。",
+        "项目还包含 MIRAI 开发服务器和客户端：服务器监听机器人或 PLC 程序发送的 Skill API 命令，并可近似执行完整技能；客户端可测试 ExecuteSkill、PrepareSkillAsync、GetResult、KeepAlive 等命令。",
+        "官方材料明确警告沙箱和开发服务器可能驱动真实机器人运动，建议先在仿真环境中验证新接口，再连接实体硬件。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "GitHub 0.26.0 官方 Release 的发布时间。",
+          "value": "2026-02-05"
+        },
+        {
+          "label": "沙箱测试序列",
+          "note": "官方文档列出的往返平移、单次旋转和连续旋转步骤总数。",
+          "value": "10 项"
+        },
+        {
+          "label": "默认末端线速度",
+          "note": "mirai-sandbox 的 speed-linear 默认值。",
+          "value": "0.05 m/s"
+        },
+        {
+          "label": "默认末端旋转速度",
+          "note": "mirai-sandbox 的 speed-rotation 默认值。",
+          "value": "5.0°/s"
+        },
+        {
+          "label": "默认到达容差",
+          "note": "沙箱判定目标位姿到达时采用的默认线性和旋转容差。",
+          "value": "0.001 m；0.5°"
+        }
+      ],
+      "official_organization_url": "https://www.micropsi-industries.com/",
+      "official_project_url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.0",
+      "open_source": true,
+      "organization_en": "Micropsi Industries",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "符合收录条件：这是由 Micropsi Industries 官方 GitHub 组织发布、采用 MIT 许可证的实体机器人集成与控制接口测试软件。0.26.0 具有独立官方发布页，软件主体包括机器人接口抽象、MIRAI 风格运动沙箱、开发服务器、Skill API 客户端和仿真实例；它不是硬件产品页，也不依赖 arXiv 作为项目证据。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Micropsi Industries Integration SDK 0.26.0 是面向 MIRAI 机器人控制系统集成者的开源 Python 工具包。本次版本的核心是更贴近实际 MIRAI 控制行为的沙箱：它加载开发者编写的机器人接口，持续读取末端工具位姿，并发送平移和旋转指令，以暴露坐标变换、几何约定和实时运动控制实现中的错误。测试流程不再局限于简单单轴移动，而是覆盖三轴往返平移、围绕主轴和对角轴的旋转，以及有顺序依赖的连续旋转，并要求机器人最终回到起始位姿。项目同时提供 MIRAI 控制器的简化开发服务器、二进制 Skill API 测试客户端和不连接真实硬件的示例实现，使集成者能够先在仿真或受控环境中验证机器人适配层、PLC 通信和技能执行流程。它本身不是新的 VLA 或学习策略模型，而是一套直接服务于实体工业机器人接入、运动控制验证和 MIRAI 技能执行集成的机器人系统软件。"
+    }
+  },
+  "plamo-2-2-prime-fffb898": {
+    "checked_at": "2026-08-23T04:22:42.666055+00:00",
+    "title": "PLaMo 2.2 Prime",
+    "accepted": false,
+    "reason": "不符合条件1。PLaMo 2.2 Prime是面向通用文本生成、英日指令遵循、多轮角色扮演和医疗问答的大语言模型软件；其官方项目页未提供任何证据表明该版本是用于物理机器人或具身智能的VLA、动作/世界模型、机器人策略、数据集、仿真器、控制规划栈、机器人评测基准或具身代理框架。Preferred Networks本身从事机器人业务并不能使一个独立的通用LLM项目满足具身机器人软件标准。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "英日双语指令遵循与结构化格式生成",
+        "20至40轮角色扮演对话中的规则遵循",
+        "日语医疗问答与错误文本识别",
+        "非推理式大语言模型文本生成"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 2.2 Prime是Preferred Networks发布的生成式AI基础模型，官方页面将其研究领域明确标为Foundation Model / Large Language Model。",
+        "该版本通过增加SFT和DPO等后训练数据，重点改善英语与日语指令遵循能力。",
+        "团队设计了日语指令遵循基准JFBench，覆盖16个约束组和174种约束，包括可程序验证的格式约束及需要LLM-as-a-Judge的语言约束。",
+        "模型加入了面向AI面试场景的多轮角色扮演数据，并在20至40轮对话中评估角色、规则和行为指南的一致遵循情况。",
+        "医疗能力训练和评估覆盖MedRECT-ja及日本医师国家考试；国家考试评估使用未纳入训练的2024年和2025年试题。",
+        "官方发布材料没有将该模型描述为机器人VLA、动作模型、机器人策略、控制或规划栈、仿真器、具身数据引擎、机器人评测基准或具身智能代理框架，也没有展示其连接或控制物理机器人。"
+      ],
+      "metrics": [
+        {
+          "label": "IFBench loose prompt accuracy",
+          "note": "PLaMo 2.1 Prime为29.0%；该指标用于评估英语指令遵循能力。",
+          "value": "37.8%"
+        },
+        {
+          "label": "多轮角色扮演指令遵循率",
+          "note": "AI面试场景，使用20至40轮对话；PLaMo 2.1 Prime为7.03%。",
+          "value": "23.7%"
+        },
+        {
+          "label": "MedRECT-ja错误句抽取正确率",
+          "note": "官方称该项结果高于页面中列出的其他非推理模型。",
+          "value": "57.0%"
+        },
+        {
+          "label": "日本医师国家考试正确率",
+          "note": "在排除图像题和解析异常后共557题；PLaMo 2.1 Prime为55.1%。",
+          "value": "70.7%（394/557）"
+        },
+        {
+          "label": "JFBench约束设计规模",
+          "note": "日语指令遵循基准中的约束分类与具体约束数量。",
+          "value": "16个约束组、174种约束"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en",
+      "official_project_url": "https://tech.preferred.jp/ja/blog/plamo-2-2-prime-release/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "株式会社Preferred Networks",
+      "reason": "不符合条件1。PLaMo 2.2 Prime是面向通用文本生成、英日指令遵循、多轮角色扮演和医疗问答的大语言模型软件；其官方项目页未提供任何证据表明该版本是用于物理机器人或具身智能的VLA、动作/世界模型、机器人策略、数据集、仿真器、控制规划栈、机器人评测基准或具身代理框架。Preferred Networks本身从事机器人业务并不能使一个独立的通用LLM项目满足具身机器人软件标准。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 2.2 Prime由日本株式会社Preferred Networks于2026年1月28日发布，是PLaMo系列的通用生成式大语言模型升级版本。其技术工作集中于增加后训练数据，以改善英语和日语指令遵循、结构化输出、多轮角色扮演以及医疗领域问答。官方材料报告了IFBench、团队自建JFBench、AI面试多轮对话、MedRECT-ja和日本医师国家考试等评估结果。尽管它是具有明确责任组织和专门官方发布页的软件项目，材料中没有物理机器人接口、感知到动作映射、机器人控制、具身训练数据或机器人实验，因此不能纳入严格的具身机器人技术项目索引。"
+    }
+  },
+  "cortex-1-5-interactive-rl-policy-patching-for-re-418faae": {
+    "checked_at": "2026-08-23T04:22:42.689165+00:00",
+    "title": "Cortex 1.5: Interactive RL Policy Patching for Real-World Robotics",
+    "accepted": false,
+    "reason": "检索尚未完成，暂不作收录判断。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验官方项目页的发布时间、责任组织和软件属性，再查找其链接的技术材料与可验证指标。只有来源明确支持全部门槛时才会收录。",
+        "我会把硬件产品宣传与真正的软件项目证据分开判断，并且不会用 arXiv 单独补足官方项目证据。",
+        "检索将优先使用 Sereact 官方页面及其直接链接材料，外部来源只用于核验组织身份和独立社会证据。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验候选项目。",
+        "正在确认官方责任组织、发布日期及软件交付物。",
+        "正在提取技术机制、能力与精确结果。",
+        "最终结论将严格依据可访问来源。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在进行网页检索与证据核验。",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://sereact.ai/en/posts/cortex-1-5",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "检索尚未完成，暂不作收录判断。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验 Cortex 1.5 是否满足 2025 年以后发布、具备专门官方页面、由明确组织负责且核心交付物属于实体机器人软件等全部条件。"
+    }
+  },
+  "platform-roundup-january-2026-51f8e6d": {
+    "checked_at": "2026-08-23T04:22:42.711784+00:00",
+    "title": "Platform roundup: January 2026",
+    "accepted": false,
+    "reason": "Pending official-source verification.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the official Viam roundup and linked technical documentation to distinguish a substantive robotics-software release from a general product update.",
+        "I’ll verify the organization identity, release date, implemented capabilities, and any exact reported results before deciding inclusion.",
+        "I’m also treating unsupported metrics and social links conservatively; absent evidence will remain absent rather than inferred."
+      ],
+      "fields": [
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "The candidate appears to concern a physical-robot software platform, but the final eligibility decision depends on the accessible official material.",
+        "No unsupported claims will be included.",
+        "The final dossier will use only official or directly linked project sources."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Official-source verification is in progress.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.viam.com/post/january-2026-platform-roundup",
+      "open_source": false,
+      "organization_en": "Viam",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Pending official-source verification.",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Viam 官方项目页面及其链接的技术资料，以确认该候选是否满足实体机器人软件项目的严格收录条件。"
+    }
+  },
+  "platform-roundup-december-2025-8678084": {
+    "checked_at": "2026-08-23T04:22:42.733543+00:00",
+    "title": "Platform roundup: December 2025",
+    "accepted": false,
+    "reason": "尚未完成来源核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验官方发布页及其链接材料，重点确认它是否是面向实体机器人的独立软件发布，而非普通产品更新汇总。随后会按候选资格逐条给出结论。人工核验中。待确认。官方页面可访问。初步判断。技术属性。实体机器人关联。独立项目页要求。责任组织。发布时间。指标来源。最终结构化结论。",
+        "检索中。分析官方材料。避免猜测。确认页面标题。确认发布内容。确认是否属于软件项目。确认组织名称。检查开源信息。检查社交证据。整理具体能力与指标。严格按字段输出。即将完成。",
+        "状态更新：候选页是 Viam 官方博客，内容看起来是平台月度功能汇总，而不是硬件产品页。关键问题是它能否被视为一个具体、可索引的技术项目；我会以页面实际发布对象为准，而不是仅凭摘要判断。"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "待检索完成后更新。",
+        "正在查阅官方页面。",
+        "将核验软件主体。",
+        "将核验项目独立性。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在进行网页核验",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.viam.com/post/platform-roundup-december-2025",
+      "open_source": false,
+      "organization_en": "Viam",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "尚未完成来源核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选资格。"
+    }
+  },
+  "micropsi-industries-integration-sdk-0-25-0-0706d47": {
+    "checked_at": "2026-08-23T04:22:42.756024+00:00",
+    "title": "Micropsi Industries Integration SDK 0.25.0",
+    "accepted": false,
+    "reason": "不收录：虽然该项目满足软件属性、实体机器人用途、明确责任组织和官方专属项目页等条件，但它并非 2025 年以后发布。官方变更 PR 显示 prepare_for_cog_estimation 于 2024 年 11 月 15 日合并，同时提交了“Bump the version: 0.25.0”；0.25.0 发布页对应同一提交 0de46a6。候选所列日期 2025-11-15 与官方记录相差一年。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.25.0))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "为 MIRAI 与实体关节机器人平台开发 Python 集成接口",
+        "通过沙箱验证机器人位姿读取、运动指令和高频控制循环",
+        "支持笛卡尔速度、笛卡尔位姿、关节位置和关节速度四类控制接口",
+        "在重心估计期间配置只读取机器人状态、不发送控制信号的通信模式"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "该项目是面向实体机器人的软件 SDK，用于在 Micropsi Industries 的 AI 机器人控制产品 MIRAI 与第三方机器人平台之间实现接口，并非硬件产品页。",
+        "集成方式是继承 SDK 提供的抽象基类，以 Python 实现机器人通信、正向或逆向运动学及安全检查；机器人侧通常通过 TCP 或 UDP 实时协议连接。",
+        "SDK 提供 mirai-sandbox，用简化的 MIRAI 控制行为测试实体机器人接口，并检查几何、运动执行和高频控制循环。",
+        "SDK 还提供 mirai-dev-server 与 mirai-dev-client，用于模拟 MIRAI 控制器、PLC 或机器人程序通过 TCP 二进制 Skill API 触发技能的生产循环。",
+        "0.25.0 的版本变更只有新增可选方法 prepare_for_cog_estimation；该方法允许重心估计期间让机器人持续提供状态读数，同时避免 MIRAI 接管控制或发送运动命令。",
+        "新增方法当时用于 KUKA 及其新 RSI 逻辑，因为该接口需要外部信号后才会发送机器人状态读数。",
+        "官方拉取请求明确显示该变更于 2024 年 11 月 15 日合并并将版本提升至 0.25.0，因此候选资料给出的 2025 年 11 月 15 日不正确。"
+      ],
+      "metrics": [
+        {
+          "label": "实际版本日期",
+          "note": "官方 PR 显示版本提升及合并日期；不满足“自 2025 年起发布”的时间门槛。",
+          "value": "2024-11-15"
+        },
+        {
+          "label": "实时调用频率",
+          "note": "RobotInterface 文档所列默认高频控制调用频率。",
+          "value": "50 Hz"
+        },
+        {
+          "label": "机器人平台最低命令频率",
+          "note": "平台要求能够连续接收并平滑执行运动命令。",
+          "value": "≥20 Hz"
+        },
+        {
+          "label": "控制接口类型",
+          "note": "版本材料列出笛卡尔速度、笛卡尔位姿、关节位置和关节速度接口。",
+          "value": "4 类"
+        },
+        {
+          "label": "Python 版本要求",
+          "note": "0.25.0 的安装配置要求。",
+          "value": "Python ≥3.10,<4"
+        }
+      ],
+      "official_organization_url": "https://www.micropsi-industries.com/",
+      "official_project_url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.25.0",
+      "open_source": true,
+      "organization_en": "Micropsi Industries",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录：虽然该项目满足软件属性、实体机器人用途、明确责任组织和官方专属项目页等条件，但它并非 2025 年以后发布。官方变更 PR 显示 prepare_for_cog_estimation 于 2024 年 11 月 15 日合并，同时提交了“Bump the version: 0.25.0”；0.25.0 发布页对应同一提交 0de46a6。候选所列日期 2025-11-15 与官方记录相差一年。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.25.0))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Micropsi Industries Integration SDK 是把 MIRAI AI 机器人控制系统接入新型实体关节机器人平台的开源 Python SDK。它定义机器人状态、连接管理、安全检查、运动学和实时控制抽象接口，并配套沙箱以及开发服务器/客户端，用于在接入正式 MIRAI 运行时前验证机器人通信和运动执行。0.25.0 新增 prepare_for_cog_estimation，使特定机器人在重心估计阶段进入只提供状态读数而不接受 MIRAI 控制命令的通信状态，主要服务于 KUKA RSI 集成。该项目本身符合具身机器人软件定义，但官方记录证明 0.25.0 发布于 2024 年 11 月 15 日，因而不属于“2025 年以来”的候选范围。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk))"
+    }
+  },
+  "plamo-2-1-prime-28c3234": {
+    "checked_at": "2026-08-23T04:22:42.777974+00:00",
+    "title": "PLaMo 2.1 Prime",
+    "accepted": false,
+    "reason": "不收录：虽然存在由 Preferred Networks 发布的专门官方公告，且发布日期为 2025 年 10 月 7 日，但该软件是面向企业数据库、外部 API 和 AI 智能体协作的通用大语言模型。官方材料没有将 PLaMo 2.1 Prime 描述为用于物理机器人或具身智能的软件，也未提供机器人感知、动作策略、控制、规划、仿真或具身评测能力。因此缺少条件 1 所要求的“物理机器人／具身智能软件”证据。([preferred.jp](https://www.preferred.jp/en/news/pr20251007-2))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "依据用户指令自动选择合适的工具",
+        "组合调用网页搜索、内部数据库、外部 API 和其他 AI 智能体",
+        "汇总多个工具或智能体返回的信息并生成综合回答",
+        "在无需指定具体工具的情况下执行单工具及多工具调用"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 2.1 Prime 是 Preferred Networks 从头开发的日语大语言模型 PLaMo 的商用旗舰版本更新，官方将其明确归类为生成式 AI 基础模型和 LLM。",
+        "本次更新的核心是自动工具调用：模型可根据用户指令选择并组合网页搜索、内部数据库查询、外部 API 和其他 AI 智能体。",
+        "官方示例包括查询客户与购买记录、查询库存状态、合并多智能体结果，以及筛选潜在客户、生成邮件并触发发送。",
+        "与此前需要明确指定工具的版本相比，2.1 Prime 可以根据任务条件自行确定应调用的工具。",
+        "PLaMo 2.1 Prime 从 PLaMo 2.0 Prime 自动升级，现有用户无需切换模型；官方提供形态包括云 API、Amazon Bedrock Marketplace 和本地部署。",
+        "官方页面没有描述机器人观测、动作生成、物理控制、具身环境交互、机器人数据集、仿真器或机器人评测，因此其工具调用能力不能作为具身机器人软件的证据。"
+      ],
+      "metrics": [
+        {
+          "label": "BFCL V3 评测结论",
+          "note": "官方未在可访问正文中给出 PLaMo 2.1 Prime 的具体数值，只报告其在函数调用评测中取得“高水平准确率”。",
+          "value": "高水平准确率（官方定性结果）"
+        },
+        {
+          "label": "BFCL V3 规模",
+          "note": "该数字描述评测基准规模，不是模型得分。",
+          "value": "约 2,000 个问题-工具-答案三元组"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en/",
+      "official_project_url": "https://www.preferred.jp/en/news/pr20251007-2",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录：虽然存在由 Preferred Networks 发布的专门官方公告，且发布日期为 2025 年 10 月 7 日，但该软件是面向企业数据库、外部 API 和 AI 智能体协作的通用大语言模型。官方材料没有将 PLaMo 2.1 Prime 描述为用于物理机器人或具身智能的软件，也未提供机器人感知、动作策略、控制、规划、仿真或具身评测能力。因此缺少条件 1 所要求的“物理机器人／具身智能软件”证据。([preferred.jp](https://www.preferred.jp/en/news/pr20251007-2))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 2.1 Prime 是 Preferred Networks 于 2025 年 10 月 7 日公布的商用日语大语言模型更新，主要新增自动工具选择与调用能力。模型能够根据自然语言指令，在网页搜索、企业内部数据库、外部 API 及其他 AI 智能体之间选择和组合工具，并汇总结果生成回答。官方还展示了客户信息与库存查询、潜在客户筛选、邮件生成和发送等企业自动化场景，并使用 BFCL V3 评估函数调用能力。尽管 PFN 的业务可能涉及制造设备和边缘计算，PLaMo 2.1 Prime 的专门发布页并未把该模型定位为机器人模型，也没有展示从机器人传感输入到物理动作输出的闭环能力。它属于通用 LLM／企业智能体软件，不符合本索引对具身机器人技术项目的严格范围。([preferred.jp](https://www.preferred.jp/en/news/pr20251007-2))"
+    }
+  },
+  "platform-roundup-november-2025-6a1129e": {
+    "checked_at": "2026-08-23T04:22:42.800435+00:00",
+    "title": "Platform roundup: November 2025",
+    "accepted": true,
+    "reason": "收录。Viam 的官方专页明确发布了面向实体机器人软件平台的具体功能，包括多机器机群仪表板、用于机械臂等机器人资源的 Motion API 更新，以及机器人 C++ 模块构建基础设施；页面主体是已实现的软件能力，不是硬件产品或机器人本体公告。官方页面标明发布日期为 2025 年 11 月 5 日，并明确由 Viam 负责。Viam 的边缘服务器和多个 SDK 虽有公开源码，但本次发布中的云端机群仪表板没有被官方材料证明为完整开源，因此 `open_source` 按该发布整体记为 false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过单一仪表板汇总并监控多台机器人或智能机器的数据。",
+        "通过可配置组件展示跨机器传感器趋势、地理位置、异常值与机群健康状态。",
+        "按机器和时间范围筛选机群数据，支持面向具体设备或时间窗口的排查。",
+        "通过简化后的 Motion API 资源名控制机械臂等实体机器人组件。",
+        "利用 Conan 预构建依赖缓存加速 C++ SDK 与机器人模块的构建流程。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Robot manipulation",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Viam 于 2025 年 11 月 5 日发布该平台更新，内容覆盖机器人软件的部署、机群监控、运动接口和 C++ 模块构建流程，而非机器人本体或硬件规格。",
+        "新增的多机器机群仪表板允许同一组件从多台机器提取数据，在一个界面中同时查看整个机器人机群，无需在不同机器页面之间切换。",
+        "仪表板可呈现跨机群趋势、设备健康状态和离群情况，并支持传感器读数曲线与 GPS 地图等可视化形式。",
+        "仪表板过滤机制可将全部组件统一限定到特定机器或时间范围；相关文档还列出按位置、配置片段和历史时间窗口过滤数据的能力。",
+        "Motion API 改为接受简单资源名称：控制机械臂时可直接使用类似 `fooArm` 的名称，而无需原有的 `rdk:component:arm/foo` 完整标识。",
+        "在多机器人或存在同名资源的配置中，系统能够处理名称冲突，并允许使用类似 `robot2.fooArm` 的前缀式名称明确指定目标资源。",
+        "Viam 为 C++ 工具链设置 Conan 服务器，缓存预构建的 SDK 依赖，使机器人模块开发不必在每次构建时重复编译相同依赖。"
+      ],
+      "metrics": [
+        {
+          "label": "C++ 构建加速",
+          "note": "官方发布页报告，Conan 服务器通过缓存预构建 SDK 依赖实现该加速幅度。",
+          "value": "10×"
+        },
+        {
+          "label": "C++ 构建时间",
+          "note": "官方报告的更新前后结果。",
+          "value": "从约 1 小时降至不足 10 分钟"
+        },
+        {
+          "label": "机群监控范围",
+          "note": "官方描述为在一个仪表板中同时监控整个机器人机群，并从多台机器提取组件数据。",
+          "value": "单一仪表板支持多机器数据"
+        },
+        {
+          "label": "Motion API 名称简化",
+          "note": "官方示例由完整资源标识改为简单资源名。",
+          "value": "`rdk:component:arm/foo` → `fooArm`"
+        }
+      ],
+      "official_organization_url": "https://www.viam.com/",
+      "official_project_url": "https://www.viam.com/post/platform-roundup-november-2025",
+      "open_source": false,
+      "organization_en": "Viam",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Viam 的官方专页明确发布了面向实体机器人软件平台的具体功能，包括多机器机群仪表板、用于机械臂等机器人资源的 Motion API 更新，以及机器人 C++ 模块构建基础设施；页面主体是已实现的软件能力，不是硬件产品或机器人本体公告。官方页面标明发布日期为 2025 年 11 月 5 日，并明确由 Viam 负责。Viam 的边缘服务器和多个 SDK 虽有公开源码，但本次发布中的云端机群仪表板没有被官方材料证明为完整开源，因此 `open_source` 按该发布整体记为 false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "这是 Viam 在 2025 年 11 月发布的一组机器人平台软件更新，重点解决从开发到生产机群运维中的三个问题。第一，多机器仪表板将多台实体机器人或智能机器的传感器数据、趋势和 GPS 位置集中到同一视图，并提供机器与时间范围过滤，以便发现离群设备、跟踪机群健康状态和分析历史变化。第二，Motion API 简化了机器人资源寻址方式，机械臂等组件可以使用配置中的简单名称调用；多机器人场景可通过机器前缀消除同名冲突，从而减少应用代码对底层资源标识格式的依赖。第三，Viam 通过 Conan 服务器分发缓存的 C++ SDK 依赖，将官方报告的构建时间从约一小时缩短到不足十分钟。该发布不是新的机器人模型或学习策略，而是直接服务于实体机器人控制、模块开发和规模化机群管理的机器人系统软件更新。"
+    }
+  },
+  "platform-roundup-september-2025-ea8c0a3": {
+    "checked_at": "2026-08-23T04:22:42.825453+00:00",
+    "title": "Platform roundup: September 2025",
+    "accepted": true,
+    "reason": "收录。该候选具有 Viam 发布的独立官方产品更新页面，明确发布日期和责任公司；页面主体是用于实体机器人及智能机器的 Viam 软件平台更新，包括多机器应用、机器人数据集合并、ML 自动标注、可复用配置和跨平台模块热重载，符合机器人系统、数据引擎及具身智能开发软件的范围，并非硬件产品公告。页面未将这一整组平台及云端功能声明为完整开源项目，因此 open_source 保守标记为 false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "在 Viam 应用界面中直接合并多个机器人数据集，支持将基础数据与现场采集的边缘案例汇总后重新训练模型。",
+        "使用 TensorFlow Lite 或 TensorFlow 模型执行云端推理和图像自动标注，并按置信度阈值筛选生成的标注。",
+        "构建可同时连接多台实体机器的应用，用于机器人集群管理、多机器人协调和跨地点监控。",
+        "通过带占位变量的配置片段复用机器人配置，并为不同机器注入 IP 地址、名称等特定参数。",
+        "从 macOS 开发环境向 Linux 机器人热重载模块，结合云端构建缩短跨平台开发、部署和测试循环。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Data & benchmarks",
+        "Embodied AI"
+      ],
+      "include": true,
+      "key_points": [
+        "Viam 于 2025 年 9 月 17 日发布该平台更新公告，页面集中介绍面向实体机器人开发、机器学习数据处理和多机器运维的软件功能，而非机器人硬件产品。",
+        "数据管理界面新增数据集合并功能，可将基础训练集与部署现场收集的边缘案例组合，用于迭代训练；官方还明确建议与自动标注功能结合，形成持续改进模型的数据工作流。",
+        "自动标注的云端推理新增 TFLite 模型支持；用户可以选择模型和置信度阈值，再人工接受或拒绝系统生成的图像标注。",
+        "Viam Apps 新增多机器连接能力，一个应用可访问多台获授权机器，面向集群仪表盘、多机器人协调以及跨地点状态监控等场景。",
+        "Fragment variables 允许在可复用配置片段中定义占位值，并在部署时传入 IP 地址、设备名称等参数；多个带独立变量的片段还可组合为复杂配置。",
+        "模块热重载加入云端构建和跨平台支持，官方示例是从 Mac 开发机热重载至 Linux 机器人；首次重载还能自动创建组件，并改善环境变量处理。",
+        "针对 Python 模块，热重载可跳过不必要的依赖重新安装，以加快实体机器人上的迭代过程；默认主目录也由 `/root/.viam` 调整为 `~/Downloads`。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "Viam 官方产品更新页面标注的发布日期。",
+          "value": "2025-09-17"
+        },
+        {
+          "label": "多机器应用访问",
+          "note": "单个 Viam 应用可同时连接多台机器；一次登录即可访问全部获授权机器。",
+          "value": "Multiple machines with one login"
+        },
+        {
+          "label": "自动标注模型格式",
+          "note": "该版本加入 TFLite，官方说明其作为 TensorFlow 之外的另一种云端推理和自动标注模型格式。",
+          "value": "TFLite and TensorFlow"
+        },
+        {
+          "label": "跨平台热重载路径",
+          "note": "官方明确给出的受支持开发流程。",
+          "value": "macOS development host to Linux robot"
+        },
+        {
+          "label": "标注审核流程",
+          "note": "自动生成的标注不会被描述为无条件写入数据集；用户可逐项审核。",
+          "value": "Accept or reject generated annotations"
+        }
+      ],
+      "official_organization_url": "https://www.viam.com/",
+      "official_project_url": "https://www.viam.com/post/platform-roundup-september-2025",
+      "open_source": false,
+      "organization_en": "Viam",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。该候选具有 Viam 发布的独立官方产品更新页面，明确发布日期和责任公司；页面主体是用于实体机器人及智能机器的 Viam 软件平台更新，包括多机器应用、机器人数据集合并、ML 自动标注、可复用配置和跨平台模块热重载，符合机器人系统、数据引擎及具身智能开发软件的范围，并非硬件产品公告。页面未将这一整组平台及云端功能声明为完整开源项目，因此 open_source 保守标记为 false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Viam 的 2025 年 9 月平台更新是一组面向实体机器人开发与部署的软件能力升级。其核心覆盖机器人数据闭环、多机器应用和跨平台工程迭代：开发者可以在界面中合并基础数据与现场边缘案例，利用 TensorFlow 或 TFLite 模型进行云端推理和半自动图像标注，再审核标注并重新训练模型；应用层可在一次登录后连接多台获授权机器，以支持集群监控和多机器人协调；配置层通过带变量的 fragment 降低不同机器间重复配置；开发工具则允许从 Mac 经云端构建向 Linux 机器人热重载模块。该页面没有报告任务成功率、模型精度或相对基准提升，因此档案仅记录官方明确描述的功能结果，不推断量化性能。"
+    }
+  },
+  "cortex-8c00900": {
+    "checked_at": "2026-08-23T04:22:42.849043+00:00",
+    "title": "Cortex",
+    "accepted": false,
+    "reason": "Verification in progress.",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m verifying the official Cortex release, organization identity, technical scope, and any reported results before applying the inclusion criteria.",
+        "I’ll distinguish claims on Sereact’s own project material from paper or third-party descriptions, and mark unsupported fields conservatively.",
+        "I’m checking the linked release page and its connected technical material for concrete architecture details, implemented robot capabilities, and exact evaluation results."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "Verification in progress.",
+        "Verification in progress.",
+        "Verification in progress."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Sources are being checked.",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "Verification in progress.",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验官方项目资料。"
+    }
+  },
+  "plamo-fin-prime-3d86edc": {
+    "checked_at": "2026-08-23T04:22:42.871101+00:00",
+    "title": "PLaMo Fin Prime",
+    "accepted": false,
+    "reason": "不符合条件 1。PLaMo Fin Prime 虽然是于 2025 年 6 月 17 日发布、且具有官方专页的软件模型，但其明确定位为面向日本金融任务的领域专用大语言模型。官方项目页和相关材料只支持金融知识问答、文档生成、企业分析、信息摘要、专有数据定制及本地部署等能力，没有证据表明它是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、模拟器、机器人数据集或具身智能框架。一般 LLM 软件不能仅因潜在上层集成可能性而纳入具身机器人项目索引。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于日语金融语料进行领域知识问答与文本生成",
+        "支持企业分析、监管信息摘要及金融业务文档草拟",
+        "可结合金融机构自有数据、产品信息、业务流程和内部知识进行定制训练",
+        "支持在金融机构要求的安全本地环境中部署"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo Fin Prime 是以 PLaMo 日语大语言模型为基础，通过追加日本金融领域语料训练构建的领域专用 LLM。",
+        "模型进一步采用对齐训练，使输出更符合用户意图并提高金融专业任务的实用性。",
+        "官方列出的应用包括根据销售日报起草建议、生成投融资审批材料、开展柜台或法人销售角色扮演、基于 IR 信息进行企业分析，以及摘要监管机构发布的信息。",
+        "Preferred Networks 同时提供机构专用模型构建服务，可利用客户的专有数据、产品信息、业务流程和内部知识继续训练。",
+        "模型支持面向金融机构的本地部署，以处理具有较高机密性的数据。",
+        "官方材料将其定位为日语金融业务模型，没有提供机器人感知、动作生成、具身交互、控制、规划、仿真或机器人数据处理能力。"
+      ],
+      "metrics": [
+        {
+          "label": "Japanese Language Model Financial Evaluation Harness 平均分",
+          "note": "官方项目材料报告 PLaMo Fin Prime 的五项金融任务平均结果；PLaMo-100B 预训练模型为 42.0。",
+          "value": "62.4"
+        },
+        {
+          "label": "chabsa",
+          "note": "F1；PLaMo-100B 预训练模型为 88.5。",
+          "value": "93.0"
+        },
+        {
+          "label": "cma_basics",
+          "note": "Accuracy；PLaMo-100B 预训练模型为 31.6。",
+          "value": "65.8"
+        },
+        {
+          "label": "cpa_audit",
+          "note": "Accuracy；PLaMo-100B 预训练模型为 17.3。",
+          "value": "35.9"
+        },
+        {
+          "label": "security_sales_1",
+          "note": "Accuracy；PLaMo-100B 预训练模型为 43.9。",
+          "value": "64.9"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "株式会社Preferred Networks",
+      "reason": "不符合条件 1。PLaMo Fin Prime 虽然是于 2025 年 6 月 17 日发布、且具有官方专页的软件模型，但其明确定位为面向日本金融任务的领域专用大语言模型。官方项目页和相关材料只支持金融知识问答、文档生成、企业分析、信息摘要、专有数据定制及本地部署等能力，没有证据表明它是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、模拟器、机器人数据集或具身智能框架。一般 LLM 软件不能仅因潜在上层集成可能性而纳入具身机器人项目索引。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo Fin Prime 是 Preferred Networks 发布的日语金融特化大语言模型。它以 PLaMo 为基础，通过日本金融语料的追加训练与对齐训练增强金融知识和指令响应能力，并可按金融机构的专有数据与业务流程构建定制模型。官方报告其在五项 Japanese Language Model Financial Evaluation Harness 任务上的平均结果为 62.4，高于所列 PLaMo-100B 预训练基线的 42.0。不过，该项目完全属于金融领域生成式 AI，不具备官方支持的机器人感知、动作决策或物理交互属性，因此不应收入具身机器人技术项目索引。"
+    }
+  },
+  "platform-roundup-august-2025-8045bcc": {
+    "checked_at": "2026-08-23T04:22:42.893698+00:00",
+    "title": "Platform roundup: August 2025",
+    "accepted": false,
+    "reason": "正在核验；最终结论尚未形成。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核对该官方月度汇总所对应的具体软件功能、文档和可量化结果。重点是判断它能否作为一个独立“技术项目”收录，而不是把普通平台更新误判为机器人研究项目。",
+        "从官方页面目前可确认，它确实发布了面向机器/机器人数据与运维的软件能力，但页面同时汇总了多个彼此独立的平台功能。下一步会检查官方文档是否给出明确实现细节与结果。学术地判断“影响力”不是单独列出的资格条件，但候选必须是一个可识别的软件项目。",
+        "我会以官方页面能直接支撑的事实为准，不把营销表述扩展成未报告的模型性能或机器人能力。",
+        "正在形成严格结论，并区分“软件符合具身方向”与“候选标题是否代表单一项目”这两个问题。"
+      ],
+      "fields": [
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核对该官方月度汇总所对应的具体软件功能、文档和可量化结果。重点是判断它能否作为一个独立“技术项目”收录，而不是把普通平台更新误判为机器人研究项目。",
+        "从官方页面目前可确认，它确实发布了面向机器/机器人数据与运维的软件能力，但页面同时汇总了多个彼此独立的平台功能。下一步会检查官方文档是否给出明确实现细节与结果。学术地判断“影响力”不是单独列出的资格条件，但候选必须是一个可识别的软件项目。",
+        "我会以官方页面能直接支撑的事实为准，不把营销表述扩展成未报告的模型性能或机器人能力。",
+        "正在形成严格结论，并区分“软件符合具身方向”与“候选标题是否代表单一项目”这两个问题。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "已确认官方发布日期与三项主要功能，继续核对官方文档。",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "https://www.viam.com/",
+      "official_project_url": "https://www.viam.com/post/platform-roundup-august-2025",
+      "open_source": false,
+      "organization_en": "Viam, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验；最终结论尚未形成。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验 Viam 2025 年 8 月平台更新是否满足严格索引对“独立具身机器人技术项目”的要求。"
+    }
+  },
+  "plamo-translate-99d74f8": {
+    "checked_at": "2026-08-23T04:22:42.916079+00:00",
+    "title": "PLaMo Translate",
+    "accepted": false,
+    "reason": "不符合条件1。官方发布页明确将 PLaMo Translate 定义为面向日语输入和输出的文本翻译大语言模型，功能、部署方式和指标均围绕文档翻译；没有证据表明它是用于物理机器人、机器人控制、具身感知、动作生成、仿真或具身智能评测的软件。它虽是软件和LLM，但通用文本翻译软件不属于本索引限定的具身机器人技术项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "日英及英日双向文本翻译",
+        "结合最长约80,000字符的前文上下文保持长文本术语、文体和表达一致性",
+        "识别对话、新闻文章和学术论文等文本风格并按原有风格翻译",
+        "保留换行、缩进、Markdown及程序代码等原始排版结构",
+        "支持网页试用以及本地或企业内部环境部署"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo Translate 是 Preferred Networks 集团从零开发的专用大语言模型，目标是日语与其他语言之间的文本翻译。",
+        "训练数据包含较高比例的日语和英语文本，官方将其定位为尤其面向日英、英日翻译的模型。",
+        "模型能够参考最长约80,000字符的前文上下文，以提高长文本中文体和词汇的一致性。",
+        "系统可识别对话、新闻文章、学术论文等原文风格，并保留换行、缩进、Markdown和程序代码的格式。",
+        "作为翻译专用模型，其设计比通用大语言模型更紧凑，可在满足条件的本地计算机或企业内部环境中运行，用于处理不宜上传云端的文档。",
+        "官方同时提供网页试用和本地部署版本；符合收入条件的个人及企业可依据 PLaMo Community License 下载使用。"
+      ],
+      "metrics": [
+        {
+          "label": "上下文长度",
+          "note": "官方称模型可利用此前文本，以提升长文翻译中文体和词汇的一致性。",
+          "value": "最长约80,000字符"
+        },
+        {
+          "label": "日英/英日网页输入上限",
+          "note": "PLaMo Translate 免费网页试用版的单次输入限制。",
+          "value": "5,000字符"
+        },
+        {
+          "label": "其他语言网页输入上限",
+          "note": "免费网页试用版对日英和英日之外语言组合的输入限制。",
+          "value": "2,000字符"
+        },
+        {
+          "label": "免费本地使用收入门槛",
+          "note": "官方公告称，最近年度收入低于该数额的企业以及个人可下载并用于商业或非商业用途。",
+          "value": "10亿日元以下"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en/",
+      "official_project_url": "https://www.preferred.jp/en/news/pr20250527",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件1。官方发布页明确将 PLaMo Translate 定义为面向日语输入和输出的文本翻译大语言模型，功能、部署方式和指标均围绕文档翻译；没有证据表明它是用于物理机器人、机器人控制、具身感知、动作生成、仿真或具身智能评测的软件。它虽是软件和LLM，但通用文本翻译软件不属于本索引限定的具身机器人技术项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo Translate 是 Preferred Networks 于2025年5月27日发布的日语文本翻译专用大语言模型，可进行日英、英日及其他涉及日语的文本翻译，并支持长上下文、原文风格识别、格式保持和本地部署。官方提供了明确的公司公告和产品使用入口，因此其发布主体与软件属性均可确认。然而，官方材料没有将其用于物理机器人或具身智能，也未展示感知到动作、机器人策略、控制规划、仿真、具身数据或评测等能力。项目因此不应收入严格的具身机器人技术项目索引。"
+    }
+  },
+  "plamo-2-0-prime-e832d98": {
+    "checked_at": "2026-08-23T04:22:42.938020+00:00",
+    "title": "PLaMo 2.0 Prime",
+    "accepted": false,
+    "reason": "不符合条件 1。官方发布页明确将 PLaMo 2.0 Prime 定义为面向日语知识、指令遵循和文本生成的通用大语言模型；页面没有将其作为物理机器人或具身智能软件发布，也没有展示机器人感知、动作输出、控制、规划、操作、仿真或具身评测。页面提到相关轻量模型可用于汽车和制造设备等边缘设备，但设备部署能力本身不能使该通用 LLM 成为具身机器人项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "日语知识、日语文本生成与指令遵循",
+        "长上下文文本理解与生成",
+        "通过云端 API 或本地部署提供推理服务",
+        "支持使用自有数据进行追加训练"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 2.0 Prime 是 Preferred Networks 于 2025 年 5 月 22 日发布的商用旗舰大语言模型，不是面向物理机器人或具身智能的软件项目。",
+        "该模型基于从零训练的 PLaMo 2.0-31B 指令模型，并针对推理效率进行了优化。",
+        "训练工作使用了包含大量日语内容的 1000 亿 token 高质量数据集；官方称其模型规模不到上一代 PLaMo-100B 的三分之一。",
+        "模型采用自研 tokenizer，以减少处理日语和英语文本所需的 token 数量。",
+        "上下文窗口由约 16000 token 扩展至约 32000 token，用于处理更长、更复杂的文本输入。",
+        "官方提供云端 API 和本地部署方式，并报告模型可在单张 GPU 上运行，便于使用企业自有数据进行追加训练。",
+        "官方材料仅描述语言理解、文本生成、指令遵循和部署能力，没有提供机器人感知、动作生成、控制、规划、仿真、具身数据或物理机器人评测。"
+      ],
+      "metrics": [
+        {
+          "label": "上下文长度",
+          "note": "由约 16000 token 扩展为原来的两倍。",
+          "value": "约 32000 token"
+        },
+        {
+          "label": "Tokenizer 效率",
+          "note": "官方报告的相对改进。",
+          "value": "日语提高 45%，英语提高 25%"
+        },
+        {
+          "label": "基础模型规模",
+          "note": "PLaMo 2.0 Prime 使用的指令模型为 PLaMo 2.0-31B。",
+          "value": "31B 参数"
+        },
+        {
+          "label": "训练数据规模",
+          "note": "GENIAC 第二阶段构建的、包含大量日语内容的数据集。",
+          "value": "100B token"
+        },
+        {
+          "label": "推理部署",
+          "note": "官方称模型可在单张 GPU 上运行。",
+          "value": "1 GPU"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://www.preferred.jp/ja/news/pr20250522",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件 1。官方发布页明确将 PLaMo 2.0 Prime 定义为面向日语知识、指令遵循和文本生成的通用大语言模型；页面没有将其作为物理机器人或具身智能软件发布，也没有展示机器人感知、动作输出、控制、规划、操作、仿真或具身评测。页面提到相关轻量模型可用于汽车和制造设备等边缘设备，但设备部署能力本身不能使该通用 LLM 成为具身机器人项目。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 2.0 Prime 是 Preferred Networks 发布的商用日语旗舰 LLM。它以 PLaMo 2.0-31B 为基础，改进了日语能力、指令遵循、token 效率和长上下文处理，并支持 API、本地部署及单 GPU 推理。虽然它是明确的软件模型项目，且具备合格的官方发布页和明确的责任机构，但现有官方材料没有证明它是用于物理机器人或具身智能的 VLA、策略、世界模型、控制栈、仿真器、数据引擎或评测基准，因此不应收入严格的具身机器人技术项目索引。"
+    }
+  },
+  "platform-roundup-april-2025-1e22f83": {
+    "checked_at": "2026-08-23T04:22:42.960851+00:00",
+    "title": "Platform roundup: April 2025",
+    "accepted": true,
+    "reason": "纳入。该候选有 Viam 于 2025 年 4 月 18 日发布的官方产品公告，主体是用于实体机器人和联网物理机器的配置发现、机器管理、模型训练及部署软件，而不是机器人硬件或硬件规格页面。公告明确由 Viam 负责并描述了已经加入平台的具体软件能力。由于该页面汇总的是 Viam 托管平台中的多项功能，且可访问材料没有证明这一整组发布内容全部开放源代码，因此 open_source 记为 false；这不影响其满足收录条件。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过机器构建器按具体硬件关键词检索兼容的软件模块与模型",
+        "通过发现服务查询已连接硬件并自动返回所需配置属性",
+        "在 Viam 应用内直接提交和管理 TensorFlow 模型训练任务",
+        "通过 Ask AI 获取与平台功能、配置和实践相关的上下文指导",
+        "集中配置机器人或智能机器的操作系统更新、网络和日志设置"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "Viam 于 2025 年 4 月 18 日发布该官方平台更新，内容明确面向机器人及其他联网物理机器的软件开发、配置、模型训练和部署流程。",
+        "机器构建器新增按硬件关键词搜索能力，可使用 HC-SR04、Intel RealSense D435i 或 Orange Pi Zero 2W 等具体型号查找兼容模块；检索范围包括模块模型简介和 supported-hardware 字段。",
+        "模块作者可以在 Registry 界面中为每个软件模型分别声明支持的硬件，使同一模块能够准确描述它对不同传感器或设备的兼容性。",
+        "新的 discovery service 可以主动查询硬件并返回配置所需的属性值；官方示例中的 webcam-discovery 会检测摄像头对应的 video_path，从而减少终端查询和手工配置错误。",
+        "平台加入 Ask AI 入口，为开发者提供关于 Viam 功能、机器配置和实践方式的即时指导；该公告没有报告其基础模型、准确率或机器人任务评测结果。",
+        "Machine Settings 通过 Viam Agent 统一管理设备供应、网络、操作系统更新和日志设置，面向多台实体机器的软件运维与可靠性管理。",
+        "Viam 在应用内加入托管 TensorFlow 模型训练支持，训练入口位于 Dataset 页面；此前内置训练主要支持 TFLite，而 TensorFlow 通常需要自定义训练脚本。"
+      ],
+      "metrics": [
+        {
+          "label": "发布时间",
+          "note": "Viam 官方产品公告标注的发布日期。",
+          "value": "2025-04-18"
+        },
+        {
+          "label": "LoRaWAN 更新项",
+          "note": "公告明确列出专用传感器模型、GitHub 解码器路径、设备下行指令和 Waveshare HAT 网关模型四类改进。",
+          "value": "4 项"
+        },
+        {
+          "label": "内置托管训练框架",
+          "note": "此次更新加入 TensorFlow 后，公告明确涉及 TensorFlow 与此前已有的 TFLite 两类内置训练模型格式。",
+          "value": "2 类：TensorFlow、TFLite"
+        },
+        {
+          "label": "配置发现结果",
+          "note": "官方报告 discovery service 能查询硬件并返回配置需要的属性值，例如自动确定摄像头的 video_path；未提供成功率或耗时基准。",
+          "value": "自动检测硬件配置属性"
+        },
+        {
+          "label": "平台部署结果",
+          "note": "官方报告这些能力已作为 Viam 平台功能提供，但没有公布机器人任务成功率、模型精度或与其他系统的量化比较。",
+          "value": "已在 Viam 平台中提供"
+        }
+      ],
+      "official_organization_url": "https://www.viam.com/",
+      "official_project_url": "https://www.viam.com/post/platform-roundup-april-2025",
+      "open_source": false,
+      "organization_en": "Viam",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。该候选有 Viam 于 2025 年 4 月 18 日发布的官方产品公告，主体是用于实体机器人和联网物理机器的配置发现、机器管理、模型训练及部署软件，而不是机器人硬件或硬件规格页面。公告明确由 Viam 负责并描述了已经加入平台的具体软件能力。由于该页面汇总的是 Viam 托管平台中的多项功能，且可访问材料没有证明这一整组发布内容全部开放源代码，因此 open_source 记为 false；这不影响其满足收录条件。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Viam 的 2025 年 4 月平台更新是一组面向实体机器人和其他智能机器开发生命周期的软件增强。其核心不是发布新机器人本体，而是降低硬件接入、机器配置、模型训练和设备运维的工程成本。开发者可以在机器构建器中按真实硬件型号寻找兼容模块，模块维护者也能为每个模型声明精确的硬件支持范围。新的发现服务能够查询已连接设备并生成所需配置属性，例如自动确定摄像头的视频设备路径。平台同时增加应用内 TensorFlow 托管训练，使通用计算环境中的模型训练不再必须依赖自定义脚本；已有的 TFLite 路径则继续面向资源受限的移动端和边缘设备。Ask AI 提供配置与平台使用指导，Machine Settings 和 Viam Agent 则统一处理设备供应、网络、系统更新及日志设置。整体上，这是机器人软件平台和数据到模型工作流的一次实质性发布，但官方没有提供机器人任务成功率、训练精度、延迟或基准对比数据。"
+    }
+  },
+  "platform-roundup-march-2025-b30f674": {
+    "checked_at": "2026-08-23T04:22:42.985707+00:00",
+    "title": "Platform roundup: March 2025",
+    "accepted": true,
+    "reason": "纳入。Viam 的官方专页于 2025 年 3 月 12 日发布了一组面向实体机器人和机器群的软件功能，包括配置版本控制、机器人数据热存储，以及 Micro-RDK 的离线连接、固件构建、OTA 部署和多 Wi-Fi 支持。页面的主体是机器人开发与运维软件，而不是机器人本体、传感器或其他硬件产品。Viam, Inc. 是明确负责该平台的公司。该更新包含官方公开代码生态中的组件，但官方材料没有证明本次整组平台功能均为开源，因此 open_source 记为 false。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "对机器人或机器群的模块化配置片段进行版本追踪，并通过标签实施测试、稳定版发布和回滚。",
+        "为近期采集的机器人数据启用热数据存储，以支持更快的查询和自动过期清理。",
+        "让基于 Micro-RDK 的微控制器设备在无互联网连接的本地 Wi-Fi 网络中运行。",
+        "通过云端构建流程生成包含自定义模块与逻辑的 Micro-RDK 固件，并利用 OTA 配置部署到设备。",
+        "在 Micro-RDK 启动时依次尝试连接多个预配置 Wi-Fi 网络。"
+      ],
+      "fields": [
+        "Robot systems",
+        "Data & benchmarks"
+      ],
+      "include": true,
+      "key_points": [
+        "这是 Viam 机器人软件平台在 2025 年 3 月发布的一组已实现功能更新，官方页面明确将其用于机器配置、设备连接和机器人数据管理，而非机器人硬件或产品规格。",
+        "配置 fragment 是可跨多台机器复用的模块化配置；新增版本机制可以保留变更历史，并支持嵌套 fragment 及其依赖关系的版本管理。",
+        "机器可以采用三种 fragment 更新策略：始终使用最新版、固定到特定版本，或跟随 stable、testing、beta 等标签所指向的版本。标签可在版本之间移动，从而进行隔离测试、分批发布和快速回滚。",
+        "Hot Data Store 会把指定时间窗口内最新采集的数据同时写入文档数据库和标准 blob 存储；超过配置窗口的数据会自动从热存储删除。",
+        "Micro-RDK 是用于微控制器的轻量级 Rust 机器人开发库。此次更新允许设备连接没有互联网出口的本地 Wi-Fi，扩大了其离线机器人部署能力。",
+        "Micro-RDK 的官方 GitHub 模板提供 GitHub Action，可依据发布版本构建固件 artifact；生成的 artifact 链接可写入 Viam 机器的 OTA 配置并通过 Wi-Fi 部署。",
+        "Micro-RDK 还可通过 Viam Agent 配置多个 Wi-Fi 网络，并在设备启动时尝试连接，行为与 viam-server 的多网络配置方式一致。"
+      ],
+      "metrics": [
+        {
+          "label": "发布时间",
+          "note": "Viam 官方平台更新页面标注的发布日期。",
+          "value": "2025-03-12"
+        },
+        {
+          "label": "Fragment 更新模式",
+          "note": "官方材料明确列出 latest version、specific version 和 tag-based versioning。",
+          "value": "3 种"
+        },
+        {
+          "label": "热数据写入路径",
+          "note": "近期数据被同时写入文档数据库与标准 blob 存储。",
+          "value": "双写"
+        },
+        {
+          "label": "离线连接能力",
+          "note": "Micro-RDK 可连接没有互联网接入的本地 Wi-Fi 网络。",
+          "value": "支持本地 Wi-Fi 离线运行"
+        },
+        {
+          "label": "网络容错能力",
+          "note": "设备启动时可尝试连接多个预配置 Wi-Fi 网络；官方页面未报告固定数量上限。",
+          "value": "支持多个 Wi-Fi 网络"
+        }
+      ],
+      "official_organization_url": "https://www.viam.com/about",
+      "official_project_url": "https://www.viam.com/post/platform-roundup-march",
+      "open_source": false,
+      "organization_en": "Viam, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "纳入。Viam 的官方专页于 2025 年 3 月 12 日发布了一组面向实体机器人和机器群的软件功能，包括配置版本控制、机器人数据热存储，以及 Micro-RDK 的离线连接、固件构建、OTA 部署和多 Wi-Fi 支持。页面的主体是机器人开发与运维软件，而不是机器人本体、传感器或其他硬件产品。Viam, Inc. 是明确负责该平台的公司。该更新包含官方公开代码生态中的组件，但官方材料没有证明本次整组平台功能均为开源，因此 open_source 记为 false。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Viam 的“Platform roundup: March 2025”集中发布了三类机器人平台能力：可版本化的机器配置 fragment、面向近期采集数据的 Hot Data Store，以及 Micro-RDK 的边缘连接与固件部署增强。Fragment 版本机制允许机器人群在最新版、固定版本和标签指向版本之间选择，并以移动标签的方式进行测试、渐进发布及回滚。Hot Data Store 将一个可配置时间窗口内的数据额外写入文档数据库，以加速近期数据查询，并在窗口过期后自动清除。面向 ESP32 等微控制器的 Rust Micro-RDK 则新增无互联网本地 Wi-Fi、云端固件构建、OTA artifact 部署和多 Wi-Fi 启动连接能力。整体属于实体机器人开发、数据管理和规模化运维的软件基础设施。"
+    }
+  },
+  "platform-roundup-february-2025-39f5002": {
+    "checked_at": "2026-08-23T04:22:43.011912+00:00",
+    "title": "Platform roundup: February 2025",
+    "accepted": false,
+    "reason": "正在进行官方来源核验，尚未形成最终判定。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验 Viam 官方页面及其链接材料，重点判断这是否是一个可独立收录的软件项目，而不是月度产品更新汇总。随后只使用可访问来源填写发布日期、组织、能力和指标。 \n\n正在核查候选页面的项目边界、版本发布信息与技术细节。",
+        "同时确认是否存在对应的专门项目页或官方版本公告。 \n\n我已开始从 Viam 官方材料核查 Micro-RDK 0.4.0 的性质及候选标题所指向的发布对象。",
+        "下一步会严格区分“平台月报文章”与“具有明确责任组织和专门页面的软件制品”。"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "待核验官方页面。",
+        "待核验软件发布对象。",
+        "待核验发布日期与版本。",
+        "待核验技术能力。"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在访问官方来源",
+          "value": "进行中"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.viam.com/post/platform-roundup-february",
+      "open_source": false,
+      "organization_en": "Viam",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在进行官方来源核验，尚未形成最终判定。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "正在核验。"
+    }
+  },
+  "neura-robotics-launches-technological-revolution-6978416": {
+    "checked_at": "2026-08-23T04:22:43.037205+00:00",
+    "title": "NEURA Robotics Launches Technological Revolution and Brings Cognitive Robotics into Everyday Life - Neura Robotics",
+    "accepted": false,
+    "reason": "正在核验。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "正在核验候选页面是否以可独立识别的软件项目为主体，并检查官方页面中的发布日期、责任组织、技术能力与可量化结果。若页面本质上是机器人硬件或展会产品发布，即使提到 AI 生态也会排除。等待网页检索完成。",
+        "我会把“Neuraverse 生态开放”与 4NE1、MiPA 产品发布区分开来，重点确认是否存在专门的软件项目页面及已发布的软件制品。等待网页检索完成。",
+        "正在检索 NEURA Robotics 官方站点及其链接的技术材料，随后会按给定字段返回严格判定。"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "检索进行中。",
+        "等待核验。",
+        "等待核验。",
+        "等待核验。"
+      ],
+      "metrics": [
+        {
+          "label": "状态",
+          "note": "正在检索",
+          "value": "pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "",
+      "open_source": false,
+      "organization_en": "",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在核验。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "plamo-fin-base-4e74697": {
+    "checked_at": "2026-08-23T04:22:43.060045+00:00",
+    "title": "PLaMo-fin-base",
+    "accepted": false,
+    "reason": "不符合条件 1。官方页面明确将 PLaMo-fin-base 定义为面向金融机构、追加训练日本金融知识的大语言模型，其用途是金融文本理解、生成、分析与摘要。没有证据表明该软件面向物理机器人或具身智能，也没有机器人感知、动作、控制、规划、仿真、数据集或评测组件。虽然它是软件并有 Preferred Networks 的正式发布页面，但通用或行业专用 LLM 本身不属于本索引规定的具身机器人技术项目。官方页面亦未声明该模型开源，因此 open_source=false。([preferred.jp](https://www.preferred.jp/news/pr20250127?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "面向日本金融机构的日语金融问答与文本生成",
+        "依据营业日报起草客户提案",
+        "生成投融资审批材料草案",
+        "基于 IR 信息开展企业分析",
+        "摘要监管机构发布的信息"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo-fin-base 是在 PLaMo 大语言模型基础上继续训练的金融领域派生模型，强化对象是日本金融知识。",
+        "追加训练数据为大量日语金融领域数据，目标是改善需要日本国内金融知识的任务表现。",
+        "官方列举的应用均为银行和证券业务中的自然语言处理，包括营业日报分析、投融资审批文件生成、客户服务角色扮演、企业分析和监管信息摘要。",
+        "Preferred Networks 提供从业务问题识别、技术及用例验证到应用开发和运维的金融机构 LLM 支持服务。",
+        "模型可根据金融机构的安全要求部署于云环境或本地环境，并可结合机构内部数据和业务流程进行定制。",
+        "官方材料没有说明 PLaMo-fin-base 具备机器人感知、动作生成、物理控制、具身交互、仿真或机器人评测功能。"
+      ],
+      "metrics": [
+        {
+          "label": "官方量化结果",
+          "note": "官方发布页未披露参数规模、金融基准分数、相对提升幅度或机器人相关评测结果。",
+          "value": "未报告"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://www.preferred.jp/ja/news/pr20250127",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件 1。官方页面明确将 PLaMo-fin-base 定义为面向金融机构、追加训练日本金融知识的大语言模型，其用途是金融文本理解、生成、分析与摘要。没有证据表明该软件面向物理机器人或具身智能，也没有机器人感知、动作、控制、规划、仿真、数据集或评测组件。虽然它是软件并有 Preferred Networks 的正式发布页面，但通用或行业专用 LLM 本身不属于本索引规定的具身机器人技术项目。官方页面亦未声明该模型开源，因此 open_source=false。([preferred.jp](https://www.preferred.jp/news/pr20250127?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo-fin-base 是 Preferred Networks 于 2025 年 1 月 27 日宣布向金融机构提供的行业专用大语言模型。它以 PLaMo 为基础，通过大量日语金融数据进行追加训练，服务于银行、证券等机构的文本型业务流程，并支持云端或本地安全部署。官方示例包括根据营业日报起草提案、生成投融资审批文件、进行柜面或法人销售角色扮演、依据 IR 信息分析企业，以及摘要监管信息。该项目具有明确的负责公司和正式发布页面，但其技术对象是金融自然语言处理，不涉及物理机器人、具身感知或动作控制，因此应从具身机器人项目索引中排除。"
+    }
   }
 }

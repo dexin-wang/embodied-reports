@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-20T04:16:56.937228+00:00",
+  "updated_at": "2026-08-23T04:08:56.944371+00:00",
   "organizations": {
     "自变量机器人-x-robotics-d9608c5b": {
       "name": "自变量机器人 / X² Robotics",
@@ -1734,6 +1734,129 @@
         "https://neura-robotics.com/neura-robotics-launches-technological-revolution/"
       ],
       "last_bootstrapped_at": "2026-08-20T04:16:47.985066+00:00",
+      "last_error": null
+    },
+    "wandercraft-2c0421b0": {
+      "name": "Wandercraft",
+      "official_urls": [
+        "https://www.wandercraft.eu/",
+        "https://www.wandercraft.eu/news"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-23T04:02:06.948433+00:00",
+      "last_error": null
+    },
+    "cartwheel-robotics-bc2c9d62": {
+      "name": "Cartwheel Robotics",
+      "official_urls": [
+        "https://www.cartwheelrobotics.com/"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-23T04:02:57.144531+00:00",
+      "last_error": null
+    },
+    "roboforce-186bd3c0": {
+      "name": "RoboForce",
+      "official_urls": [
+        "https://www.roboforce.ai/",
+        "https://www.roboforce.ai/news"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-23T04:03:23.165756+00:00",
+      "last_error": null
+    },
+    "micropsi-industries-ef3879a1": {
+      "name": "Micropsi Industries",
+      "official_urls": [
+        "https://github.com/micropsi-industries",
+        "https://micropsi.zendesk.com/hc/en-us",
+        "https://www.micropsi-industries.com/",
+        "https://www.micropsi-industries.com/blog",
+        "https://www.micropsi-industries.com/product"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.25.0",
+        "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.0",
+        "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.1",
+        "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.2",
+        "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3"
+      ],
+      "last_bootstrapped_at": "2026-08-23T04:04:22.664277+00:00",
+      "last_error": null
+    },
+    "machina-labs-55103728": {
+      "name": "Machina Labs",
+      "official_urls": [
+        "https://machinalabs.ai/",
+        "https://machinalabs.ai/resources"
+      ],
+      "bootstrap_candidate_urls": [],
+      "last_bootstrapped_at": "2026-08-23T04:04:57.781694+00:00",
+      "last_error": null
+    },
+    "viam-9b65dd6d": {
+      "name": "Viam",
+      "official_urls": [
+        "https://docs.viam.com/",
+        "https://github.com/viamrobotics",
+        "https://www.viam.com/",
+        "https://www.viam.com/blog",
+        "https://www.viam.com/press-releases"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://www.viam.com/post/january-2026-platform-roundup",
+        "https://www.viam.com/post/platform-roundup-april-2025",
+        "https://www.viam.com/post/platform-roundup-august-2025",
+        "https://www.viam.com/post/platform-roundup-december-2025",
+        "https://www.viam.com/post/platform-roundup-february",
+        "https://www.viam.com/post/platform-roundup-march",
+        "https://www.viam.com/post/platform-roundup-november-2025",
+        "https://www.viam.com/post/platform-roundup-september-2025"
+      ],
+      "last_bootstrapped_at": "2026-08-23T04:06:03.860899+00:00",
+      "last_error": null
+    },
+    "sereact-f5b2a93d": {
+      "name": "Sereact",
+      "official_urls": [
+        "https://cortex2.sereact.ai/",
+        "https://github.com/sereact",
+        "https://sereact.ai/",
+        "https://sereact.ai/company",
+        "https://sereact.ai/news"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://sereact.ai/en/posts/cortex-1-5",
+        "https://sereact.ai/posts/cortex-1-6",
+        "https://sereact.ai/posts/cortex-2",
+        "https://sereact.ai/posts/cortex-2-0-multi-gripper-generalization",
+        "https://sereact.ai/posts/cortex-2-5",
+        "https://sereact.ai/posts/cortex-bridging-vision-language-and-action-with-discrete-plans-and-tokens",
+        "https://sereact.ai/posts/subtask-prediction"
+      ],
+      "last_bootstrapped_at": "2026-08-23T04:07:00.043837+00:00",
+      "last_error": null
+    },
+    "preferred-networks-4812cef0": {
+      "name": "Preferred Networks",
+      "official_urls": [
+        "https://github.com/pfnet",
+        "https://projects.preferred.jp/",
+        "https://tech.preferred.jp/en/",
+        "https://www.preferred.jp/en/",
+        "https://www.preferred.jp/en/news/"
+      ],
+      "bootstrap_candidate_urls": [
+        "https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/",
+        "https://tech.preferred.jp/ja/blog/plamo-2-2-prime-release/",
+        "https://tech.preferred.jp/ja/blog/plamo-3-prime-beta-release/",
+        "https://www.preferred.jp/en/news/pr20250527",
+        "https://www.preferred.jp/en/news/pr20251007-2",
+        "https://www.preferred.jp/ja/news/pr20250127",
+        "https://www.preferred.jp/ja/news/pr20250522",
+        "https://www.preferred.jp/ja/news/pr20260622"
+      ],
+      "last_bootstrapped_at": "2026-08-23T04:08:17.007304+00:00",
       "last_error": null
     }
   }

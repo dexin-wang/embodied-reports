@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T03:10:12.812787+00:00",
+  "generated_at": "2026-08-23T04:08:56.945696+00:00",
   "candidates": [
     {
       "title": "Planning-Oriented End-to-End Autonomous Driving: Architectures, Evaluation, and Emerging Paradigms",
@@ -2517,6 +2517,30 @@
       ]
     },
     {
+      "title": "Introducing Matlantis-PFP v9: Benchmarking on MLIP Arena and Improving Experimental Agreement with r2SCAN - Preferred Networks Tech Blog",
+      "url": "https://tech.preferred.jp/en/blog/introducing-matlantis-pfp-v9/",
+      "date": "2026-08-01",
+      "summary": "Overview Since the release of Matlantis in July 2021, Matlantis-PFP (hereafter referred to as PFP), the core Machine Learning Interatomic Potential (MLIP)",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Benchmarking Matlantis-PFP v9 on MLIP Arena (full version) - Preferred Networks Tech Blog",
+      "url": "https://tech.preferred.jp/en/blog/matlantis-pfp-v9-mlip-arena/",
+      "date": "2026-08-01",
+      "summary": "Overview To demonstrate the capability of Matlantis-PFP (hereafter referred to as PFP) version 9 on a public benchmark, we evaluate it using the PBE",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "DeepSeek-V4-Flash-0731",
       "url": "https://api-docs.deepseek.com/updates/",
       "date": "2026-07-31",
@@ -3189,7 +3213,7 @@
     {
       "date": "2026-07-15",
       "organization_hint": "Sereact",
-      "summary": "Cortex 2.5 adds in-context robot learning from a small number of video demonstrations, allowing the manipulation policy to perform new task variations without a separate training run.",
+      "summary": "Cortex 2.5 added in-context robotic learning from a small number of video demonstrations, using retrieval to condition both its vision-language planner and world model without retraining for each task variation.",
       "title": "Cortex 2.5",
       "url": "https://sereact.ai/posts/cortex-2-5",
       "authors": [],
@@ -3910,6 +3934,18 @@
       ]
     },
     {
+      "title": "News from Sereact",
+      "url": "https://sereact.ai/news",
+      "date": "2026-07-02",
+      "summary": "Find out what the media is saying about Sereact. Dive into the fascinating world of embodied AI and robotics automation with our blog.",
+      "organization_hint": "Sereact",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "GigaWorld-1: A Roadmap to Build World Models for Robot Policy Evaluation",
       "summary": "Evaluating embodied robot foundation models remains a critical bottleneck; unlike large language models efficiently assessed via digital benchmarks, robotic policies require slow, costly real-world rollouts limited by hardware and human supervision, which has driven interest in world models as surrogate policy evaluators, yet the key properties that make a world model reliable for policy assessment remain poorly understood. This work presents a systematic study of world models for robotic policy evaluation and introduces WMBench, a benchmark constructed from real-robot teleoperation data and matched policy rollouts covering diverse manipulation tasks to enable controlled comparisons across model families, action encodings, rollout horizons, and evaluation metrics. Using WMBench, we analyze 7 video world models, 4 action representation schemes, and over 324,000 simulated policy rollouts paired with real robot executions, further enriching our analysis with large-scale community submissions from the CVPR 2026 GigaBrain Challenge, curated synthetic trajectories, and a training videos spanning more than 12,000 hours. Our experiments deliver three core insights: evaluator quality is dominated by long-horizon, action-faithful rollout consistency rather than short-term visual realism; pretraining gains stem not only from data scale but from balancing general world knowledge with robot-specific controllability; and architectural choices including action encoding, memory design, and evaluator-focused post-training strongly determine alignment with real-world robot behavior. Drawing on these results, we derive a practical design roadmap and realize it in \\textit{GigaWorld-1}, a world model specially optimized for policy evaluation, and we fully release our code, models, datasets, and toolkits to advance scalable evaluation research for embodied foundation models.",
       "date": "2026-07-02",
@@ -4001,6 +4037,18 @@
       "date": "2026-07-01",
       "summary": "Geek+ unveils Gravity, its advanced AI framework, and a new strategy to enhance robotics, focusing on real-world applications and commercial deployment.",
       "organization_hint": "极智嘉 / Geek+",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Building a Strong Japanese Reward Model on PLaMo - Preferred Networks Tech Blog",
+      "url": "https://tech.preferred.jp/en/blog/building-a-strong-japanese-reward-model-on-plamo/",
+      "date": "2026-07-01",
+      "summary": "This article is a contribution by Boming Yang, who completed PFN’s 2025 summer internship program and worked part-time for the company. 日本語翻訳版:",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -4297,6 +4345,18 @@
       "date": "2026-06-22",
       "summary": "Rerun 0.33.1 fixes preservation of transform-bearing data chunks and improves timeline scrubbing in the multimodal robotics-data viewer.",
       "organization_hint": "Rerun",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PLaMo 3.0 Prime",
+      "url": "https://www.preferred.jp/ja/news/pr20260622",
+      "date": "2026-06-22",
+      "summary": "Preferred Networks formally released PLaMo 3.0 Prime with separate reasoning and non-reasoning models, improved tool use and multistep processing, and availability through APIs or on-premises deployment.",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -5634,8 +5694,8 @@
     {
       "date": "2026-05-28",
       "organization_hint": "Sereact",
-      "summary": "A task-phase prediction module for Cortex 2.0 that processes recent video history and conditions its world model before candidate robot trajectories are generated.",
-      "title": "Subtask Prediction for Cortex 2.0",
+      "summary": "Sereact released a video-based subtask prediction module that identifies the current phase of a long-horizon manipulation task and conditions Cortex 2.0's world-model planning on that context.",
+      "title": "Subtask Prediction",
       "url": "https://sereact.ai/posts/subtask-prediction",
       "authors": [],
       "score": 100,
@@ -6351,6 +6411,18 @@
       "reasons": [
         "keywords: humanoid, cross-embodiment",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Cortex 2.0 Multi-Gripper Generalization",
+      "url": "https://sereact.ai/posts/cortex-2-0-multi-gripper-generalization",
+      "date": "2026-05-11",
+      "summary": "This Cortex 2.0 update added learned gripper embeddings and shared planning and action components that let the policy adapt to different end effectors using small targeted demonstration datasets.",
+      "organization_hint": "Sereact",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -7784,6 +7856,18 @@
       ]
     },
     {
+      "title": "PLaMo 3.0 Prime Beta",
+      "url": "https://tech.preferred.jp/ja/blog/plamo-3-prime-beta-release/",
+      "date": "2026-03-19",
+      "summary": "Preferred Networks released the beta version of PLaMo 3.0 Prime, a rebuilt flagship foundation model with reasoning support and a context length of approximately 64,000 tokens.",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Legend of Mirokai v0.7.2",
       "url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.2/",
       "date": "2026-03-19",
@@ -8351,11 +8435,35 @@
       ]
     },
     {
+      "title": "Cortex 2.0: Planning Before Acting",
+      "url": "https://sereact.ai/posts/cortex-2",
+      "date": "2026-02-21",
+      "summary": "Cortex 2.0 added a visual-latent world model that generates candidate future trajectories, scores them for progress and risk, and conditions a vision-language-action policy on the selected plan.",
+      "organization_hint": "Sereact",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Legend of Mirokai v0.7.1",
       "url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.1/",
       "date": "2026-02-19",
       "summary": "Developer release of the PyMirokai Python interface for interacting with and controlling Mirokaï robots.",
       "organization_hint": "Enchanted Tools",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Micropsi Industries Integration SDK 0.26.3",
+      "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3",
+      "date": "2026-02-17",
+      "summary": "Micropsi Industries Integration SDK 0.26.3 fixes package-based robot implementation imports so packages are imported rather than treated only as single files.",
+      "organization_hint": "Micropsi Industries",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8553,6 +8661,18 @@
       ]
     },
     {
+      "title": "Micropsi Industries Integration SDK 0.26.2",
+      "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.2",
+      "date": "2026-02-11",
+      "summary": "Micropsi Industries Integration SDK 0.26.2 removes the deprecated pkg_resources dependency from the MIRAI robot integration stack.",
+      "organization_hint": "Micropsi Industries",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2026-02-10",
       "organization_hint": "Beijing Innovation Center of Humanoid Robotics",
       "summary": "General-purpose full-size humanoid platform supporting touch interaction, highly dynamic whole-body control and stable operation in constrained environments.",
@@ -8591,9 +8711,21 @@
     {
       "date": "2026-02-10",
       "organization_hint": "Sereact",
-      "summary": "Cortex 1.6 introduces the Process-Reward Operator, a learned reward model that extracts dense training signals from continuous multimodal records of real robot execution.",
+      "summary": "Cortex 1.6 introduced the Process-Reward Operator, a learned reward model that derives continuous progress, completion-likelihood and risk signals from multimodal robot execution data.",
       "title": "Cortex 1.6: Learning From the Way Things Unfold",
       "url": "https://sereact.ai/posts/cortex-1-6",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Micropsi Industries Integration SDK 0.26.1",
+      "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.1",
+      "date": "2026-02-06",
+      "summary": "Micropsi Industries Integration SDK 0.26.1 corrects robot motion control by applying pose deltas to the projected pose instead of an outdated last-read pose.",
+      "organization_hint": "Micropsi Industries",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8667,6 +8799,18 @@
       "reasons": [
         "keywords: vision-language-action, vla, robot foundation",
         "report/model title"
+      ]
+    },
+    {
+      "title": "Micropsi Industries Integration SDK 0.26.0",
+      "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.0",
+      "date": "2026-02-05",
+      "summary": "Micropsi Industries Integration SDK 0.26.0 introduces a more realistic sandbox for testing robot interfaces and MIRAI-like motion control behavior.",
+      "organization_hint": "Micropsi Industries",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -8788,6 +8932,18 @@
       ]
     },
     {
+      "title": "Cortex 1.5: Interactive RL Policy Patching for Real-World Robotics",
+      "url": "https://sereact.ai/en/posts/cortex-1-5",
+      "date": "2026-01-30",
+      "summary": "Cortex 1.5 introduced Interactive RL Policy Patching, a framework for correcting robotic policies through brief human demonstrations and targeted reinforcement-learning updates without full retraining.",
+      "organization_hint": "Sereact",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "UnifoLM-VLA-0",
       "url": "https://github.com/unitreerobotics/unifolm-vla",
       "date": "2026-01-29",
@@ -8805,6 +8961,18 @@
       "date": "2026-01-29",
       "summary": "PaddleOCR 3.4.0 released PaddleOCR-VL 1.5, an updated vision-language model and document-parsing stack with irregular document-element localization, seal recognition and cross-page structure processing.",
       "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PLaMo 2.2 Prime",
+      "url": "https://tech.preferred.jp/ja/blog/plamo-2-2-prime-release/",
+      "date": "2026-01-28",
+      "summary": "Preferred Networks released PLaMo 2.2 Prime with additional post-training data and improvements in English and Japanese instruction following and selected medical-domain evaluations.",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8906,8 +9074,8 @@
     {
       "date": "2026-01-15",
       "organization_hint": "Viam",
-      "summary": "Viam's January platform release added a redesigned ML-model selection interface and field-development improvements including resumable downloads for robots on unreliable networks.",
-      "title": "Viam Platform Roundup: January 2026",
+      "summary": "Viam released improved ML model selection, real-time mobile controls for robot-arm joints and poses, resumable Viam Agent and RDK downloads, and distributed tracing for robotic systems.",
+      "title": "Platform roundup: January 2026",
       "url": "https://www.viam.com/post/january-2026-platform-roundup",
       "authors": [],
       "score": 100,
@@ -9331,8 +9499,8 @@
     {
       "date": "2025-12-08",
       "organization_hint": "Viam",
-      "summary": "A Viam platform release adding a natural-language AI data-query assistant, reusable saved queries, prefixed reusable robot configurations, and more reliable remote machine restarts.",
-      "title": "Viam Platform Roundup: December 2025",
+      "summary": "Viam introduced a beta AI assistant that generates MQL data queries from natural-language requests, reusable saved queries, fragment prefixes for symmetric robot configurations, and more reliable machine restarts.",
+      "title": "Platform roundup: December 2025",
       "url": "https://www.viam.com/post/platform-roundup-december-2025",
       "authors": [],
       "score": 100,
@@ -9844,6 +10012,18 @@
       ]
     },
     {
+      "title": "Micropsi Industries Integration SDK 0.25.0",
+      "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.25.0",
+      "date": "2025-11-15",
+      "summary": "Micropsi Industries Integration SDK 0.25.0 adds a preparation method for center-of-gravity estimation in the MIRAI robot integration interface.",
+      "organization_hint": "Micropsi Industries",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-11-14",
       "organization_hint": "University of Oxford",
       "summary": "These electronics-free fluidic soft robots use air pressure and mechanical coupling through the ground to produce complex rhythmic motion and synchronize with one another.",
@@ -9965,6 +10145,18 @@
       "summary": "A large model developed specifically for robots and described by XPENG as the core engine for autonomous action, deeper reasoning, and decision-making in its humanoid robotics stack.",
       "title": "XPENG VLT Large Model",
       "url": "https://www.xpeng.com/pressroom/news/019a56f54fe99a2a0a8d8a0282e402b7",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Platform roundup: November 2025",
+      "url": "https://www.viam.com/post/platform-roundup-november-2025",
+      "date": "2025-11-05",
+      "summary": "Viam released multi-machine fleet dashboards and simplified resource naming in its motion APIs for controlling robot arms and other resources.",
+      "organization_hint": "Viam",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -10281,6 +10473,18 @@
       ]
     },
     {
+      "title": "PLaMo 2.1 Prime",
+      "url": "https://www.preferred.jp/en/news/pr20251007-2",
+      "date": "2025-10-07",
+      "summary": "Preferred Networks released PLaMo 2.1 Prime with automated tool calling, enabling the model to select databases and external systems from user instructions and integrate with other AI agents.",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Pre-Scale Engineering Discipline: The Hard Truths Behind Scaling a Physical AI Product Part 2 | Dexterity",
       "url": "https://dexterity.ai/blog/pre-scale-engineering-discipline",
       "date": "2025-10-02",
@@ -10422,6 +10626,18 @@
       "date": "2025-09-29",
       "summary": "DeepSeek-V3.2-Exp is an experimental LLM introducing DeepSeek Sparse Attention for more efficient long-context training and inference.",
       "organization_hint": "深度求索 / DeepSeek",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Cortex",
+      "url": "https://sereact.ai/posts/cortex-bridging-vision-language-and-action-with-discrete-plans-and-tokens",
+      "date": "2025-09-28",
+      "summary": "Sereact introduced Cortex, a vision-language-action system that links perception, language instructions, discrete planning and robot control through tokenized visual and motion representations.",
+      "organization_hint": "Sereact",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -10627,6 +10843,18 @@
         "keywords: embodied foundation",
         "report/model title",
         "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Platform roundup: September 2025",
+      "url": "https://www.viam.com/post/platform-roundup-september-2025",
+      "date": "2025-09-17",
+      "summary": "Viam added dataset merging, TFLite inference support for automatic image labeling, multi-machine robotics applications, reusable fragment variables, and cross-platform module hot reloading.",
+      "organization_hint": "Viam",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {
@@ -11048,6 +11276,18 @@
       "date": "2025-08-20",
       "summary": "FieldAI detailed the commercial-scale deployment of its Field Foundation Models, a hardware-agnostic class of physics-first robotics foundation models designed to reason about uncertainty, risk and physical constraints. The models provide real-time edge autonomy across quadrupeds, humanoids, wheeled robots and passenger-scale vehicles without prior maps, GPS or predefined paths.",
       "organization_hint": "Field AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Platform roundup: August 2025",
+      "url": "https://www.viam.com/post/platform-roundup-august-2025",
+      "date": "2025-08-19",
+      "summary": "Viam released TensorFlow-based automatic image labeling for robotics datasets, hosted Viam web applications for control and monitoring, and a scheduler for recurring machine jobs.",
+      "organization_hint": "Viam",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11991,18 +12231,6 @@
       ]
     },
     {
-      "title": "Neuraverse launch",
-      "url": "https://neura-robotics.com/neura-robotics-launches-technological-revolution/",
-      "date": "2025-06-24",
-      "summary": "NEURA Robotics launched Neuraverse as an open, learning robotics ecosystem for developing, distributing and operating robot applications. Connected robots share experience from real-world tasks so learned capabilities can be reused across the network.",
-      "organization_hint": "NEURA Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Intrinsic pose-detection foundation model in Flowstate",
       "url": "https://www.intrinsic.ai/blog/posts/unveiling-next-generation-solutions-built-with-intrinsic",
       "date": "2025-06-24",
@@ -12095,6 +12323,18 @@
       "date": "2025-06-17",
       "summary": "Generalist previewed cross-embodied, end-to-end neural sensorimotor policies that map visual and other sensor inputs to real-time 100 Hz robot actions for dexterous manipulation.",
       "organization_hint": "Generalist AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PLaMo Fin Prime",
+      "url": "https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/",
+      "date": "2025-06-17",
+      "summary": "Preferred Networks released PLaMo Fin Prime, a domain-specific large language model aligned for Japanese financial tasks, and introduced a service for building institution-specific models from proprietary data.",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -12335,6 +12575,18 @@
       ]
     },
     {
+      "title": "NEURA Robotics Launches Technological Revolution and Brings Cognitive Robotics into Everyday Life - Neura Robotics",
+      "url": "https://neura-robotics.com/neura-robotics-launches-technological-revolution/",
+      "date": "2025-06-02",
+      "summary": "NEURA Robotics unveils the third-generation 4NE1 humanoid, launches the MiPA household robot and opens the Neuraverse ecosystem at Automatica 2025.",
+      "organization_hint": "NEURA Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-06-02",
       "organization_hint": "Google DeepMind Robotics",
       "summary": "We’re introducing an efficient, on-device robotics model with general-purpose dexterity and fast task adaptation.",
@@ -12450,6 +12702,18 @@
       ]
     },
     {
+      "title": "PLaMo Translate",
+      "url": "https://www.preferred.jp/en/news/pr20250527",
+      "date": "2025-05-27",
+      "summary": "Preferred Networks launched PLaMo Translate, a large language model specialized for translating text to and from Japanese, with web-based and on-premises availability.",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Hume: Introducing System-2 Thinking in Visual-Language-Action Model",
       "summary": "Humans practice slow thinking before performing actual actions when handling complex tasks in the physical world. This thinking paradigm, recently, has achieved remarkable advancement in boosting Large Language Models (LLMs) to solve complex tasks in digital domains. However, the potential of slow thinking remains largely unexplored for robotic foundation models interacting with the physical world. In this work, we propose Hume: a dual-system Vision-Language-Action (VLA) model with value-guided System-2 thinking and cascaded action denoising, exploring human-like thinking capabilities of Vision-Language-Action models for dexterous robot control. System 2 of Hume implements value-Guided thinking by extending a Vision-Language-Action Model backbone with a novel value-query head to estimate the state-action value of predicted actions. The value-guided thinking is conducted by repeat sampling multiple action candidates and selecting one according to state-action value. System 1 of Hume is a lightweight reactive visuomotor policy that takes System 2 selected action and performs cascaded action denoising for dexterous robot control. At deployment time, System 2 performs value-guided thinking at a low frequency while System 1 asynchronously receives the System 2 selected action candidate and predicts fluid actions in real time. We show that Hume outperforms the existing state-of-the-art Vision-Language-Action models across multiple simulation benchmark and real-robot deployments.",
       "date": "2025-05-27",
@@ -12479,6 +12743,18 @@
       "summary": "Release of an o3-based Operator action model fine-tuned with additional computer-use safety data, replacing the original GPT-4o-based model in the Operator product.",
       "title": "OpenAI o3 Operator",
       "url": "https://openai.com/index/o3-o4-mini-system-card-addendum-operator-o3/",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PLaMo 2.0 Prime",
+      "url": "https://www.preferred.jp/ja/news/pr20250522",
+      "date": "2025-05-22",
+      "summary": "Preferred Networks released PLaMo 2.0 Prime, a commercial flagship large language model with improved Japanese performance, instruction following, token efficiency and a context length of approximately 32,000 tokens.",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -12925,8 +13201,8 @@
     {
       "date": "2025-04-18",
       "organization_hint": "Viam",
-      "summary": "The April Viam platform release added built-in training support for full TensorFlow models alongside existing TFLite workflows and expanded hardware discovery and configuration tools.",
-      "title": "Viam TensorFlow Model Training Support",
+      "summary": "Viam added built-in TensorFlow model training, an AI configuration assistant, automated hardware-configuration discovery, and expanded software support for managing robotic machines.",
+      "title": "Platform roundup: April 2025",
       "url": "https://www.viam.com/post/platform-roundup-april-2025",
       "authors": [],
       "score": 100,
@@ -13524,6 +13800,18 @@
       ]
     },
     {
+      "title": "Platform roundup: March 2025",
+      "url": "https://www.viam.com/post/platform-roundup-march",
+      "date": "2025-03-12",
+      "summary": "Viam released versioned robot-configuration fragments, a hot data store for faster queries, and Micro-RDK support for offline operation, cloud firmware builds, and multiple Wi-Fi networks.",
+      "organization_hint": "Viam",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "HuiSi KaiWu general embodied-intelligence platform",
       "url": "https://www.x-humanoid.com/news-view-154.html",
       "date": "2025-03-12",
@@ -13805,6 +14093,18 @@
       ]
     },
     {
+      "title": "Platform roundup: February 2025",
+      "url": "https://www.viam.com/post/platform-roundup-february",
+      "date": "2025-02-13",
+      "summary": "Viam released Micro-RDK 0.4.0 with over-the-air firmware updates, nested configurations for robot fleets, a hardware discovery service, and improved image-annotation tools.",
+      "organization_hint": "Viam",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-02-12",
       "organization_hint": "Viam",
       "summary": "Nested Fragments lets reusable robot and machine configurations reference other fragments, enabling layered component stacks and propagated configuration updates across fleets.",
@@ -13961,6 +14261,18 @@
         "keywords: vla, robot foundation",
         "physical-robot evidence",
         "release signal"
+      ]
+    },
+    {
+      "title": "PLaMo-fin-base",
+      "url": "https://www.preferred.jp/ja/news/pr20250127",
+      "date": "2025-01-27",
+      "summary": "Preferred Networks began providing PLaMo-fin-base, a PLaMo derivative additionally trained on Japanese financial knowledge, for use by financial institutions in secure cloud or on-premises applications.",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
       ]
     },
     {

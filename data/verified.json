@@ -5126,6 +5126,88 @@
     ]
   },
   {
+    "id": "cortex-2-0-multi-gripper-generalization-a61fb23",
+    "title": "Cortex 2.0 Multi-Gripper Generalization",
+    "organization": "Sereact GmbH",
+    "organizationKind": "Company",
+    "date": "2026-05-11",
+    "year": 2026,
+    "summary": "Cortex 2.0 Multi-Gripper Generalization 是 Sereact 面向工业机器人发布的一项跨末端执行器策略泛化更新。它没有为鞋盒夹爪、两指夹爪、人形手和吸盘分别维护完整策略，而是为每种夹爪学习动态嵌入，并将其注入世界模型、低层 VLM 与 VLA 动作头。系统在视觉潜空间生成多个候选未来，再由 PRO 模块依据任务进展、风险和稳定性进行评分，选定结果后由共享动作解码器及机械臂、夹爪输出头执行。接入新硬件主要需要少量针对性遥操作数据和新的夹爪输出头，不需要重新训练规划器。官方称鞋盒专用夹爪由此在数周内完成客户现场部署，使机器人群可靠处理的商品范围扩大一个数量级；同一软件栈还运行于单臂拣选、双臂退货处理和人形机器人装卸场景，并已覆盖超过200个生产部署。",
+    "tags": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "World models",
+      "Robot manipulation",
+      "Dexterous manipulation"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Cortex 2.0 将每种夹爪表示为共享嵌入表中的独立可学习动态嵌入，并把当前夹爪的条件信息注入世界模型、低层视觉语言模型和 VLA 动作头。",
+        "系统在视觉潜空间进行规划，使对象、接触和运动的像素级规律可以跨机器人及末端执行器迁移；PRO 模块对候选未来的任务进展、风险和稳定性进行评分。",
+        "动作解码器的大部分参数由不同夹爪共享，其上设置两个轻量输出头，分别产生机械臂命令和末端执行器命令。",
+        "接入新夹爪时，只需在嵌入表中增加一行、采集少量有针对性的遥操作示范，并学习该夹爪输出头的特定执行器行为，不需要重新训练规划器。",
+        "官方展示的适配对象包括鞋盒专用夹爪、两指夹爪、五指人形手和吸盘夹爪，覆盖单臂高速拣选、双臂退货处理以及人形机器人装卸推车等场景。",
+        "该更新属于面向物理机器人的策略与规划软件，而不是夹爪硬件发布：官方页面的核心主题是同一 Cortex 模型如何通过共享规划、动作组件和夹爪嵌入跨末端执行器泛化。"
+      ],
+      "capabilities": [
+        "以少量针对性遥操作示范，将同一策略适配到新的末端执行器",
+        "在视觉潜空间生成候选未来，并按任务进展、风险和稳定性进行评分与选择",
+        "统一支持单臂工作站、双臂退货处理站和人形机器人等不同具身形态",
+        "操控鞋盒专用夹爪、两指夹爪、五指人形手和吸盘夹爪",
+        "执行鞋盒、纸箱、软质及不规则商品、塑料袋等仓储物品的抓取与搬运"
+      ],
+      "metrics": [
+        {
+          "label": "可靠处理品类扩展",
+          "note": "官方称新鞋类末端执行器的接入使机器人群能够可靠处理的商品范围扩大了一个数量级。",
+          "value": "10倍量级"
+        },
+        {
+          "label": "规划器再训练需求",
+          "note": "加入新夹爪时保留原有世界模型与共享解码组件，官方明确表示无需重新训练规划器。",
+          "value": "无需重新训练"
+        },
+        {
+          "label": "部署周期",
+          "note": "鞋盒夹爪在硬件准备就绪后，于数周内部署到客户现场。",
+          "value": "数周内"
+        },
+        {
+          "label": "生产部署规模",
+          "note": "该多夹爪 Cortex 系统发布时，官方称其已在生产环境中交付超过这一数量的部署。",
+          "value": "超过200个部署"
+        },
+        {
+          "label": "鞋盒工作站处理规模",
+          "note": "官方称专用鞋盒夹爪可在持续班次中移动数千件商品。",
+          "value": "每班数千件"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://sereact.ai/posts/cortex-2-0-multi-gripper-generalization"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://sereact.ai/company"
+      },
+      {
+        "label": "Report",
+        "url": "https://sereact.ai/posts/cortex-2-0-multi-gripper-generalization"
+      }
+    ]
+  },
+  {
     "id": "flexiv-ros-2-humble-1-9-1-47fd066",
     "title": "Flexiv ROS 2 Humble 1.9.1",
     "organization": "非夕科技 / Flexiv Robotics",
@@ -7699,6 +7781,87 @@
     ]
   },
   {
+    "id": "micropsi-industries-integration-sdk-0-26-3-fadb2e6",
+    "title": "Micropsi Industries Integration SDK 0.26.3",
+    "organization": "Micropsi Industries",
+    "organizationKind": "Company",
+    "date": "2026-02-17",
+    "year": 2026,
+    "summary": "Micropsi Industries Integration SDK 0.26.3 是 MIRAI 工业机器人控制系统的开源集成工具包，目标是让新的实体机器人平台实现 MIRAI 所需的状态读取和实时运动控制接口。项目不仅提供接口定义，还包含可执行的运动测试 sandbox、简化 MIRAI 控制器的开发服务器、联调客户端以及面向 PLC 和机器人程序的技能执行协议。0.26.3 并非新的机器人基础模型或大型功能版本，而是一个具体的兼容性修复：机器人实现被组织为 Python package 时，加载过程会正确导入整个 package，而不再只按单个文件处理。其技术价值主要位于机器人系统集成、控制接口验证和 MIRAI 技能部署链路。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是面向物理机器人的集成与测试软件包，而非机器人本体或硬件产品；官方说明将其定义为用于实现和测试 MIRAI 机器人集成的 SDK。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk))",
+        "SDK 的 Python 模块提供抽象接口，机器人适配器必须实现这些接口，才能让 MIRAI 读取机器人状态并进行控制。仓库还提供不连接真实硬件的示例实现，供开发新适配器时使用。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk))",
+        "mirai-sandbox 会读取机器人位姿并发送运动指令，测试工具坐标系三个方向的平移、单轴与对角轴旋转，以及 Z-Y-X 连续旋转，并检查机器人能否返回起始位姿。([raw.githubusercontent.com](https://raw.githubusercontent.com/micropsi-industries/micropsi-integration-sdk/0.26.3/README.md))",
+        "mirai-dev-server 在 6599 端口模拟简化的 MIRAI 控制器，可接收 PLC、机器人程序或配套开发客户端发出的技能命令；ExecuteSkill 流程会尝试连接机器人并近似执行完整技能。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk))",
+        "技能 API 覆盖控制器元数据、已训练技能列表、异步预加载、技能触发、执行结果、终止状态值和异常信息；终止状态数据包括速度、力和完成概率。([raw.githubusercontent.com](https://raw.githubusercontent.com/micropsi-industries/micropsi-integration-sdk/0.26.3/skill_api.md))",
+        "技能调用接口同时提供 JSON、XML-RPC 和自定义 TCP 二进制协议；二进制 API v2 在 v1 消息结构基础上增加 CRLF 结尾并限定字符串为 ASCII 编码。([raw.githubusercontent.com](https://raw.githubusercontent.com/micropsi-industries/micropsi-integration-sdk/0.26.3/skill_api.md))",
+        "0.26.3 是一个范围很窄的修复版本：当机器人实现以 Python package 而不是单文件提供时，加载器现在会实际导入该 package。官方 GitHub 发布页显示该版本于 2026 年 2 月 17 日发布。([github.com](https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3))"
+      ],
+      "capabilities": [
+        "为接入 MIRAI 的实体机器人实现统一的 Python 抽象控制接口，可读取机器人位姿并发送运动命令。",
+        "提供 mirai-sandbox，在真实机器人或仿真实现上检查几何变换、实时控制以及工具坐标系平移和旋转。",
+        "提供简化的 MIRAI 开发服务器和客户端，用于联调 PLC、机器人程序与技能执行流程。",
+        "支持查询、预加载、执行 MIRAI 技能，并读取执行结果、终止状态参数和异常信息。",
+        "通过 JSON、XML-RPC 和两版自定义二进制协议连接外部机器人程序或 PLC。"
+      ],
+      "metrics": [
+        {
+          "label": "发布结果",
+          "note": "官方发布说明仅报告一项变更：修复 package 形式机器人实现的实际导入。",
+          "value": "1 项导入修复"
+        },
+        {
+          "label": "Sandbox 默认线速度",
+          "note": "mirai-sandbox 的默认末端线速度。",
+          "value": "0.05 m/s"
+        },
+        {
+          "label": "Sandbox 默认旋转速度",
+          "note": "mirai-sandbox 的默认末端旋转速度。",
+          "value": "5.0°/s"
+        },
+        {
+          "label": "Sandbox 到位容差",
+          "note": "默认线性到位容差为 0.001 m，默认旋转到位容差为 0.5°。",
+          "value": "0.001 m / 0.5°"
+        },
+        {
+          "label": "技能协议覆盖",
+          "note": "官方文档实现 JSON、XML-RPC，以及自定义二进制 API v1 和 v2。",
+          "value": "3 类接口；2 个二进制协议版本"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.micropsi-industries.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.3"
+      }
+    ]
+  },
+  {
     "id": "upgraded-robot-management-system-rms-2fb0c25",
     "title": "Upgraded Robot Management System (RMS)",
     "organization": "极智嘉 / Geek+",
@@ -8025,6 +8188,85 @@
       {
         "label": "Evidence",
         "url": "https://www.linkedin.com/posts/sereact_we-just-released-cortex-16-a-new-way-for-activity-7424869231986413569-0HmW"
+      }
+    ]
+  },
+  {
+    "id": "micropsi-industries-integration-sdk-0-26-0-518cc08",
+    "title": "Micropsi Industries Integration SDK 0.26.0",
+    "organization": "Micropsi Industries",
+    "organizationKind": "Company",
+    "date": "2026-02-05",
+    "year": 2026,
+    "summary": "Micropsi Industries Integration SDK 0.26.0 是面向 MIRAI 机器人控制系统集成者的开源 Python 工具包。本次版本的核心是更贴近实际 MIRAI 控制行为的沙箱：它加载开发者编写的机器人接口，持续读取末端工具位姿，并发送平移和旋转指令，以暴露坐标变换、几何约定和实时运动控制实现中的错误。测试流程不再局限于简单单轴移动，而是覆盖三轴往返平移、围绕主轴和对角轴的旋转，以及有顺序依赖的连续旋转，并要求机器人最终回到起始位姿。项目同时提供 MIRAI 控制器的简化开发服务器、二进制 Skill API 测试客户端和不连接真实硬件的示例实现，使集成者能够先在仿真或受控环境中验证机器人适配层、PLC 通信和技能执行流程。它本身不是新的 VLA 或学习策略模型，而是一套直接服务于实体工业机器人接入、运动控制验证和 MIRAI 技能执行集成的机器人系统软件。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation"
+    ],
+    "featured": false,
+    "openSource": true,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "0.26.0 是 Micropsi Industries 官方 GitHub 组织发布的机器人集成软件版本，发布日期为 2026 年 2 月 5 日；发布说明将本次变更概括为“More realistic sandbox”。",
+        "该 SDK 面向需要与 MIRAI 集成的实体机器人，Python 模块定义机器人控制适配器必须实现的抽象接口，而不是机器人硬件或产品规格页。",
+        "新版沙箱通过读取工具位姿并发送类似 MIRAI 的运动命令，检查坐标几何、实时控制循环和机器人接口实现中的问题。",
+        "测试序列覆盖工具坐标系 X、Y、Z 三轴往返平移，绕 X、Y、Z 及 XY、YZ、XZ 对角轴旋转，以及按 Z-Y-X 顺序执行并逆序返回的连续旋转。",
+        "测试工具允许分别选择 translations、single-rotations 和 chained-rotations 测试组，并可配置线速度、旋转速度、最大运动范围及位置和角度容差。",
+        "项目还包含 MIRAI 开发服务器和客户端：服务器监听机器人或 PLC 程序发送的 Skill API 命令，并可近似执行完整技能；客户端可测试 ExecuteSkill、PrepareSkillAsync、GetResult、KeepAlive 等命令。",
+        "官方材料明确警告沙箱和开发服务器可能驱动真实机器人运动，建议先在仿真环境中验证新接口，再连接实体硬件。"
+      ],
+      "capabilities": [
+        "提供用于接入 MIRAI 的机器人抽象接口，开发者可据此实现特定机器人型号的控制适配层。",
+        "通过沙箱读取机器人位姿，并以接近 MIRAI 实际运行方式发送平移和旋转运动命令。",
+        "自动执行工具坐标系下的多轴平移、单轴及对角轴旋转和连续旋转测试，并检查机器人是否返回起始位姿。",
+        "通过开发服务器近似模拟 MIRAI 控制器和完整技能执行流程，并通过开发客户端测试二进制 Skill API 命令。",
+        "提供不连接真实硬件的示例机器人实现，用于仿真、接口开发和初步冒烟测试。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "GitHub 0.26.0 官方 Release 的发布时间。",
+          "value": "2026-02-05"
+        },
+        {
+          "label": "沙箱测试序列",
+          "note": "官方文档列出的往返平移、单次旋转和连续旋转步骤总数。",
+          "value": "10 项"
+        },
+        {
+          "label": "默认末端线速度",
+          "note": "mirai-sandbox 的 speed-linear 默认值。",
+          "value": "0.05 m/s"
+        },
+        {
+          "label": "默认末端旋转速度",
+          "note": "mirai-sandbox 的 speed-rotation 默认值。",
+          "value": "5.0°/s"
+        },
+        {
+          "label": "默认到达容差",
+          "note": "沙箱判定目标位姿到达时采用的默认线性和旋转容差。",
+          "value": "0.001 m；0.5°"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.0"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.micropsi-industries.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.0"
       }
     ]
   },
@@ -9778,6 +10020,82 @@
     ]
   },
   {
+    "id": "platform-roundup-november-2025-6a1129e",
+    "title": "Platform roundup: November 2025",
+    "organization": "Viam",
+    "organizationKind": "Company",
+    "date": "2025-11-05",
+    "year": 2025,
+    "summary": "这是 Viam 在 2025 年 11 月发布的一组机器人平台软件更新，重点解决从开发到生产机群运维中的三个问题。第一，多机器仪表板将多台实体机器人或智能机器的传感器数据、趋势和 GPS 位置集中到同一视图，并提供机器与时间范围过滤，以便发现离群设备、跟踪机群健康状态和分析历史变化。第二，Motion API 简化了机器人资源寻址方式，机械臂等组件可以使用配置中的简单名称调用；多机器人场景可通过机器前缀消除同名冲突，从而减少应用代码对底层资源标识格式的依赖。第三，Viam 通过 Conan 服务器分发缓存的 C++ SDK 依赖，将官方报告的构建时间从约一小时缩短到不足十分钟。该发布不是新的机器人模型或学习策略，而是直接服务于实体机器人控制、模块开发和规模化机群管理的机器人系统软件更新。",
+    "tags": [
+      "Robot systems",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Robot manipulation",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Viam 于 2025 年 11 月 5 日发布该平台更新，内容覆盖机器人软件的部署、机群监控、运动接口和 C++ 模块构建流程，而非机器人本体或硬件规格。",
+        "新增的多机器机群仪表板允许同一组件从多台机器提取数据，在一个界面中同时查看整个机器人机群，无需在不同机器页面之间切换。",
+        "仪表板可呈现跨机群趋势、设备健康状态和离群情况，并支持传感器读数曲线与 GPS 地图等可视化形式。",
+        "仪表板过滤机制可将全部组件统一限定到特定机器或时间范围；相关文档还列出按位置、配置片段和历史时间窗口过滤数据的能力。",
+        "Motion API 改为接受简单资源名称：控制机械臂时可直接使用类似 `fooArm` 的名称，而无需原有的 `rdk:component:arm/foo` 完整标识。",
+        "在多机器人或存在同名资源的配置中，系统能够处理名称冲突，并允许使用类似 `robot2.fooArm` 的前缀式名称明确指定目标资源。",
+        "Viam 为 C++ 工具链设置 Conan 服务器，缓存预构建的 SDK 依赖，使机器人模块开发不必在每次构建时重复编译相同依赖。"
+      ],
+      "capabilities": [
+        "通过单一仪表板汇总并监控多台机器人或智能机器的数据。",
+        "通过可配置组件展示跨机器传感器趋势、地理位置、异常值与机群健康状态。",
+        "按机器和时间范围筛选机群数据，支持面向具体设备或时间窗口的排查。",
+        "通过简化后的 Motion API 资源名控制机械臂等实体机器人组件。",
+        "利用 Conan 预构建依赖缓存加速 C++ SDK 与机器人模块的构建流程。"
+      ],
+      "metrics": [
+        {
+          "label": "C++ 构建加速",
+          "note": "官方发布页报告，Conan 服务器通过缓存预构建 SDK 依赖实现该加速幅度。",
+          "value": "10×"
+        },
+        {
+          "label": "C++ 构建时间",
+          "note": "官方报告的更新前后结果。",
+          "value": "从约 1 小时降至不足 10 分钟"
+        },
+        {
+          "label": "机群监控范围",
+          "note": "官方描述为在一个仪表板中同时监控整个机器人机群，并从多台机器提取组件数据。",
+          "value": "单一仪表板支持多机器数据"
+        },
+        {
+          "label": "Motion API 名称简化",
+          "note": "官方示例由完整资源标识改为简单资源名。",
+          "value": "`rdk:component:arm/foo` → `fooArm`"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.viam.com/post/platform-roundup-november-2025"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.viam.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.viam.com/post/platform-roundup-november-2025"
+      }
+    ]
+  },
+  {
     "id": "0-6-6284019",
     "title": "π0.6",
     "organization": "Physical Intelligence",
@@ -11319,6 +11637,87 @@
       {
         "label": "Report",
         "url": "https://www.figure.ai/news/project-go-big"
+      }
+    ]
+  },
+  {
+    "id": "platform-roundup-september-2025-ea8c0a3",
+    "title": "Platform roundup: September 2025",
+    "organization": "Viam",
+    "organizationKind": "Company",
+    "date": "2025-09-17",
+    "year": 2025,
+    "summary": "Viam 的 2025 年 9 月平台更新是一组面向实体机器人开发与部署的软件能力升级。其核心覆盖机器人数据闭环、多机器应用和跨平台工程迭代：开发者可以在界面中合并基础数据与现场边缘案例，利用 TensorFlow 或 TFLite 模型进行云端推理和半自动图像标注，再审核标注并重新训练模型；应用层可在一次登录后连接多台获授权机器，以支持集群监控和多机器人协调；配置层通过带变量的 fragment 降低不同机器间重复配置；开发工具则允许从 Mac 经云端构建向 Linux 机器人热重载模块。该页面没有报告任务成功率、模型精度或相对基准提升，因此档案仅记录官方明确描述的功能结果，不推断量化性能。",
+    "tags": [
+      "Robot systems",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "fields": [
+      "Robot systems",
+      "Data & benchmarks",
+      "Embodied AI"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Viam 于 2025 年 9 月 17 日发布该平台更新公告，页面集中介绍面向实体机器人开发、机器学习数据处理和多机器运维的软件功能，而非机器人硬件产品。",
+        "数据管理界面新增数据集合并功能，可将基础训练集与部署现场收集的边缘案例组合，用于迭代训练；官方还明确建议与自动标注功能结合，形成持续改进模型的数据工作流。",
+        "自动标注的云端推理新增 TFLite 模型支持；用户可以选择模型和置信度阈值，再人工接受或拒绝系统生成的图像标注。",
+        "Viam Apps 新增多机器连接能力，一个应用可访问多台获授权机器，面向集群仪表盘、多机器人协调以及跨地点状态监控等场景。",
+        "Fragment variables 允许在可复用配置片段中定义占位值，并在部署时传入 IP 地址、设备名称等参数；多个带独立变量的片段还可组合为复杂配置。",
+        "模块热重载加入云端构建和跨平台支持，官方示例是从 Mac 开发机热重载至 Linux 机器人；首次重载还能自动创建组件，并改善环境变量处理。",
+        "针对 Python 模块，热重载可跳过不必要的依赖重新安装，以加快实体机器人上的迭代过程；默认主目录也由 `/root/.viam` 调整为 `~/Downloads`。"
+      ],
+      "capabilities": [
+        "在 Viam 应用界面中直接合并多个机器人数据集，支持将基础数据与现场采集的边缘案例汇总后重新训练模型。",
+        "使用 TensorFlow Lite 或 TensorFlow 模型执行云端推理和图像自动标注，并按置信度阈值筛选生成的标注。",
+        "构建可同时连接多台实体机器的应用，用于机器人集群管理、多机器人协调和跨地点监控。",
+        "通过带占位变量的配置片段复用机器人配置，并为不同机器注入 IP 地址、名称等特定参数。",
+        "从 macOS 开发环境向 Linux 机器人热重载模块，结合云端构建缩短跨平台开发、部署和测试循环。"
+      ],
+      "metrics": [
+        {
+          "label": "发布日期",
+          "note": "Viam 官方产品更新页面标注的发布日期。",
+          "value": "2025-09-17"
+        },
+        {
+          "label": "多机器应用访问",
+          "note": "单个 Viam 应用可同时连接多台机器；一次登录即可访问全部获授权机器。",
+          "value": "Multiple machines with one login"
+        },
+        {
+          "label": "自动标注模型格式",
+          "note": "该版本加入 TFLite，官方说明其作为 TensorFlow 之外的另一种云端推理和自动标注模型格式。",
+          "value": "TFLite and TensorFlow"
+        },
+        {
+          "label": "跨平台热重载路径",
+          "note": "官方明确给出的受支持开发流程。",
+          "value": "macOS development host to Linux robot"
+        },
+        {
+          "label": "标注审核流程",
+          "note": "自动生成的标注不会被描述为无条件写入数据集；用户可逐项审核。",
+          "value": "Accept or reject generated annotations"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.viam.com/post/platform-roundup-september-2025"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.viam.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.viam.com/post/platform-roundup-september-2025"
       }
     ]
   },
@@ -16811,6 +17210,87 @@
     ]
   },
   {
+    "id": "platform-roundup-april-2025-1e22f83",
+    "title": "Platform roundup: April 2025",
+    "organization": "Viam",
+    "organizationKind": "Company",
+    "date": "2025-04-18",
+    "year": 2025,
+    "summary": "Viam 的 2025 年 4 月平台更新是一组面向实体机器人和其他智能机器开发生命周期的软件增强。其核心不是发布新机器人本体，而是降低硬件接入、机器配置、模型训练和设备运维的工程成本。开发者可以在机器构建器中按真实硬件型号寻找兼容模块，模块维护者也能为每个模型声明精确的硬件支持范围。新的发现服务能够查询已连接设备并生成所需配置属性，例如自动确定摄像头的视频设备路径。平台同时增加应用内 TensorFlow 托管训练，使通用计算环境中的模型训练不再必须依赖自定义脚本；已有的 TFLite 路径则继续面向资源受限的移动端和边缘设备。Ask AI 提供配置与平台使用指导，Machine Settings 和 Viam Agent 则统一处理设备供应、网络、系统更新及日志设置。整体上，这是机器人软件平台和数据到模型工作流的一次实质性发布，但官方没有提供机器人任务成功率、训练精度、延迟或基准对比数据。",
+    "tags": [
+      "Robot systems",
+      "Embodied AI",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Robot systems",
+      "Embodied AI",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Viam 于 2025 年 4 月 18 日发布该官方平台更新，内容明确面向机器人及其他联网物理机器的软件开发、配置、模型训练和部署流程。",
+        "机器构建器新增按硬件关键词搜索能力，可使用 HC-SR04、Intel RealSense D435i 或 Orange Pi Zero 2W 等具体型号查找兼容模块；检索范围包括模块模型简介和 supported-hardware 字段。",
+        "模块作者可以在 Registry 界面中为每个软件模型分别声明支持的硬件，使同一模块能够准确描述它对不同传感器或设备的兼容性。",
+        "新的 discovery service 可以主动查询硬件并返回配置所需的属性值；官方示例中的 webcam-discovery 会检测摄像头对应的 video_path，从而减少终端查询和手工配置错误。",
+        "平台加入 Ask AI 入口，为开发者提供关于 Viam 功能、机器配置和实践方式的即时指导；该公告没有报告其基础模型、准确率或机器人任务评测结果。",
+        "Machine Settings 通过 Viam Agent 统一管理设备供应、网络、操作系统更新和日志设置，面向多台实体机器的软件运维与可靠性管理。",
+        "Viam 在应用内加入托管 TensorFlow 模型训练支持，训练入口位于 Dataset 页面；此前内置训练主要支持 TFLite，而 TensorFlow 通常需要自定义训练脚本。"
+      ],
+      "capabilities": [
+        "通过机器构建器按具体硬件关键词检索兼容的软件模块与模型",
+        "通过发现服务查询已连接硬件并自动返回所需配置属性",
+        "在 Viam 应用内直接提交和管理 TensorFlow 模型训练任务",
+        "通过 Ask AI 获取与平台功能、配置和实践相关的上下文指导",
+        "集中配置机器人或智能机器的操作系统更新、网络和日志设置"
+      ],
+      "metrics": [
+        {
+          "label": "发布时间",
+          "note": "Viam 官方产品公告标注的发布日期。",
+          "value": "2025-04-18"
+        },
+        {
+          "label": "LoRaWAN 更新项",
+          "note": "公告明确列出专用传感器模型、GitHub 解码器路径、设备下行指令和 Waveshare HAT 网关模型四类改进。",
+          "value": "4 项"
+        },
+        {
+          "label": "内置托管训练框架",
+          "note": "此次更新加入 TensorFlow 后，公告明确涉及 TensorFlow 与此前已有的 TFLite 两类内置训练模型格式。",
+          "value": "2 类：TensorFlow、TFLite"
+        },
+        {
+          "label": "配置发现结果",
+          "note": "官方报告 discovery service 能查询硬件并返回配置需要的属性值，例如自动确定摄像头的 video_path；未提供成功率或耗时基准。",
+          "value": "自动检测硬件配置属性"
+        },
+        {
+          "label": "平台部署结果",
+          "note": "官方报告这些能力已作为 Viam 平台功能提供，但没有公布机器人任务成功率、模型精度或与其他系统的量化比较。",
+          "value": "已在 Viam 平台中提供"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.viam.com/post/platform-roundup-april-2025"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.viam.com/"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.viam.com/post/platform-roundup-april-2025"
+      }
+    ]
+  },
+  {
     "id": "meta-locate-3d-b2cb510",
     "title": "Meta Locate 3D",
     "organization": "Meta",
@@ -17953,6 +18433,85 @@
       {
         "label": "Report",
         "url": "https://github.com/FFTAI/fourier-lerobot/commit/f1f6cdd2e283c0225e91bcb7483f0360f973be59"
+      }
+    ]
+  },
+  {
+    "id": "platform-roundup-march-2025-b30f674",
+    "title": "Platform roundup: March 2025",
+    "organization": "Viam, Inc.",
+    "organizationKind": "Company",
+    "date": "2025-03-12",
+    "year": 2025,
+    "summary": "Viam 的“Platform roundup: March 2025”集中发布了三类机器人平台能力：可版本化的机器配置 fragment、面向近期采集数据的 Hot Data Store，以及 Micro-RDK 的边缘连接与固件部署增强。Fragment 版本机制允许机器人群在最新版、固定版本和标签指向版本之间选择，并以移动标签的方式进行测试、渐进发布及回滚。Hot Data Store 将一个可配置时间窗口内的数据额外写入文档数据库，以加速近期数据查询，并在窗口过期后自动清除。面向 ESP32 等微控制器的 Rust Micro-RDK 则新增无互联网本地 Wi-Fi、云端固件构建、OTA artifact 部署和多 Wi-Fi 启动连接能力。整体属于实体机器人开发、数据管理和规模化运维的软件基础设施。",
+    "tags": [
+      "Robot systems",
+      "Data & benchmarks"
+    ],
+    "fields": [
+      "Robot systems",
+      "Data & benchmarks"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "这是 Viam 机器人软件平台在 2025 年 3 月发布的一组已实现功能更新，官方页面明确将其用于机器配置、设备连接和机器人数据管理，而非机器人硬件或产品规格。",
+        "配置 fragment 是可跨多台机器复用的模块化配置；新增版本机制可以保留变更历史，并支持嵌套 fragment 及其依赖关系的版本管理。",
+        "机器可以采用三种 fragment 更新策略：始终使用最新版、固定到特定版本，或跟随 stable、testing、beta 等标签所指向的版本。标签可在版本之间移动，从而进行隔离测试、分批发布和快速回滚。",
+        "Hot Data Store 会把指定时间窗口内最新采集的数据同时写入文档数据库和标准 blob 存储；超过配置窗口的数据会自动从热存储删除。",
+        "Micro-RDK 是用于微控制器的轻量级 Rust 机器人开发库。此次更新允许设备连接没有互联网出口的本地 Wi-Fi，扩大了其离线机器人部署能力。",
+        "Micro-RDK 的官方 GitHub 模板提供 GitHub Action，可依据发布版本构建固件 artifact；生成的 artifact 链接可写入 Viam 机器的 OTA 配置并通过 Wi-Fi 部署。",
+        "Micro-RDK 还可通过 Viam Agent 配置多个 Wi-Fi 网络，并在设备启动时尝试连接，行为与 viam-server 的多网络配置方式一致。"
+      ],
+      "capabilities": [
+        "对机器人或机器群的模块化配置片段进行版本追踪，并通过标签实施测试、稳定版发布和回滚。",
+        "为近期采集的机器人数据启用热数据存储，以支持更快的查询和自动过期清理。",
+        "让基于 Micro-RDK 的微控制器设备在无互联网连接的本地 Wi-Fi 网络中运行。",
+        "通过云端构建流程生成包含自定义模块与逻辑的 Micro-RDK 固件，并利用 OTA 配置部署到设备。",
+        "在 Micro-RDK 启动时依次尝试连接多个预配置 Wi-Fi 网络。"
+      ],
+      "metrics": [
+        {
+          "label": "发布时间",
+          "note": "Viam 官方平台更新页面标注的发布日期。",
+          "value": "2025-03-12"
+        },
+        {
+          "label": "Fragment 更新模式",
+          "note": "官方材料明确列出 latest version、specific version 和 tag-based versioning。",
+          "value": "3 种"
+        },
+        {
+          "label": "热数据写入路径",
+          "note": "近期数据被同时写入文档数据库与标准 blob 存储。",
+          "value": "双写"
+        },
+        {
+          "label": "离线连接能力",
+          "note": "Micro-RDK 可连接没有互联网接入的本地 Wi-Fi 网络。",
+          "value": "支持本地 Wi-Fi 离线运行"
+        },
+        {
+          "label": "网络容错能力",
+          "note": "设备启动时可尝试连接多个预配置 Wi-Fi 网络；官方页面未报告固定数量上限。",
+          "value": "支持多个 Wi-Fi 网络"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://www.viam.com/post/platform-roundup-march"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://www.viam.com/about"
+      },
+      {
+        "label": "Report",
+        "url": "https://www.viam.com/post/platform-roundup-march"
       }
     ]
   },
