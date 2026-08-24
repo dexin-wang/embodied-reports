@@ -135,9 +135,9 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/qwen3-banner.png",
-      "width": 2350,
-      "height": 1000
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3/qwen3-235a22.jpg",
+      "width": 3413,
+      "height": 1920
     },
     {
       "id": "llama-4",
@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=VLZCuh_lY_oQ7kNvwEvutWj&_nc_oc=AdreKUa_KTOTTwZENngGZE0-RFd7S22ePLWs0YQA5pvrP5lT1Z8zk60SXyY8XI_IxZw&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=K-zQw8DNjcjbiEcfoiVpxg&_nc_ss=7b20f&oh=00_AQHP12830y5GxpMSJIPL4CVUgd6SYjWuACo0Q5mMoFjHKg&oe=6AA4C873",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=VLZCuh_lY_oQ7kNvwEvutWj&_nc_oc=AdreKUa_KTOTTwZENngGZE0-RFd7S22ePLWs0YQA5pvrP5lT1Z8zk60SXyY8XI_IxZw&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=yxWbjNFDymsaQvlM6zE5Ew&_nc_ss=7b20f&oh=00_AQEvx1dVLcgd239WutVkPf59nvhNFUrJ6Yj7GxsGHOTZuw&oe=6AA5E1B3",
       "width": 1920,
       "height": 1080
     },
@@ -279,7 +279,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc0NTkyOTUsIm5iZiI6MTc4NzQ1ODk5NSwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgyMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MjNUMDQyMzE1WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Y2M3ZjFmZDBlMWEyYmYzMGM3NWEzMmMzOTJiY2Q4MjUxYTFkZTZhMzhlZDE3YmFmYWFkZDJmNjM0ZmRiMzY4OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.J5HcPll0ICLmNPVLsiRctXN1alQHpzoUjD_BHEERq2I",
+      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc1NDE4ODksIm5iZiI6MTc4NzU0MTU4OSwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgyNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MjRUMDMxOTQ5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzQ0ZjUzOTA2ZTI4YjZmZGM2ZmU4N2E5ZjBmZWI4MDBkZTJmZWMzYmI4MThhNWUwZTI5ZWQ1MDI5MDNhODRmZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.XezRLIROIoyg4wu_SZVbOSrISeSYUIQFXp7liluP0Yg",
       "width": 453,
       "height": 166
     },
