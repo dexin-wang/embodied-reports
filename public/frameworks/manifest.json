@@ -135,9 +135,9 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3/qwen3-235a22.jpg",
-      "width": 3413,
-      "height": 1920
+      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/qwen3-banner.png",
+      "width": 2350,
+      "height": 1000
     },
     {
       "id": "llama-4",
@@ -147,7 +147,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=VLZCuh_lY_oQ7kNvwEvutWj&_nc_oc=AdreKUa_KTOTTwZENngGZE0-RFd7S22ePLWs0YQA5pvrP5lT1Z8zk60SXyY8XI_IxZw&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=yxWbjNFDymsaQvlM6zE5Ew&_nc_ss=7b20f&oh=00_AQEvx1dVLcgd239WutVkPf59nvhNFUrJ6Yj7GxsGHOTZuw&oe=6AA5E1B3",
+      "image_url": "https://scontent-sin6-3.xx.fbcdn.net/v/t39.2365-6/489528324_1866126614188079_2353760794201377773_n.png?_nc_cat=106&ccb=1-7&_nc_sid=e280be&_nc_ohc=VO3YhOEHO-4Q7kNvwHo_PfG&_nc_oc=AdraefCdSRNOmUe90nx0kNEjAs2bJ_HyLx5UJ79kmwVnmJS5WWb_10YgzFUU1X6HXkQ&_nc_zt=14&_nc_ht=scontent-sin6-3.xx&_nc_gid=kxhuH6HSEPoQ8xlKV3ZlsQ&_nc_ss=7b20f&oh=00_AQGJKhaoUPJyRNtvc7ftO264D0b2nEl0EHh0JPTutcKyYw&oe=6AA73333",
       "width": 1920,
       "height": 1080
     },
@@ -159,9 +159,9 @@
       "caption_detected": true,
       "source_kind": "official_project_page",
       "selection": "method_figure",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/OneBillionGemma_Hero.png",
-      "width": 3840,
-      "height": 2160
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/OneBillionGemma_Hero.2e16d0ba.fill-300x300.format-webp.webp",
+      "width": 300,
+      "height": 300
     },
     {
       "id": "cosa-05-v3",
@@ -279,7 +279,7 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc1NDE4ODksIm5iZiI6MTc4NzU0MTU4OSwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgyNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MjRUMDMxOTQ5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YzQ0ZjUzOTA2ZTI4YjZmZGM2ZmU4N2E5ZjBmZWI4MDBkZTJmZWMzYmI4MThhNWUwZTI5ZWQ1MDI5MDNhODRmZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.XezRLIROIoyg4wu_SZVbOSrISeSYUIQFXp7liluP0Yg",
+      "image_url": "https://private-user-images.githubusercontent.com/8009393/625072637-742ecbb8-bbff-439c-9288-8851bf5297b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODc2MjgwMzQsIm5iZiI6MTc4NzYyNzczNCwicGF0aCI6Ii84MDA5MzkzLzYyNTA3MjYzNy03NDJlY2JiOC1iYmZmLTQzOWMtOTI4OC04ODUxYmY1Mjk3YjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDgyNSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA4MjVUMDMxNTM0WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTFkZDRhNDZmNjZmNmMxYjE5YmRhMGYwYWMyYzlmODk2NjMyMjkwMzI1NDAyMTQ3ZTA2OTRlMTUxNzFmNjQ0YyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.c0M_YmqbD0dqVAmYnaPSB29HpmRYH57q84yziarabag",
       "width": 453,
       "height": 166
     },
@@ -819,9 +819,9 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://rai-inst.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-3.36.38-PM-768x471.png",
+      "image_url": "https://rai-inst.com/wp-content/uploads/2026/08/Spot-Table-Tennis-1-768x409.jpg",
       "width": 768,
-      "height": 471
+      "height": 409
     },
     {
       "id": "magic-cleaning-ai-agent-system-ef7fe88",
@@ -1020,12 +1020,12 @@
       "asset": "frameworks/q1-2026-vention-platform-release-609fa71.jpg",
       "source_url": "https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094",
       "page": null,
-      "caption_detected": true,
+      "caption_detected": false,
       "source_kind": "official_project_page",
-      "selection": "method_figure",
-      "image_url": "https://ventionblobs.s3.amazonaws.com/blogs/images/1119/thumb_title_image.png",
-      "width": 600,
-      "height": 328
+      "selection": "official_project_visual",
+      "image_url": "https://images.ctfassets.net/6ayzrs7ygz4n/74wWhnCvqergtzckuIO04s/78bb6d24b0dad71d64e178977492b787/Vertical_revised.png",
+      "width": 280,
+      "height": 560
     },
     {
       "id": "hy-embodied-0-5-34cd06a",
@@ -1179,9 +1179,9 @@
       "caption_detected": false,
       "source_kind": "official_project_page",
       "selection": "official_project_visual",
-      "image_url": "https://rai-inst.com/wp-content/uploads/2026/03/Screenshot-2026-03-30-at-3.36.38-PM-768x471.png",
+      "image_url": "https://rai-inst.com/wp-content/uploads/2026/08/Spot-Table-Tennis-1-768x409.jpg",
       "width": 768,
-      "height": 471
+      "height": 409
     },
     {
       "id": "foresight-b307e9b",
