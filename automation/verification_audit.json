@@ -37437,5 +37437,683 @@
       "software_project": true,
       "summary_zh": "PLaMo-fin-base 是 Preferred Networks 于 2025 年 1 月 27 日宣布向金融机构提供的行业专用大语言模型。它以 PLaMo 为基础，通过大量日语金融数据进行追加训练，服务于银行、证券等机构的文本型业务流程，并支持云端或本地安全部署。官方示例包括根据营业日报起草提案、生成投融资审批文件、进行柜面或法人销售角色扮演、依据 IR 信息分析企业，以及摘要监管信息。该项目具有明确的负责公司和正式发布页面，但其技术对象是金融自然语言处理，不涉及物理机器人、具身感知或动作控制，因此应从具身机器人项目索引中排除。"
     }
+  },
+  "xpeng-robotics-raises-us-900m-for-humanoid-robot-b9cde44": {
+    "checked_at": "2026-08-26T04:13:25.310774+00:00",
+    "title": "XPENG Robotics Raises US$900M for Humanoid Robots",
+    "accepted": false,
+    "reason": "正在核验官方页面是否发布了符合条件的具身机器人软件项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "I’m checking the cited XPENG announcement and related official project material to determine whether the page releases a software artifact or only covers financing and humanoid hardware.",
+        "I’ll also verify the responsible organization, release date, and whether any technical metrics are actually attributable to a dedicated software project.",
+        "Given the strict eligibility rules, unsupported fields will remain empty rather than being inferred."
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "Verification in progress.",
+        "No eligibility decision has been finalized yet.",
+        "Official and primary sources are being prioritized.",
+        "The candidate title alone is insufficient evidence."
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "note": "Source verification underway",
+          "value": "Pending"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.xpeng.com/pressroom/news/01a03797fccda01e0de68a02a256006a",
+      "open_source": false,
+      "organization_en": "XPENG",
+      "organization_kind": "Company",
+      "organization_zh": "小鹏汽车",
+      "reason": "正在核验官方页面是否发布了符合条件的具身机器人软件项目。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "introducing-index-building-the-world-s-largest-a-dfab149": {
+    "checked_at": "2026-08-26T04:13:25.341004+00:00",
+    "title": "Introducing Index: Building The World’s Largest and Most Diverse Physical Dataset",
+    "accepted": false,
+    "reason": "正在基于可访问的官方网页核验候选项目。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "我会先核验 Figure 官方页面的发布日期、项目性质和责任主体，再检查其链接的技术材料与可验证指标。",
+        "我会特别区分 Index 是可独立收录的数据软件项目，还是以数据采集硬件/服务为主的产品公告。",
+        "对于页面未明确支持的规模、开放性、社交证据或技术能力，我不会补推。"
+      ],
+      "fields": [
+        "Data & benchmarks"
+      ],
+      "include": false,
+      "key_points": [
+        "正在核验",
+        "正在核验",
+        "正在核验",
+        "正在核验"
+      ],
+      "metrics": [
+        {
+          "label": "核验状态",
+          "note": "正在检索官方来源",
+          "value": "待定"
+        }
+      ],
+      "official_organization_url": "",
+      "official_project_url": "https://www.figure.ai/news/introducing-index",
+      "open_source": false,
+      "organization_en": "Figure AI",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "正在基于可访问的官方网页核验候选项目。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "正在核验候选项目。"
+    }
+  },
+  "ai-plamo-3-0-prime-preferred-networks-0598282": {
+    "checked_at": "2026-08-26T04:13:25.369069+00:00",
+    "title": "国産生成AI基盤モデルPLaMo 3.0 Primeを正式リリース - 株式会社Preferred Networks",
+    "accepted": false,
+    "reason": "不满足条件1。官方页面明确将PLaMo 3.0 Prime定位为面向企业生成式AI、文本推理、代码、工具调用和通用AI代理的大语言模型；可访问的官方新闻稿及技术材料均未表明该版本是用于物理机器人或具身智能的VLA、机器人基础模型、动作/世界模型、策略、控制规划系统、机器人数据集、模拟器或具身评测框架。PFN本身从事机器人相关研究不能替代候选软件本身的具身属性，因此不得收入严格的具身机器人项目索引。此外，候选所给日期2026-06-02有误，官方发布日期为2026-06-22。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "提供面向复杂任务的Reasoning推理模型",
+        "提供强调响应速度的Non-reasoning模型",
+        "支持通过API或本地部署方式调用",
+        "支持长上下文处理及工具调用型AI代理应用"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 3.0 Prime是Preferred Networks从头开发的日语生成式AI基础模型和PLaMo系列旗舰大语言模型，并非面向物理机器人控制的具身智能项目。",
+        "正式版本同时提供Reasoning与Non-reasoning两种模型，分别面向复杂推理任务和低延迟响应场景。",
+        "模型强化了复杂指令遵循、分步推理、数学与算法问题求解、代码生成和工具调用能力。",
+        "上下文窗口由此前的64k扩展至256k，以支持长文档处理和AI代理工作流。",
+        "模型采用自研分词器，并针对日语业务文档、对话及专业领域数据进行训练和评估。",
+        "官方提供云端API和本地部署方式，但官方材料没有将其描述为机器人策略、VLA、世界模型、控制规划栈、机器人数据引擎或具身评测基准。",
+        "候选日期标注为2026年6月2日，但官方新闻稿和技术博客均将正式发布日期记为2026年6月22日。"
+      ],
+      "metrics": [
+        {
+          "label": "上下文长度",
+          "note": "正式版支持的最大上下文长度，较此前64k扩大。",
+          "value": "256k tokens"
+        },
+        {
+          "label": "上下文扩展幅度",
+          "note": "官方给出的前后版本上下文长度变化。",
+          "value": "64k → 256k"
+        },
+        {
+          "label": "模型形态",
+          "note": "正式版提供推理与快速响应两种运行取向。",
+          "value": "Reasoning与Non-reasoning两种模型"
+        },
+        {
+          "label": "HELM Safety",
+          "note": "官方称在HELM Safety各类别中达到与海外模型同等或更高的安全性能，但新闻稿正文未给出统一数值总分。",
+          "value": "与海外模型同等或更高"
+        },
+        {
+          "label": "主要能力评估",
+          "note": "官方内部评估称，相比PLaMo 3.0 Prime β及PLaMo 2.2 Prime，主要基准性能显著提升；公开新闻稿未给出可统一引用的单一数值。",
+          "value": "主要基准显著提升"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://www.preferred.jp/ja/news/pr20260622",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不满足条件1。官方页面明确将PLaMo 3.0 Prime定位为面向企业生成式AI、文本推理、代码、工具调用和通用AI代理的大语言模型；可访问的官方新闻稿及技术材料均未表明该版本是用于物理机器人或具身智能的VLA、机器人基础模型、动作/世界模型、策略、控制规划系统、机器人数据集、模拟器或具身评测框架。PFN本身从事机器人相关研究不能替代候选软件本身的具身属性，因此不得收入严格的具身机器人项目索引。此外，候选所给日期2026-06-02有误，官方发布日期为2026-06-22。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 3.0 Prime是Preferred Networks于2026年6月22日正式发布的日本国产旗舰大语言模型。它提供高推理能力的Reasoning版本和低延迟的Non-reasoning版本，支持API及本地部署，将上下文长度从64k扩展到256k，并强化复杂指令遵循、数学与算法推理、代码生成、工具调用、日语业务文本处理和模型安全性。尽管它属于明确的软件基础模型，也具备AI代理能力，但官方材料没有证明其面向物理机器人、机器人动作生成或其他具身智能任务。按照索引规则，通用LLM不能仅因开发机构涉足机器人业务而被归类为具身机器人技术项目，故排除。"
+    }
+  },
+  "plamo-3-0-prime-preferred-networks-tech-blog-2d12a4f": {
+    "checked_at": "2026-08-26T04:13:25.397064+00:00",
+    "title": "PLaMo 3.0 Prime β版をリリースしました - Preferred Networks Tech Blog",
+    "accepted": false,
+    "reason": "不符合条件1。虽然它是有明确责任机构和官方专页的软件模型，但官方材料将 PLaMo 3.0 Prime β 明确描述为面向文本生成、推理、问答、工具调用及企业应用的通用大语言模型；没有证据表明该版本是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、数据引擎、仿真器、控制规划栈、机器人评测基准或具身智能框架。因此不能收录到严格的具身机器人技术项目索引。另需纠正日期：官方发布日是 2026年3月19日，并非候选记录中的 2026年3月1日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "支持分步骤生成推理过程，在给出最终答案前执行问题分解、探索和校验",
+        "支持日语与英语的复杂指令遵循、问答和多轮对话",
+        "支持函数及工具调用，并使用 BFCL v4 评估工具选择与调用能力",
+        "支持长上下文问答、信息抽取和 RAG 类任务",
+        "支持数学、算法、STEM、医疗及日本法律领域的文本推理任务"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 3.0 Prime β 是 Preferred Networks 从头训练的通用生成式大语言模型，官方将其定位为 PLaMo 3.x Prime 系列首个旗舰推理模型。",
+        "模型采用 YaRN 进行持续预训练，把输入上下文容量扩展至 65,536 tokens，并将最大输出长度提升至 20K tokens。",
+        "后训练流水线包含监督微调、直接偏好优化和强化学习；监督微调与偏好优化同时对推理过程和最终答案计算损失。",
+        "训练数据覆盖日语指令遵循、工具使用、长上下文问答、医疗知识、STEM 与 RAG，并针对不同领域实现奖励计算函数。",
+        "官方使用 IFBench、JFBench、BFCL v4、LongBench v2、MedRECT、医师国家考试、MT-Bench、Japanese MT-Bench、lawqa_jp、AIME 2024 和 GPQA-Diamond 等文本基准进行评估。",
+        "官方页面没有描述机器人观测输入、动作输出、具身数据、物理机器人策略、控制/规划接口、机器人仿真环境或真实机器人实验。",
+        "候选给出的日期为 2026-03-01，但官方技术博客和公司公告均标注实际发布日期为 2026-03-19。"
+      ],
+      "metrics": [
+        {
+          "label": "输入上下文长度",
+          "note": "通过采用 YaRN 的持续预训练扩展；PLaMo 2.2 Prime 为 32K。",
+          "value": "65,536 tokens（约 64K）"
+        },
+        {
+          "label": "最大输出长度",
+          "note": "官方博客给出的输出侧上限；PLaMo 2.2 Prime 为 4K。",
+          "value": "20K tokens"
+        },
+        {
+          "label": "上下文扩展幅度",
+          "note": "相对于 PLaMo 2.2 Prime 的 32K 上下文。",
+          "value": "2倍"
+        },
+        {
+          "label": "评估时最大推理 token 数",
+          "note": "官方 Appendix 中 PLaMo 3.0 Prime β 的 max_reasoning_tokens 设置。",
+          "value": "12,288"
+        },
+        {
+          "label": "正式商用版计划",
+          "note": "该项是官方公告所述计划，而非已完成的技术结果。",
+          "value": "计划于2026年6月中旬提供"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://tech.preferred.jp/ja/blog/plamo-3-prime-beta-release/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件1。虽然它是有明确责任机构和官方专页的软件模型，但官方材料将 PLaMo 3.0 Prime β 明确描述为面向文本生成、推理、问答、工具调用及企业应用的通用大语言模型；没有证据表明该版本是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、数据引擎、仿真器、控制规划栈、机器人评测基准或具身智能框架。因此不能收录到严格的具身机器人技术项目索引。另需纠正日期：官方发布日是 2026年3月19日，并非候选记录中的 2026年3月1日。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 3.0 Prime β 是日本 Preferred Networks 于 2026年3月19日发布的通用生成式 AI 基础模型测试版。它从零重建架构和预训练流程，引入以分步骤推理为核心的 Reasoning 模式，并结合 SFT、DPO 与强化学习完成后训练。模型通过 YaRN 将上下文扩展到 65,536 tokens，最大输出为 20K tokens；训练和评估覆盖日英指令遵循、长上下文问答、工具调用、数学、STEM、医疗、日本法律及对话任务。官方称其在多项指令遵循和日语对话评估中较 PLaMo 2.2 Prime 明显改善，并在部分任务上达到与 Qwen3-235B-A22B-Thinking-2507、gpt-oss-120b 相当或更高的水平，但同时承认其在 BFCL 的复杂多工具场景、AIME 2024 和 GPQA-Diamond 上仍明显落后。该项目具备明确的软件制品、责任公司和官方技术页面，但所有公开功能和评测均属于通用文本 LLM 范畴，没有物理机器人、具身交互或机器人动作控制证据，故不纳入索引。"
+    }
+  },
+  "pfn-launches-plamo-2-1-prime-with-enhanced-ai-ag-ffbc251": {
+    "checked_at": "2026-08-26T04:13:25.424702+00:00",
+    "title": "PFN Launches PLaMo 2.1 Prime with Enhanced AI Agent Functionality - Preferred Networks, Inc.",
+    "accepted": false,
+    "reason": "不符合条件 1：官方专页将 PLaMo 2.1 Prime 定义为面向通用及企业 AI 智能体的大规模语言模型，功能是数据库、网页搜索、API 和其他软件智能体的自动选择与调用。可访问的官方材料没有证明该版本是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据引擎、评测基准或具身智能体框架。需要注意，官方页面列表日期为 2025-10-07，但新闻稿正文写明发布日为 2025-10-08；这项日期差异不影响排除结论。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据用户指令自动选择合适的外部工具",
+        "组合调用网页搜索、内部数据库、外部 API 和其他 AI 智能体",
+        "汇总多个工具返回的信息并生成综合文本回答",
+        "在多候选工具和真实用户场景中执行函数调用"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 2.1 Prime 是 Preferred Networks 发布的日语大规模语言模型更新，核心新增功能是自动工具选择与调用。",
+        "模型可根据用户指令，在网页搜索、内部数据库查询、外部 API 及其他 AI 智能体之间选择并组合工具。",
+        "官方示例集中于客户信息查询、库存查询、营销邮件生成与发送、客服数据库检索、会计系统和人力资源系统协作。",
+        "上一版本需要用户明确指定调用何种工具；2.1 Prime 可按照任务条件自动决定适当的工具。",
+        "官方使用 BFCL V3 评估单工具调用、多工具选择调用以及来自真实用户数据的 Live Multiple 场景。",
+        "官方页面没有展示模型与物理机器人、机器人控制、动作生成、具身感知、仿真或机器人数据集之间的实现关系，因此它属于通用 LLM/企业智能体软件，而非具身机器人项目。"
+      ],
+      "metrics": [
+        {
+          "label": "BFCL V3 基准规模",
+          "note": "官方说明该函数调用基准由约 2,000 个问题、工具和答案三元组组成；页面正文未提供可可靠读取的 PLaMo 2.1 Prime 具体数值分数。",
+          "value": "约 2,000 个 question-tool-answer triplets"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en/",
+      "official_project_url": "https://www.preferred.jp/en/news/pr20251007-2",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件 1：官方专页将 PLaMo 2.1 Prime 定义为面向通用及企业 AI 智能体的大规模语言模型，功能是数据库、网页搜索、API 和其他软件智能体的自动选择与调用。可访问的官方材料没有证明该版本是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据引擎、评测基准或具身智能体框架。需要注意，官方页面列表日期为 2025-10-07，但新闻稿正文写明发布日为 2025-10-08；这项日期差异不影响排除结论。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 2.1 Prime 是 Preferred Networks 对其日本国产旗舰大语言模型的功能更新，重点在于增强通用 AI 智能体的工具调用能力。它能够解析用户指令，自动选择和组合网页搜索、组织内部数据库、外部 API 以及其他 AI 智能体，并将各工具返回的信息汇总为文本回答。官方给出的应用包括整合客户与库存数据、筛选营销对象并发送邮件、查询客服知识库，以及连接会计和人力资源系统。PFN 使用 BFCL V3 验证其单工具、多工具及 Live Multiple 场景下的函数调用能力，但正文未披露可可靠读取的具体模型分数。尽管 Preferred Networks 本身从事机器人相关业务，该专页发布的软件并未涉及机器人感知、动作输出、控制、规划、仿真或物理环境交互，因此不能纳入严格的具身机器人技术项目索引。"
+    }
+  },
+  "plamo-2-2-prime-preferred-networks-tech-blog-9ec3db8": {
+    "checked_at": "2026-08-26T04:13:25.450245+00:00",
+    "title": "PLaMo 2.2 Primeをリリースしました - Preferred Networks Tech Blog",
+    "accepted": false,
+    "reason": "不收录：虽然它是具有专门官方发布页面、明确责任组织和具体评测结果的软件模型，但不满足条件1。官方材料将PLaMo 2.2 Prime描述为面向文本指令遵循、多轮对话和医疗问答的通用大语言模型，没有证据表明它是用于物理机器人或具身智能的VLA、动作模型、策略、控制/规划栈、机器人数据引擎、仿真器、具身评测基准或智能体框架。候选信息中的日期也不准确：官方文章发布日期是2026年1月28日，而不是2026年1月2日。官方页面提供模型试用入口，但未报告PLaMo 2.2 Prime模型权重或实现代码以开源形式发布。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "遵循英语和日语自然语言指令",
+        "维持20至40轮角色扮演对话中的指令约束",
+        "执行医疗问答与日本医师国家考试题目",
+        "检测并纠正临床记录中的错误"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 2.2 Prime是Preferred Networks集团开发的通用生成式AI基础模型，官方页面将其明确归类为Foundation Model / Large Language Model。",
+        "该版本通过增加后训练数据改进性能，训练方法包括监督微调（SFT）和直接偏好优化（DPO）；团队也测试了Iterative DPO，但因未观察到显著增益而未采用。",
+        "项目重点改进英语和日语指令遵循能力，并配套构建、公开了面向日语实际指令约束的JFBench基准。",
+        "多轮能力使用AI面试场景进行训练和评估，测试对话包含20至40轮，并由LLM-as-a-Judge判断每轮输出是否持续满足角色、行为规则和其他约束。",
+        "医疗能力覆盖MedRECT-ja临床记录错误检测与纠正，以及日本医师国家考试问答；JMLE评估使用未纳入训练的2024年和2025年试题。",
+        "官方材料介绍的输入、输出、训练任务和评测均为文本语言模型场景，没有视觉观察、机器人状态、动作生成、控制策略、仿真环境或物理机器人执行接口。"
+      ],
+      "metrics": [
+        {
+          "label": "IFBench loose prompt accuracy",
+          "note": "官方页面报告PLaMo 2.1 Prime约为29.0%，PLaMo 2.2 Prime提升至37.8%。",
+          "value": "37.8%"
+        },
+        {
+          "label": "多轮AI面试指令遵循率",
+          "note": "在20至40轮角色扮演对话评估中，PLaMo 2.1 Prime为7.03%。",
+          "value": "23.7%"
+        },
+        {
+          "label": "MedRECT-ja错误句抽取准确率",
+          "note": "官方比较表中PLaMo 2.2 Prime的结果。",
+          "value": "57.0%"
+        },
+        {
+          "label": "MedRECT-ja综合结果",
+          "note": "官方比较表同时报告的另外两项结果。",
+          "value": "0.661 / 0.492"
+        },
+        {
+          "label": "日本医师国家考试准确率",
+          "note": "排除含图像或解析失败的问题后，在557道2024年和2025年试题上答对394道；PLaMo 2.1 Prime为55.1%。",
+          "value": "70.7% (394/557)"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://tech.preferred.jp/ja/blog/plamo-2-2-prime-release/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录：虽然它是具有专门官方发布页面、明确责任组织和具体评测结果的软件模型，但不满足条件1。官方材料将PLaMo 2.2 Prime描述为面向文本指令遵循、多轮对话和医疗问答的通用大语言模型，没有证据表明它是用于物理机器人或具身智能的VLA、动作模型、策略、控制/规划栈、机器人数据引擎、仿真器、具身评测基准或智能体框架。候选信息中的日期也不准确：官方文章发布日期是2026年1月28日，而不是2026年1月2日。官方页面提供模型试用入口，但未报告PLaMo 2.2 Prime模型权重或实现代码以开源形式发布。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 2.2 Prime是Preferred Networks于2026年1月28日发布的日语生成式AI基础模型更新。其技术工作集中在使用新增后训练数据、SFT和DPO提升英语及日语指令遵循、多轮角色扮演和医疗文本问答能力。官方材料报告IFBench准确率由约29.0%提高到37.8%，AI面试多轮指令遵循率由7.03%提高到23.7%，并在MedRECT-ja和日本医师国家考试上给出具体结果。尽管PFN本身也从事机器人业务，该专门页面所发布的软件是文本LLM，未提供感知到动作建模、机器人控制、物理交互或具身评测能力，因此不属于本索引要求的具身机器人技术项目。"
+    }
+  },
+  "robotics-simulation-software-game-changer-for-ro-aed8fce": {
+    "checked_at": "2026-08-26T04:13:25.472074+00:00",
+    "title": "Robotics Simulation Software | Game-Changer for Robotics?",
+    "accepted": false,
+    "reason": "不收录。虽然该页面由明确的机器人公司 HITBOT 发布，并且主题涉及物理机器人的仿真、数字孪生和离线编程，但它只是行业科普博客，没有宣布或提供一个具体、可识别的 HITBOT 软件制品。页面缺少项目名称、版本、实际实现、软件入口及专属技术材料，无法满足“已发布的软件技术项目”这一核心条件。页面作为官方文章本身不足以把其中描述的通用仿真能力认定为 HITBOT 的已实现项目。此外，官方页面日期是 2025年9月26日，而非候选信息中的 2025年9月2日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "文章一般性介绍了在虚拟工作单元中设计、编程和验证机器人流程的用途，但未证明 HITBOT 发布了对应软件",
+        "文章描述了碰撞检查、可达性分析和周期时间分析等通用仿真能力，但未提供具体产品实现",
+        "文章介绍数字孪生同步、远程监控和预测性维护等概念，但未指出可实际访问的 HITBOT 软件系统",
+        "文章讨论离线编程与机器人品牌专用代码生成，但没有给出 HITBOT 工具名称、版本、下载入口或技术文档"
+      ],
+      "fields": [
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "该页面是标记为 Blog 的科普文章，标题讨论“机器人仿真软件为何具有变革性”，而不是一个具体软件项目的发布页。",
+        "页面没有给出 HITBOT 仿真软件的产品名称、版本号、系统架构、支持平台、API、SDK、代码仓库、下载入口或用户文档。",
+        "文中的数字孪生、离线编程、碰撞检测、可达性分析和周期时间优化均以行业通用概念呈现，不能归属于一个已实现的 HITBOT 软件制品。",
+        "页面提及 Fanuc、KUKA 和 ABB 等品牌专用代码生成，仅用于解释离线编程概念，没有证明 HITBOT 实现或发布了这种代码生成器。",
+        "页面末尾仅泛称“our cutting-edge simulation solutions”，但没有链接或明确识别任何对应的软件产品，因此无法验证存在可纳入索引的发布制品。",
+        "候选信息给出的日期为 2025-09-02，而官方页面显示的发布日期为 2025-09-26；不能使用候选日期替代官方日期。"
+      ],
+      "metrics": [
+        {
+          "label": "文章中的示例项目周期",
+          "note": "这是用于说明仿真潜在价值的假设性示例，不是某个 HITBOT 软件的实测结果。",
+          "value": "从 12 周缩短至 6–8 周"
+        },
+        {
+          "label": "官方页面发布日期",
+          "note": "与候选材料所给的 2025-09-02 不一致。",
+          "value": "2025-09-26"
+        }
+      ],
+      "official_organization_url": "https://www.hitbot.cc/about-us/",
+      "official_project_url": "https://www.hitbotrobot.com/robotics-simulation-software/",
+      "open_source": false,
+      "organization_en": "Huiling-tech Robotic Co., Ltd.",
+      "organization_kind": "Company",
+      "organization_zh": "慧灵科技（深圳）股份有限公司",
+      "reason": "不收录。虽然该页面由明确的机器人公司 HITBOT 发布，并且主题涉及物理机器人的仿真、数字孪生和离线编程，但它只是行业科普博客，没有宣布或提供一个具体、可识别的 HITBOT 软件制品。页面缺少项目名称、版本、实际实现、软件入口及专属技术材料，无法满足“已发布的软件技术项目”这一核心条件。页面作为官方文章本身不足以把其中描述的通用仿真能力认定为 HITBOT 的已实现项目。此外，官方页面日期是 2025年9月26日，而非候选信息中的 2025年9月2日。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该候选页面介绍机器人仿真软件的一般工作方式：在物理环境部署之前建立包含机器人、末端执行器、输送设备和安全设施的虚拟工作单元；在其中编写和调试程序；检查可达性、碰撞、关节限制、奇异点与周期时间；并利用离线编程生成面向不同机器人品牌的控制代码。文章还解释了数字孪生如何通过传感器和数据流同步现实设备，以及这种同步在预测性维护、流程优化和远程监控中的潜在用途。对于复杂焊接、喷涂和抛光路径，文章称可导入 CAD 模型并生成工具路径；对于项目管理，则强调机械设计、工作站建设和编程可以并行开展。然而，这些内容全部是对技术类别及其潜在收益的概括，没有对应到一个具名、已发布且可访问的 HITBOT 仿真平台。因此，该页面不能作为一个自 2025 年起发布的具身机器人软件项目收入严格索引。"
+    }
+  },
+  "cortex-bridging-vision-language-and-action-with--ac3f62a": {
+    "checked_at": "2026-08-26T04:13:25.494836+00:00",
+    "title": "Cortex: Bridging Vision, Language, and Action with Discrete Plans and Tokens",
+    "accepted": true,
+    "reason": "收录。Sereact GmbH 的官方专门页面明确将 Cortex 定义为面向实体机器人的 Vision-Language-Action 软件系统，并详细说明离散规划、视觉与动作令牌化、连续动作专家、训练流程以及机器人控制适配，因此满足软件和明确责任组织条件，不是硬件产品页。未发现官方代码或模型权重开放发布，因此 open_source=false。需纠正候选元数据：官方页面显示发布日期为 2025 年 9 月 28 日，而不是所给的 2025 年 9 月 2 日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "根据自然语言指令与视觉观测生成可执行的机器人动作",
+        "通过符号子任务、场景关键区域和粗粒度三维计划完成分层任务推理",
+        "以连续动作专家批量生成关节更新或末端执行器运动，用于低延迟硬件控制",
+        "利用统一的图像、文本、视频与动作令牌进行训练，并适配不同机器人控制空间"
+      ],
+      "fields": [
+        "Vision-language-action",
+        "Robot manipulation",
+        "Embodied AI",
+        "Robot systems"
+      ],
+      "include": true,
+      "key_points": [
+        "Cortex 是面向实体机器人的视觉-语言-动作系统，将视觉感知、语言理解、规划和动作控制集成在同一软件架构中；官方页面明确说明其处理自然语言指令和视觉输入，并输出机器人动作。",
+        "系统采用分层推理流程：理解指令并将其落地到视觉场景，生成粗粒度三维计划，再将计划细化为运动预测；最后由 Motion Policy Expert 映射到特定机器人的控制空间。",
+        "Sereact Lens VLM 负责预测符号化子任务并识别动作应发生的关键场景区域，以高层显式子目标连接语义推理与低层控制。",
+        "Cortex 同时离散化动作和感知：动作被表示为类似语言词表的离散令牌；视频则由定制自动编码器压缩为视频令牌，从而为机器人所见与所做建立统一的离散表示。",
+        "控制端采用紧凑的连续动作专家，一次生成一小段实值动作，包括精确的关节更新或末端执行器运动；视觉和语言上下文可被缓存，以减少连续控制循环中的计算延迟。",
+        "训练分为两个阶段：先以离散动作令牌预训练主干网络，再以轨迹匹配损失微调连续动作专家，同时保留主干的令牌目标，并阻止专家直接访问真实动作令牌。",
+        "训练材料包括工业数据和真实部署日志；Sereact Lens 还被用于自动标注机器人示范视频中的子任务。官方页面称数据来自其在仓库和制造环境中运行的数百台机器人，但尚未发布标准化定量基准。"
+      ],
+      "metrics": [
+        {
+          "label": "真实机器人数据规模",
+          "note": "官方原始发布页称视频令牌利用了仓库和制造工厂中数百台已部署机器人的数据，未披露精确台数或样本量。",
+          "value": "数百台机器人"
+        },
+        {
+          "label": "训练阶段",
+          "note": "第一阶段使用离散动作令牌预训练主干；第二阶段使用轨迹匹配损失微调连续动作专家，并继续保留令牌训练目标。",
+          "value": "2 个阶段"
+        },
+        {
+          "label": "连续动作生成",
+          "note": "连续动作专家利用已缓存的视觉与语言上下文，仅经过少量细化步骤便生成下一段实值动作；官方未公布具体延迟。",
+          "value": "少量细化步骤"
+        },
+        {
+          "label": "跨机器人适配",
+          "note": "官方报告同一高层计划可用于不同机器人类型，适配时只需微调运动动作部分；该页面未提供数值比较。",
+          "value": "同一高层计划可适配不同机器人类型"
+        },
+        {
+          "label": "任务与环境泛化",
+          "note": "官方报告早期 Cortex 已能泛化到新任务和新环境，但明确表示系统化模拟及真实世界基准仍属于后续工作。",
+          "value": "已展示对新任务和环境的定性泛化"
+        }
+      ],
+      "official_organization_url": "https://sereact.ai/",
+      "official_project_url": "https://sereact.ai/posts/cortex-bridging-vision-language-and-action-with-discrete-plans-and-tokens",
+      "open_source": false,
+      "organization_en": "Sereact GmbH",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "收录。Sereact GmbH 的官方专门页面明确将 Cortex 定义为面向实体机器人的 Vision-Language-Action 软件系统，并详细说明离散规划、视觉与动作令牌化、连续动作专家、训练流程以及机器人控制适配，因此满足软件和明确责任组织条件，不是硬件产品页。未发现官方代码或模型权重开放发布，因此 open_source=false。需纠正候选元数据：官方页面显示发布日期为 2025 年 9 月 28 日，而不是所给的 2025 年 9 月 2 日。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Cortex 是德国机器人软件公司 Sereact 发布的实体机器人视觉-语言-动作系统，目标是在保留多模态模型语言与推理能力的同时，将输出可靠地落地为真实机器人动作。其核心不是直接从文本预测原始控制量，而是通过符号子任务、视觉场景落地、粗粒度三维计划和精细运动预测构成分层链路，再由连续动作专家生成可立即执行的关节或末端执行器动作块。系统将图像、文本、视频和动作组织为统一令牌序列，并使用定制自动编码器把真实作业视频压缩为离散视频令牌；训练上先以离散动作令牌预训练主干，再通过轨迹匹配微调连续控制专家。Sereact 表示训练数据包含工业数据、真实部署日志以及来自数百台仓储和制造机器人的视频，并利用 Sereact Lens 自动生成子任务标注。该发布属于有明确实体机器人执行路径的技术软件项目，符合索引条件；但原始页面主要提供架构和定性演示，尚未公布可复核的标准基准成绩、具体延迟或完整数据规模，也未开放代码与模型权重。"
+    }
+  },
+  "plamo-fin-prime-preferred-networks-tech-blog-8d9231e": {
+    "checked_at": "2026-08-26T04:13:25.517575+00:00",
+    "title": "PLaMo Fin Primeをリリースしました - Preferred Networks Tech Blog",
+    "accepted": false,
+    "reason": "不收录：虽然存在由 Preferred Networks 发布的官方专页，而且 PLaMo Fin Prime 属于软件模型，但该项目是金融知识增强型通用 LLM。官方材料仅支持金融问答、领域追加预训练、后训练和长上下文等用途，没有证据表明它是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据引擎或具身评测框架，因此不满足条件 1。另需纠正候选元数据：官方页面标注的发布日期为 2025 年 6 月 17 日，并非 2025 年 6 月 1 日。([tech.preferred.jp](https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于日本语通用模型 PLaMo，通过金融领域语料进行追加预训练",
+        "通过多阶段后训练提升指令遵循能力与安全性",
+        "支持最长 16,000 token 的上下文输入",
+        "面向日本企业、证券及金融术语提供领域问答"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo Fin Prime 是面向金融领域的日语大型语言模型，而不是面向物理机器人或具身智能的软件。",
+        "模型以 PLaMo 为基础，使用金融专用语料执行追加预训练，以增强日本金融知识。",
+        "相较于未实施后训练的 PLaMo Fin Base，Fin Prime 加入了多阶段后训练，重点改善安全性、指令遵循和金融相关回答能力。",
+        "官方团队曾测试通过模型权重差分进行模型合并，但因观察到行为不稳定，最终没有采用该方案。",
+        "后训练将可用上下文长度扩展至 16,000 token。",
+        "官方页面介绍了将同一追加预训练与后训练流程用于其他行业或企业专属领域模型的能力，但未描述机器人感知、动作生成、控制、规划、仿真或实体交互。"
+      ],
+      "metrics": [
+        {
+          "label": "Japanese Language Model Financial Evaluation Harness Overall",
+          "note": "PLaMo 1.0 Fin Prime；官方金融基准由五项任务组成",
+          "value": "62.4"
+        },
+        {
+          "label": "金融情感分析 chabsa",
+          "note": "PLaMo 1.0 Fin Prime",
+          "value": "93.0"
+        },
+        {
+          "label": "证券分析基础知识 cma_basics",
+          "note": "PLaMo 1.0 Fin Prime",
+          "value": "65.8"
+        },
+        {
+          "label": "Preferred Multi-turn Benchmark for Finance in Japanese Overall",
+          "note": "PLaMo 1.0 Fin Prime",
+          "value": "8.41"
+        },
+        {
+          "label": "上下文长度",
+          "note": "后训练后支持的最大输入长度",
+          "value": "16,000 tokens"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不收录：虽然存在由 Preferred Networks 发布的官方专页，而且 PLaMo Fin Prime 属于软件模型，但该项目是金融知识增强型通用 LLM。官方材料仅支持金融问答、领域追加预训练、后训练和长上下文等用途，没有证据表明它是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据引擎或具身评测框架，因此不满足条件 1。另需纠正候选元数据：官方页面标注的发布日期为 2025 年 6 月 17 日，并非 2025 年 6 月 1 日。([tech.preferred.jp](https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo Fin Prime 是 Preferred Networks 于 2025 年 6 月 17 日发布的日语金融领域大型语言模型。它在 PLaMo 基础上使用金融专用语料进行追加预训练，并通过多阶段后训练改善安全性、指令遵循和金融对话能力；上下文长度扩展至 16,000 token。官方报告其在 Japanese Language Model Financial Evaluation Harness 上取得 62.4 的总体成绩，在日语金融多轮基准上取得 8.41。尽管它是具有明确负责人和官方发布页面的软件项目，但其技术目标和评测均集中于金融自然语言处理，没有机器人感知、动作预测、实体控制或具身交互能力，因而不属于具身机器人技术项目。([tech.preferred.jp](https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/?utm_source=openai))"
+    }
+  },
+  "plamo-prime-1-4-preferred-networks-6764bcb": {
+    "checked_at": "2026-08-26T04:13:25.539463+00:00",
+    "title": "より高性能になったPLaMo Primeを1/4以下の新価格で提供 - 株式会社Preferred Networks",
+    "accepted": false,
+    "reason": "不纳入。官方发布页明确将PLaMo 2.0 Prime定义为通用商用大语言模型，功能和评测均围绕文本生成、日语能力、长上下文、翻译及API服务展开；没有证据表明该发布物是用于物理机器人或具身智能的VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据引擎或具身评测基准，因此不满足条件1。候选日期也有误：官方页面的发布日期是2025年5月22日，而不是2025年5月2日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "日语文本理解与生成",
+        "复杂长文本处理",
+        "文本摘要与分析",
+        "日英翻译",
+        "通过API集成至外部应用"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo 2.0 Prime是面向通用自然语言任务的商用大语言模型，而不是面向物理机器人或具身智能的软件项目。",
+        "该模型以PLaMo 2.0-31B的指令学习版本为基础，并针对推理服务进行了优化。",
+        "训练使用了以日语为重点、规模为1000亿token的高质量数据集。",
+        "项目采用自研tokenizer并扩展上下文长度，以提高处理效率和复杂长文本处理能力。",
+        "官方提供方式包括PLaMo API，并将其定位为企业生成式AI和聊天、文本处理应用的基础模型。",
+        "官方材料未说明机器人动作输出、视觉或传感输入、机器人策略学习、控制规划、仿真、具身评测或物理机器人部署能力。"
+      ],
+      "metrics": [
+        {
+          "label": "基础模型规模",
+          "note": "官方称PLaMo 2.0 Prime基于PLaMo 2.0-31B的指令学习模型。",
+          "value": "31B参数"
+        },
+        {
+          "label": "训练数据规模",
+          "note": "GENIAC第二期中构建的、以日语为重点的高质量训练数据集。",
+          "value": "100B tokens"
+        },
+        {
+          "label": "相对模型规模",
+          "note": "PLaMo 2.0-31B与GENIAC第一期开发的PLaMo-100B相比。",
+          "value": "不足PLaMo-100B的三分之一"
+        },
+        {
+          "label": "日语生成评测",
+          "note": "官方称在pfgen基准中排名仅次于GPT-4o，并高于DeepSeek-R1和Qwen-Max；页面摘要未提供可可靠摘录的具体分数。",
+          "value": "pfgen评测中仅次于GPT-4o"
+        },
+        {
+          "label": "价格变化",
+          "note": "与PLaMo 1.0 Prime相比的新定价。",
+          "value": "降至四分之一以下"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://www.preferred.jp/ja/news/pr20250522",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不纳入。官方发布页明确将PLaMo 2.0 Prime定义为通用商用大语言模型，功能和评测均围绕文本生成、日语能力、长上下文、翻译及API服务展开；没有证据表明该发布物是用于物理机器人或具身智能的VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据引擎或具身评测基准，因此不满足条件1。候选日期也有误：官方页面的发布日期是2025年5月22日，而不是2025年5月2日。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo 2.0 Prime是Preferred Networks集团从零开发的商用旗舰大语言模型。它以31B参数的PLaMo 2.0-31B指令学习模型为基础，使用1000亿token的高质量数据集训练，并通过自研tokenizer、上下文扩展和推理优化提升日语生成、长文本理解、摘要、分析及翻译能力。官方报告其在pfgen日语生成基准中的表现仅次于GPT-4o，并高于DeepSeek-R1和Qwen-Max，同时将服务价格降至上一代的四分之一以下。尽管PFN也从事机器人业务，当前专页及其链接材料并未把PLaMo 2.0 Prime作为机器人或具身智能软件发布，也未展示感知到动作、机器人控制、策略学习或物理部署能力。"
+    }
+  },
+  "pfn-launches-plamo-translate-large-language-mode-e0ff222": {
+    "checked_at": "2026-08-26T04:13:25.561351+00:00",
+    "title": "PFN Launches PLaMo Translate Large Language Model Specialized for Japanese Text Translation - Preferred Networks, Inc.",
+    "accepted": false,
+    "reason": "不符合条件1。官方页面将 PLaMo Translate 定义为面向日语文本翻译的专用大语言模型和本地部署产品，没有证据表明其是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据集、评测基准或具身智能框架。它虽然属于软件且有明确的官方发布页和责任公司，但通用文本翻译软件不属于该具身机器人项目索引。另需纠正日期：官方发布日期是2025年5月27日，而不是候选资料所列的2025年5月2日。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "日英双向文本翻译，并支持以日语为输入或输出语言的其他翻译方向",
+        "结合最多80,000个字符的前文上下文，维持长文本中的文体与术语一致性",
+        "识别会话、新闻、学术论文等文本风格，并按相应风格生成译文",
+        "保留换行、缩进以及 Markdown 和程序代码等原始格式"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo Translate 是 Preferred Networks 集团从零开发的翻译专用大语言模型，训练数据包含较高比例的日语和英语文本。",
+        "官方将其用途明确限定为文本翻译，尤其是日语与英语之间以及以日语为输入或输出语言的翻译；页面未描述机器人感知、动作生成、控制、规划或物理环境交互。",
+        "模型采用紧凑的翻译专用架构，可在满足条件的本地计算机及企业本地环境运行，以处理机密文档。",
+        "模型可利用最多80,000个字符的前文上下文，以提高长文本中措辞、文体和术语的一致性。",
+        "模型能够识别会话、新闻文章和学术论文等文本类型，并保留换行、缩进、Markdown及代码格式。",
+        "官方同时提供网页试用和可下载的本地部署版本；下载版本采用 PLaMo Community License，并非据此认定为标准开源软件。",
+        "候选信息所列日期为2025年5月2日，但官方发布页标注的实际发布日期是2025年5月27日。"
+      ],
+      "metrics": [
+        {
+          "label": "上下文长度",
+          "note": "官方称模型在翻译时可参考此前上下文。",
+          "value": "最多80,000个字符"
+        },
+        {
+          "label": "网页试用字符上限",
+          "note": "适用于日语到英语及英语到日语。",
+          "value": "5,000个字符"
+        },
+        {
+          "label": "其他语言网页试用字符上限",
+          "note": "适用于官方所称的其他语言翻译。",
+          "value": "2,000个字符"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/en/",
+      "official_project_url": "https://www.preferred.jp/en/news/pr20250527",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件1。官方页面将 PLaMo Translate 定义为面向日语文本翻译的专用大语言模型和本地部署产品，没有证据表明其是用于物理机器人或具身智能的 VLA、机器人策略、世界/动作模型、控制规划栈、仿真器、机器人数据集、评测基准或具身智能框架。它虽然属于软件且有明确的官方发布页和责任公司，但通用文本翻译软件不属于该具身机器人项目索引。另需纠正日期：官方发布日期是2025年5月27日，而不是候选资料所列的2025年5月2日。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo Translate 是日本公司 Preferred Networks 发布的日语翻译专用大语言模型。它支持长上下文翻译、文体识别、格式保持和本地部署，官方网页还提供有限字符数的免费试用。尽管这是一个有正式官方发布页的软件模型，并具备明确的开发机构和技术功能，但其目标是通用文本翻译，不涉及机器人感知、动作决策、身体控制或物理环境交互，因此不能纳入2025年以来具身机器人技术项目索引。"
+    }
+  },
+  "plamo-preferred-networks-9ce161b": {
+    "checked_at": "2026-08-26T04:13:25.583497+00:00",
+    "title": "国産大規模言語モデルPLaMoの金融機関向けモデルを開発 - 株式会社Preferred Networks",
+    "accepted": false,
+    "reason": "不符合条件1。官方资料将PLaMo-fin-base明确描述为面向银行、证券公司等金融机构的日文金融特化大语言模型，用于金融文本生成、分析、摘要、RAG和业务支持；没有证据表明该发布物是用于物理机器人或具身智能的VLA、机器人策略、世界/动作模型、控制规划栈、模拟器、机器人数据集或具身评测框架。PFN从事机器人相关业务以及PLaMo可部署在边缘设备，并不能使这个金融LLM项目成为具身机器人软件项目。另需更正：官方发布日期是2025年1月27日，不是候选记录中的2025年1月2日。([preferred.jp](https://www.preferred.jp/news/pr20250127?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "基于日本金融知识回答专业问题",
+        "通过RAG利用机构内部文件与数据库",
+        "通过追加训练融入机构专有业务知识",
+        "支持完全本地化的内网部署",
+        "生成、分析和摘要金融业务文本"
+      ],
+      "fields": [
+        "LLM"
+      ],
+      "include": false,
+      "key_points": [
+        "PLaMo-fin-base是以PLaMo为基础、针对日本金融领域进行追加训练的大语言模型。",
+        "训练使用了大量日文金融数据，目标是增强需要日本国内金融知识的任务表现。",
+        "官方列出的用途包括根据销售日报起草提案、生成投融资审批材料、开展柜面或法人销售角色扮演、基于IR信息分析企业，以及摘要监管机构发布的信息。",
+        "模型可通过RAG连接业务日报、培训材料、操作手册和客户数据库等机构内部资料。",
+        "金融机构可以通过追加训练，将投资判断标准等专有业务知识反映到模型中。",
+        "模型支持数据不离开机构的本地部署，面向金融行业的高安全要求。",
+        "官方公告日期为2025年1月27日，而候选资料所写的2025年1月2日与官方页面不一致。"
+      ],
+      "metrics": [
+        {
+          "label": "官方发布日期",
+          "note": "Preferred Networks官方新闻稿所示日期",
+          "value": "2025年1月27日"
+        },
+        {
+          "label": "金融基准评测",
+          "note": "官方称其在Japanese Language Model Financial Evaluation Harness中获得较高评价，但该公告的可访问正文未给出可可靠提取的具体分数。",
+          "value": "高评价"
+        },
+        {
+          "label": "专业任务表现",
+          "note": "官方称其在考察证券分析师、会计师等金融专业人士所需能力的任务中达到较高性能，未提供具体数值。",
+          "value": "高性能"
+        }
+      ],
+      "official_organization_url": "https://www.preferred.jp/",
+      "official_project_url": "https://www.preferred.jp/ja/news/pr20250127",
+      "open_source": false,
+      "organization_en": "Preferred Networks, Inc.",
+      "organization_kind": "Company",
+      "organization_zh": "",
+      "reason": "不符合条件1。官方资料将PLaMo-fin-base明确描述为面向银行、证券公司等金融机构的日文金融特化大语言模型，用于金融文本生成、分析、摘要、RAG和业务支持；没有证据表明该发布物是用于物理机器人或具身智能的VLA、机器人策略、世界/动作模型、控制规划栈、模拟器、机器人数据集或具身评测框架。PFN从事机器人相关业务以及PLaMo可部署在边缘设备，并不能使这个金融LLM项目成为具身机器人软件项目。另需更正：官方发布日期是2025年1月27日，不是候选记录中的2025年1月2日。([preferred.jp](https://www.preferred.jp/news/pr20250127?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "PLaMo-fin-base是Preferred Networks面向日本金融机构推出的领域特化大语言模型。该模型基于PFN从预训练阶段自行开发的PLaMo，通过追加大量日文金融数据来增强国内金融知识，并可结合RAG、机构专有数据追加训练和本地部署，支持审批材料起草、企业分析、监管信息摘要等金融自然语言处理业务。它属于明确的软件与LLM项目，也有负责公司及官方发布页面，但发布主题完全是金融语言处理，不涉及物理机器人、机器人行动生成、感知控制闭环或其他具身智能技术，因此不能收入具身机器人技术项目索引。"
+    }
   }
 }

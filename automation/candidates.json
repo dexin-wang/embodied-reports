@@ -1,6 +1,115 @@
 {
-  "generated_at": "2026-08-25T03:15:03.145374+00:00",
+  "generated_at": "2026-08-26T04:09:38.731895+00:00",
   "candidates": [
+    {
+      "title": "TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks",
+      "summary": "Robot actions are inherently embodiment-specific and only weakly aligned with image-space visual changes, limiting their effectiveness as conditioning signals for robot world models. In contrast, visual tracks provide an embodiment-agnostic representation of how task-relevant points move through a scene, offering dense image-space guidance for accurate and spatially precise future video prediction. Building on this observation, we propose TrAct, a world-model-based robot decision-making framework that uses visual tracks as an intermediate interface between control and prediction. TrAct consists of three components: a Vision-Language-Action-and-Track model (VLAT) that jointly predicts candidate actions and corresponding visual tracks from the current observation and language instruction; a track-conditioned world model (TWM) that predicts future visual outcomes conditioned on the proposed tracks; and a vision-language reward model (VLAC) that scores the predicted outcomes. At inference time, VLAT generates candidate action-track pairs, TWM rolls out their visual consequences, and VLAC selects the track whose predicted outcome best satisfies the instruction; the action paired with the selected track is then executed by the robot. Experiments on the proposed LIBERO-INTEGRAL benchmark and real-world Franka manipulation show that TrAct improves success rates from 27% to 55% in simulation and from 49% to 76% on real-world tasks compared with the strong VLA baseline $π_{0.5}$. Furthermore, TWM consistently improves video prediction quality over the action-conditioned world model (AWM). These results demonstrate that visual tracks provide an effective shared interface between robot control and visual prediction, enabling more accurate world modeling and stronger robot generalization.",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24101v1",
+      "authors": [
+        "Zhi Cao",
+        "Howard Ji",
+        "Kevin Zhang",
+        "Kuangzhi Ge",
+        "Li Fei-Fei",
+        "Jiajun Wu",
+        "Huang Huang"
+      ],
+      "score": 52,
+      "reasons": [
+        "keywords: vision-language-action, vla, world model",
+        "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control",
+      "summary": "Multimodal large language models (MLLMs) can integrate long visual histories, reason under partial observability, and infer behavior from a few examples. Yet vision-language-action (VLA) models generally inherit pretrained representations without using this contextual capacity as episode memory. Memory-dependent policies address this gap through purpose-built history mechanisms. PonderPounce instead reuses an MLLM's native causal context as robot memory. Ponder, a System2 MLLM, accumulates episode observations, demonstrations, and prior cognition in its native causal context and can generate subgoal text and demonstration reasoning for internal use. Pounce, a System1 VLA, receives the current observation, instruction, and proprioception directly; through the Ponder--Pounce interface, it asynchronously receives only the newest continuous cognition token and its age. Both are jointly trained end to end without a purpose-built memory module or separate bridge pretraining. Optimized serving achieves p50 latencies of 78ms for cognition refresh and 25ms for action-model invocation, supporting 20Hz action playback. On RoboMME with base-scale training data, PonderPounce reaches 60.83% with 9B and 50.04% with 0.8B under the same Pounce architecture and interface, versus 44.51% for FrameSamp+Modul and 17.93% for the current-observation π_{0.5}. With 9x data, it reaches 75.54% versus 57.88% for FrameSamp+Modul. On RoboCasa-DC, the same interface learns from action supervision alone and reaches 12.5% versus 11.6% for the strongest published demonstration-conditioned baseline, falling to 8.6% when cognition is replaced by a learned null state.",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24115v1",
+      "authors": [
+        "Suhwan Choi",
+        "Jaeyoon Jung",
+        "Sungkyung Kim",
+        "Yunsung Lee",
+        "Youngjae Yu"
+      ],
+      "score": 26,
+      "reasons": [
+        "keywords: vision-language-action, vla"
+      ]
+    },
+    {
+      "title": "Hierarchical Skill Retrieval for Data-Efficient Adaptation of Vision-Language-Action Models",
+      "summary": "While Vision-Language-Action (VLA) models pretrained on large-scale robot datasets provide a strong foundation for robot manipulation, their performance can degrade when adapted to new tasks with limited task-specific demonstrations. Retrieval offers a practical way to reuse existing demonstrations for data-efficient adaptation, but existing methods often rely on visual similarity, state-action representations, or task-level language matching. These approaches may overlook the hierarchical structure of long-horizon manipulation tasks, where complete task matches are rare but reusable skills are often abundant. To address this challenge, we propose Hierarchical Skill Retrieval (HSR), a retrieval framework for data-efficient VLA adaptation. Specifically, HSR first decomposes a target task into candidate skill sequences. It evaluates each plan based on both semantic plausibility and skill reliability estimated from the prior dataset. The selected decomposition is then used for hybrid retrieval. This combines subtask-level language retrieval with behavior-feature reranking to identify demonstrations that are both semantically relevant and compatible with the target task. Finally, we adapt the policy through a two-stage pretraining and finetuning pipeline, which separates general skill acquisition from task-specific adaptation. Experiments on the LIBERO benchmark and several real-world robot manipulation tasks show that HSR improves the average success rate by 10.3% and 21.3% over the strongest baseline, respectively. These results demonstrate the effectiveness of structured skill-level retrieval for data-efficient VLA adaptation. Videos and code are available at https://hoar012.github.io/HSR-Project.",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24042v1",
+      "authors": [
+        "Haoran Hao",
+        "Shahram Najam Syed",
+        "Jeff Schneider",
+        "Jeffrey Ichnowski"
+      ],
+      "score": 72,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title",
+        "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Gripper-aware Vision Language Action Models",
+      "summary": "Vision language action models (VLAs) have advanced general purpose robotic grasping and manipulation by enabling robots to interpret visual observations and natural language instructions to generate executable action sequences. However, existing VLAs often implicitly assume gripper invariance, despite grasping strategies being inherently embodiment-dependent. Different gripper types, such as parallel-jaw and suction, usually require distinct interaction strategies to achieve the same grasping objective. Moreover, current datasets for VLAs predominantly rely on parallel-jaw grippers, limiting gripper-aware learning. To address this gap, we introduce MiGA, a multi-gripper-aware dataset spanning five distinct gripper types across multiple robots with 103,000 demonstrations, explicitly capturing strategy divergence under shared task objectives. We further propose GVLA, which combines a new multi-gripper tokenizer with adapter-based policy routing. Our new gripper encoding induces structured embedding information that balances parameter sharing and strategy differentiation, while layer-wise probing confirms meaningful gripper-conditioned representations for VLAs. Intensive experiments in both simulation and real-world robots show that our GVLA outperforms the current baselines across evaluated settings. Our method also improves zero-shot generalization or few-shot adaptation to new objects or unseen tasks, and enable more efficient gripper adaptation.",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24603v1",
+      "authors": [
+        "Hanyi Zhang",
+        "Zihong Luo",
+        "Tianyu Li",
+        "Khang Nguyen",
+        "Basu Hela",
+        "Shreyas Kumar",
+        "Ngoc Duy Tran",
+        "Feng Dai",
+        "Charith Munasinghe",
+        "Jorge Peña Queralta",
+        "Giovanni Toffetti",
+        "Khoa Vo",
+        "Ngan Le",
+        "Ravi Prakash",
+        "Quan Vuong",
+        "Tung D. Ta",
+        "Long Hu",
+        "Anh Nguyen",
+        "Baoru Huang"
+      ],
+      "score": 44,
+      "reasons": [
+        "keywords: vision language action, vla",
+        "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+      "summary": "Action-conditioned world models are increasingly used as learned simulators for policy evaluation and improvement, yet their effectiveness rests on an unverified assumption: generated futures faithfully reflect arbitrary valid actions. Existing benchmarks are typically confined to expert demonstrations, leaving off-expert action following inadequately evaluated. To address this gap, we introduce WorldEcho, which probes action following over a broader action distribution using visual integrity and SE(3) trajectory alignment. Our diagnosis shows that current world models reasonably execute expert actions but struggle with diverse off-expert trajectories, either ignoring the commanded actions or producing visually invalid rollouts. We further propose WorldSync, which strengthens action following along three complementary axes: distributional coverage, representational grounding, and intervention-effect alignment. It broadens the training distribution over action consequences, grounds intermediate video representations in action-induced robot dynamics through an Action-Forcing Expert, and aligns predicted changes under action interventions with the corresponding changes in ground-truth futures. Experiments on RoboTwin benchmarks and real-robot tasks show that WorldSync improves WorldEcho metrics and serves as a more reliable simulator for iterative policy improvement, enabling policies to achieve higher success rates.",
+      "date": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.24885v1",
+      "authors": [
+        "Sixiang Chen",
+        "Jiaming Liu",
+        "Jixian Wu",
+        "Yichen Guo",
+        "Tinghao Wang",
+        "Siyuan Qian",
+        "Hao Chen",
+        "Jiajun Cao",
+        "Jian Tang",
+        "Shanghang Zhang"
+      ],
+      "score": 18,
+      "reasons": [
+        "keywords: world model"
+      ]
+    },
     {
       "title": "UniMem: Unifying Multimodal Memory and Control for Vision-Language-Action Models",
       "summary": "While Vision-Language-Action (VLA) models have leveraged internet-scale pretraining and task-focused finetuning to achieve strong performance on long-horizon tasks, they often struggle with non-Markovian tasks that require memory. Existing approaches to memory typically involve additional Vision-Language-Models (VLMs) for long-term memory management, introducing a memory bottleneck and a fractured training pipeline. Conditioning on multiple historical frames can provide the VLA with access to more descriptive features of past scenes, but can degrade performance if frames are chosen at arbitrary, fixed intervals. To address these limitations, we present UniMem, a framework that unifies high-level, multimodal memory and low-level control under one backbone. UniMem employs an event classifier for memory updates, a keyframe encoder for dense spatial memory, and a keyframe caching technique to minimize overhead during policy rollouts. We evaluate UniMem across five simulation and four hardware tasks targeting sequential and spatial memory, demonstrating that our unified, single-model system outperforms fixed-interval image sampling baselines (93.4% vs. 68.2%) in simulation and hierarchical baselines (80.0% vs. 43.5%) in hardware, while offering faster inference and a simple training pipeline for easy adoption. Project website: https://losterberg3.github.io/unimem-vla/",
@@ -2183,47 +2292,6 @@
       ]
     },
     {
-      "title": "SpaceVLA: Spatially Grounded VLA for Robotic Manipulation with User-Authored Grasp and Place Anchors",
-      "summary": "Vision-language-action (VLA) models follow language commands but often lack explicit spatial intent for manipulation. We present Visual Intent Anchors, an XR pipeline that lets users specify grasp and placement regions and renders them as image-space overlays for VLA control. We collect 200 Unity pick-and-place demonstrations and fine-tune OpenVLA-7B with LoRA on temporally subsampled annotated observations. The policy predicts tokenized 7-DoF incremental actions from marked RGB observations and language. We evaluate the policy in closed-loop Unity trials, achieving a grasp success rate of 91.25% and mean grasp and placement errors of 0.5 cm and 0.7 cm, respectively.",
-      "date": "2026-08-06",
-      "url": "https://arxiv.org/abs/2608.05730v1",
-      "authors": [
-        "Daniia Zinniatullina",
-        "Iaroslav Kolomiets",
-        "Mikhail Konenkov",
-        "Miguel Altamirano Cabrera",
-        "Dzmitry Tsetserukou"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: vision-language-action, vla"
-      ]
-    },
-    {
-      "title": "SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation",
-      "summary": "Embodied visuomotor models, including Diffusion Policy (DP) and Vision-Language-Action (VLA) models, have demonstrated promising performance on robotic manipulation benchmarks. However, their potential remains fundamentally constrained by the scarcity of large-scale embodied trajectory datasets, leading to insufficient compositional generalization in out-of-distribution (OOD) scenarios with limited capability to capture reusable skill structures. To address this limitation, we propose Skill-Based Memory (SkillMemo) framework that implicitly decomposes long-horizon demonstrations into latent atomic skills and integrates skill-level features into a dynamic episodic memory bank for solving compositional tasks. Specifically, we first introduce an expert-guided trajectory segmentation module built upon a Mixture-of-Experts (MoE) architecture, which implicitly partitions trajectories into distinct skill primitives represented by learned gating coefficients. We further design a skill-level episodic memory architecture that stores compact skill representations as retrievable key-value pairs. During inference, the memory bank retrieves the most relevant skill primitives which are subsequently fused with the model's current gating distribution, providing a robust contextual prior to refine action predictions. Extensive experiments on the simulation benchmark and real-world manipulation tasks demonstrate that SkillMemo consistently enhances both DP and VLA backbones, achieving state-of-the-art performance and outperforming $π_{0.5}$, while exhibiting strong compositional generalization to unseen task configurations.",
-      "date": "2026-08-06",
-      "url": "https://arxiv.org/abs/2608.05970v1",
-      "authors": [
-        "Changyuan Wang",
-        "Chubin Zhang",
-        "Zhenyu Wu",
-        "Runhao Li",
-        "Angyuan Ma",
-        "Ke Chao",
-        "Yinan Liang",
-        "Xiuwei Xu",
-        "Ziwei Wang",
-        "Yansong Tang",
-        "Jiwen Lu"
-      ],
-      "score": 44,
-      "reasons": [
-        "keywords: vision-language-action, vla",
-        "physical-robot evidence"
-      ]
-    },
-    {
       "date": "2026-08-06",
       "organization_hint": "Research in progress",
       "summary": "I’m checking official company and lab sources, then cross-validating release dates and excluding entries whose only landing page is an arXiv or conference-paper page.",
@@ -2257,25 +2325,6 @@
       ]
     },
     {
-      "title": "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use",
-      "summary": "Vision-Language-Action (VLA) models have become the dominant recipe for generalist manipulation, yet they are almost universally trained by behavior cloning: a policy imitates expert action chunks conditioned on a static image and a fixed instruction. A natural remedy is to inject explicit reasoning through textual chain-of-thought (CoT). We show, both empirically and analytically, that free-form textual CoT degrades low-level control: the reasoning it produces is ungrounded, its latency breaks closed-loop timing, and, crucially, the reasoning and action tokens are optimized against conflicting objectives so that the policy learns to narrate rather than to act. We argue that what a VLA needs is not the ability to generate language, but the ability to consume grounded language. To this end we introduce \\textbf{\\ourmethod{}}, a framework that endows a VLA with language competence through (i) in-context post-training, in which perceptual evidence is injected as structured context and the model is supervised only on actions, and (ii) an agentic tool-use interface, in which the policy queries open-vocabulary detectors, monocular depth, and a vision--language model to actively acquire task-relevant information. Rather than emitting a single templated caption, our data engine produces diverse, paraphrased, and evidence-conditioned spatial descriptions, so that the policy learns to interpret language it has never seen verbatim. Across the RoboCasa-GR1, SimplerEnv, and LIBERO simulation benchmarks, together with 8 real-world robot manipulation tasks, our method consistently achieves SOTA results in both performance and efficiency when compared with CoT-based approaches under matched configurations.",
-      "date": "2026-08-06",
-      "url": "https://arxiv.org/abs/2608.05738v1",
-      "authors": [
-        "Jiarui Yang",
-        "Wen Huang",
-        "Jiale Zhang",
-        "Maowei Hu",
-        "Hang Guo"
-      ],
-      "score": 72,
-      "reasons": [
-        "keywords: vision-language-action, vla",
-        "report/model title",
-        "physical-robot evidence"
-      ]
-    },
-    {
       "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
       "summary": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual preprocessing to convert embodiment-specific actions into a common format. To overcome these limitations, we propose DyPES-VLA, a cross-embodiment VLA that learns shared Dynamics Priors and Embodiment-Specific control. First, we learn shared dynamics priors by training the vision-language model (VLM) with a future-prediction objective on cross-embodiment data, driving the shared query representation to capture object motion, contact, and interaction-induced scene changes. Second, an embodiment-specific Mixture-of-Experts (MoE) action head translates these shared dynamics priors into executable controls directly in each embodiment's native action space, without manually pre-aligning heterogeneous actions into a common format. This head shares attention layers to capture common temporal action structures, while its embodiment-specific feed-forward experts resolve the unique kinematic constraints and control semantics of distinct embodiments. As a generalist policy, our \\ourmethod achieves state-of-the-art performance across simulation and real-world evaluations, reaching 98.0% success on LIBERO, 59.25% on RoboCasa-GR1, and 89.02% on RoboTwin~2.0.",
       "date": "2026-08-06",
@@ -2301,27 +2350,6 @@
       "reasons": [
         "keywords: vision-language-action, vla, cross-embodiment",
         "physical-robot evidence"
-      ]
-    },
-    {
-      "title": "Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation",
-      "summary": "Vision-language-action (VLA) models have demonstrated remarkable capabilities in robotic manipulation by leveraging pretrained vision-language models. However, existing post-training methods predominantly optimize VLA models as flat policies, making it difficult to explicitly model task progression and perform robust long-horizon manipulation. Although hierarchical approaches introduce task decomposition, they mainly rely on supervised learning from offline demonstrations and cannot effectively improve execution through online interaction. To address this limitation, we propose Hierarchical Robotic Control (HiRoC), a hierarchical post-training framework that decouples high-level task planning from low-level action execution. The planner decomposes complex tasks into executable subgoals to provide explicit semantic guidance, while the executor continuously improves subgoal-conditioned action generation through reinforcement learning. To enable effective collaboration between the two modules, we further align the executor with planner-generated subgoals before reinforcement learning, mitigating the distribution misalignment between planning and execution. Extensive experiments across diverse robotic manipulation benchmarks demonstrate that HiRoC consistently outperforms strong baselines. Comprehensive analyses further validate the effectiveness of hierarchical post-training and the contribution of each key component.",
-      "date": "2026-08-06",
-      "url": "https://arxiv.org/abs/2608.05999v1",
-      "authors": [
-        "He Kong",
-        "Zengjue Chen",
-        "Qi Wang",
-        "Qianli Xing",
-        "Runliang Niu",
-        "Peidong Liu",
-        "Jiawei Li",
-        "Shiqi Wang",
-        "Yi Chang"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: vision-language-action, vla"
       ]
     },
     {
@@ -2482,6 +2510,30 @@
       ]
     },
     {
+      "title": "XPENG Robotics Raises US$900M for Humanoid Robots",
+      "url": "https://www.xpeng.com/pressroom/news/01a03797fccda01e0de68a02a256006a",
+      "date": "2026-08-02",
+      "summary": "China's largest embodied AI funding round — XPENG robotics raises US$900M backed by IDG, Tencent and Alibaba. IRON humanoid robot enters mass production in 2026.",
+      "organization_hint": "小鹏机器人 / XPENG Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Introducing Index: Building The World’s Largest and Most Diverse Physical Dataset",
+      "url": "https://www.figure.ai/news/introducing-index",
+      "date": "2026-08-02",
+      "summary": "Today we're coming out of stealth with the largest robot training dataset ever built. The data needed to scale general robotics doesn't exist on the internet - it has to come from the real world: a global sampling of physics captured across every environment on earth.",
+      "organization_hint": "Figure AI",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Datasets – Hugging Face",
       "url": "https://huggingface.co/datasets",
       "date": "2026-08-02",
@@ -2530,11 +2582,35 @@
       ]
     },
     {
+      "title": "Judo: A User-Friendly Open-Source Package forSampling-Based Model Predictive Control | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/judo-a-user-friendly-open-source-package-forsampling-based-model-predictive-control/",
+      "date": "2026-08-01",
+      "summary": "We introduce judo, a software package designed to help develop shared tools for prototyping, benchmarking, and deploying sampling-based controllers.",
+      "organization_hint": "Boston Dynamics AI Institute",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Introducing Matlantis-PFP v9: Benchmarking on MLIP Arena and Improving Experimental Agreement with r2SCAN - Preferred Networks Tech Blog",
       "url": "https://tech.preferred.jp/en/blog/introducing-matlantis-pfp-v9/",
       "date": "2026-08-01",
       "summary": "Overview Since the release of Matlantis in July 2021, Matlantis-PFP (hereafter referred to as PFP), the core Machine Learning Interatomic Potential (MLIP)",
       "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Generalizing from References using a Multi-Task Reference and Goal-Driven RL Framework | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
+      "date": "2026-08-01",
+      "summary": "We introduce a multi-task RL training paradigm that treats reference motion as a prior for behavioral shaping rather than a deployment-time constraint.",
+      "organization_hint": "Robotics and AI Institute",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -3217,18 +3293,6 @@
       "date": "2026-07-15",
       "summary": "An open-source distributed Muon optimizer implementation designed to improve large-scale embodied-model training efficiency.",
       "organization_hint": "自变量机器人 / X² Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "date": "2026-07-15",
-      "organization_hint": "Sereact",
-      "summary": "Cortex 2.5 added in-context robotic learning from a small number of video demonstrations, using retrieval to condition both its vision-language planner and world model without retraining for each task variation.",
-      "title": "Cortex 2.5",
-      "url": "https://sereact.ai/posts/cortex-2-5",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -4057,6 +4121,18 @@
       ]
     },
     {
+      "date": "2026-07-01",
+      "organization_hint": "Sereact",
+      "summary": "A new task should cost a few demonstrations, not a training run. Here's how we're teaching Cortex to learn from a prompt.",
+      "title": "Cortex 2.5",
+      "url": "https://sereact.ai/posts/cortex-2-5",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Building a Strong Japanese Reward Model on PLaMo - Preferred Networks Tech Blog",
       "url": "https://tech.preferred.jp/en/blog/building-a-strong-japanese-reward-model-on-plamo/",
       "date": "2026-07-01",
@@ -4358,18 +4434,6 @@
       "date": "2026-06-22",
       "summary": "Rerun 0.33.1 fixes preservation of transform-bearing data chunks and improves timeline scrubbing in the multimodal robotics-data viewer.",
       "organization_hint": "Rerun",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "PLaMo 3.0 Prime",
-      "url": "https://www.preferred.jp/ja/news/pr20260622",
-      "date": "2026-06-22",
-      "summary": "Preferred Networks formally released PLaMo 3.0 Prime with separate reasoning and non-reasoning models, improved tool use and multistep processing, and availability through APIs or on-premises deployment.",
-      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -5415,6 +5479,18 @@
       ]
     },
     {
+      "title": "国産生成AI基盤モデルPLaMo 3.0 Primeを正式リリース - 株式会社Preferred Networks",
+      "url": "https://www.preferred.jp/ja/news/pr20260622",
+      "date": "2026-06-02",
+      "summary": "株式会社Preferred Networks（本社：東京都千代田区、代表取締役社長：岡野原 大輔、以下PFN）は、フルスクラッチで開発する国産生成AI基盤モデルPLaMo™の最新フラッグシップモデルPLaMo 3.0 Primeを本日正式に提供開始します。PLaMo 3.0 Primeは、2026年3月に発表したPLa",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "XPENG Unveils X-Mind: A Future-Foresight Brain for Autonomous Driving",
       "url": "https://www.xpeng.com/pressroom/news/019f12539bff9f1220b48a028223000e",
       "date": "2026-06-02",
@@ -5698,18 +5774,6 @@
       "date": "2026-05-29",
       "summary": "ROS interfaces, actions, services and Python client examples for RobotEra mapping, localization and topological navigation workflows.",
       "organization_hint": "星动纪元 / ROBOTERA",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "date": "2026-05-28",
-      "organization_hint": "Sereact",
-      "summary": "Sereact released a video-based subtask prediction module that identifies the current phase of a long-horizon manipulation task and conditions Cortex 2.0's world-model planning on that context.",
-      "title": "Subtask Prediction",
-      "url": "https://sereact.ai/posts/subtask-prediction",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -6427,18 +6491,6 @@
       ]
     },
     {
-      "title": "Cortex 2.0 Multi-Gripper Generalization",
-      "url": "https://sereact.ai/posts/cortex-2-0-multi-gripper-generalization",
-      "date": "2026-05-11",
-      "summary": "This Cortex 2.0 update added learned gripper embeddings and shared planning and action components that let the policy adapt to different end effectors using small targeted demonstration datasets.",
-      "organization_hint": "Sereact",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "SABER: A Scalable Action-Based Embodied Dataset for Real-World VLA Adaptation",
       "summary": "Robotic deployment in real-world environments depends on rich, domain-specific action data as much as on strong model architecture. General-purpose robot foundation models show modest performance in complex unseen tasks such as manipulation in a retail domain when applied out of the box. The root cause is a data gap: retail environments are structurally absent from general robot pretraining distributions, and the path to filling that gap through teleoperation is prohibitively expensive, logistically constrained, and difficult to scale. We introduce SABER, a high-fidelity retail robotics action dataset built from over 100 hours of natural in-store capture across multiple real grocery environments. Egocentric footage from head-mounted cameras records fine-grained hand activity at the point of interaction, while exocentric 360-degree scene footage from DreamVu's ALIA camera simultaneously observes all actors and activities across the entire space. This combination yields a uniquely complete picture of human retail behavior: dexterous hand activity, whole-body motion, and scene dynamics, all captured without staging, scripting, or teleoperation overhead. The SABER corpus contains 44.8K training samples across three action representation streams: 25K latent action sequences via LAPA-style encoding, 18.6K dexterous hand-pose trajectories retargeted to robot joint space, and 1.2K whole-body synchronized motion sequences retargeted to a humanoid embodiment. When applied to GR00T N1.6 via a shared-backbone multi-task post-training recipe, SABER yields a mean success rate of 29.3% across ten retail manipulation tasks -- more than 2.19x over fine-tuning baselines (13.4%). SABER demonstrates that the path to capable retail robots runs through better data, which can be collected today, at scale, without a robot in the loop. The dataset and code are available at https://dreamvu.ai/saber",
       "date": "2026-05-10",
@@ -6683,6 +6735,18 @@
       ]
     },
     {
+      "date": "2026-05-02",
+      "organization_hint": "Sereact",
+      "summary": "Cortex 2.0 plans what to do next. Subtask prediction answers where the robot is in the overall task-conditioning the world model on task phase for long-horizon industrial workflows.",
+      "title": "Subtask Prediction",
+      "url": "https://sereact.ai/posts/subtask-prediction",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Real-is-Sim: Bridging the Sim-to-Real Gap with a Dynamic Digital Twin | RAI Institute",
       "url": "https://rai-inst.com/resources/papers/real-is-sim-bridging-the-sim-to-real-gap-with-a-dynamic-digital-twin/",
       "date": "2026-05-02",
@@ -6695,10 +6759,10 @@
       ]
     },
     {
-      "title": "Judo: A User-Friendly Open-Source Package forSampling-Based Model Predictive Control | RAI Institute",
-      "url": "https://rai-inst.com/resources/papers/judo-a-user-friendly-open-source-package-forsampling-based-model-predictive-control/",
+      "title": "Accelerating Residual Reinforcement Learning with Uncertainty Estimation | RAI Institute",
+      "url": "https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/",
       "date": "2026-05-02",
-      "summary": "We introduce judo, a software package designed to help develop shared tools for prototyping, benchmarking, and deploying sampling-based controllers.",
+      "summary": "We propose two improvements to Residual RL that further enhance its sample efficiency and make it suitable for stochastic base policies. First, we leverage uncertainty estimates of the base policy to focus exploration on regions in which the base policy is not confident. Second, we propose a simple modification to off-policy residual learning that allows it to observe base actions and better handle stochastic base policies.",
       "organization_hint": "Boston Dynamics AI Institute",
       "authors": [],
       "score": 100,
@@ -6707,11 +6771,11 @@
       ]
     },
     {
-      "title": "Accelerating Residual Reinforcement Learning with Uncertainty Estimation | RAI Institute",
-      "url": "https://rai-inst.com/resources/papers/accelerating-residual-reinforcement-learning-with-uncertainty-estimation/",
-      "date": "2026-05-02",
-      "summary": "We propose two improvements to Residual RL that further enhance its sample efficiency and make it suitable for stochastic base policies. First, we leverage uncertainty estimates of the base policy to focus exploration on regions in which the base policy is not confident. Second, we propose a simple modification to off-policy residual learning that allows it to observe base actions and better handle stochastic base policies.",
-      "organization_hint": "Boston Dynamics AI Institute",
+      "title": "Cortex 2.0 Multi-Gripper Generalization",
+      "url": "https://sereact.ai/posts/cortex-2-0-multi-gripper-generalization",
+      "date": "2026-05-01",
+      "summary": "Full-stack automation means solving the hard problems end-to-end. The real world rarely hands you a clean problem with a single robot and a single gripper.",
+      "organization_hint": "Sereact",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -7869,18 +7933,6 @@
       ]
     },
     {
-      "title": "PLaMo 3.0 Prime Beta",
-      "url": "https://tech.preferred.jp/ja/blog/plamo-3-prime-beta-release/",
-      "date": "2026-03-19",
-      "summary": "Preferred Networks released the beta version of PLaMo 3.0 Prime, a rebuilt flagship foundation model with reasoning support and a context length of approximately 64,000 tokens.",
-      "organization_hint": "Preferred Networks",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Legend of Mirokai v0.7.2",
       "url": "https://docs.developers.enchanted.tools/legend-of-mirokai-v0.7.2/",
       "date": "2026-03-19",
@@ -8237,18 +8289,6 @@
       ]
     },
     {
-      "title": "Generalizing from References using a Multi-Task Reference and Goal-Driven RL Framework | RAI Institute",
-      "url": "https://rai-inst.com/resources/papers/generalizing-from-references-using-a-multi-task-reference-and-goal-driven-rl-framework/",
-      "date": "2026-03-03",
-      "summary": "We introduce a multi-task RL training paradigm that treats reference motion as a prior for behavioral shaping rather than a deployment-time constraint.",
-      "organization_hint": "Robotics and AI Institute",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "GPT-5.3 Instant",
       "url": "https://openai.com/index/gpt-5-3-instant/",
       "date": "2026-03-03",
@@ -8357,6 +8397,18 @@
       ]
     },
     {
+      "title": "PLaMo 3.0 Prime β版をリリースしました - Preferred Networks Tech Blog",
+      "url": "https://tech.preferred.jp/ja/blog/plamo-3-prime-beta-release/",
+      "date": "2026-03-01",
+      "summary": "はじめに みなさん、こんにちは。PLaMo事後学習チームの今村です。我々は本日、国産生成AI基盤モデルPLaMo™︎の新たなフラグシップモデルPLaMo",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "National Team and Industrial Capital Inject Funds, The Dexterous Hand Sector Welcomes a “Top-Tier Alliance” - INSPIRE",
       "url": "https://en.inspire-robots.com/news/7704.html",
       "date": "2026-03-01",
@@ -8441,18 +8493,6 @@
       "date": "2026-02-24",
       "summary": "Version 1.3.0 of Fourier Aurora, a robot operation and control SDK with Python client APIs, command examples and MuJoCo simulation integration for Fourier humanoids.",
       "organization_hint": "傅利叶智能 / Fourier Intelligence",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Cortex 2.0: Planning Before Acting",
-      "url": "https://sereact.ai/posts/cortex-2",
-      "date": "2026-02-21",
-      "summary": "Cortex 2.0 added a visual-latent world model that generates candidate future trajectories, scores them for progress and risk, and conditions a vision-language-action policy on the selected plan.",
-      "organization_hint": "Sereact",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8722,18 +8762,6 @@
       ]
     },
     {
-      "date": "2026-02-10",
-      "organization_hint": "Sereact",
-      "summary": "Cortex 1.6 introduced the Process-Reward Operator, a learned reward model that derives continuous progress, completion-likelihood and risk signals from multimodal robot execution data.",
-      "title": "Cortex 1.6: Learning From the Way Things Unfold",
-      "url": "https://sereact.ai/posts/cortex-1-6",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Micropsi Industries Integration SDK 0.26.1",
       "url": "https://github.com/micropsi-industries/micropsi-integration-sdk/releases/tag/0.26.1",
       "date": "2026-02-06",
@@ -8921,6 +8949,18 @@
       ]
     },
     {
+      "title": "Cortex 2.0: Planning Before Acting",
+      "url": "https://sereact.ai/posts/cortex-2",
+      "date": "2026-02-02",
+      "summary": "Cortex 2.0 adds planning to manipulation by introducing a world model that predicts outcomes before committing to motion. Fewer costly failures through rollout scoring by stability, risk, and efficiency. Video-first world modeling learns predictive dynamics in visual latent space.",
+      "organization_hint": "Sereact",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Physical AI – Digital intelligence, physical results | Agile Robots SE",
       "url": "https://www.agile-robots.com/en/news/detail/physical-ai-digital-intelligence-physical-results/",
       "date": "2026-02-01",
@@ -8933,11 +8973,11 @@
       ]
     },
     {
-      "title": "Q4 2025 Vention Platform Release",
-      "url": "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
-      "date": "2026-01-30",
-      "summary": "Vention released updates across MachineBuilder, MachineLogic and its Developer Toolkit, including scene-aware code generation, relative-motion commands, software-defined robot configuration and a simulation debugger.",
-      "organization_hint": "Vention",
+      "date": "2026-02-01",
+      "organization_hint": "Sereact",
+      "summary": "Dense Reward Learning from Real-World Robotic Deployments. Cortex 1.6 introduces the Process-Reward Operator (PRO), a learned reward model that extracts dense, continuous learning signals directly from real-world robotic operation.",
+      "title": "Cortex 1.6: Learning From the Way Things Unfold",
+      "url": "https://sereact.ai/posts/cortex-1-6",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8945,11 +8985,11 @@
       ]
     },
     {
-      "title": "Cortex 1.5: Interactive RL Policy Patching for Real-World Robotics",
-      "url": "https://sereact.ai/en/posts/cortex-1-5",
+      "title": "Q4 2025 Vention Platform Release",
+      "url": "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
       "date": "2026-01-30",
-      "summary": "Cortex 1.5 introduced Interactive RL Policy Patching, a framework for correcting robotic policies through brief human demonstrations and targeted reinforcement-learning updates without full retraining.",
-      "organization_hint": "Sereact",
+      "summary": "Vention released updates across MachineBuilder, MachineLogic and its Developer Toolkit, including scene-aware code generation, relative-motion commands, software-defined robot configuration and a simulation debugger.",
+      "organization_hint": "Vention",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -8974,18 +9014,6 @@
       "date": "2026-01-29",
       "summary": "PaddleOCR 3.4.0 released PaddleOCR-VL 1.5, an updated vision-language model and document-parsing stack with irregular document-element localization, seal recognition and cross-page structure processing.",
       "organization_hint": "百度 Research",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "PLaMo 2.2 Prime",
-      "url": "https://tech.preferred.jp/ja/blog/plamo-2-2-prime-release/",
-      "date": "2026-01-28",
-      "summary": "Preferred Networks released PLaMo 2.2 Prime with additional post-training data and improvements in English and Japanese instruction following and selected medical-domain evaluations.",
-      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -9277,11 +9305,35 @@
       ]
     },
     {
+      "title": "Cortex 1.5: Interactive RL Policy Patching for Real-World Robotics",
+      "url": "https://sereact.ai/en/posts/cortex-1-5",
+      "date": "2026-01-03",
+      "summary": "A distributed framework that enables self-learning from human guidance through brief corrective interventions, supporting rapid adaptation to new task conditions while preserving previously acquired skills.",
+      "organization_hint": "Sereact",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "PaddleOCR-VL-1.5: Towards a Multi-Task 0.9B VLM for Robust In-the-Wild Document Parsing | ERNIE Blog",
       "url": "https://ernie.baidu.com/blog/posts/paddleocr-vl-1.5/",
       "date": "2026-01-02",
       "summary": "🚀 We release PaddleOCR-VL-1.5, an upgraded model achieving a new state-of-the-art (SOTA)accuracy of 94.5% on OmniDocBench v1.5.",
       "organization_hint": "百度 Research",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PLaMo 2.2 Primeをリリースしました - Preferred Networks Tech Blog",
+      "url": "https://tech.preferred.jp/ja/blog/plamo-2-2-prime-release/",
+      "date": "2026-01-02",
+      "summary": "はじめに 本日我々は、純国産生成AI基盤モデルPLaMoの最新バージョンであるPLaMo 2.2 Primeをリリースしました。PLaMo 2.2",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -10486,10 +10538,10 @@
       ]
     },
     {
-      "title": "PLaMo 2.1 Prime",
+      "title": "PFN Launches PLaMo 2.1 Prime with Enhanced AI Agent Functionality - Preferred Networks, Inc.",
       "url": "https://www.preferred.jp/en/news/pr20251007-2",
       "date": "2025-10-07",
-      "summary": "Preferred Networks released PLaMo 2.1 Prime with automated tool calling, enabling the model to select databases and external systems from user instructions and integrate with other AI agents.",
+      "summary": "TOKYO – October 8, 2025 – Preferred Networks, Inc. (PFN) today released PLaMo™ 2.1 Prime, the latest version of PFN’s flagship Japan-made large-scale language m",
       "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
@@ -10639,18 +10691,6 @@
       "date": "2025-09-29",
       "summary": "DeepSeek-V3.2-Exp is an experimental LLM introducing DeepSeek Sparse Attention for more efficient long-context training and inference.",
       "organization_hint": "深度求索 / DeepSeek",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Cortex",
-      "url": "https://sereact.ai/posts/cortex-bridging-vision-language-and-action-with-discrete-plans-and-tokens",
-      "date": "2025-09-28",
-      "summary": "Sereact introduced Cortex, a vision-language-action system that links perception, language instructions, discrete planning and robot control through tokenized visual and motion representations.",
-      "organization_hint": "Sereact",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -11065,6 +11105,18 @@
       ]
     },
     {
+      "title": "Robotics Simulation Software | Game-Changer for Robotics?",
+      "url": "https://www.hitbotrobot.com/robotics-simulation-software/",
+      "date": "2025-09-02",
+      "summary": "Discover how robotics simulation software is a game-changer. Learn about Digital Twins and Programming to drastically reduce deployment time…",
+      "organization_hint": "慧灵科技 / Huiling Technology",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Qwen3Guard: Real-time Safety for Your Token Stream | Qwen",
       "url": "https://qwenlm.github.io/blog/qwen3guard/",
       "date": "2025-09-02",
@@ -11099,6 +11151,18 @@
       "score": 100,
       "reasons": [
         "media-resolved official project discovery",
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Cortex: Bridging Vision, Language, and Action with Discrete Plans and Tokens",
+      "url": "https://sereact.ai/posts/cortex-bridging-vision-language-and-action-with-discrete-plans-and-tokens",
+      "date": "2025-09-02",
+      "summary": "Robots are leaving the lab, but adaptability is still missing. Cortex unites vision, language, and action to bring common sense and precision to real-world robotics — built on our vision of One Model, Any Robot.",
+      "organization_hint": "Sereact",
+      "authors": [],
+      "score": 100,
+      "reasons": [
         "official web-project discovery"
       ]
     },
@@ -12343,18 +12407,6 @@
       ]
     },
     {
-      "title": "PLaMo Fin Prime",
-      "url": "https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/",
-      "date": "2025-06-17",
-      "summary": "Preferred Networks released PLaMo Fin Prime, a domain-specific large language model aligned for Japanese financial tasks, and introduced a service for building institution-specific models from proprietary data.",
-      "organization_hint": "Preferred Networks",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "date": "2025-06-16",
       "organization_hint": "NVIDIA",
       "summary": "General-availability releases of the Isaac Sim robotics simulator and Isaac Lab robot-learning framework, adding updated simulation, training, and model-evaluation capabilities.",
@@ -12636,6 +12688,18 @@
       ]
     },
     {
+      "title": "PLaMo Fin Primeをリリースしました - Preferred Networks Tech Blog",
+      "url": "https://tech.preferred.jp/ja/blog/20250617-plamo-fin-prime-release/",
+      "date": "2025-06-01",
+      "summary": "Preferred Networks (PFN) は、金融知識を強化した大規模言語モデル (LLM) である「PLaMo Fin",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "date": "2025-06-01",
       "organization_hint": "Stanford Vision and Learning Lab",
       "summary": "OpenVLA-OFT is an optimized fine-tuning recipe and software release that improves OpenVLA training efficiency and manipulation-policy performance.",
@@ -12715,18 +12779,6 @@
       ]
     },
     {
-      "title": "PLaMo Translate",
-      "url": "https://www.preferred.jp/en/news/pr20250527",
-      "date": "2025-05-27",
-      "summary": "Preferred Networks launched PLaMo Translate, a large language model specialized for translating text to and from Japanese, with web-based and on-premises availability.",
-      "organization_hint": "Preferred Networks",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "title": "Hume: Introducing System-2 Thinking in Visual-Language-Action Model",
       "summary": "Humans practice slow thinking before performing actual actions when handling complex tasks in the physical world. This thinking paradigm, recently, has achieved remarkable advancement in boosting Large Language Models (LLMs) to solve complex tasks in digital domains. However, the potential of slow thinking remains largely unexplored for robotic foundation models interacting with the physical world. In this work, we propose Hume: a dual-system Vision-Language-Action (VLA) model with value-guided System-2 thinking and cascaded action denoising, exploring human-like thinking capabilities of Vision-Language-Action models for dexterous robot control. System 2 of Hume implements value-Guided thinking by extending a Vision-Language-Action Model backbone with a novel value-query head to estimate the state-action value of predicted actions. The value-guided thinking is conducted by repeat sampling multiple action candidates and selecting one according to state-action value. System 1 of Hume is a lightweight reactive visuomotor policy that takes System 2 selected action and performs cascaded action denoising for dexterous robot control. At deployment time, System 2 performs value-guided thinking at a low frequency while System 1 asynchronously receives the System 2 selected action candidate and predicts fluid actions in real time. We show that Hume outperforms the existing state-of-the-art Vision-Language-Action models across multiple simulation benchmark and real-robot deployments.",
       "date": "2025-05-27",
@@ -12756,18 +12808,6 @@
       "summary": "Release of an o3-based Operator action model fine-tuned with additional computer-use safety data, replacing the original GPT-4o-based model in the Operator product.",
       "title": "OpenAI o3 Operator",
       "url": "https://openai.com/index/o3-o4-mini-system-card-addendum-operator-o3/",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "PLaMo 2.0 Prime",
-      "url": "https://www.preferred.jp/ja/news/pr20250522",
-      "date": "2025-05-22",
-      "summary": "Preferred Networks released PLaMo 2.0 Prime, a commercial flagship large language model with improved Japanese performance, instruction following, token efficiency and a context length of approximately 32,000 tokens.",
-      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -13004,11 +13044,35 @@
       ]
     },
     {
+      "title": "より高性能になったPLaMo Primeを1/4以下の新価格で提供 - 株式会社Preferred Networks",
+      "url": "https://www.preferred.jp/ja/news/pr20250522",
+      "date": "2025-05-02",
+      "summary": "株式会社Preferred Networks（本社：東京都、代表取締役 最高経営責任者：西川 徹、以下、PFN）は、 PFNグループ がフルスクラッチ開発する国産の大規模言語モデル（LLM） PLaMo ™ の商用版フラッグシップモデルPLaMo 2.0 Primeを本日リリース *1 します。また、 GENIAC-P",
+      "organization_hint": "Preferred Networks",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "VLAs that Train Fast, Run Fast, and Generalize Better",
       "url": "https://www.pi.website/research/knowledge_insulation",
       "date": "2025-05-02",
       "summary": "A method to train vision-language-action models that train quickly, maintain internet-scale knowledge, have high quality inference properties, and generalize well.",
       "organization_hint": "Physical Intelligence",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "PFN Launches PLaMo Translate Large Language Model Specialized for Japanese Text Translation - Preferred Networks, Inc.",
+      "url": "https://www.preferred.jp/en/news/pr20250527",
+      "date": "2025-05-02",
+      "summary": "Available for free on web, also for on-premise use by individuals and companies with annual revenue under one billion yenTOKYO – May 27, 2025 – Preferred Networ",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [
@@ -14277,18 +14341,6 @@
       ]
     },
     {
-      "title": "PLaMo-fin-base",
-      "url": "https://www.preferred.jp/ja/news/pr20250127",
-      "date": "2025-01-27",
-      "summary": "Preferred Networks began providing PLaMo-fin-base, a PLaMo derivative additionally trained on Japanese financial knowledge, for use by financial institutions in secure cloud or on-premises applications.",
-      "organization_hint": "Preferred Networks",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
       "date": "2025-01-27",
       "organization_hint": "Cornell Organic Robotics Lab and Archer Group",
       "summary": "Cornell's modular worm and jellyfish robots use electrochemical hydraulic fluid as both an energy store and an actuation medium, embedding power into the robots' bodies.",
@@ -14522,6 +14574,18 @@
       "date": "2025-01-02",
       "summary": "简化操作，全局管控，提升运营效率！",
       "organization_hint": "极智嘉 / Geek+",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "国産大規模言語モデルPLaMoの金融機関向けモデルを開発 - 株式会社Preferred Networks",
+      "url": "https://www.preferred.jp/ja/news/pr20250127",
+      "date": "2025-01-02",
+      "summary": "株式会社Preferred Networks（本社：東京都千代田区、代表取締役 最高経営責任者：西川徹、以下、PFN）は、大規模言語モデル（LLM）PLaMo™（プラモ）の日本の金融知識を強化した派生モデルPLaMo-fin-baseを金融機関向けに提供開始します。PFNの金融チームが、金融機関における自然言語処理技術",
+      "organization_hint": "Preferred Networks",
       "authors": [],
       "score": 100,
       "reasons": [

@@ -11853,6 +11853,88 @@
     ]
   },
   {
+    "id": "cortex-bridging-vision-language-and-action-with--ac3f62a",
+    "title": "Cortex: Bridging Vision, Language, and Action with Discrete Plans and Tokens",
+    "organization": "Sereact GmbH",
+    "organizationKind": "Company",
+    "date": "2025-09-02",
+    "year": 2025,
+    "summary": "Cortex 是德国机器人软件公司 Sereact 发布的实体机器人视觉-语言-动作系统，目标是在保留多模态模型语言与推理能力的同时，将输出可靠地落地为真实机器人动作。其核心不是直接从文本预测原始控制量，而是通过符号子任务、视觉场景落地、粗粒度三维计划和精细运动预测构成分层链路，再由连续动作专家生成可立即执行的关节或末端执行器动作块。系统将图像、文本、视频和动作组织为统一令牌序列，并使用定制自动编码器把真实作业视频压缩为离散视频令牌；训练上先以离散动作令牌预训练主干，再通过轨迹匹配微调连续控制专家。Sereact 表示训练数据包含工业数据、真实部署日志以及来自数百台仓储和制造机器人的视频，并利用 Sereact Lens 自动生成子任务标注。该发布属于有明确实体机器人执行路径的技术软件项目，符合索引条件；但原始页面主要提供架构和定性演示，尚未公布可复核的标准基准成绩、具体延迟或完整数据规模，也未开放代码与模型权重。",
+    "tags": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "fields": [
+      "Vision-language-action",
+      "Robot manipulation",
+      "Embodied AI",
+      "Robot systems"
+    ],
+    "featured": false,
+    "openSource": false,
+    "verification": "Automated",
+    "details": {
+      "keyPoints": [
+        "Cortex 是面向实体机器人的视觉-语言-动作系统，将视觉感知、语言理解、规划和动作控制集成在同一软件架构中；官方页面明确说明其处理自然语言指令和视觉输入，并输出机器人动作。",
+        "系统采用分层推理流程：理解指令并将其落地到视觉场景，生成粗粒度三维计划，再将计划细化为运动预测；最后由 Motion Policy Expert 映射到特定机器人的控制空间。",
+        "Sereact Lens VLM 负责预测符号化子任务并识别动作应发生的关键场景区域，以高层显式子目标连接语义推理与低层控制。",
+        "Cortex 同时离散化动作和感知：动作被表示为类似语言词表的离散令牌；视频则由定制自动编码器压缩为视频令牌，从而为机器人所见与所做建立统一的离散表示。",
+        "控制端采用紧凑的连续动作专家，一次生成一小段实值动作，包括精确的关节更新或末端执行器运动；视觉和语言上下文可被缓存，以减少连续控制循环中的计算延迟。",
+        "训练分为两个阶段：先以离散动作令牌预训练主干网络，再以轨迹匹配损失微调连续动作专家，同时保留主干的令牌目标，并阻止专家直接访问真实动作令牌。",
+        "训练材料包括工业数据和真实部署日志；Sereact Lens 还被用于自动标注机器人示范视频中的子任务。官方页面称数据来自其在仓库和制造环境中运行的数百台机器人，但尚未发布标准化定量基准。"
+      ],
+      "capabilities": [
+        "根据自然语言指令与视觉观测生成可执行的机器人动作",
+        "通过符号子任务、场景关键区域和粗粒度三维计划完成分层任务推理",
+        "以连续动作专家批量生成关节更新或末端执行器运动，用于低延迟硬件控制",
+        "利用统一的图像、文本、视频与动作令牌进行训练，并适配不同机器人控制空间"
+      ],
+      "metrics": [
+        {
+          "label": "真实机器人数据规模",
+          "note": "官方原始发布页称视频令牌利用了仓库和制造工厂中数百台已部署机器人的数据，未披露精确台数或样本量。",
+          "value": "数百台机器人"
+        },
+        {
+          "label": "训练阶段",
+          "note": "第一阶段使用离散动作令牌预训练主干；第二阶段使用轨迹匹配损失微调连续动作专家，并继续保留令牌训练目标。",
+          "value": "2 个阶段"
+        },
+        {
+          "label": "连续动作生成",
+          "note": "连续动作专家利用已缓存的视觉与语言上下文，仅经过少量细化步骤便生成下一段实值动作；官方未公布具体延迟。",
+          "value": "少量细化步骤"
+        },
+        {
+          "label": "跨机器人适配",
+          "note": "官方报告同一高层计划可用于不同机器人类型，适配时只需微调运动动作部分；该页面未提供数值比较。",
+          "value": "同一高层计划可适配不同机器人类型"
+        },
+        {
+          "label": "任务与环境泛化",
+          "note": "官方报告早期 Cortex 已能泛化到新任务和新环境，但明确表示系统化模拟及真实世界基准仍属于后续工作。",
+          "value": "已展示对新任务和环境的定性泛化"
+        }
+      ]
+    },
+    "links": [
+      {
+        "label": "Project",
+        "url": "https://sereact.ai/posts/cortex-bridging-vision-language-and-action-with-discrete-plans-and-tokens"
+      },
+      {
+        "label": "Evidence",
+        "url": "https://sereact.ai/"
+      },
+      {
+        "label": "Report",
+        "url": "https://sereact.ai/posts/cortex-bridging-vision-language-and-action-with-discrete-plans-and-tokens"
+      }
+    ]
+  },
+  {
     "id": "menteebot-ai-approach-d54bfcc",
     "title": "MenteeBot AI Approach",
     "organization": "Mentee Robotics",
