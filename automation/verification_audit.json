@@ -38115,5 +38115,174 @@
       "software_project": true,
       "summary_zh": "PLaMo-fin-base是Preferred Networks面向日本金融机构推出的领域特化大语言模型。该模型基于PFN从预训练阶段自行开发的PLaMo，通过追加大量日文金融数据来增强国内金融知识，并可结合RAG、机构专有数据追加训练和本地部署，支持审批材料起草、企业分析、监管信息摘要等金融自然语言处理业务。它属于明确的软件与LLM项目，也有负责公司及官方发布页面，但发布主题完全是金融语言处理，不涉及物理机器人、机器人行动生成、感知控制闭环或其他具身智能技术，因此不能收入具身机器人技术项目索引。"
     }
+  },
+  "mobile-robots-robotic-arms-embodied-ai-solutions-19f3698": {
+    "checked_at": "2026-08-29T10:01:48.921318+00:00",
+    "title": "Mobile Robots, Robotic Arms, Embodied AI Solutions | Mobile the World",
+    "accepted": false,
+    "reason": "不收录：候选页面是 AgileX Robotics 的公司官网及综合产品商城，页面主体为移动机器人底盘、机械臂、移动操作机器人和教育套件等硬件产品，并非一个在 2025 年以后发布、以软件为主体的具身机器人技术项目。虽然页面提及 ROS、自动导航、具身智能、数据采集和机器人学习，也链接到若干产品方案，但未提供一个与候选标题对应的独立 VLA、基础模型、策略、世界模型、数据集、模拟器、控制栈、评测基准或具身智能软件框架。因此不满足条件 1，并触发条件 2 的硬件产品页排除规则。候选日期 2026-08-02 也无法从该首页确认是某项软件制品的正式发布日期。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "展示移动机器人底盘、机械臂、移动操作平台与科研教育套件",
+        "提供部分基于 ROS 或 ROS 2 的机器人开发平台",
+        "提供面向遥操作、具身智能数据采集和机器人学习研究的硬件系统"
+      ],
+      "fields": [
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "候选链接是松灵机器人的公司官网和产品商城首页，而不是某个具身智能软件项目的专属页面。",
+        "首页主要展示 PiPER、LIMO、RANGER MINI 等移动底盘、机械臂和教育科研硬件，并附有价格及“Shop Now”入口。",
+        "官网确实列有 NAVIS 导航系统、ROS 课程、Modular ALOHA、COBOT S 等方案，但它们是首页所汇集的不同产品或套件，不能据此把整个网站认定为一个软件项目。",
+        "Modular ALOHA 的独立产品页将其定义为建立在 RANGER MINI 3.0 上的双臂遥操作平台，虽然支持数据采集、ROS 驱动并兼容 ACT 等框架，但页面主体仍是可销售的机器人硬件系统。",
+        "COBOT S 的独立产品页同样将其描述为由移动平台、传感器、机械臂和计算设备组成的软硬件生态及具身智能试验平台，而非以独立模型、数据集、模拟器、评测基准或软件框架为发布主体。",
+        "官方中文网站确认组织为松灵机器人（AgileX Robotics），运营主体标示为东莞松灵科技有限公司。"
+      ],
+      "metrics": [
+        {
+          "label": "公司成立年份",
+          "note": "来自松灵机器人官方关于我们页面；这是组织信息，不是候选软件项目的技术结果。",
+          "value": "2016"
+        },
+        {
+          "label": "官方所述合作伙伴数量",
+          "note": "官方中文关于我们页面报告的公司级数据，并非软件项目指标。",
+          "value": "1,000"
+        },
+        {
+          "label": "官方所述高校科研合作数量",
+          "note": "官方中文关于我们页面报告的公司级数据，并非软件项目指标。",
+          "value": "500家"
+        }
+      ],
+      "official_organization_url": "https://global.agilex.ai/pages/about-us",
+      "official_project_url": "https://global.agilex.ai/",
+      "open_source": false,
+      "organization_en": "AgileX Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "松灵机器人",
+      "reason": "不收录：候选页面是 AgileX Robotics 的公司官网及综合产品商城，页面主体为移动机器人底盘、机械臂、移动操作机器人和教育套件等硬件产品，并非一个在 2025 年以后发布、以软件为主体的具身机器人技术项目。虽然页面提及 ROS、自动导航、具身智能、数据采集和机器人学习，也链接到若干产品方案，但未提供一个与候选标题对应的独立 VLA、基础模型、策略、世界模型、数据集、模拟器、控制栈、评测基准或具身智能软件框架。因此不满足条件 1，并触发条件 2 的硬件产品页排除规则。候选日期 2026-08-02 也无法从该首页确认是某项软件制品的正式发布日期。",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该候选实际指向松灵机器人的全球官网。网站汇集轮式和履带式移动底盘、机械臂、移动操作平台、ALOHA 类遥操作与数据采集系统、ROS 教育套件以及导航方案。部分产品具备 ROS/ROS 2 接口、自动导航、路径规划、遥操作、传感器集成和数据采集能力，可作为具身智能研究的实验载体；然而这些能力分散在多个商业硬件产品及科研套件中。官网首页没有发布一个以软件为核心、具有明确名称和边界的技术制品，也没有与候选标题对应的模型、策略、数据集、模拟器、基准或软件框架。因此，该页面适合作为机器人平台供应商资料来源，但不符合严格的具身机器人软件项目索引标准。"
+    }
+  },
+  "what-is-mobile-aloha-how-does-it-enable-robot-le-9bbef78": {
+    "checked_at": "2026-08-29T10:01:48.951992+00:00",
+    "title": "What Is Mobile ALOHA? How Does It Enable Robot Learning?",
+    "accepted": false,
+    "reason": "不收录。Mobile ALOHA 确实具有专门的官方项目页面、明确的 Stanford University/IRIS Research Group 责任归属，并包含遥操作、数据采集和模仿学习软件，而不是单纯的机器人硬件产品。([opensource.stanford.edu](https://opensource.stanford.edu/projects-registry?utm_source=openai)) 但是该项目的原始论文和公开项目发布可追溯至 2024 年 1月4日，早于索引要求的 2025 年起始日期。([arxiv.org](https://arxiv.org/abs/2401.02117?utm_source=openai)) 候选链接是 AgileX Robotics 于 2026 年 8月25日更新的解释性博客文章，不是 Mobile ALOHA 的首次发布，也没有发布一个新的同名软件版本；用户提供的 2026 年 8月2日日期亦与页面显示日期不符。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/what-is-mobile-aloha-for-robot-learning?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "通过同步控制双臂和移动底盘采集全身遥操作示范数据",
+        "基于视觉观测、机器人本体状态和动作数据训练监督式行为克隆策略",
+        "自主执行需要移动、双臂协作和环境交互的长程任务",
+        "利用静态 ALOHA 数据与 Mobile ALOHA 任务数据进行联合训练"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Whole-body control",
+        "Data & benchmarks",
+        "Robot systems"
+      ],
+      "include": false,
+      "key_points": [
+        "Mobile ALOHA 将原有 ALOHA 双臂平台扩展到移动底盘，并提供能够同时控制双臂与底盘的全身遥操作接口，用于采集双臂移动操作示范。([src.stanford.edu](https://src.stanford.edu/demo/moble-aloha?utm_source=openai))",
+        "其软件仓库包含机器人配置、四路相机与四个机械臂的 ROS 启动文件，以及遥操作和数据采集脚本；策略训练则使用面向 Mobile ALOHA 的 ACT 实现。([github.com](https://github.com/MarkFzp/mobile-aloha?utm_source=openai))",
+        "学习方法采用监督式行为克隆，并将新采集的移动操作数据与既有静态 ALOHA 数据联合训练，以提高有限示范条件下的任务成功率。([arxiv.org](https://arxiv.org/abs/2401.02117?utm_source=openai))",
+        "系统面向同时需要移动能力、双臂协同和全身控制的真实环境任务，而非仅限于固定工作台上的操作。([src.stanford.edu](https://src.stanford.edu/demo/moble-aloha?utm_source=openai))",
+        "官方演示包括自主煎制并递送虾、将重型锅具放入双门壁柜、呼叫并进入电梯，以及使用水龙头冲洗平底锅。([arxiv.org](https://arxiv.org/abs/2401.02117?utm_source=openai))",
+        "Stanford Open Source Registry 将该项目明确登记在 Chelsea Finn 名下，并将其描述为低成本、开源的双臂移动操作与全身控制系统。([opensource.stanford.edu](https://opensource.stanford.edu/projects-registry?utm_source=openai))",
+        "候选 AgileX 页面是对 Stanford Mobile ALOHA 的后续介绍，并同时推广基于该架构的 COBOT MAGIC 商业平台；它没有发布一个由 AgileX 新开发的 Mobile ALOHA 软件项目。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/what-is-mobile-aloha-for-robot-learning?utm_source=openai))"
+      ],
+      "metrics": [
+        {
+          "label": "原始公开日期",
+          "note": "arXiv 记录显示论文于 2024 年 1月4日提交，因此不满足“自 2025 年起发布”的时间条件。",
+          "value": "2024-01-04"
+        },
+        {
+          "label": "任务示范数量",
+          "note": "每项移动操作任务使用的人工示范数量。",
+          "value": "50 demonstrations per task"
+        },
+        {
+          "label": "联合训练效果",
+          "note": "官方论文摘要报告，与静态 ALOHA 数据联合训练可使移动操作任务成功率提升最高达该数值；来源没有在摘要中提供统一基线。",
+          "value": "up to 90%"
+        },
+        {
+          "label": "系统预算",
+          "note": "项目材料报告的整套 Mobile ALOHA 系统预算。",
+          "value": "approximately US$32,000"
+        }
+      ],
+      "official_organization_url": "https://www.stanford.edu/",
+      "official_project_url": "https://mobile-aloha.github.io/",
+      "open_source": true,
+      "organization_en": "Stanford University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录。Mobile ALOHA 确实具有专门的官方项目页面、明确的 Stanford University/IRIS Research Group 责任归属，并包含遥操作、数据采集和模仿学习软件，而不是单纯的机器人硬件产品。([opensource.stanford.edu](https://opensource.stanford.edu/projects-registry?utm_source=openai)) 但是该项目的原始论文和公开项目发布可追溯至 2024 年 1月4日，早于索引要求的 2025 年起始日期。([arxiv.org](https://arxiv.org/abs/2401.02117?utm_source=openai)) 候选链接是 AgileX Robotics 于 2026 年 8月25日更新的解释性博客文章，不是 Mobile ALOHA 的首次发布，也没有发布一个新的同名软件版本；用户提供的 2026 年 8月2日日期亦与页面显示日期不符。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/what-is-mobile-aloha-for-robot-learning?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Mobile ALOHA 是 Stanford University 的低成本双臂移动操作研究系统，由 Zipeng Fu、Tony Z. Zhao 和 Chelsea Finn 开发。其核心技术贡献是全身遥操作与真实机器人示范采集：操作员可同步控制两个机械臂和移动底盘，系统记录多相机视觉、关节状态、底盘运动及动作轨迹，再使用 ACT 类策略进行监督式行为克隆。项目还研究了将每项移动任务的少量新示范与既有静态 ALOHA 数据联合训练，从而提升复杂真实环境任务的自主执行能力。尽管它符合具身机器人软件、明确机构归属和官方项目页面等要求，并公开了遥操作及数据采集代码，但 Mobile ALOHA 本身于 2024 年初发布。2026 年的 AgileX 页面只是技术介绍及相关商业硬件平台推广，不能将该既有项目重新认定为 2025 年以后发布的新技术项目，因此不进入本索引。"
+    }
+  },
+  "mobile-robotics-insights-updates-tutorials-blogs-797d23f": {
+    "checked_at": "2026-08-29T10:01:49.107476+00:00",
+    "title": "Mobile Robotics Insights, Updates & Tutorials | Blogs",
+    "accepted": false,
+    "reason": "不收录。候选链接是 AgileX Robotics 官方博客的“Robot Learning”标签归档页，而不是专门介绍某个软件项目的官方项目页或发布公告。页面聚合并链接多个不同的机器人产品、研究套件及第三方研究内容，没有定义一个可独立识别的软件制品，也无法把给定的 2026-08-02 日期与某个具体软件项目发布对应起来。因此缺少条件 1 所要求的软件项目主体，以及条件 3 所要求的该项目专属官方页面；不能用归档页内某篇 Mobile ALOHA 介绍文章或某个硬件产品链接替代候选本身。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/tagged/robot-learning?utm_source=openai))",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "聚合 AgileX Robotics 官方博客中带有 Robot Learning 标签的文章",
+        "链接至 Mobile ALOHA、COBOT MAGIC、Modular ALOHA 等彼此独立的研究或产品内容",
+        "提供移动机器人、具身智能和机器人学习相关资讯入口"
+      ],
+      "fields": [
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "候选 URL 是 AgileX Robotics 的 Robot Learning 标签归档页，页面标题为“Blogs”，不是某个技术项目的专属页面。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/tagged/robot-learning?utm_source=openai))",
+        "归档页同时链接 Cobot Magic、Modular ALOHA、Cobot S Kit、LIMO 等多个不同平台，不能将其视为具有统一技术定义的单一软件制品。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/tagged/robot-learning))",
+        "当前归档内容主要指向一篇介绍 Stanford Mobile ALOHA 的科普文章；该文章明确把 Mobile ALOHA 归于 Stanford 的 Zipeng Fu、Tony Z. Zhao 和 Chelsea Finn，而非 AgileX 新发布的软件项目。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/what-is-mobile-aloha-for-robot-learning?utm_source=openai))",
+        "该文章也介绍 AgileX 的 COBOT MAGIC，但将其描述为商业化移动双臂遥操作平台，内容包含大量机器人本体、机械臂、相机、计算机和电源配置，并非候选标题所指向的独立软件发布。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/what-is-mobile-aloha-for-robot-learning?utm_source=openai))",
+        "官方来源可以确认责任组织为松灵机器人（AgileX Robotics），但无法从候选页面确认一个名称明确、在 2025 年以后发布且以软件为主体的项目。([agilex.ai](https://www.agilex.ai/about-us?mi=12&rn=%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC&utm_source=openai))"
+      ],
+      "metrics": [
+        {
+          "label": "可识别的单一软件项目",
+          "note": "候选页面是文章标签归档，未定义统一的软件制品、模型、数据集、基准或控制框架。",
+          "value": "0"
+        },
+        {
+          "label": "归档页所列研究套件类别",
+          "note": "页面导航列出 LIMO、ROS1/ROS2 R&D Kit、Cobot Magic、Modular ALOHA 和 Cobot S Kit 等多个独立条目，不能合并为一个候选项目。",
+          "value": "多个独立条目"
+        },
+        {
+          "label": "可核验的候选项目发布日期",
+          "note": "给定的 2026-08-02 无法在该归档页上对应到一个具体软件项目的正式发布。",
+          "value": "未确认"
+        }
+      ],
+      "official_organization_url": "https://www.agilex.ai/",
+      "official_project_url": "https://global.agilex.ai/blogs/robotics/tagged/robot-learning",
+      "open_source": false,
+      "organization_en": "AgileX Robotics",
+      "organization_kind": "Company",
+      "organization_zh": "松灵机器人",
+      "reason": "不收录。候选链接是 AgileX Robotics 官方博客的“Robot Learning”标签归档页，而不是专门介绍某个软件项目的官方项目页或发布公告。页面聚合并链接多个不同的机器人产品、研究套件及第三方研究内容，没有定义一个可独立识别的软件制品，也无法把给定的 2026-08-02 日期与某个具体软件项目发布对应起来。因此缺少条件 1 所要求的软件项目主体，以及条件 3 所要求的该项目专属官方页面；不能用归档页内某篇 Mobile ALOHA 介绍文章或某个硬件产品链接替代候选本身。([global.agilex.ai](https://global.agilex.ai/blogs/robotics/tagged/robot-learning?utm_source=openai))",
+      "social_evidence": [],
+      "software_project": false,
+      "summary_zh": "该候选并非一个具身机器人技术项目，而是松灵机器人（AgileX Robotics）官网的机器人学习主题博客归档。它承担内容导航和资讯聚合功能，当前可见内容包括对 Stanford Mobile ALOHA 的介绍，并链接 COBOT MAGIC、Modular ALOHA、Cobot S Kit、LIMO 等多个不同平台。虽然其中部分链接涉及遥操作、模仿学习数据采集、ROS、仿真环境和 VLA 模型部署，但这些能力分别属于被介绍或被销售的独立系统，不能归属于题为“Mobile Robotics Insights, Updates & Tutorials | Blogs”的统一软件制品。候选页面没有项目名称、软件架构、版本、代码仓库、模型或数据集定义，也没有与给定日期相对应的正式软件发布记录，故不符合严格索引标准。"
+    }
   }
 }

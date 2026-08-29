@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T14:23:37.873373+00:00",
+  "generated_at": "2026-08-29T09:59:36.200279+00:00",
   "candidates": [
     {
       "title": "TrapVLA: Trapping Vision-Language-Action Models in Configured Failure Modes",
@@ -2627,6 +2627,114 @@
       ]
     },
     {
+      "title": "What Is Mobile ALOHA? How Does It Enable Robot Learning?",
+      "url": "https://global.agilex.ai/blogs/robotics/what-is-mobile-aloha-for-robot-learning",
+      "date": "2026-08-02",
+      "summary": "What is Mobile ALOHA? Learn how Stanford's bimanual mobile manipulation system uses whole-body teleoperation and real-world demonstrations for robot learning.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Models – Hugging Face google-tensorflow",
+      "url": "https://huggingface.co/models",
+      "date": "2026-08-02",
+      "summary": "Explore machine learning models.",
+      "organization_hint": "Pollen Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mobile Robots, Robotic Arms, Embodied AI Solutions | Mobile the World",
+      "url": "https://global.agilex.ai/",
+      "date": "2026-08-02",
+      "summary": "AgileX Robotics provides mobile robot chassis, UGVs, AGVs, robotic arms, humanoid arms, and embodied intelligence platforms to universities, research institutions, and industry partners worldwide, enabling robotics research, education, teleoperation, data collection, and real-world applications.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mobile Robotics Insights, Updates & Tutorials | Blogs",
+      "url": "https://global.agilex.ai/blogs/robotics",
+      "date": "2026-08-02",
+      "summary": "Explore the latest product updates, industry insights, and tutorials from AgileX Robotics. Stay ahead in mobile robotics, physical AI with our blogs.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mobile Robotics Insights, Updates & Tutorials | Blogs",
+      "url": "https://global.agilex.ai/blogs/robotics/tagged/embodied-ai",
+      "date": "2026-08-02",
+      "summary": "Explore the latest product updates, industry insights, and tutorials from AgileX Robotics. Stay ahead in mobile robotics, physical AI with our blogs.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mobile Robotics Insights, Updates & Tutorials | Blogs",
+      "url": "https://global.agilex.ai/blogs/robotics/tagged/low-cost-robot",
+      "date": "2026-08-02",
+      "summary": "Explore the latest product updates, industry insights, and tutorials from AgileX Robotics. Stay ahead in mobile robotics, physical AI with our blogs.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mobile Robotics Insights, Updates & Tutorials | Blogs",
+      "url": "https://global.agilex.ai/blogs/robotics/tagged/mobile-aloha",
+      "date": "2026-08-02",
+      "summary": "Explore the latest product updates, industry insights, and tutorials from AgileX Robotics. Stay ahead in mobile robotics, physical AI with our blogs.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mobile Robotics Insights, Updates & Tutorials | Blogs",
+      "url": "https://global.agilex.ai/blogs/robotics/tagged/robot-learning",
+      "date": "2026-08-02",
+      "summary": "Explore the latest product updates, industry insights, and tutorials from AgileX Robotics. Stay ahead in mobile robotics, physical AI with our blogs.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
+      "title": "Mobile Robotics Insights, Updates & Tutorials | Blogs",
+      "url": "https://global.agilex.ai/blogs/robotics/tagged/teleoperation",
+      "date": "2026-08-02",
+      "summary": "Explore the latest product updates, industry insights, and tutorials from AgileX Robotics. Stay ahead in mobile robotics, physical AI with our blogs.",
+      "organization_hint": "松灵机器人 / AgileX Robotics",
+      "authors": [],
+      "score": 100,
+      "reasons": [
+        "official web-project discovery"
+      ]
+    },
+    {
       "title": "Introducing Index: Building The World’s Largest and Most Diverse Physical Dataset",
       "url": "https://www.figure.ai/news/introducing-index",
       "date": "2026-08-02",
@@ -2656,18 +2764,6 @@
       "date": "2026-08-01",
       "summary": "AI code generation uses machine learning models to provide context-based code suggestions.",
       "organization_hint": "RightHand Robotics",
-      "authors": [],
-      "score": 100,
-      "reasons": [
-        "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Models – Hugging Face google-tensorflow",
-      "url": "https://huggingface.co/models",
-      "date": "2026-08-01",
-      "summary": "Explore machine learning models.",
-      "organization_hint": "Pollen Robotics",
       "authors": [],
       "score": 100,
       "reasons": [
