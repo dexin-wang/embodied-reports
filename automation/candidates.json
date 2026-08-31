@@ -1,6 +1,23 @@
 {
-  "generated_at": "2026-08-30T08:21:36.605322+00:00",
+  "generated_at": "2026-08-31T08:42:42.242075+00:00",
   "candidates": [
+    {
+      "title": "DeicticVLA: Unifying Instruction Modes Based on Language and Deictic Gestures in a Single VLA",
+      "summary": "Vision-Language-Action models (VLAs) allow users to specify manipulation tasks in natural language, but distinguishing a target or placement goal among objects of the same category or similar appearance requires detailed expressions that VLAs may not use reliably. We propose DeicticVLA, which canonicalizes Language Instruction (LI), Vision-Language Instruction (VLI), and Visual Instruction (VI) into a text prompt and deictic masks through text-prompt completion and deictic gesture grounding, enabling a single pretrained VLA to handle all three instruction modes. With a shared backbone, demonstrations, and matched training steps, we compare two RGB visual prompting methods, two separate-channel mask prompting methods, and three training strategies in simulation. Under two-stage training, the four prompting methods achieve high in-distribution success but differ in their ability to use deictic masks in unseen layouts. Across methods, training-strategy ablations show that two-stage training improves such use, while retaining second-stage LI data mitigates forgetting without reducing VLI and VI performance. In three real-world tasks, one policy supports all modes. VLI and VI outperform LI under unseen expressions, appearance changes, and novel objects. For unseen categories, both achieve 100% success, compared with 16.7% for jointly trained LI. These results demonstrate the unified three-mode interface and guide DeicticVLA design.",
+      "date": "2026-08-28",
+      "url": "https://arxiv.org/abs/2608.28108v1",
+      "authors": [
+        "Kango Yanagida",
+        "Tatsuya Aoki",
+        "Yuichiro Yoshikawa",
+        "Takato Horii"
+      ],
+      "score": 44,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "physical-robot evidence"
+      ]
+    },
     {
       "title": "TrapVLA: Trapping Vision-Language-Action Models in Configured Failure Modes",
       "summary": "This work introduces Configured Failure Trapping, a novel backdoor attack task against Vision-Language-Action (VLA) models, which aims to activate attacks through stealthy textual triggers and induce configured failure modes. Unlike prior backdoor attacks that treat any task failure as a successful attack, Configured Failure Trapping requires the attacker to control how the robot fails (e.g., causing the robot to grasp with a specified positional offset), making it substantially more challenging and hard to detect. To support the new task, we propose an effective data engine for synthesizing high-quality target trajectories and an automated suite for measuring configured-failure fidelity. Then, based on this foundation, we construct two new benchmarks, namely Trap-LIBERO and Trap-RoboTwin, that instantiate Configured Failure Trapping across four representative failure modes. To address this task, we identify sparse action deviation as a critical challenge and accordingly propose a novel method named TrapVLA, which explicitly learns trigger-induced action residuals to steer the policy toward the configured failure behavior. Extensive experiments across simulation benchmarks and real-world robotic settings show that TrapVLA effectively injects configured failure modes into VLA models while largely preserving performance on clean data. Project page: https://john-liua.github.io/TrapVLA/",
@@ -66,10 +83,31 @@
       ]
     },
     {
-      "title": "GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation",
-      "summary": "Pretrained vision-language-action (VLA) policies provide strong priors for robot manipulation, yet adapting them online to fine-grained biomedical tasks remains challenging. Task success often hinges on subtle, view-dependent visual cues, while task-level rewards provide little guidance about which regions matter, making it difficult to learn task-relevant visual grounding from limited real-robot interaction. Online adaptation is further constrained by the computational cost of VLA inference and replay-based updates. We introduce GRAFT (Grounded Reinforcement Adaptation for Fast Task Learning), a framework for efficient online VLA adaptation through grounded perception. GRAFT uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment. It further combines single-step action generation with cached visual-language prefix reuse to accelerate online learning. Across four biomedical manipulation tasks, GRAFT improves success rates by 25 percentage points under matched adaptation budgets, while reducing the computational overhead of online policy updates.",
+      "title": "PHR-VLA: Planning Horizon Reasoning for Vision-Language-Action Models",
+      "summary": "Vision-language-action models (VLAs) have shown strong promise for general-purpose robotic manipulation by mapping language instructions and vision observations directly to actions. However, most VLAs primarily condition action prediction on current observations and lack an explicit mechanism for reasoning over future task dynamics, which is particularly important for fine-grained, contact-rich manipulation. We present PHR-VLA, a framework that enables planning-horizon reasoning in VLAs through privileged latent representations of future dynamics. PHR-VLA introduces a lightweight auxiliary future head that, during training, aligns the VLA's internal representations with latent dynamics extracted from future observations. Evaluation results demonstrate that local, contact-centric, patch-level latent dynamics supervision from the wrist camera improves success rate on LIBERO from 84.1% to 88.4% and on real-world disassembly tasks from 63.3% to 82.5%. Patch-level supervision from a third-person camera also improves performance on Meta-World from 56.70% to 57.8%. These results demonstrate that privileged latent dynamics alignment provides an effective training signal for improving anticipatory reasoning in VLA policies. Project website: \\href{https://davoodsz.github.io/PHR-VLA.github.io/}{https://davoodsz.github.io/PHR-VLA.github.io/}",
       "date": "2026-08-27",
-      "url": "https://arxiv.org/abs/2608.27079v1",
+      "url": "https://arxiv.org/abs/2608.27609v1",
+      "authors": [
+        "Davood Soleymanzadeh",
+        "Kaidi Zhang",
+        "Zhiyuan Zhang",
+        "Bihao Zhang",
+        "Xiao Liang",
+        "Yu She",
+        "Minghui Zheng"
+      ],
+      "score": 72,
+      "reasons": [
+        "keywords: vision-language-action, vla",
+        "report/model title",
+        "physical-robot evidence"
+      ]
+    },
+    {
+      "title": "GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation",
+      "summary": "Pretrained vision-language-action (VLA) policies provide strong priors for robot manipulation, yet adapting them online to fine-grained biomedical tasks remains challenging. Task success often hinges on subtle, view-dependent visual cues, while task-level rewards provide little guidance about which regions matter, making it difficult to learn task-relevant visual grounding from limited real-robot interaction. Online adaptation is further constrained by the computational cost of VLA inference and replay-based updates. We introduce GRAFT (Grounded Reinforcement Adaptation for Fast Task Learning), a framework for efficient online VLA adaptation through grounded perception. GRAFT uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment. It further combines single-step action generation with cached visual-language prefix reuse to accelerate online learning. Across four biomedical manipulation tasks, GRAFT improves success rates by 32.5 percentage points under matched adaptation budgets, while reducing the computational overhead of online policy updates.",
+      "date": "2026-08-27",
+      "url": "https://arxiv.org/abs/2608.27079v2",
       "authors": [
         "Yibo Qiu",
         "Haoliang Ye",
@@ -146,6 +184,37 @@
       "score": 64,
       "reasons": [
         "keywords: humanoid, world model, cross-embodiment",
+        "physical-robot evidence",
+        "release signal"
+      ]
+    },
+    {
+      "title": "Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models",
+      "summary": "Scaling robot data is crucial for building generalist Vision-Language-Action (VLA) models, yet robot trajectories are harder to scale than web-scale image-text data because embodied collection is costly and sparsely covers the physical world. This makes representation quality a central bottleneck: under a fixed robot-data budget, continued pre-training must turn limited trajectories into transferable visual-action knowledge rather than merely fit actions. We propose VLAct, a VLA-oriented VLM backbone trained on broad, heterogeneous, multi-embodiment robot data before task-specific fine-tuning. VLAct preserves the broad VLM prior and encourages shared action semantics across embodiments through VLM-prior preservation, multi-head continuous action co-supervision, and a partially unified cross-embodiment action layout, while allowing task-specific action heads during fine-tuning. Across simulation, real-world, and unseen-embodiment transfer, VLAct consistently improves downstream performance under fixed fine-tuning protocols. On LIBERO-Plus and RoboTwin 2.0, VLAct surpasses industrial VLA systems including ABot-M0 and LingBot-VLA, achieving success rates of 82.6% and 92.5%. On RoboDojo, VLAct ranks sixth among all policies by success rate and outperforms all explicitly designated world-action model (WAM) entries on both metrics. Most notably, on RoboCasa-GR1, an unseen humanoid embodiment, VLAct using only 20% of downstream trajectories outperforms the full-data GR00T-N1.6 baseline. These results are obtained using fully open-source data and only a 16-GPU training setup, showing that representation-centric continued pre-training can deliver highly competitive performance under a modest compute budget and is an important independent axis of VLA progress beyond data scaling.",
+      "date": "2026-08-27",
+      "url": "https://arxiv.org/abs/2608.27550v1",
+      "authors": [
+        "Senqiao Yang",
+        "Chengyao Wang",
+        "Yuxin Chen",
+        "Zixuan Wang",
+        "Longxiang Tang",
+        "Haokun Gui",
+        "Jinhui Ye",
+        "Changsheng Lu",
+        "Xiaoyang Wu",
+        "Mingkang Zhu",
+        "Pengguang Chen",
+        "Shu Liu",
+        "Zhuotao Tian",
+        "Hengshuang Zhao",
+        "Bei Yu",
+        "Jiaya Jia"
+      ],
+      "score": 100,
+      "reasons": [
+        "keywords: vision-language-action, vla, humanoid, cross-embodiment",
+        "report/model title",
         "physical-robot evidence",
         "release signal"
       ]
@@ -978,9 +1047,9 @@
     },
     {
       "title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience",
-      "summary": "Collecting robot hand-object interaction data is costly and embodiment-specific, yet abundant human-object videos remain unusable for robot training. We present RoboEdit, a human-to-robot video editing suite that transforms human manipulation videos into action-consistent, physically plausible robot videos with aligned 3D hand states. To enable scalable supervision, we introduce RoboEdit-ADC, an automatic pipeline that reconstructs and retargets 3D interactions from RGB videos across embodiments. This pipeline generates RoboEdit-14M, a large-scale dataset of 174K aligned video pairs (14M frames) spanning seven robot embodiments, diverse scenes, and interaction types. The core editing engine, RoboEdit-Trans, employs cross-embodiment adaptation modules to preserve temporal coherence while adapting appearance and motion. It further integrates a 3D Robot-State Decoder to recover per-frame hand states for structured motion supervision. Experiments show that RoboEdit achieves state-of-the-art editing quality and supports downstream robot control policies in real-world manipulation tasks. Ultimately, the RoboEdit suite unlocks the vast potential of unlabeled human videos, providing scalable, high-fidelity visual and 3D motion supervision for generalizable robot learning.",
+      "summary": "Collecting robot hand-object interaction data is costly and embodiment-specific, yet abundant human-object videos remain unusable for robot training. We present RoboEdit, a human-to-robot video editing suite that transforms human manipulation videos into action-consistent, physically plausible robot videos with aligned 3D hand states. To enable scalable supervision, we introduce RoboEdit-ADC, an automatic pipeline that reconstructs and retargets 3D interactions from RGB videos across embodiments. This pipeline generates RoboEdit-14M, a large-scale dataset of 174K aligned video pairs (14M frames) spanning seven robot embodiments, diverse scenes, and interaction types. The core editing engine, RoboEdit-Trans, employs cross-embodiment adaptation modules to preserve temporal coherence while adapting appearance and motion. It further integrates a 3D Robot-State Decoder to recover per-frame hand states for structured motion supervision. Experiments show that RoboEdit achieves state-of-the-art editing quality and supports downstream robot control policies in real-world manipulation tasks. Ultimately, the RoboEdit suite unlocks the vast potential of unlabeled human videos, providing scalable, high-fidelity visual and 3D motion supervision for generalizable robot learning. Project webpage: https://roboedit.github.io/",
       "date": "2026-08-19",
-      "url": "https://arxiv.org/abs/2608.18948v1",
+      "url": "https://arxiv.org/abs/2608.18948v2",
       "authors": [
         "Yaowei Guo",
         "Zeng Tao",
@@ -2232,48 +2301,6 @@
       ]
     },
     {
-      "title": "World Tokens: Enhancing Embodied Policies with Training-Time World Modeling",
-      "summary": "Vision-language-action (VLA) models are a widely adopted paradigm for embodied policies. They excel at efficient closed-loop control but do not explicitly model how physical scenes evolve as a task unfolds. Recently emerging world-action models (WAMs) leverage pretrained video world models to capture spatiotemporal evolution, yet retaining future generation or a large video backbone in the control loop substantially increases inference cost. We introduce World Tokens, an embodied policy architecture built around a World Adapter that bridges visual-language understanding, world-dynamics modeling, and action generation. It uses world modeling during training to enhance the action policy while preserving efficient deployment. Specifically, the World Adapter transforms VLM features into a fixed set of world tokens, which condition a jointly fine-tuned future-video denoiser and simultaneously serve as the action expert's sole visual-language context. This shared conditioning allows gradients from future-video denoising to directly shape the representation used for action prediction, while exclusive routing prevents the policy from bypassing that representation. At deployment, the world-model branch is removed, leaving only the VLM, World Adapter, and action expert, with no online video-model inference. With a 2B backbone and no embodied action pretraining, World Tokens is highly competitive on LIBERO, attains the best reported averages on SIMPLER, substantially improves real-world R1 Pro success over a matched action-only baseline, and generates each action chunk at VLA-level latency.",
-      "date": "2026-08-10",
-      "url": "https://arxiv.org/abs/2608.09730v1",
-      "authors": [
-        "Qu Tang",
-        "Benhui Zhuang",
-        "Bo Yuan",
-        "Xue Yu",
-        "Longteng Guo",
-        "Junlan Feng"
-      ],
-      "score": 52,
-      "reasons": [
-        "keywords: vision-language-action, vla, world model",
-        "physical-robot evidence"
-      ]
-    },
-    {
-      "title": "SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation",
-      "summary": "Vision-language-action policies rely on large multimodal backbones to jointly perform perception, language conditioning, and action generation at every control step. Much of this capacity supports open-domain semantics, whereas continuous robot manipulation primarily requires compact representations of observations, actions, and the transitions induced by actions. Pixel-level world models provide another route, but predicting visual details irrelevant to control can be unnecessarily expensive. We propose SLIM (Self-supervised Latent Interaction Model), a compact 0.5B-parameter latent interaction policy. SLIM learns action-grounded predictive latents that capture both action-conditioned future transitions and the actions that explain observed changes. SLIM learns these representations through self-supervised masked trajectory prediction, combining action reconstruction with future-latent prediction. A compact Mixture-of-Transformers (MoT) backbone models interactions between observation latents and action tokens. The resulting policy is trained with flow matching for language-conditioned action generation. Across simulation benchmarks and real-world evaluation, SLIM matches or exceeds representative large-scale VLA and world-action-model baselines with fewer parameters, no additional embodied pretraining, lower inference latency, and substantially lower GPU memory usage.",
-      "date": "2026-08-10",
-      "url": "https://arxiv.org/abs/2608.09771v1",
-      "authors": [
-        "Jingkai Wang",
-        "Zihan Tang",
-        "Gu Zhang",
-        "Mingyu Cao",
-        "Jiapeng Chen",
-        "Jingjiao Zhao",
-        "Xiansheng Chen",
-        "Pengwei Wang",
-        "Lemao Liu",
-        "Dejing Dou"
-      ],
-      "score": 52,
-      "reasons": [
-        "keywords: vision-language-action, vla, world model",
-        "physical-robot evidence"
-      ]
-    },
-    {
       "title": "Rerun 0.36.0",
       "url": "https://github.com/rerun-io/rerun/releases/tag/0.36.0",
       "date": "2026-08-10",
@@ -2283,24 +2310,6 @@
       "score": 100,
       "reasons": [
         "official web-project discovery"
-      ]
-    },
-    {
-      "title": "RecoverFly: A Failure-Aware Reinforcement Learning Post-Training Framework for Aerial Vision-Language Navigation",
-      "summary": "Unmanned aerial vehicle vision-language navigation (UAV-VLN) requires agents to translate visual observations and language instructions into reliable flight actions in complex environments. Although recent end-to-end UAV vision-language-action (UAV-VLA) policies reduce reliance on separately designed perception, planning, and control modules, their behavior-cloning objectives provide limited corrective supervision for interactive closed-loop execution. Reinforcement learning (RL) offers a promising solution, while its effectiveness is constrained by inefficient use of samples, long-tailed scene distributions, and policy distribution shift during optimization. To this end, we propose RecoverFly, a failure-aware RL post-training framework for end-to-end UAV-VLA policies. Specifically, RecoverFly adapts token-level RL for stable optimization of grammar-constrained autoregressive UAV actions, revisits unresolved failure cases to strengthen corrective learning and sample utilization, and combines a two-stage long-tail scene curriculum with reference-policy regularization to improve scene adaptation while preserving acquired capabilities. Experiments on the TravelUAV benchmark demonstrate that RecoverFly achieves the best performance on the seen, unseen-map, and unseen-object splits. Moreover, compared to the AerialVLA initialization, RecoverFly improves success rate by 3.12 to 8.37 percentage points under a total rollout budget of about 30\\% of the training-set size, validating its effectiveness, robustness, and generalization capabilities.",
-      "date": "2026-08-10",
-      "url": "https://arxiv.org/abs/2608.09467v1",
-      "authors": [
-        "Boxiong Wang",
-        "Hui Kang",
-        "Geng Sun",
-        "Jiahui Li",
-        "Chao Yu",
-        "Daxin Tian"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: vision-language-action, vla"
       ]
     },
     {
@@ -7726,26 +7735,6 @@
       "score": 100,
       "reasons": [
         "official web-project discovery"
-      ]
-    },
-    {
-      "title": "Morphology-Conditioned World Model for Cross-Embodiment Quadrupedal Locomotion",
-      "summary": "World models promise a paradigm shift in robotics, where an agent learns the physics of its environment once and then acquires behaviors efficiently. Yet the learned dynamics models at their core are typically morphology locked. In legged locomotion, a dynamics model trained on an ANYmal-D quadruped fails on a Unitree Go1 because it overfits to one robot's embodiment rather than capturing the locomotion dynamics shared across robots, so even a small change in actuator dynamics or limb length forces retraining from scratch. However, if we formalize a robot's unique physical traits into a morphology specification, a controller for a family of robots can utilize this blueprint in two ways. It can feed the specification to a model-free policy, or it can feed the specification to a learned dynamics model and extract the policy in imagination. We argue for the second route and introduce the Quadrupedal World Model (QWM), which conditions a single generative dynamics model on scale-invariant physical features and trains policies entirely inside it, through a physical morphology encoder, an adaptive reward normalizer, and morphology conditioning in the latent dynamics. Holding the morphology information identical, a model-free policy matches QWM on the training cohort but degrades on unseen morphologies, while QWM transfers zero-shot with no fine-tuning, adaptation, or warm-up in such cases. To our knowledge, this is the first world model to demonstrate zero-shot cross-embodiment transfer within the quadrupedal family.",
-      "date": "2026-04-09",
-      "url": "https://arxiv.org/abs/2604.08780v2",
-      "authors": [
-        "Mohamad H. Danesh",
-        "Chenhao Li",
-        "Amin Abyaneh",
-        "Anas Houssaini",
-        "Kirsty Ellis",
-        "Glen Berseth",
-        "Marco Hutter",
-        "Hsiu-Chin Lin"
-      ],
-      "score": 26,
-      "reasons": [
-        "keywords: world model, cross-embodiment"
       ]
     },
     {
