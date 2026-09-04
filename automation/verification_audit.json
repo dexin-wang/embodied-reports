@@ -38327,5 +38327,74 @@
       "software_project": false,
       "summary_zh": "该记录没有指向一个可识别的具身机器人软件项目。标题表示发现和核查仍在进行，摘要则是编辑流程说明，并非技术摘要。由于无效链接、作者为空、组织不明，且不存在可访问的第一方专页，无法建立软件制品、发布日期、机构归属、技术能力或实验结果等任何关键事实。严格索引应将其视为未解析的占位条目，而非 2025 年发布项目。"
     }
+  },
+  "what-is-umi-the-handheld-system-for-real-world-r-8f9983b": {
+    "checked_at": "2026-09-04T08:09:14.944954+00:00",
+    "title": "What Is UMI? The Handheld System for Real-World Robot Data Collection",
+    "accepted": false,
+    "reason": "不收录。候选链接是 AgileX Robotics 于 2026 年 9 月 3 日发布的 UMI 科普/产品关联文章，并非一个自 2025 年起首次发布的新软件项目。UMI 的专门官方项目页明确将该工作列为 RSS 2024，引用信息同样标注年份为 2024；因此它不满足索引的“released since 2025”时间条件。该框架本身符合实体机器人软件条件，并由 Stanford University、Columbia University 和 Toyota Research Institute 明确共同负责，但 2026 年的 AgileX 文章没有构成 UMI 软件的新版本发布。候选文章还将 UMI 与 AgileX 的 Pika Pro 商业硬件系统关联起来，而产品硬件不能据此作为新的 UMI 软件项目收录。",
+    "policy_version": "software-official-release-v3",
+    "verdict": {
+      "capabilities": [
+        "无需在数据采集现场部署机器人，即可通过手持夹爪记录真实环境中的人类操作示范",
+        "从采集数据训练可部署到实体机械臂的视觉运动 Diffusion Policy",
+        "支持动态抛掷、双臂协作、精密操作和长时序操作策略",
+        "同一策略可部署于 UR5e、Franka 等不同自由度的机械臂平台",
+        "利用野外采集的多样化示范对未见物体和环境进行零样本泛化"
+      ],
+      "fields": [
+        "Robot manipulation",
+        "Data & benchmarks",
+        "Robot systems",
+        "Embodied AI"
+      ],
+      "include": false,
+      "key_points": [
+        "UMI 是一套数据采集与策略学习框架，而不只是手持夹爪硬件；其目标是把真实环境中的人类示范直接转换为可部署的机器人策略。",
+        "采集端采用带软指、扳机机构和腕部 GoPro 的 3D 打印平行夹爪；双臂任务可使用两个采集器同步记录。",
+        "系统结合 GoPro 内置 IMU 与视觉 SLAM，恢复全局尺度的六自由度末端执行器轨迹，并记录细粒度夹爪开度变化。",
+        "策略接口采用相对轨迹动作表示，并在推理时匹配观测、策略计算和动作执行的延迟，以减少动态任务中的时序错位与抖动。",
+        "腕部鱼眼相机在示范采集和机器人部署阶段保持相近的视角与夹爪外观，以降低人类示范与机器人执行之间的观察域差异。",
+        "系统会依据目标机器人的运动学约束过滤不可达示范，使采集数据能够用于六自由度和七自由度机械臂。",
+        "公开软件包含 SLAM 数据处理、Zarr 训练数据生成、Diffusion Policy 训练以及 UR5e、Franka 等实体机器人部署流程。"
+      ],
+      "metrics": [
+        {
+          "label": "正式项目年份",
+          "note": "官方项目页将工作列为 Robotics: Science and Systems 2024，BibTeX 年份亦为 2024。",
+          "value": "2024"
+        },
+        {
+          "label": "杯子摆放数据采集速度",
+          "note": "官方项目页报告 UMI 在杯子摆放任务中的采集速度。",
+          "value": "111 demonstrations/hour"
+        },
+        {
+          "label": "相对传统遥操作的采集速度",
+          "note": "官方项目页报告杯子摆放任务中 UMI 超过遥操作速度的三倍；对照遥操作为 35 demonstrations/hour。",
+          "value": ">3×"
+        },
+        {
+          "label": "相对人手操作速度",
+          "note": "官方项目页以人手 231 demonstrations/hour 为参照。",
+          "value": "48% of human-hand speed"
+        },
+        {
+          "label": "部署准备时间",
+          "note": "官方项目页称可在家庭或餐厅等环境中开始采集。",
+          "value": "within 2 minutes"
+        }
+      ],
+      "official_organization_url": "https://real.stanford.edu/",
+      "official_project_url": "https://real.stanford.edu/umi/",
+      "open_source": true,
+      "organization_en": "Stanford University",
+      "organization_kind": "University",
+      "organization_zh": "",
+      "reason": "不收录。候选链接是 AgileX Robotics 于 2026 年 9 月 3 日发布的 UMI 科普/产品关联文章，并非一个自 2025 年起首次发布的新软件项目。UMI 的专门官方项目页明确将该工作列为 RSS 2024，引用信息同样标注年份为 2024；因此它不满足索引的“released since 2025”时间条件。该框架本身符合实体机器人软件条件，并由 Stanford University、Columbia University 和 Toyota Research Institute 明确共同负责，但 2026 年的 AgileX 文章没有构成 UMI 软件的新版本发布。候选文章还将 UMI 与 AgileX 的 Pika Pro 商业硬件系统关联起来，而产品硬件不能据此作为新的 UMI 软件项目收录。",
+      "social_evidence": [],
+      "software_project": true,
+      "summary_zh": "Universal Manipulation Interface（UMI）是由斯坦福大学、哥伦比亚大学与丰田研究院共同完成的真实世界机器人示范采集及策略学习框架。操作者使用带腕部 GoPro 的手持平行夹爪直接完成任务，系统通过视觉惯性 SLAM 恢复六自由度运动轨迹和夹爪状态，再以相对轨迹动作表示、运动学可行性过滤及推理时延匹配训练可部署的视觉运动策略。官方实验覆盖动态分类抛掷、跨 UR5e 与 Franka 的杯子摆放、双臂衣物折叠，以及包含七个依赖步骤的洗盘任务，并展示了对新物体和新环境的零样本泛化。代码库提供从原始视频处理、SLAM、数据集生成和 Diffusion Policy 训练到实体机械臂运行的完整实现，并采用 MIT 许可证开放。不过，官方项目页明确记录 UMI 为 RSS 2024 项目；2026 年 9 月 3 日的 AgileX 页面只是对既有 UMI 技术及其与 Pika Pro 产品关系的介绍，不能把该项目的发布日期重新认定为 2026 年，故不符合本索引的时间门槛。"
+    }
   }
 }
