@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-15T07:46:20.148691+00:00",
+  "generated_at": "2026-09-16T08:36:10.235849+00:00",
   "organizations": [
     {
       "id": "自变量机器人-x-robotics-d9608c5b",
@@ -9,9 +9,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:30:50.375924+00:00",
-        "last_batch": "official-20260913T073029Z-001",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:43:53.525264+00:00",
+        "last_batch": "official-20260916T074331Z-001",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -43,10 +43,10 @@
           "https://github.com/resources/whitepapers",
           "https://x2robot.com/",
           "https://x2robot.com/blog",
-          "https://x2robot.com/en/blog",
           "https://x2robot.com/en/research",
           "https://x2robot.com/news",
-          "https://x2robot.com/research"
+          "https://x2robot.com/research",
+          "https://x2robot.com/research/68bc2cde8497d7f238dde690"
         ],
         "last_error": null
       }
@@ -58,9 +58,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:31:43.437380+00:00",
-        "last_batch": "official-20260913T073029Z-002",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:44:46.104094+00:00",
+        "last_batch": "official-20260916T074331Z-002",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -92,9 +92,9 @@
           "https://www.agibot.com.cn/article/188/detail/79.html",
           "https://www.agibot.com.cn/article/315/detail/154",
           "https://www.agibot.com.cn/article/315/detail/171.html",
-          "https://www.agibot.com.cn/article/315/detail/218.html",
-          "https://www.agibot.com.cn/article/315/detail/219.html",
-          "https://www.agibot.com.cn/article/315/detail/220.html",
+          "https://www.agibot.com.cn/article/315/detail/221.html",
+          "https://www.agibot.com.cn/article/315/detail/222.html",
+          "https://www.agibot.com.cn/article/315/detail/223.html",
           "https://www.agibot.com/"
         ],
         "last_error": null
@@ -107,9 +107,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:32:11.268058+00:00",
-        "last_batch": "official-20260913T073029Z-003",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:45:12.444602+00:00",
+        "last_batch": "official-20260916T074331Z-003",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -156,9 +156,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:32:29.704541+00:00",
-        "last_batch": "official-20260913T073029Z-004",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:45:32.195708+00:00",
+        "last_batch": "official-20260916T074331Z-004",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -206,9 +206,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:33:04.058269+00:00",
-        "last_batch": "official-20260913T073029Z-005",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:46:01.556156+00:00",
+        "last_batch": "official-20260916T074331Z-005",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -254,9 +254,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:33:24.955919+00:00",
-        "last_batch": "official-20260913T073029Z-006",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:46:28.630856+00:00",
+        "last_batch": "official-20260916T074331Z-006",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -302,9 +302,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:33:39.507733+00:00",
-        "last_batch": "official-20260913T073029Z-007",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:46:41.982396+00:00",
+        "last_batch": "official-20260916T074331Z-007",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -354,9 +354,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:34:05.080845+00:00",
-        "last_batch": "official-20260913T073029Z-008",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:47:10.344729+00:00",
+        "last_batch": "official-20260916T074331Z-008",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -402,9 +402,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:35:20.561969+00:00",
-        "last_batch": "official-20260913T073029Z-009",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:47:44.805298+00:00",
+        "last_batch": "official-20260916T074331Z-009",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -414,7 +414,6 @@
           "https://www.unitree.com/"
         ],
         "scanned_urls": [
-          "https://github.com/login?return_to=%2Funitreerobotics%2Funifolm-vla",
           "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Funitreerobotics%2Funifolm-vla",
           "https://github.com/orgs/unitreerobotics/projects?query=is%3Aopen",
           "https://github.com/resources",
@@ -427,8 +426,6 @@
           "https://github.com/resources/whitepapers",
           "https://github.com/unitreerobotics",
           "https://github.com/unitreerobotics/unifolm-vla",
-          "https://github.com/unitreerobotics/unifolm-vla/issues",
-          "https://github.com/unitreerobotics/unifolm-vla/pulls",
           "https://github.com/unitreerobotics/unifolm-world-model-action",
           "https://github.com/unitreerobotics/unitree_model",
           "https://github.com/unitreerobotics/unitree_model/tree/main/B2",
@@ -437,7 +434,12 @@
           "https://github.com/unitreerobotics/unitree_model/tree/main/H1",
           "https://github.com/unitreerobotics/unitree_model/tree/main/H2",
           "https://github.com/unitreerobotics/unitree_model/tree/main/H2_Plus",
-          "https://github.com/unitreerobotics/unitree_ros2"
+          "https://github.com/unitreerobotics/unitree_ros2",
+          "https://www.unitree.com/",
+          "https://www.unitree.com/cn/news/30/",
+          "https://www.unitree.com/cn/news/34/",
+          "https://www.unitree.com/news/",
+          "https://www.unitree.com/news/38/"
         ],
         "last_error": null
       }
@@ -449,9 +451,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:35:52.211177+00:00",
-        "last_batch": "official-20260913T073029Z-010",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:48:12.271469+00:00",
+        "last_batch": "official-20260916T074331Z-010",
         "candidate_count": 3,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -503,9 +505,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:35:57.398488+00:00",
-        "last_batch": "official-20260913T073029Z-011",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:48:20.813933+00:00",
+        "last_batch": "official-20260916T074331Z-011",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -528,9 +530,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 17,
-        "last_attempt_at": "2026-09-13T07:36:20.081763+00:00",
-        "last_batch": "official-20260913T073029Z-012",
+        "attempt_count": 18,
+        "last_attempt_at": "2026-09-16T07:48:46.167727+00:00",
+        "last_batch": "official-20260916T074331Z-012",
         "candidate_count": 3,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -582,9 +584,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:36:37.046307+00:00",
-        "last_batch": "official-20260913T073029Z-013",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:48:58.019108+00:00",
+        "last_batch": "official-20260916T074331Z-013",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -633,9 +635,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:36:55.747847+00:00",
-        "last_batch": "official-20260913T073029Z-014",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:49:25.023765+00:00",
+        "last_batch": "official-20260916T074331Z-014",
         "candidate_count": 3,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -688,9 +690,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:37:17.696197+00:00",
-        "last_batch": "official-20260913T073029Z-015",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:49:48.290210+00:00",
+        "last_batch": "official-20260916T074331Z-015",
         "candidate_count": 5,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -744,9 +746,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:37:37.602673+00:00",
-        "last_batch": "official-20260913T073029Z-016",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:50:12.319792+00:00",
+        "last_batch": "official-20260916T074331Z-016",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -775,12 +777,12 @@
           "https://github.com/resources/articles?topic=software-development",
           "https://github.com/resources/events",
           "https://github.com/resources/whitepapers",
-          "https://www.lejurobot.cn/en/news",
-          "https://www.lejurobot.cn/en/news/latest-news",
-          "https://www.lejurobot.cn/en/news/media-news",
-          "https://www.lejurobot.cn/en/news/video-center",
-          "https://www.lejurobot.cn/en/solutions/research",
           "https://www.lejurobot.cn/zh",
+          "https://www.lejurobot.cn/zh/news",
+          "https://www.lejurobot.cn/zh/news/latest-news",
+          "https://www.lejurobot.cn/zh/news/media-news",
+          "https://www.lejurobot.cn/zh/news/video-center",
+          "https://www.lejurobot.cn/zh/solutions/research",
           "https://www.letools.lejurobot.com/",
           "https://www.letools.lejurobot.com/docs.html?type=learning%C2%A7ion=kuavo-vla-1.0"
         ],
@@ -794,9 +796,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:37:47.521510+00:00",
-        "last_batch": "official-20260913T073029Z-017",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:50:31.391727+00:00",
+        "last_batch": "official-20260916T074331Z-017",
         "candidate_count": 3,
         "candidate_urls": [
           "https://www.deepseek.com/news/deepseek-v3-2/",
@@ -846,9 +848,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:38:01.294408+00:00",
-        "last_batch": "official-20260913T073029Z-018",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:50:50.940196+00:00",
+        "last_batch": "official-20260916T074331Z-018",
         "candidate_count": 5,
         "candidate_urls": [
           "https://qwenlm.github.io/blog/gspo/",
@@ -901,9 +903,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:38:31.189974+00:00",
-        "last_batch": "official-20260913T073029Z-019",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:51:21.121860+00:00",
+        "last_batch": "official-20260916T074331Z-019",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -949,9 +951,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:38:54.203874+00:00",
-        "last_batch": "official-20260913T073029Z-020",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:51:48.415544+00:00",
+        "last_batch": "official-20260916T074331Z-020",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -998,9 +1000,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:39:12.859153+00:00",
-        "last_batch": "official-20260913T073029Z-021",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:52:09.897590+00:00",
+        "last_batch": "official-20260916T074331Z-021",
         "candidate_count": 7,
         "candidate_urls": [
           "https://ernie.baidu.com/blog/posts/ernie-5.0-0110-release-on-lmarena/",
@@ -1044,8 +1046,7 @@
           "https://github.com/resources/articles?topic=ai",
           "https://github.com/resources/articles?topic=devops",
           "https://github.com/resources/articles?topic=software-development",
-          "https://research.baidu.com/",
-          "https://www.paddlepaddle.org.cn/"
+          "https://research.baidu.com/"
         ],
         "last_error": null
       }
@@ -1057,9 +1058,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:39:36.123303+00:00",
-        "last_batch": "official-20260913T073029Z-022",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:52:39.854039+00:00",
+        "last_batch": "official-20260916T074331Z-022",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1106,9 +1107,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 16,
-        "last_attempt_at": "2026-09-13T07:40:04.303754+00:00",
-        "last_batch": "official-20260913T073029Z-023",
+        "attempt_count": 17,
+        "last_attempt_at": "2026-09-16T07:53:22.360011+00:00",
+        "last_batch": "official-20260916T074331Z-023",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1156,9 +1157,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:40:27.309485+00:00",
-        "last_batch": "official-20260913T073029Z-024",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:53:50.221901+00:00",
+        "last_batch": "official-20260916T074331Z-024",
         "candidate_count": 3,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -1212,9 +1213,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:40:50.180588+00:00",
-        "last_batch": "official-20260913T073029Z-025",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:54:17.986570+00:00",
+        "last_batch": "official-20260916T074331Z-025",
         "candidate_count": 8,
         "candidate_urls": [
           "https://www.bigai.ai/blog/news/%E4%BB%8E%E6%B5%B7%E9%87%8F%E8%A7%86%E9%A2%91%E4%B8%AD%E6%8F%90%E7%82%BC%E7%9C%9F%E5%AE%9E3d%E5%9C%BA%E6%99%AF-%E9%80%9A%E7%A0%94%E9%99%A2%E3%80%8Csceneverse%E3%80%8D%E8%AE%A9%E6%99%BA%E8%83%BD/",
@@ -1270,9 +1271,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:41:03.935825+00:00",
-        "last_batch": "official-20260913T073029Z-026",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:54:32.877739+00:00",
+        "last_batch": "official-20260916T074331Z-026",
         "candidate_count": 8,
         "candidate_urls": [
           "https://www.pi.website/blog/openpi",
@@ -1328,9 +1329,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:41:15.200374+00:00",
-        "last_batch": "official-20260913T073029Z-027",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:54:50.587367+00:00",
+        "last_batch": "official-20260916T074331Z-027",
         "candidate_count": 7,
         "candidate_urls": [
           "https://www.figure.ai/news/helix",
@@ -1381,15 +1382,13 @@
       "name": "1X Technologies",
       "region": "International",
       "official_scan": {
-        "status": "found",
+        "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:41:30.491726+00:00",
-        "last_batch": "official-20260913T073029Z-028",
-        "candidate_count": 1,
-        "candidate_urls": [
-          "https://github.com/resources/articles/what-are-generative-ai-models"
-        ],
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:55:07.883238+00:00",
+        "last_batch": "official-20260916T074331Z-028",
+        "candidate_count": 0,
+        "candidate_urls": [],
         "source_urls": [
           "https://github.com/1x-technologies",
           "https://www.1x.tech/",
@@ -1402,7 +1401,7 @@
           "https://github.com/orgs/1x-technologies/projects?query=is%3Aopen",
           "https://github.com/resources",
           "https://github.com/resources/articles",
-          "https://github.com/resources/articles/what-are-generative-ai-models",
+          "https://github.com/resources/articles/what-is-agentic-ai",
           "https://github.com/resources/articles?topic=ai",
           "https://github.com/resources/articles?topic=devops",
           "https://github.com/resources/articles?topic=security",
@@ -1432,9 +1431,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:42:04.326049+00:00",
-        "last_batch": "official-20260913T073029Z-029",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:55:48.243050+00:00",
+        "last_batch": "official-20260916T074331Z-029",
         "candidate_count": 1,
         "candidate_urls": [
           "https://developer.nvidia.com/blog/simplify-generalist-robot-policy-evaluation-in-simulation-with-nvidia-isaac-lab-arena/"
@@ -1468,6 +1467,7 @@
           "https://github.com/resources/articles?topic=software-development",
           "https://github.com/resources/events",
           "https://github.com/resources/whitepapers",
+          "https://nvidianews.nvidia.com/",
           "https://nvidianews.nvidia.com/news/japans-robotics-and-manufacturing-leaders-build-on-nvidia-cosmos-to-advance-physical-ai-frontier",
           "https://nvidianews.nvidia.com/news/nvidia-announces-open-physical-ai-data-factory-blueprint-to-accelerate-robotics-vision-ai-agents-and-autonomous-vehicle-development",
           "https://nvidianews.nvidia.com/news/nvidia-releases-new-physical-ai-models-as-global-partners-unveil-next-generation-robots",
@@ -1485,9 +1485,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:42:47.136036+00:00",
-        "last_batch": "official-20260913T073029Z-030",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:56:33.630430+00:00",
+        "last_batch": "official-20260916T074331Z-030",
         "candidate_count": 8,
         "candidate_urls": [
           "https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/",
@@ -1546,9 +1546,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:43:38.148158+00:00",
-        "last_batch": "official-20260913T073029Z-031",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:57:26.371964+00:00",
+        "last_batch": "official-20260916T074331Z-031",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1595,9 +1595,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:44:01.045987+00:00",
-        "last_batch": "official-20260913T073029Z-032",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:58:00.842609+00:00",
+        "last_batch": "official-20260916T074331Z-032",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1643,9 +1643,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:44:03.192647+00:00",
-        "last_batch": "official-20260913T073029Z-033",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:58:03.302489+00:00",
+        "last_batch": "official-20260916T074331Z-033",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1664,9 +1664,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:44:19.110359+00:00",
-        "last_batch": "official-20260913T073029Z-034",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:58:21.087075+00:00",
+        "last_batch": "official-20260916T074331Z-034",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1710,9 +1710,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 15,
-        "last_attempt_at": "2026-09-13T07:44:28.738449+00:00",
-        "last_batch": "official-20260913T073029Z-035",
+        "attempt_count": 16,
+        "last_attempt_at": "2026-09-16T07:58:33.564052+00:00",
+        "last_batch": "official-20260916T074331Z-035",
         "candidate_count": 7,
         "candidate_urls": [
           "https://dexterity.ai/blog/dexterity-asrock-aisupercomputers",
@@ -1760,9 +1760,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:44:37.497311+00:00",
-        "last_batch": "official-20260913T073029Z-036",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T07:58:42.385532+00:00",
+        "last_batch": "official-20260916T074331Z-036",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1795,9 +1795,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:44:55.952032+00:00",
-        "last_batch": "official-20260913T073029Z-037",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T07:58:56.089012+00:00",
+        "last_batch": "official-20260916T074331Z-037",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1841,9 +1841,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:45:27.659866+00:00",
-        "last_batch": "official-20260913T073029Z-038",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T07:59:48.399038+00:00",
+        "last_batch": "official-20260916T074331Z-038",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -1890,9 +1890,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:45:47.890551+00:00",
-        "last_batch": "official-20260913T073029Z-039",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:00:18.203965+00:00",
+        "last_batch": "official-20260916T074331Z-039",
         "candidate_count": 2,
         "candidate_urls": [
           "https://huggingface.co/datasets",
@@ -1943,9 +1943,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:46:25.288290+00:00",
-        "last_batch": "official-20260913T073029Z-040",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:00:55.564505+00:00",
+        "last_batch": "official-20260916T074331Z-040",
         "candidate_count": 7,
         "candidate_urls": [
           "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
@@ -2001,9 +2001,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:46:55.001527+00:00",
-        "last_batch": "official-20260913T073029Z-041",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:01:25.701147+00:00",
+        "last_batch": "official-20260916T074331Z-041",
         "candidate_count": 6,
         "candidate_urls": [
           "https://rai-inst.com/resources/blog/scaling-simulation-data-generation/",
@@ -2059,9 +2059,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:47:06.653871+00:00",
-        "last_batch": "official-20260913T073029Z-042",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:01:38.510735+00:00",
+        "last_batch": "official-20260916T074331Z-042",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2075,7 +2075,7 @@
           "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fubisoft%2Fubisoft-laforge-animation-dataset",
           "https://github.com/ubisoft/ubisoft-laforge-animation-dataset",
           "https://www.agilityrobotics.com/",
-          "https://www.agilityrobotics.com/company",
+          "https://www.agilityrobotics.com/company-overview",
           "https://www.agilityrobotics.com/content/agility-robotics-announces-new-innovations-for-market-leading-humanoid-robot-digit",
           "https://www.agilityrobotics.com/content/digits-next-steps",
           "https://www.agilityrobotics.com/content/training-a-whole-body-control-foundation-model",
@@ -2093,9 +2093,11 @@
           "https://www.agilityrobotics.com/resources?a210bd12_page=1",
           "https://www.agilityrobotics.com/resources?a210bd12_page=2",
           "https://www.agilityrobotics.com/resources?a210bd12_page=3",
-          "https://www.agilityrobotics.com/resources?tab=blogs",
           "https://www.agilityrobotics.com/resources?tab=ebooks",
+          "https://www.agilityrobotics.com/resources?tab=executive-perspectives",
+          "https://www.agilityrobotics.com/resources?tab=insights",
           "https://www.agilityrobotics.com/resources?tab=research-%2B-analysis",
+          "https://www.agilityrobotics.com/resources?tab=video",
           "https://www.agilityrobotics.com/solutions",
           "https://www.agilityrobotics.com/videos/explained-using-llms-to-control-humanoid-robots"
         ],
@@ -2109,9 +2111,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:47:29.678098+00:00",
-        "last_batch": "official-20260913T073029Z-043",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:01:59.239345+00:00",
+        "last_batch": "official-20260916T074331Z-043",
         "candidate_count": 5,
         "candidate_urls": [
           "https://sanctuary.ai/news/sanctuary-ai-controlling-advanced-hydraulic-hands/",
@@ -2164,9 +2166,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:47:38.332335+00:00",
-        "last_batch": "official-20260913T073029Z-044",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:02:08.199290+00:00",
+        "last_batch": "official-20260916T074331Z-044",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2207,9 +2209,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:48:18.760174+00:00",
-        "last_batch": "official-20260913T073029Z-045",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:02:37.994455+00:00",
+        "last_batch": "official-20260916T074331Z-045",
         "candidate_count": 5,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -2261,14 +2263,14 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:49:12.926452+00:00",
-        "last_batch": "official-20260913T073029Z-046",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:03:23.618476+00:00",
+        "last_batch": "official-20260916T074331Z-046",
         "candidate_count": 4,
         "candidate_urls": [
           "https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model",
+          "https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch",
           "https://www.aboutamazon.com/news/operations/new-robots-amazon-fulfillment-agentic-ai",
-          "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
           "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation"
         ],
         "source_urls": [
@@ -2278,32 +2280,33 @@
           "https://www.amazon.science/tag/robotics"
         ],
         "scanned_urls": [
+          "https://www.aboutamazon.com/news",
+          "https://www.aboutamazon.com/news/community",
+          "https://www.aboutamazon.com/news/community/amazon-investment-louisiana-jobs-infrastructure-small-business",
+          "https://www.aboutamazon.com/news/company-news",
+          "https://www.aboutamazon.com/news/company-news/amazon-france-15-billion-investment",
+          "https://www.aboutamazon.com/news/company-news/australia-robotics-fulfillment-center",
+          "https://www.aboutamazon.com/news/innovation-at-amazon",
+          "https://www.aboutamazon.com/news/innovation-at-amazon/amazon-ceo-andy-jassy-robotics-rural-delivery-broadband",
+          "https://www.aboutamazon.com/news/operations",
+          "https://www.aboutamazon.com/news/operations/amazon-delivering-future-2025-online-shopping-speed-delivery",
+          "https://www.aboutamazon.com/news/operations/amazon-europe-robotics-delivery-investment",
           "https://www.aboutamazon.com/news/operations/amazon-million-robots-ai-foundation-model",
+          "https://www.aboutamazon.com/news/operations/amazon-proteus-robot-europe-investment-employee-support",
+          "https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center",
+          "https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch",
           "https://www.aboutamazon.com/news/operations/new-robots-amazon-fulfillment-agentic-ai",
+          "https://www.aboutamazon.com/news/tag/robotics",
+          "https://www.aboutamazon.com/stories/amazon-robotics-autonomous-robot-proteus-warehouse-packages",
           "https://www.amazon.jobs/content/en/teams/ftr/amazon-robotics",
-          "https://www.amazon.science/academic-engagements/research-collaborations",
-          "https://www.amazon.science/blog",
           "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
           "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation",
-          "https://www.amazon.science/news",
           "https://www.amazon.science/research-areas",
           "https://www.amazon.science/research-areas/automated-reasoning",
           "https://www.amazon.science/research-areas/cloud-and-systems",
           "https://www.amazon.science/research-areas/computer-vision",
           "https://www.amazon.science/research-areas/conversational-ai-natural-language-processing",
-          "https://www.amazon.science/research-areas/economics",
-          "https://www.amazon.science/research-areas/information-and-knowledge-management",
-          "https://www.amazon.science/research-areas/machine-learning",
-          "https://www.amazon.science/research-areas/operations-research-and-optimization",
-          "https://www.amazon.science/research-areas/quantum-technologies",
           "https://www.amazon.science/research-areas/robotics",
-          "https://www.amazon.science/research-areas/search-and-information-retrieval",
-          "https://www.amazon.science/research-areas/security-privacy-and-abuse-prevention",
-          "https://www.amazon.science/research-areas/sustainability",
-          "https://www.amazon.science/research-awards",
-          "https://www.amazon.science/research-awards/call-for-proposals",
-          "https://www.amazon.science/research-awards/latest-news",
-          "https://www.amazon.science/research-awards/success-stories",
           "https://www.amazon.science/tag/robotics"
         ],
         "last_error": null
@@ -2316,9 +2319,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 14,
-        "last_attempt_at": "2026-09-13T07:49:57.319866+00:00",
-        "last_batch": "official-20260913T073029Z-047",
+        "attempt_count": 15,
+        "last_attempt_at": "2026-09-16T08:04:14.470901+00:00",
+        "last_batch": "official-20260916T074331Z-047",
         "candidate_count": 4,
         "candidate_urls": [
           "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
@@ -2371,9 +2374,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:50:15.118260+00:00",
-        "last_batch": "official-20260913T073029Z-048",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:04:41.240870+00:00",
+        "last_batch": "official-20260916T074331Z-048",
         "candidate_count": 5,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -2424,9 +2427,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:50:27.057643+00:00",
-        "last_batch": "official-20260913T073029Z-049",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:04:59.790094+00:00",
+        "last_batch": "official-20260916T074331Z-049",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2465,9 +2468,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:50:40.810052+00:00",
-        "last_batch": "official-20260913T073029Z-050",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:05:01.711541+00:00",
+        "last_batch": "official-20260916T074331Z-050",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2489,9 +2492,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:51:06.037846+00:00",
-        "last_batch": "official-20260913T073029Z-051",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:05:25.516745+00:00",
+        "last_batch": "official-20260916T074331Z-051",
         "candidate_count": 4,
         "candidate_urls": [
           "https://ai2robotics.com/%E6%99%BA%E5%B9%B3%E6%96%B9%E5%8F%91%E5%B8%83%E5%85%A8%E6%96%B0%E4%B8%80%E4%BB%A3%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BAalphabot-2%E5%BC%80%E5%90%AFagi%E7%BB%88%E7%AB%AF%E6%96%B0/?p=2613",
@@ -2544,9 +2547,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:51:44.055751+00:00",
-        "last_batch": "official-20260913T073029Z-052",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:06:04.261132+00:00",
+        "last_batch": "official-20260916T074331Z-052",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2594,9 +2597,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:52:05.143411+00:00",
-        "last_batch": "official-20260913T073029Z-053",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:06:26.668262+00:00",
+        "last_batch": "official-20260916T074331Z-053",
         "candidate_count": 1,
         "candidate_urls": [
           "https://forum.vbot.cn/t/ai-agent-vbot/15"
@@ -2624,9 +2627,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:52:11.863581+00:00",
-        "last_batch": "official-20260913T073029Z-054",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:06:32.784409+00:00",
+        "last_batch": "official-20260916T074331Z-054",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2645,9 +2648,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:52:22.955731+00:00",
-        "last_batch": "official-20260913T073029Z-055",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:06:45.637920+00:00",
+        "last_batch": "official-20260916T074331Z-055",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2673,9 +2676,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:52:30.132603+00:00",
-        "last_batch": "official-20260913T073029Z-056",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:06:50.218874+00:00",
+        "last_batch": "official-20260916T074331Z-056",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2696,9 +2699,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:53:02.630688+00:00",
-        "last_batch": "official-20260913T073029Z-057",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:07:26.610353+00:00",
+        "last_batch": "official-20260916T074331Z-057",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2747,9 +2750,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:53:29.357445+00:00",
-        "last_batch": "official-20260913T073029Z-058",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:08:00.671238+00:00",
+        "last_batch": "official-20260916T074331Z-058",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2797,9 +2800,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 13,
-        "last_attempt_at": "2026-09-13T07:53:54.902806+00:00",
-        "last_batch": "official-20260913T073029Z-059",
+        "attempt_count": 14,
+        "last_attempt_at": "2026-09-16T08:08:28.501059+00:00",
+        "last_batch": "official-20260916T074331Z-059",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2846,9 +2849,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T07:54:36.710352+00:00",
-        "last_batch": "official-20260913T073029Z-060",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:09:16.155099+00:00",
+        "last_batch": "official-20260916T074331Z-060",
         "candidate_count": 6,
         "candidate_urls": [
           "https://docs.hello-robot.com/stretch4_docs/working-with-stretch/common_tasks/working-with-stretch-robot-model",
@@ -2904,9 +2907,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T07:55:08.581214+00:00",
-        "last_batch": "official-20260913T073029Z-061",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:09:54.156025+00:00",
+        "last_batch": "official-20260916T074331Z-061",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2923,19 +2926,19 @@
           "https://vention.com/blogs/automation-programming-and-simulation/q1-2026-release-notes-1094",
           "https://vention.com/blogs/automation-programming-and-simulation/q4-release-notes-1049",
           "https://vention.com/blogs/automation-programming-and-simulation/vention-developer-toolkit-1005",
+          "https://vention.com/blogs/automation-programming-and-simulation/vention-new-cli-vdt-2-0-1133",
           "https://vention.com/blogs/industrial-automation-journey/ai-defined-platforms-speed-up-time-to-value-1121",
           "https://vention.com/blogs/industrial-automation-journey/automation-maturity-assessment-framework-1119",
           "https://vention.com/blogs/industrial-automation-journey/automation-should-not-require-experts-or-expertise-1122",
-          "https://vention.com/blogs/industry/costs-of-imprecise-industrial-automation-1131",
           "https://vention.com/blogs/industry/what-is-ai-defined-automation-1118",
-          "https://vention.com/blogs/physical-ai/dr-jimmy-li-on-ventions-physical-ai-lab-1128",
           "https://vention.com/blogs/physical-ai/top-10-faqs-about-physical-ai-1120",
           "https://vention.com/blogs/physical-ai/what-is-physical-ai-1117",
+          "https://vention.com/blogs/robotic-palletizing/palletizer-buying-regrets-1132",
           "https://vention.com/blogs?editor=Mariah+Moore",
           "https://vention.com/blogs?editor=harshad",
           "https://vention.com/blogs?filterBy=automation",
+          "https://vention.com/blogs?filterBy=how-to-guides",
           "https://vention.com/blogs?filterBy=industry",
-          "https://vention.com/blogs?filterBy=industry-insights",
           "https://vention.com/blogs?filterBy=software",
           "https://vention.com/blogs?filterBy=whats-new",
           "https://vention.com/resources/e-learning",
@@ -2953,9 +2956,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T07:55:25.699152+00:00",
-        "last_batch": "official-20260913T073029Z-062",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:10:15.932160+00:00",
+        "last_batch": "official-20260916T074331Z-062",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -2970,20 +2973,20 @@
           "https://www.braincorp.com/brainosclean2-0",
           "https://www.braincorp.com/project-brawn",
           "https://www.braincorp.com/resources",
+          "https://www.braincorp.com/resources/albert-drives-smarter-shelf-execution-with-ai-powered-inventory-scanning-powered-by-brainos",
+          "https://www.braincorp.com/resources/brain-corp-achieves-soc-2-compliance-reinforcing-trusted-enterprise-grade-deployment-of-ai-systems-at-scale",
           "https://www.braincorp.com/resources/brain-corp-and-driveline-launch-shelfoptix-tm-the-first-fully-managed-robot-powered-shelf-intelligence-service",
           "https://www.braincorp.com/resources/brain-corp-and-uc-san-diego-partner-to-advance-the-foundational-intelligence-layer-for-physical-ai",
-          "https://www.braincorp.com/resources/brain-corp-earns-prestigious-2026-usa-today-top-workplaces-award",
           "https://www.braincorp.com/resources/brain-corp-launches-brainos-r-clean-2-0-with-selfpath-tm-ai-advancing-adaptive-autonomy-for-tennant-company-floor-cleaning-robots",
           "https://www.braincorp.com/resources/brain-corp-reports-68-growth-in-global-deployments-as-enterprise-robots-log-more-than-5-3-million-autonomous-hours-in-h1-2026",
           "https://www.braincorp.com/resources/brain-corp-unveils-new-map-centric-workflows-simplifying-robot-operations-and-boosting-visual-clarity",
           "https://www.braincorp.com/resources/contextual-grounding-ai-explained-how-physical-ai-stays-anchored-in-reality",
-          "https://www.braincorp.com/resources/how-robots-unlock-rfids-true-potential",
+          "https://www.braincorp.com/resources/soc-2-type-ii-certification-what-is-it-and-why-is-it-important-for-ai-and-robotics",
+          "https://www.braincorp.com/resources/tennant-company-introduces-x2-rovr-scrub-for-autonomous-cleaning-in-small-high-traffic-spaces",
           "https://www.braincorp.com/resources/tennant-company-unveils-x16-sweep-for-autonomous-around-the-clock-industrial-sweeping",
           "https://www.braincorp.com/resources/the-autonomy-gap-why-so-many-robotics-pilots-fail-to-scale",
-          "https://www.braincorp.com/resources/the-future-of-work-understanding-ai-driven-automation",
           "https://www.braincorp.com/resources/the-scale-of-autonomy-the-momentum-report",
           "https://www.braincorp.com/resources/the-trust-gap-what-todays-shelf-data-reveals",
-          "https://www.braincorp.com/resources/what-are-the-top-5-data-security-and-safety-questions-about-the-brainos-r-platform",
           "https://www.braincorp.com/resources/what-is-real-world-ai-a-practical-definition-for-enterprise-leaders",
           "https://www.braincorp.com/resources?solution=Remote+site+management",
           "https://www.braincorp.com/resources?type=Blog",
@@ -3004,9 +3007,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T07:55:53.358326+00:00",
-        "last_batch": "official-20260913T073029Z-063",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:10:54.946277+00:00",
+        "last_batch": "official-20260916T074331Z-063",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3055,9 +3058,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T07:56:26.887425+00:00",
-        "last_batch": "official-20260913T073029Z-064",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:11:27.184612+00:00",
+        "last_batch": "official-20260916T074331Z-064",
         "candidate_count": 6,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -3114,9 +3117,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T07:57:23.397303+00:00",
-        "last_batch": "official-20260913T073029Z-065",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:12:25.858955+00:00",
+        "last_batch": "official-20260916T074331Z-065",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3128,12 +3131,12 @@
         "scanned_urls": [
           "https://waabi.ai/",
           "https://waabi.ai/insights",
+          "https://waabi.ai/insights/80percent-growth-on-long-hauls-toughest-corridor",
           "https://waabi.ai/insights/from-closed-course-to-public-roads-the-path-to-driverless",
           "https://waabi.ai/insights/introducing-the-waabi-driver",
           "https://waabi.ai/insights/join-us-at-cvpr-2025",
           "https://waabi.ai/insights/mixed-reality-testing-pushes-the-boundaries-of-av-safety",
           "https://waabi.ai/insights/simulator-realism-the-new-safety-standard-for-the-av-industry",
-          "https://waabi.ai/insights/the-next-frontier",
           "https://waabi.ai/insights/tutorial-cvpr-2026",
           "https://waabi.ai/insights/waabi-and-volvo-autonomous-solutions-partner-to-jointly-develop-and-deploy-autonomous-transportation-solutions",
           "https://waabi.ai/insights/waabi-and-volvo-demonstrate-the-future-of-autonomous-trucking",
@@ -3165,9 +3168,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T07:57:53.433992+00:00",
-        "last_batch": "official-20260913T073029Z-066",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:12:53.935903+00:00",
+        "last_batch": "official-20260916T074331Z-066",
         "candidate_count": 6,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -3223,9 +3226,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T08:00:08.319865+00:00",
-        "last_batch": "official-20260913T073029Z-067",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:15:09.098986+00:00",
+        "last_batch": "official-20260916T074331Z-067",
         "candidate_count": 3,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -3274,9 +3277,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T08:00:56.111166+00:00",
-        "last_batch": "official-20260913T073029Z-068",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:16:02.738495+00:00",
+        "last_batch": "official-20260916T074331Z-068",
         "candidate_count": 3,
         "candidate_urls": [
           "https://www.xpeng.com/pressroom/news/01a03797fccda01e0de68a02a256006a",
@@ -3329,9 +3332,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T08:01:08.867061+00:00",
-        "last_batch": "official-20260913T073029Z-069",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:16:15.536101+00:00",
+        "last_batch": "official-20260916T074331Z-069",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3368,9 +3371,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T08:01:17.370052+00:00",
-        "last_batch": "official-20260913T073029Z-070",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:16:25.461829+00:00",
+        "last_batch": "official-20260916T074331Z-070",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3399,9 +3402,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 12,
-        "last_attempt_at": "2026-09-13T08:01:40.552337+00:00",
-        "last_batch": "official-20260913T073029Z-071",
+        "attempt_count": 13,
+        "last_attempt_at": "2026-09-16T08:16:47.660371+00:00",
+        "last_batch": "official-20260916T074331Z-071",
         "candidate_count": 5,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -3455,9 +3458,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:01:46.958157+00:00",
-        "last_batch": "official-20260913T073029Z-072",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:16:51.469505+00:00",
+        "last_batch": "official-20260916T074331Z-072",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3485,9 +3488,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:02:26.735123+00:00",
-        "last_batch": "official-20260913T073029Z-073",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:17:17.865248+00:00",
+        "last_batch": "official-20260916T074331Z-073",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3498,14 +3501,12 @@
           "https://www.inspire-robots.com/support/download/dexterous%20hands/"
         ],
         "scanned_urls": [
-          "https://en.inspire-robots.com/",
-          "https://en.inspire-robots.com/news/",
-          "https://en.inspire-robots.com/news/august-2026-from-wrc-exhibition-hall-to-opening-ceremony-stage-the-dexterous-hand-poised-for-action/",
-          "https://en.inspire-robots.com/news/inspire-robots-celebrates-10000-units-of-the-dexterous-hands/",
-          "https://en.inspire-robots.com/news/june-2026-inspire-robots-becomes-official-partner-of-the-2026-world-humanoid-robot-games-energy-transfer/",
           "https://inspire-robots.com/",
           "https://inspire-robots.com/news/",
           "https://inspire-robots.com/news/company%20news/",
+          "https://inspire-robots.com/news/company%20news/2025-11-21/311.html",
+          "https://inspire-robots.com/news/company%20news/2025-12-30/296.html",
+          "https://inspire-robots.com/news/company%20news/2026-03-06/297.html",
           "https://inspire-robots.com/news/company%20news/2026-03-27/317.html",
           "https://inspire-robots.com/news/company%20news/2026-03-29/318.html",
           "https://inspire-robots.com/news/company%20news/2026-03-31/316.html",
@@ -3520,6 +3521,7 @@
           "https://inspire-robots.com/news/company%20news/2026-08-09/327.html",
           "https://inspire-robots.com/news/company%20news/2026-08-21/325.html",
           "https://inspire-robots.com/news/company%20news/2026-08-22/326.html",
+          "https://inspire-robots.com/news/company%20news/2026-08-27/314.html",
           "https://inspire-robots.com/news/company%20news/22026-02-24/315.html",
           "https://inspire-robots.com/news/events%20news/",
           "https://inspire-robots.com/news/industry%20news/",
@@ -3537,9 +3539,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:02:56.107423+00:00",
-        "last_batch": "official-20260913T073029Z-074",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:17:53.781036+00:00",
+        "last_batch": "official-20260916T074331Z-074",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3588,9 +3590,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:03:19.027909+00:00",
-        "last_batch": "official-20260913T073029Z-075",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:18:16.118109+00:00",
+        "last_batch": "official-20260916T074331Z-075",
         "candidate_count": 5,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -3643,9 +3645,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:03:40.826569+00:00",
-        "last_batch": "official-20260913T073029Z-076",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:18:44.096620+00:00",
+        "last_batch": "official-20260916T074331Z-076",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3680,8 +3682,8 @@
           "https://www.rokae.com/cn/news/15/%E5%85%AC%E5%8F%B8%E5%8A%A8%E6%80%81.html",
           "https://www.rokae.com/cn/news/16/%E8%A1%8C%E4%B8%9A%E8%B5%84%E8%AE%AF.html",
           "https://www.rokae.com/cn/news/show/2450",
-          "https://www.rokae.com/cn/news/show/2549/%E5%85%B1%E6%8E%A2%E9%87%8D%E5%B7%A5%E5%9C%BA%E6%99%AF%E6%99%BA%E9%80%A0%E5%8D%87%E7%BA%A7%EF%BC%8C%E5%B1%B1%E4%B8%9C%E9%87%8D%E5%B7%A5%E9%9B%86%E5%9B%A2%E4%B8%80%E8%A1%8C%E5%88%B0%E8%AE%BF%E7%8F%9E%E7%9F%B3%E6%9C%BA%E5%99%A8%E4%BA%BA.html",
-          "https://www.rokae.com/cn/news/show/2552/%E7%8F%9E%E7%9F%B3%E6%9C%BA%E5%99%A8%E4%BA%BA9%E6%9C%88%E5%B1%95%E8%AE%AF%EF%BD%9C%E5%A5%94%E8%B5%B4%E5%85%A8%E7%90%83%EF%BC%8C%E5%85%B1%E6%8E%A2%E7%89%A9%E7%90%86AI%E4%BA%A7%E4%B8%9A%E6%96%B0%E6%9C%AA%E6%9D%A5.html"
+          "https://www.rokae.com/cn/news/show/2552/%E7%8F%9E%E7%9F%B3%E6%9C%BA%E5%99%A8%E4%BA%BA9%E6%9C%88%E5%B1%95%E8%AE%AF%EF%BD%9C%E5%A5%94%E8%B5%B4%E5%85%A8%E7%90%83%EF%BC%8C%E5%85%B1%E6%8E%A2%E7%89%A9%E7%90%86AI%E4%BA%A7%E4%B8%9A%E6%96%B0%E6%9C%AA%E6%9D%A5.html",
+          "https://www.rokae.com/cn/news/show/2553/%E6%8E%A8%E5%8A%A8%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E4%BA%A7%E4%B8%9A%E5%8D%8F%E5%90%8C%EF%BC%8C%E7%8F%9E%E7%9F%B3%E6%89%93%E9%80%A0%E5%BC%80%E6%94%BE%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%EF%BC%8C%E7%AD%91%E7%89%A2%E7%89%A9%E7%90%86AI%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%BA%95%E5%BA%A7.html"
         ],
         "last_error": null
       }
@@ -3693,9 +3695,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:04:15.340427+00:00",
-        "last_batch": "official-20260913T073029Z-077",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:19:26.690951+00:00",
+        "last_batch": "official-20260916T074331Z-077",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3726,7 +3728,7 @@
           "https://www.flexiv.com/en/news",
           "https://www.flexiv.com/news",
           "https://www.flexiv.com/news/Flexiv%20Makes%20First%20Foray%20into%20India%20at%20Automation%20India%20Expo%202026",
-          "https://www.flexiv.com/news/Flexiv%20to%20Unveil%20Next-Generation%20Adaptive%20Robots%20at%20Automate%202026",
+          "https://www.flexiv.com/news?type=activity",
           "https://www.flexiv.com/news?type=news",
           "https://www.flexiv.com/story/flexibility",
           "https://www.flexiv.com/story/ground",
@@ -3742,9 +3744,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:04:44.198540+00:00",
-        "last_batch": "official-20260913T073029Z-078",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:20:06.257043+00:00",
+        "last_batch": "official-20260916T074331Z-078",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3794,9 +3796,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:05:03.811871+00:00",
-        "last_batch": "official-20260913T073029Z-079",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:20:30.238438+00:00",
+        "last_batch": "official-20260916T074331Z-079",
         "candidate_count": 2,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -3847,9 +3849,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:05:46.463301+00:00",
-        "last_batch": "official-20260913T073029Z-080",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:21:12.995095+00:00",
+        "last_batch": "official-20260916T074331Z-080",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3862,14 +3864,19 @@
           "https://www.hairobotics.com/",
           "https://www.hairobotics.com/blog",
           "https://www.hairobotics.com/company",
+          "https://www.hairobotics.com/index%2Ephp/blog",
+          "https://www.hairobotics.com/index%2Ephp/news",
+          "https://www.hairobotics.com/index%2Ephp/news/dematic-and-hai-robotics-now-partnering-provide-flexible-amr-robotics-solutions",
+          "https://www.hairobotics.com/index%2Ephp/news/hai-robotics-emea-expand-eu-footprint-new-innovation-center-netherlands",
+          "https://www.hairobotics.com/index%2ephp/blog",
+          "https://www.hairobotics.com/index%2ephp/news",
+          "https://www.hairobotics.com/index%2ephp/webform/newsletter-subscription",
           "https://www.hairobotics.com/news",
-          "https://www.hairobotics.com/news/dematic-and-hai-robotics-now-partnering-provide-flexible-amr-robotics-solutions",
           "https://www.hairobotics.com/news/hai-robotics-amer-and-maveneer-partner-deliver-integrated-automation-built-real-world-performance",
           "https://www.hairobotics.com/news/hai-robotics-and-ferag-solutions-expand-collaboration-following-successful-warehouse-automation-projects-across-emea",
           "https://www.hairobotics.com/news/hai-robotics-and-lx-pantos-establish-strategic-partnership-accelerate-warehouse-automation-globally",
           "https://www.hairobotics.com/news/hai-robotics-and-maersk-redefine-fashion-fulfilment-high-density-robotics-10-metre-scale-singapore",
           "https://www.hairobotics.com/news/hai-robotics-announces-upgrade-haipick-climb-delivering-faster-fulfillment-and-higher-storage-density-proven-platform",
-          "https://www.hairobotics.com/news/hai-robotics-emea-expand-eu-footprint-new-innovation-center-netherlands",
           "https://www.hairobotics.com/news/hai-robotics-expands-americas-leadership-team-support-continued-customer-growth",
           "https://www.hairobotics.com/news/hai-robotics-opens-emea-innovation-center-netherlands-advance-scalable-warehouse-automation",
           "https://www.hairobotics.com/news/hai-robotics-selected-deliver-worlds-largest-deployment-rack-climbing-warehouse-robots",
@@ -3881,12 +3888,7 @@
           "https://www.hairobotics.com/news?page=2",
           "https://www.hairobotics.com/news?page=3",
           "https://www.hairobotics.com/news?page=4",
-          "https://www.hairobotics.com/news?page=5",
-          "https://www.hairobotics.com/news?page=6",
-          "https://www.hairobotics.com/news?page=7",
-          "https://www.hairobotics.com/news?page=8",
-          "https://www.hairobotics.com/solutions/haiq-software",
-          "https://www.hairobotics.com/webform/newsletter-subscription"
+          "https://www.hairobotics.com/solutions/haiq-software"
         ],
         "last_error": null
       }
@@ -3898,9 +3900,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:06:03.211954+00:00",
-        "last_batch": "official-20260913T073029Z-081",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:21:38.967801+00:00",
+        "last_batch": "official-20260916T074331Z-081",
         "candidate_count": 2,
         "candidate_urls": [
           "https://www.geekplus.com/resources/news/geek-debuts-gravity-and-its-one-core-dual-engine-strategy-at-waic-2026-accelerating-the-next-era-of-embodied-ai",
@@ -3915,7 +3917,8 @@
         ],
         "scanned_urls": [
           "https://ir.geekplus.com/investor-relations",
-          "https://www.geekplus.com/en",
+          "https://www.geekplus.com/de/resources/news/all",
+          "https://www.geekplus.com/es/company/news-center/all",
           "https://www.geekplus.com/resources/case-videos",
           "https://www.geekplus.com/resources/downloads/grocery-kit",
           "https://www.geekplus.com/resources/events",
@@ -3923,9 +3926,7 @@
           "https://www.geekplus.com/resources/news",
           "https://www.geekplus.com/resources/news/all",
           "https://www.geekplus.com/resources/news/geek-debuts-gravity-and-its-one-core-dual-engine-strategy-at-waic-2026-accelerating-the-next-era-of-embodied-ai",
-          "https://www.geekplus.com/resources/news/upsvelocity",
           "https://www.geekplus.com/resources/product-brochures",
-          "https://www.geekplus.com/resources/product-brochures/rs-hyper-product-brochure",
           "https://www.geekplus.com/resources/product-brochures/warehouse-execution-system",
           "https://www.geekplus.com/resources/robotics-blogs",
           "https://www.geekplus.com/resources/robotics-blogs/geek-launches-next-generation-intelligent-operation-platform-iop",
@@ -3946,9 +3947,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:06:53.485551+00:00",
-        "last_batch": "official-20260913T073029Z-082",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:22:25.878310+00:00",
+        "last_batch": "official-20260916T074331Z-082",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -3998,9 +3999,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 11,
-        "last_attempt_at": "2026-09-13T08:07:32.031601+00:00",
-        "last_batch": "official-20260913T073029Z-083",
+        "attempt_count": 12,
+        "last_attempt_at": "2026-09-16T08:23:00.999902+00:00",
+        "last_batch": "official-20260916T074331Z-083",
         "candidate_count": 5,
         "candidate_urls": [
           "https://www.agile-robots.com/en/news/detail/a-gentle-introduction-to-agile-robots-and-idealworks-edge-ai-stack-for-maximum-compatibility/",
@@ -4056,9 +4057,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:09:07.783690+00:00",
-        "last_batch": "official-20260913T073029Z-084",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:25:02.011905+00:00",
+        "last_batch": "official-20260916T074331Z-084",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4083,10 +4084,10 @@
           "https://www.pudurobotics.com/en/news/pudu-mt1-series-ai-native-cleaning-capabilities",
           "https://www.pudurobotics.com/en/news/pudu-order-to-person-o2p-solution-warehouse-peaks",
           "https://www.pudurobotics.com/en/news/pudu-robotics-advances-general-embodied-ai-portfolio-pudu-d9",
+          "https://www.pudurobotics.com/en/news/pudu-robotics-ifa-2026-europe-expansion-pudu-d7",
           "https://www.pudurobotics.com/en/news/pudu-robotics-inaugurates-us-headquarters-dallas-americas-growth",
           "https://www.pudurobotics.com/en/news/pudu-robotics-launches-gt-series-robotic-mowers",
           "https://www.pudurobotics.com/en/news/pudu-robotics-launches-puduagent-universal-embodied-ai-agent-platform",
-          "https://www.pudurobotics.com/en/news/pudu-robotics-makes-a-splash-at-wrc-2026",
           "https://www.pudurobotics.com/en/news/pudu-robotics-partners-with-gom-schoonhouden-for-bg1-deployment-interclean-2026",
           "https://www.pudurobotics.com/en/news/pudu-robotics-raises-150-million-exceeds-1-5-billion-valuation",
           "https://www.pudurobotics.com/en/news/pudu-robotics-textile-manufacturing-cleaning-logistics",
@@ -4107,9 +4108,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:09:30.971219+00:00",
-        "last_batch": "official-20260913T073029Z-085",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:25:35.888064+00:00",
+        "last_batch": "official-20260916T074331Z-085",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4157,9 +4158,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:09:36.717004+00:00",
-        "last_batch": "official-20260913T073029Z-086",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:25:41.401706+00:00",
+        "last_batch": "official-20260916T074331Z-086",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4205,9 +4206,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:10:07.080939+00:00",
-        "last_batch": "official-20260913T073029Z-087",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:26:10.747071+00:00",
+        "last_batch": "official-20260916T074331Z-087",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4255,9 +4256,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:10:25.934512+00:00",
-        "last_batch": "official-20260913T073029Z-088",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:26:21.291953+00:00",
+        "last_batch": "official-20260916T074331Z-088",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4305,9 +4306,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:10:33.898459+00:00",
-        "last_batch": "official-20260913T073029Z-089",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:26:31.712100+00:00",
+        "last_batch": "official-20260916T074331Z-089",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4329,9 +4330,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:11:06.304678+00:00",
-        "last_batch": "official-20260913T073029Z-090",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:27:03.056602+00:00",
+        "last_batch": "official-20260916T074331Z-090",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4363,10 +4364,10 @@
           "https://www.aubo-robotics.cn/news",
           "https://www.aubo-robotics.cn/news/52.html",
           "https://www.aubo-robotics.cn/newsdetails/55/167.html",
+          "https://www.aubo-robotics.cn/newsdetails/55/168.html",
           "https://www.aubo-robotics.cn/newsdetails/55/38.html",
           "https://www.aubo-robotics.cn/newsdetails/55/39.html",
           "https://www.aubo-robotics.cn/newsdetails/55/40.html",
-          "https://www.aubo-robotics.cn/newsdetails/55/41.html",
           "https://www.aubo-robotics.cn/research/50.html"
         ],
         "last_error": null
@@ -4379,9 +4380,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:11:35.873620+00:00",
-        "last_batch": "official-20260913T073029Z-091",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:27:29.445955+00:00",
+        "last_batch": "official-20260916T074331Z-091",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4429,9 +4430,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:12:04.641446+00:00",
-        "last_batch": "official-20260913T073029Z-092",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:27:56.456495+00:00",
+        "last_batch": "official-20260916T074331Z-092",
         "candidate_count": 1,
         "candidate_urls": [
           "https://www.hitbotrobot.com/robotics-simulation-software/"
@@ -4482,9 +4483,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:12:07.590094+00:00",
-        "last_batch": "official-20260913T073029Z-093",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:28:03.376490+00:00",
+        "last_batch": "official-20260916T074331Z-093",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4510,10 +4511,10 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:12:33.838074+00:00",
-        "last_batch": "official-20260913T073029Z-094",
-        "candidate_count": 8,
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:28:27.407334+00:00",
+        "last_batch": "official-20260916T074331Z-094",
+        "candidate_count": 7,
         "candidate_urls": [
           "https://global.agilex.ai/",
           "https://global.agilex.ai/blogs/robotics",
@@ -4521,7 +4522,6 @@
           "https://global.agilex.ai/blogs/robotics/tagged/embodied-ai",
           "https://global.agilex.ai/blogs/robotics/tagged/low-cost-robot",
           "https://global.agilex.ai/blogs/robotics/tagged/robot-learning",
-          "https://global.agilex.ai/blogs/robotics/tagged/umi",
           "https://global.agilex.ai/blogs/robotics/what-is-egocentric-data-collection-robot-training-data"
         ],
         "source_urls": [
@@ -4550,12 +4550,12 @@
           "https://github.com/resources/events",
           "https://github.com/resources/whitepapers",
           "https://global.agilex.ai/",
+          "https://global.agilex.ai/blogs/events",
           "https://global.agilex.ai/blogs/robotics",
           "https://global.agilex.ai/blogs/robotics/tagged/data-collection",
           "https://global.agilex.ai/blogs/robotics/tagged/embodied-ai",
           "https://global.agilex.ai/blogs/robotics/tagged/low-cost-robot",
           "https://global.agilex.ai/blogs/robotics/tagged/robot-learning",
-          "https://global.agilex.ai/blogs/robotics/tagged/umi",
           "https://global.agilex.ai/blogs/robotics/what-is-egocentric-data-collection-robot-training-data",
           "https://global.agilex.ai/pages/articles",
           "https://www.agilex.ai/"
@@ -4570,9 +4570,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 10,
-        "last_attempt_at": "2026-09-13T08:12:38.925715+00:00",
-        "last_batch": "official-20260913T073029Z-095",
+        "attempt_count": 11,
+        "last_attempt_at": "2026-09-16T08:28:36.891611+00:00",
+        "last_batch": "official-20260916T074331Z-095",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4587,6 +4587,7 @@
           "https://www.noematrix.ai/news/Noematrix-A%20series%202026",
           "https://www.noematrix.ai/news/Noematrix-A++",
           "https://www.noematrix.ai/news/Noematrix-FII9",
+          "https://www.noematrix.ai/news/Noematrix-Noe-0",
           "https://www.noematrix.ai/news/Noematrix-WAIC-2025",
           "https://www.noematrix.ai/news/Noematrix-WAIC2026",
           "https://www.noematrix.ai/news/noematrix-alibaba",
@@ -4604,17 +4605,13 @@
       "name": "地瓜机器人 / D-Robotics",
       "region": "China",
       "official_scan": {
-        "status": "found",
+        "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:13:03.689240+00:00",
-        "last_batch": "official-20260913T073029Z-096",
-        "candidate_count": 3,
-        "candidate_urls": [
-          "https://github.com/resources/articles/machine-learning-in-software-development",
-          "https://github.com/resources/articles/what-are-generative-ai-models",
-          "https://github.com/resources/articles/what-is-ai-code-generation"
-        ],
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:29:13.272378+00:00",
+        "last_batch": "official-20260916T074331Z-096",
+        "candidate_count": 0,
+        "candidate_urls": [],
         "source_urls": [
           "https://developer.d-robotics.cc/",
           "https://en.d-robotics.cc/",
@@ -4630,19 +4627,18 @@
           "https://en.d-robotics.cc/blog/robot-development-kits-guide",
           "https://github.com/D-Robotics",
           "https://github.com/D-Robotics/RoboTwin",
-          "https://github.com/D-Robotics/RoboTwin/projects",
-          "https://github.com/D-Robotics/Robotics-Dream-Keeper-Challenge/blob/develop/projects/IsaacRF-Project-BETL-001.md?ref=drobotics.ghost.io",
-          "https://github.com/D-Robotics/Robotics-Dream-Keeper-Challenge/blob/develop/projects/KazukiMurata-Project-Korosuke.md?ref=drobotics.ghost.io",
-          "https://github.com/D-Robotics/Robotics-Dream-Keeper-Challenge/blob/develop/projects/MuhirwaRichard-Project-TriCamNavBot.md?ref=drobotics.ghost.io",
+          "https://github.com/D-Robotics/model_zoo_doc",
+          "https://github.com/D-Robotics/model_zoo_doc/forks",
+          "https://github.com/D-Robotics/model_zoo_doc/graphs/commit-activity",
+          "https://github.com/D-Robotics/model_zoo_doc/issues",
           "https://github.com/D-Robotics/rdk_model_zoo",
           "https://github.com/D-Robotics/rdk_model_zoo/forks",
+          "https://github.com/D-Robotics/rdk_model_zoo/graphs/commit-activity",
+          "https://github.com/D-Robotics/rdk_model_zoo/issues",
+          "https://github.com/D-Robotics/rdk_model_zoo/pulls",
           "https://github.com/orgs/D-Robotics/projects?query=is%3Aopen",
           "https://github.com/resources",
           "https://github.com/resources/articles",
-          "https://github.com/resources/articles/machine-learning-in-software-development",
-          "https://github.com/resources/articles/what-are-generative-ai-models",
-          "https://github.com/resources/articles/what-is-agentic-ai",
-          "https://github.com/resources/articles/what-is-ai-code-generation",
           "https://github.com/resources/articles?topic=ai",
           "https://github.com/resources/articles?topic=devops",
           "https://github.com/resources/articles?topic=security",
@@ -4660,9 +4656,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:13:14.623242+00:00",
-        "last_batch": "official-20260913T073029Z-097",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:29:26.626099+00:00",
+        "last_batch": "official-20260916T074331Z-097",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4711,9 +4707,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:13:24.556624+00:00",
-        "last_batch": "official-20260913T073029Z-098",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:29:38.539273+00:00",
+        "last_batch": "official-20260916T074331Z-098",
         "candidate_count": 1,
         "candidate_urls": [
           "https://cfcs.pku.edu.cn/news/d53316500ff94534b839be0114a96032.htm"
@@ -4764,9 +4760,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:13:50.698765+00:00",
-        "last_batch": "official-20260913T073029Z-099",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:30:17.044308+00:00",
+        "last_batch": "official-20260916T074331Z-099",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4781,14 +4777,14 @@
           "https://github.com/InternLM/InternLM",
           "https://github.com/InternRobotics",
           "https://github.com/InternRobotics/Aether",
-          "https://github.com/InternRobotics/EventVLA",
-          "https://github.com/InternRobotics/EventVLA/graphs/commit-activity",
           "https://github.com/InternRobotics/InternNav/releases",
           "https://github.com/InternRobotics/InternVLA-A-series",
           "https://github.com/InternRobotics/InternVLA-M1",
           "https://github.com/InternRobotics/REAL",
           "https://github.com/InternRobotics/StreamVLN",
           "https://github.com/InternRobotics/VLAC",
+          "https://github.com/InternRobotics/VLAC-cut",
+          "https://github.com/InternRobotics/VLAC-cut/graphs/commit-activity",
           "https://github.com/OpenGVLab/InternVL",
           "https://github.com/orgs/InternLM/projects?query=is%3Aopen",
           "https://github.com/orgs/InternRobotics/projects?query=is%3Aopen",
@@ -4813,9 +4809,9 @@
       "official_scan": {
         "status": "failed",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:14:01.952046+00:00",
-        "last_batch": "official-20260913T073029Z-100",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:30:22.280489+00:00",
+        "last_batch": "official-20260916T074331Z-100",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4833,9 +4829,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:14:13.025251+00:00",
-        "last_batch": "official-20260913T073029Z-101",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:30:37.903239+00:00",
+        "last_batch": "official-20260916T074331Z-101",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4874,9 +4870,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:14:22.198022+00:00",
-        "last_batch": "official-20260913T073029Z-102",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:30:55.481921+00:00",
+        "last_batch": "official-20260916T074331Z-102",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4917,9 +4913,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:14:35.463497+00:00",
-        "last_batch": "official-20260913T073029Z-103",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:31:07.527504+00:00",
+        "last_batch": "official-20260916T074331Z-103",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -4969,9 +4965,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:15:10.947775+00:00",
-        "last_batch": "official-20260913T073029Z-104",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:31:46.520071+00:00",
+        "last_batch": "official-20260916T074331Z-104",
         "candidate_count": 5,
         "candidate_urls": [
           "https://github.com/resources/articles/machine-learning-in-software-development",
@@ -5026,9 +5022,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:15:53.899190+00:00",
-        "last_batch": "official-20260913T073029Z-105",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:32:18.060710+00:00",
+        "last_batch": "official-20260916T074331Z-105",
         "candidate_count": 2,
         "candidate_urls": [
           "https://huggingface.co/datasets",
@@ -5041,7 +5037,10 @@
           "https://pollen-robotics.com/"
         ],
         "scanned_urls": [
-          "https://endpoints.huggingface.co/",
+          "https://docs.pollen-robotics.com/",
+          "https://docs.pollen-robotics.com/ai-with-reachy-2/autonomous-behaviors/record-data-learning-models/",
+          "https://docs.pollen-robotics.com/developing-with-reachy-2/simulation/simulation-installation/",
+          "https://docs.pollen-robotics.com/developing-with-reachy-2/simulation/simulation-introduction/",
           "https://github.com/orgs/pollen-robotics/projects?query=is%3Aopen",
           "https://github.com/pollen-robotics",
           "https://github.com/pollen-robotics/reachy_mini/tree/v1.8.2",
@@ -5062,8 +5061,6 @@
           "https://github.com/resources/whitepapers",
           "https://huggingface.co/blog",
           "https://huggingface.co/datasets",
-          "https://huggingface.co/datasets/pollen-robotics/reachy-mini-wall-data",
-          "https://huggingface.co/inference/models",
           "https://huggingface.co/models",
           "https://huggingface.co/pollen-robotics",
           "https://huggingface.co/posts",
@@ -5079,9 +5076,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:16:13.542035+00:00",
-        "last_batch": "official-20260913T073029Z-106",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:32:43.257019+00:00",
+        "last_batch": "official-20260916T074331Z-106",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -5112,9 +5109,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 9,
-        "last_attempt_at": "2026-09-13T08:16:22.610405+00:00",
-        "last_batch": "official-20260913T073029Z-107",
+        "attempt_count": 10,
+        "last_attempt_at": "2026-09-16T08:32:52.929467+00:00",
+        "last_batch": "official-20260916T074331Z-107",
         "candidate_count": 1,
         "candidate_urls": [
           "https://neura-robotics.com/neura-robotics-launches-technological-revolution/"
@@ -5150,9 +5147,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:16:33.813614+00:00",
-        "last_batch": "official-20260913T073029Z-108",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:33:04.987114+00:00",
+        "last_batch": "official-20260916T074331Z-108",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -5199,9 +5196,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:16:37.435524+00:00",
-        "last_batch": "official-20260913T073029Z-109",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:33:16.253334+00:00",
+        "last_batch": "official-20260916T074331Z-109",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -5220,9 +5217,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:16:47.801335+00:00",
-        "last_batch": "official-20260913T073029Z-110",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:33:28.743791+00:00",
+        "last_batch": "official-20260916T074331Z-110",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -5238,6 +5235,7 @@
           "https://www.roboforce.ai/news/new-gen-robotics-product-design-guide",
           "https://www.roboforce.ai/news/roboforce-at-ces-2026-sharing-our-story-at-the-nvidia-physical-ai-startup-showcase",
           "https://www.roboforce.ai/news/roboforce-brings-robo-labor-to-the-world-economic-forum",
+          "https://www.roboforce.ai/news/roboforce-collaborates-with-samsung-sds-to-advance-deployment-first-physical-ai",
           "https://www.roboforce.ai/news/roboforce-fundraising-announcement-2026-03",
           "https://www.roboforce.ai/news/roboforce-highlighted-by-nvidia",
           "https://www.roboforce.ai/news/roboforce-showcases-at-plug-and-plays-silicon-valley-summit",
@@ -5259,9 +5257,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:17:19.281953+00:00",
-        "last_batch": "official-20260913T073029Z-111",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:33:58.163985+00:00",
+        "last_batch": "official-20260916T074331Z-111",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -5308,9 +5306,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:17:44.785768+00:00",
-        "last_batch": "official-20260913T073029Z-112",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:34:27.157784+00:00",
+        "last_batch": "official-20260916T074331Z-112",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -5357,9 +5355,9 @@
       "official_scan": {
         "status": "no_qualifying_release",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:18:09.031146+00:00",
-        "last_batch": "official-20260913T073029Z-113",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:34:57.655709+00:00",
+        "last_batch": "official-20260916T074331Z-113",
         "candidate_count": 0,
         "candidate_urls": [],
         "source_urls": [
@@ -5409,9 +5407,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:18:49.904902+00:00",
-        "last_batch": "official-20260913T073029Z-114",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:35:20.813186+00:00",
+        "last_batch": "official-20260916T074331Z-114",
         "candidate_count": 8,
         "candidate_urls": [
           "https://sereact.ai/en/posts/cortex-1-5",
@@ -5467,9 +5465,9 @@
       "official_scan": {
         "status": "found",
         "strategy": "per-organization-direct-v1",
-        "attempt_count": 8,
-        "last_attempt_at": "2026-09-13T08:19:20.168520+00:00",
-        "last_batch": "official-20260913T073029Z-115",
+        "attempt_count": 9,
+        "last_attempt_at": "2026-09-16T08:36:10.209654+00:00",
+        "last_batch": "official-20260916T074331Z-115",
         "candidate_count": 5,
         "candidate_urls": [
           "https://www.preferred.jp/en/news/pr20250527",
@@ -5496,8 +5494,6 @@
           "https://github.com/resources/articles?topic=software-development",
           "https://github.com/resources/events",
           "https://github.com/resources/whitepapers",
-          "https://projects.preferred.jp/",
-          "https://www.preferred.jp/en",
           "https://www.preferred.jp/en/blog",
           "https://www.preferred.jp/en/blog/bizculture",
           "https://www.preferred.jp/en/blog/tech",
